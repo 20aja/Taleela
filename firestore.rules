@@ -1,0 +1,335 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function uid() {
+      return request.auth.uid;
+    }
+
+    function hasPlayersMap(data) {
+      return data.players is map;
+    }
+
+    function isMember(data) {
+      return signedIn()
+        && hasPlayersMap(data)
+        && data.players.keys().hasAny([uid()]);
+    }
+
+    function isHost(data) {
+      return isMember(data) && data.hostId == uid();
+    }
+
+    function validPlayerShape(player, mustBeReady) {
+      return player is map
+        && player.keys().hasAll([
+          'id', 'name', 'avatar', 'ready', 'score',
+          'correctGuesses', 'fooledPlayers', 'joinedAt', 'lastSeen'
+        ])
+        && player.keys().hasOnly([
+          'id', 'name', 'avatar', 'ready', 'score',
+          'correctGuesses', 'fooledPlayers', 'joinedAt', 'lastSeen'
+        ])
+        && player.id == uid()
+        && player.name is string
+        && player.name.size() >= 1
+        && player.name.size() <= 20
+        && player.avatar is string
+        && player.avatar.size() >= 1
+        && player.avatar.size() <= 16
+        && player.avatar.matches('^avatar-(0[1-9]|1[0-9]|20)$')
+        && player.ready is bool
+        && player.ready == mustBeReady
+        && player.score == 0
+        && player.correctGuesses == 0
+        && player.fooledPlayers == 0
+        && player.joinedAt is timestamp
+        && player.lastSeen is timestamp;
+    }
+
+    function validSettings(settings) {
+      return settings is map
+        && settings.keys().hasAll([
+          'rounds', 'answerTime', 'selectionTime',
+          'revealTime', 'resultsTime', 'maxPlayers'
+        ])
+        && settings.rounds is int
+        && settings.rounds >= 3
+        && settings.rounds <= 12
+        && settings.answerTime is int
+        && settings.answerTime >= 10
+        && settings.answerTime <= 60
+        && settings.selectionTime is int
+        && settings.selectionTime >= 3
+        && settings.selectionTime <= 20
+        && settings.revealTime is int
+        && settings.revealTime >= 8
+        && settings.revealTime <= 60
+        && settings.resultsTime is int
+        && settings.resultsTime >= 3
+        && settings.resultsTime <= 15
+        && settings.maxPlayers is int
+        && settings.maxPlayers >= 2
+        && settings.maxPlayers <= 8;
+    }
+
+    function validCreate() {
+      return signedIn()
+        && request.resource.data.schemaVersion == 5
+        && request.resource.data.code is string
+        && request.resource.data.code.size() == 6
+        && request.resource.data.hostId == uid()
+        && request.resource.data.status == 'waiting'
+        && request.resource.data.isPublic is bool
+        && validSettings(request.resource.data.settings)
+        && request.resource.data.categories is list
+        && request.resource.data.categories.size() == 0
+        && request.resource.data.players is map
+        && request.resource.data.players.size() == 1
+        && request.resource.data.players.keys().hasOnly([uid()])
+        && validPlayerShape(request.resource.data.players[uid()], true);
+    }
+
+    function joiningSelf() {
+      return signedIn()
+        && resource.data.schemaVersion == 5
+        && resource.data.status == 'waiting'
+        && resource.data.players is map
+        && request.resource.data.players is map
+        && !resource.data.players.keys().hasAny([uid()])
+        && request.resource.data.players.keys().hasAny([uid()])
+        && request.resource.data.players.size() <= resource.data.settings.maxPlayers
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['players'])
+        && request.resource.data.players.diff(resource.data.players).affectedKeys().hasOnly([uid()])
+        && request.resource.data.players.diff(resource.data.players).addedKeys().hasOnly([uid()])
+        && validPlayerShape(request.resource.data.players[uid()], false);
+    }
+
+    function updatingOwnPlayerState() {
+      let nextPlayer = request.resource.data.players[uid()];
+      let oldPlayer = resource.data.players[uid()];
+      let playerDiff = nextPlayer.diff(oldPlayer).affectedKeys();
+      return isMember(resource.data)
+        && request.resource.data.players is map
+        && request.resource.data.players.keys().hasAny([uid()])
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['players'])
+        && request.resource.data.players.diff(resource.data.players).affectedKeys().hasOnly([uid()])
+        && playerDiff.hasOnly(['ready', 'lastSeen', 'name', 'avatar'])
+        && nextPlayer.id == oldPlayer.id
+        && nextPlayer.name is string
+        && nextPlayer.name.size() >= 1
+        && nextPlayer.name.size() <= 20
+        && nextPlayer.avatar is string
+        && (
+          nextPlayer.avatar == oldPlayer.avatar
+          || nextPlayer.avatar.matches('^avatar-(0[1-9]|1[0-9]|20)$')
+        )
+        && nextPlayer.score == oldPlayer.score
+        && nextPlayer.correctGuesses == oldPlayer.correctGuesses
+        && nextPlayer.fooledPlayers == oldPlayer.fooledPlayers
+        && nextPlayer.joinedAt == oldPlayer.joinedAt
+        && nextPlayer.ready is bool
+        && nextPlayer.lastSeen is timestamp
+        && (
+          !playerDiff.hasAny(['ready', 'name', 'avatar'])
+          || resource.data.status == 'waiting'
+        );
+    }
+
+    function leavingSelf() {
+      return isMember(resource.data)
+        && resource.data.hostId != uid()
+        && request.resource.data.players is map
+        && resource.data.players.keys().hasAny([uid()])
+        && !request.resource.data.players.keys().hasAny([uid()])
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['players'])
+        && request.resource.data.players.diff(resource.data.players).affectedKeys().hasOnly([uid()])
+        && request.resource.data.players.diff(resource.data.players).removedKeys().hasOnly([uid()]);
+    }
+
+    function chooserSelectsCategory() {
+      return isMember(resource.data)
+        && resource.data.status == 'playing'
+        && request.resource.data.status == 'playing'
+        && resource.data.round is map
+        && request.resource.data.round is map
+        && resource.data.round.phase == 'category_selection'
+        && request.resource.data.round.phase == 'category_selection'
+        && resource.data.round.chooserId == uid()
+        && resource.data.round.categoryChoice == null
+        && resource.data.round.selectionDeadline is timestamp
+        && request.time < resource.data.round.selectionDeadline
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['round'])
+        && request.resource.data.round.diff(resource.data.round).affectedKeys().hasOnly(['categoryChoice'])
+        && request.resource.data.round.categoryChoice is string
+        && resource.data.round.categoryOptions is list
+        && resource.data.round.categoryOptions.hasAny([request.resource.data.round.categoryChoice]);
+    }
+
+    function submittingOwnBluff() {
+      return isMember(resource.data)
+        && resource.data.status == 'playing'
+        && request.resource.data.status == 'playing'
+        && resource.data.round is map
+        && request.resource.data.round is map
+        && resource.data.round.phase == 'bluffing'
+        && request.resource.data.round.phase == 'bluffing'
+        && resource.data.round.bluffDeadline is timestamp
+        && request.time < resource.data.round.bluffDeadline
+        && resource.data.round.bluffs is map
+        && request.resource.data.round.bluffs is map
+        && !resource.data.round.bluffs.keys().hasAny([uid()])
+        && request.resource.data.round.bluffs.keys().hasAny([uid()])
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['round'])
+        && request.resource.data.round.diff(resource.data.round).affectedKeys().hasOnly(['bluffs'])
+        && request.resource.data.round.bluffs.diff(resource.data.round.bluffs).affectedKeys().hasOnly([uid()])
+        && request.resource.data.round.bluffs.diff(resource.data.round.bluffs).addedKeys().hasOnly([uid()])
+        && request.resource.data.round.bluffs[uid()] is map
+        && request.resource.data.round.bluffs[uid()].keys().hasAll(['text', 'submittedAt'])
+        && request.resource.data.round.bluffs[uid()].keys().hasOnly(['text', 'submittedAt'])
+        && request.resource.data.round.bluffs[uid()].text is string
+        && request.resource.data.round.bluffs[uid()].text.size() >= 1
+        && request.resource.data.round.bluffs[uid()].text.size() <= 120
+        && request.resource.data.round.bluffs[uid()].submittedAt == request.time;
+    }
+
+    function submittingOwnGuess() {
+      let optionId = request.resource.data.round.guesses[uid()].optionId;
+      return isMember(resource.data)
+        && resource.data.status == 'playing'
+        && request.resource.data.status == 'playing'
+        && resource.data.round is map
+        && request.resource.data.round is map
+        && resource.data.round.phase == 'guessing'
+        && request.resource.data.round.phase == 'guessing'
+        && resource.data.round.guessDeadline is timestamp
+        && request.time < resource.data.round.guessDeadline
+        && resource.data.round.guesses is map
+        && request.resource.data.round.guesses is map
+        && !resource.data.round.guesses.keys().hasAny([uid()])
+        && request.resource.data.round.guesses.keys().hasAny([uid()])
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['round'])
+        && request.resource.data.round.diff(resource.data.round).affectedKeys().hasOnly(['guesses'])
+        && request.resource.data.round.guesses.diff(resource.data.round.guesses).affectedKeys().hasOnly([uid()])
+        && request.resource.data.round.guesses.diff(resource.data.round.guesses).addedKeys().hasOnly([uid()])
+        && request.resource.data.round.guesses[uid()] is map
+        && request.resource.data.round.guesses[uid()].keys().hasAll(['optionId', 'submittedAt'])
+        && request.resource.data.round.guesses[uid()].keys().hasOnly(['optionId', 'submittedAt'])
+        && optionId is string
+        && request.resource.data.round.guesses[uid()].submittedAt == request.time
+        && resource.data.round.options is map
+        && resource.data.round.options.keys().hasAny([optionId])
+        && !(
+          resource.data.round.options[optionId].type == 'bluff'
+          && resource.data.round.options[optionId].authorId == uid()
+        );
+    }
+
+    function markingRevealReady() {
+      return isMember(resource.data)
+        && resource.data.status == 'playing'
+        && request.resource.data.status == 'playing'
+        && resource.data.round.phase == 'reveal'
+        && request.resource.data.round.phase == 'reveal'
+        && resource.data.round.revealReady is map
+        && request.resource.data.round.revealReady is map
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['round'])
+        && request.resource.data.round.diff(resource.data.round).affectedKeys().hasOnly(['revealReady'])
+        && request.resource.data.round.revealReady.diff(resource.data.round.revealReady).affectedKeys().hasOnly([uid()])
+        && request.resource.data.round.revealReady[uid()] == true;
+    }
+
+    function requestingReplay() {
+      return isMember(resource.data)
+        && resource.data.status == 'finished'
+        && resource.data.replayRequests is map
+        && request.resource.data.replayRequests is map
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['replayRequests'])
+        && request.resource.data.replayRequests.diff(resource.data.replayRequests).affectedKeys().hasOnly([uid()])
+        && request.resource.data.replayRequests[uid()] == true;
+    }
+
+    function requestingReturn() {
+      return isMember(resource.data)
+        && resource.data.status == 'finished'
+        && resource.data.returnRequests is map
+        && request.resource.data.returnRequests is map
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['returnRequests'])
+        && request.resource.data.returnRequests.diff(resource.data.returnRequests).affectedKeys().hasOnly([uid()])
+        && request.resource.data.returnRequests[uid()] == true;
+    }
+
+    function hostIsMissing(data) {
+      return !(data.hostId is string)
+        || !data.players.keys().hasAny([data.hostId]);
+    }
+
+    function hostIsStale(data) {
+      return hostIsMissing(data)
+        || (
+          data.players[data.hostId].lastSeen is timestamp
+          && data.players[data.hostId].lastSeen < request.time - duration.value(45, 's')
+        );
+    }
+
+    function takingOverStaleHost() {
+      return isMember(resource.data)
+        && resource.data.hostId != uid()
+        && request.resource.data.hostId == uid()
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['hostId'])
+        && hostIsStale(resource.data);
+    }
+
+    match /rooms/{roomId} {
+      allow read: if signedIn();
+      allow create: if validCreate();
+
+      allow update: if isHost(resource.data)
+        || joiningSelf()
+        || updatingOwnPlayerState()
+        || leavingSelf()
+        || chooserSelectsCategory()
+        || submittingOwnBluff()
+        || submittingOwnGuess()
+        || markingRevealReady()
+        || requestingReplay()
+        || requestingReturn()
+        || takingOverStaleHost();
+
+      allow delete: if isHost(resource.data);
+
+      match /messages/{messageId} {
+        function parentRoom() {
+          return get(/databases/$(database)/documents/rooms/$(roomId)).data;
+        }
+        function chatMember() {
+          return signedIn()
+            && parentRoom().players is map
+            && parentRoom().players.keys().hasAny([uid()]);
+        }
+        allow read: if chatMember();
+        allow create: if chatMember()
+          && request.resource.data.keys().hasAll(['authorId', 'name', 'avatar', 'text', 'createdAt'])
+          && request.resource.data.keys().hasOnly(['authorId', 'name', 'avatar', 'text', 'createdAt'])
+          && request.resource.data.authorId == uid()
+          && request.resource.data.name is string
+          && request.resource.data.name.size() >= 1
+          && request.resource.data.name.size() <= 20
+          && request.resource.data.avatar is string
+          && request.resource.data.avatar.size() >= 1
+          && request.resource.data.avatar.size() <= 16
+          && request.resource.data.avatar.matches('^avatar-(0[1-9]|1[0-9]|20)$')
+          && request.resource.data.text is string
+          && request.resource.data.text.size() >= 1
+          && request.resource.data.text.size() <= 140
+          && request.resource.data.text.matches('^\\S+(\\s+\\S+){0,9}$')
+          && request.resource.data.createdAt == request.time;
+        allow update, delete: if false;
+      }
+    }
+  }
+}

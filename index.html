@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="تعليلة" />
+    <meta name="application-name" content="Taleela" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#10111f" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="./assets/icons/icon-192.png" />
+    <title>Taleela - تعليلة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <!-- Taleela v7.2.0 -->
+    <!-- =====================================================
+         1) الصفحة الرئيسية: إنشاء / انضمام / غرف عامة
+    ====================================================== -->
+    <section id="homeScreen" class="screen home">
+      <div class="home-top-actions">
+        <button id="exitGameButton" class="home-round-action exit-action" type="button" aria-label="الخروج من اللعبة" title="الخروج">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
+        <button id="helpButton" class="home-round-action help-action" type="button" aria-label="تعليمات اللعبة" title="طريقة اللعب">
+          <i class="fa-solid fa-question"></i>
+        </button>
+      </div>
+      <div class="hero">
+        <div class="logo">تعلي<span>لة</span><span class="logo-bang" aria-hidden="true">!</span></div>
+        <p class="subtitle">اكتب كذبة مقنعة، اكتشف الإجابة الصحيحة، واخدع أصدقاءك.</p>
+
+        <div class="card home-card">
+          <div class="home-identity" aria-label="هوية تعليلة والملف الشخصي">
+            <div class="home-mascot-wrap">
+              <div class="mascot-orbit orbit-one"></div>
+              <div class="mascot-orbit orbit-two"></div>
+              <img class="home-mascot" src="assets/home.png" alt="شخصية تعليلة" draggable="false" />
+              <button id="editProfileButton" class="profile-pencil-button" type="button" aria-label="تعديل الملف الشخصي" title="تعديل الاسم والصورة">
+                <i class="fa-solid fa-pen"></i>
+              </button>
+            </div>
+            <div id="homeProfileSummary" class="home-profile-summary">
+              <img id="homeProfileAvatar" src="assets/Users/avatar-01.png" alt="صورتك" draggable="false" />
+              <div>
+                <small>اللاعب</small>
+                <strong id="homeProfileName">سجّل اسمك وصورتك</strong>
+              </div>
+            </div>
+            <input id="playerName" type="hidden" value="" />
+          </div>
+
+          <div class="home-mode-actions">
+            <button id="publicRoomsButton" class="public-rooms-button" type="button">
+              <i class="fa-solid fa-earth-americas"></i>
+              غرف عامة
+            </button>
+
+            <div class="or-divider"><span>أو</span></div>
+
+            <button id="createRoom" class="primary-button create-room-button" type="button">
+              <i class="fa-solid fa-plus"></i>
+              إنشاء غرفة
+            </button>
+
+            <label class="public-toggle-row" for="publicRoomToggle">
+              <input id="publicRoomToggle" type="checkbox" />
+              <span class="custom-checkbox"></span>
+              <span>غرفة عامة — يستطيع أي لاعب العثور عليها</span>
+            </label>
+
+            <div class="inline-join-box">
+              <input id="homeRoomCodeInput" type="text" maxlength="6" placeholder="رمز الغرفة" autocomplete="off" />
+              <button id="joinRoom" class="secondary-button join-inline-button" type="button">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                انضم للغرفة
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         2) غرفة الانتظار والإعدادات
+    ====================================================== -->
+    <section id="roomScreen" class="screen hidden">
+      <div class="room-container">
+        <header class="room-header">
+          <button id="leaveRoom" class="icon-button" type="button" title="مغادرة الغرفة">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <button id="roomProfileButton" class="icon-button room-profile-button" type="button" title="تعديل الملف الشخصي" aria-label="تعديل الملف الشخصي">
+            <i class="fa-solid fa-user-pen"></i>
+          </button>
+          <div>
+            <div class="room-title">غرفة الانتظار</div>
+            <div class="room-status">بانتظار اللاعبين</div>
+          </div>
+        </header>
+
+        <div class="room-code-card">
+          <span>رمز الغرفة</span>
+          <div id="roomCode" class="room-code">------</div>
+          <button id="copyRoomCode" type="button">
+            <i class="fa-solid fa-copy"></i>
+            نسخ الرمز
+          </button>
+        </div>
+
+        <div class="players-panel">
+          <div class="players-header">
+            <h2>اللاعبين</h2>
+            <span id="playerCount">0 / 4</span>
+          </div>
+          <div id="playersList" class="players-list"></div>
+        </div>
+
+        <section class="settings-section">
+          <div class="section-title">
+            <div>
+              <span class="section-label">إعدادات اللعبة</span>
+              <h2>اضبط المباراة</h2>
+            </div>
+          </div>
+
+          <div class="settings-grid">
+            <div class="setting-card">
+              <span class="setting-label">عدد الجولات</span>
+              <div class="stepper">
+                <button id="roundsMinus" type="button" aria-label="تقليل عدد الجولات">−</button>
+                <strong id="roundsValue">6</strong>
+                <button id="roundsPlus" type="button" aria-label="زيادة عدد الجولات">+</button>
+              </div>
+              <small>جولة</small>
+            </div>
+
+            <div class="setting-card">
+              <span class="setting-label">المؤقت</span>
+              <div class="stepper">
+                <button id="timerMinus" type="button" aria-label="تقليل المؤقت">−</button>
+                <strong id="timerValue">15</strong>
+                <button id="timerPlus" type="button" aria-label="زيادة المؤقت">+</button>
+              </div>
+              <small>ثانية</small>
+            </div>
+
+            <div class="setting-card">
+              <span class="setting-label">عدد اللاعبين</span>
+              <div class="stepper">
+                <button id="playersMinus" type="button" aria-label="تقليل الحد الأقصى للاعبين">−</button>
+                <strong id="playersValue">4</strong>
+                <button id="playersPlus" type="button" aria-label="زيادة الحد الأقصى للاعبين">+</button>
+              </div>
+              <small>الحد الأقصى</small>
+            </div>
+          </div>
+          <div id="settingsMessage" class="categories-message hidden">المضيف فقط يستطيع تعديل إعدادات اللعبة.</div>
+        </section>
+
+        <section class="categories-section">
+          <div class="section-title">
+            <div>
+              <span class="section-label">فئات الجولة</span>
+              <h2>اختر 5 فئات أو أكثر</h2>
+            </div>
+            <span id="selectedCategoriesCount" class="selected-count">0 / 33</span>
+          </div>
+
+          <p class="categories-description">اختر 5 فئات على الأقل، ويمكنك اختيار جميع الفئات. في بداية كل جولة يملك صاحب الدور 20 ثانية لاختيار فئة.</p>
+          <div id="categoriesGrid" class="categories-grid"></div>
+          <div id="categoriesMessage" class="categories-message hidden">المضيف فقط يستطيع تغيير الفئات.</div>
+        </section>
+
+        <div class="room-actions">
+          <button id="readyButton" class="ready-button" type="button">
+            <i class="fa-solid fa-check"></i>
+            جاهز
+          </button>
+          <button id="startGameButton" class="start-button hidden" type="button" disabled>
+            <i class="fa-solid fa-hourglass-half"></i>
+            في انتظار الجاهزية
+          </button>
+        </div>
+        <p class="room-hint">تبدأ اللعبة عند وجود لاعبين على الأقل، اختيار 5 فئات على الأقل، وجاهزية جميع اللاعبين.</p>
+      </div>
+    </section>
+
+    <!-- تعليمات اللعبة وروابط الحسابات -->
+    <div id="helpModal" class="modal help-modal hidden">
+      <div class="help-card">
+        <div class="help-title">
+          <span class="help-logo-mark">ت</span>
+          <h2>تعليلة!</h2>
+        </div>
+        <p class="help-subtitle">اخدع بذكاء، اكتشف الحقيقة، واجمع أكبر عدد من النقاط</p>
+        <ol class="help-steps">
+          <li>
+            <span>1</span>
+            <p>انضموا لنفس الغرفة عبر رمز الغرفة، واختاروا 5 فئات على الأقل.</p>
+          </li>
+          <li>
+            <span>2</span>
+            <p>يظهر سؤال، وكل لاعب يكتب إجابة مزيفة تبدو كأنها الصحيحة.</p>
+          </li>
+          <li>
+            <span>3</span>
+            <p>تُخلط إجابات اللاعبين مع الإجابة الصحيحة وإجابات وهمية قريبة منها.</p>
+          </li>
+          <li>
+            <span>4</span>
+            <p>صوّت للإجابة التي تعتقد أنها صحيحة. لا يمكنك التصويت لكذبتك.</p>
+          </li>
+          <li>
+            <span>5</span>
+            <p>تظهر الحقيقة وتحسب نقاط الجولة ثم تنتقلون للجولة التالية.</p>
+          </li>
+        </ol>
+        <div class="help-scoring">
+          <p><i class="fa-solid fa-trophy"></i> صاحب أعلى مجموع نقاط يفوز</p>
+          <p><i class="fa-solid fa-star"></i> تخمين الإجابة الصحيحة = +2 نقطة</p>
+          <p><i class="fa-solid fa-star"></i> كل لاعب ينخدع بكذبتك = +1 نقطة</p>
+        </div>
+        <div class="social-links" aria-label="حسابات تعليلة">
+          <a class="social-link" href="t.me/Eng_Qader" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          <a class="social-link" href="https://www.facebook.com/2a.j.aa" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a class="social-link" href="https://www.instagram.com/2a.j.a" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a class="social-link" href="https://github.com/20aja" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <button id="closeHelpButton" class="help-understood-button" type="button">فهمت!</button>
+      </div>
+    </div>
+
+    <!-- الملف الشخصي: الاسم + صورة اللاعب -->
+    <div id="profileModal" class="modal profile-modal hidden">
+      <div class="modal-card profile-modal-card">
+        <button id="closeProfileModal" class="modal-close" type="button" aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+        <div class="profile-modal-heading">
+          <span class="profile-modal-icon"><i class="fa-solid fa-user-astronaut"></i></span>
+          <div>
+            <h2>ملف اللاعب</h2>
+            <p>اختر صورة فريدة واكتب الاسم الذي سيظهر لبقية اللاعبين.</p>
+          </div>
+        </div>
+        <div class="profile-name-field">
+          <label for="profileNameInput">اسم اللاعب</label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-user"></i>
+            <input id="profileNameInput" type="text" maxlength="20" placeholder="اكتب اسمك" autocomplete="off" />
+          </div>
+        </div>
+        <div class="profile-avatar-label">
+          <span>اختر الصورة</span>
+          <small id="avatarReservationHint">الصورة المحجوزة داخل الغرفة لا يمكن اختيارها.</small>
+        </div>
+        <div id="profileAvatars" class="profile-avatars">
+          <button class="avatar active" data-avatar="avatar-01" type="button"><img src="assets/Users/avatar-01.png" alt="الصورة 1" draggable="false" /></button>
+          <button class="avatar" data-avatar="avatar-02" type="button"><img src="assets/Users/avatar-02.png" alt="الصورة 2" draggable="false" /></button>
+          <button class="avatar" data-avatar="avatar-03" type="button"><img src="assets/Users/avatar-03.png" alt="الصورة 3" draggable="false" /></button>
+          <button class="avatar" data-avatar="avatar-04" type="button"><img src="assets/Users/avatar-04.png" alt="الصورة 4" draggable="false" /></button>
+          <button class="avatar" data-avatar="avatar-05" type="button"><img src="assets/Users/avatar-05.png" alt="الصورة 5" draggable="false" /></button>
+          <button class="avatar" data-avatar="avatar-06" type="button"><img src="assets/Users/avatar-06.png" alt="الصورة 6" draggable="false" /></button>
+          <button class="avatar" data-avatar="avatar-07" type="button"><img src="assets/Users/avatar-07.png" alt="الصورة 7" draggable="false" /></button>
+          <button class="avatar" data-avatar="avatar-08" type="button"><img src="assets/Users/avatar-08.png" alt="الصورة 8" draggable="false" /></button>
+          <button class="avatar" data-avatar="avatar-09" type="button"><img src="assets/Users/avatar-09.png" alt="الصورة 9" draggable="false" /></button>
+          <button class="avatar" data-avatar="avatar-10" type="button"><img src="assets/Users/avatar-10.png" alt="الصورة 10" draggable="false" /></button>
+          <button class="avatar" data-avatar="avatar-11" type="button"><img src="assets/Users/avatar-11.png" alt="الصورة 11" draggable="false" /></button>
+          <button class="avatar" data-avatar="avatar-12" type="button"><img src="assets/Users/avatar-12.png" alt="الصورة 12" draggable="false" /></button>
+          <button class="avatar" data-avatar="avatar-13" type="button"><img src="assets/Users/avatar-13.png" alt="الصورة 13" draggable="false" /></button>
+          <button class="avatar" data-avatar="avatar-14" type="button"><img src="assets/Users/avatar-14.png" alt="الصورة 14" draggable="false" /></button>
+          <button class="avatar" data-avatar="avatar-15" type="button"><img src="assets/Users/avatar-15.png" alt="الصورة 15" draggable="false" /></button>
+          <button class="avatar" data-avatar="avatar-16" type="button"><img src="assets/Users/avatar-16.png" alt="الصورة 16" draggable="false" /></button>
+          <button class="avatar" data-avatar="avatar-17" type="button"><img src="assets/Users/avatar-17.png" alt="الصورة 17" draggable="false" /></button>
+          <button class="avatar" data-avatar="avatar-18" type="button"><img src="assets/Users/avatar-18.png" alt="الصورة 18" draggable="false" /></button>
+          <button class="avatar" data-avatar="avatar-19" type="button"><img src="assets/Users/avatar-19.png" alt="الصورة 19" draggable="false" /></button>
+          <button class="avatar" data-avatar="avatar-20" type="button"><img src="assets/Users/avatar-20.png" alt="الصورة 20" draggable="false" /></button>
+        </div>
+        <div id="profileMessage" class="profile-message hidden"></div>
+        <button id="saveProfileButton" class="primary-button profile-save-button" type="button">
+          <i class="fa-solid fa-floppy-disk"></i>
+          تسجيل
+        </button>
+      </div>
+    </div>
+
+    <!-- نافذة الانضمام احتياطياً للتوافق مع النسخة السابقة -->
+    <div id="joinModal" class="modal hidden">
+      <div class="modal-card">
+        <button id="closeJoinModal" class="modal-close" type="button"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-icon"><i class="fa-solid fa-door-open"></i></div>
+        <h2>الانضمام إلى غرفة</h2>
+        <p>أدخل رمز الغرفة المكون من 6 أحرف وأرقام.</p>
+        <input id="roomCodeInput" type="text" maxlength="6" placeholder="ABC123" autocomplete="off" />
+        <button id="confirmJoin" class="primary-button" type="button">
+          <i class="fa-solid fa-right-to-bracket"></i>
+          انضمام
+        </button>
+      </div>
+    </div>
+
+    <!-- نافذة الغرف العامة -->
+    <div id="publicRoomsModal" class="modal hidden">
+      <div class="modal-card public-rooms-modal-card">
+        <button id="closePublicRoomsModal" class="modal-close" type="button"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-icon"><i class="fa-solid fa-earth-americas"></i></div>
+        <h2>الغرف العامة</h2>
+        <p>الغرف المفتوحة التي يمكن الانضمام إليها الآن.</p>
+        <div id="publicRoomsList" class="public-rooms-list"></div>
+        <button id="refreshPublicRooms" class="secondary-button" type="button">
+          <i class="fa-solid fa-rotate"></i>
+          تحديث القائمة
+        </button>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         3 → 9) شاشة اللعبة متعددة المراحل
+    ====================================================== -->
+    <section id="gameScreen" class="screen game-screen hidden">
+      <div id="gameLoading" class="game-loading hidden">
+        <div class="loading-box">
+          <div class="loading-spinner"><i class="fa-solid fa-spinner fa-spin"></i></div>
+          <h2>جاري تجهيز الجولة...</h2>
+          <p>يتم مزامنة المرحلة مع جميع اللاعبين.</p>
+        </div>
+      </div>
+
+      <div class="game-container">
+        <header class="game-toolbar">
+          <button id="gameLeaveButton" class="game-menu-button game-exit-button" type="button" title="مغادرة اللعبة" aria-label="مغادرة اللعبة">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          </button>
+          <div class="game-phase-meta">
+            <strong id="gameRound">جولة 1/6</strong>
+            <div id="timerRing" class="timer-ring" aria-label="الوقت المتبقي">
+              <span id="gameTimer">0</span>
+            </div>
+          </div>
+        </header>
+
+        <!-- 3: اختيار الفئة -->
+        <section id="categorySelectionPhase" class="game-phase hidden">
+          <div class="turn-player-block">
+            <div id="turnPlayerAvatar" class="turn-avatar"><img src="assets/Users/avatar-01.png" alt="صورة اللاعب" draggable="false" /></div>
+            <div>
+              <p id="turnLabel">الدور على:</p>
+              <h2 id="turnPlayerName">لاعب</h2>
+            </div>
+          </div>
+          <p id="categoryInstruction" class="phase-instruction">اختر فئة هذه الجولة.</p>
+          <div id="roundCategoryChoices" class="round-category-choices"></div>
+        </section>
+
+        <!-- 4: كتابة الكذبة -->
+        <section id="bluffPhase" class="game-phase hidden">
+          <div id="gameCategory" class="game-category">فئة</div>
+          <h1 id="gameQuestion" class="game-question">السؤال</h1>
+          <div id="gameQuestionMedia" class="question-media hidden" aria-live="polite"></div>
+          <div class="bluff-card">
+            <label for="gameAnswer">اكتب كذبتك المقنعة</label>
+            <input id="gameAnswer" type="text" maxlength="120" placeholder="اكتب كذبتك هنا..." autocomplete="off" />
+            <button id="confirmAnswer" class="primary-button" type="button">
+              <i class="fa-solid fa-paper-plane"></i>
+              أرسل الكذبة
+            </button>
+          </div>
+          <div class="players-answer-status">
+            <i class="fa-solid fa-users"></i>
+            <span id="playersAnswered" aria-live="polite">0 / 0 جاهزون</span>
+          </div>
+        </section>
+
+        <!-- 5 + 6: الاختيار ثم انتظار بقية اللاعبين -->
+        <section id="guessPhase" class="game-phase hidden">
+          <div id="guessQuestion" class="guess-question"></div>
+          <div id="guessQuestionMedia" class="question-media hidden" aria-live="polite"></div>
+          <div id="guessOptions" class="guess-options"></div>
+          <div id="ownBluffCard" class="own-bluff-card hidden"></div>
+
+          <div id="guessWaiting" class="guess-waiting hidden">
+            <h2>بانتظار بقية اللاعبين...</h2>
+            <strong id="playersGuessed">0 / 0 جاهزون</strong>
+            <div id="myGuessCard" class="my-guess-card"></div>
+            <div id="guessPlayersGrid" class="guess-players-grid"></div>
+          </div>
+        </section>
+
+        <!-- 7: كشف الإجابات -->
+        <section id="revealPhase" class="game-phase hidden">
+          <h1 id="revealQuestion" class="reveal-question"></h1>
+          <div id="revealQuestionMedia" class="question-media hidden" aria-live="polite"></div>
+          <div id="revealOptions" class="reveal-options"></div>
+          <button id="revealReadyButton" class="ready-button reveal-ready-button" type="button">
+            <i class="fa-solid fa-check"></i>
+            جاهز
+          </button>
+          <div id="revealReadyCount" class="reveal-ready-count">0 / 0</div>
+        </section>
+
+        <!-- 8: نتيجة الجولة -->
+        <section id="roundResultsPhase" class="game-phase hidden">
+          <div class="round-result-heading">
+            <h1>النتيجة</h1>
+            <p id="roundResultLabel">جولة 1/6</p>
+          </div>
+          <div id="roundLeaderboard" class="round-leaderboard"></div>
+          <div class="result-countdown-line">
+            <span>الجولة التالية خلال</span>
+            <strong id="resultCountdown">5</strong>
+          </div>
+        </section>
+
+        <!-- 9: النتائج النهائية -->
+        <section id="finalResultsPhase" class="game-phase hidden">
+          <h1 class="final-title">انتهت اللعبة!</h1>
+          <div id="winnerCard" class="winner-card"></div>
+          <div id="finalLeaderboard" class="final-leaderboard"></div>
+          <div id="finalRequestsStatus" class="final-requests-status"></div>
+          <div class="final-actions">
+            <button id="playAgainButton" class="primary-button" type="button">
+              <i class="fa-solid fa-rotate-right"></i>
+              لعب مرة أخرى
+            </button>
+            <button id="returnToRoomButton" class="secondary-button" type="button">
+              <i class="fa-solid fa-door-open"></i>
+              العودة إلى الغرفة
+            </button>
+          </div>
+        </section>
+
+        <div id="chatToastContainer" class="chat-toast-container" aria-live="polite" aria-atomic="false"></div>
+
+        <button id="gameChatButton" class="game-chat-button" type="button" aria-label="الدردشة" title="الدردشة">
+          <i class="fa-regular fa-comment-dots"></i>
+        </button>
+        <aside id="gameChatPanel" class="game-chat-panel hidden" aria-label="دردشة اللاعبين">
+          <div class="chat-panel-header">
+            <div><strong>دردشة اللاعبين</strong><small>10 كلمات كحد أقصى</small></div>
+            <button id="closeGameChat" type="button" aria-label="إغلاق الدردشة"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <div id="gameChatMessages" class="game-chat-messages"><div class="chat-empty">لا توجد رسائل بعد.</div></div>
+          <div class="chat-compose">
+            <input id="gameChatInput" type="text" maxlength="140" placeholder="اكتب رسالة قصيرة..." autocomplete="off" />
+            <span id="chatWordCount">0/10</span>
+            <button id="gameChatSend" type="button" aria-label="إرسال"><i class="fa-solid fa-paper-plane"></i></button>
+          </div>
+        </aside>
+
+        <div id="gameError" class="game-error hidden"></div>
+      </div>
+    </section>
+
+    <script>
+      // PWA foundation for web hosting. Native wrappers such as Capacitor do not need a Service Worker.
+      if ("serviceWorker" in navigator && !window.Capacitor && (location.protocol === "https:" || location.hostname === "localhost" || location.hostname === "127.0.0.1")) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./sw.js").catch((error) => {
+            console.warn("Service Worker registration skipped:", error);
+          });
+        });
+      }
+    </script>
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
