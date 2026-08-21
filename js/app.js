@@ -34,6 +34,7 @@ const DEFAULT_AVATAR = "avatar-01";
 const AVATAR_IDS = Array.from({ length: 20 }, (_, index) => `avatar-${String(index + 1).padStart(2, "0")}`);
 const PROFILE_NAME_KEY = "taleela_profile_name";
 const PROFILE_AVATAR_KEY = "taleela_profile_avatar";
+const ACTIVE_SESSION_KEY = "taleela_active_room_v1";
 
 let selectedAvatar = DEFAULT_AVATAR;
 let currentRoomCode = null;
@@ -48,6 +49,8 @@ let authenticatedUser = null;
 let membershipGraceUntil = 0;
 let profileModalContext = "home";
 let profileReservationRoom = null;
+let resumeInProgress = false;
+let bootstrapComplete = false;
 
 const homeScreen = document.getElementById("homeScreen");
 const roomScreen = document.getElementById("roomScreen");
@@ -357,7 +360,14 @@ function renderPlayers(room) {
       <span class="${ready ? "player-ready" : "player-waiting"}">
         ${ready ? '<i class="fa-solid fa-check"></i> جاهز' : "في الانتظار"}
       </span>
+      ${room.hostId === currentPlayerId && player.id !== currentPlayerId && room.status === "waiting" ? `
+        <button class="remove-player-button" type="button" data-remove-player="${escapeHTML(player.id)}" title="إزالة ${escapeHTML(player.name || "اللاعب")}" aria-label="إزالة ${escapeHTML(player.name || "اللاعب")}">
+          <i class="fa-solid fa-user-minus"></i>
+        </button>
+      ` : ""}
     `;
+    const removeButton = card.querySelector("[data-remove-player]");
+    removeButton?.addEventListener("click", () => removePlayerFromRoom(player.id));
     playersList.appendChild(card);
   });
 }
@@ -474,29 +484,52 @@ function updateStartButton(room) {
 }
 
 function saveSession() {
+  if (!currentRoomId || !currentRoomCode || !currentPlayerId) return;
+  const payload = {
+    roomId: currentRoomId,
+    roomCode: currentRoomCode,
+    playerId: currentPlayerId,
+    savedAt: Date.now(),
+  };
   try {
-    sessionStorage.setItem("taleela_room_id", currentRoomId || "");
-    sessionStorage.setItem("taleela_room_code", currentRoomCode || "");
-    sessionStorage.setItem("taleela_player_id", currentPlayerId || "");
+    // localStorage is intentional: sessionStorage can disappear when an
+    // installed PWA is suspended/killed by the mobile OS. The active room is
+    // cleared only on explicit leave, kick, deleted room, or invalid identity.
+    localStorage.setItem(ACTIVE_SESSION_KEY, JSON.stringify(payload));
+    // Keep legacy keys for a seamless migration from older versions.
+    sessionStorage.setItem("taleela_room_id", currentRoomId);
+    sessionStorage.setItem("taleela_room_code", currentRoomCode);
+    sessionStorage.setItem("taleela_player_id", currentPlayerId);
   } catch (error) {
-    console.warn("Unable to save session:", error);
+    console.warn("Unable to save active room session:", error);
   }
 }
 
 function readSession() {
   try {
+    const raw = localStorage.getItem(ACTIVE_SESSION_KEY);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (parsed?.roomId && parsed?.roomCode && parsed?.playerId) return parsed;
+    }
+
+    // One-time migration from v7.2.x sessionStorage.
     const roomId = sessionStorage.getItem("taleela_room_id");
     const roomCode = sessionStorage.getItem("taleela_room_code");
     const playerId = sessionStorage.getItem("taleela_player_id");
     if (!roomId || !roomCode || !playerId) return null;
-    return { roomId, roomCode, playerId };
-  } catch {
+    const migrated = { roomId, roomCode, playerId, savedAt: Date.now() };
+    localStorage.setItem(ACTIVE_SESSION_KEY, JSON.stringify(migrated));
+    return migrated;
+  } catch (error) {
+    console.warn("Unable to read active room session:", error);
     return null;
   }
 }
 
 function clearSession() {
   try {
+    localStorage.removeItem(ACTIVE_SESSION_KEY);
     sessionStorage.removeItem("taleela_room_id");
     sessionStorage.removeItem("taleela_room_code");
     sessionStorage.removeItem("taleela_player_id");
@@ -597,7 +630,7 @@ function listenToRoom(id) {
           return;
         }
         if (!isLeavingRoom) {
-          notify("لم تعد عضوًا في هذه الغرفة.", { type: "warning" });
+          notify("لم تعد عضوًا في هذه الغرفة. قد يكون المضيف قد أزالك.", { type: "warning", title: "تمت مغادرة الغرفة" });
           resetApplicationToHome();
         }
         return;
@@ -920,6 +953,58 @@ async function loadPublicRooms() {
   }
 }
 
+async function removePlayerFromRoom(targetPlayerId) {
+  if (!currentRoomId || !currentPlayerId || !targetPlayerId || targetPlayerId === currentPlayerId) return;
+  const target = playersMap(currentRoom)[targetPlayerId];
+  if (!target) return;
+
+  const confirmed = await confirmAction({
+    title: "إزالة لاعب",
+    message: `هل تريد إزالة ${target.name || "هذا اللاعب"} من الغرفة؟`,
+    confirmText: "إزالة",
+    cancelText: "إلغاء",
+    danger: true,
+  });
+  if (!confirmed) return;
+
+  try {
+    const roomRef = doc(db, "rooms", currentRoomId);
+    await runTransaction(db, async (transaction) => {
+      const snapshot = await transaction.get(roomRef);
+      if (!snapshot.exists()) throw new Error("ROOM_NOT_FOUND");
+      const room = snapshot.data();
+      if (room.hostId !== currentPlayerId) throw new Error("HOST_ONLY");
+      if (room.status !== "waiting") throw new Error("WAITING_ONLY");
+      if (targetPlayerId === room.hostId) throw new Error("CANNOT_REMOVE_HOST");
+
+      const updatedPlayers = { ...playersMap(room) };
+      if (!updatedPlayers[targetPlayerId]) return;
+      delete updatedPlayers[targetPlayerId];
+
+      const replayRequests = { ...(room.replayRequests || {}) };
+      const returnRequests = { ...(room.returnRequests || {}) };
+      delete replayRequests[targetPlayerId];
+      delete returnRequests[targetPlayerId];
+
+      transaction.update(roomRef, {
+        players: updatedPlayers,
+        replayRequests,
+        returnRequests,
+      });
+    });
+    notify(`تمت إزالة ${target.name || "اللاعب"} من الغرفة.`, { type: "success" });
+  } catch (error) {
+    console.error("removePlayerFromRoom failed:", error);
+    const messages = {
+      HOST_ONLY: "فقط المضيف يستطيع إزالة اللاعبين.",
+      WAITING_ONLY: "يمكن إزالة اللاعبين من غرفة الانتظار فقط.",
+      CANNOT_REMOVE_HOST: "لا يمكن للمضيف إزالة نفسه بهذه الطريقة.",
+      ROOM_NOT_FOUND: "الغرفة لم تعد موجودة.",
+    };
+    notify(messages[error?.message] || "تعذر إزالة اللاعب.", { type: "error" });
+  }
+}
+
 async function toggleReady() {
   if (!currentRoomId || !currentPlayerId) return;
   readyButton.disabled = true;
@@ -1045,6 +1130,40 @@ function resetApplicationToHome() {
   if (leaveRoomButton) leaveRoomButton.disabled = false;
   removeRoomError();
   showHomeScreen();
+}
+
+function showRestoringSession() {
+  homeScreen?.classList.add("hidden");
+  roomScreen?.classList.add("hidden");
+  gameScreen?.classList.remove("hidden");
+  const loading = document.getElementById("gameLoading");
+  loading?.classList.remove("hidden");
+  const title = loading?.querySelector("h2");
+  const text = loading?.querySelector("p");
+  if (title) title.textContent = "جاري استعادة جلستك...";
+  if (text) text.textContent = "سيتم إعادتك إلى نفس الغرفة والجولة تلقائيًا.";
+}
+
+async function resumeActiveSession() {
+  if (!bootstrapComplete || resumeInProgress || isLeavingRoom || document.visibilityState === "hidden") return;
+  if (currentRoomId && currentPlayerId) {
+    await sendHeartbeat();
+    return;
+  }
+  if (!readSession()) return;
+
+  resumeInProgress = true;
+  try {
+    authenticatedUser = authenticatedUser || (await ensureAuth());
+    await recoverRoom();
+  } catch (error) {
+    console.warn("Session resume deferred:", error);
+    // Keep the persistent session. A temporary network failure must not eject
+    // the player; the online/visibility handlers will retry.
+    showRestoringSession();
+  } finally {
+    resumeInProgress = false;
+  }
 }
 
 async function recoverRoom() {
@@ -1256,7 +1375,14 @@ copyRoomCodeButton?.addEventListener("click", async () => {
 window.addEventListener("taleela:leave-room", leaveRoom);
 window.addEventListener("online", () => {
   if (currentRoomId) sendHeartbeat();
+  else resumeActiveSession();
 });
+
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible") resumeActiveSession();
+});
+window.addEventListener("pageshow", () => resumeActiveSession());
+window.addEventListener("focus", () => resumeActiveSession());
 
 async function bootstrap() {
   loadLocalProfile();
@@ -1270,8 +1396,9 @@ async function bootstrap() {
     await recoverRoom();
   } catch (error) {
     console.error("Application bootstrap failed:", error);
-    clearSession();
-    showHomeScreen();
+    const hasActiveSession = Boolean(readSession());
+    if (hasActiveSession) showRestoringSession();
+    else showHomeScreen();
 
     const code = error?.code || "";
     if (code === "auth/operation-not-allowed") {
@@ -1284,6 +1411,7 @@ async function bootstrap() {
       notify(`تعذر الاتصال بخدمات Firebase. ${error?.message || ""}`, { type: "error", duration: 8000 });
     }
   } finally {
+    bootstrapComplete = true;
     if (createRoomButton) createRoomButton.disabled = false;
     if (joinRoomButton) joinRoomButton.disabled = false;
     if (publicRoomsButton) publicRoomsButton.disabled = false;
@@ -1291,4 +1419,4 @@ async function bootstrap() {
 }
 
 bootstrap();
-console.log("Taleela App v7 loaded");
+console.log("Taleela App v7.3.0 loaded");

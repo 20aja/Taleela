@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
 import {
-  browserSessionPersistence,
+  browserLocalPersistence,
   getAuth,
   onAuthStateChanged,
   setPersistence,
@@ -25,8 +25,9 @@ let authPromise = null;
 
 /**
  * Ensures every browser tab has a stable anonymous Firebase identity.
- * Session persistence keeps the same UID across refreshes while allowing
- * separate tabs to act as separate players during local multiplayer tests.
+ * Local persistence keeps the same anonymous UID across refreshes, mobile app
+ * backgrounding, and installed-PWA process restarts. Use Incognito/a separate
+ * browser profile when testing multiple players on one physical device.
  */
 export function ensureAuth() {
   if (auth.currentUser) {
@@ -38,7 +39,7 @@ export function ensureAuth() {
   }
 
   authPromise = (async () => {
-    await setPersistence(auth, browserSessionPersistence);
+    await setPersistence(auth, browserLocalPersistence);
 
     const existingUser = await new Promise((resolve) => {
       let resolved = false;

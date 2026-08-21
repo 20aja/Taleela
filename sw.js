@@ -1,4 +1,4 @@
-const CACHE_NAME = "taleela-v7.2.1";
+const CACHE_NAME = "taleela-v7.3.0";
 const APP_SHELL = [
   "./",
   "./index.html",
