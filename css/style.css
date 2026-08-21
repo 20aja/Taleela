@@ -3989,3 +3989,365 @@ input {
   .player-card { gap: 8px; padding-inline: 10px; }
   .remove-player-button { width: 34px; height: 34px; flex-basis: 34px; border-radius: 10px; }
 }
+
+
+/* =========================================================
+   V7.3.1 — MOBILE-ONLY VISUAL CONSISTENCY & RESULT STABILITY
+   Desktop layout is intentionally left unchanged.
+========================================================= */
+
+/* Stable score bars: no repeated grow-from-zero animation when snapshots arrive. */
+.score-progress span {
+  animation: none !important;
+  width: var(--score-width, 0%);
+  transition: width .55s cubic-bezier(.2,.8,.2,1);
+}
+
+@media (max-width: 700px) {
+  /* Consistent mobile page rhythm. */
+  .game-container {
+    width: 100%;
+    max-width: 100%;
+    padding:
+      max(10px, env(safe-area-inset-top))
+      12px
+      max(30px, env(safe-area-inset-bottom));
+  }
+
+  .game-toolbar {
+    position: relative;
+    min-height: 62px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .game-exit-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    min-height: 46px;
+    padding: 0 !important;
+    border-radius: 15px;
+  }
+
+  .game-exit-button:hover,
+  .game-exit-button:focus-visible {
+    transform: translateY(calc(-50% - 1px));
+  }
+
+  .game-exit-button:active {
+    transform: translateY(-50%) scale(.96);
+  }
+
+  .game-phase-meta {
+    margin-inline: auto;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .game-phase {
+    width: 100%;
+    padding-top: 18px;
+  }
+
+  .phase-instruction,
+  .round-result-heading,
+  .final-title,
+  .reveal-ready-count,
+  .result-countdown-line {
+    text-align: center;
+  }
+
+  /* Answer and reveal cards remain exactly two per row on phones. */
+  .guess-options,
+  .reveal-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 9px !important;
+    width: 100%;
+  }
+
+  .guess-option,
+  .reveal-option {
+    width: 100%;
+    min-width: 0;
+    min-height: 104px;
+    padding: 10px 8px;
+    border-radius: 16px;
+    font-size: clamp(12.5px, 3.6vw, 15px);
+    line-height: 1.55;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+  /* Result list: compact, aligned, and readable on narrow devices. */
+  .round-leaderboard,
+  .final-leaderboard {
+    width: 100%;
+    gap: 9px;
+  }
+
+  .leaderboard-row {
+    grid-template-columns: 30px 44px minmax(0, 1fr) 54px;
+    align-items: center !important;
+    gap: 7px;
+    min-height: 72px;
+    padding: 8px 9px;
+    border-radius: 16px;
+  }
+
+  .leaderboard-rank {
+    font-size: 17px;
+    line-height: 1;
+    display: grid;
+    place-items: center;
+  }
+
+  .leaderboard-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+    font-size: 0;
+    margin: 0;
+  }
+
+  .leaderboard-avatar-img {
+    padding: 2px;
+  }
+
+  .leaderboard-info {
+    min-width: 0;
+    text-align: right;
+  }
+
+  .leaderboard-info strong {
+    font-size: 13.5px;
+    line-height: 1.35;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .leaderboard-info small {
+    margin-top: 2px;
+    font-size: 10.5px;
+    line-height: 1.35;
+    white-space: nowrap;
+  }
+
+  .leaderboard-score {
+    min-width: 0;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: 1px;
+  }
+
+  .leaderboard-score strong {
+    font-size: 14px;
+    line-height: 1.1;
+  }
+
+  .leaderboard-score small {
+    font-size: 9.5px;
+    line-height: 1.2;
+    color: var(--muted);
+  }
+
+  .score-progress {
+    height: 6px;
+    margin-top: 6px;
+    border-radius: 999px;
+  }
+
+  /* Smaller, cleaner final winner card on phones. */
+  .final-title {
+    font-size: clamp(28px, 8.5vw, 36px);
+    margin: 4px 0 14px;
+    line-height: 1.2;
+  }
+
+  .winner-card {
+    width: min(76vw, 260px);
+    margin: 0 auto 16px;
+    padding: 14px 14px 13px;
+    border-radius: 20px;
+  }
+
+  .winner-avatar {
+    width: 78px;
+    height: 78px;
+    margin: 0 auto 6px;
+    border-radius: 22px;
+    font-size: 0;
+  }
+
+  .winner-avatar-img {
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    object-fit: contain;
+  }
+
+  .winner-card h2 {
+    margin: 3px 0 0;
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  .winner-card p {
+    margin: 3px 0 0;
+    font-size: 13px;
+  }
+
+  .winner-card > strong {
+    display: block;
+    margin-top: 4px;
+    font-size: 15px;
+  }
+
+  .final-requests-status {
+    margin: 12px 0;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .final-actions {
+    margin-top: 14px;
+    gap: 9px;
+  }
+
+  /* Strict icon centering for touch UI. */
+  .game-menu-button,
+  .game-chat-button,
+  .remove-player-button,
+  .app-notification-close,
+  .social-link,
+  .profile-edit-button,
+  .copy-code-button,
+  .chat-panel-header button,
+  .chat-compose button,
+  .stepper-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+    text-align: center !important;
+  }
+
+  .game-menu-button > i,
+  .game-chat-button > i,
+  .remove-player-button > i,
+  .app-notification-close > i,
+  .social-link > i,
+  .profile-edit-button > i,
+  .copy-code-button > i,
+  .chat-panel-header button > i,
+  .chat-compose button > i,
+  .stepper-button > i {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+    transform: none;
+  }
+
+  .primary-button,
+  .secondary-button,
+  .ready-button,
+  .reveal-ready-button,
+  .help-understood-button,
+  .profile-save-button,
+  .join-inline-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .primary-button > i,
+  .secondary-button > i,
+  .ready-button > i,
+  .reveal-ready-button > i,
+  .help-understood-button > i,
+  .profile-save-button > i,
+  .join-inline-button > i {
+    flex: 0 0 auto;
+    line-height: 1;
+    margin: 0;
+  }
+
+  .game-chat-button {
+    width: 52px;
+    height: 52px;
+    left: 12px;
+    bottom: max(12px, env(safe-area-inset-bottom));
+  }
+
+  .game-chat-button i {
+    font-size: 20px;
+  }
+
+  .app-notification-icon,
+  .app-confirm-icon,
+  .loading-spinner,
+  .timer-ring {
+    display: grid !important;
+    place-items: center !important;
+  }
+
+  .app-notification-icon i,
+  .app-confirm-icon i,
+  .loading-spinner i {
+    margin: 0 !important;
+    line-height: 1 !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .game-container { padding-inline: 9px; }
+
+  .guess-options,
+  .reveal-options {
+    gap: 7px !important;
+  }
+
+  .guess-option,
+  .reveal-option {
+    min-height: 96px;
+    padding: 8px 6px;
+    border-radius: 14px;
+    font-size: 12px;
+  }
+
+  .leaderboard-row {
+    grid-template-columns: 27px 40px minmax(0, 1fr) 48px;
+    gap: 5px;
+    padding-inline: 7px;
+  }
+
+  .leaderboard-avatar {
+    width: 38px;
+    height: 38px;
+  }
+
+  .leaderboard-info strong { font-size: 12.5px; }
+  .leaderboard-info small { font-size: 9.5px; }
+
+  .winner-card {
+    width: min(80vw, 238px);
+    padding: 12px;
+  }
+
+  .winner-avatar {
+    width: 70px;
+    height: 70px;
+  }
+}

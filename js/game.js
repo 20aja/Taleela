@@ -1193,25 +1193,42 @@ function renderRoundResults(room) {
 
   const ranking = rankingFromPlayers(playersMap(room));
   if (board) {
-    board.innerHTML = ranking.map((entry) => {
+    // لا نعيد بناء لوحة النتائج عند heartbeat أو أي snapshot لا يغيّر النتيجة.
+    // هذا يمنع شريط النقاط من العودة إلى الصفر وإعادة الأنيميشن مرارًا على الجوال.
+    const renderKey = JSON.stringify(ranking.map((entry) => {
       const player = playersMap(room)[entry.id];
       const result = round.results?.[entry.id] || {};
-      return `
-        <div class="leaderboard-row rank-${entry.rank} ${entry.id === playerId ? "is-me" : ""}">
-          <div class="leaderboard-rank">${entry.rank}</div>
-          <div class="leaderboard-avatar">${avatarHTML(entry.avatar, "leaderboard-avatar-img", `صورة ${entry.name || "لاعب"}`)}</div>
-          <div class="leaderboard-info">
-            <strong>${escapeHTML(entry.name)}</strong>
-            <small>أصاب ${Number(player?.correctGuesses) || 0} • خدع ${Number(player?.fooledPlayers) || 0}</small>
-            <div class="score-progress" aria-hidden="true"><span style="--score-width:${scoreWidthPercent(room, entry.score).toFixed(2)}%"></span></div>
+      return [
+        entry.id, entry.rank, Number(entry.score) || 0,
+        Number(player?.correctGuesses) || 0,
+        Number(player?.fooledPlayers) || 0,
+        Number(result.roundPoints) || 0,
+        entry.avatar, entry.name, round.number, round.total,
+      ];
+    }));
+
+    if (board.dataset.renderKey !== renderKey) {
+      board.dataset.renderKey = renderKey;
+      board.innerHTML = ranking.map((entry) => {
+        const player = playersMap(room)[entry.id];
+        const result = round.results?.[entry.id] || {};
+        return `
+          <div class="leaderboard-row rank-${entry.rank} ${entry.id === playerId ? "is-me" : ""}">
+            <div class="leaderboard-rank">${entry.rank}</div>
+            <div class="leaderboard-avatar">${avatarHTML(entry.avatar, "leaderboard-avatar-img", `صورة ${entry.name || "لاعب"}`)}</div>
+            <div class="leaderboard-info">
+              <strong>${escapeHTML(entry.name)}</strong>
+              <small>أصاب ${Number(player?.correctGuesses) || 0} • خدع ${Number(player?.fooledPlayers) || 0}</small>
+              <div class="score-progress" aria-hidden="true"><span style="--score-width:${scoreWidthPercent(room, entry.score).toFixed(2)}%"></span></div>
+            </div>
+            <div class="leaderboard-score">
+              <strong class="round-gain">+${Number(result.roundPoints) || 0}</strong>
+              <small>${entry.score} نقطة</small>
+            </div>
           </div>
-          <div class="leaderboard-score">
-            <strong class="round-gain">+${Number(result.roundPoints) || 0}</strong>
-            <small>${entry.score} نقطة</small>
-          </div>
-        </div>
-      `;
-    }).join("");
+        `;
+      }).join("");
+    }
   }
 
   startTimer(room, round.resultsDeadline, round.phase);
@@ -1399,21 +1416,29 @@ function renderFinal(room) {
   }
 
   if (board) {
-    board.innerHTML = ranking.map((entry) => `
-      <div class="leaderboard-row rank-${entry.rank} ${entry.id === playerId ? "is-me" : ""}">
-        <div class="leaderboard-rank">${entry.rank}</div>
-        <div class="leaderboard-avatar">${avatarHTML(entry.avatar, "leaderboard-avatar-img", `صورة ${entry.name || "لاعب"}`)}</div>
-        <div class="leaderboard-info">
-          <strong>${escapeHTML(entry.name || "لاعب")}</strong>
-          <small>أصاب ${Number(entry.correctGuesses) || 0} • خدع ${Number(entry.fooledPlayers) || 0}</small>
-          <div class="score-progress" aria-hidden="true"><span style="--score-width:${scoreWidthPercent(room, entry.score).toFixed(2)}%"></span></div>
+    const renderKey = JSON.stringify(ranking.map((entry) => [
+      entry.id, entry.rank, Number(entry.score) || 0,
+      Number(entry.correctGuesses) || 0, Number(entry.fooledPlayers) || 0,
+      entry.avatar, entry.name,
+    ]));
+    if (board.dataset.renderKey !== renderKey) {
+      board.dataset.renderKey = renderKey;
+      board.innerHTML = ranking.map((entry) => `
+        <div class="leaderboard-row rank-${entry.rank} ${entry.id === playerId ? "is-me" : ""}">
+          <div class="leaderboard-rank">${entry.rank}</div>
+          <div class="leaderboard-avatar">${avatarHTML(entry.avatar, "leaderboard-avatar-img", `صورة ${entry.name || "لاعب"}`)}</div>
+          <div class="leaderboard-info">
+            <strong>${escapeHTML(entry.name || "لاعب")}</strong>
+            <small>أصاب ${Number(entry.correctGuesses) || 0} • خدع ${Number(entry.fooledPlayers) || 0}</small>
+            <div class="score-progress" aria-hidden="true"><span style="--score-width:${scoreWidthPercent(room, entry.score).toFixed(2)}%"></span></div>
+          </div>
+          <div class="leaderboard-score">
+            <strong>${Number(entry.score) || 0}</strong>
+            <small>نقطة</small>
+          </div>
         </div>
-        <div class="leaderboard-score">
-          <strong>${Number(entry.score) || 0}</strong>
-          <small>نقطة</small>
-        </div>
-      </div>
-    `).join("");
+      `).join("");
+    }
   }
 
   const activeIds = activePlayerIds(room);
