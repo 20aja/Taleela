@@ -6302,7 +6302,7 @@ input:focus-visible {
 
 
 /* =====================================================
-   TALEELA v8.5.0 — gameplay layout and feedback refinements
+   TALEELA v8.6.0 — gameplay layout and feedback refinements
 ===================================================== */
 .game-toolbar {
   position: sticky;
@@ -6546,4 +6546,214 @@ input:focus-visible {
 
 @media (max-width: 365px) {
   .round-category-choice.category-card { min-height: 106px; }
+}
+
+
+/* =====================================================
+   TALEELA v8.6.0 — custom avatar + phone alignment pass
+===================================================== */
+.custom-avatar-picker {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: stretch;
+  margin: 4px 0 12px;
+}
+.custom-avatar-input {
+  position: fixed !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  inset-inline-start: -9999px !important;
+}
+.custom-avatar-button {
+  grid-column: 1 / -1;
+  min-height: 78px;
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr) 34px;
+  gap: 11px;
+  align-items: center;
+  padding: 9px 12px;
+  border: 1px dashed rgba(124, 92, 255, 0.48);
+  border-radius: 18px;
+  color: var(--text);
+  background: linear-gradient(145deg, rgba(124, 92, 255, 0.10), rgba(71, 203, 239, 0.05));
+  text-align: right;
+}
+.custom-avatar-button.active {
+  border-style: solid;
+  border-color: rgba(91, 211, 246, 0.82);
+  box-shadow: 0 0 0 2px rgba(91, 211, 246, 0.10), 0 12px 28px rgba(25, 118, 168, 0.14);
+}
+.custom-avatar-button:disabled { opacity: 0.6; cursor: progress; }
+.custom-avatar-preview-wrap {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.custom-avatar-preview-wrap img { width: 100%; height: 100%; object-fit: contain; }
+.custom-avatar-copy { min-width: 0; display: grid; gap: 3px; }
+.custom-avatar-copy strong { font-size: 0.92rem; }
+.custom-avatar-copy small { font-size: 0.72rem; line-height: 1.45; color: var(--muted); }
+.custom-avatar-button > i { font-size: 1.15rem; color: #82dcff; }
+.remove-custom-avatar-button {
+  grid-column: 1 / -1;
+  justify-self: center;
+  min-height: 34px;
+  padding: 7px 12px;
+  border-radius: 11px;
+  color: #d8d9ea;
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.75rem;
+}
+.custom-avatar-image {
+  object-fit: cover !important;
+  padding: 0 !important;
+  border-radius: inherit;
+}
+
+@media (max-width: 700px) {
+  .game-container,
+  .game-phase,
+  .room-container,
+  .home-card,
+  .modal-card {
+    text-align: center;
+  }
+
+  .game-toolbar {
+    width: 100%;
+    grid-template-columns: 48px minmax(0, 1fr) 48px;
+    align-items: center;
+    justify-items: center;
+  }
+  .game-toolbar #gameRound {
+    width: 100%;
+    text-align: center;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .game-timer-dock {
+    width: 100%;
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0 1px;
+    margin: 0 auto;
+  }
+  .game-timer-dock .timer-ring {
+    position: relative;
+    flex: 0 0 74px;
+    width: 74px !important;
+    height: 74px !important;
+    min-width: 74px;
+    min-height: 74px;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    display: grid !important;
+    place-items: center !important;
+    box-sizing: border-box;
+    border-radius: 50%;
+  }
+  .game-timer-dock .timer-ring::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 57px !important;
+    height: 57px !important;
+    margin: 0 !important;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+  .game-timer-dock .timer-ring span {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 25px !important;
+    line-height: 1 !important;
+    text-align: center !important;
+    font-variant-numeric: tabular-nums;
+    transform: none !important;
+  }
+
+  .turn-player-block,
+  .players-answer-status,
+  .phase-instruction,
+  .waiting-box,
+  .reveal-waiting,
+  .game-category {
+    margin-inline: auto;
+    text-align: center !important;
+  }
+  .turn-player-block {
+    width: fit-content;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .turn-player-block > div:last-child { text-align: center; min-width: 0; }
+  .turn-player-block p,
+  .turn-player-block h2,
+  .players-answer-status span,
+  .game-category,
+  .game-toolbar #gameRound {
+    white-space: nowrap;
+  }
+
+  .bluff-card,
+  .guess-options,
+  .reveal-options,
+  .round-leaderboard,
+  .final-leaderboard {
+    margin-inline: auto;
+  }
+  .bluff-card label { text-align: center !important; }
+
+  .room-header,
+  .players-header,
+  .section-title,
+  .room-actions,
+  .home-mode-actions {
+    align-items: center;
+  }
+  .room-header > div,
+  .players-header,
+  .section-title > div {
+    text-align: center;
+  }
+
+  .custom-avatar-button {
+    grid-template-columns: 54px minmax(0, 1fr) 30px;
+    min-height: 74px;
+    text-align: center;
+  }
+  .custom-avatar-preview-wrap { width: 54px; height: 54px; }
+  .custom-avatar-copy small { line-height: 1.35; }
+}
+
+@media (max-width: 380px) {
+  .game-timer-dock { min-height: 76px; }
+  .game-timer-dock .timer-ring {
+    flex-basis: 68px;
+    width: 68px !important;
+    height: 68px !important;
+    min-width: 68px;
+    min-height: 68px;
+  }
+  .game-timer-dock .timer-ring::before { width: 52px !important; height: 52px !important; }
+  .game-timer-dock .timer-ring span { font-size: 23px !important; }
 }

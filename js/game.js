@@ -93,18 +93,27 @@ function escapeHTML(value) {
 
 const DEFAULT_AVATAR = "avatar-01";
 const AVATAR_PATTERN = /^avatar-(0[1-9]|1[0-9]|20)$/;
+const MAX_AVATAR_DATA_LENGTH = 60_000;
 
 function normalizeAvatarId(value) {
   const avatar = String(value || "");
   return AVATAR_PATTERN.test(avatar) ? avatar : DEFAULT_AVATAR;
 }
 
-function avatarSrc(value) {
-  return `assets/Users/${normalizeAvatarId(value)}.webp`;
+function normalizeAvatarImage(value) {
+  const image = String(value || "");
+  if (!image || image.length > MAX_AVATAR_DATA_LENGTH) return "";
+  return /^data:image\/(?:webp|jpeg|png);base64,[A-Za-z0-9+/=]+$/.test(image) ? image : "";
 }
 
-function avatarHTML(value, className = "avatar-image", alt = "صورة اللاعب") {
-  return `<img class="${className}" src="${avatarSrc(value)}" alt="${escapeHTML(alt)}" draggable="false" />`;
+function avatarSrc(value, customImage = "") {
+  return normalizeAvatarImage(customImage) || `assets/Users/${normalizeAvatarId(value)}.webp`;
+}
+
+function avatarHTML(value, className = "avatar-image", alt = "صورة اللاعب", customImage = "") {
+  const custom = normalizeAvatarImage(customImage);
+  const extraClass = custom ? " custom-avatar-image" : "";
+  return `<img class="${className}${extraClass}" src="${custom || avatarSrc(value)}" alt="${escapeHTML(alt)}" draggable="false" />`;
 }
 
 function normalizeAnswer(value) {
@@ -404,6 +413,7 @@ function rankingFromPlayers(playersObject) {
       id: player.id,
       name: player.name || "لاعب",
       avatar: normalizeAvatarId(player.avatar),
+      avatarImage: normalizeAvatarImage(player.avatarImage) || null,
       score: Number(player.score) || 0,
       correctGuesses: Number(player.correctGuesses) || 0,
       fooledPlayers: Number(player.fooledPlayers) || 0,
@@ -546,13 +556,11 @@ async function submitBluff() {
   const button = document.getElementById("confirmAnswer");
   const text = input?.value?.trim() || "";
   if (!text) {
-    input?.focus();
     return;
   }
   const accepted = Array.isArray(currentRoom.round.acceptedAnswers) ? currentRoom.round.acceptedAnswers : [currentRoom.round.correctAnswer];
   if (accepted.some((answer) => normalizeAnswer(answer) === normalizeAnswer(text))) {
     updateCorrectAnswerHint();
-    input?.focus();
     return;
   }
   if (valueToMillis(currentRoom.round.bluffDeadline) <= Date.now()) return;
@@ -829,7 +837,7 @@ function renderCategorySelection(room) {
   const instruction = document.getElementById("categoryInstruction");
   const grid = document.getElementById("roundCategoryChoices");
 
-  if (avatar) avatar.innerHTML = avatarHTML(chooser?.avatar, "turn-avatar-img", `صورة ${chooser?.name || "اللاعب"}`);
+  if (avatar) avatar.innerHTML = avatarHTML(chooser?.avatar, "turn-avatar-img", `صورة ${chooser?.name || "اللاعب"}`, chooser?.avatarImage);
   if (name) name.textContent = chooser?.name || "لاعب";
   if (label) label.textContent = isChooser ? "الدور على: (أنت)" : "الدور على:";
   if (instruction) {
@@ -973,7 +981,7 @@ function renderGuessing(room) {
           const done = Boolean(round.guesses?.[player.id]?.optionId);
           return `
           <div class="guess-player-state ${done ? "done" : ""}">
-            <div class="avatar-mini">${avatarHTML(player.avatar, "avatar-mini-img", `صورة ${player.name || "لاعب"}`)}</div>
+            <div class="avatar-mini">${avatarHTML(player.avatar, "avatar-mini-img", `صورة ${player.name || "لاعب"}`, player.avatarImage)}</div>
             <strong>${escapeHTML(player.name || "لاعب")}</strong>
             <small>${done ? "✓" : "..."}</small>
           </div>
@@ -1055,7 +1063,7 @@ function renderReveal(room) {
                 ? voters
                     .map(
                       (voter) =>
-                        `<span class="reveal-voter">${avatarHTML(voter.avatar, "reveal-voter-avatar", `صورة ${voter.name || "لاعب"}`)} <span>${escapeHTML(voter.name || "لاعب")}</span></span>`,
+                        `<span class="reveal-voter">${avatarHTML(voter.avatar, "reveal-voter-avatar", `صورة ${voter.name || "لاعب"}`, voter.avatarImage)} <span>${escapeHTML(voter.name || "لاعب")}</span></span>`,
                     )
                     .join("")
                 : '<span class="reveal-voter">لم يخترها أحد</span>'
@@ -1133,7 +1141,7 @@ function renderRoundResults(room) {
         return `
           <div class="leaderboard-row rank-${entry.rank} ${entry.id === playerId ? "is-me" : ""}">
             <div class="leaderboard-rank">${entry.rank}</div>
-            <div class="leaderboard-avatar">${avatarHTML(entry.avatar, "leaderboard-avatar-img", `صورة ${entry.name || "لاعب"}`)}</div>
+            <div class="leaderboard-avatar">${avatarHTML(entry.avatar, "leaderboard-avatar-img", `صورة ${entry.name || "لاعب"}`, entry.avatarImage)}</div>
             <div class="leaderboard-info">
               <strong>${escapeHTML(entry.name)}</strong>
               <small>أصاب ${Number(player?.correctGuesses) || 0} • خدع ${Number(player?.fooledPlayers) || 0}</small>
@@ -1175,7 +1183,7 @@ function setChatOpen(open) {
   const button = document.getElementById("gameChatButton");
   panel?.classList.toggle("hidden", !open);
   button?.classList.toggle("chat-open", open);
-  if (open) document.getElementById("gameChatInput")?.focus();
+
 }
 
 function renderChatMessages(snapshot) {
@@ -1188,7 +1196,7 @@ function renderChatMessages(snapshot) {
           const message = item.data();
           const mine = message.authorId === playerId;
           return `<div class="chat-message ${mine ? "mine" : ""}">
-      <div class="chat-message-head"><span>${avatarHTML(message.avatar, "chat-message-avatar-img", `صورة ${message.name || "لاعب"}`)}</span><strong>${escapeHTML(message.name || "لاعب")}</strong></div>
+      <div class="chat-message-head"><span>${avatarHTML(message.avatar, "chat-message-avatar-img", `صورة ${message.name || "لاعب"}`, playersMap(currentRoom)[message.authorId]?.avatarImage)}</span><strong>${escapeHTML(message.name || "لاعب")}</strong></div>
       <p>${escapeHTML(message.text || "")}</p>
     </div>`;
         })
@@ -1231,7 +1239,6 @@ async function sendChatMessage() {
   const words = countWords(text);
   if (!text) return;
   if (words > 10) {
-    input?.focus();
     return;
   }
   const me = playersMap(currentRoom)[playerId];
@@ -1314,7 +1321,7 @@ function renderFinal(room) {
     } else if (winners.length === 1) {
       const winner = winners[0];
       winnerCard.innerHTML = `
-        <div class="winner-avatar">${avatarHTML(winner.avatar, "winner-avatar-img", `صورة ${winner.name || "الفائز"}`)}</div>
+        <div class="winner-avatar">${avatarHTML(winner.avatar, "winner-avatar-img", `صورة ${winner.name || "الفائز"}`, winner.avatarImage)}</div>
         <h2>${escapeHTML(winner.name || "لاعب")}</h2>
         <p>الفائز</p>
         <strong>${Number(winner.score) || 0} نقطة</strong>`;
@@ -1324,7 +1331,7 @@ function renderFinal(room) {
         <div class="joint-winners">
           ${winners.map((winner) => `
             <div class="joint-winner">
-              <div class="winner-avatar">${avatarHTML(winner.avatar, "winner-avatar-img", `صورة ${winner.name || "الفائز"}`)}</div>
+              <div class="winner-avatar">${avatarHTML(winner.avatar, "winner-avatar-img", `صورة ${winner.name || "الفائز"}`, winner.avatarImage)}</div>
               <h2>${escapeHTML(winner.name || "لاعب")}</h2>
               <strong>${Number(winner.score) || 0} نقطة</strong>
             </div>`).join("")}
@@ -1334,7 +1341,7 @@ function renderFinal(room) {
 
   if (board) {
     const renderKey = JSON.stringify(
-      ranking.map((entry) => [entry.id, entry.rank, Number(entry.score) || 0, Number(entry.correctGuesses) || 0, Number(entry.fooledPlayers) || 0, entry.avatar, entry.name]),
+      ranking.map((entry) => [entry.id, entry.rank, Number(entry.score) || 0, Number(entry.correctGuesses) || 0, Number(entry.fooledPlayers) || 0, entry.avatar, entry.avatarImage, entry.name]),
     );
     if (board.dataset.renderKey !== renderKey) {
       board.dataset.renderKey = renderKey;
@@ -1343,7 +1350,7 @@ function renderFinal(room) {
           (entry) => `
         <div class="leaderboard-row rank-${entry.rank} ${entry.id === playerId ? "is-me" : ""}">
           <div class="leaderboard-rank">${entry.rank}</div>
-          <div class="leaderboard-avatar">${avatarHTML(entry.avatar, "leaderboard-avatar-img", `صورة ${entry.name || "لاعب"}`)}</div>
+          <div class="leaderboard-avatar">${avatarHTML(entry.avatar, "leaderboard-avatar-img", `صورة ${entry.name || "لاعب"}`, entry.avatarImage)}</div>
           <div class="leaderboard-info">
             <strong>${escapeHTML(entry.name || "لاعب")}</strong>
             <small>أصاب ${Number(entry.correctGuesses) || 0} • خدع ${Number(entry.fooledPlayers) || 0}</small>
@@ -1597,4 +1604,4 @@ document.getElementById("gameLeaveButton")?.addEventListener("click", () => {
   window.dispatchEvent(new CustomEvent("taleela:leave-room"));
 });
 
-console.log("Taleela Game Engine v8.5.0 Gameplay Refresh + Shared Bluffs loaded");
+console.log("Taleela Game Engine v8.6.0 Custom Avatars + Mobile Input loaded");

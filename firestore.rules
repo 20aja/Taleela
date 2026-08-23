@@ -47,6 +47,13 @@ service cloud.firestore {
         && avatar.matches('^avatar-(0[1-9]|1[0-9]|20)$');
     }
 
+    function validAvatarImage(image) {
+      return image == null
+        || (image is string
+          && image.size() <= 60000
+          && image.matches('^data:image/(webp|jpeg|png);base64,[A-Za-z0-9+/=]+$'));
+    }
+
     function validName(name) {
       return name is string && name.size() >= 1 && name.size() <= 20;
     }
@@ -80,7 +87,7 @@ service cloud.firestore {
     function validRoomCreate(roomId) {
       let data = request.resource.data;
       return signedIn()
-        && data.schemaVersion == 6
+        && data.schemaVersion == 7
         && data.code == roomId
         && data.code is string
         && data.code.size() == 6
@@ -88,6 +95,7 @@ service cloud.firestore {
         && data.hostId == uid()
         && validName(data.hostName)
         && validAvatar(data.hostAvatar)
+        && validAvatarImage(data.hostAvatarImage)
         && data.status == 'waiting'
         && data.isPublic is bool
         && data.createdAt is timestamp
@@ -102,8 +110,14 @@ service cloud.firestore {
         && data.currentRoundId == null
         && existsAfter(playerPath(roomId, uid()))
         && getAfter(playerPath(roomId, uid())).data.avatar == data.hostAvatar
-        && existsAfter(avatarPath(roomId, data.hostAvatar))
-        && getAfter(avatarPath(roomId, data.hostAvatar)).data.playerId == uid();
+        && getAfter(playerPath(roomId, uid())).data.avatarImage == data.hostAvatarImage
+        && (
+          data.hostAvatarImage != null
+          || (
+            existsAfter(avatarPath(roomId, data.hostAvatar))
+            && getAfter(avatarPath(roomId, data.hostAvatar)).data.playerId == uid()
+          )
+        );
     }
 
     function immutableRoomFieldsUnchanged() {
@@ -114,7 +128,7 @@ service cloud.firestore {
 
     function joiningRoom(roomId) {
       return signedIn()
-        && resource.data.schemaVersion == 6
+        && resource.data.schemaVersion == 7
         && resource.data.status == 'waiting'
         && !exists(playerPath(roomId, uid()))
         && existsAfter(playerPath(roomId, uid()))
@@ -150,9 +164,10 @@ service cloud.firestore {
         && resource.data.hostId != uid()
         && request.resource.data.hostId == uid()
         && request.resource.data.diff(resource.data).affectedKeys()
-          .hasOnly(['hostId', 'hostName', 'hostAvatar', 'lastActivityAt'])
+          .hasOnly(['hostId', 'hostName', 'hostAvatar', 'hostAvatarImage', 'lastActivityAt'])
         && validName(request.resource.data.hostName)
         && validAvatar(request.resource.data.hostAvatar)
+        && validAvatarImage(request.resource.data.hostAvatarImage)
         && oldHostIsStale(roomId);
     }
 
@@ -177,21 +192,22 @@ service cloud.firestore {
           let room = roomDataAfter(roomId);
           return signedIn()
             && playerId == uid()
-            && room.schemaVersion == 6
+            && room.schemaVersion == 7
             && room.status == 'waiting'
             && data.keys().hasAll([
-              'id', 'name', 'avatar', 'ready', 'score',
+              'id', 'name', 'avatar', 'avatarImage', 'ready', 'score',
               'correctGuesses', 'fooledPlayers',
               'replayRequested', 'returnRequested', 'joinedAt'
             ])
             && data.keys().hasOnly([
-              'id', 'name', 'avatar', 'ready', 'score',
+              'id', 'name', 'avatar', 'avatarImage', 'ready', 'score',
               'correctGuesses', 'fooledPlayers',
               'replayRequested', 'returnRequested', 'joinedAt'
             ])
             && data.id == uid()
             && validName(data.name)
             && validAvatar(data.avatar)
+            && validAvatarImage(data.avatarImage)
             && data.ready is bool
             && data.ready == (room.hostId == uid())
             && data.score == 0
@@ -200,15 +216,20 @@ service cloud.firestore {
             && data.replayRequested == false
             && data.returnRequested == false
             && data.joinedAt is timestamp
-            && existsAfter(avatarPath(roomId, data.avatar))
-            && getAfter(avatarPath(roomId, data.avatar)).data.playerId == uid();
+            && (
+              data.avatarImage != null
+              || (
+                existsAfter(avatarPath(roomId, data.avatar))
+                && getAfter(avatarPath(roomId, data.avatar)).data.playerId == uid()
+              )
+            );
         }
 
         function validOwnUpdate() {
           let changed = request.resource.data.diff(resource.data).affectedKeys();
           let room = roomData(roomId);
           return playerId == uid()
-            && changed.hasOnly(['name', 'avatar', 'ready', 'replayRequested', 'returnRequested'])
+            && changed.hasOnly(['name', 'avatar', 'avatarImage', 'ready', 'replayRequested', 'returnRequested'])
             && request.resource.data.id == resource.data.id
             && request.resource.data.joinedAt == resource.data.joinedAt
             && request.resource.data.score == resource.data.score
@@ -216,11 +237,12 @@ service cloud.firestore {
             && request.resource.data.fooledPlayers == resource.data.fooledPlayers
             && validName(request.resource.data.name)
             && validAvatar(request.resource.data.avatar)
+            && validAvatarImage(request.resource.data.avatarImage)
             && request.resource.data.ready is bool
             && request.resource.data.replayRequested is bool
             && request.resource.data.returnRequested is bool
             && (
-              !changed.hasAny(['name', 'avatar', 'ready'])
+              !changed.hasAny(['name', 'avatar', 'avatarImage', 'ready'])
               || room.status == 'waiting'
             )
             && (
@@ -228,7 +250,7 @@ service cloud.firestore {
               || room.status == 'finished'
             )
             && (
-              request.resource.data.avatar == resource.data.avatar
+              request.resource.data.avatarImage != null
               || (
                 existsAfter(avatarPath(roomId, request.resource.data.avatar))
                 && getAfter(avatarPath(roomId, request.resource.data.avatar)).data.playerId == uid()
@@ -255,7 +277,8 @@ service cloud.firestore {
           && request.resource.data.playerId == uid()
           && request.resource.data.reservedAt is timestamp
           && existsAfter(playerPath(roomId, uid()))
-          && getAfter(playerPath(roomId, uid())).data.avatar == avatarId;
+          && getAfter(playerPath(roomId, uid())).data.avatar == avatarId
+          && getAfter(playerPath(roomId, uid())).data.avatarImage == null;
         allow update: if false;
         allow delete: if signedIn()
           && (resource.data.playerId == uid() || isHost(roomId));

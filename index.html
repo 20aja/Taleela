@@ -20,11 +20,11 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <link rel="stylesheet" href="./css/style.css?v=8.5.0" />
+    <link rel="stylesheet" href="./css/style.css?v=8.6.0" />
   </head>
 
   <body>
-    <!-- Taleela v8.5.0 — Unified Visual Refresh + Lazy Question Shards -->
+    <!-- Taleela v8.6.0 — Unified Visual Refresh + Lazy Question Shards -->
     <!-- =====================================================
          1) الصفحة الرئيسية: إنشاء / انضمام / غرف عامة
     ====================================================== -->
@@ -264,6 +264,15 @@
           <span>اختر الصورة</span>
           <small id="avatarReservationHint">الصورة المحجوزة داخل الغرفة لا يمكن اختيارها.</small>
         </div>
+        <div class="custom-avatar-picker">
+          <input id="customAvatarInput" class="custom-avatar-input" type="file" accept="image/png,image/jpeg,image/webp" />
+          <button id="customAvatarButton" class="custom-avatar-button" type="button">
+            <span class="custom-avatar-preview-wrap"><img id="customAvatarPreview" src="assets/Users/avatar-01.webp" alt="معاينة الصورة الشخصية" draggable="false" /></span>
+            <span class="custom-avatar-copy"><strong>صورة من الجهاز</strong><small>اختر صورة شخصية؛ ستُقص وتُضغط تلقائيًا قبل مشاركتها.</small></span>
+            <i class="fa-solid fa-image"></i>
+          </button>
+          <button id="removeCustomAvatarButton" class="remove-custom-avatar-button hidden" type="button"><i class="fa-solid fa-rotate-left"></i> استخدام الصور الجاهزة</button>
+        </div>
         <div id="profileAvatars" class="profile-avatars">
           <button class="avatar active" data-avatar="avatar-01" type="button"><img data-src="assets/Users/avatar-01.webp" alt="الصورة 1" draggable="false" loading="lazy" decoding="async" /></button>
           <button class="avatar" data-avatar="avatar-02" type="button"><img data-src="assets/Users/avatar-02.webp" alt="الصورة 2" draggable="false" loading="lazy" decoding="async" /></button>
@@ -469,6 +478,6 @@
         });
       }
     </script>
-    <script type="module" src="./js/app.js?v=8.5.0"></script>
+    <script type="module" src="./js/app.js?v=8.6.0"></script>
   </body>
 </html>

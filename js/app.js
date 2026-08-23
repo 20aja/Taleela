@@ -46,7 +46,7 @@ function stopLoadedGame() {
   loadedGameModule?.stopGame?.();
 }
 
-const ROOM_SCHEMA_VERSION = 6;
+const ROOM_SCHEMA_VERSION = 7;
 const HEARTBEAT_INTERVAL_MS = 30_000;
 const HOST_STALE_MS = 90_000;
 const MIN_PLAYERS = 2;
@@ -56,9 +56,12 @@ const DEFAULT_AVATAR = "avatar-01";
 const AVATAR_IDS = Array.from({length: 20}, (_, index) => `avatar-${String(index + 1).padStart(2, "0")}`);
 const PROFILE_NAME_KEY = "taleela_profile_name";
 const PROFILE_AVATAR_KEY = "taleela_profile_avatar";
+const PROFILE_AVATAR_IMAGE_KEY = "taleela_profile_avatar_image_v1";
+const MAX_AVATAR_DATA_LENGTH = 60_000;
 const ACTIVE_SESSION_KEY = "taleela_active_room_v1";
 
 let selectedAvatar = DEFAULT_AVATAR;
+let selectedAvatarImage = "";
 let currentRoomCode = null;
 let currentPlayerId = null;
 let currentRoomId = null;
@@ -129,6 +132,10 @@ const profileMessage = document.getElementById("profileMessage");
 const avatarReservationHint = document.getElementById("avatarReservationHint");
 const homeProfileAvatar = document.getElementById("homeProfileAvatar");
 const homeProfileName = document.getElementById("homeProfileName");
+const customAvatarInput = document.getElementById("customAvatarInput");
+const customAvatarButton = document.getElementById("customAvatarButton");
+const customAvatarPreview = document.getElementById("customAvatarPreview");
+const removeCustomAvatarButton = document.getElementById("removeCustomAvatarButton");
 
 function escapeHTML(value) {
   const div = document.createElement("div");
@@ -141,34 +148,46 @@ function normalizeAvatarId(value) {
   return AVATAR_IDS.includes(avatar) ? avatar : DEFAULT_AVATAR;
 }
 
-function avatarSrc(value) {
-  return `assets/Users/${normalizeAvatarId(value)}.webp`;
+function normalizeAvatarImage(value) {
+  const image = String(value || "");
+  if (!image || image.length > MAX_AVATAR_DATA_LENGTH) return "";
+  return /^data:image\/(?:webp|jpeg|png);base64,[A-Za-z0-9+/=]+$/.test(image) ? image : "";
 }
 
-function avatarHTML(value, className = "avatar-image", alt = "صورة اللاعب") {
-  return `<img class="${className}" src="${avatarSrc(value)}" alt="${escapeHTML(alt)}" draggable="false" />`;
+function avatarSrc(value, customImage = "") {
+  return normalizeAvatarImage(customImage) || `assets/Users/${normalizeAvatarId(value)}.webp`;
+}
+
+function avatarHTML(value, className = "avatar-image", alt = "صورة اللاعب", customImage = "") {
+  const custom = normalizeAvatarImage(customImage);
+  const extraClass = custom ? " custom-avatar-image" : "";
+  return `<img class="${className}${extraClass}" src="${custom || avatarSrc(value)}" alt="${escapeHTML(alt)}" draggable="false" />`;
 }
 
 function getTakenAvatars(room, exceptPlayerId = null) {
   return new Set(
     Object.values(playersMap(room))
-      .filter((player) => player?.id && player.id !== exceptPlayerId)
+      .filter((player) => player?.id && player.id !== exceptPlayerId && !normalizeAvatarImage(player.avatarImage))
       .map((player) => normalizeAvatarId(player.avatar)),
   );
 }
 
-function saveLocalProfile(name, avatar) {
+function saveLocalProfile(name, avatar, avatarImage = selectedAvatarImage) {
   const cleanName = String(name || "")
     .trim()
     .slice(0, 20);
   const cleanAvatar = normalizeAvatarId(avatar);
+  const cleanAvatarImage = normalizeAvatarImage(avatarImage);
   try {
     localStorage.setItem(PROFILE_NAME_KEY, cleanName);
     localStorage.setItem(PROFILE_AVATAR_KEY, cleanAvatar);
+    if (cleanAvatarImage) localStorage.setItem(PROFILE_AVATAR_IMAGE_KEY, cleanAvatarImage);
+    else localStorage.removeItem(PROFILE_AVATAR_IMAGE_KEY);
   } catch (error) {
     console.warn("Unable to save local profile:", error);
   }
   selectedAvatar = cleanAvatar;
+  selectedAvatarImage = cleanAvatarImage;
   if (nameInput) nameInput.value = cleanName;
   updateHomeProfileSummary();
 }
@@ -176,15 +195,18 @@ function saveLocalProfile(name, avatar) {
 function loadLocalProfile() {
   let name = "";
   let avatar = DEFAULT_AVATAR;
+  let avatarImage = "";
   try {
     name = String(localStorage.getItem(PROFILE_NAME_KEY) || "")
       .trim()
       .slice(0, 20);
     avatar = normalizeAvatarId(localStorage.getItem(PROFILE_AVATAR_KEY));
+    avatarImage = normalizeAvatarImage(localStorage.getItem(PROFILE_AVATAR_IMAGE_KEY));
   } catch {
     // Keep defaults when storage is blocked.
   }
   selectedAvatar = avatar;
+  selectedAvatarImage = avatarImage;
   if (nameInput) nameInput.value = name;
   updateHomeProfileSummary();
 }
@@ -192,7 +214,69 @@ function loadLocalProfile() {
 function updateHomeProfileSummary() {
   const name = nameInput?.value?.trim() || "";
   if (homeProfileName) homeProfileName.textContent = name || "سجّل اسمك وصورتك";
-  if (homeProfileAvatar) homeProfileAvatar.src = avatarSrc(selectedAvatar);
+  if (homeProfileAvatar) {
+    homeProfileAvatar.src = avatarSrc(selectedAvatar, selectedAvatarImage);
+    homeProfileAvatar.classList.toggle("custom-avatar-image", Boolean(selectedAvatarImage));
+  }
+}
+
+function updateCustomAvatarUI() {
+  const custom = normalizeAvatarImage(selectedAvatarImage);
+  customAvatarButton?.classList.toggle("active", Boolean(custom));
+  removeCustomAvatarButton?.classList.toggle("hidden", !custom);
+  if (customAvatarPreview) {
+    customAvatarPreview.src = avatarSrc(selectedAvatar, custom);
+    customAvatarPreview.classList.toggle("custom-avatar-image", Boolean(custom));
+  }
+}
+
+function loadImageElement(url) {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.onload = () => resolve(image);
+    image.onerror = () => reject(new Error("IMAGE_DECODE_FAILED"));
+    image.src = url;
+  });
+}
+
+async function compressAvatarFile(file) {
+  if (!file || !String(file.type || "").startsWith("image/")) throw new Error("IMAGE_TYPE");
+  if (Number(file.size) > 10 * 1024 * 1024) throw new Error("IMAGE_TOO_LARGE");
+  const objectUrl = URL.createObjectURL(file);
+  try {
+    const image = await loadImageElement(objectUrl);
+    const sourceWidth = image.naturalWidth || image.width;
+    const sourceHeight = image.naturalHeight || image.height;
+    if (!sourceWidth || !sourceHeight) throw new Error("IMAGE_DECODE_FAILED");
+    const side = Math.min(sourceWidth, sourceHeight);
+    const sx = Math.max(0, (sourceWidth - side) / 2);
+    const sy = Math.max(0, (sourceHeight - side) / 2);
+    const sizes = [192, 168, 144];
+    const qualities = [0.82, 0.72, 0.62, 0.52];
+    for (const size of sizes) {
+      const canvas = document.createElement("canvas");
+      canvas.width = size;
+      canvas.height = size;
+      const context = canvas.getContext("2d", {alpha: false});
+      if (!context) throw new Error("CANVAS_UNAVAILABLE");
+      context.fillStyle = "#171827";
+      context.fillRect(0, 0, size, size);
+      context.drawImage(image, sx, sy, side, side, 0, 0, size, size);
+      for (const quality of qualities) {
+        let data = canvas.toDataURL("image/webp", quality);
+        if (!data.startsWith("data:image/webp")) data = canvas.toDataURL("image/jpeg", quality);
+        if (normalizeAvatarImage(data)) return data;
+      }
+    }
+    throw new Error("IMAGE_COMPRESS_FAILED");
+  } finally {
+    URL.revokeObjectURL(objectUrl);
+  }
+}
+
+function blurActiveTextInput() {
+  const active = document.activeElement;
+  if (active instanceof HTMLElement && active.matches('input[type="text"], input[type="search"], input[type="email"], input[type="tel"], textarea, [contenteditable="true"]')) active.blur();
 }
 
 function ensureProfileAvatarImages() {
@@ -215,7 +299,7 @@ function renderProfileAvatars(room = profileReservationRoom) {
   avatarButtons.forEach((button) => {
     const avatar = normalizeAvatarId(button.dataset.avatar);
     const isTaken = taken.has(avatar);
-    const isActive = avatar === selectedAvatar;
+    const isActive = !selectedAvatarImage && avatar === selectedAvatar;
     button.classList.toggle("active", isActive);
     button.classList.toggle("reserved", isTaken);
     button.disabled = isTaken;
@@ -232,8 +316,9 @@ function renderProfileAvatars(room = profileReservationRoom) {
     }
   });
   if (avatarReservationHint) {
-    avatarReservationHint.textContent = room ? "الصور التي اختارها لاعبو الغرفة تظهر مقفلة ومحجوزة فورًا." : "اختر أي صورة؛ داخل الغرفة لا يمكن للاعبين استخدام الصورة نفسها.";
+    avatarReservationHint.textContent = room ? "الصور الجاهزة التي اختارها لاعبو الغرفة تُحجز، أما صورتك من الجهاز فهي خاصة بك ولا تحتاج إلى حجز." : "يمكنك اختيار صورة جاهزة أو إضافة صورة من جهازك.";
   }
+  updateCustomAvatarUI();
 }
 
 function openProfileEditor(context = "home", room = currentRoom) {
@@ -248,14 +333,15 @@ function openProfileEditor(context = "home", room = currentRoom) {
   const roomPlayer = context === "room" && currentPlayerId ? playersMap(room)[currentPlayerId] : null;
   if (roomPlayer) {
     selectedAvatar = normalizeAvatarId(roomPlayer.avatar);
+    selectedAvatarImage = normalizeAvatarImage(roomPlayer.avatarImage);
     if (profileNameInput) profileNameInput.value = roomPlayer.name || "";
   } else if (profileNameInput) {
     profileNameInput.value = nameInput?.value || "";
   }
   setProfileMessage();
   renderProfileAvatars(room || null);
+  blurActiveTextInput();
   profileModal.classList.remove("hidden");
-  setTimeout(() => profileNameInput?.focus(), 80);
 }
 
 function closeProfileEditor() {
@@ -384,7 +470,7 @@ function renderPlayers(room) {
     const ready = player.ready === true;
 
     card.innerHTML = `
-      <div class="player-avatar">${avatarHTML(player.avatar, "player-avatar-img", `صورة ${player.name || "لاعب"}`)}</div>
+      <div class="player-avatar">${avatarHTML(player.avatar, "player-avatar-img", `صورة ${player.name || "لاعب"}`, player.avatarImage)}</div>
       <div class="player-info">
         <div class="player-name">${escapeHTML(player.name || "لاعب")}${player.id === currentPlayerId ? ' <span class="you-label">أنت</span>' : ""}</div>
         ${isHost ? '<div class="player-host"><i class="fa-solid fa-crown"></i> المضيف</div>' : ""}
@@ -664,6 +750,7 @@ async function attemptHostTakeover(room) {
         hostId: currentPlayerId,
         hostName: candidate.name || "لاعب",
         hostAvatar: normalizeAvatarId(candidate.avatar),
+        hostAvatarImage: normalizeAvatarImage(candidate.avatarImage) || null,
         lastActivityAt: serverTimestamp(),
       });
     });
@@ -807,6 +894,7 @@ async function createRoom() {
             hostId: playerId,
             hostName: name.slice(0, 20),
             hostAvatar: selectedAvatar,
+            hostAvatarImage: selectedAvatarImage || null,
             status: "waiting",
             isPublic,
             createdAt: now,
@@ -828,6 +916,7 @@ async function createRoom() {
             id: playerId,
             name: name.slice(0, 20),
             avatar: selectedAvatar,
+            avatarImage: selectedAvatarImage || null,
             ready: true,
             score: 0,
             correctGuesses: 0,
@@ -836,7 +925,7 @@ async function createRoom() {
             returnRequested: false,
             joinedAt: now,
           });
-          transaction.set(doc(db, "rooms", candidate, "avatars", selectedAvatar), {playerId, reservedAt: now});
+          if (!selectedAvatarImage) transaction.set(doc(db, "rooms", candidate, "avatars", selectedAvatar), {playerId, reservedAt: now});
           transaction.set(doc(db, "rooms", candidate, "presence", playerId), {id: playerId, lastSeen: now});
         });
         roomCode = candidate;
@@ -902,14 +991,17 @@ async function joinRoom(codeOverride = null) {
       if (room.status !== "waiting") throw new Error("GAME_STARTED");
       if ((Number(room.playerCount) || 0) >= roomMaxPlayers(room)) throw new Error("ROOM_FULL");
 
-      const avatarSnapshot = await transaction.get(avatarRef);
-      if (avatarSnapshot.exists()) throw new Error("AVATAR_TAKEN");
+      if (!selectedAvatarImage) {
+        const avatarSnapshot = await transaction.get(avatarRef);
+        if (avatarSnapshot.exists()) throw new Error("AVATAR_TAKEN");
+      }
 
       const now = Timestamp.now();
       const playerData = {
         id: playerId,
         name: name.slice(0, 20),
         avatar: selectedAvatar,
+        avatarImage: selectedAvatarImage || null,
         ready: false,
         score: 0,
         correctGuesses: 0,
@@ -922,7 +1014,7 @@ async function joinRoom(codeOverride = null) {
       const expiresAt = Timestamp.fromMillis(Date.now() + (room.isPublic ? 5 * 60_000 : 24 * 60 * 60_000));
 
       transaction.set(playerRef, playerData);
-      transaction.set(avatarRef, {playerId, reservedAt: now});
+      if (!selectedAvatarImage) transaction.set(avatarRef, {playerId, reservedAt: now});
       transaction.set(presenceRef, {id: playerId, lastSeen: now});
       transaction.update(roomRef, {
         playerCount: nextCount,
@@ -935,7 +1027,8 @@ async function joinRoom(codeOverride = null) {
 
     if (!joined?.player || !joined?.room) throw new Error("JOIN_NOT_CONFIRMED");
     selectedAvatar = normalizeAvatarId(joined.player.avatar);
-    saveLocalProfile(joined.player.name, joined.player.avatar);
+    selectedAvatarImage = normalizeAvatarImage(joined.player.avatarImage);
+    saveLocalProfile(joined.player.name, joined.player.avatar, joined.player.avatarImage);
 
     currentRoomCode = code;
     currentPlayerId = playerId;
@@ -1011,7 +1104,7 @@ async function loadPublicRooms() {
       .map((room) => `
         <div class="public-room-item">
           <div class="public-room-info">
-            <strong>${avatarHTML(room.hostAvatar, "public-room-avatar-img", `صورة ${room.hostName || "لاعب"}`)} <span>غرفة ${escapeHTML(room.hostName || "لاعب")}</span></strong>
+            <strong>${avatarHTML(room.hostAvatar, "public-room-avatar-img", `صورة ${room.hostName || "لاعب"}`, room.hostAvatarImage)} <span>غرفة ${escapeHTML(room.hostName || "لاعب")}</span></strong>
             <small>${Number(room.playerCount) || 0}/${roomMaxPlayers(room)} لاعبين • ${escapeHTML(room.code || room.id)}</small>
           </div>
           <button type="button" data-public-code="${escapeHTML(room.code || room.id)}">انضم</button>
@@ -1045,7 +1138,7 @@ async function removePlayerFromRoom(targetPlayerId) {
       const targetData = targetSnapshot.data();
       transaction.delete(targetRef);
       transaction.delete(doc(db, "rooms", currentRoomId, "presence", targetPlayerId));
-      transaction.delete(doc(db, "rooms", currentRoomId, "avatars", normalizeAvatarId(targetData.avatar)));
+      if (!normalizeAvatarImage(targetData.avatarImage)) transaction.delete(doc(db, "rooms", currentRoomId, "avatars", normalizeAvatarId(targetData.avatar)));
       transaction.update(roomRef, {
         playerCount: Math.max(0, (Number(room.playerCount) || 1) - 1),
         lastActivityAt: serverTimestamp(),
@@ -1138,7 +1231,7 @@ async function leaveRoom() {
       const player = playerSnapshot.data();
       transaction.delete(playerRef);
       transaction.delete(doc(db, "rooms", currentRoomId, "presence", currentPlayerId));
-      transaction.delete(doc(db, "rooms", currentRoomId, "avatars", normalizeAvatarId(player.avatar)));
+      if (!normalizeAvatarImage(player.avatarImage)) transaction.delete(doc(db, "rooms", currentRoomId, "avatars", normalizeAvatarId(player.avatar)));
 
       if ((Number(room.playerCount) || 1) <= 1) {
         transaction.delete(roomRef);
@@ -1152,6 +1245,7 @@ async function leaveRoom() {
         updates.hostId = nextHost.id;
         updates.hostName = nextHost.name || "لاعب";
         updates.hostAvatar = normalizeAvatarId(nextHost.avatar);
+        updates.hostAvatarImage = normalizeAvatarImage(nextHost.avatarImage) || null;
       }
       transaction.update(roomRef, updates);
     });
@@ -1285,8 +1379,34 @@ avatarButtons.forEach((button) => {
   button.addEventListener("click", () => {
     if (button.disabled || button.classList.contains("reserved")) return;
     selectedAvatar = normalizeAvatarId(button.dataset.avatar);
+    selectedAvatarImage = "";
     renderProfileAvatars(profileReservationRoom);
   });
+});
+
+customAvatarButton?.addEventListener("click", () => customAvatarInput?.click());
+customAvatarInput?.addEventListener("change", async () => {
+  const file = customAvatarInput.files?.[0];
+  if (!file) return;
+  customAvatarButton.disabled = true;
+  setProfileMessage("جاري تجهيز الصورة...", "info");
+  try {
+    selectedAvatarImage = await compressAvatarFile(file);
+    setProfileMessage("تم تجهيز الصورة الشخصية.", "info");
+    renderProfileAvatars(profileReservationRoom);
+  } catch (error) {
+    console.error("custom avatar failed:", error);
+    const message = error?.message === "IMAGE_TOO_LARGE" ? "حجم الصورة كبير جدًا. اختر صورة أصغر من 10 MB." : "تعذر قراءة الصورة أو ضغطها. جرّب صورة JPG أو PNG أو WebP أخرى.";
+    setProfileMessage(message, "error");
+  } finally {
+    customAvatarButton.disabled = false;
+    customAvatarInput.value = "";
+  }
+});
+removeCustomAvatarButton?.addEventListener("click", () => {
+  selectedAvatarImage = "";
+  setProfileMessage();
+  renderProfileAvatars(profileReservationRoom);
 });
 
 editProfileButton?.addEventListener("click", () => openProfileEditor("home", null));
@@ -1300,7 +1420,6 @@ saveProfileButton?.addEventListener("click", async () => {
   const name = profileNameInput?.value?.trim().slice(0, 20) || "";
   if (!name) {
     setProfileMessage("اكتب اسم اللاعب أولًا.", "warning");
-    profileNameInput?.focus();
     return;
   }
   if (!AVATAR_IDS.includes(selectedAvatar)) {
@@ -1322,18 +1441,23 @@ saveProfileButton?.addEventListener("click", async () => {
         const player = playerSnapshot.data();
         if (room.status !== "waiting") throw new Error("GAME_STARTED");
         const oldAvatar = normalizeAvatarId(player.avatar);
-        if (selectedAvatar !== oldAvatar) {
+        const oldAvatarImage = normalizeAvatarImage(player.avatarImage);
+        const newAvatarImage = normalizeAvatarImage(selectedAvatarImage);
+        const switchingToBuiltIn = !newAvatarImage && (Boolean(oldAvatarImage) || selectedAvatar !== oldAvatar);
+        if (switchingToBuiltIn) {
           const newAvatarRef = doc(db, "rooms", currentRoomId, "avatars", selectedAvatar);
           const newAvatarSnapshot = await transaction.get(newAvatarRef);
           if (newAvatarSnapshot.exists()) throw new Error("AVATAR_TAKEN");
-          transaction.delete(doc(db, "rooms", currentRoomId, "avatars", oldAvatar));
+          if (!oldAvatarImage && oldAvatar !== selectedAvatar) transaction.delete(doc(db, "rooms", currentRoomId, "avatars", oldAvatar));
           transaction.set(newAvatarRef, {playerId: currentPlayerId, reservedAt: Timestamp.now()});
+        } else if (newAvatarImage && !oldAvatarImage) {
+          transaction.delete(doc(db, "rooms", currentRoomId, "avatars", oldAvatar));
         }
-        transaction.update(playerRef, {name, avatar: selectedAvatar});
-        if (room.hostId === currentPlayerId) transaction.update(roomRef, {hostName: name, hostAvatar: selectedAvatar, lastActivityAt: serverTimestamp()});
+        transaction.update(playerRef, {name, avatar: selectedAvatar, avatarImage: newAvatarImage || null});
+        if (room.hostId === currentPlayerId) transaction.update(roomRef, {hostName: name, hostAvatar: selectedAvatar, hostAvatarImage: newAvatarImage || null, lastActivityAt: serverTimestamp()});
       });
     }
-    saveLocalProfile(name, selectedAvatar);
+    saveLocalProfile(name, selectedAvatar, selectedAvatarImage);
     closeProfileEditor();
   } catch (error) {
     console.error("saveProfile failed:", error);
@@ -1369,8 +1493,8 @@ joinRoomButton?.addEventListener("click", () => {
   if (inlineCode.length === 6) {
     joinRoom(inlineCode);
   } else {
+    blurActiveTextInput();
     joinModal?.classList.remove("hidden");
-    roomCodeInput?.focus();
   }
 });
 
@@ -1458,4 +1582,14 @@ async function bootstrap() {
 }
 
 bootstrap();
-console.log("Taleela App v8.5.0 Gameplay Refresh + Expanded Question Bank loaded");
+document.addEventListener(
+  "pointerdown",
+  (event) => {
+    const target = event.target instanceof Element ? event.target : null;
+    if (target?.closest('input[type="text"], input[type="search"], input[type="email"], input[type="tel"], textarea, [contenteditable="true"]')) return;
+    blurActiveTextInput();
+  },
+  {capture: true},
+);
+
+console.log("Taleela App v8.6.0 Mobile Input + Custom Avatar + Expanded Question Bank loaded");

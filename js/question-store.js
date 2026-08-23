@@ -1,4 +1,4 @@
-const QUESTION_VERSION = "8.5.0";
+const QUESTION_VERSION = "8.6.0";
 const MANIFEST_URL = new URL(`../questions/v${QUESTION_VERSION}/manifest.json`, import.meta.url);
 const HISTORY_KEY = `taleela_question_history_v${QUESTION_VERSION}`;
 
