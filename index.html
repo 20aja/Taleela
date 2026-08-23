@@ -20,11 +20,11 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <link rel="stylesheet" href="./css/style.css?v=8.4.0" />
+    <link rel="stylesheet" href="./css/style.css?v=8.5.0" />
   </head>
 
   <body>
-    <!-- Taleela v8.4.0 — Unified Visual Refresh + Lazy Question Shards -->
+    <!-- Taleela v8.5.0 — Unified Visual Refresh + Lazy Question Shards -->
     <!-- =====================================================
          1) الصفحة الرئيسية: إنشاء / انضمام / غرف عامة
     ====================================================== -->
@@ -173,12 +173,12 @@
           <div class="section-title">
             <div>
               <span class="section-label">فئات الجولة</span>
-              <h2>اختر 5 فئات أو أكثر</h2>
+              <h2>اختر فئة واحدة أو أكثر</h2>
             </div>
             <span id="selectedCategoriesCount" class="selected-count">0 / 33</span>
           </div>
 
-          <p class="categories-description">اختر 5 فئات على الأقل، ويمكنك اختيار جميع الفئات. في بداية كل جولة يملك صاحب الدور 20 ثانية لاختيار فئة.</p>
+          <p class="categories-description">اختر فئة واحدة على الأقل، ويمكنك اختيار جميع الفئات. في بداية كل جولة يملك صاحب الدور 20 ثانية لاختيار فئة.</p>
           <div id="categoriesGrid" class="categories-grid"></div>
           <div id="categoriesMessage" class="categories-message hidden">المضيف فقط يستطيع تغيير الفئات.</div>
         </section>
@@ -193,7 +193,7 @@
             في انتظار الجاهزية
           </button>
         </div>
-        <p class="room-hint">تبدأ اللعبة عند وجود لاعبين على الأقل، اختيار 5 فئات على الأقل، وجاهزية جميع اللاعبين.</p>
+        <p class="room-hint">تبدأ اللعبة عند وجود لاعبين على الأقل، اختيار فئة واحدة على الأقل، وجاهزية جميع اللاعبين.</p>
       </div>
     </section>
 
@@ -208,7 +208,7 @@
         <ol class="help-steps">
           <li>
             <span>1</span>
-            <p>انضموا لنفس الغرفة عبر رمز الغرفة، واختاروا 5 فئات على الأقل.</p>
+            <p>انضموا لنفس الغرفة عبر رمز الغرفة، واختاروا فئة واحدة على الأقل.</p>
           </li>
           <li>
             <span>2</span>
@@ -341,13 +341,13 @@
           <button id="gameLeaveButton" class="game-menu-button game-exit-button" type="button" title="مغادرة اللعبة" aria-label="مغادرة اللعبة">
             <i class="fa-solid fa-arrow-right-from-bracket"></i>
           </button>
-          <div class="game-phase-meta">
-            <strong id="gameRound">جولة 1/6</strong>
-            <div id="timerRing" class="timer-ring" aria-label="الوقت المتبقي">
-              <span id="gameTimer">0</span>
-            </div>
-          </div>
+          <strong id="gameRound">جولة 1/6</strong>
         </header>
+        <div id="gameTimerDock" class="game-timer-dock" aria-live="polite">
+          <div id="timerRing" class="timer-ring" aria-label="الوقت المتبقي">
+            <span id="gameTimer">0</span>
+          </div>
+        </div>
 
         <!-- 3: اختيار الفئة -->
         <section id="categorySelectionPhase" class="game-phase hidden">
@@ -369,6 +369,10 @@
           <div id="gameQuestionMedia" class="question-media hidden" aria-live="polite"></div>
           <div class="bluff-card">
             <label for="gameAnswer">اكتب كذبتك المقنعة</label>
+            <div id="correctAnswerHint" class="answer-validation-hint hidden" role="status" aria-live="polite">
+              <i class="fa-solid fa-lightbulb"></i>
+              <div><strong>هذه هي الإجابة الصحيحة!</strong><span>غيّرها واكتب كذبة مقنعة حتى لا تكشف الحل.</span></div>
+            </div>
             <input id="gameAnswer" type="text" maxlength="120" placeholder="اكتب كذبتك هنا..." autocomplete="off" />
             <button id="confirmAnswer" class="primary-button" type="button">
               <i class="fa-solid fa-paper-plane"></i>
@@ -415,10 +419,6 @@
             <p id="roundResultLabel">جولة 1/6</p>
           </div>
           <div id="roundLeaderboard" class="round-leaderboard"></div>
-          <div class="result-countdown-line">
-            <span>الجولة التالية خلال</span>
-            <strong id="resultCountdown">5</strong>
-          </div>
         </section>
 
         <!-- 9: النتائج النهائية -->
@@ -438,8 +438,6 @@
             </button>
           </div>
         </section>
-
-        <div id="chatToastContainer" class="chat-toast-container" aria-live="polite" aria-atomic="false"></div>
 
         <button id="gameChatButton" class="game-chat-button" type="button" aria-label="الدردشة" title="الدردشة">
           <i class="fa-regular fa-comment-dots"></i>
@@ -471,6 +469,6 @@
         });
       }
     </script>
-    <script type="module" src="./js/app.js?v=8.4.0"></script>
+    <script type="module" src="./js/app.js?v=8.5.0"></script>
   </body>
 </html>

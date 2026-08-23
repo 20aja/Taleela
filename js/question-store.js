@@ -1,4 +1,4 @@
-const QUESTION_VERSION = "8.1.0";
+const QUESTION_VERSION = "8.5.0";
 const MANIFEST_URL = new URL(`../questions/v${QUESTION_VERSION}/manifest.json`, import.meta.url);
 const HISTORY_KEY = `taleela_question_history_v${QUESTION_VERSION}`;
 
@@ -107,7 +107,9 @@ function categoryHistory(history, categoryId) {
   history.categories ||= {};
   const current = history.categories[categoryId];
   if (!current || typeof current !== "object" || typeof current.shards !== "object") {
-    history.categories[categoryId] = {shards: {}};
+    history.categories[categoryId] = {shards: {}, facts: []};
+  } else if (!Array.isArray(current.facts)) {
+    current.facts = [];
   }
   return history.categories[categoryId];
 }
@@ -123,12 +125,15 @@ function setSeenIdsForShard(categoryState, file, ids) {
 }
 
 function categoryCycleComplete(categoryInfo, categoryState) {
+  // A local cycle is complete only after every concrete question entry has
+  // appeared. factKey is used as a preference to postpone alternate wording
+  // of the same fact, not as a reason to end the cycle early.
   return (categoryInfo.shards || []).every((shard) => seenIdsForShard(categoryState, shard.file).length >= Number(shard.count || 0));
 }
 
 function resetCategoryCycle(history, categoryId) {
   history.categories ||= {};
-  history.categories[categoryId] = {shards: {}};
+  history.categories[categoryId] = {shards: {}, facts: []};
   activeShardByCategory.delete(categoryId);
   writeHistory(history);
   return history.categories[categoryId];
@@ -146,16 +151,29 @@ function orderedShards(categoryId, categoryInfo, categoryState, respectHistory) 
   return active ? [active, ...rest] : rest;
 }
 
-async function trySelectFromShards({categoryId, categoryInfo, categoryState, roomUsed, usedFacts, respectHistory, respectRoom}) {
-  const shardOrder = orderedShards(categoryId, categoryInfo, categoryState, respectHistory);
+async function trySelectFromShards({
+  categoryId,
+  categoryInfo,
+  categoryState,
+  roomUsed,
+  usedFacts,
+  respectHistoryIds = true,
+  respectHistoryFacts = true,
+  respectRoomIds = true,
+  respectRoomFacts = true,
+}) {
+  const shardOrder = orderedShards(categoryId, categoryInfo, categoryState, respectHistoryIds);
 
   for (const shardMeta of shardOrder) {
     const questions = await loadShard(shardMeta.file);
-    const seen = new Set(respectHistory ? seenIdsForShard(categoryState, shardMeta.file) : []);
+    const seen = new Set(respectHistoryIds ? seenIdsForShard(categoryState, shardMeta.file) : []);
+    const seenFacts = new Set(respectHistoryFacts ? categoryState.facts || [] : []);
     const candidates = questions.filter((question) => {
-      if (respectHistory && seen.has(question.id)) return false;
-      if (respectRoom && roomUsed.has(question.id)) return false;
-      if (respectRoom && usedFacts.has(question.factKey || question.id)) return false;
+      const factKey = question.factKey || question.id;
+      if (respectHistoryIds && seen.has(question.id)) return false;
+      if (respectHistoryFacts && seenFacts.has(factKey)) return false;
+      if (respectRoomIds && roomUsed.has(question.id)) return false;
+      if (respectRoomFacts && usedFacts.has(factKey)) return false;
       return true;
     });
 
@@ -191,19 +209,34 @@ export async function selectQuestion(categoryId, {usedQuestionIds = [], usedFact
     state = resetCategoryCycle(history, categoryId);
   }
 
-  // Normal path: avoid both room repeats and locally seen questions.
+  // First preference: a concrete question ID that has never appeared locally
+  // and whose underlying fact has not appeared locally or in this room.
   let selected = await trySelectFromShards({
     categoryId,
     categoryInfo,
     categoryState: state,
     roomUsed,
     usedFacts,
-    respectHistory: true,
-    respectRoom: true,
   });
 
-  // If local history blocks every room-fresh question, begin a new local cycle
-  // while still preserving no-repeat inside this room.
+  // When all distinct facts have been covered, keep consuming unused question
+  // entries (alternate formulations/clues) before allowing an exact repeat.
+  if (!selected) {
+    selected = await trySelectFromShards({
+      categoryId,
+      categoryInfo,
+      categoryState: state,
+      roomUsed,
+      usedFacts,
+      respectHistoryIds: true,
+      respectHistoryFacts: false,
+      respectRoomIds: true,
+      respectRoomFacts: false,
+    });
+  }
+
+  // Local history may have exhausted the category across earlier matches. Start
+  // a new local cycle while still protecting every concrete ID used in this room.
   if (!selected) {
     state = resetCategoryCycle(history, categoryId);
     selected = await trySelectFromShards({
@@ -212,12 +245,13 @@ export async function selectQuestion(categoryId, {usedQuestionIds = [], usedFact
       categoryState: state,
       roomUsed,
       usedFacts,
-      respectHistory: true,
-      respectRoom: true,
+      respectHistoryIds: true,
+      respectHistoryFacts: true,
+      respectRoomIds: true,
+      respectRoomFacts: true,
     });
   }
 
-  // Only if the room consumed the entire category do repeats become unavoidable.
   if (!selected) {
     selected = await trySelectFromShards({
       categoryId,
@@ -225,8 +259,27 @@ export async function selectQuestion(categoryId, {usedQuestionIds = [], usedFact
       categoryState: state,
       roomUsed,
       usedFacts,
-      respectHistory: false,
-      respectRoom: false,
+      respectHistoryIds: true,
+      respectHistoryFacts: false,
+      respectRoomIds: true,
+      respectRoomFacts: false,
+    });
+  }
+
+  // Only after every concrete question ID in the room has been consumed is an
+  // exact repeat unavoidable. This matters when one small category is selected
+  // for a long (up to 30-round) game.
+  if (!selected) {
+    selected = await trySelectFromShards({
+      categoryId,
+      categoryInfo,
+      categoryState: state,
+      roomUsed,
+      usedFacts,
+      respectHistoryIds: false,
+      respectHistoryFacts: false,
+      respectRoomIds: false,
+      respectRoomFacts: false,
     });
   }
 
@@ -235,8 +288,11 @@ export async function selectQuestion(categoryId, {usedQuestionIds = [], usedFact
   const currentSeen = seenIdsForShard(state, selected.shardFile);
   if (!currentSeen.includes(selected.question.id)) {
     setSeenIdsForShard(state, selected.shardFile, [...currentSeen, selected.question.id]);
-    writeHistory(history);
   }
+  state.facts ||= [];
+  const factKey = selected.question.factKey || selected.question.id;
+  if (!state.facts.includes(factKey)) state.facts.push(factKey);
+  writeHistory(history);
   return selected.question;
 }
 

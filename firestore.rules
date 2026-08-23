@@ -59,7 +59,7 @@ service cloud.firestore {
         ])
         && settings.rounds is int
         && settings.rounds >= 3
-        && settings.rounds <= 12
+        && settings.rounds <= 30
         && settings.answerTime is int
         && settings.answerTime >= 10
         && settings.answerTime <= 60
@@ -351,7 +351,11 @@ service cloud.firestore {
             && round().options.keys().hasAny([request.resource.data.optionId])
             && !(
               round().options[request.resource.data.optionId].type == 'bluff'
-              && round().options[request.resource.data.optionId].authorId == uid()
+              && (
+                (round().options[request.resource.data.optionId].authorIds is list
+                  && round().options[request.resource.data.optionId].authorIds.hasAny([uid()]))
+                || round().options[request.resource.data.optionId].authorId == uid()
+              )
             );
           allow update, delete: if false;
         }

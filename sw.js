@@ -1,14 +1,14 @@
-const VERSION = "v8.4.0-unified-visual-refresh";
+const VERSION = "v8.5.0-gameplay-refresh";
 const STATIC_CACHE = `taleela-static-${VERSION}`;
 const PAGE_CACHE = `taleela-pages-${VERSION}`;
 
-// Keep the initial shell small. The 10k+ question bank is intentionally not
+// Keep the initial shell small. The 21k+ question bank is intentionally not
 // precached; only the host downloads it when a round actually needs it.
 const APP_SHELL = [
   "./",
   "./index.html",
-  "./css/style.css?v=8.4.0",
-  "./js/app.js?v=8.4.0",
+  "./css/style.css?v=8.5.0",
+  "./js/app.js?v=8.5.0",
   "./js/ui.js",
   "./js/firebase.js",
   "./js/categories.js",
@@ -105,7 +105,7 @@ self.addEventListener("fetch", (event) => {
 
   // Versioned question JSON is immutable. After the first request it should
   // never wait for the network again on this device.
-  if (url.pathname.includes("/questions/v8.1.0/") && url.pathname.endsWith(".json")) {
+  if (url.pathname.includes("/questions/v8.5.0/") && url.pathname.endsWith(".json")) {
     event.respondWith(cacheFirst(request));
     return;
   }

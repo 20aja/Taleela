@@ -6299,3 +6299,251 @@ input:focus-visible {
     font-size: 9.8px;
   }
 }
+
+
+/* =====================================================
+   TALEELA v8.5.0 — gameplay layout and feedback refinements
+===================================================== */
+.game-toolbar {
+  position: sticky;
+  top: max(8px, env(safe-area-inset-top));
+  min-height: 66px;
+  display: grid;
+  grid-template-columns: 54px 1fr 54px;
+  align-items: center;
+  justify-items: center;
+  direction: rtl;
+  gap: 10px;
+}
+
+.game-toolbar #gameRound {
+  grid-column: 2;
+  margin: 0;
+  text-align: center;
+  font-size: clamp(22px, 5vw, 31px);
+  white-space: nowrap;
+}
+
+.game-toolbar .game-exit-button {
+  grid-column: 1;
+  grid-row: 1;
+  position: static;
+  transform: none;
+  justify-self: end;
+}
+
+.game-toolbar .game-exit-button:hover,
+.game-toolbar .game-exit-button:focus-visible,
+.game-toolbar .game-exit-button:active:not(:disabled) {
+  transform: none;
+}
+
+.game-timer-dock {
+  min-height: 92px;
+  display: grid;
+  place-items: center;
+  padding: 8px 0 2px;
+}
+
+.game-timer-dock.timer-hidden {
+  min-height: 8px;
+  padding: 0;
+}
+
+.game-timer-dock .timer-ring {
+  width: 84px;
+  height: 84px;
+  padding: 5px;
+  box-shadow:
+    0 0 0 1px rgba(128, 100, 255, 0.22),
+    0 14px 34px rgba(4, 6, 20, 0.30),
+    0 0 34px rgba(128, 100, 255, 0.10),
+    inset 0 0 24px rgba(128, 100, 255, 0.08);
+}
+
+.game-timer-dock .timer-ring::before {
+  width: 66px;
+  height: 66px;
+}
+
+.game-timer-dock .timer-ring span {
+  font-size: 29px;
+}
+
+/* Same distribution and card language in lobby and round category choice. */
+.round-category-choices {
+  width: 100%;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+  align-items: stretch;
+}
+
+.round-category-choice.category-card {
+  min-height: 122px;
+  padding: 10px 7px 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 18px;
+  color: var(--text);
+}
+
+.round-category-choice.category-card .category-icon {
+  margin-inline: auto;
+}
+
+.round-category-choice.category-card:disabled {
+  opacity: 0.62;
+  cursor: default;
+}
+
+.round-category-choice.category-card:not(:disabled):hover {
+  transform: translateY(-3px);
+}
+
+.answer-validation-hint {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin: 2px 0 10px;
+  padding: 11px 13px;
+  border-radius: 16px;
+  text-align: right;
+  color: #fff7d2;
+  background: linear-gradient(135deg, rgba(247, 200, 75, 0.18), rgba(255, 98, 124, 0.10));
+  border: 1px solid rgba(247, 200, 75, 0.42);
+  box-shadow: 0 10px 24px rgba(68, 47, 10, 0.18), 0 0 0 1px rgba(247, 200, 75, 0.05) inset;
+  animation: answerHintIn 220ms var(--ease-pop) both;
+}
+
+.answer-validation-hint.hidden { display: none !important; }
+.answer-validation-hint > i {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  color: #171207;
+  background: #f7c84b;
+  box-shadow: 0 7px 16px rgba(247, 200, 75, 0.20);
+}
+.answer-validation-hint div { display: grid; gap: 2px; min-width: 0; }
+.answer-validation-hint strong { font-size: 13px; }
+.answer-validation-hint span { font-size: 11.5px; line-height: 1.5; color: #efe4b7; }
+.bluff-card input.answer-is-correct {
+  border-color: rgba(247, 200, 75, 0.72) !important;
+  box-shadow: 0 0 0 3px rgba(247, 200, 75, 0.10) !important;
+}
+
+@keyframes answerHintIn {
+  from { opacity: 0; transform: translateY(5px) scale(0.99); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Results progress now animates from the player's previous total to the new one. */
+.round-leaderboard .score-progress span {
+  width: var(--score-width, 0%) !important;
+  transition: width 0.8s cubic-bezier(0.16, 0.85, 0.34, 1) !important;
+}
+
+/* Shared lies list every author on reveal without crowding the option. */
+.reveal-option-owner {
+  text-align: center;
+  line-height: 1.55;
+}
+
+/* Equal winners are intentionally retained when all three ranking metrics tie. */
+.joint-winners {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 14px;
+}
+.joint-winner {
+  min-width: 116px;
+  display: grid;
+  justify-items: center;
+  gap: 5px;
+}
+.joint-winner .winner-avatar {
+  width: 68px;
+  height: 68px;
+}
+.joint-winner h2 {
+  margin: 0;
+  font-size: 15px;
+}
+.joint-winner strong { font-size: 13px; }
+
+/* Alignment pass: keep all gameplay content centered and cards consistently sized. */
+.game-phase {
+  width: 100%;
+  margin-inline: auto;
+  text-align: center;
+}
+.game-phase > * {
+  margin-left: auto;
+  margin-right: auto;
+}
+.bluff-card,
+.players-answer-status,
+.guess-options,
+.reveal-options,
+.round-leaderboard,
+.final-leaderboard {
+  width: min(100%, 710px);
+  margin-inline: auto;
+}
+.bluff-card label { text-align: right; }
+
+@media (min-width: 780px) {
+  .round-category-choices {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .game-toolbar {
+    position: sticky;
+    min-height: 62px;
+    grid-template-columns: 48px 1fr 48px;
+    padding: 6px 8px;
+  }
+  .game-toolbar .game-exit-button {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    min-height: 46px;
+  }
+  .game-timer-dock {
+    min-height: 84px;
+    padding-top: 7px;
+  }
+  .game-timer-dock .timer-ring {
+    width: 76px;
+    height: 76px;
+  }
+  .game-timer-dock .timer-ring::before {
+    width: 59px;
+    height: 59px;
+  }
+  .game-timer-dock .timer-ring span { font-size: 26px; }
+  .round-category-choices {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+  .round-category-choice.category-card {
+    min-height: 116px;
+    padding: 9px 5px;
+  }
+}
+
+@media (max-width: 365px) {
+  .round-category-choice.category-card { min-height: 106px; }
+}

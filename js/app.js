@@ -51,7 +51,7 @@ const HEARTBEAT_INTERVAL_MS = 30_000;
 const HOST_STALE_MS = 90_000;
 const MIN_PLAYERS = 2;
 const MAX_PLAYER_LIMIT = 8;
-const MIN_CATEGORIES = 5;
+const MIN_CATEGORIES = 1;
 const DEFAULT_AVATAR = "avatar-01";
 const AVATAR_IDS = Array.from({length: 20}, (_, index) => `avatar-${String(index + 1).padStart(2, "0")}`);
 const PROFILE_NAME_KEY = "taleela_profile_name";
@@ -411,7 +411,7 @@ function renderPlayers(room) {
 function renderSettings(room) {
   const settings = room?.settings || {};
   const canEdit = isCurrentPlayerHost(room) && room?.status === "waiting";
-  const rounds = Math.max(3, Math.min(12, Number(settings.rounds) || 6));
+  const rounds = Math.max(3, Math.min(30, Number(settings.rounds) || 6));
   const answerTime = Math.max(10, Math.min(60, Number(settings.answerTime) || 15));
   const maxPlayers = roomMaxPlayers(room);
 
@@ -465,7 +465,7 @@ function renderCategories(room) {
     const validSelectedCount = selected.filter((id) => categoryHasQuestions(id)).length;
     selectedCategoriesCount.textContent = `${validSelectedCount} / ${availableCategoryCount}`;
     selectedCategoriesCount.classList.toggle("minimum-met", validSelectedCount >= MIN_CATEGORIES);
-    selectedCategoriesCount.setAttribute("aria-label", validSelectedCount >= MIN_CATEGORIES ? `تم اختيار الحد الأدنى: ${validSelectedCount} فئات` : `تم اختيار ${validSelectedCount} من أصل ${MIN_CATEGORIES} فئات مطلوبة على الأقل`);
+    selectedCategoriesCount.setAttribute("aria-label", validSelectedCount >= MIN_CATEGORIES ? `تم اختيار الحد الأدنى: ${validSelectedCount} ${validSelectedCount === 1 ? "فئة" : "فئات"}` : `تم اختيار ${validSelectedCount} من أصل فئة واحدة مطلوبة على الأقل`);
   }
   if (categoriesMessage) {
     categoriesMessage.classList.toggle("hidden", canEdit);
@@ -512,7 +512,7 @@ function updateStartButton(room) {
   if (room.status !== "waiting") {
     startGameButton.innerHTML = '<i class="fa-solid fa-gamepad"></i> اللعبة جارية';
   } else if (!categoriesReady) {
-    startGameButton.innerHTML = `<i class="fa-solid fa-layer-group"></i> اختر 5 فئات على الأقل (${selected.length}/5)`;
+    startGameButton.innerHTML = `<i class="fa-solid fa-layer-group"></i> اختر فئة واحدة على الأقل (${selected.length}/1)`;
   } else if (!enoughPlayers) {
     startGameButton.innerHTML = '<i class="fa-solid fa-users"></i> نحتاج لاعبين على الأقل';
   } else if (!everyoneReady) {
@@ -765,7 +765,7 @@ async function adjustSetting(key, delta) {
     if (currentRoom.status !== "waiting") return;
     const current = currentRoom.settings || {};
     const updates = {lastActivityAt: serverTimestamp()};
-    if (key === "rounds") updates["settings.rounds"] = Math.max(3, Math.min(12, (Number(current.rounds) || 6) + delta));
+    if (key === "rounds") updates["settings.rounds"] = Math.max(3, Math.min(30, (Number(current.rounds) || 6) + delta));
     else if (key === "answerTime") updates["settings.answerTime"] = Math.max(10, Math.min(60, (Number(current.answerTime) || 15) + delta * 5));
     else if (key === "maxPlayers") {
       const count = playerList(currentRoom).length;
@@ -1111,7 +1111,7 @@ async function startGame() {
     });
   } catch (error) {
     console.error("startGame failed:", error);
-    const message = error?.message === "HOST_ONLY" ? "فقط المضيف يستطيع بدء اللعبة." : error?.message === "NOT_READY" ? "اختر 5 فئات على الأقل، وتأكد من وجود لاعبين على الأقل وجاهزية الجميع." : "تعذر بدء اللعبة.";
+    const message = error?.message === "HOST_ONLY" ? "فقط المضيف يستطيع بدء اللعبة." : error?.message === "NOT_READY" ? "اختر فئة واحدة على الأقل، وتأكد من وجود لاعبين على الأقل وجاهزية الجميع." : "تعذر بدء اللعبة.";
     notify(message, {type: "warning"});
   } finally {
     startGameButton.disabled = false;
@@ -1458,4 +1458,4 @@ async function bootstrap() {
 }
 
 bootstrap();
-console.log("Taleela App v8.3.0 3D Category Icons + Question Shards loaded");
+console.log("Taleela App v8.5.0 Gameplay Refresh + Expanded Question Bank loaded");

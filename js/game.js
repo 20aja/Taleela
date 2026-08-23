@@ -199,17 +199,19 @@ function startTimer(room, deadlineValue, phase) {
   const deadline = valueToMillis(deadlineValue);
   const timerElement = document.getElementById("gameTimer");
   const ring = document.getElementById("timerRing");
-  const resultCountdown = document.getElementById("resultCountdown");
 
+  const timerDock = document.getElementById("gameTimerDock");
   if (!deadline) {
     stopTimer();
     if (timerElement) timerElement.textContent = "0";
     if (ring) ring.classList.add("hidden");
+    timerDock?.classList.add("timer-hidden");
     return;
   }
 
   const duration = Math.max(1, phaseDuration(room, phase));
   if (ring) ring.classList.toggle("hidden", phase === "results");
+  timerDock?.classList.toggle("timer-hidden", phase === "results");
 
   if (timerInterval && activeDeadlineMs === deadline && activeTimerPhase === phase) return;
   stopTimer();
@@ -220,7 +222,6 @@ function startTimer(room, deadlineValue, phase) {
     const remainingMs = Math.max(0, deadline - Date.now());
     const remaining = Math.ceil(remainingMs / 1000);
     if (timerElement) timerElement.textContent = String(remaining);
-    if (phase === "results" && resultCountdown) resultCountdown.textContent = String(remaining);
 
     if (ring) {
       const progress = Math.max(0, Math.min(1, remainingMs / (duration * 1000)));
@@ -229,18 +230,6 @@ function startTimer(room, deadlineValue, phase) {
     }
 
     if (remainingMs <= 0) {
-      const roundKey = currentRoom?.round?.id || "round";
-      const noticeKey = `${roundKey}:${phase}`;
-      if (lastTimeoutNoticeKey !== noticeKey && phase !== "results") {
-        lastTimeoutNoticeKey = noticeKey;
-        const messages = {
-          category_selection: "انتهى وقت اختيار الفئة.",
-          bluffing: "انتهى وقت كتابة الكذبة.",
-          guessing: "انتهى وقت اختيار الإجابة.",
-          reveal: "انتهى وقت مراجعة الإجابات.",
-        };
-        notify(messages[phase] || "انتهى الوقت.", {type: "warning", title: "انتهى الوقت", duration: 3200});
-      }
       stopTimer();
       if (currentRoom?.hostId === playerId) coordinateHost(currentRoom);
     }
@@ -255,7 +244,7 @@ function buildNewRound(room, number) {
   const categories = Array.isArray(room?.categories) ? room.categories.filter(categoryHasQuestions) : [];
   if (players.length < 1 || categories.length < 1) return null;
 
-  const total = Math.max(1, Math.min(50, Number(room?.settings?.rounds) || 6));
+  const total = Math.max(3, Math.min(30, Number(room?.settings?.rounds) || 6));
   const chooser = players[(number - 1) % players.length];
   const selectionTime = phaseDuration(room, "category_selection");
   const now = Date.now();
@@ -331,6 +320,12 @@ function buildSystemDecoys(round, excludedNormalized, needed) {
   return chosen;
 }
 
+function optionAuthorIds(option) {
+  if (!option || option.type !== "bluff") return [];
+  const ids = Array.isArray(option.authorIds) ? option.authorIds : option.authorId ? [option.authorId] : [];
+  return [...new Set(ids.filter(Boolean))];
+}
+
 function buildGuessOptions(room) {
   const round = room.round;
   const players = playerList(room);
@@ -339,19 +334,29 @@ function buildGuessOptions(room) {
   const excluded = new Set();
   const correctText = round.correctAnswer || "";
   const correctId = `correct_${round.questionId || "answer"}`;
-  options[correctId] = {id: correctId, text: correctText, type: "correct", authorId: null};
+  options[correctId] = {id: correctId, text: correctText, type: "correct", authorId: null, authorIds: []};
   order.push(correctId);
   excluded.add(normalizeAnswer(correctText));
 
+  // Players may intentionally submit the same bluff. Equal normalized text is
+  // rendered as one shared option that keeps every author id.
+  const groupedBluffs = new Map();
   players.forEach((player) => {
     const bluff = round.bluffs?.[player.id];
     const text = bluff?.text?.trim();
     if (!text) return;
     const normalized = normalizeAnswer(text);
-    if (!normalized || excluded.has(normalized)) return;
+    if (!normalized || normalized === normalizeAnswer(correctText)) return;
+    const existing = groupedBluffs.get(normalized);
+    if (existing) existing.authorIds.push(player.id);
+    else groupedBluffs.set(normalized, {text, authorIds: [player.id]});
+  });
+
+  groupedBluffs.forEach((group, normalized) => {
     excluded.add(normalized);
-    const id = `bluff_${player.id}`;
-    options[id] = {id, text, type: "bluff", authorId: player.id};
+    const authorIds = [...new Set(group.authorIds)].sort();
+    const id = `bluff_${authorIds.join("_")}`;
+    options[id] = {id, text: group.text, type: "bluff", authorId: authorIds[0] || null, authorIds};
     order.push(id);
   });
 
@@ -359,42 +364,52 @@ function buildGuessOptions(room) {
   const decoys = buildSystemDecoys(round, excluded, targetSharedOptionCount - order.length);
   decoys.forEach((text, index) => {
     const id = `system_${index + 1}_${round.id}`;
-    options[id] = {id, text, type: "system", authorId: null};
+    options[id] = {id, text, type: "system", authorId: null, authorIds: []};
     order.push(id);
   });
   return {options, optionOrder: shuffle(order)};
 }
 
+function rankingMetricTuple(player) {
+  return [Number(player?.score) || 0, Number(player?.correctGuesses) || 0, Number(player?.fooledPlayers) || 0];
+}
+
+function sameRankingMetrics(a, b) {
+  const aa = rankingMetricTuple(a);
+  const bb = rankingMetricTuple(b);
+  return aa[0] === bb[0] && aa[1] === bb[1] && aa[2] === bb[2];
+}
+
 function comparePlayersForRanking(a, b) {
-  // 1) مجموع النقاط، 2) عدد الإجابات الصحيحة، 3) عدد اللاعبين الذين خُدعوا بالكذبة.
+  // 1) points, 2) correct guesses, 3) successful bluffs.
   const scoreDiff = (Number(b.score) || 0) - (Number(a.score) || 0);
   if (scoreDiff) return scoreDiff;
-
   const correctDiff = (Number(b.correctGuesses) || 0) - (Number(a.correctGuesses) || 0);
   if (correctDiff) return correctDiff;
-
   const fooledDiff = (Number(b.fooledPlayers) || 0) - (Number(a.fooledPlayers) || 0);
   if (fooledDiff) return fooledDiff;
-
-  // كسر تعادل نادر بعد تساوي المؤشرات الثلاثة: الأسبق دخولًا ثم الاسم، لضمان ترتيب ثابت على كل الأجهزة.
-  const joinedDiff = valueToMillis(a.joinedAt) - valueToMillis(b.joinedAt);
-  if (joinedDiff) return joinedDiff;
-  return String(a.name || "").localeCompare(String(b.name || ""), "ar");
+  // This fallback only keeps a stable visual order. It does NOT break the tie.
+  return String(a.id || "").localeCompare(String(b.id || ""));
 }
 
 function rankingFromPlayers(playersObject) {
-  return Object.values(playersObject || {})
-    .filter((player) => player?.id)
-    .sort(comparePlayersForRanking)
-    .map((player, index) => ({
+  const sorted = Object.values(playersObject || {}).filter((player) => player?.id).sort(comparePlayersForRanking);
+  let previous = null;
+  let previousRank = 0;
+  return sorted.map((player, index) => {
+    const rank = previous && sameRankingMetrics(previous, player) ? previousRank : index + 1;
+    previous = player;
+    previousRank = rank;
+    return {
       id: player.id,
       name: player.name || "لاعب",
       avatar: normalizeAvatarId(player.avatar),
       score: Number(player.score) || 0,
       correctGuesses: Number(player.correctGuesses) || 0,
       fooledPlayers: Number(player.fooledPlayers) || 0,
-      rank: index + 1,
-    }));
+      rank,
+    };
+  });
 }
 
 async function createFirstRound() {
@@ -453,8 +468,7 @@ async function selectCategory(categoryId) {
     });
   } catch (error) {
     console.error("selectCategory failed:", error);
-    if (error?.message === "NOT_CHOOSER") notify("اختيار الفئة متاح للاعب صاحب الدور فقط.", {type: "warning"});
-    else if (error?.message === "TIME_EXPIRED") notify("انتهى وقت اختيار الفئة.", {type: "warning"});
+    if (!["NOT_CHOOSER", "TIME_EXPIRED", "PHASE_CLOSED"].includes(error?.message)) showGameError("تعذر حفظ اختيار الفئة.");
   }
 }
 
@@ -532,34 +546,24 @@ async function submitBluff() {
   const button = document.getElementById("confirmAnswer");
   const text = input?.value?.trim() || "";
   if (!text) {
-    notify("اكتب كذبة أولًا.", {type: "warning"});
     input?.focus();
     return;
   }
   const accepted = Array.isArray(currentRoom.round.acceptedAnswers) ? currentRoom.round.acceptedAnswers : [currentRoom.round.correctAnswer];
   if (accepted.some((answer) => normalizeAnswer(answer) === normalizeAnswer(text))) {
-    notify("هذه هي الإجابة الصحيحة فعلًا. اكتب إجابة خاطئة مقنعة.", {type: "warning", title: "هذه ليست كذبة"});
+    updateCorrectAnswerHint();
     input?.focus();
     return;
   }
-  const duplicate = Object.values(currentRoom.round.bluffs || {}).some((bluff) => normalizeAnswer(bluff?.text) === normalizeAnswer(text));
-  if (duplicate) {
-    notify("لا يمكن استخدام نفس كذبة لاعب آخر. اكتب كذبة مختلفة.", {type: "warning"});
-    return;
-  }
-  if (valueToMillis(currentRoom.round.bluffDeadline) <= Date.now()) {
-    notify("انتهى وقت كتابة الكذبة.", {type: "warning"});
-    return;
-  }
+  if (valueToMillis(currentRoom.round.bluffDeadline) <= Date.now()) return;
   if (button) button.disabled = true;
   try {
     const ref = getRoundChildRef("bluffs", playerId);
     if (!ref) throw new Error("ROUND_NOT_FOUND");
     await setDoc(ref, {playerId, text: text.slice(0, 120), submittedAt: serverTimestamp()});
-    notify("تم إرسال كذبتك بنجاح.", {type: "success", duration: 2200});
   } catch (error) {
     console.error("submitBluff failed:", error);
-    notify(error?.code === "permission-denied" ? "أرسلت كذبتك بالفعل أو انتهى الوقت." : "تعذر إرسال الكذبة.", {type: "warning"});
+    showGameError(error?.code === "permission-denied" ? "تعذر إرسال الكذبة: انتهى الوقت أو تم إرسالها مسبقًا." : "تعذر إرسال الكذبة. تحقق من الاتصال وحاول مرة أخرى.");
   } finally {
     if (button) button.disabled = false;
   }
@@ -603,19 +607,19 @@ async function submitGuess(optionId) {
   if (!roomId || !playerId || !optionId || currentRoom?.round?.phase !== "guessing") return;
   try {
     const round = currentRoom.round;
-    if (round.guesses?.[playerId]) throw new Error("ALREADY_GUESSED");
-    if (valueToMillis(round.guessDeadline) <= Date.now()) throw new Error("TIME_EXPIRED");
+    if (round.guesses?.[playerId]) return;
+    if (valueToMillis(round.guessDeadline) <= Date.now()) return;
     const option = round.options?.[optionId];
     if (!option) throw new Error("INVALID_OPTION");
-    if (option.type === "bluff" && option.authorId === playerId) throw new Error("OWN_BLUFF");
+    if (option.type === "bluff" && optionAuthorIds(option).includes(playerId)) return;
     const ref = getRoundChildRef("guesses", playerId);
     if (!ref) throw new Error("ROUND_NOT_FOUND");
     await setDoc(ref, {playerId, optionId, submittedAt: serverTimestamp()});
-    notify("تم حفظ اختيارك. بانتظار بقية اللاعبين...", {type: "success", duration: 2400});
   } catch (error) {
     console.error("submitGuess failed:", error);
-    const messages = {OWN_BLUFF: "لا يمكنك اختيار كذبتك.", TIME_EXPIRED: "انتهى وقت الاختيار.", ALREADY_GUESSED: "اخترت إجابتك بالفعل."};
-    notify(messages[error?.message] || (error?.code === "permission-denied" ? "اخترت إجابتك بالفعل أو انتهى الوقت." : "تعذر حفظ اختيارك."), {type: error?.message === "ALREADY_GUESSED" ? "info" : "warning"});
+    if (!['ALREADY_GUESSED','TIME_EXPIRED','OWN_BLUFF'].includes(error?.message)) {
+      showGameError(error?.code === "permission-denied" ? "تعذر حفظ اختيارك بسبب انتهاء الوقت أو إغلاق المرحلة." : "تعذر حفظ اختيارك. تحقق من الاتصال.");
+    }
   }
 }
 
@@ -695,10 +699,13 @@ async function scoreRound(roomSnapshot = currentRoom) {
           roundPoints[guesserId] += CORRECT_GUESS_POINTS;
           correctThisRound[guesserId] = true;
           if (updatedPlayers[guesserId]) updatedPlayers[guesserId].correctGuesses = (Number(updatedPlayers[guesserId].correctGuesses) || 0) + 1;
-        } else if (option.type === "bluff" && option.authorId && option.authorId !== guesserId && updatedPlayers[option.authorId]) {
-          roundPoints[option.authorId] += FOOLED_PLAYER_POINTS;
-          fooledThisRound[option.authorId] += 1;
-          updatedPlayers[option.authorId].fooledPlayers = (Number(updatedPlayers[option.authorId].fooledPlayers) || 0) + 1;
+        } else if (option.type === "bluff") {
+          optionAuthorIds(option).forEach((authorId) => {
+            if (authorId === guesserId || !updatedPlayers[authorId]) return;
+            roundPoints[authorId] += FOOLED_PLAYER_POINTS;
+            fooledThisRound[authorId] += 1;
+            updatedPlayers[authorId].fooledPlayers = (Number(updatedPlayers[authorId].fooledPlayers) || 0) + 1;
+          });
         }
       });
 
@@ -739,7 +746,7 @@ async function advanceAfterResults(roomSnapshot = currentRoom) {
       if (room.hostId !== playerId || room.status !== "playing" || room.currentRoundId !== roundDoc.id || round.phase !== "results") return;
       if (valueToMillis(round.resultsDeadline) > Date.now()) return;
       const currentNumber = Number(round.number) || 1;
-      const total = Math.max(1, Math.min(50, Number(room?.settings?.rounds) || 6));
+      const total = Math.max(3, Math.min(30, Number(room?.settings?.rounds) || 6));
       const ranking = Array.isArray(round.ranking) && round.ranking.length ? round.ranking : rankingFromPlayers(playersMap(roomSnapshot));
       if (currentNumber >= total || (Number(room.playerCount) || 0) < 2) {
         transaction.update(roomRef, {status: "finished", finalResults: ranking, finishedAt: Timestamp.now(), lastActivityAt: serverTimestamp()});
@@ -835,9 +842,9 @@ function renderCategorySelection(room) {
         const category = GAME_CATEGORIES.find((item) => item.id === categoryId);
         const disabled = !isChooser || Boolean(choice);
         return `
-        <button type="button" class="round-category-choice" data-round-category="${escapeHTML(categoryId)}" ${disabled ? "disabled" : ""}>
-          <img class="round-category-icon" src="${escapeHTML(category?.image || "")}" alt="" loading="lazy" decoding="async" />
-          <span>${escapeHTML(category?.name || categoryId)}</span>
+        <button type="button" class="category-card round-category-choice" data-round-category="${escapeHTML(categoryId)}" ${disabled ? "disabled" : ""}>
+          <div class="category-icon"><img class="category-icon-image round-category-icon" src="${escapeHTML(category?.image || "")}" alt="" loading="lazy" decoding="async" /></div>
+          <div class="category-name">${escapeHTML(category?.name || categoryId)}</div>
         </button>
       `;
       })
@@ -879,6 +886,24 @@ function renderQuestionMedia(containerId, round) {
   container.classList.remove("hidden");
 }
 
+function updateCorrectAnswerHint() {
+  const input = document.getElementById("gameAnswer");
+  const hint = document.getElementById("correctAnswerHint");
+  if (!input || !hint || currentRoom?.round?.phase !== "bluffing") return;
+  const text = input.value.trim();
+  const accepted = Array.isArray(currentRoom.round.acceptedAnswers) ? currentRoom.round.acceptedAnswers : [currentRoom.round.correctAnswer];
+  const isCorrect = Boolean(text) && accepted.some((answer) => normalizeAnswer(answer) === normalizeAnswer(text));
+  hint.classList.toggle("hidden", !isCorrect);
+  input.classList.toggle("answer-is-correct", isCorrect);
+}
+
+function bindBluffInputValidation() {
+  const input = document.getElementById("gameAnswer");
+  if (!input || input.dataset.validationBound) return;
+  input.dataset.validationBound = "1";
+  input.addEventListener("input", updateCorrectAnswerHint);
+}
+
 function renderBluffing(room) {
   setPhaseVisibility("bluffPhase");
   const round = room.round;
@@ -906,6 +931,8 @@ function renderBluffing(room) {
     button.disabled = Boolean(myBluff);
     button.innerHTML = myBluff ? '<i class="fa-solid fa-circle-check"></i> تم إرسال كذبتك' : '<i class="fa-solid fa-paper-plane"></i> أرسل الكذبة';
   }
+  bindBluffInputValidation();
+  updateCorrectAnswerHint();
 
   startTimer(room, round.bluffDeadline, round.phase);
 }
@@ -923,8 +950,7 @@ function renderGuessing(room) {
 
   if (question) question.textContent = round.question || "";
   renderQuestionMedia("guessQuestionMedia", round);
-  const myBluffId = `bluff_${playerId}`;
-  const myBluff = round.options?.[myBluffId] || null;
+  const myBluff = Object.values(round.options || {}).find((option) => option?.type === "bluff" && optionAuthorIds(option).includes(playerId)) || null;
   const myGuess = round.guesses?.[playerId] || null;
   const ids = playerList(room).map((player) => player.id);
   const guessedCount = ids.filter((id) => Boolean(round.guesses?.[id]?.optionId)).length;
@@ -959,7 +985,10 @@ function renderGuessing(room) {
     if (waiting) waiting.classList.add("hidden");
     if (optionsGrid) {
       optionsGrid.classList.remove("hidden");
-      const visibleIds = (round.optionOrder || []).filter((id) => id !== myBluffId && round.options?.[id]);
+      const visibleIds = (round.optionOrder || []).filter((id) => {
+        const option = round.options?.[id];
+        return option && !(option.type === "bluff" && optionAuthorIds(option).includes(playerId));
+      });
       optionsGrid.innerHTML = visibleIds
         .map(
           (id) => `
@@ -986,19 +1015,6 @@ function renderGuessing(room) {
 function renderReveal(room) {
   setPhaseVisibility("revealPhase");
   const round = room.round;
-  const revealNoticeKey = `${round?.id || "round"}:reveal:${playerId || "player"}`;
-  if (lastRevealNoticeKey !== revealNoticeKey) {
-    lastRevealNoticeKey = revealNoticeKey;
-    const myGuess = round?.guesses?.[playerId];
-    const chosen = myGuess ? round?.options?.[myGuess.optionId] : null;
-    if (!myGuess) {
-      notify("لم تسجل اختيارًا قبل انتهاء الوقت.", {type: "warning", title: "انتهى الوقت"});
-    } else if (chosen?.type === "correct") {
-      notify("إجابتك صحيحة!", {type: "success", title: "أحسنت", duration: 3500});
-    } else {
-      notify("اختيارك لم يكن الإجابة الصحيحة.", {type: "error", title: "إجابة غير صحيحة", duration: 3500});
-    }
-  }
   const question = document.getElementById("revealQuestion");
   const grid = document.getElementById("revealOptions");
   const button = document.getElementById("revealReadyButton");
@@ -1021,12 +1037,13 @@ function renderReveal(room) {
       .map((id) => {
         const option = round.options?.[id];
         if (!option) return "";
-        const author = option.authorId ? players[option.authorId] : null;
+        const authors = optionAuthorIds(option).map((authorId) => players[authorId]).filter(Boolean);
         const voters = ids
           .filter((pid) => round.guesses?.[pid]?.optionId === id)
           .map((pid) => players[pid])
           .filter(Boolean);
-        const ownerText = option.type === "correct" ? "الإجابة الصح!" : option.type === "bluff" ? `إجابة: ${author?.id === playerId ? "أنت" : author?.name || "لاعب"}` : "إجابة إضافية";
+        const ownerNames = authors.map((author) => author.id === playerId ? "أنت" : author.name || "لاعب");
+        const ownerText = option.type === "correct" ? "الإجابة الصح!" : option.type === "bluff" ? `إجابة: ${ownerNames.join(" + ")}` : "إجابة إضافية";
 
         return `
         <div class="reveal-option ${option.type === "correct" ? "correct-option" : ""}">
@@ -1064,6 +1081,30 @@ function scoreWidthPercent(room, score) {
   return Math.max(0, Math.min(100, ((Number(score) || 0) / theoreticalFinalMaxScore(room)) * 100));
 }
 
+function animateRoundResultScores(board) {
+  if (!board) return;
+  const bars = [...board.querySelectorAll(".score-progress span[data-target-width]")];
+  const totals = [...board.querySelectorAll(".score-total[data-score-to]")];
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      bars.forEach((bar) => bar.style.setProperty("--score-width", `${bar.dataset.targetWidth}%`));
+      const startAt = performance.now();
+      const duration = 720;
+      const tick = (now) => {
+        const t = Math.min(1, (now - startAt) / duration);
+        const eased = 1 - Math.pow(1 - t, 3);
+        totals.forEach((node) => {
+          const from = Number(node.dataset.scoreFrom) || 0;
+          const to = Number(node.dataset.scoreTo) || 0;
+          node.textContent = String(Math.round(from + (to - from) * eased));
+        });
+        if (t < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  });
+}
+
 function renderRoundResults(room) {
   setPhaseVisibility("roundResultsPhase");
   const round = room.round;
@@ -1073,53 +1114,42 @@ function renderRoundResults(room) {
 
   const ranking = rankingFromPlayers(playersMap(room));
   if (board) {
-    // لا نعيد بناء لوحة النتائج عند heartbeat أو أي snapshot لا يغيّر النتيجة.
-    // هذا يمنع شريط النقاط من العودة إلى الصفر وإعادة الأنيميشن مرارًا على الجوال.
-    const renderKey = JSON.stringify(
-      ranking.map((entry) => {
-        const player = playersMap(room)[entry.id];
-        const result = round.results?.[entry.id] || {};
-        return [
-          entry.id,
-          entry.rank,
-          Number(entry.score) || 0,
-          Number(player?.correctGuesses) || 0,
-          Number(player?.fooledPlayers) || 0,
-          Number(result.roundPoints) || 0,
-          entry.avatar,
-          entry.name,
-          round.number,
-          round.total,
-        ];
-      }),
-    );
+    const renderKey = JSON.stringify(ranking.map((entry) => {
+      const player = playersMap(room)[entry.id];
+      const result = round.results?.[entry.id] || {};
+      return [entry.id, entry.rank, Number(entry.score)||0, Number(player?.correctGuesses)||0, Number(player?.fooledPlayers)||0, Number(result.roundPoints)||0, round.number];
+    }));
 
     if (board.dataset.renderKey !== renderKey) {
       board.dataset.renderKey = renderKey;
-      board.innerHTML = ranking
-        .map((entry) => {
-          const player = playersMap(room)[entry.id];
-          const result = round.results?.[entry.id] || {};
-          return `
+      board.innerHTML = ranking.map((entry) => {
+        const player = playersMap(room)[entry.id];
+        const result = round.results?.[entry.id] || {};
+        const gained = Number(result.roundPoints) || 0;
+        const currentScore = Number(entry.score) || 0;
+        const previousScore = Math.max(0, currentScore - gained);
+        const previousWidth = scoreWidthPercent(room, previousScore).toFixed(2);
+        const targetWidth = scoreWidthPercent(room, currentScore).toFixed(2);
+        return `
           <div class="leaderboard-row rank-${entry.rank} ${entry.id === playerId ? "is-me" : ""}">
             <div class="leaderboard-rank">${entry.rank}</div>
             <div class="leaderboard-avatar">${avatarHTML(entry.avatar, "leaderboard-avatar-img", `صورة ${entry.name || "لاعب"}`)}</div>
             <div class="leaderboard-info">
               <strong>${escapeHTML(entry.name)}</strong>
               <small>أصاب ${Number(player?.correctGuesses) || 0} • خدع ${Number(player?.fooledPlayers) || 0}</small>
-              <div class="score-progress" aria-hidden="true"><span style="--score-width:${scoreWidthPercent(room, entry.score).toFixed(2)}%"></span></div>
+              <div class="score-progress" aria-hidden="true"><span data-target-width="${targetWidth}" style="--score-width:${previousWidth}%"></span></div>
             </div>
             <div class="leaderboard-score">
-              <strong class="round-gain">+${Number(result.roundPoints) || 0}</strong>
-              <small>${entry.score} نقطة</small>
+              <strong class="round-gain">+${gained}</strong>
+              <small><span class="score-total" data-score-from="${previousScore}" data-score-to="${currentScore}">${previousScore}</span> نقطة</small>
             </div>
-          </div>
-        `;
-        })
-        .join("");
+          </div>`;
+      }).join("");
+      animateRoundResultScores(board);
     }
   }
 
+  // Results still auto-advance by the hidden deadline, but no countdown is shown.
   startTimer(room, round.resultsDeadline, round.phase);
 }
 
@@ -1148,27 +1178,6 @@ function setChatOpen(open) {
   if (open) document.getElementById("gameChatInput")?.focus();
 }
 
-function showChatToast(message) {
-  const container = document.getElementById("chatToastContainer");
-  if (!container) return;
-  const toast = document.createElement("div");
-  toast.className = "chat-toast";
-  toast.innerHTML = `
-    <div class="chat-toast-avatar">${avatarHTML(message.avatar, "chat-toast-avatar-img", `صورة ${message.name || "لاعب"}`)}</div>
-    <div class="chat-toast-content">
-      <strong>${escapeHTML(message.name || "لاعب")}</strong>
-      <span>${escapeHTML(message.text || "")}</span>
-    </div>
-  `;
-  container.appendChild(toast);
-  while (container.children.length > 3) container.firstElementChild?.remove();
-  const remove = () => {
-    toast.classList.add("chat-toast-leaving");
-    window.setTimeout(() => toast.remove(), 260);
-  };
-  window.setTimeout(remove, 8000);
-}
-
 function renderChatMessages(snapshot) {
   const list = document.getElementById("gameChatMessages");
   if (!list) return;
@@ -1195,7 +1204,6 @@ function renderChatMessages(snapshot) {
     const message = change.doc.data();
     const createdAt = valueToMillis(message.createdAt);
     if (createdAt && createdAt + 2500 < chatListenerStartedAt) return;
-    showChatToast(message);
   });
 }
 
@@ -1223,7 +1231,7 @@ async function sendChatMessage() {
   const words = countWords(text);
   if (!text) return;
   if (words > 10) {
-    notify("الرسالة لا يمكن أن تتجاوز 10 كلمات.", {type: "warning"});
+    input?.focus();
     return;
   }
   const me = playersMap(currentRoom)[playerId];
@@ -1291,8 +1299,9 @@ function renderFinal(room) {
   setPhaseVisibility("finalResultsPhase");
   stopTimer();
   document.getElementById("timerRing")?.classList.add("hidden");
+  document.getElementById("gameTimerDock")?.classList.add("timer-hidden");
   const ranking = Array.isArray(room.finalResults) && room.finalResults.length ? room.finalResults : rankingFromPlayers(playersMap(room));
-  const winner = ranking[0];
+  const winners = ranking.filter((entry) => Number(entry.rank) === 1);
   const winnerCard = document.getElementById("winnerCard");
   const board = document.getElementById("finalLeaderboard");
   const status = document.getElementById("finalRequestsStatus");
@@ -1300,14 +1309,27 @@ function renderFinal(room) {
   const returnButton = document.getElementById("returnToRoomButton");
 
   if (winnerCard) {
-    winnerCard.innerHTML = winner
-      ? `
+    if (!winners.length) {
+      winnerCard.innerHTML = "<h2>انتهت اللعبة</h2>";
+    } else if (winners.length === 1) {
+      const winner = winners[0];
+      winnerCard.innerHTML = `
         <div class="winner-avatar">${avatarHTML(winner.avatar, "winner-avatar-img", `صورة ${winner.name || "الفائز"}`)}</div>
         <h2>${escapeHTML(winner.name || "لاعب")}</h2>
         <p>الفائز</p>
-        <strong>${Number(winner.score) || 0} نقطة</strong>
-      `
-      : "<h2>انتهت اللعبة</h2>";
+        <strong>${Number(winner.score) || 0} نقطة</strong>`;
+    } else {
+      winnerCard.innerHTML = `
+        <p>الفائزون بالتعادل</p>
+        <div class="joint-winners">
+          ${winners.map((winner) => `
+            <div class="joint-winner">
+              <div class="winner-avatar">${avatarHTML(winner.avatar, "winner-avatar-img", `صورة ${winner.name || "الفائز"}`)}</div>
+              <h2>${escapeHTML(winner.name || "لاعب")}</h2>
+              <strong>${Number(winner.score) || 0} نقطة</strong>
+            </div>`).join("")}
+        </div>`;
+    }
   }
 
   if (board) {
@@ -1575,4 +1597,4 @@ document.getElementById("gameLeaveButton")?.addEventListener("click", () => {
   window.dispatchEvent(new CustomEvent("taleela:leave-room"));
 });
 
-console.log("Taleela Game Engine v8.3.0 3D Category Icons + Question Shards loaded");
+console.log("Taleela Game Engine v8.5.0 Gameplay Refresh + Shared Bluffs loaded");

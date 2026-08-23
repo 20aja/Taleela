@@ -47,7 +47,7 @@ rounds/{roundId}/revealReady/{uid}
 
 - HTML: Network First بمهلة قصيرة.
 - JS/CSS/Images: Stale While Revalidate.
-- ملفات `questions/v8.1.0/*.json`: لا تدخل Precache، وتستخدم Cache First بعد أول طلب لأنها Versioned وImmutable.
+- ملفات `questions/v8.5.0/*.json`: لا تدخل Precache، وتستخدم Cache First بعد أول طلب لأنها Versioned وImmutable.
 - Firebase والطلبات الخارجية لا يعترضها Service Worker.
 
 ## ما لم يُنفذ بعد
