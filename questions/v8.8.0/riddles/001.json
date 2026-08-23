@@ -1,0 +1,1392 @@
+[
+  {
+    "id": "riddles-v85-alt-00018",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الشيء الذي كلما زاد نقص؟",
+    "correctAnswers": [
+      "العمر"
+    ],
+    "wrongAnswers": [
+      "النهر",
+      "الضوء",
+      "لأنه أصلع",
+      "الصمت",
+      "الخريطة",
+      "المنشفة"
+    ],
+    "category": "riddles",
+    "factKey": "extra2:riddles:008"
+  },
+  {
+    "id": "riddles-v860-new-008-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الشيء الذي إذا نطقت اسمه كسرته؟",
+    "correctAnswers": [
+      "الصمت"
+    ],
+    "wrongAnswers": [
+      "الصدى",
+      "المشط",
+      "المنشفة",
+      "الحفرة",
+      "الوعد"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:008"
+  },
+  {
+    "id": "riddles-v860-new-011-a",
+    "type": "text",
+    "question": "ما الشيء الذي يملأ الغرفة ولا يشغل حيزًا — سؤال إضافي 21؟",
+    "correctAnswers": [
+      "الضوء"
+    ],
+    "wrongAnswers": [
+      "الإبرة",
+      "الصدى",
+      "الشمعة",
+      "البيانو",
+      "قطار"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:011"
+  },
+  {
+    "id": "riddles-single-003",
+    "type": "text",
+    "question": "لدي مدن بلا بيوت، وأنهار بلا ماء، وجبال بلا صخور. ما أنا؟",
+    "correctAnswers": [
+      "الخريطة",
+      "خريطة"
+    ],
+    "wrongAnswers": [
+      "الكتاب",
+      "المرآة",
+      "الصورة"
+    ],
+    "category": "riddles",
+    "factKey": "riddles:single:riddles-m03"
+  },
+  {
+    "id": "riddles-v860-new-005-b",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: له مفاتيح ولا يفتح أبوابًا، ما هو؟",
+    "correctAnswers": [
+      "البيانو"
+    ],
+    "wrongAnswers": [
+      "قطار",
+      "الحفرة",
+      "النهر",
+      "الصدى",
+      "الوعد"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:005"
+  },
+  {
+    "id": "riddles-single-002",
+    "type": "text",
+    "question": "ما الشيء الذي إذا نطقت اسمه كسرته؟",
+    "correctAnswers": [
+      "الصمت"
+    ],
+    "wrongAnswers": [
+      "السر",
+      "الوعد",
+      "الزجاج"
+    ],
+    "category": "riddles",
+    "factKey": "riddles:single:riddles-m02"
+  },
+  {
+    "id": "riddles-v85-alt-00015",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الشيء الذي يحمل أوراقًا وليس شجرة؟",
+    "correctAnswers": [
+      "الكتاب"
+    ],
+    "wrongAnswers": [
+      "البيانو",
+      "الإبرة",
+      "العمر",
+      "النهر",
+      "الضوء",
+      "لأنه أصلع"
+    ],
+    "category": "riddles",
+    "factKey": "extra2:riddles:005"
+  },
+  {
+    "id": "riddles-single-004",
+    "type": "text",
+    "question": "شيء يزداد بللًا كلما قام بالتجفيف. ما هو؟",
+    "correctAnswers": [
+      "المنشفة",
+      "الفوطة"
+    ],
+    "wrongAnswers": [
+      "الإسفنجة",
+      "الماء",
+      "الصابون"
+    ],
+    "category": "riddles",
+    "factKey": "riddles:single:riddles-m04"
+  },
+  {
+    "id": "riddles-v860-new-009-a",
+    "type": "text",
+    "question": "ما الشيء الذي له أوراق وليس نباتًا وله جلد وليس حيوانًا؟",
+    "correctAnswers": [
+      "الكتاب"
+    ],
+    "wrongAnswers": [
+      "حرف الكاف",
+      "الصدى",
+      "القلم",
+      "العمر",
+      "المنشفة"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:009"
+  },
+  {
+    "id": "extra2-riddles-001",
+    "type": "text",
+    "question": "شيء يتبعك أينما ذهبت في الضوء ولا يمكنك الإمساك به، ما هو؟",
+    "correctAnswers": [
+      "الظل"
+    ],
+    "wrongAnswers": [
+      "الصدى",
+      "الشمعة",
+      "الزجاجة",
+      "الكتاب",
+      "البيانو",
+      "الإبرة"
+    ],
+    "category": "riddles",
+    "factKey": "extra2:riddles:001"
+  },
+  {
+    "id": "riddles-v860-new-003-b",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: له عين ولا يرى، ما هو؟",
+    "correctAnswers": [
+      "الإبرة"
+    ],
+    "wrongAnswers": [
+      "الصمت",
+      "الحفرة",
+      "الوعد",
+      "الضوء",
+      "النهر"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:003"
+  },
+  {
+    "id": "riddles-v85-alt-00010",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الشيء الذي يمشي بلا أرجل ويبكي بلا عيون؟",
+    "correctAnswers": [
+      "السحاب",
+      "الغيم",
+      "السحابة"
+    ],
+    "wrongAnswers": [
+      "الظل",
+      "الصدى",
+      "الشمعة",
+      "الزجاجة",
+      "الكتاب",
+      "البيانو"
+    ],
+    "category": "riddles",
+    "factKey": "riddle-005"
+  },
+  {
+    "id": "riddle-003",
+    "type": "text",
+    "question": "ما الشيء الذي يكتب ولا يقرأ؟",
+    "correctAnswers": [
+      "القلم",
+      "قلم"
+    ],
+    "wrongAnswers": [
+      "الساعة",
+      "السحاب",
+      "الظل",
+      "الصدى",
+      "الشمعة",
+      "الزجاجة"
+    ],
+    "category": "riddles",
+    "factKey": "riddle-003"
+  },
+  {
+    "id": "riddles-v860-new-002-a",
+    "type": "text",
+    "question": "له أسنان ولا يعض، ما هو؟",
+    "correctAnswers": [
+      "المشط"
+    ],
+    "wrongAnswers": [
+      "الزجاجة",
+      "الإبرة",
+      "الصدى",
+      "البيانو",
+      "الوعد"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:002"
+  },
+  {
+    "id": "riddles-v860-new-019-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الشيء الذي تراه في الليل ثلاث مرات وفي النهار مرة؟",
+    "correctAnswers": [
+      "حرف اللام"
+    ],
+    "wrongAnswers": [
+      "الصدى",
+      "الخريطة",
+      "الضوء",
+      "الزجاجة",
+      "الصمت"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:019"
+  },
+  {
+    "id": "riddles-single-005",
+    "type": "text",
+    "question": "ما الشيء الذي تستطيع كسره من دون أن تلمسه؟",
+    "correctAnswers": [
+      "الوعد",
+      "وعد"
+    ],
+    "wrongAnswers": [
+      "الزجاج",
+      "الصمت",
+      "القفل"
+    ],
+    "category": "riddles",
+    "factKey": "riddles:single:riddles-m05"
+  },
+  {
+    "id": "riddles-v860-new-003-a",
+    "type": "text",
+    "question": "له عين ولا يرى، ما هو؟",
+    "correctAnswers": [
+      "الإبرة"
+    ],
+    "wrongAnswers": [
+      "السحاب",
+      "الوعد",
+      "قطار",
+      "الخريطة",
+      "العمر"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:003"
+  },
+  {
+    "id": "riddles-v85-alt-00009",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الشيء الذي له وجه ويدان ولا يملك عينين ولا أصابع؟",
+    "correctAnswers": [
+      "الساعة",
+      "ساعة"
+    ],
+    "wrongAnswers": [
+      "السحاب",
+      "الظل",
+      "الصدى",
+      "الشمعة",
+      "الزجاجة",
+      "الكتاب"
+    ],
+    "category": "riddles",
+    "factKey": "riddle-004"
+  },
+  {
+    "id": "riddles-v860-new-011-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الشيء الذي يملأ الغرفة ولا يشغل حيزًا؟",
+    "correctAnswers": [
+      "الضوء"
+    ],
+    "wrongAnswers": [
+      "الوعد",
+      "العمر",
+      "النهر",
+      "السحاب",
+      "الصدى"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:011"
+  },
+  {
+    "id": "extra2-riddles-008",
+    "type": "text",
+    "question": "ما الشيء الذي كلما زاد نقص؟",
+    "correctAnswers": [
+      "العمر"
+    ],
+    "wrongAnswers": [
+      "النهر",
+      "الضوء",
+      "لأنه أصلع",
+      "الصمت",
+      "الخريطة",
+      "المنشفة"
+    ],
+    "category": "riddles",
+    "factKey": "extra2:riddles:008"
+  },
+  {
+    "id": "riddles-v860-new-006-b",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: كلما زاد نقص، ما هو؟",
+    "correctAnswers": [
+      "العمر"
+    ],
+    "wrongAnswers": [
+      "السحاب",
+      "الكتاب",
+      "الصدى",
+      "حرف اللام",
+      "الإبرة"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:006"
+  },
+  {
+    "id": "extra2-riddles-005",
+    "type": "text",
+    "question": "ما الشيء الذي يحمل أوراقًا وليس شجرة؟",
+    "correctAnswers": [
+      "الكتاب"
+    ],
+    "wrongAnswers": [
+      "البيانو",
+      "الإبرة",
+      "العمر",
+      "النهر",
+      "الضوء",
+      "لأنه أصلع"
+    ],
+    "category": "riddles",
+    "factKey": "extra2:riddles:005"
+  },
+  {
+    "id": "riddles-v860-new-007-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الشيء الذي يبلل كلما جفف؟",
+    "correctAnswers": [
+      "المنشفة"
+    ],
+    "wrongAnswers": [
+      "الوعد",
+      "السحاب",
+      "الصدى",
+      "الزجاجة",
+      "الحفرة"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:007"
+  },
+  {
+    "id": "riddles-v860-new-001-a",
+    "type": "text",
+    "question": "شيء كلما أخذت منه كبر، ما هو؟",
+    "correctAnswers": [
+      "الحفرة"
+    ],
+    "wrongAnswers": [
+      "الزجاجة",
+      "المنشفة",
+      "الضوء",
+      "النهر",
+      "لأنه أصلع"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:001"
+  },
+  {
+    "id": "riddles-v860-new-013-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الشيء الذي يمكن كسره دون لمسه؟",
+    "correctAnswers": [
+      "الوعد"
+    ],
+    "wrongAnswers": [
+      "الساعة",
+      "السحاب",
+      "لأنه أصلع",
+      "الضوء",
+      "القلم"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:013"
+  },
+  {
+    "id": "riddle-005",
+    "type": "text",
+    "question": "ما الشيء الذي يمشي بلا أرجل ويبكي بلا عيون؟",
+    "correctAnswers": [
+      "السحاب",
+      "الغيم",
+      "السحابة"
+    ],
+    "wrongAnswers": [
+      "الظل",
+      "الصدى",
+      "الشمعة",
+      "الزجاجة",
+      "الكتاب",
+      "البيانو"
+    ],
+    "category": "riddles",
+    "factKey": "riddle-005"
+  },
+  {
+    "id": "riddles-v85-alt-00007",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الشيء الذي كلما أخذت منه كبر؟",
+    "correctAnswers": [
+      "الحفرة",
+      "حفرة"
+    ],
+    "wrongAnswers": [
+      "القلم",
+      "الساعة",
+      "السحاب",
+      "الظل",
+      "الصدى",
+      "الشمعة"
+    ],
+    "category": "riddles",
+    "factKey": "riddle-002"
+  },
+  {
+    "id": "riddles-v860-new-004-b",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: يجري ولا يمشي وله فم ولا يتكلم، ما هو؟",
+    "correctAnswers": [
+      "النهر"
+    ],
+    "wrongAnswers": [
+      "القلم",
+      "الساعة",
+      "الخريطة",
+      "الصدى",
+      "حرف اللام"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:004"
+  },
+  {
+    "id": "riddles-v860-new-001-b",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: شيء كلما أخذت منه كبر، ما هو؟",
+    "correctAnswers": [
+      "الحفرة"
+    ],
+    "wrongAnswers": [
+      "المشط",
+      "الإبرة",
+      "الكتاب",
+      "السحاب",
+      "المنشفة"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:001"
+  },
+  {
+    "id": "extra2-riddles-009",
+    "type": "text",
+    "question": "ما الشيء الذي يجري ولا يمشي وله فم ولا يتكلم؟",
+    "correctAnswers": [
+      "النهر"
+    ],
+    "wrongAnswers": [
+      "الضوء",
+      "لأنه أصلع",
+      "الصمت",
+      "الخريطة",
+      "المنشفة",
+      "الوعد"
+    ],
+    "category": "riddles",
+    "factKey": "extra2:riddles:009"
+  },
+  {
+    "id": "riddles-v85-alt-00004",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: شيء يزداد بللًا كلما قام بالتجفيف. ما هو؟",
+    "correctAnswers": [
+      "المنشفة",
+      "الفوطة"
+    ],
+    "wrongAnswers": [
+      "الإسفنجة",
+      "الماء",
+      "الصابون"
+    ],
+    "category": "riddles",
+    "factKey": "riddles:single:riddles-m04"
+  },
+  {
+    "id": "riddles-v860-new-009-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الشيء الذي له أوراق وليس نباتًا وله جلد وليس حيوانًا؟",
+    "correctAnswers": [
+      "الكتاب"
+    ],
+    "wrongAnswers": [
+      "البيانو",
+      "حرف الكاف",
+      "الوعد",
+      "النهر",
+      "العمر"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:009"
+  },
+  {
+    "id": "extra2-riddles-010",
+    "type": "text",
+    "question": "ما الشيء الذي يملأ الغرفة ولا يشغل حيزًا؟",
+    "correctAnswers": [
+      "الضوء"
+    ],
+    "wrongAnswers": [
+      "لأنه أصلع",
+      "الصمت",
+      "الخريطة",
+      "المنشفة",
+      "الوعد",
+      "المشط"
+    ],
+    "category": "riddles",
+    "factKey": "extra2:riddles:010"
+  },
+  {
+    "id": "riddles-v85-alt-00003",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: لدي مدن بلا بيوت، وأنهار بلا ماء، وجبال بلا صخور. ما أنا؟",
+    "correctAnswers": [
+      "الخريطة",
+      "خريطة"
+    ],
+    "wrongAnswers": [
+      "الكتاب",
+      "المرآة",
+      "الصورة"
+    ],
+    "category": "riddles",
+    "factKey": "riddles:single:riddles-m03"
+  },
+  {
+    "id": "riddles-v860-new-016-a",
+    "type": "text",
+    "question": "ما الذي كلما حذفت منه حرفًا طار؟",
+    "correctAnswers": [
+      "قطار"
+    ],
+    "wrongAnswers": [
+      "الضوء",
+      "الإبرة",
+      "الصدى",
+      "حرف الكاف",
+      "المشط"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:016"
+  },
+  {
+    "id": "riddle-004",
+    "type": "text",
+    "question": "ما الشيء الذي له وجه ويدان ولا يملك عينين ولا أصابع؟",
+    "correctAnswers": [
+      "الساعة",
+      "ساعة"
+    ],
+    "wrongAnswers": [
+      "السحاب",
+      "الظل",
+      "الصدى",
+      "الشمعة",
+      "الزجاجة",
+      "الكتاب"
+    ],
+    "category": "riddles",
+    "factKey": "riddle-004"
+  },
+  {
+    "id": "riddles-v860-new-007-a",
+    "type": "text",
+    "question": "ما الشيء الذي يبلل كلما جفف؟",
+    "correctAnswers": [
+      "المنشفة"
+    ],
+    "wrongAnswers": [
+      "لأنه أصلع",
+      "المشط",
+      "الخريطة",
+      "قطار",
+      "الصمت"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:007"
+  },
+  {
+    "id": "riddles-v860-new-018-a",
+    "type": "text",
+    "question": "ما الذي يسمع بلا أذن ويتكلم بلا لسان؟",
+    "correctAnswers": [
+      "الصدى"
+    ],
+    "wrongAnswers": [
+      "الصمت",
+      "الزجاجة",
+      "المنشفة",
+      "الفلفل الحار",
+      "الكتاب"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:018"
+  },
+  {
+    "id": "extra2-riddles-004",
+    "type": "text",
+    "question": "ما الشيء الذي له رقبة وليس له رأس؟",
+    "correctAnswers": [
+      "الزجاجة"
+    ],
+    "wrongAnswers": [
+      "الكتاب",
+      "البيانو",
+      "الإبرة",
+      "العمر",
+      "النهر",
+      "الضوء"
+    ],
+    "category": "riddles",
+    "factKey": "extra2:riddles:004"
+  },
+  {
+    "id": "riddles-v860-new-010-a",
+    "type": "text",
+    "question": "ما الشيء الذي يمشي بلا أرجل ويبكي بلا عيون — سؤال إضافي 19؟",
+    "correctAnswers": [
+      "السحاب"
+    ],
+    "wrongAnswers": [
+      "الإبرة",
+      "الصدى",
+      "الحفرة",
+      "الزجاجة",
+      "العمر"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:010"
+  },
+  {
+    "id": "riddles-v860-new-018-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الذي يسمع بلا أذن ويتكلم بلا لسان؟",
+    "correctAnswers": [
+      "الصدى"
+    ],
+    "wrongAnswers": [
+      "الوعد",
+      "الضوء",
+      "لأنه أصلع",
+      "الزجاجة",
+      "الصمت"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:018"
+  },
+  {
+    "id": "riddles-v860-new-002-b",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: له أسنان ولا يعض، ما هو؟",
+    "correctAnswers": [
+      "المشط"
+    ],
+    "wrongAnswers": [
+      "قطار",
+      "الظل",
+      "الشمعة",
+      "لأنه أصلع",
+      "الصمت"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:002"
+  },
+  {
+    "id": "riddles-v860-new-005-a",
+    "type": "text",
+    "question": "له مفاتيح ولا يفتح أبوابًا، ما هو؟",
+    "correctAnswers": [
+      "البيانو"
+    ],
+    "wrongAnswers": [
+      "المنشفة",
+      "الفلفل الحار",
+      "الساعة",
+      "الحفرة",
+      "الوعد"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:005"
+  },
+  {
+    "id": "riddles-v85-alt-00002",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الشيء الذي إذا نطقت اسمه كسرته؟",
+    "correctAnswers": [
+      "الصمت"
+    ],
+    "wrongAnswers": [
+      "السر",
+      "الوعد",
+      "الزجاج"
+    ],
+    "category": "riddles",
+    "factKey": "riddles:single:riddles-m02"
+  },
+  {
+    "id": "riddles-v860-new-014-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الذي له رقبة بلا رأس؟",
+    "correctAnswers": [
+      "الزجاجة"
+    ],
+    "wrongAnswers": [
+      "الإبرة",
+      "المنشفة",
+      "الشمعة",
+      "الساعة",
+      "الصمت"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:014"
+  },
+  {
+    "id": "riddles-v860-new-013-a",
+    "type": "text",
+    "question": "ما الشيء الذي يمكن كسره دون لمسه؟",
+    "correctAnswers": [
+      "الوعد"
+    ],
+    "wrongAnswers": [
+      "السحاب",
+      "الصمت",
+      "الزجاجة",
+      "حرف الكاف",
+      "قطار"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:013"
+  },
+  {
+    "id": "riddles-v85-alt-00017",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الشيء الذي له عين واحدة ولا يرى؟",
+    "correctAnswers": [
+      "الإبرة"
+    ],
+    "wrongAnswers": [
+      "العمر",
+      "النهر",
+      "الضوء",
+      "لأنه أصلع",
+      "الصمت",
+      "الخريطة"
+    ],
+    "category": "riddles",
+    "factKey": "extra2:riddles:007"
+  },
+  {
+    "id": "riddles-v860-new-004-a",
+    "type": "text",
+    "question": "يجري ولا يمشي وله فم ولا يتكلم، ما هو؟",
+    "correctAnswers": [
+      "النهر"
+    ],
+    "wrongAnswers": [
+      "السحاب",
+      "الوعد",
+      "الإبرة",
+      "حرف اللام",
+      "الصدى"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:004"
+  },
+  {
+    "id": "riddles-v85-alt-00011",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: شيء يتبعك أينما ذهبت في الضوء ولا يمكنك الإمساك به، ما هو؟",
+    "correctAnswers": [
+      "الظل"
+    ],
+    "wrongAnswers": [
+      "الصدى",
+      "الشمعة",
+      "الزجاجة",
+      "الكتاب",
+      "البيانو",
+      "الإبرة"
+    ],
+    "category": "riddles",
+    "factKey": "extra2:riddles:001"
+  },
+  {
+    "id": "riddles-v85-alt-00014",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الشيء الذي له رقبة وليس له رأس؟",
+    "correctAnswers": [
+      "الزجاجة"
+    ],
+    "wrongAnswers": [
+      "الكتاب",
+      "البيانو",
+      "الإبرة",
+      "العمر",
+      "النهر",
+      "الضوء"
+    ],
+    "category": "riddles",
+    "factKey": "extra2:riddles:004"
+  },
+  {
+    "id": "extra2-riddles-006",
+    "type": "text",
+    "question": "ما الشيء الذي له مفاتيح ولا يفتح الأبواب؟",
+    "correctAnswers": [
+      "البيانو"
+    ],
+    "wrongAnswers": [
+      "الإبرة",
+      "العمر",
+      "النهر",
+      "الضوء",
+      "لأنه أصلع",
+      "الصمت"
+    ],
+    "category": "riddles",
+    "factKey": "extra2:riddles:006"
+  },
+  {
+    "id": "riddles-v860-new-012-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الشيء الذي يوجد في وسط مكة؟",
+    "correctAnswers": [
+      "حرف الكاف"
+    ],
+    "wrongAnswers": [
+      "الصمت",
+      "الضوء",
+      "الساعة",
+      "الخريطة",
+      "السحاب"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:012"
+  },
+  {
+    "id": "riddles-v860-new-017-b",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: بيت بلا أبواب ولا نوافذ وفيه ساكن أصفر، ما هو؟",
+    "correctAnswers": [
+      "البيضة"
+    ],
+    "wrongAnswers": [
+      "الخريطة",
+      "المشط",
+      "حرف الكاف",
+      "الصدى",
+      "النهر"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:017"
+  },
+  {
+    "id": "riddles-v860-new-014-a",
+    "type": "text",
+    "question": "ما الذي له رقبة بلا رأس؟",
+    "correctAnswers": [
+      "الزجاجة"
+    ],
+    "wrongAnswers": [
+      "النهر",
+      "الصمت",
+      "الصدى",
+      "الشمعة",
+      "الخريطة"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:014"
+  },
+  {
+    "id": "riddles-v860-new-016-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الذي كلما حذفت منه حرفًا طار؟",
+    "correctAnswers": [
+      "قطار"
+    ],
+    "wrongAnswers": [
+      "المنشفة",
+      "الصدى",
+      "السحاب",
+      "الضوء",
+      "حرف اللام"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:016"
+  },
+  {
+    "id": "riddles-v85-alt-00005",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الشيء الذي تستطيع كسره من دون أن تلمسه؟",
+    "correctAnswers": [
+      "الوعد",
+      "وعد"
+    ],
+    "wrongAnswers": [
+      "الزجاج",
+      "الصمت",
+      "القفل"
+    ],
+    "category": "riddles",
+    "factKey": "riddles:single:riddles-m05"
+  },
+  {
+    "id": "riddles-v860-new-020-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الذي إذا وضعته في الثلاجة لا يبرد؟",
+    "correctAnswers": [
+      "الفلفل الحار"
+    ],
+    "wrongAnswers": [
+      "الصدى",
+      "الضوء",
+      "البيضة",
+      "الشمعة",
+      "الحفرة"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:020"
+  },
+  {
+    "id": "riddle-001",
+    "type": "text",
+    "question": "شيء له أسنان ولا يعض، ما هو؟",
+    "correctAnswers": [
+      "المشط",
+      "مشط"
+    ],
+    "wrongAnswers": [
+      "الحفرة",
+      "القلم",
+      "الساعة",
+      "السحاب",
+      "الظل",
+      "الصدى"
+    ],
+    "category": "riddles",
+    "factKey": "riddle-001"
+  },
+  {
+    "id": "riddles-v860-new-020-a",
+    "type": "text",
+    "question": "ما الذي إذا وضعته في الثلاجة لا يبرد؟",
+    "correctAnswers": [
+      "الفلفل الحار"
+    ],
+    "wrongAnswers": [
+      "العمر",
+      "البيضة",
+      "الساعة",
+      "الزجاجة",
+      "الخريطة"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:020"
+  },
+  {
+    "id": "riddles-v860-new-008-a",
+    "type": "text",
+    "question": "ما الشيء الذي إذا نطقت اسمه كسرته — سؤال إضافي 15؟",
+    "correctAnswers": [
+      "الصمت"
+    ],
+    "wrongAnswers": [
+      "البيضة",
+      "الزجاجة",
+      "الحفرة",
+      "حرف الكاف",
+      "المنشفة"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:008"
+  },
+  {
+    "id": "riddles-v860-new-006-a",
+    "type": "text",
+    "question": "كلما زاد نقص، ما هو؟",
+    "correctAnswers": [
+      "العمر"
+    ],
+    "wrongAnswers": [
+      "الشمعة",
+      "الفلفل الحار",
+      "الإبرة",
+      "الخريطة",
+      "قطار"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:006"
+  },
+  {
+    "id": "riddles-v85-alt-00013",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: شيء كلما طال عمره قصر طوله، ما هو؟",
+    "correctAnswers": [
+      "الشمعة"
+    ],
+    "wrongAnswers": [
+      "الزجاجة",
+      "الكتاب",
+      "البيانو",
+      "الإبرة",
+      "العمر",
+      "النهر"
+    ],
+    "category": "riddles",
+    "factKey": "extra2:riddles:003"
+  },
+  {
+    "id": "riddles-v85-alt-00008",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الشيء الذي يكتب ولا يقرأ؟",
+    "correctAnswers": [
+      "القلم",
+      "قلم"
+    ],
+    "wrongAnswers": [
+      "الساعة",
+      "السحاب",
+      "الظل",
+      "الصدى",
+      "الشمعة",
+      "الزجاجة"
+    ],
+    "category": "riddles",
+    "factKey": "riddle-003"
+  },
+  {
+    "id": "extra2-riddles-007",
+    "type": "text",
+    "question": "ما الشيء الذي له عين واحدة ولا يرى؟",
+    "correctAnswers": [
+      "الإبرة"
+    ],
+    "wrongAnswers": [
+      "العمر",
+      "النهر",
+      "الضوء",
+      "لأنه أصلع",
+      "الصمت",
+      "الخريطة"
+    ],
+    "category": "riddles",
+    "factKey": "extra2:riddles:007"
+  },
+  {
+    "id": "riddles-v860-new-012-a",
+    "type": "text",
+    "question": "ما الشيء الذي يوجد في وسط مكة؟",
+    "correctAnswers": [
+      "حرف الكاف"
+    ],
+    "wrongAnswers": [
+      "العمر",
+      "الزجاجة",
+      "الصدى",
+      "الكتاب",
+      "الظل"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:012"
+  },
+  {
+    "id": "extra2-riddles-003",
+    "type": "text",
+    "question": "شيء كلما طال عمره قصر طوله، ما هو؟",
+    "correctAnswers": [
+      "الشمعة"
+    ],
+    "wrongAnswers": [
+      "الزجاجة",
+      "الكتاب",
+      "البيانو",
+      "الإبرة",
+      "العمر",
+      "النهر"
+    ],
+    "category": "riddles",
+    "factKey": "extra2:riddles:003"
+  },
+  {
+    "id": "riddles-v85-alt-00012",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الشيء الذي يكرر كلامك ولا يملك فمًا؟",
+    "correctAnswers": [
+      "الصدى"
+    ],
+    "wrongAnswers": [
+      "الشمعة",
+      "الزجاجة",
+      "الكتاب",
+      "البيانو",
+      "الإبرة",
+      "العمر"
+    ],
+    "category": "riddles",
+    "factKey": "extra2:riddles:002"
+  },
+  {
+    "id": "extra2-riddles-002",
+    "type": "text",
+    "question": "ما الشيء الذي يكرر كلامك ولا يملك فمًا؟",
+    "correctAnswers": [
+      "الصدى"
+    ],
+    "wrongAnswers": [
+      "الشمعة",
+      "الزجاجة",
+      "الكتاب",
+      "البيانو",
+      "الإبرة",
+      "العمر"
+    ],
+    "category": "riddles",
+    "factKey": "extra2:riddles:002"
+  },
+  {
+    "id": "riddles-v860-new-010-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الشيء الذي يمشي بلا أرجل ويبكي بلا عيون؟",
+    "correctAnswers": [
+      "السحاب"
+    ],
+    "wrongAnswers": [
+      "قطار",
+      "البيانو",
+      "المنشفة",
+      "الإبرة",
+      "الصدى"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:010"
+  },
+  {
+    "id": "riddles-v860-new-017-a",
+    "type": "text",
+    "question": "بيت بلا أبواب ولا نوافذ وفيه ساكن أصفر، ما هو؟",
+    "correctAnswers": [
+      "البيضة"
+    ],
+    "wrongAnswers": [
+      "الصمت",
+      "المشط",
+      "الزجاجة",
+      "الكتاب",
+      "النهر"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:017"
+  },
+  {
+    "id": "riddles-v85-alt-00006",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: شيء له أسنان ولا يعض، ما هو؟",
+    "correctAnswers": [
+      "المشط",
+      "مشط"
+    ],
+    "wrongAnswers": [
+      "الحفرة",
+      "القلم",
+      "الساعة",
+      "السحاب",
+      "الظل",
+      "الصدى"
+    ],
+    "category": "riddles",
+    "factKey": "riddle-001"
+  },
+  {
+    "id": "riddle-002",
+    "type": "text",
+    "question": "ما الشيء الذي كلما أخذت منه كبر؟",
+    "correctAnswers": [
+      "الحفرة",
+      "حفرة"
+    ],
+    "wrongAnswers": [
+      "القلم",
+      "الساعة",
+      "السحاب",
+      "الظل",
+      "الصدى",
+      "الشمعة"
+    ],
+    "category": "riddles",
+    "factKey": "riddle-002"
+  },
+  {
+    "id": "riddles-v85-alt-00019",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الشيء الذي يجري ولا يمشي وله فم ولا يتكلم؟",
+    "correctAnswers": [
+      "النهر"
+    ],
+    "wrongAnswers": [
+      "الضوء",
+      "لأنه أصلع",
+      "الصمت",
+      "الخريطة",
+      "المنشفة",
+      "الوعد"
+    ],
+    "category": "riddles",
+    "factKey": "extra2:riddles:009"
+  },
+  {
+    "id": "riddles-v85-alt-00016",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الشيء الذي له مفاتيح ولا يفتح الأبواب؟",
+    "correctAnswers": [
+      "البيانو"
+    ],
+    "wrongAnswers": [
+      "الإبرة",
+      "العمر",
+      "النهر",
+      "الضوء",
+      "لأنه أصلع",
+      "الصمت"
+    ],
+    "category": "riddles",
+    "factKey": "extra2:riddles:006"
+  },
+  {
+    "id": "riddles-v860-new-019-a",
+    "type": "text",
+    "question": "ما الشيء الذي تراه في الليل ثلاث مرات وفي النهار مرة؟",
+    "correctAnswers": [
+      "حرف اللام"
+    ],
+    "wrongAnswers": [
+      "الإبرة",
+      "الظل",
+      "الفلفل الحار",
+      "الضوء",
+      "الحفرة"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:019"
+  },
+  {
+    "id": "riddles-v860-new-015-a",
+    "type": "text",
+    "question": "ما الذي له مدن بلا بيوت وأنهار بلا ماء؟",
+    "correctAnswers": [
+      "الخريطة"
+    ],
+    "wrongAnswers": [
+      "الحفرة",
+      "الصدى",
+      "القلم",
+      "النهر",
+      "الفلفل الحار"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:015"
+  },
+  {
+    "id": "riddles-v85-alt-00001",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: رجل خرج تحت المطر من دون مظلة أو قبعة ولم يبتل شعره. لماذا؟",
+    "correctAnswers": [
+      "لأنه أصلع",
+      "كان أصلع"
+    ],
+    "wrongAnswers": [
+      "كان داخل سيارة",
+      "المطر كان خفيفًا",
+      "كان يجري"
+    ],
+    "category": "riddles",
+    "factKey": "riddles:single:riddles-m01"
+  },
+  {
+    "id": "riddles-single-001",
+    "type": "text",
+    "question": "رجل خرج تحت المطر من دون مظلة أو قبعة ولم يبتل شعره. لماذا؟",
+    "correctAnswers": [
+      "لأنه أصلع",
+      "كان أصلع"
+    ],
+    "wrongAnswers": [
+      "كان داخل سيارة",
+      "المطر كان خفيفًا",
+      "كان يجري"
+    ],
+    "category": "riddles",
+    "factKey": "riddles:single:riddles-m01"
+  },
+  {
+    "id": "riddles-v860-new-015-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الذي له مدن بلا بيوت وأنهار بلا ماء؟",
+    "correctAnswers": [
+      "الخريطة"
+    ],
+    "wrongAnswers": [
+      "حرف الكاف",
+      "الضوء",
+      "الصمت",
+      "النهر",
+      "البيانو"
+    ],
+    "category": "riddles",
+    "factKey": "v860:riddles:newfact:015"
+  },
+  {
+    "id": "riddles-v85-alt-00020",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الشيء الذي يملأ الغرفة ولا يشغل حيزًا؟",
+    "correctAnswers": [
+      "الضوء"
+    ],
+    "wrongAnswers": [
+      "لأنه أصلع",
+      "الصمت",
+      "الخريطة",
+      "المنشفة",
+      "الوعد",
+      "المشط"
+    ],
+    "category": "riddles",
+    "factKey": "extra2:riddles:010"
+  }
+]

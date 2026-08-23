@@ -1,0 +1,1398 @@
+[
+  {
+    "id": "extra2-inventions-003",
+    "type": "text",
+    "question": "من الأخوان اللذان ارتبطا بأول طائرة بمحرك ناجحة؟",
+    "correctAnswers": [
+      "الأخوان رايت"
+    ],
+    "wrongAnswers": [
+      "يوهان غوتنبرغ",
+      "ألكسندر فليمنغ",
+      "صمويل مورس",
+      "رودولف ديزل",
+      "نيكولا تسلا",
+      "ألكسندر غراهام بيل"
+    ],
+    "category": "inventions",
+    "factKey": "extra2:inventions:003"
+  },
+  {
+    "id": "inventions-v860-new-014-a",
+    "type": "text",
+    "question": "من ابتكر لغة البرمجة C مع فريق بيل لابس؟",
+    "correctAnswers": [
+      "دينيس ريتشي"
+    ],
+    "wrongAnswers": [
+      "كينغ كامب جيليت",
+      "يوهان غوتنبرغ",
+      "لينوس تورفالدس",
+      "صمويل مورس",
+      "ألفريد نوبل"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:014"
+  },
+  {
+    "id": "inventions-v85-alt-00018",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من اخترع شبكة الويب العالمية؟",
+    "correctAnswers": [
+      "تيم برنرز لي"
+    ],
+    "wrongAnswers": [
+      "ألكسندر غراهام بيل",
+      "توماس إديسون",
+      "الأخوان رايت",
+      "التلسكوب",
+      "ألفريد نوبل",
+      "لويس برايل"
+    ],
+    "category": "inventions",
+    "factKey": "extra2:inventions:008"
+  },
+  {
+    "id": "inventions-v860-new-002-a",
+    "type": "text",
+    "question": "من ارتبط بتطوير المصباح الكهربائي المتوهج عمليًا وتسويقه؟",
+    "correctAnswers": [
+      "توماس إديسون"
+    ],
+    "wrongAnswers": [
+      "دانيال فهرنهايت",
+      "نيكولا تسلا",
+      "لويس برايل",
+      "كينغ كامب جيليت",
+      "صمويل مورس"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:002"
+  },
+  {
+    "id": "inventions-v860-new-016-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: ابتكر لغة Python؟",
+    "correctAnswers": [
+      "غيدو فان روسوم"
+    ],
+    "wrongAnswers": [
+      "لويس برايل",
+      "تيم بيرنرز لي",
+      "ألكسندر فليمنغ",
+      "إدوارد جينر",
+      "التلسكوب"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:016"
+  },
+  {
+    "id": "inventions-v85-alt-00020",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من ارتبط اسمه بالمصباح الكهربائي المتوهج التجاري؟",
+    "correctAnswers": [
+      "توماس إديسون"
+    ],
+    "wrongAnswers": [
+      "تيم برنرز لي",
+      "الأخوان رايت",
+      "التلسكوب",
+      "ألفريد نوبل",
+      "لويس برايل",
+      "جيمس واط"
+    ],
+    "category": "inventions",
+    "factKey": "extra2:inventions:010"
+  },
+  {
+    "id": "inventions-v860-new-007-a",
+    "type": "text",
+    "question": "من اخترع البنسلين باكتشاف أثر العفن المضاد للبكتيريا؟",
+    "correctAnswers": [
+      "ألكسندر فليمنغ"
+    ],
+    "wrongAnswers": [
+      "إدوارد جينر",
+      "رودولف ديزل",
+      "لينوس تورفالدس",
+      "الأخوان رايت",
+      "يوهان غوتنبرغ"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:007"
+  },
+  {
+    "id": "inventions-v860-new-006-a",
+    "type": "text",
+    "question": "من طور أول لقاح ناجح ضد الجدري؟",
+    "correctAnswers": [
+      "إدوارد جينر"
+    ],
+    "wrongAnswers": [
+      "ألفريد نوبل",
+      "دانيال فهرنهايت",
+      "جيمس واط",
+      "رودولف ديزل",
+      "لويس برايل"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:006"
+  },
+  {
+    "id": "inventions-v85-alt-00012",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من اخترع الديناميت؟",
+    "correctAnswers": [
+      "ألفريد نوبل"
+    ],
+    "wrongAnswers": [
+      "جيمس واط",
+      "يوهان غوتنبرغ",
+      "ألكسندر فليمنغ",
+      "صمويل مورس",
+      "رودولف ديزل",
+      "نيكولا تسلا"
+    ],
+    "category": "inventions",
+    "factKey": "extra2:inventions:002"
+  },
+  {
+    "id": "inventions-v860-new-012-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: اخترع نظام برايل للقراءة باللمس؟",
+    "correctAnswers": [
+      "لويس برايل"
+    ],
+    "wrongAnswers": [
+      "لينوس تورفالدس",
+      "بريندان آيك",
+      "الأخوان رايت",
+      "نيكولا تسلا",
+      "جيمس غوسلينغ"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:012"
+  },
+  {
+    "id": "inventions-v860-new-004-a",
+    "type": "text",
+    "question": "من اخترع آلة الطباعة بالحروف المتحركة في أوروبا؟",
+    "correctAnswers": [
+      "يوهان غوتنبرغ"
+    ],
+    "wrongAnswers": [
+      "جيمس غوسلينغ",
+      "توماس إديسون",
+      "تيم بيرنرز لي",
+      "لينوس تورفالدس",
+      "بريندان آيك"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:004"
+  },
+  {
+    "id": "extra2-inventions-005",
+    "type": "text",
+    "question": "من اخترع محرك الديزل؟",
+    "correctAnswers": [
+      "رودولف ديزل"
+    ],
+    "wrongAnswers": [
+      "صمويل مورس",
+      "نيكولا تسلا",
+      "ألكسندر غراهام بيل",
+      "توماس إديسون",
+      "تيم برنرز لي",
+      "الأخوان رايت"
+    ],
+    "category": "inventions",
+    "factKey": "extra2:inventions:005"
+  },
+  {
+    "id": "inventions-v860-new-017-a",
+    "type": "text",
+    "question": "من ابتكر لغة Java؟",
+    "correctAnswers": [
+      "جيمس غوسلينغ"
+    ],
+    "wrongAnswers": [
+      "ألفرد نوبل",
+      "رودولف ديزل",
+      "يوهان غوتنبرغ",
+      "غيدو فان روسوم",
+      "ألكسندر فليمنغ"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:017"
+  },
+  {
+    "id": "inventions-v860-new-010-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: طور مقياس الحرارة الزئبقي الحديث ومقياس فهرنهايت؟",
+    "correctAnswers": [
+      "دانيال فهرنهايت"
+    ],
+    "wrongAnswers": [
+      "لويس برايل",
+      "دينيس ريتشي",
+      "توماس إديسون",
+      "جيمس غوسلينغ",
+      "رودولف ديزل"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:010"
+  },
+  {
+    "id": "inventions-v860-new-004-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: اخترع آلة الطباعة بالحروف المتحركة في أوروبا؟",
+    "correctAnswers": [
+      "يوهان غوتنبرغ"
+    ],
+    "wrongAnswers": [
+      "ألكسندر غراهام بيل",
+      "الأخوان رايت",
+      "جيمس واط",
+      "صمويل مورس",
+      "دانيال فهرنهايت"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:004"
+  },
+  {
+    "id": "extra2-inventions-007",
+    "type": "text",
+    "question": "من ارتبط اسمه بالهاتف في براءة الاختراع المبكرة؟",
+    "correctAnswers": [
+      "ألكسندر غراهام بيل"
+    ],
+    "wrongAnswers": [
+      "نيكولا تسلا",
+      "توماس إديسون",
+      "تيم برنرز لي",
+      "الأخوان رايت",
+      "التلسكوب",
+      "ألفريد نوبل"
+    ],
+    "category": "inventions",
+    "factKey": "extra2:inventions:007"
+  },
+  {
+    "id": "inventions-v860-new-007-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: اخترع البنسلين باكتشاف أثر العفن المضاد للبكتيريا؟",
+    "correctAnswers": [
+      "ألكسندر فليمنغ"
+    ],
+    "wrongAnswers": [
+      "توماس إديسون",
+      "تيم بيرنرز لي",
+      "لويس برايل",
+      "جيمس غوسلينغ",
+      "يوهان غوتنبرغ"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:007"
+  },
+  {
+    "id": "inventions-v85-alt-00002",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من اكتشف البنسلين سنة 1928؟",
+    "correctAnswers": [
+      "ألكسندر فليمنغ",
+      "فليمنغ"
+    ],
+    "wrongAnswers": [
+      "لويس باستور",
+      "روبرت كوخ",
+      "إدوارد جينر"
+    ],
+    "category": "inventions",
+    "factKey": "inventions:single:inventions-m02"
+  },
+  {
+    "id": "inventions-v860-new-009-a",
+    "type": "text",
+    "question": "من اخترع البارومتر الزئبقي؟",
+    "correctAnswers": [
+      "إيفانجيليستا توريتشيلي"
+    ],
+    "wrongAnswers": [
+      "نيكولا تسلا",
+      "صمويل مورس",
+      "ألكسندر غراهام بيل",
+      "يوهان غوتنبرغ",
+      "دينيس ريتشي"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:009"
+  },
+  {
+    "id": "inventions-v860-new-018-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: ابتكر لغة JavaScript؟",
+    "correctAnswers": [
+      "بريندان آيك"
+    ],
+    "wrongAnswers": [
+      "توماس إديسون",
+      "ألكسندر فليمنغ",
+      "إدوارد جينر",
+      "لينوس تورفالدس",
+      "ألفرد نوبل"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:018"
+  },
+  {
+    "id": "inventions-v860-new-010-a",
+    "type": "text",
+    "question": "من طور مقياس الحرارة الزئبقي الحديث ومقياس فهرنهايت؟",
+    "correctAnswers": [
+      "دانيال فهرنهايت"
+    ],
+    "wrongAnswers": [
+      "رودلف ديزل",
+      "يوهان غوتنبرغ",
+      "تيم بيرنرز لي",
+      "توماس إديسون",
+      "ألكسندر غراهام بيل"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:010"
+  },
+  {
+    "id": "inventions-v860-new-012-a",
+    "type": "text",
+    "question": "من اخترع نظام برايل للقراءة باللمس؟",
+    "correctAnswers": [
+      "لويس برايل"
+    ],
+    "wrongAnswers": [
+      "لويس باستور",
+      "يوهان غوتنبرغ",
+      "ألكسندر غراهام بيل",
+      "التلسكوب",
+      "دينيس ريتشي"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:012"
+  },
+  {
+    "id": "inventions-002",
+    "type": "text",
+    "question": "من ارتبط اسمه عمليًا بتطوير المصباح الكهربائي المتوهج التجاري؟",
+    "correctAnswers": [
+      "توماس إديسون",
+      "إديسون"
+    ],
+    "wrongAnswers": [
+      "تيم برنرز لي",
+      "الأخوان رايت",
+      "التلسكوب",
+      "ألفريد نوبل",
+      "لويس برايل",
+      "جيمس واط"
+    ],
+    "category": "inventions",
+    "factKey": "inventions-002"
+  },
+  {
+    "id": "inventions-v860-new-001-a",
+    "type": "text",
+    "question": "من اخترع الهاتف ويُنسب إليه تسجيل براءة مبكرة له؟",
+    "correctAnswers": [
+      "ألكسندر غراهام بيل"
+    ],
+    "wrongAnswers": [
+      "دينيس ريتشي",
+      "ألكسندر فليمنغ",
+      "كينغ كامب جيليت",
+      "إدوارد جينر",
+      "رودولف ديزل"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:001"
+  },
+  {
+    "id": "inventions-single-005",
+    "type": "text",
+    "question": "أي مخترع ارتبط بتطوير المحرك الحثي ونظام التيار المتناوب متعدد الأطوار؟",
+    "correctAnswers": [
+      "نيكولا تسلا",
+      "تسلا"
+    ],
+    "wrongAnswers": [
+      "توماس إديسون",
+      "مايكل فاراداي",
+      "أليساندرو فولتا"
+    ],
+    "category": "inventions",
+    "factKey": "inventions:single:inventions-m05"
+  },
+  {
+    "id": "inventions-v860-new-019-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: ارتبط باختراع التيار المتردد متعدد الأطوار والمحرك الحثي؟",
+    "correctAnswers": [
+      "نيكولا تسلا"
+    ],
+    "wrongAnswers": [
+      "جيمس واط",
+      "بريندان آيك",
+      "يوهان غوتنبرغ",
+      "لينوس تورفالدس",
+      "إيفانجيليستا توريتشيلي"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:019"
+  },
+  {
+    "id": "inventions-v860-new-005-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: اخترع الديناميت؟",
+    "correctAnswers": [
+      "ألفرد نوبل"
+    ],
+    "wrongAnswers": [
+      "نيكولا تسلا",
+      "رودلف ديزل",
+      "ألكسندر فليمنغ",
+      "صمويل مورس",
+      "توماس إديسون"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:005"
+  },
+  {
+    "id": "inventions-v860-new-008-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: اشتهر باختراع محرك الديزل؟",
+    "correctAnswers": [
+      "رودلف ديزل"
+    ],
+    "wrongAnswers": [
+      "صمويل مورس",
+      "رودولف ديزل",
+      "دينيس ريتشي",
+      "لويس برايل",
+      "توماس إديسون"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:008"
+  },
+  {
+    "id": "inventions-v860-new-015-a",
+    "type": "text",
+    "question": "من ابتكر نظام التشغيل Linux؟",
+    "correctAnswers": [
+      "لينوس تورفالدس"
+    ],
+    "wrongAnswers": [
+      "تيم برنرز لي",
+      "رودلف ديزل",
+      "ألكسندر غراهام بيل",
+      "كينغ كامب جيليت",
+      "التلسكوب"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:015"
+  },
+  {
+    "id": "inventions-v860-new-011-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: اخترع آلة الحلاقة الآمنة ذات الشفرة القابلة للاستبدال تجاريًا؟",
+    "correctAnswers": [
+      "كينغ كامب جيليت"
+    ],
+    "wrongAnswers": [
+      "توماس إديسون",
+      "يوهان غوتنبرغ",
+      "ألكسندر فليمنغ",
+      "تيم بيرنرز لي",
+      "صمويل مورس"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:011"
+  },
+  {
+    "id": "extra2-inventions-006",
+    "type": "text",
+    "question": "من اشتهر بتطوير محرك التيار المتردد الحثي؟",
+    "correctAnswers": [
+      "نيكولا تسلا"
+    ],
+    "wrongAnswers": [
+      "رودولف ديزل",
+      "ألكسندر غراهام بيل",
+      "توماس إديسون",
+      "تيم برنرز لي",
+      "الأخوان رايت",
+      "التلسكوب"
+    ],
+    "category": "inventions",
+    "factKey": "extra2:inventions:006"
+  },
+  {
+    "id": "inventions-v860-new-006-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: طور أول لقاح ناجح ضد الجدري؟",
+    "correctAnswers": [
+      "إدوارد جينر"
+    ],
+    "wrongAnswers": [
+      "جيمس غوسلينغ",
+      "ألكسندر غراهام بيل",
+      "صمويل مورس",
+      "توماس إديسون",
+      "لويس برايل"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:006"
+  },
+  {
+    "id": "inventions-v860-new-015-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: ابتكر نظام التشغيل Linux؟",
+    "correctAnswers": [
+      "لينوس تورفالدس"
+    ],
+    "wrongAnswers": [
+      "نيكولا تسلا",
+      "ألكسندر فليمنغ",
+      "كينغ كامب جيليت",
+      "لويس برايل",
+      "ألكسندر غراهام بيل"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:015"
+  },
+  {
+    "id": "inventions-v85-alt-00006",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من اشتهر تاريخيًا باختراع الهاتف؟",
+    "correctAnswers": [
+      "ألكسندر غراهام بيل",
+      "غراهام بيل"
+    ],
+    "wrongAnswers": [
+      "توماس إديسون",
+      "تيم برنرز لي",
+      "الأخوان رايت",
+      "التلسكوب",
+      "ألفريد نوبل",
+      "لويس برايل"
+    ],
+    "category": "inventions",
+    "factKey": "inventions-001"
+  },
+  {
+    "id": "inventions-v85-alt-00003",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من طوّر نظام التلغراف والشفرة التي تحمل اسمه؟",
+    "correctAnswers": [
+      "صمويل مورس",
+      "مورس"
+    ],
+    "wrongAnswers": [
+      "ألكسندر غراهام بيل",
+      "ماركوني",
+      "إديسون"
+    ],
+    "category": "inventions",
+    "factKey": "inventions:single:inventions-m03"
+  },
+  {
+    "id": "extra2-inventions-004",
+    "type": "text",
+    "question": "من ابتكر نظام برايل للقراءة باللمس؟",
+    "correctAnswers": [
+      "لويس برايل"
+    ],
+    "wrongAnswers": [
+      "ألكسندر فليمنغ",
+      "صمويل مورس",
+      "رودولف ديزل",
+      "نيكولا تسلا",
+      "ألكسندر غراهام بيل",
+      "توماس إديسون"
+    ],
+    "category": "inventions",
+    "factKey": "extra2:inventions:004"
+  },
+  {
+    "id": "inventions-v860-new-002-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: ارتبط بتطوير المصباح الكهربائي المتوهج عمليًا وتسويقه؟",
+    "correctAnswers": [
+      "توماس إديسون"
+    ],
+    "wrongAnswers": [
+      "إيفانجيليستا توريتشيلي",
+      "التلسكوب",
+      "ألفريد نوبل",
+      "إدوارد جينر",
+      "لينوس تورفالدس"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:002"
+  },
+  {
+    "id": "inventions-v85-alt-00014",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من ابتكر نظام برايل للقراءة باللمس؟",
+    "correctAnswers": [
+      "لويس برايل"
+    ],
+    "wrongAnswers": [
+      "ألكسندر فليمنغ",
+      "صمويل مورس",
+      "رودولف ديزل",
+      "نيكولا تسلا",
+      "ألكسندر غراهام بيل",
+      "توماس إديسون"
+    ],
+    "category": "inventions",
+    "factKey": "extra2:inventions:004"
+  },
+  {
+    "id": "extra2-inventions-001",
+    "type": "text",
+    "question": "من ارتبط اسمه بالمطبعة ذات الحروف المتحركة في أوروبا؟",
+    "correctAnswers": [
+      "يوهان غوتنبرغ"
+    ],
+    "wrongAnswers": [
+      "لويس برايل",
+      "جيمس واط",
+      "ألكسندر فليمنغ",
+      "صمويل مورس",
+      "رودولف ديزل",
+      "نيكولا تسلا"
+    ],
+    "category": "inventions",
+    "factKey": "extra2:inventions:001"
+  },
+  {
+    "id": "inventions-v860-new-020-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: اخترع الميكروفون الكربوني بشكل عملي وساهم في تطويره؟",
+    "correctAnswers": [
+      "توماس إديسون"
+    ],
+    "wrongAnswers": [
+      "ألكسندر فليمنغ",
+      "ألفريد نوبل",
+      "تيم برنرز لي",
+      "ألكسندر غراهام بيل",
+      "يوهان غوتنبرغ"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:020"
+  },
+  {
+    "id": "inventions-v85-alt-00005",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: أي مخترع ارتبط بتطوير المحرك الحثي ونظام التيار المتناوب متعدد الأطوار؟",
+    "correctAnswers": [
+      "نيكولا تسلا",
+      "تسلا"
+    ],
+    "wrongAnswers": [
+      "توماس إديسون",
+      "مايكل فاراداي",
+      "أليساندرو فولتا"
+    ],
+    "category": "inventions",
+    "factKey": "inventions:single:inventions-m05"
+  },
+  {
+    "id": "inventions-single-001",
+    "type": "text",
+    "question": "من ارتبط اسمه بتطوير الطباعة بالحروف المعدنية المتحركة في أوروبا في القرن الخامس عشر؟",
+    "correctAnswers": [
+      "يوهان غوتنبرغ",
+      "غوتنبرغ",
+      "جوتنبرغ"
+    ],
+    "wrongAnswers": [
+      "جيمس واط",
+      "صمويل مورس",
+      "غولييلمو ماركوني"
+    ],
+    "category": "inventions",
+    "factKey": "inventions:single:inventions-m01"
+  },
+  {
+    "id": "inventions-v860-new-003-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: اخترع شبكة الويب العالمية World Wide Web؟",
+    "correctAnswers": [
+      "تيم بيرنرز لي"
+    ],
+    "wrongAnswers": [
+      "ألفرد نوبل",
+      "تيم برنرز لي",
+      "توماس إديسون",
+      "بريندان آيك",
+      "كينغ كامب جيليت"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:003"
+  },
+  {
+    "id": "inventions-v860-new-011-a",
+    "type": "text",
+    "question": "من اخترع آلة الحلاقة الآمنة ذات الشفرة القابلة للاستبدال تجاريًا؟",
+    "correctAnswers": [
+      "كينغ كامب جيليت"
+    ],
+    "wrongAnswers": [
+      "دانيال فهرنهايت",
+      "بريندان آيك",
+      "ألفريد نوبل",
+      "نيكولا تسلا",
+      "تيم بيرنرز لي"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:011"
+  },
+  {
+    "id": "inventions-v860-new-019-a",
+    "type": "text",
+    "question": "من ارتبط باختراع التيار المتردد متعدد الأطوار والمحرك الحثي؟",
+    "correctAnswers": [
+      "نيكولا تسلا"
+    ],
+    "wrongAnswers": [
+      "توماس إديسون",
+      "التلسكوب",
+      "ألكسندر فليمنغ",
+      "تيم برنرز لي",
+      "غيدو فان روسوم"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:019"
+  },
+  {
+    "id": "extra2-inventions-010",
+    "type": "text",
+    "question": "من ارتبط اسمه بالمصباح الكهربائي المتوهج التجاري؟",
+    "correctAnswers": [
+      "توماس إديسون"
+    ],
+    "wrongAnswers": [
+      "تيم برنرز لي",
+      "الأخوان رايت",
+      "التلسكوب",
+      "ألفريد نوبل",
+      "لويس برايل",
+      "جيمس واط"
+    ],
+    "category": "inventions",
+    "factKey": "extra2:inventions:010"
+  },
+  {
+    "id": "inventions-v860-new-009-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: اخترع البارومتر الزئبقي؟",
+    "correctAnswers": [
+      "إيفانجيليستا توريتشيلي"
+    ],
+    "wrongAnswers": [
+      "ألكسندر غراهام بيل",
+      "لويس برايل",
+      "نيكولا تسلا",
+      "غيدو فان روسوم",
+      "توماس إديسون"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:009"
+  },
+  {
+    "id": "inventions-v85-alt-00016",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من اشتهر بتطوير محرك التيار المتردد الحثي؟",
+    "correctAnswers": [
+      "نيكولا تسلا"
+    ],
+    "wrongAnswers": [
+      "رودولف ديزل",
+      "ألكسندر غراهام بيل",
+      "توماس إديسون",
+      "تيم برنرز لي",
+      "الأخوان رايت",
+      "التلسكوب"
+    ],
+    "category": "inventions",
+    "factKey": "extra2:inventions:006"
+  },
+  {
+    "id": "inventions-v860-new-020-a",
+    "type": "text",
+    "question": "من اخترع الميكروفون الكربوني بشكل عملي وساهم في تطويره؟",
+    "correctAnswers": [
+      "توماس إديسون"
+    ],
+    "wrongAnswers": [
+      "لويس باستور",
+      "الأخوان رايت",
+      "ألفرد نوبل",
+      "رودولف ديزل",
+      "رودلف ديزل"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:020"
+  },
+  {
+    "id": "inventions-v860-new-003-a",
+    "type": "text",
+    "question": "من اخترع شبكة الويب العالمية World Wide Web — سؤال إضافي 5؟",
+    "correctAnswers": [
+      "تيم بيرنرز لي"
+    ],
+    "wrongAnswers": [
+      "توماس إديسون",
+      "جيمس واط",
+      "يوهان غوتنبرغ",
+      "لويس باستور",
+      "جيمس غوسلينغ"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:003"
+  },
+  {
+    "id": "inventions-v860-new-005-a",
+    "type": "text",
+    "question": "من اخترع الديناميت — سؤال إضافي 9؟",
+    "correctAnswers": [
+      "ألفرد نوبل"
+    ],
+    "wrongAnswers": [
+      "لويس برايل",
+      "الأخوان رايت",
+      "رودلف ديزل",
+      "توماس إديسون",
+      "جيمس غوسلينغ"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:005"
+  },
+  {
+    "id": "inventions-004",
+    "type": "text",
+    "question": "من الأخوان المرتبطان بأول طيران ناجح بطائرة تعمل بمحرك سنة 1903؟",
+    "correctAnswers": [
+      "الأخوان رايت",
+      "إخوان رايت",
+      "رايت"
+    ],
+    "wrongAnswers": [
+      "التلسكوب",
+      "ألفريد نوبل",
+      "لويس برايل",
+      "جيمس واط",
+      "يوهان غوتنبرغ",
+      "ألكسندر فليمنغ"
+    ],
+    "category": "inventions",
+    "factKey": "inventions-004"
+  },
+  {
+    "id": "inventions-single-003",
+    "type": "text",
+    "question": "من طوّر نظام التلغراف والشفرة التي تحمل اسمه؟",
+    "correctAnswers": [
+      "صمويل مورس",
+      "مورس"
+    ],
+    "wrongAnswers": [
+      "ألكسندر غراهام بيل",
+      "ماركوني",
+      "إديسون"
+    ],
+    "category": "inventions",
+    "factKey": "inventions:single:inventions-m03"
+  },
+  {
+    "id": "inventions-v860-new-016-a",
+    "type": "text",
+    "question": "من ابتكر لغة Python؟",
+    "correctAnswers": [
+      "غيدو فان روسوم"
+    ],
+    "wrongAnswers": [
+      "بريندان آيك",
+      "دانيال فهرنهايت",
+      "صمويل مورس",
+      "نيكولا تسلا",
+      "إيفانجيليستا توريتشيلي"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:016"
+  },
+  {
+    "id": "inventions-v85-alt-00009",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من الأخوان المرتبطان بأول طيران ناجح بطائرة تعمل بمحرك سنة 1903؟",
+    "correctAnswers": [
+      "الأخوان رايت",
+      "إخوان رايت",
+      "رايت"
+    ],
+    "wrongAnswers": [
+      "التلسكوب",
+      "ألفريد نوبل",
+      "لويس برايل",
+      "جيمس واط",
+      "يوهان غوتنبرغ",
+      "ألكسندر فليمنغ"
+    ],
+    "category": "inventions",
+    "factKey": "inventions-004"
+  },
+  {
+    "id": "inventions-v85-alt-00013",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من الأخوان اللذان ارتبطا بأول طائرة بمحرك ناجحة؟",
+    "correctAnswers": [
+      "الأخوان رايت"
+    ],
+    "wrongAnswers": [
+      "يوهان غوتنبرغ",
+      "ألكسندر فليمنغ",
+      "صمويل مورس",
+      "رودولف ديزل",
+      "نيكولا تسلا",
+      "ألكسندر غراهام بيل"
+    ],
+    "category": "inventions",
+    "factKey": "extra2:inventions:003"
+  },
+  {
+    "id": "inventions-v860-new-014-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: ابتكر لغة البرمجة C مع فريق بيل لابس؟",
+    "correctAnswers": [
+      "دينيس ريتشي"
+    ],
+    "wrongAnswers": [
+      "توماس إديسون",
+      "لويس برايل",
+      "ألفريد نوبل",
+      "الأخوان رايت",
+      "لينوس تورفالدس"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:014"
+  },
+  {
+    "id": "extra2-inventions-002",
+    "type": "text",
+    "question": "من اخترع الديناميت؟",
+    "correctAnswers": [
+      "ألفريد نوبل"
+    ],
+    "wrongAnswers": [
+      "جيمس واط",
+      "يوهان غوتنبرغ",
+      "ألكسندر فليمنغ",
+      "صمويل مورس",
+      "رودولف ديزل",
+      "نيكولا تسلا"
+    ],
+    "category": "inventions",
+    "factKey": "extra2:inventions:002"
+  },
+  {
+    "id": "inventions-v860-new-018-a",
+    "type": "text",
+    "question": "من ابتكر لغة JavaScript؟",
+    "correctAnswers": [
+      "بريندان آيك"
+    ],
+    "wrongAnswers": [
+      "لينوس تورفالدس",
+      "لويس برايل",
+      "ألفرد نوبل",
+      "ألكسندر غراهام بيل",
+      "دينيس ريتشي"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:018"
+  },
+  {
+    "id": "inventions-v85-alt-00010",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الاختراع الذي يسمح برؤية الأجسام البعيدة في السماء بتكبيرها؟",
+    "correctAnswers": [
+      "التلسكوب",
+      "المنظار الفلكي"
+    ],
+    "wrongAnswers": [
+      "ألفريد نوبل",
+      "لويس برايل",
+      "جيمس واط",
+      "يوهان غوتنبرغ",
+      "ألكسندر فليمنغ",
+      "صمويل مورس"
+    ],
+    "category": "inventions",
+    "factKey": "inventions-005"
+  },
+  {
+    "id": "inventions-v860-new-001-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: اخترع الهاتف ويُنسب إليه تسجيل براءة مبكرة له؟",
+    "correctAnswers": [
+      "ألكسندر غراهام بيل"
+    ],
+    "wrongAnswers": [
+      "رودولف ديزل",
+      "توماس إديسون",
+      "غيدو فان روسوم",
+      "إيفانجيليستا توريتشيلي",
+      "تيم بيرنرز لي"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:001"
+  },
+  {
+    "id": "inventions-v85-alt-00004",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من سجل براءة اختراع أول محرك ديزل ناجح في القرن التاسع عشر؟",
+    "correctAnswers": [
+      "رودولف ديزل",
+      "ديزل"
+    ],
+    "wrongAnswers": [
+      "نيكولاس أوتو",
+      "جيمس واط",
+      "كارل بنز"
+    ],
+    "category": "inventions",
+    "factKey": "inventions:single:inventions-m04"
+  },
+  {
+    "id": "inventions-001",
+    "type": "text",
+    "question": "من اشتهر تاريخيًا باختراع الهاتف؟",
+    "correctAnswers": [
+      "ألكسندر غراهام بيل",
+      "غراهام بيل"
+    ],
+    "wrongAnswers": [
+      "توماس إديسون",
+      "تيم برنرز لي",
+      "الأخوان رايت",
+      "التلسكوب",
+      "ألفريد نوبل",
+      "لويس برايل"
+    ],
+    "category": "inventions",
+    "factKey": "inventions-001"
+  },
+  {
+    "id": "inventions-v85-alt-00011",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من ارتبط اسمه بالمطبعة ذات الحروف المتحركة في أوروبا؟",
+    "correctAnswers": [
+      "يوهان غوتنبرغ"
+    ],
+    "wrongAnswers": [
+      "لويس برايل",
+      "جيمس واط",
+      "ألكسندر فليمنغ",
+      "صمويل مورس",
+      "رودولف ديزل",
+      "نيكولا تسلا"
+    ],
+    "category": "inventions",
+    "factKey": "extra2:inventions:001"
+  },
+  {
+    "id": "inventions-v860-new-017-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: ابتكر لغة Java؟",
+    "correctAnswers": [
+      "جيمس غوسلينغ"
+    ],
+    "wrongAnswers": [
+      "إيفانجيليستا توريتشيلي",
+      "نيكولا تسلا",
+      "ألكسندر فليمنغ",
+      "التلسكوب",
+      "تيم بيرنرز لي"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:017"
+  },
+  {
+    "id": "inventions-v85-alt-00007",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من ارتبط اسمه عمليًا بتطوير المصباح الكهربائي المتوهج التجاري؟",
+    "correctAnswers": [
+      "توماس إديسون",
+      "إديسون"
+    ],
+    "wrongAnswers": [
+      "تيم برنرز لي",
+      "الأخوان رايت",
+      "التلسكوب",
+      "ألفريد نوبل",
+      "لويس برايل",
+      "جيمس واط"
+    ],
+    "category": "inventions",
+    "factKey": "inventions-002"
+  },
+  {
+    "id": "inventions-v85-alt-00015",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من اخترع محرك الديزل؟",
+    "correctAnswers": [
+      "رودولف ديزل"
+    ],
+    "wrongAnswers": [
+      "صمويل مورس",
+      "نيكولا تسلا",
+      "ألكسندر غراهام بيل",
+      "توماس إديسون",
+      "تيم برنرز لي",
+      "الأخوان رايت"
+    ],
+    "category": "inventions",
+    "factKey": "extra2:inventions:005"
+  },
+  {
+    "id": "inventions-single-002",
+    "type": "text",
+    "question": "من اكتشف البنسلين سنة 1928؟",
+    "correctAnswers": [
+      "ألكسندر فليمنغ",
+      "فليمنغ"
+    ],
+    "wrongAnswers": [
+      "لويس باستور",
+      "روبرت كوخ",
+      "إدوارد جينر"
+    ],
+    "category": "inventions",
+    "factKey": "inventions:single:inventions-m02"
+  },
+  {
+    "id": "inventions-single-004",
+    "type": "text",
+    "question": "من سجل براءة اختراع أول محرك ديزل ناجح في القرن التاسع عشر؟",
+    "correctAnswers": [
+      "رودولف ديزل",
+      "ديزل"
+    ],
+    "wrongAnswers": [
+      "نيكولاس أوتو",
+      "جيمس واط",
+      "كارل بنز"
+    ],
+    "category": "inventions",
+    "factKey": "inventions:single:inventions-m04"
+  },
+  {
+    "id": "inventions-v85-alt-00008",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من اخترع شبكة الويب العالمية World Wide Web؟",
+    "correctAnswers": [
+      "تيم برنرز لي",
+      "تيم بيرنرز لي",
+      "Tim Berners-Lee"
+    ],
+    "wrongAnswers": [
+      "الأخوان رايت",
+      "التلسكوب",
+      "ألفريد نوبل",
+      "لويس برايل",
+      "جيمس واط",
+      "يوهان غوتنبرغ"
+    ],
+    "category": "inventions",
+    "factKey": "inventions-003"
+  },
+  {
+    "id": "inventions-005",
+    "type": "text",
+    "question": "ما الاختراع الذي يسمح برؤية الأجسام البعيدة في السماء بتكبيرها؟",
+    "correctAnswers": [
+      "التلسكوب",
+      "المنظار الفلكي"
+    ],
+    "wrongAnswers": [
+      "ألفريد نوبل",
+      "لويس برايل",
+      "جيمس واط",
+      "يوهان غوتنبرغ",
+      "ألكسندر فليمنغ",
+      "صمويل مورس"
+    ],
+    "category": "inventions",
+    "factKey": "inventions-005"
+  },
+  {
+    "id": "inventions-v85-alt-00001",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من ارتبط اسمه بتطوير الطباعة بالحروف المعدنية المتحركة في أوروبا في القرن الخامس عشر؟",
+    "correctAnswers": [
+      "يوهان غوتنبرغ",
+      "غوتنبرغ",
+      "جوتنبرغ"
+    ],
+    "wrongAnswers": [
+      "جيمس واط",
+      "صمويل مورس",
+      "غولييلمو ماركوني"
+    ],
+    "category": "inventions",
+    "factKey": "inventions:single:inventions-m01"
+  },
+  {
+    "id": "inventions-v85-alt-00017",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من ارتبط اسمه بالهاتف في براءة الاختراع المبكرة؟",
+    "correctAnswers": [
+      "ألكسندر غراهام بيل"
+    ],
+    "wrongAnswers": [
+      "نيكولا تسلا",
+      "توماس إديسون",
+      "تيم برنرز لي",
+      "الأخوان رايت",
+      "التلسكوب",
+      "ألفريد نوبل"
+    ],
+    "category": "inventions",
+    "factKey": "extra2:inventions:007"
+  },
+  {
+    "id": "extra2-inventions-009",
+    "type": "text",
+    "question": "من اشتهر بتحسين المحرك البخاري في الثورة الصناعية؟",
+    "correctAnswers": [
+      "جيمس واط"
+    ],
+    "wrongAnswers": [
+      "توماس إديسون",
+      "تيم برنرز لي",
+      "الأخوان رايت",
+      "التلسكوب",
+      "ألفريد نوبل",
+      "لويس برايل"
+    ],
+    "category": "inventions",
+    "factKey": "extra2:inventions:009"
+  },
+  {
+    "id": "inventions-003",
+    "type": "text",
+    "question": "من اخترع شبكة الويب العالمية World Wide Web؟",
+    "correctAnswers": [
+      "تيم برنرز لي",
+      "تيم بيرنرز لي",
+      "Tim Berners-Lee"
+    ],
+    "wrongAnswers": [
+      "الأخوان رايت",
+      "التلسكوب",
+      "ألفريد نوبل",
+      "لويس برايل",
+      "جيمس واط",
+      "يوهان غوتنبرغ"
+    ],
+    "category": "inventions",
+    "factKey": "inventions-003"
+  },
+  {
+    "id": "inventions-v85-alt-00019",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من اشتهر بتحسين المحرك البخاري في الثورة الصناعية؟",
+    "correctAnswers": [
+      "جيمس واط"
+    ],
+    "wrongAnswers": [
+      "توماس إديسون",
+      "تيم برنرز لي",
+      "الأخوان رايت",
+      "التلسكوب",
+      "ألفريد نوبل",
+      "لويس برايل"
+    ],
+    "category": "inventions",
+    "factKey": "extra2:inventions:009"
+  },
+  {
+    "id": "inventions-v860-new-013-a",
+    "type": "text",
+    "question": "من طور أول لقاح فعال ضد داء الكلب؟",
+    "correctAnswers": [
+      "لويس باستور"
+    ],
+    "wrongAnswers": [
+      "تيم بيرنرز لي",
+      "لينوس تورفالدس",
+      "يوهان غوتنبرغ",
+      "نيكولا تسلا",
+      "ألفرد نوبل"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:013"
+  },
+  {
+    "id": "inventions-v860-new-008-a",
+    "type": "text",
+    "question": "من اشتهر باختراع محرك الديزل؟",
+    "correctAnswers": [
+      "رودلف ديزل"
+    ],
+    "wrongAnswers": [
+      "لينوس تورفالدس",
+      "تيم برنرز لي",
+      "نيكولا تسلا",
+      "لويس برايل",
+      "التلسكوب"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:008"
+  },
+  {
+    "id": "inventions-v860-new-013-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: طور أول لقاح فعال ضد داء الكلب؟",
+    "correctAnswers": [
+      "لويس باستور"
+    ],
+    "wrongAnswers": [
+      "الأخوان رايت",
+      "تيم بيرنرز لي",
+      "إدوارد جينر",
+      "ألكسندر فليمنغ",
+      "ألكسندر غراهام بيل"
+    ],
+    "category": "inventions",
+    "factKey": "v860:inventions:newfact:013"
+  },
+  {
+    "id": "extra2-inventions-008",
+    "type": "text",
+    "question": "من اخترع شبكة الويب العالمية؟",
+    "correctAnswers": [
+      "تيم برنرز لي"
+    ],
+    "wrongAnswers": [
+      "ألكسندر غراهام بيل",
+      "توماس إديسون",
+      "الأخوان رايت",
+      "التلسكوب",
+      "ألفريد نوبل",
+      "لويس برايل"
+    ],
+    "category": "inventions",
+    "factKey": "extra2:inventions:008"
+  }
+]

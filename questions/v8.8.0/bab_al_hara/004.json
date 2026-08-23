@@ -1,0 +1,2023 @@
+[
+  {
+    "id": "bab-v860-season-009-a",
+    "type": "text",
+    "question": "في أي جزء من «باب الحارة» وقع الحدث المرتبط بالسؤال الآتي: «من تسلم حراسة الحارة خلال تطورات قضية الإدعشري؟»؟",
+    "correctAnswers": [
+      "الجزء 1"
+    ],
+    "wrongAnswers": [
+      "عبد الرحمن آل رشي",
+      "أدهم",
+      "الحلقة 1",
+      "أبو ماجد",
+      "انفصلا"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:009:season"
+  },
+  {
+    "id": "bab-v860-season-105-b",
+    "type": "text",
+    "question": "حدد الجزء الذي ورد فيه الحدث الذي كانت إجابته «شريفة» عن السؤال: «من فقدت جنينها خلال أحداث الجزء الرابع؟».",
+    "correctAnswers": [
+      "الجزء 4"
+    ],
+    "wrongAnswers": [
+      "علي كريم",
+      "وفيق الزعيم",
+      "الحلقة 10",
+      "الحلقة 7",
+      "الحلقة 16"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:105:season"
+  },
+  {
+    "id": "bab-v860-season-075-b",
+    "type": "text",
+    "question": "حدد الجزء الذي ورد فيه الحدث الذي كانت إجابته «لطفية» عن السؤال: «من أنجبت مولودة في الجزء الثالث؟».",
+    "correctAnswers": [
+      "الجزء 3"
+    ],
+    "wrongAnswers": [
+      "الحلقة 4",
+      "سطيف",
+      "الطبيب حمزة",
+      "الحلقة 12",
+      "الثأر لأبو صالح"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:075:season"
+  },
+  {
+    "id": "bab-v860-season-082-b",
+    "type": "text",
+    "question": "حدد الجزء الذي ورد فيه الحدث الذي كانت إجابته «أبو عرب» عن السؤال: «من قرر الأخذ بثأر ابنه من حارة الضبع بعد مقتله؟».",
+    "correctAnswers": [
+      "الجزء 3"
+    ],
+    "wrongAnswers": [
+      "قبضوا عليهم",
+      "أبو ساطور",
+      "الشيخ عبد العليم",
+      "أم زكي",
+      "عبد الرحمن آل رشي"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:082:season"
+  },
+  {
+    "id": "bab-v860-season-120-b",
+    "type": "text",
+    "question": "حدد الجزء الذي ورد فيه الحدث الذي كانت إجابته «فريال» عن السؤال: «من وافقت على الزواج من مأمون في نهاية الجزء الرابع؟».",
+    "correctAnswers": [
+      "الجزء 4"
+    ],
+    "wrongAnswers": [
+      "سعيد",
+      "أيمن بهنسي",
+      "الحلقة 8",
+      "أبو عرب",
+      "أبو يوسف"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:120:season"
+  },
+  {
+    "id": "bab-v860-episode-059-b",
+    "type": "text",
+    "question": "حدد رقم الحلقة في الجزء 2 للحدث الذي كانت إجابته «سلاحين» عن السؤال: «كم قطعة سلاح سرق أبو النار من السلاح الذي استلمه رجال الحارة؟».",
+    "correctAnswers": [
+      "الحلقة 27"
+    ],
+    "wrongAnswers": [
+      "النمس",
+      "عادل علي",
+      "أبو أحمد وأبو يوسف",
+      "الحلقة 1",
+      "الحلقة 4"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:059:episode"
+  },
+  {
+    "id": "bab-cast-actor-3",
+    "type": "text",
+    "question": "من الممثل الذي جسّد شخصية «أم عصام» في الأجزاء المبكرة من باب الحارة؟",
+    "correctAnswers": [
+      "صباح الجزائري"
+    ],
+    "wrongAnswers": [
+      "سامر المصري",
+      "ميلاد يوسف",
+      "وائل شرف",
+      "أدهم الملا"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:actor:أم عصام"
+  },
+  {
+    "id": "bab-v860-season-010-b",
+    "type": "text",
+    "question": "حدد الجزء الذي ورد فيه الحدث الذي كانت إجابته «لا» عن السؤال: «هل اعترف الإدعشري بالسرقة أثناء تعذيبه في بداية الأحداث؟».",
+    "correctAnswers": [
+      "الجزء 1"
+    ],
+    "wrongAnswers": [
+      "الحلقة 18",
+      "صباح الجزائري",
+      "هدى شعراوي",
+      "سليم كلاس",
+      "لطفية"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:010:season"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00060",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من تدخل لخروج عصام من الحبس؟",
+    "correctAnswers": [
+      "أبو شهاب"
+    ],
+    "wrongAnswers": [
+      "أبو ساطور",
+      "دلال",
+      "بشير",
+      "رياض",
+      "لطفية"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s2e27:b"
+  },
+  {
+    "id": "bab-v860-season-025-b",
+    "type": "text",
+    "question": "حدد الجزء الذي ورد فيه الحدث الذي كانت إجابته «نعم» عن السؤال: «صح أم خطأ بحسب الأحداث: هل وافق رياض على الزواج من زهرة عندما عرض أبو خاطر الأمر عليه؟».",
+    "correctAnswers": [
+      "الجزء 1"
+    ],
+    "wrongAnswers": [
+      "علي كريم",
+      "سوريا",
+      "أبو محمود",
+      "أبو يوسف",
+      "الحلقة 24"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:025:season"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00168",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الشخصية التي جسّدها الممثل أناهيد فياض في باب الحارة؟",
+    "correctAnswers": [
+      "دلال"
+    ],
+    "wrongAnswers": [
+      "أبو النار",
+      "أبو عصام",
+      "أبو صالح",
+      "أبو حاتم"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:role:أناهيد فياض"
+  },
+  {
+    "id": "bab-cast-actor-10",
+    "type": "text",
+    "question": "من الممثل الذي جسّد شخصية «أبو ماجد» في الأجزاء المبكرة من باب الحارة؟",
+    "correctAnswers": [
+      "حسام تحسين بيك"
+    ],
+    "wrongAnswers": [
+      "عصام عبه جي",
+      "حسام الشاه",
+      "زهير رمضان",
+      "ليليا الأطرش"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:actor:أبو ماجد"
+  },
+  {
+    "id": "bab-event-s2e30-a",
+    "type": "text",
+    "question": "من تزوج جميلة في نهاية الجزء الثاني؟",
+    "correctAnswers": [
+      "بشير"
+    ],
+    "wrongAnswers": [
+      "أبو عصام",
+      "أبو بشير",
+      "رياض",
+      "لطفية",
+      "الضابط الفرنسي"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s2e30:a"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00160",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الشخصية التي جسّدها الممثل نزار أبو حجر في باب الحارة؟",
+    "correctAnswers": [
+      "أبو غالب"
+    ],
+    "wrongAnswers": [
+      "أم بشير",
+      "أبو النار",
+      "أبو عصام",
+      "أبو صالح"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:role:نزار أبو حجر"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00023",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من قرر التطوع في الشرطة خلال الجزء الأول؟",
+    "correctAnswers": [
+      "سمعو"
+    ],
+    "wrongAnswers": [
+      "بشير",
+      "رياض",
+      "لطفية",
+      "الضابط الفرنسي",
+      "أبو حاتم"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s1e18:a"
+  },
+  {
+    "id": "bab-v860-episode-006-a",
+    "type": "text",
+    "question": "في أي حلقة من الجزء 1 وقع الحدث المرتبط بالسؤال الآتي: «من فتش بيت الإدعشري للتحقق من الشبهة في سرقة الذهب؟»؟",
+    "correctAnswers": [
+      "الحلقة 3"
+    ],
+    "wrongAnswers": [
+      "أبو النار وأبو شهاب",
+      "أبو يوسف",
+      "بوران",
+      "يوظفه",
+      "سعيد وأبو غالب"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:006:episode"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00152",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الشخصية التي جسّدها الممثل أدهم الملا في باب الحارة؟",
+    "correctAnswers": [
+      "أبو محمود"
+    ],
+    "wrongAnswers": [
+      "أبو قاسم",
+      "أم بشير",
+      "أبو النار",
+      "أبو عصام"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:role:أدهم الملا"
+  },
+  {
+    "id": "bab-v860-season-056-a",
+    "type": "text",
+    "question": "في أي جزء من «باب الحارة» وقع الحدث المرتبط بالسؤال الآتي: «من كانت جميلة تلتقي به قبل أن يتقدم والده رسميًا لخطبتها؟»؟",
+    "correctAnswers": [
+      "الجزء 2"
+    ],
+    "wrongAnswers": [
+      "عادل علي",
+      "نعم",
+      "بُترت",
+      "الزعيم أبو صالح",
+      "في مدفن بيته"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:056:season"
+  },
+  {
+    "id": "bab-event-s3e28-a",
+    "type": "text",
+    "question": "من عرض ابنه فدية على أبو صياح لكنه رفض سفك دم طفل؟",
+    "correctAnswers": [
+      "سعيد"
+    ],
+    "wrongAnswers": [
+      "زوجة الإدعشري",
+      "أبو جودت",
+      "أبو شهاب",
+      "أبو دراع",
+      "سمعو"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s3e28:a"
+  },
+  {
+    "id": "bab-event-s4e04-b",
+    "type": "text",
+    "question": "من أفاق من الغيبوبة خلال هذه المرحلة؟",
+    "correctAnswers": [
+      "أبو جودت"
+    ],
+    "wrongAnswers": [
+      "عصام",
+      "معروف",
+      "سطيف",
+      "إبراهيم",
+      "فريال"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s4e04:b"
+  },
+  {
+    "id": "bab-v860-season-111-b",
+    "type": "text",
+    "question": "حدد الجزء الذي ورد فيه الحدث الذي كانت إجابته «أبو يوسف» عن السؤال: «من قُتل على يد الفرنسيين في الجزء الرابع بعد مشاركته في نقل السلاح؟».",
+    "correctAnswers": [
+      "الجزء 4"
+    ],
+    "wrongAnswers": [
+      "سعيد وأبو غالب",
+      "عبد الرحمن آل رشي",
+      "الحلقة 20",
+      "أناهيد فياض",
+      "الحلقة 11"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:111:season"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00089",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من عرض ابنه فدية على أبو صياح لكنه رفض سفك دم طفل؟",
+    "correctAnswers": [
+      "سعيد"
+    ],
+    "wrongAnswers": [
+      "زوجة الإدعشري",
+      "أبو جودت",
+      "أبو شهاب",
+      "أبو دراع",
+      "سمعو"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s3e28:a"
+  },
+  {
+    "id": "bab-v860-season-021-b",
+    "type": "text",
+    "question": "حدد الجزء الذي ورد فيه الحدث الذي كانت إجابته «عصام» عن السؤال: «من عقد قرانه على لطفية في أحداث الجزء الأول؟».",
+    "correctAnswers": [
+      "الجزء 1"
+    ],
+    "wrongAnswers": [
+      "الحلقة 24",
+      "الحلقة 3",
+      "أبو شهاب",
+      "خاطر",
+      "الحلقة 26"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:021:season"
+  },
+  {
+    "id": "bab-v860-season-114-a",
+    "type": "text",
+    "question": "في أي جزء من «باب الحارة» وقع الحدث المرتبط بالسؤال الآتي: «ما الوسيلة الجديدة التي وجدها أهل الحارة خلال الحصار؟»؟",
+    "correctAnswers": [
+      "الجزء 4"
+    ],
+    "wrongAnswers": [
+      "الحلقة 27",
+      "بُترت",
+      "أبو عادل",
+      "سلاحين",
+      "وجود جاسوس في الحارة"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:114:season"
+  },
+  {
+    "id": "bab-event-s4e12-a",
+    "type": "text",
+    "question": "ماذا فعل معظم رجال الحارة قبل اقتحام الفرنسيين؟",
+    "correctAnswers": [
+      "خرجوا من الحارة"
+    ],
+    "wrongAnswers": [
+      "الثأر لأبو صالح",
+      "لطفية",
+      "خاطر",
+      "قبضوا عليهم",
+      "طريق جديد لإدخال الطعام"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s4e12:a"
+  },
+  {
+    "id": "bab-event-s4e06-a",
+    "type": "text",
+    "question": "من نجح في الخروج من الحارة لجلب دواء لخاطر؟",
+    "correctAnswers": [
+      "معتز"
+    ],
+    "wrongAnswers": [
+      "سمعو",
+      "أبو ساطور",
+      "دلال",
+      "بشير",
+      "أم خاطر"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s4e06:a"
+  },
+  {
+    "id": "bab-event-s3e07-a",
+    "type": "text",
+    "question": "إلى من عاد عصام بعد خلافاتهما السابقة؟",
+    "correctAnswers": [
+      "لطفية"
+    ],
+    "wrongAnswers": [
+      "فضحه خبر طلاق أبو عصام",
+      "زي النساء",
+      "شراء بيت للطفية",
+      "خاطر",
+      "خرجوا من الحارة"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s3e07:a"
+  },
+  {
+    "id": "bab-v860-episode-039-b",
+    "type": "text",
+    "question": "حدد رقم الحلقة في الجزء 2 للحدث الذي كانت إجابته «سطيف» عن السؤال: «من قتل الزعيم أبو صالح في الجزء الثاني؟».",
+    "correctAnswers": [
+      "الحلقة 2"
+    ],
+    "wrongAnswers": [
+      "أبو بدر",
+      "الحلقة 10",
+      "أبو محمود",
+      "استشهاد أبو عصام",
+      "حسام تحسين بيك"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:039:episode"
+  },
+  {
+    "id": "bab-v860-season-088-b",
+    "type": "text",
+    "question": "حدد الجزء الذي ورد فيه الحدث الذي كانت إجابته «مسدس نوري» عن السؤال: «ما السلاح الذي حصل عليه أبو شهاب واستعمله لتهديد أبو جودت؟».",
+    "correctAnswers": [
+      "الجزء 3"
+    ],
+    "wrongAnswers": [
+      "أبو بدر",
+      "الزعيم أبو صالح",
+      "أبو ساطور",
+      "سامر المصري",
+      "حسن دكاك"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:088:season"
+  },
+  {
+    "id": "bab-v860-season-062-b",
+    "type": "text",
+    "question": "حدد الجزء الذي ورد فيه الحدث الذي كانت إجابته «الثأر لأبو صالح» عن السؤال: «ما الهدف الذي حققه أبو شهاب عندما قتل سطيف؟».",
+    "correctAnswers": [
+      "الجزء 2"
+    ],
+    "wrongAnswers": [
+      "تسليم أنفسهم وسلاحهم",
+      "أبو ساطور",
+      "الحلقة 20",
+      "رجال الثورة الفلسطينية",
+      "رياض"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:062:season"
+  },
+  {
+    "id": "bab-v860-season-092-b",
+    "type": "text",
+    "question": "حدد الجزء الذي ورد فيه الحدث الذي كانت إجابته «إبراهيم» عن السؤال: «من استشهد أثناء حصار الحارة وكان زوجًا لدلال؟».",
+    "correctAnswers": [
+      "الجزء 4"
+    ],
+    "wrongAnswers": [
+      "الثأر لأبو صالح",
+      "الحلقة 28",
+      "عصام",
+      "الزعيم أبو صالح",
+      "لا"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:092:season"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00033",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الذي حدث لذراع الإدعشري بعد إصابتها بالغرغرينة؟",
+    "correctAnswers": [
+      "بُترت"
+    ],
+    "wrongAnswers": [
+      "رجال الثورة الفلسطينية",
+      "وجود جاسوس في الحارة",
+      "أبو النار وأبو شهاب",
+      "فضحه خبر طلاق أبو عصام",
+      "زي النساء"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s1e29:a"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00092",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من استشهد أثناء حصار الحارة وكان زوجًا لدلال؟",
+    "correctAnswers": [
+      "إبراهيم"
+    ],
+    "wrongAnswers": [
+      "أبو جودت",
+      "أبو شهاب",
+      "أبو دراع",
+      "سمعو",
+      "أبو ساطور"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s4e01:b"
+  },
+  {
+    "id": "bab-v860-season-101-b",
+    "type": "text",
+    "question": "حدد الجزء الذي ورد فيه الحدث الذي كانت إجابته «معتز» عن السؤال: «من نجح في الخروج من الحارة لجلب دواء لخاطر؟».",
+    "correctAnswers": [
+      "الجزء 4"
+    ],
+    "wrongAnswers": [
+      "وفيق الزعيم",
+      "الحلقة 23",
+      "أبو جودت",
+      "لطفية",
+      "حسام الشاه"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:101:season"
+  },
+  {
+    "id": "bab-v860-episode-008-a",
+    "type": "text",
+    "question": "في أي حلقة من الجزء 1 وقع الحدث المرتبط بالسؤال الآتي: «من قدم الشكوى التي أدت إلى التحقيق مع الإدعشري في قضية الذهب؟»؟",
+    "correctAnswers": [
+      "الحلقة 4"
+    ],
+    "wrongAnswers": [
+      "أيمن بهنسي",
+      "دلال",
+      "توفي",
+      "أبو خاطر",
+      "وفاة صالح ابن الزعيم"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:008:episode"
+  },
+  {
+    "id": "bab-cast-role-22",
+    "type": "text",
+    "question": "ما الشخصية التي جسّدها الممثل سحر فوزي في باب الحارة؟",
+    "correctAnswers": [
+      "أم بشير"
+    ],
+    "wrongAnswers": [
+      "دلال",
+      "إبراهيم",
+      "أم عصام",
+      "أبو بشير"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:role:سحر فوزي"
+  },
+  {
+    "id": "bab-v860-season-013-a",
+    "type": "text",
+    "question": "في أي جزء من «باب الحارة» وقع الحدث المرتبط بالسؤال الآتي: «من راقب الإدعشري بعدما حاول إبعاد الشبهة عن نفسه؟»؟",
+    "correctAnswers": [
+      "الجزء 1"
+    ],
+    "wrongAnswers": [
+      "سامر المصري",
+      "أبو دراع",
+      "أبو عصام",
+      "ابنة أبو حاتم",
+      "الضابط الفرنسي"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:013:season"
+  },
+  {
+    "id": "bab-v860-season-026-a",
+    "type": "text",
+    "question": "في أي جزء من «باب الحارة» وقع الحدث المرتبط بالسؤال الآتي: «من حاول منع زواج رياض من زهرة ظنًا أن رياض يطمع في ثروة والده؟»؟",
+    "correctAnswers": [
+      "الجزء 1"
+    ],
+    "wrongAnswers": [
+      "أبو حسن",
+      "2006",
+      "مأمون",
+      "بسام كوسا",
+      "سطيف"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:026:season"
+  },
+  {
+    "id": "bab-v860-episode-026-b",
+    "type": "text",
+    "question": "حدد رقم الحلقة في الجزء 1 للحدث الذي كانت إجابته «خاطر» عن السؤال: «من حاول منع زواج رياض من زهرة ظنًا أن رياض يطمع في ثروة والده؟».",
+    "correctAnswers": [
+      "الحلقة 20"
+    ],
+    "wrongAnswers": [
+      "وفيق الزعيم",
+      "الحلقة 26",
+      "الحلقة 10",
+      "الحلقة 4",
+      "أبو غالب"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:026:episode"
+  },
+  {
+    "id": "bab-cast-role-16",
+    "type": "text",
+    "question": "ما الشخصية التي جسّدها الممثل أدهم الملا في باب الحارة؟",
+    "correctAnswers": [
+      "أبو محمود"
+    ],
+    "wrongAnswers": [
+      "أبو قاسم",
+      "أم بشير",
+      "أبو النار",
+      "أبو عصام"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:role:أدهم الملا"
+  },
+  {
+    "id": "bab-event-s1e03-a",
+    "type": "text",
+    "question": "من بدأ يشك في أن الإدعشري هو سارق الذهب بعد ملاحظة دليل في بيته؟",
+    "correctAnswers": [
+      "أبو إبراهيم"
+    ],
+    "wrongAnswers": [
+      "أبو جودت",
+      "أبو شهاب",
+      "أبو دراع",
+      "سمعو",
+      "أبو ساطور"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s1e03:a"
+  },
+  {
+    "id": "bab-v860-episode-047-b",
+    "type": "text",
+    "question": "حدد رقم الحلقة في الجزء 2 للحدث الذي كانت إجابته «عمله» عن السؤال: «إلى ماذا عاد أبو عصام بعد فترة من التوقف؟».",
+    "correctAnswers": [
+      "الحلقة 15"
+    ],
+    "wrongAnswers": [
+      "أبو جودت",
+      "عبده",
+      "ابنة أبو حاتم",
+      "في مدفن بيته",
+      "أبو غالب"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:047:episode"
+  },
+  {
+    "id": "bab-event-s1e29-a",
+    "type": "text",
+    "question": "ما الذي حدث لذراع الإدعشري بعد إصابتها بالغرغرينة؟",
+    "correctAnswers": [
+      "بُترت"
+    ],
+    "wrongAnswers": [
+      "رجال الثورة الفلسطينية",
+      "وجود جاسوس في الحارة",
+      "أبو النار وأبو شهاب",
+      "فضحه خبر طلاق أبو عصام",
+      "زي النساء"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s1e29:a"
+  },
+  {
+    "id": "bab-v860-episode-007-b",
+    "type": "text",
+    "question": "حدد رقم الحلقة في الجزء 1 للحدث الذي كانت إجابته «أبو جودت» عن السؤال: «من قام بتعذيب الإدعشري بعد تقديم شكوى السرقة ضده؟».",
+    "correctAnswers": [
+      "الحلقة 4"
+    ],
+    "wrongAnswers": [
+      "أناهيد فياض",
+      "الجزء 5",
+      "صباح الجزائري",
+      "أبو دراع",
+      "لطفية"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:007:episode"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00166",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الشخصية التي جسّدها الممثل ليليا الأطرش في باب الحارة؟",
+    "correctAnswers": [
+      "لطفية"
+    ],
+    "wrongAnswers": [
+      "بوران",
+      "أبو عادل",
+      "أبو شهاب",
+      "عصام"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:role:ليليا الأطرش"
+  },
+  {
+    "id": "bab-v860-season-008-a",
+    "type": "text",
+    "question": "في أي جزء من «باب الحارة» وقع الحدث المرتبط بالسؤال الآتي: «من قدم الشكوى التي أدت إلى التحقيق مع الإدعشري في قضية الذهب؟»؟",
+    "correctAnswers": [
+      "الجزء 1"
+    ],
+    "wrongAnswers": [
+      "حسن دكاك",
+      "رفضوا",
+      "2006",
+      "أبو النار وأبو شهاب",
+      "أم جوزيف"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:008:season"
+  },
+  {
+    "id": "bab-event-s2e02-b",
+    "type": "text",
+    "question": "من أقسم على الأخذ بثأر أبو صالح والبحث عن قاتله؟",
+    "correctAnswers": [
+      "أبو شهاب"
+    ],
+    "wrongAnswers": [
+      "أبو أحمد وأبو يوسف",
+      "النمس",
+      "زوجة الإدعشري",
+      "أبو جودت",
+      "أبو النار"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s2e02:b"
+  },
+  {
+    "id": "bab-v860-season-019-b",
+    "type": "text",
+    "question": "حدد الجزء الذي ورد فيه الحدث الذي كانت إجابته «أبو دراع» عن السؤال: «من تزوجت شفيقة في الجزء الأول؟».",
+    "correctAnswers": [
+      "الجزء 1"
+    ],
+    "wrongAnswers": [
+      "الحلقة 3",
+      "خرجوا من الحارة",
+      "بوران",
+      "الحلقة 14",
+      "أبو ساطور"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:019:season"
+  },
+  {
+    "id": "bab-v860-season-086-b",
+    "type": "text",
+    "question": "حدد الجزء الذي ورد فيه الحدث الذي كانت إجابته «خاطر» عن السؤال: «مع من بدأ معتز العمل في هذه المرحلة؟».",
+    "correctAnswers": [
+      "الجزء 3"
+    ],
+    "wrongAnswers": [
+      "أبو النار",
+      "مأمون",
+      "هدى شعراوي",
+      "سمعو",
+      "طريق جديد لإدخال الطعام"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:086:season"
+  },
+  {
+    "id": "bab-v860-season-084-a",
+    "type": "text",
+    "question": "في أي جزء من «باب الحارة» وقع الحدث المرتبط بالسؤال الآتي: «من حاول الإصلاح بين حارة الماوي وحارة الضبع؟»؟",
+    "correctAnswers": [
+      "الجزء 3"
+    ],
+    "wrongAnswers": [
+      "أدهم",
+      "لا",
+      "أبو إبراهيم",
+      "خرجوا من الحارة",
+      "مسدس نوري"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:084:season"
+  },
+  {
+    "id": "bab-v860-season-094-a",
+    "type": "text",
+    "question": "في أي جزء من «باب الحارة» وقع الحدث المرتبط بالسؤال الآتي: «من حاول إيجاد طريقة لنقل خاطر إلى المستشفى؟»؟",
+    "correctAnswers": [
+      "الجزء 4"
+    ],
+    "wrongAnswers": [
+      "الحلقة 4",
+      "الحلقة 19",
+      "وفيق الزعيم",
+      "الزعيم أبو صالح",
+      "لا"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:094:season"
+  },
+  {
+    "id": "bab-event-s4e01-a",
+    "type": "text",
+    "question": "من حاصر حارة الضبع في بداية الجزء الرابع؟",
+    "correctAnswers": [
+      "الفرنسيون"
+    ],
+    "wrongAnswers": [
+      "الزعيم أبو صالح",
+      "أبو صالح",
+      "أبو خاطر",
+      "خاطر",
+      "أبو حسن"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s4e01:a"
+  },
+  {
+    "id": "bab-v860-episode-021-b",
+    "type": "text",
+    "question": "حدد رقم الحلقة في الجزء 1 للحدث الذي كانت إجابته «عصام» عن السؤال: «من عقد قرانه على لطفية في أحداث الجزء الأول؟».",
+    "correctAnswers": [
+      "الحلقة 17"
+    ],
+    "wrongAnswers": [
+      "عادل علي",
+      "أبو حسن",
+      "الجزء 4",
+      "هدى شعراوي",
+      "أم خاطر"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:021:episode"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00131",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من الممثل الذي جسّد شخصية «أبو خاطر» في الأجزاء المبكرة من باب الحارة؟",
+    "correctAnswers": [
+      "سليم كلاس"
+    ],
+    "wrongAnswers": [
+      "حسن دكاك",
+      "عصام عبه جي",
+      "حسام الشاه",
+      "زهير رمضان"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:actor:أبو خاطر"
+  },
+  {
+    "id": "bab-v860-season-048-a",
+    "type": "text",
+    "question": "في أي جزء من «باب الحارة» وقع الحدث المرتبط بالسؤال الآتي: «من ساعده أبو عصام ليتجاوز أزمته في هذه المرحلة؟»؟",
+    "correctAnswers": [
+      "الجزء 2"
+    ],
+    "wrongAnswers": [
+      "صباح الجزائري",
+      "الحلقة 18",
+      "عبد الرحمن آل رشي",
+      "سعيد وأبو غالب",
+      "علي التلاوي"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:048:season"
+  },
+  {
+    "id": "bab-event-s1e20-a",
+    "type": "text",
+    "question": "هل وافق رياض على الزواج من زهرة عندما عرض أبو خاطر الأمر عليه؟",
+    "correctAnswers": [
+      "نعم"
+    ],
+    "wrongAnswers": [
+      "لا",
+      "أبو حسن",
+      "بُترت",
+      "أبو ساطور",
+      "سرقة ذهب أبو إبراهيم وقتل أبو سمعو",
+      "توفي",
+      "أبو عصام"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s1e20:a"
+  },
+  {
+    "id": "bab-event-s4e12-b",
+    "type": "text",
+    "question": "ماذا فعل الفرنسيون بالرجال القليلين الذين بقوا؟",
+    "correctAnswers": [
+      "قبضوا عليهم"
+    ],
+    "wrongAnswers": [
+      "استشهاد أبو عصام",
+      "فريال وسعاد",
+      "تسليم أنفسهم وسلاحهم",
+      "لإخراج رجال الحارة من الحبس",
+      "التفاوض معه كي لا يخبر أهل الحارة"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s4e12:b"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00008",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من قدم الشكوى التي أدت إلى التحقيق مع الإدعشري في قضية الذهب؟",
+    "correctAnswers": [
+      "أبو إبراهيم"
+    ],
+    "wrongAnswers": [
+      "أبو شهاب",
+      "أبو دراع",
+      "سمعو",
+      "أبو ساطور",
+      "دلال"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s1e04:b"
+  },
+  {
+    "id": "bab-v860-season-102-a",
+    "type": "text",
+    "question": "في أي جزء من «باب الحارة» وقع الحدث المرتبط بالسؤال الآتي: «لمن كان معتز يحاول جلب الدواء خارج الحارة؟»؟",
+    "correctAnswers": [
+      "الجزء 4"
+    ],
+    "wrongAnswers": [
+      "أبو أحمد وأبو يوسف",
+      "الفلسطينيين",
+      "أم جوزيف",
+      "الحلقة 29",
+      "الإدعشري"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:102:season"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00076",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: بين من تمت المصالحة بعد خلاف طويل في هذه المرحلة؟",
+    "correctAnswers": [
+      "فريال وسعاد"
+    ],
+    "wrongAnswers": [
+      "زي النساء",
+      "شراء بيت للطفية",
+      "خاطر",
+      "خرجوا من الحارة",
+      "الفلسطينيين"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s3e13:b"
+  },
+  {
+    "id": "bab-v860-season-081-b",
+    "type": "text",
+    "question": "حدد الجزء الذي ورد فيه الحدث الذي كانت إجابته «الضابط الفرنسي» عن السؤال: «من زوّر التقرير الطبي الخاص بالطفل المتوفى؟».",
+    "correctAnswers": [
+      "الجزء 3"
+    ],
+    "wrongAnswers": [
+      "سمعو",
+      "أبو مرزوق",
+      "انفصلا",
+      "أدهم",
+      "وجود جاسوس في الحارة"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:081:season"
+  },
+  {
+    "id": "bab-cast-role-2",
+    "type": "text",
+    "question": "ما الشخصية التي جسّدها الممثل بسام كوسا في باب الحارة؟",
+    "correctAnswers": [
+      "الإدعشري"
+    ],
+    "wrongAnswers": [
+      "أبو شهاب",
+      "عصام",
+      "معتز",
+      "أبو محمود"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:role:بسام كوسا"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00019",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من تزوجت شفيقة في الجزء الأول؟",
+    "correctAnswers": [
+      "أبو دراع"
+    ],
+    "wrongAnswers": [
+      "أبو عصام",
+      "أبو بشير",
+      "معتز",
+      "ابنة أبو حاتم",
+      "الفرنسيون"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s1e13:a"
+  },
+  {
+    "id": "bab-v860-season-120-a",
+    "type": "text",
+    "question": "في أي جزء من «باب الحارة» وقع الحدث المرتبط بالسؤال الآتي: «من وافقت على الزواج من مأمون في نهاية الجزء الرابع؟»؟",
+    "correctAnswers": [
+      "الجزء 4"
+    ],
+    "wrongAnswers": [
+      "التفاوض معه كي لا يخبر أهل الحارة",
+      "سحر فوزي",
+      "الحلقة 1",
+      "عبده",
+      "أبو إبراهيم"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:120:season"
+  },
+  {
+    "id": "bab-cast-actor-22",
+    "type": "text",
+    "question": "من الممثل الذي جسّد شخصية «أم بشير» في الأجزاء المبكرة من باب الحارة؟",
+    "correctAnswers": [
+      "سحر فوزي"
+    ],
+    "wrongAnswers": [
+      "ليليا الأطرش",
+      "أسامة حلال",
+      "بسام كوسا",
+      "سليم كلاس"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:actor:أم بشير"
+  },
+  {
+    "id": "bab-v860-season-042-b",
+    "type": "text",
+    "question": "حدد الجزء الذي ورد فيه الحدث الذي كانت إجابته «دلال» عن السؤال: «من أرادت أم إبراهيم خطبتها لابنها إبراهيم؟».",
+    "correctAnswers": [
+      "الجزء 2"
+    ],
+    "wrongAnswers": [
+      "محمد الشماط",
+      "الشيخ عبد العليم",
+      "أدهم",
+      "شريفة",
+      "لطفية"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:042:season"
+  },
+  {
+    "id": "bab-v860-season-027-b",
+    "type": "text",
+    "question": "حدد الجزء الذي ورد فيه الحدث الذي كانت إجابته «وفاة صالح ابن الزعيم» عن السؤال: «ما السبب في أن أُلغي زفاف عصام في إحدى حلقات الجزء الأول؟».",
+    "correctAnswers": [
+      "الجزء 1"
+    ],
+    "wrongAnswers": [
+      "يوظفه",
+      "الحلقة 27",
+      "الشيخ عبد العليم",
+      "بوران",
+      "زي النساء"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:027:season"
+  },
+  {
+    "id": "bab-v860-season-073-b",
+    "type": "text",
+    "question": "حدد الجزء الذي ورد فيه الحدث الذي كانت إجابته «لطفية» عن السؤال: «إلى من عاد عصام بعد خلافاتهما السابقة؟».",
+    "correctAnswers": [
+      "الجزء 3"
+    ],
+    "wrongAnswers": [
+      "سلاحين",
+      "أبو جودت",
+      "الحلقة 15",
+      "الحلقة 26",
+      "الحلقة 6"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:073:season"
+  },
+  {
+    "id": "bab-event-s4e03-a",
+    "type": "text",
+    "question": "من اختفى وبدأ صبحي يبحث عنه بمساعدة رجال الحارة؟",
+    "correctAnswers": [
+      "أبو شهاب"
+    ],
+    "wrongAnswers": [
+      "أبو النار",
+      "عصام",
+      "معروف",
+      "سطيف",
+      "إبراهيم"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s4e03:a"
+  },
+  {
+    "id": "bab-v860-season-019-a",
+    "type": "text",
+    "question": "في أي جزء من «باب الحارة» وقع الحدث المرتبط بالسؤال الآتي: «من تزوجت شفيقة في الجزء الأول؟»؟",
+    "correctAnswers": [
+      "الجزء 1"
+    ],
+    "wrongAnswers": [
+      "شريفة",
+      "أمية ملص",
+      "سطيف",
+      "الجزء 5",
+      "أم جوزيف"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:019:season"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00178",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الشخصية التي جسّدها الممثل علي التلاوي في باب الحارة؟",
+    "correctAnswers": [
+      "أبو عادل"
+    ],
+    "wrongAnswers": [
+      "الإدعشري",
+      "أبو خاطر",
+      "أبو ماجد",
+      "الشيخ عبد العليم"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:role:علي التلاوي"
+  },
+  {
+    "id": "bab-event-s4e04-a",
+    "type": "text",
+    "question": "من توصل إلى خطة لإيصال الطعام إلى حارة الضبع أثناء الحصار؟",
+    "correctAnswers": [
+      "أبو النار"
+    ],
+    "wrongAnswers": [
+      "أبو دراع",
+      "سمعو",
+      "أبو ساطور",
+      "دلال",
+      "بشير"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s4e04:a"
+  },
+  {
+    "id": "bab-cast-actor-9",
+    "type": "text",
+    "question": "من الممثل الذي جسّد شخصية «أبو حاتم» في الأجزاء المبكرة من باب الحارة؟",
+    "correctAnswers": [
+      "وفيق الزعيم"
+    ],
+    "wrongAnswers": [
+      "حسام تحسين بيك",
+      "عادل علي",
+      "أيمن بهنسي",
+      "سحر فوزي"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:actor:أبو حاتم"
+  },
+  {
+    "id": "bab-event-s3e28-b",
+    "type": "text",
+    "question": "مع من بدأ معتز العمل في هذه المرحلة؟",
+    "correctAnswers": [
+      "خاطر"
+    ],
+    "wrongAnswers": [
+      "التفاوض معه كي لا يخبر أهل الحارة",
+      "رجال الثورة الفلسطينية",
+      "وجود جاسوس في الحارة",
+      "توفي",
+      "عمله"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s3e28:b"
+  },
+  {
+    "id": "bab-v860-season-035-b",
+    "type": "text",
+    "question": "حدد الجزء الذي ورد فيه الحدث الذي كانت إجابته «سرقة ذهب أبو إبراهيم وقتل أبو سمعو» عن السؤال: «بماذا اعترف الإدعشري أمام أهل الحارة قبل وفاته؟».",
+    "correctAnswers": [
+      "الجزء 1"
+    ],
+    "wrongAnswers": [
+      "الحلقة 9",
+      "الحلقة 29",
+      "أبو النار",
+      "الزعيم أبو صالح",
+      "أم خاطر"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:035:season"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00081",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من زوّر التقرير الطبي الخاص بالطفل المتوفى؟",
+    "correctAnswers": [
+      "الضابط الفرنسي"
+    ],
+    "wrongAnswers": [
+      "شريفة",
+      "أبو يوسف",
+      "الإدعشري",
+      "أبو إبراهيم",
+      "أبو ماجد"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s3e17:a"
+  },
+  {
+    "id": "bab-v860-season-074-b",
+    "type": "text",
+    "question": "حدد الجزء الذي ورد فيه الحدث الذي كانت إجابته «ابنة أبو حاتم» عن السؤال: «من طلب أبو شهاب من أبو حاتم يدها للزواج؟».",
+    "correctAnswers": [
+      "الجزء 3"
+    ],
+    "wrongAnswers": [
+      "لا",
+      "أبو عصام",
+      "أم جوزيف",
+      "الحلقة 10",
+      "معروف"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:074:season"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00057",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من قدمت شكوى أدت إلى حبس وتعذيب عصام؟",
+    "correctAnswers": [
+      "فريال"
+    ],
+    "wrongAnswers": [
+      "خاطر",
+      "أبو حسن",
+      "أبو عصام",
+      "أبو بشير",
+      "رياض"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s2e26:a"
+  },
+  {
+    "id": "bab-v860-episode-016-b",
+    "type": "text",
+    "question": "حدد رقم الحلقة في الجزء 1 للحدث الذي كانت إجابته «أبو النار» عن السؤال: «من طلب منه أبو صالح التدخل لإعادة الإدعشري إلى الحارة؟».",
+    "correctAnswers": [
+      "الحلقة 8"
+    ],
+    "wrongAnswers": [
+      "زهير رمضان",
+      "فضحه خبر طلاق أبو عصام",
+      "رجال الثورة الفلسطينية",
+      "رفضوا",
+      "ترك الحارة"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:016:episode"
+  },
+  {
+    "id": "bab-event-s1e18-a",
+    "type": "text",
+    "question": "من قرر التطوع في الشرطة خلال الجزء الأول؟",
+    "correctAnswers": [
+      "سمعو"
+    ],
+    "wrongAnswers": [
+      "بشير",
+      "رياض",
+      "لطفية",
+      "الضابط الفرنسي",
+      "أبو حاتم"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s1e18:a"
+  },
+  {
+    "id": "bab-cast-role-15",
+    "type": "text",
+    "question": "ما الشخصية التي جسّدها الممثل حسام الشاه في باب الحارة؟",
+    "correctAnswers": [
+      "عبده"
+    ],
+    "wrongAnswers": [
+      "أبو بدر",
+      "أم زكي",
+      "بوران",
+      "أبو عادل"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:role:حسام الشاه"
+  },
+  {
+    "id": "bab-cast-actor-27",
+    "type": "text",
+    "question": "من الممثل الذي جسّد شخصية «بشير» في الأجزاء المبكرة من باب الحارة؟",
+    "correctAnswers": [
+      "أسامة حلال"
+    ],
+    "wrongAnswers": [
+      "محمد رافع",
+      "صباح الجزائري",
+      "حسن دكاك",
+      "عصام عبه جي"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:actor:بشير"
+  },
+  {
+    "id": "bab-v860-season-039-b",
+    "type": "text",
+    "question": "حدد الجزء الذي ورد فيه الحدث الذي كانت إجابته «سطيف» عن السؤال: «من قتل الزعيم أبو صالح في الجزء الثاني؟».",
+    "correctAnswers": [
+      "الجزء 2"
+    ],
+    "wrongAnswers": [
+      "معتز",
+      "أبو شهاب",
+      "خرجوا من الحارة",
+      "سعيد وأبو غالب",
+      "أبو عرب"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:039:season"
+  },
+  {
+    "id": "bab-v860-episode-017-a",
+    "type": "text",
+    "question": "في أي حلقة من الجزء 1 وقع الحدث المرتبط بالسؤال الآتي: «من عرض تزويج ابنته زهرة لرياض مع التكفل بمصاريف الزواج؟»؟",
+    "correctAnswers": [
+      "الحلقة 12"
+    ],
+    "wrongAnswers": [
+      "الحلقة 27",
+      "مسدس نوري",
+      "أبو حاتم",
+      "الحلقة 22",
+      "الثأر لأبو صالح"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:017:episode"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00101",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من نجح في الخروج من الحارة لجلب دواء لخاطر؟",
+    "correctAnswers": [
+      "معتز"
+    ],
+    "wrongAnswers": [
+      "سمعو",
+      "أبو ساطور",
+      "دلال",
+      "بشير",
+      "أم خاطر"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s4e06:a"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00151",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من الممثل الذي جسّد شخصية «أبو محمود» في الأجزاء المبكرة من باب الحارة؟",
+    "correctAnswers": [
+      "أدهم الملا"
+    ],
+    "wrongAnswers": [
+      "محمد خير الجراح",
+      "هدى شعراوي",
+      "أمية ملص",
+      "علي التلاوي"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:actor:أبو محمود"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00004",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من اكتشفت صدمة دفن جثة أبو سمعو في بيت الإدعشري؟",
+    "correctAnswers": [
+      "زوجة الإدعشري"
+    ],
+    "wrongAnswers": [
+      "الزعيم أبو صالح",
+      "أبو صالح",
+      "أبو خاطر",
+      "خاطر",
+      "أبو حسن"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s1e02:b"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00079",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من عرض عليه أبو حاتم الإقامة في الحارة لمداواة المرضى؟",
+    "correctAnswers": [
+      "الطبيب حمزة"
+    ],
+    "wrongAnswers": [
+      "صبحي",
+      "أم جوزيف",
+      "مأمون",
+      "أبو سمعو",
+      "الزعيم أبو صالح"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s3e16:a"
+  },
+  {
+    "id": "bab-event-s1e28-a",
+    "type": "text",
+    "question": "من تزوج لطفية أخيرًا في الجزء الأول؟",
+    "correctAnswers": [
+      "عصام"
+    ],
+    "wrongAnswers": [
+      "الفرنسيون",
+      "أدهم",
+      "سعيد",
+      "أبو أحمد وأبو يوسف",
+      "النمس"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s1e28:a"
+  },
+  {
+    "id": "bab-v860-season-025-a",
+    "type": "text",
+    "question": "في أي جزء من «باب الحارة» وقع الحدث المرتبط بالسؤال الآتي: «صح أم خطأ بحسب الأحداث: هل وافق رياض على الزواج من زهرة عندما عرض أبو خاطر الأمر عليه؟»؟",
+    "correctAnswers": [
+      "الجزء 1"
+    ],
+    "wrongAnswers": [
+      "سمعو",
+      "بشير",
+      "سعيد وأبو غالب",
+      "عادل علي",
+      "استشهاد أبو عصام"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:025:season"
+  },
+  {
+    "id": "bab-v860-episode-012-b",
+    "type": "text",
+    "question": "حدد رقم الحلقة في الجزء 1 للحدث الذي كانت إجابته «مساندة أهل فلسطين» عن السؤال: «لأي قضية طلب أبو حسن من رجال الحارة المساعدة في توصيل السلاح؟».",
+    "correctAnswers": [
+      "الحلقة 6"
+    ],
+    "wrongAnswers": [
+      "أبو سمعو",
+      "سعيد وأبو غالب",
+      "الضابط الفرنسي",
+      "أبو يوسف",
+      "الفلسطينيين"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:012:episode"
+  },
+  {
+    "id": "bab-v860-episode-051-a",
+    "type": "text",
+    "question": "في أي حلقة من الجزء 2 وقع الحدث المرتبط بالسؤال الآتي: «ما الذي حدث لعلاقة عصام ولطفية في الجزء الثاني قبل عودتهما لاحقًا؟»؟",
+    "correctAnswers": [
+      "الحلقة 18"
+    ],
+    "wrongAnswers": [
+      "الجزء 1",
+      "الضابط الفرنسي",
+      "زي النساء",
+      "الحلقة 3",
+      "أبو قاسم"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:051:episode"
+  },
+  {
+    "id": "bab-v860-episode-033-b",
+    "type": "text",
+    "question": "حدد رقم الحلقة في الجزء 1 للحدث الذي كانت إجابته «بُترت» عن السؤال: «ما الذي حدث لذراع الإدعشري بعد إصابتها بالغرغرينة؟».",
+    "correctAnswers": [
+      "الحلقة 29"
+    ],
+    "wrongAnswers": [
+      "أم جوزيف",
+      "مساندة أهل فلسطين",
+      "قبضوا عليهم",
+      "خرجوا من الحارة",
+      "أبو جودت"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:033:episode"
+  },
+  {
+    "id": "bab-v860-season-051-b",
+    "type": "text",
+    "question": "حدد الجزء الذي ورد فيه الحدث الذي كانت إجابته «انفصلا» عن السؤال: «ما الذي حدث لعلاقة عصام ولطفية في الجزء الثاني قبل عودتهما لاحقًا؟».",
+    "correctAnswers": [
+      "الجزء 2"
+    ],
+    "wrongAnswers": [
+      "محمد الشماط",
+      "رفضوا",
+      "أبو حاتم",
+      "الحلقة 1",
+      "الحلقة 16"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:051:season"
+  },
+  {
+    "id": "bab-v860-season-033-a",
+    "type": "text",
+    "question": "في أي جزء من «باب الحارة» وقع الحدث المرتبط بالسؤال الآتي: «ما الذي حدث لذراع الإدعشري بعد إصابتها بالغرغرينة؟»؟",
+    "correctAnswers": [
+      "الجزء 1"
+    ],
+    "wrongAnswers": [
+      "محمد الشماط",
+      "أبو ماجد",
+      "أبو عرب",
+      "وجود جاسوس في الحارة",
+      "وفيق الزعيم"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:033:season"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00056",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من كانت جميلة تلتقي به قبل أن يتقدم والده رسميًا لخطبتها؟",
+    "correctAnswers": [
+      "بشير"
+    ],
+    "wrongAnswers": [
+      "عصام",
+      "معروف",
+      "سطيف",
+      "إبراهيم",
+      "معتز"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s2e25:b"
+  },
+  {
+    "id": "bab-v860-episode-008-b",
+    "type": "text",
+    "question": "حدد رقم الحلقة في الجزء 1 للحدث الذي كانت إجابته «أبو إبراهيم» عن السؤال: «من قدم الشكوى التي أدت إلى التحقيق مع الإدعشري في قضية الذهب؟».",
+    "correctAnswers": [
+      "الحلقة 4"
+    ],
+    "wrongAnswers": [
+      "أبو عصام",
+      "إبراهيم",
+      "محمد خير الجراح",
+      "خرجوا من الحارة",
+      "مسدس نوري"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:008:episode"
+  },
+  {
+    "id": "bab-event-s4e17-a",
+    "type": "text",
+    "question": "من قُتل على يد الفرنسيين في الجزء الرابع بعد مشاركته في نقل السلاح؟",
+    "correctAnswers": [
+      "أبو يوسف"
+    ],
+    "wrongAnswers": [
+      "فريال",
+      "أم خاطر",
+      "الطبيب حمزة",
+      "أبو عرب",
+      "صبحي"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s4e17:a"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00144",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الشخصية التي جسّدها الممثل وائل شرف في باب الحارة؟",
+    "correctAnswers": [
+      "معتز"
+    ],
+    "wrongAnswers": [
+      "الشيخ عبد العليم",
+      "أبو قاسم",
+      "أم بشير",
+      "أبو النار"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:role:وائل شرف"
+  },
+  {
+    "id": "bab-v860-season-080-a",
+    "type": "text",
+    "question": "في أي جزء من «باب الحارة» وقع الحدث المرتبط بالسؤال الآتي: «من قتل طفلًا صغيرًا في حارة الضبع ضمن تصاعد الصراع؟»؟",
+    "correctAnswers": [
+      "الجزء 3"
+    ],
+    "wrongAnswers": [
+      "سامر المصري",
+      "أبو مرزوق",
+      "الحلقة 22",
+      "الحلقة 5",
+      "سرقة ذهب أبو إبراهيم وقتل أبو سمعو"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:080:season"
+  },
+  {
+    "id": "bab-v860-episode-035-a",
+    "type": "text",
+    "question": "في أي حلقة من الجزء 1 وقع الحدث المرتبط بالسؤال الآتي: «بماذا اعترف الإدعشري أمام أهل الحارة قبل وفاته؟»؟",
+    "correctAnswers": [
+      "الحلقة 32"
+    ],
+    "wrongAnswers": [
+      "أبو مرزوق",
+      "أم خاطر",
+      "بُترت",
+      "هدى شعراوي",
+      "أبو محمود"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:035:episode"
+  },
+  {
+    "id": "bab-cast-actor-19",
+    "type": "text",
+    "question": "من الممثل الذي جسّد شخصية «أبو جودت» في الأجزاء المبكرة من باب الحارة؟",
+    "correctAnswers": [
+      "زهير رمضان"
+    ],
+    "wrongAnswers": [
+      "نزار أبو حجر",
+      "أناهيد فياض",
+      "محمد رافع",
+      "صباح الجزائري"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:actor:أبو جودت"
+  },
+  {
+    "id": "bab-event-s2e04-b",
+    "type": "text",
+    "question": "من عقد قرانه على دلال في الجزء الثاني؟",
+    "correctAnswers": [
+      "إبراهيم"
+    ],
+    "wrongAnswers": [
+      "الإدعشري",
+      "أبو إبراهيم",
+      "أبو ماجد",
+      "أبو النار",
+      "عصام"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s2e04:b"
+  },
+  {
+    "id": "bab-event-s3e15-b",
+    "type": "text",
+    "question": "من عرف أن أبو غالب كان سببًا في أذيته ثم أخبر أبو النار؟",
+    "correctAnswers": [
+      "أبو بشير"
+    ],
+    "wrongAnswers": [
+      "أبو حاتم",
+      "شريفة",
+      "أبو يوسف",
+      "الإدعشري",
+      "أبو إبراهيم"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s3e15:b"
+  },
+  {
+    "id": "bab-v860-season-034-b",
+    "type": "text",
+    "question": "حدد الجزء الذي ورد فيه الحدث الذي كانت إجابته «أبو ساطور» عن السؤال: «من قبض عليه الإدعشري بعد محاولة حرق محل أبو شهاب؟».",
+    "correctAnswers": [
+      "الجزء 1"
+    ],
+    "wrongAnswers": [
+      "الحلقة 6",
+      "الحلقة 4",
+      "الحلقة 19",
+      "أبو النار",
+      "الفلسطينيين"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:034:season"
+  },
+  {
+    "id": "bab-cast-role-3",
+    "type": "text",
+    "question": "ما الشخصية التي جسّدها الممثل صباح الجزائري في باب الحارة؟",
+    "correctAnswers": [
+      "أم عصام"
+    ],
+    "wrongAnswers": [
+      "أبو صالح",
+      "أبو حاتم",
+      "أبو مرزوق",
+      "أبو بدر"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:role:صباح الجزائري"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00143",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من الممثل الذي جسّد شخصية «معتز» في الأجزاء المبكرة من باب الحارة؟",
+    "correctAnswers": [
+      "وائل شرف"
+    ],
+    "wrongAnswers": [
+      "محمد الشماط",
+      "محمد خير الجراح",
+      "هدى شعراوي",
+      "أمية ملص"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:actor:معتز"
+  },
+  {
+    "id": "bab-v860-episode-019-a",
+    "type": "text",
+    "question": "في أي حلقة من الجزء 1 وقع الحدث المرتبط بالسؤال الآتي: «من تزوجت شفيقة في الجزء الأول؟»؟",
+    "correctAnswers": [
+      "الحلقة 13"
+    ],
+    "wrongAnswers": [
+      "الفلسطينيين",
+      "أمية ملص",
+      "تسليم أنفسهم وسلاحهم",
+      "سعيد وأبو غالب",
+      "عمله"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:019:episode"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00048",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من ساعده أبو عصام ليتجاوز أزمته في هذه المرحلة؟",
+    "correctAnswers": [
+      "إبراهيم"
+    ],
+    "wrongAnswers": [
+      "الزعيم أبو صالح",
+      "أبو صالح",
+      "أبو خاطر",
+      "خاطر",
+      "أبو حسن"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s2e15:b"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00071",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من توفيت بعد تعرضها لحادث في الجزء الثالث؟",
+    "correctAnswers": [
+      "أم خاطر"
+    ],
+    "wrongAnswers": [
+      "ابنة أبو حاتم",
+      "الفرنسيون",
+      "أدهم",
+      "سعيد",
+      "أبو أحمد وأبو يوسف"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s3e06:a"
+  },
+  {
+    "id": "bab-v860-season-081-a",
+    "type": "text",
+    "question": "في أي جزء من «باب الحارة» وقع الحدث المرتبط بالسؤال الآتي: «من زوّر التقرير الطبي الخاص بالطفل المتوفى؟»؟",
+    "correctAnswers": [
+      "الجزء 3"
+    ],
+    "wrongAnswers": [
+      "الحلقة 2",
+      "الحلقة 25",
+      "أم عصام",
+      "الطبيب حمزة",
+      "قبضوا عليهم"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:081:season"
+  },
+  {
+    "id": "bab-event-s2e16-a",
+    "type": "text",
+    "question": "من ضرب أبو غالب بعدما عرف أنه فضح خبر طلاق أبو عصام؟",
+    "correctAnswers": [
+      "أبو بشير"
+    ],
+    "wrongAnswers": [
+      "أبو جودت",
+      "أبو شهاب",
+      "أبو دراع",
+      "سمعو",
+      "أبو ساطور"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s2e16:a"
+  },
+  {
+    "id": "bab_al_hara-v85-alt-00138",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الشخصية التي جسّدها الممثل وفيق الزعيم في باب الحارة؟",
+    "correctAnswers": [
+      "أبو حاتم"
+    ],
+    "wrongAnswers": [
+      "أبو إبراهيم",
+      "عبده",
+      "أبو جودت",
+      "لطفية"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:role:وفيق الزعيم"
+  },
+  {
+    "id": "bab-v860-season-083-a",
+    "type": "text",
+    "question": "في أي جزء من «باب الحارة» وقع الحدث المرتبط بالسؤال الآتي: «من اتحد مع أبو شهاب ضد الجيش الفرنسي؟»؟",
+    "correctAnswers": [
+      "الجزء 3"
+    ],
+    "wrongAnswers": [
+      "أناهيد فياض",
+      "انفصلا",
+      "أبو حسن",
+      "الفرنسيون",
+      "الثأر لأبو صالح"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:083:season"
+  },
+  {
+    "id": "bab-v860-season-002-a",
+    "type": "text",
+    "question": "في أي جزء من «باب الحارة» وقع الحدث المرتبط بالسؤال الآتي: «من الحارس الذي قُتل أثناء حادثة سرقة ذهب أبو إبراهيم؟»؟",
+    "correctAnswers": [
+      "الجزء 1"
+    ],
+    "wrongAnswers": [
+      "صباح الجزائري",
+      "لإخراج رجال الحارة من الحبس",
+      "سطيف",
+      "مسدس نوري",
+      "2006"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:002:season"
+  },
+  {
+    "id": "bab-v860-episode-048-b",
+    "type": "text",
+    "question": "حدد رقم الحلقة في الجزء 2 للحدث الذي كانت إجابته «إبراهيم» عن السؤال: «من ساعده أبو عصام ليتجاوز أزمته في هذه المرحلة؟».",
+    "correctAnswers": [
+      "الحلقة 15"
+    ],
+    "wrongAnswers": [
+      "الحلقة 12",
+      "أبو حاتم",
+      "أبو ماجد",
+      "الحلقة 4",
+      "طريق جديد لإدخال الطعام"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:048:episode"
+  },
+  {
+    "id": "bab-event-s3e29-b",
+    "type": "text",
+    "question": "ما السلاح الذي حصل عليه أبو شهاب واستعمله لتهديد أبو جودت؟",
+    "correctAnswers": [
+      "مسدس نوري"
+    ],
+    "wrongAnswers": [
+      "قبضوا عليهم",
+      "طريق جديد لإدخال الطعام",
+      "ترك الحارة",
+      "وفاة صالح ابن الزعيم",
+      "سرقة ذهب أبو إبراهيم وقتل أبو سمعو"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s3e29:b"
+  },
+  {
+    "id": "bab-event-s2e29-a",
+    "type": "text",
+    "question": "من نجح أبو شهاب في قتله أخذًا بثأر الزعيم أبو صالح؟",
+    "correctAnswers": [
+      "سطيف"
+    ],
+    "wrongAnswers": [
+      "أبو ساطور",
+      "إبراهيم",
+      "فريال",
+      "أم خاطر",
+      "الطبيب حمزة"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "bab-al-hara:event:s2e29:a"
+  },
+  {
+    "id": "bab-v860-season-015-a",
+    "type": "text",
+    "question": "في أي جزء من «باب الحارة» وقع الحدث المرتبط بالسؤال الآتي: «ماذا فعل الإدعشري عندما علم أن أبو شهاب يراقبه؟»؟",
+    "correctAnswers": [
+      "الجزء 1"
+    ],
+    "wrongAnswers": [
+      "أدهم الملا",
+      "لطفية",
+      "علي كريم",
+      "أم عصام",
+      "الحلقة 19"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:015:season"
+  },
+  {
+    "id": "bab-v860-season-090-b",
+    "type": "text",
+    "question": "حدد الجزء الذي ورد فيه الحدث الذي كانت إجابته «سمعو» عن السؤال: «من فك أسر صبحي بعد حادثة الضابط الفرنسي؟».",
+    "correctAnswers": [
+      "الجزء 3"
+    ],
+    "wrongAnswers": [
+      "سلاحين",
+      "الحلقة 28",
+      "صبحي",
+      "ترك الحارة",
+      "زهير رمضان"
+    ],
+    "category": "bab_al_hara",
+    "factKey": "v860:bab:eventmeta:090:season"
+  }
+]

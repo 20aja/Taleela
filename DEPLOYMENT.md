@@ -1,4 +1,4 @@
-# نشر Taleela v8.5.0
+# نشر Taleela v8.9.0
 
 ## إذا كان Netlify مربوطًا بـ GitHub
 
@@ -27,7 +27,7 @@ firebase deploy --only firestore:rules
 ```text
 _headers
 firestore.rules
-questions/v8.5.0/
+questions/v8.9.0/
 js/question-store.js
 sw.js
 ```
@@ -36,7 +36,7 @@ sw.js
 
 ## التوافق
 
-بنية الغرف ما زالت تستخدم `schemaVersion: 6`. يفضّل بعد النشر إنشاء غرفة جديدة واختبار مباراة حقيقية بأكثر من جهاز، خصوصًا:
+بنية الغرف ما زالت تستخدم `schemaVersion: 7`. يفضّل بعد النشر إنشاء غرفة جديدة واختبار مباراة حقيقية بأكثر من جهاز، خصوصًا:
 
 - 30 جولة.
 - فئة واحدة فقط.

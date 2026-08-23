@@ -6302,7 +6302,7 @@ input:focus-visible {
 
 
 /* =====================================================
-   TALEELA v8.6.0 — gameplay layout and feedback refinements
+   TALEELA v8.9.0 — gameplay layout and feedback refinements
 ===================================================== */
 .game-toolbar {
   position: sticky;
@@ -6550,7 +6550,7 @@ input:focus-visible {
 
 
 /* =====================================================
-   TALEELA v8.6.0 — custom avatar + phone alignment pass
+   TALEELA v8.9.0 — custom avatar + phone alignment pass
 ===================================================== */
 .custom-avatar-picker {
   display: grid;

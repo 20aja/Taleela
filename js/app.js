@@ -1592,4 +1592,4 @@ document.addEventListener(
   {capture: true},
 );
 
-console.log("Taleela App v8.6.0 Mobile Input + Custom Avatar + Expanded Question Bank loaded");
+console.log("Taleela App v8.9.0 Mobile Input + Custom Avatar + Expanded Question Bank loaded");

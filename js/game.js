@@ -1604,4 +1604,4 @@ document.getElementById("gameLeaveButton")?.addEventListener("click", () => {
   window.dispatchEvent(new CustomEvent("taleela:leave-room"));
 });
 
-console.log("Taleela Game Engine v8.6.0 Custom Avatars + Mobile Input loaded");
+console.log("Taleela Game Engine v8.9.0 Custom Avatars + Mobile Input loaded");

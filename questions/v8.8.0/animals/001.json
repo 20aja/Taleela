@@ -1,0 +1,1392 @@
+[
+  {
+    "id": "animals-v85-alt-00010",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الطائر الذي لا يطير ويعيش في القارة القطبية الجنوبية؟",
+    "correctAnswers": [
+      "البطريق",
+      "بطريق"
+    ],
+    "wrongAnswers": [
+      "الدهون",
+      "الدلفين",
+      "أستراليا",
+      "الزرافة",
+      "البومة",
+      "النحلة"
+    ],
+    "category": "animals",
+    "factKey": "animals-005"
+  },
+  {
+    "id": "animals-single-004",
+    "type": "text",
+    "question": "كم قلبًا يمتلك الأخطبوط؟",
+    "correctAnswers": [
+      "3",
+      "ثلاثة"
+    ],
+    "wrongAnswers": [
+      "1",
+      "2",
+      "4"
+    ],
+    "category": "animals",
+    "factKey": "animals:single:animals-m04"
+  },
+  {
+    "id": "animals-v860-new-020-a",
+    "type": "text",
+    "question": "ما الحيوان الذي يستخدم تحديد الموقع بالصدى أثناء الطيران ليلًا؟",
+    "correctAnswers": [
+      "الخفاش"
+    ],
+    "wrongAnswers": [
+      "3 قلوب",
+      "الجمل",
+      "الفيل الأفريقي",
+      "الأسد",
+      "الفهد"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:020"
+  },
+  {
+    "id": "animals-v85-alt-00014",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الحيوان البحري الثديي المعروف بذكائه واستخدامه الصدى؟",
+    "correctAnswers": [
+      "الدلفين"
+    ],
+    "wrongAnswers": [
+      "البومة",
+      "النحلة",
+      "طائر",
+      "خلد الماء",
+      "الدب القطبي",
+      "الطائر الطنان"
+    ],
+    "category": "animals",
+    "factKey": "extra2:animals:004"
+  },
+  {
+    "id": "animals-v860-new-007-a",
+    "type": "text",
+    "question": "ما الحيوان الذي يحمل صغاره في جراب؟",
+    "correctAnswers": [
+      "الكنغر"
+    ],
+    "wrongAnswers": [
+      "الفهد",
+      "البومة",
+      "الأسد",
+      "الحوت",
+      "الشرغوف"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:007"
+  },
+  {
+    "id": "animals-v860-new-010-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الحيوان الذي يُعرف بسفينة الصحراء؟",
+    "correctAnswers": [
+      "الجمل"
+    ],
+    "wrongAnswers": [
+      "الحوت",
+      "الأخطبوط",
+      "الفهد",
+      "القندس",
+      "البومة"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:010"
+  },
+  {
+    "id": "animals-v860-new-018-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الحيوان الذي يسمى ملك الغابة شائعًا؟",
+    "correctAnswers": [
+      "الأسد"
+    ],
+    "wrongAnswers": [
+      "الحمار الوحشي",
+      "النعامة",
+      "الفهد",
+      "الفيل الأفريقي",
+      "خلد الماء"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:018"
+  },
+  {
+    "id": "extra2-animals-009",
+    "type": "text",
+    "question": "ما الحشرة التي تنتج العسل؟",
+    "correctAnswers": [
+      "النحلة"
+    ],
+    "wrongAnswers": [
+      "الطائر الطنان",
+      "3",
+      "الفهد",
+      "الحوت الأزرق",
+      "8",
+      "الجمل"
+    ],
+    "category": "animals",
+    "factKey": "extra2:animals:009"
+  },
+  {
+    "id": "animals-v860-new-011-b",
+    "type": "text",
+    "question": "اذكر الإجابة: اسم صغير الضفدع قبل اكتمال تحوله؟",
+    "correctAnswers": [
+      "الشرغوف"
+    ],
+    "wrongAnswers": [
+      "النحلة",
+      "الزرافة",
+      "الحوت الأزرق",
+      "3",
+      "الدب القطبي"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:011"
+  },
+  {
+    "id": "animals-v85-alt-00003",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: أي طائر معروف بقدرته على الطيران للخلف؟",
+    "correctAnswers": [
+      "الطائر الطنان",
+      "الطنان"
+    ],
+    "wrongAnswers": [
+      "السنونو",
+      "الصقر",
+      "الرفراف"
+    ],
+    "category": "animals",
+    "factKey": "animals:single:animals-m03"
+  },
+  {
+    "id": "animals-v860-new-016-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الحيوان الذي يمتلك خطوطًا سوداء وبيضاء مميزة؟",
+    "correctAnswers": [
+      "الحمار الوحشي"
+    ],
+    "wrongAnswers": [
+      "البطريق",
+      "3",
+      "النعامة",
+      "الفهد",
+      "الفيل الأفريقي"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:016"
+  },
+  {
+    "id": "animals-v860-new-002-a",
+    "type": "text",
+    "question": "ما أسرع حيوان بري — سؤال إضافي 3؟",
+    "correctAnswers": [
+      "الفهد"
+    ],
+    "wrongAnswers": [
+      "الفيل الأفريقي",
+      "النمر السيبيري",
+      "الطائر الطنان",
+      "النحلة",
+      "الأخطبوط"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:002"
+  },
+  {
+    "id": "extra2-animals-003",
+    "type": "text",
+    "question": "ماذا يخزن سنام الجمل أساسًا؟",
+    "correctAnswers": [
+      "الدهون"
+    ],
+    "wrongAnswers": [
+      "الزرافة",
+      "البومة",
+      "النحلة",
+      "طائر",
+      "خلد الماء",
+      "الدب القطبي"
+    ],
+    "category": "animals",
+    "factKey": "extra2:animals:003"
+  },
+  {
+    "id": "animals-v860-new-010-a",
+    "type": "text",
+    "question": "ما الحيوان الذي يُعرف بسفينة الصحراء؟",
+    "correctAnswers": [
+      "الجمل"
+    ],
+    "wrongAnswers": [
+      "النمر السيبيري",
+      "الخفاش",
+      "8",
+      "3",
+      "الزرافة"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:010"
+  },
+  {
+    "id": "animals-v85-alt-00001",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: أي ثديي يضع البيض ويملك منقارًا يشبه منقار البط؟",
+    "correctAnswers": [
+      "خلد الماء",
+      "منقار البط",
+      "Platypus"
+    ],
+    "wrongAnswers": [
+      "آكل النمل الشوكي",
+      "القندس",
+      "ثعلب الماء"
+    ],
+    "category": "animals",
+    "factKey": "animals:single:animals-m01"
+  },
+  {
+    "id": "animals-v85-alt-00019",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الحشرة التي تنتج العسل؟",
+    "correctAnswers": [
+      "النحلة"
+    ],
+    "wrongAnswers": [
+      "الطائر الطنان",
+      "3",
+      "الفهد",
+      "الحوت الأزرق",
+      "8",
+      "الجمل"
+    ],
+    "category": "animals",
+    "factKey": "extra2:animals:009"
+  },
+  {
+    "id": "animals-005",
+    "type": "text",
+    "question": "ما الطائر الذي لا يطير ويعيش في القارة القطبية الجنوبية؟",
+    "correctAnswers": [
+      "البطريق",
+      "بطريق"
+    ],
+    "wrongAnswers": [
+      "الدهون",
+      "الدلفين",
+      "أستراليا",
+      "الزرافة",
+      "البومة",
+      "النحلة"
+    ],
+    "category": "animals",
+    "factKey": "animals-005"
+  },
+  {
+    "id": "extra2-animals-002",
+    "type": "text",
+    "question": "ما الحيوان الثديي الذي يبيض ويشتهر بمنقاره الشبيه بالبط؟",
+    "correctAnswers": [
+      "خلد الماء"
+    ],
+    "wrongAnswers": [
+      "أستراليا",
+      "الزرافة",
+      "البومة",
+      "النحلة",
+      "طائر",
+      "الدب القطبي"
+    ],
+    "category": "animals",
+    "factKey": "extra2:animals:002"
+  },
+  {
+    "id": "animals-single-003",
+    "type": "text",
+    "question": "أي طائر معروف بقدرته على الطيران للخلف؟",
+    "correctAnswers": [
+      "الطائر الطنان",
+      "الطنان"
+    ],
+    "wrongAnswers": [
+      "السنونو",
+      "الصقر",
+      "الرفراف"
+    ],
+    "category": "animals",
+    "factKey": "animals:single:animals-m03"
+  },
+  {
+    "id": "animals-v860-new-008-a",
+    "type": "text",
+    "question": "ما الحيوان البحري الذي يملك ثمانية أذرع؟",
+    "correctAnswers": [
+      "الأخطبوط"
+    ],
+    "wrongAnswers": [
+      "الخفاش",
+      "الشرغوف",
+      "الفيل الأفريقي",
+      "أستراليا",
+      "الزرافة"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:008"
+  },
+  {
+    "id": "animals-single-001",
+    "type": "text",
+    "question": "أي ثديي يضع البيض ويملك منقارًا يشبه منقار البط؟",
+    "correctAnswers": [
+      "خلد الماء",
+      "منقار البط",
+      "Platypus"
+    ],
+    "wrongAnswers": [
+      "آكل النمل الشوكي",
+      "القندس",
+      "ثعلب الماء"
+    ],
+    "category": "animals",
+    "factKey": "animals:single:animals-m01"
+  },
+  {
+    "id": "extra2-animals-007",
+    "type": "text",
+    "question": "ما أطول حيوان بري؟",
+    "correctAnswers": [
+      "الزرافة"
+    ],
+    "wrongAnswers": [
+      "خلد الماء",
+      "الدب القطبي",
+      "الطائر الطنان",
+      "3",
+      "الفهد",
+      "الحوت الأزرق"
+    ],
+    "category": "animals",
+    "factKey": "extra2:animals:007"
+  },
+  {
+    "id": "animals-v860-new-019-a",
+    "type": "text",
+    "question": "ما الحيوان البحري الذي يتنفس عبر فتحة أعلى الرأس؟",
+    "correctAnswers": [
+      "الحوت"
+    ],
+    "wrongAnswers": [
+      "الفهد",
+      "الفيل الأفريقي",
+      "النعامة",
+      "أستراليا",
+      "الأسد"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:019"
+  },
+  {
+    "id": "animals-v860-new-001-b",
+    "type": "text",
+    "question": "اذكر الإجابة: أكبر حيوان حي على الأرض؟",
+    "correctAnswers": [
+      "الحوت الأزرق"
+    ],
+    "wrongAnswers": [
+      "البومة",
+      "الفهد",
+      "البطريق",
+      "الحرباء",
+      "3"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:001"
+  },
+  {
+    "id": "animals-v85-alt-00005",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: أي حيوان بري يعد الأسرع في العدو لمسافات قصيرة؟",
+    "correctAnswers": [
+      "الفهد",
+      "الشيتا"
+    ],
+    "wrongAnswers": [
+      "الأسد",
+      "الغزال",
+      "النمر"
+    ],
+    "category": "animals",
+    "factKey": "animals:single:animals-m05"
+  },
+  {
+    "id": "animals-v860-new-013-a",
+    "type": "text",
+    "question": "ما الحيوان الذي يبني السدود في الأنهار؟",
+    "correctAnswers": [
+      "القندس"
+    ],
+    "wrongAnswers": [
+      "3",
+      "الشرغوف",
+      "8",
+      "الزرافة",
+      "الحوت الأزرق"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:013"
+  },
+  {
+    "id": "animals-v85-alt-00015",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: كم ذراعًا للأخطبوط؟",
+    "correctAnswers": [
+      "8"
+    ],
+    "wrongAnswers": [
+      "النحلة",
+      "طائر",
+      "خلد الماء",
+      "الدب القطبي",
+      "الطائر الطنان",
+      "3"
+    ],
+    "category": "animals",
+    "factKey": "extra2:animals:005"
+  },
+  {
+    "id": "animals-v85-alt-00002",
+    "type": "text",
+    "question": "أيّ أنواع الدببة الحية من حيث الكتلة عادة يُعد الأكبر؟",
+    "correctAnswers": [
+      "الدب القطبي"
+    ],
+    "wrongAnswers": [
+      "الدب البني",
+      "دب الكودياك",
+      "الدب الأسود"
+    ],
+    "category": "animals",
+    "factKey": "animals:single:animals-m02"
+  },
+  {
+    "id": "extra2-animals-001",
+    "type": "text",
+    "question": "ما أكبر حيوان بري حي؟",
+    "correctAnswers": [
+      "الفيل الأفريقي"
+    ],
+    "wrongAnswers": [
+      "الدلفين",
+      "أستراليا",
+      "الزرافة",
+      "البومة",
+      "النحلة",
+      "طائر"
+    ],
+    "category": "animals",
+    "factKey": "extra2:animals:001"
+  },
+  {
+    "id": "animals-v860-new-006-a",
+    "type": "text",
+    "question": "ما أكبر أنواع القطط البرية؟",
+    "correctAnswers": [
+      "النمر السيبيري"
+    ],
+    "wrongAnswers": [
+      "طائر",
+      "الدلفين",
+      "الحوت",
+      "البومة",
+      "الأخطبوط"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:006"
+  },
+  {
+    "id": "extra2-animals-004",
+    "type": "text",
+    "question": "ما الحيوان البحري الثديي المعروف بذكائه واستخدامه الصدى؟",
+    "correctAnswers": [
+      "الدلفين"
+    ],
+    "wrongAnswers": [
+      "البومة",
+      "النحلة",
+      "طائر",
+      "خلد الماء",
+      "الدب القطبي",
+      "الطائر الطنان"
+    ],
+    "category": "animals",
+    "factKey": "extra2:animals:004"
+  },
+  {
+    "id": "animals-single-005",
+    "type": "text",
+    "question": "أي حيوان بري يعد الأسرع في العدو لمسافات قصيرة؟",
+    "correctAnswers": [
+      "الفهد",
+      "الشيتا"
+    ],
+    "wrongAnswers": [
+      "الأسد",
+      "الغزال",
+      "النمر"
+    ],
+    "category": "animals",
+    "factKey": "animals:single:animals-m05"
+  },
+  {
+    "id": "animals-v860-new-004-a",
+    "type": "text",
+    "question": "ما الحيوان الثديي الوحيد القادر على الطيران الحقيقي؟",
+    "correctAnswers": [
+      "الخفاش"
+    ],
+    "wrongAnswers": [
+      "القندس",
+      "الحمار الوحشي",
+      "الفهد",
+      "3",
+      "الشرغوف"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:004"
+  },
+  {
+    "id": "animals-v860-new-018-a",
+    "type": "text",
+    "question": "ما الحيوان الذي يسمى ملك الغابة شائعًا؟",
+    "correctAnswers": [
+      "الأسد"
+    ],
+    "wrongAnswers": [
+      "الشرغوف",
+      "الفيل الأفريقي",
+      "البطريق",
+      "الحوت الأزرق",
+      "الدهون"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:018"
+  },
+  {
+    "id": "animals-v85-alt-00013",
+    "type": "text",
+    "question": "ما الذي يخزن سنام الجمل أساسًا؟",
+    "correctAnswers": [
+      "الدهون"
+    ],
+    "wrongAnswers": [
+      "الزرافة",
+      "البومة",
+      "النحلة",
+      "طائر",
+      "خلد الماء",
+      "الدب القطبي"
+    ],
+    "category": "animals",
+    "factKey": "extra2:animals:003"
+  },
+  {
+    "id": "extra2-animals-008",
+    "type": "text",
+    "question": "ما الطائر الذي ينشط غالبًا ليلًا ويتميز بعينيه الكبيرتين؟",
+    "correctAnswers": [
+      "البومة"
+    ],
+    "wrongAnswers": [
+      "الدب القطبي",
+      "الطائر الطنان",
+      "3",
+      "الفهد",
+      "الحوت الأزرق",
+      "8"
+    ],
+    "category": "animals",
+    "factKey": "extra2:animals:008"
+  },
+  {
+    "id": "animals-003",
+    "type": "text",
+    "question": "كم رجلًا للعنكبوت؟",
+    "correctAnswers": [
+      "8",
+      "ثمانية"
+    ],
+    "wrongAnswers": [
+      "البطريق",
+      "الفيل الأفريقي",
+      "الدهون",
+      "الدلفين",
+      "أستراليا",
+      "الزرافة"
+    ],
+    "category": "animals",
+    "factKey": "animals-003"
+  },
+  {
+    "id": "animals-v860-new-017-a",
+    "type": "text",
+    "question": "ما أكبر حيوان بري من حيث الكتلة؟",
+    "correctAnswers": [
+      "الفيل الأفريقي"
+    ],
+    "wrongAnswers": [
+      "الحوت الأزرق",
+      "البومة",
+      "8",
+      "البطريق",
+      "الطائر الطنان"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:017"
+  },
+  {
+    "id": "animals-v85-alt-00012",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الحيوان الثديي الذي يبيض ويشتهر بمنقاره الشبيه بالبط؟",
+    "correctAnswers": [
+      "خلد الماء"
+    ],
+    "wrongAnswers": [
+      "أستراليا",
+      "الزرافة",
+      "البومة",
+      "النحلة",
+      "طائر",
+      "الدب القطبي"
+    ],
+    "category": "animals",
+    "factKey": "extra2:animals:002"
+  },
+  {
+    "id": "animals-v860-new-013-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الحيوان الذي يبني السدود في الأنهار؟",
+    "correctAnswers": [
+      "القندس"
+    ],
+    "wrongAnswers": [
+      "الجمل",
+      "3",
+      "الفهد",
+      "النعامة",
+      "خلد الماء"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:013"
+  },
+  {
+    "id": "extra2-animals-006",
+    "type": "text",
+    "question": "في أي قارة يعيش الكنغر بصورة طبيعية؟",
+    "correctAnswers": [
+      "أستراليا"
+    ],
+    "wrongAnswers": [
+      "طائر",
+      "خلد الماء",
+      "الدب القطبي",
+      "الطائر الطنان",
+      "3",
+      "الفهد"
+    ],
+    "category": "animals",
+    "factKey": "extra2:animals:006"
+  },
+  {
+    "id": "animals-v860-new-016-a",
+    "type": "text",
+    "question": "ما الحيوان الذي يمتلك خطوطًا سوداء وبيضاء مميزة؟",
+    "correctAnswers": [
+      "الحمار الوحشي"
+    ],
+    "wrongAnswers": [
+      "خلد الماء",
+      "النمر السيبيري",
+      "الدب القطبي",
+      "الزرافة",
+      "الحرباء"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:016"
+  },
+  {
+    "id": "animals-v85-alt-00007",
+    "type": "text",
+    "question": "أيّ حيوان حي على الأرض يُعد الأكبر؟",
+    "correctAnswers": [
+      "الحوت الأزرق",
+      "حوت ازرق"
+    ],
+    "wrongAnswers": [
+      "الجمل",
+      "البطريق",
+      "الفيل الأفريقي",
+      "الدهون",
+      "الدلفين",
+      "أستراليا"
+    ],
+    "category": "animals",
+    "factKey": "animals-002"
+  },
+  {
+    "id": "animals-v860-new-002-b",
+    "type": "text",
+    "question": "اذكر الإجابة: أسرع حيوان بري؟",
+    "correctAnswers": [
+      "الفهد"
+    ],
+    "wrongAnswers": [
+      "الحوت",
+      "الحرباء",
+      "الفيل الأفريقي",
+      "طائر",
+      "الشرغوف"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:002"
+  },
+  {
+    "id": "animals-002",
+    "type": "text",
+    "question": "ما أكبر حيوان حي على الأرض؟",
+    "correctAnswers": [
+      "الحوت الأزرق",
+      "حوت ازرق"
+    ],
+    "wrongAnswers": [
+      "الجمل",
+      "البطريق",
+      "الفيل الأفريقي",
+      "الدهون",
+      "الدلفين",
+      "أستراليا"
+    ],
+    "category": "animals",
+    "factKey": "animals-002"
+  },
+  {
+    "id": "animals-004",
+    "type": "text",
+    "question": "ما الحيوان المعروف بسفينة الصحراء؟",
+    "correctAnswers": [
+      "الجمل",
+      "الإبل"
+    ],
+    "wrongAnswers": [
+      "الفيل الأفريقي",
+      "الدهون",
+      "الدلفين",
+      "أستراليا",
+      "الزرافة",
+      "البومة"
+    ],
+    "category": "animals",
+    "factKey": "animals-004"
+  },
+  {
+    "id": "animals-v85-alt-00004",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: كم قلبًا يمتلك الأخطبوط؟",
+    "correctAnswers": [
+      "3",
+      "ثلاثة"
+    ],
+    "wrongAnswers": [
+      "1",
+      "2",
+      "4"
+    ],
+    "category": "animals",
+    "factKey": "animals:single:animals-m04"
+  },
+  {
+    "id": "animals-v85-alt-00006",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما أسرع حيوان بري؟",
+    "correctAnswers": [
+      "الفهد",
+      "الفهد الصياد"
+    ],
+    "wrongAnswers": [
+      "8",
+      "الجمل",
+      "البطريق",
+      "الفيل الأفريقي",
+      "الدهون",
+      "الدلفين"
+    ],
+    "category": "animals",
+    "factKey": "animals-001"
+  },
+  {
+    "id": "animals-v85-alt-00011",
+    "type": "text",
+    "question": "أيّ حيوان بري حي يُعد الأكبر؟",
+    "correctAnswers": [
+      "الفيل الأفريقي"
+    ],
+    "wrongAnswers": [
+      "الدلفين",
+      "أستراليا",
+      "الزرافة",
+      "البومة",
+      "النحلة",
+      "طائر"
+    ],
+    "category": "animals",
+    "factKey": "extra2:animals:001"
+  },
+  {
+    "id": "animals-v860-new-005-a",
+    "type": "text",
+    "question": "ما الحيوان المعروف بتغيير لونه للتمويه؟",
+    "correctAnswers": [
+      "الحرباء"
+    ],
+    "wrongAnswers": [
+      "البطريق",
+      "الجمل",
+      "الخفاش",
+      "النحلة",
+      "القندس"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:005"
+  },
+  {
+    "id": "animals-v860-new-012-a",
+    "type": "text",
+    "question": "ما الطائر الذي لا يطير ويعيش طبيعيًا في القارة القطبية الجنوبية؟",
+    "correctAnswers": [
+      "البطريق"
+    ],
+    "wrongAnswers": [
+      "3 قلوب",
+      "8",
+      "الدهون",
+      "الفيل الأفريقي",
+      "الجمل"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:012"
+  },
+  {
+    "id": "animals-v85-alt-00017",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما أطول حيوان بري؟",
+    "correctAnswers": [
+      "الزرافة"
+    ],
+    "wrongAnswers": [
+      "خلد الماء",
+      "الدب القطبي",
+      "الطائر الطنان",
+      "3",
+      "الفهد",
+      "الحوت الأزرق"
+    ],
+    "category": "animals",
+    "factKey": "extra2:animals:007"
+  },
+  {
+    "id": "animals-v860-new-014-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الثديي الذي يضع البيض ويملك منقارًا شبيهًا بالبط؟",
+    "correctAnswers": [
+      "خلد الماء"
+    ],
+    "wrongAnswers": [
+      "الفهد",
+      "البطريق",
+      "طائر",
+      "الجمل",
+      "الشرغوف"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:014"
+  },
+  {
+    "id": "animals-v860-new-019-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الحيوان البحري الذي يتنفس عبر فتحة أعلى الرأس؟",
+    "correctAnswers": [
+      "الحوت"
+    ],
+    "wrongAnswers": [
+      "الدلفين",
+      "خلد الماء",
+      "8",
+      "الأسد",
+      "الشرغوف"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:019"
+  },
+  {
+    "id": "animals-v860-new-011-a",
+    "type": "text",
+    "question": "ما اسم صغير الضفدع قبل اكتمال تحوله؟",
+    "correctAnswers": [
+      "الشرغوف"
+    ],
+    "wrongAnswers": [
+      "النمر السيبيري",
+      "خلد الماء",
+      "طائر",
+      "الطائر الطنان",
+      "الحوت"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:011"
+  },
+  {
+    "id": "animals-v860-new-008-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الحيوان البحري الذي يملك ثمانية أذرع؟",
+    "correctAnswers": [
+      "الأخطبوط"
+    ],
+    "wrongAnswers": [
+      "الدب القطبي",
+      "البومة",
+      "الجمل",
+      "الخفاش",
+      "البطريق"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:008"
+  },
+  {
+    "id": "animals-v860-new-003-b",
+    "type": "text",
+    "question": "اذكر الإجابة: أكبر طائر حي؟",
+    "correctAnswers": [
+      "النعامة"
+    ],
+    "wrongAnswers": [
+      "الحوت الأزرق",
+      "أستراليا",
+      "الحمار الوحشي",
+      "خلد الماء",
+      "الكنغر"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:003"
+  },
+  {
+    "id": "animals-v860-new-007-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الحيوان الذي يحمل صغاره في جراب؟",
+    "correctAnswers": [
+      "الكنغر"
+    ],
+    "wrongAnswers": [
+      "الحمار الوحشي",
+      "3",
+      "البطريق",
+      "القندس",
+      "8"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:007"
+  },
+  {
+    "id": "animals-v85-alt-00009",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الحيوان المعروف بسفينة الصحراء؟",
+    "correctAnswers": [
+      "الجمل",
+      "الإبل"
+    ],
+    "wrongAnswers": [
+      "الفيل الأفريقي",
+      "الدهون",
+      "الدلفين",
+      "أستراليا",
+      "الزرافة",
+      "البومة"
+    ],
+    "category": "animals",
+    "factKey": "animals-004"
+  },
+  {
+    "id": "animals-single-002",
+    "type": "text",
+    "question": "ما أكبر أنواع الدببة الحية من حيث الكتلة عادة؟",
+    "correctAnswers": [
+      "الدب القطبي"
+    ],
+    "wrongAnswers": [
+      "الدب البني",
+      "دب الكودياك",
+      "الدب الأسود"
+    ],
+    "category": "animals",
+    "factKey": "animals:single:animals-m02"
+  },
+  {
+    "id": "animals-v860-new-004-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الحيوان الثديي الوحيد القادر على الطيران الحقيقي؟",
+    "correctAnswers": [
+      "الخفاش"
+    ],
+    "wrongAnswers": [
+      "خلد الماء",
+      "الجمل",
+      "الدلفين",
+      "الدب القطبي",
+      "النمر السيبيري"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:004"
+  },
+  {
+    "id": "animals-v860-new-003-a",
+    "type": "text",
+    "question": "ما أكبر طائر حي؟",
+    "correctAnswers": [
+      "النعامة"
+    ],
+    "wrongAnswers": [
+      "3",
+      "الحمار الوحشي",
+      "الحوت",
+      "الدلفين",
+      "النحلة"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:003"
+  },
+  {
+    "id": "animals-v860-new-009-a",
+    "type": "text",
+    "question": "كم قلبًا للأخطبوط؟",
+    "correctAnswers": [
+      "3 قلوب"
+    ],
+    "wrongAnswers": [
+      "الزرافة",
+      "الدب القطبي",
+      "خلد الماء",
+      "الجمل",
+      "الخفاش"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:009"
+  },
+  {
+    "id": "animals-v860-new-020-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الحيوان الذي يستخدم تحديد الموقع بالصدى أثناء الطيران ليلًا؟",
+    "correctAnswers": [
+      "الخفاش"
+    ],
+    "wrongAnswers": [
+      "النعامة",
+      "طائر",
+      "أستراليا",
+      "خلد الماء",
+      "الحوت"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:020"
+  },
+  {
+    "id": "animals-v860-new-006-b",
+    "type": "text",
+    "question": "اذكر الإجابة: أكبر أنواع القطط البرية؟",
+    "correctAnswers": [
+      "النمر السيبيري"
+    ],
+    "wrongAnswers": [
+      "القندس",
+      "الدهون",
+      "الدب القطبي",
+      "الفهد",
+      "الأخطبوط"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:006"
+  },
+  {
+    "id": "animals-v860-new-005-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الحيوان المعروف بتغيير لونه للتمويه؟",
+    "correctAnswers": [
+      "الحرباء"
+    ],
+    "wrongAnswers": [
+      "الطائر الطنان",
+      "الحوت",
+      "الخفاش",
+      "الحوت الأزرق",
+      "الدب القطبي"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:005"
+  },
+  {
+    "id": "animals-v860-new-009-b",
+    "type": "text",
+    "question": "ما العدد الصحيح في السؤال الآتي: كم قلبًا للأخطبوط؟",
+    "correctAnswers": [
+      "3 قلوب"
+    ],
+    "wrongAnswers": [
+      "الدهون",
+      "الأخطبوط",
+      "الزرافة",
+      "البطريق",
+      "الحمار الوحشي"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:009"
+  },
+  {
+    "id": "animals-v85-alt-00008",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: كم رجلًا للعنكبوت؟",
+    "correctAnswers": [
+      "8",
+      "ثمانية"
+    ],
+    "wrongAnswers": [
+      "البطريق",
+      "الفيل الأفريقي",
+      "الدهون",
+      "الدلفين",
+      "أستراليا",
+      "الزرافة"
+    ],
+    "category": "animals",
+    "factKey": "animals-003"
+  },
+  {
+    "id": "animals-v85-alt-00020",
+    "type": "text",
+    "question": "صح أم خطأ بحسب الأحداث: هل البطريق طائر أم ثديي؟",
+    "correctAnswers": [
+      "طائر"
+    ],
+    "wrongAnswers": [
+      "3",
+      "الفهد",
+      "الحوت الأزرق",
+      "8",
+      "الجمل",
+      "البطريق"
+    ],
+    "category": "animals",
+    "factKey": "extra2:animals:010"
+  },
+  {
+    "id": "animals-001",
+    "type": "text",
+    "question": "ما أسرع حيوان بري؟",
+    "correctAnswers": [
+      "الفهد",
+      "الفهد الصياد"
+    ],
+    "wrongAnswers": [
+      "8",
+      "الجمل",
+      "البطريق",
+      "الفيل الأفريقي",
+      "الدهون",
+      "الدلفين"
+    ],
+    "category": "animals",
+    "factKey": "animals-001"
+  },
+  {
+    "id": "animals-v860-new-017-b",
+    "type": "text",
+    "question": "اذكر الإجابة: أكبر حيوان بري من حيث الكتلة؟",
+    "correctAnswers": [
+      "الفيل الأفريقي"
+    ],
+    "wrongAnswers": [
+      "الأسد",
+      "الحرباء",
+      "الزرافة",
+      "الحوت الأزرق",
+      "3"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:017"
+  },
+  {
+    "id": "animals-v860-new-001-a",
+    "type": "text",
+    "question": "ما أكبر حيوان حي على الأرض — سؤال إضافي 1؟",
+    "correctAnswers": [
+      "الحوت الأزرق"
+    ],
+    "wrongAnswers": [
+      "الفيل الأفريقي",
+      "الجمل",
+      "النعامة",
+      "الكنغر",
+      "الفهد"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:001"
+  },
+  {
+    "id": "animals-v85-alt-00018",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الطائر الذي ينشط غالبًا ليلًا ويتميز بعينيه الكبيرتين؟",
+    "correctAnswers": [
+      "البومة"
+    ],
+    "wrongAnswers": [
+      "الدب القطبي",
+      "الطائر الطنان",
+      "3",
+      "الفهد",
+      "الحوت الأزرق",
+      "8"
+    ],
+    "category": "animals",
+    "factKey": "extra2:animals:008"
+  },
+  {
+    "id": "extra2-animals-010",
+    "type": "text",
+    "question": "هل البطريق طائر أم ثديي؟",
+    "correctAnswers": [
+      "طائر"
+    ],
+    "wrongAnswers": [
+      "3",
+      "الفهد",
+      "الحوت الأزرق",
+      "8",
+      "الجمل",
+      "البطريق"
+    ],
+    "category": "animals",
+    "factKey": "extra2:animals:010"
+  },
+  {
+    "id": "extra2-animals-005",
+    "type": "text",
+    "question": "كم ذراعًا للأخطبوط؟",
+    "correctAnswers": [
+      "8"
+    ],
+    "wrongAnswers": [
+      "النحلة",
+      "طائر",
+      "خلد الماء",
+      "الدب القطبي",
+      "الطائر الطنان",
+      "3"
+    ],
+    "category": "animals",
+    "factKey": "extra2:animals:005"
+  },
+  {
+    "id": "animals-v860-new-014-a",
+    "type": "text",
+    "question": "ما الثديي الذي يضع البيض ويملك منقارًا شبيهًا بالبط؟",
+    "correctAnswers": [
+      "خلد الماء"
+    ],
+    "wrongAnswers": [
+      "الكنغر",
+      "8",
+      "الشرغوف",
+      "الدب القطبي",
+      "طائر"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:014"
+  },
+  {
+    "id": "animals-v860-new-012-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الطائر الذي لا يطير ويعيش طبيعيًا في القارة القطبية الجنوبية؟",
+    "correctAnswers": [
+      "البطريق"
+    ],
+    "wrongAnswers": [
+      "الشرغوف",
+      "خلد الماء",
+      "الجمل",
+      "الأسد",
+      "الزرافة"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:012"
+  },
+  {
+    "id": "animals-v85-alt-00016",
+    "type": "text",
+    "question": "حدّد المكان الصحيح: في أي قارة يعيش الكنغر بصورة طبيعية؟",
+    "correctAnswers": [
+      "أستراليا"
+    ],
+    "wrongAnswers": [
+      "طائر",
+      "خلد الماء",
+      "الدب القطبي",
+      "الطائر الطنان",
+      "3",
+      "الفهد"
+    ],
+    "category": "animals",
+    "factKey": "extra2:animals:006"
+  },
+  {
+    "id": "animals-v860-new-015-a",
+    "type": "text",
+    "question": "ما الحيوان المعروف بأطول رقبة؟",
+    "correctAnswers": [
+      "الزرافة"
+    ],
+    "wrongAnswers": [
+      "أستراليا",
+      "الخفاش",
+      "خلد الماء",
+      "الكنغر",
+      "الفيل الأفريقي"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:015"
+  },
+  {
+    "id": "animals-v860-new-015-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الحيوان المعروف بأطول رقبة؟",
+    "correctAnswers": [
+      "الزرافة"
+    ],
+    "wrongAnswers": [
+      "النعامة",
+      "الشرغوف",
+      "الكنغر",
+      "الأخطبوط",
+      "خلد الماء"
+    ],
+    "category": "animals",
+    "factKey": "v860:animals:newfact:015"
+  }
+]

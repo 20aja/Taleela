@@ -1,0 +1,1396 @@
+[
+  {
+    "id": "famous_people-v85-alt-00013",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من المخترع والمهندس المرتبط بالتيار المتردد؟",
+    "correctAnswers": [
+      "نيكولا تسلا"
+    ],
+    "wrongAnswers": [
+      "نيلسون مانديلا",
+      "المهاتما غاندي",
+      "بابلو بيكاسو",
+      "ويليام شكسبير",
+      "ابن سينا",
+      "الخوارزمي"
+    ],
+    "category": "famous_people",
+    "factKey": "extra2:famous_people:003"
+  },
+  {
+    "id": "famous_people-single-001",
+    "type": "text",
+    "question": "من صاغ قوانين الوراثة من خلال تجارب البازلاء؟",
+    "correctAnswers": [
+      "غريغور مندل",
+      "مندل"
+    ],
+    "wrongAnswers": [
+      "داروين",
+      "باستور",
+      "واتسون"
+    ],
+    "category": "famous_people",
+    "factKey": "famous_people:single:famous-m01"
+  },
+  {
+    "id": "famous_people-v860-new-020-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: القائد الهندي المرتبط بالمقاومة السلمية للاستعمار البريطاني؟",
+    "correctAnswers": [
+      "المهاتما غاندي"
+    ],
+    "wrongAnswers": [
+      "نيكولاس كوبرنيكوس",
+      "ويليام شكسبير",
+      "ألفرد نوبل",
+      "الخوارزمي",
+      "هنري بيكريل"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:020"
+  },
+  {
+    "id": "famous_people-v860-new-011-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: الطبيب والفيلسوف المسلم صاحب كتاب القانون في الطب؟",
+    "correctAnswers": [
+      "ابن سينا"
+    ],
+    "wrongAnswers": [
+      "تشارلز داروين",
+      "بابلو بيكاسو",
+      "المهاتما غاندي",
+      "أميليا إيرهارت",
+      "فنسنت فان غوخ"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:011"
+  },
+  {
+    "id": "famous_people-v85-alt-00001",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من صاغ قوانين الوراثة من خلال تجارب البازلاء؟",
+    "correctAnswers": [
+      "غريغور مندل",
+      "مندل"
+    ],
+    "wrongAnswers": [
+      "داروين",
+      "باستور",
+      "واتسون"
+    ],
+    "category": "famous_people",
+    "factKey": "famous_people:single:famous-m01"
+  },
+  {
+    "id": "famous_people-v85-alt-00006",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من وضع قوانين الحركة الثلاثة الكلاسيكية؟",
+    "correctAnswers": [
+      "إسحاق نيوتن",
+      "نيوتن"
+    ],
+    "wrongAnswers": [
+      "ألبرت أينشتاين",
+      "نيل أرمسترونغ",
+      "بيل غيتس",
+      "فنسنت فان غوخ",
+      "ماري كوري",
+      "تشارلز داروين"
+    ],
+    "category": "famous_people",
+    "factKey": "famous-001"
+  },
+  {
+    "id": "famous_people-v860-new-006-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: الشاعر والمسرحي الإنجليزي مؤلف هاملت؟",
+    "correctAnswers": [
+      "ويليام شكسبير"
+    ],
+    "wrongAnswers": [
+      "نيلسون مانديلا",
+      "سلفادور دالي",
+      "ابن سينا",
+      "غاليليو غاليلي",
+      "فرديناند ماجلان"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:006"
+  },
+  {
+    "id": "famous_people-v860-new-015-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: العالم الذي وضع أسس علم الوراثة بتجاربه على البازلاء؟",
+    "correctAnswers": [
+      "غريغور مندل"
+    ],
+    "wrongAnswers": [
+      "الخوارزمي",
+      "ويليام شكسبير",
+      "نيل أرمسترونغ",
+      "تشارلز داروين",
+      "ليوناردو دا فينشي"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:015"
+  },
+  {
+    "id": "extra2-famous_people-004",
+    "type": "text",
+    "question": "من الزعيم الجنوب أفريقي الذي أصبح رئيسًا بعد نهاية نظام الفصل العنصري؟",
+    "correctAnswers": [
+      "نيلسون مانديلا"
+    ],
+    "wrongAnswers": [
+      "المهاتما غاندي",
+      "بابلو بيكاسو",
+      "ويليام شكسبير",
+      "ابن سينا",
+      "الخوارزمي",
+      "أميليا إيرهارت"
+    ],
+    "category": "famous_people",
+    "factKey": "extra2:famous_people:004"
+  },
+  {
+    "id": "famous_people-v860-new-009-a",
+    "type": "text",
+    "question": "من أول إنسان دار حول الأرض في الفضاء؟",
+    "correctAnswers": [
+      "يوري غاغارين"
+    ],
+    "wrongAnswers": [
+      "الخوارزمي",
+      "ابن سينا",
+      "نيكولا تسلا",
+      "بابلو بيكاسو",
+      "آلان تورنغ"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:009"
+  },
+  {
+    "id": "extra2-famous_people-001",
+    "type": "text",
+    "question": "من العالمة التي اشتهرت بأبحاث النشاط الإشعاعي وفازت بجائزتي نوبل؟",
+    "correctAnswers": [
+      "ماري كوري"
+    ],
+    "wrongAnswers": [
+      "تشارلز داروين",
+      "نيكولا تسلا",
+      "نيلسون مانديلا",
+      "المهاتما غاندي",
+      "بابلو بيكاسو",
+      "ويليام شكسبير"
+    ],
+    "category": "famous_people",
+    "factKey": "extra2:famous_people:001"
+  },
+  {
+    "id": "extra2-famous_people-006",
+    "type": "text",
+    "question": "من الرسام الإسباني المرتبط بالتكعيبية؟",
+    "correctAnswers": [
+      "بابلو بيكاسو"
+    ],
+    "wrongAnswers": [
+      "ويليام شكسبير",
+      "ابن سينا",
+      "الخوارزمي",
+      "أميليا إيرهارت",
+      "غريغور مندل",
+      "هنري بيكريل"
+    ],
+    "category": "famous_people",
+    "factKey": "extra2:famous_people:006"
+  },
+  {
+    "id": "famous_people-v860-new-012-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: العالم المسلم الذي ارتبط اسمه بتأسيس علم الجبر؟",
+    "correctAnswers": [
+      "الخوارزمي"
+    ],
+    "wrongAnswers": [
+      "نيل أرمسترونغ",
+      "ابن سينا",
+      "نيلسون مانديلا",
+      "غريغور مندل",
+      "تشارلز داروين"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:012"
+  },
+  {
+    "id": "famous_people-single-004",
+    "type": "text",
+    "question": "من رسم لوحة «إصرار الذاكرة» ذات الساعات الذائبة؟",
+    "correctAnswers": [
+      "سلفادور دالي",
+      "دالي"
+    ],
+    "wrongAnswers": [
+      "بيكاسو",
+      "مونيه",
+      "ماغريت"
+    ],
+    "category": "famous_people",
+    "factKey": "famous_people:single:famous-m04"
+  },
+  {
+    "id": "famous_people-v860-new-002-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: العالمة التي فازت بنوبل في الفيزياء والكيمياء؟",
+    "correctAnswers": [
+      "ماري كوري"
+    ],
+    "wrongAnswers": [
+      "بابلو بيكاسو",
+      "بيل غيتس",
+      "الخوارزمي",
+      "إسحاق نيوتن",
+      "نيل أرمسترونغ"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:002"
+  },
+  {
+    "id": "famous_people-v860-new-004-a",
+    "type": "text",
+    "question": "من العالم المرتبط بنظرية التطور بالانتخاب الطبيعي؟",
+    "correctAnswers": [
+      "تشارلز داروين"
+    ],
+    "wrongAnswers": [
+      "نيلسون مانديلا",
+      "نيكولا تسلا",
+      "فرديناند ماجلان",
+      "غاليليو غاليلي",
+      "نيكولاس كوبرنيكوس"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:004"
+  },
+  {
+    "id": "famous_people-v860-new-015-a",
+    "type": "text",
+    "question": "من العالم الذي وضع أسس علم الوراثة بتجاربه على البازلاء؟",
+    "correctAnswers": [
+      "غريغور مندل"
+    ],
+    "wrongAnswers": [
+      "هنري بيكريل",
+      "ألبرت أينشتاين",
+      "نيكولاس كوبرنيكوس",
+      "نيكولا تسلا",
+      "تشارلز داروين"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:015"
+  },
+  {
+    "id": "extra2-famous_people-002",
+    "type": "text",
+    "question": "من العالم الذي اشتهر بنظرية التطور بالانتخاب الطبيعي؟",
+    "correctAnswers": [
+      "تشارلز داروين"
+    ],
+    "wrongAnswers": [
+      "نيكولا تسلا",
+      "نيلسون مانديلا",
+      "المهاتما غاندي",
+      "بابلو بيكاسو",
+      "ويليام شكسبير",
+      "ابن سينا"
+    ],
+    "category": "famous_people",
+    "factKey": "extra2:famous_people:002"
+  },
+  {
+    "id": "famous_people-v860-new-007-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: رائد الحوسبة الذي ارتبط بفكرة الآلة العامة واختبار الذكاء الآلي؟",
+    "correctAnswers": [
+      "آلان تورنغ"
+    ],
+    "wrongAnswers": [
+      "نيكولا تسلا",
+      "أميليا إيرهارت",
+      "نيكولو مكيافيلي",
+      "نيكولاس كوبرنيكوس",
+      "نيلسون مانديلا"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:007"
+  },
+  {
+    "id": "famous_people-v860-new-017-a",
+    "type": "text",
+    "question": "من المخترع الذي أسس جوائز نوبل في وصيته؟",
+    "correctAnswers": [
+      "ألفرد نوبل"
+    ],
+    "wrongAnswers": [
+      "فنسنت فان غوخ",
+      "ماري كوري",
+      "نيل أرمسترونغ",
+      "يوري غاغارين",
+      "المهاتما غاندي"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:017"
+  },
+  {
+    "id": "famous_people-v860-new-001-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: العالم الذي صاغ نظرية النسبية الخاصة والعامة؟",
+    "correctAnswers": [
+      "ألبرت أينشتاين"
+    ],
+    "wrongAnswers": [
+      "ماري كوري",
+      "فرديناند ماجلان",
+      "يوري غاغارين",
+      "أميليا إيرهارت",
+      "نيكولو مكيافيلي"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:001"
+  },
+  {
+    "id": "famous_people-v860-new-013-a",
+    "type": "text",
+    "question": "من المهندس والمخترع المرتبط بنظام التيار المتردد؟",
+    "correctAnswers": [
+      "نيكولا تسلا"
+    ],
+    "wrongAnswers": [
+      "أميليا إيرهارت",
+      "نيل أرمسترونغ",
+      "الخوارزمي",
+      "فنسنت فان غوخ",
+      "بابلو بيكاسو"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:013"
+  },
+  {
+    "id": "famous_people-v85-alt-00019",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من العالم المسلم الذي ارتبط اسمه بتأسيس علم الجبر؟",
+    "correctAnswers": [
+      "الخوارزمي"
+    ],
+    "wrongAnswers": [
+      "أميليا إيرهارت",
+      "غريغور مندل",
+      "هنري بيكريل",
+      "نيكولو مكيافيلي",
+      "سلفادور دالي",
+      "فرديناند ماجلان"
+    ],
+    "category": "famous_people",
+    "factKey": "extra2:famous_people:009"
+  },
+  {
+    "id": "famous_people-v85-alt-00012",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من العالم الذي اشتهر بنظرية التطور بالانتخاب الطبيعي؟",
+    "correctAnswers": [
+      "تشارلز داروين"
+    ],
+    "wrongAnswers": [
+      "نيكولا تسلا",
+      "نيلسون مانديلا",
+      "المهاتما غاندي",
+      "بابلو بيكاسو",
+      "ويليام شكسبير",
+      "ابن سينا"
+    ],
+    "category": "famous_people",
+    "factKey": "extra2:famous_people:002"
+  },
+  {
+    "id": "famous-002",
+    "type": "text",
+    "question": "من اشتهر بنظرية النسبية؟",
+    "correctAnswers": [
+      "ألبرت أينشتاين",
+      "أينشتاين"
+    ],
+    "wrongAnswers": [
+      "نيل أرمسترونغ",
+      "بيل غيتس",
+      "فنسنت فان غوخ",
+      "ماري كوري",
+      "تشارلز داروين",
+      "نيكولا تسلا"
+    ],
+    "category": "famous_people",
+    "factKey": "famous-002"
+  },
+  {
+    "id": "famous_people-v85-alt-00002",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من اكتشف النشاط الإشعاعي الطبيعي سنة 1896؟",
+    "correctAnswers": [
+      "هنري بيكريل",
+      "بيكريل"
+    ],
+    "wrongAnswers": [
+      "ماري كوري",
+      "رذرفورد",
+      "طومسون"
+    ],
+    "category": "famous_people",
+    "factKey": "famous_people:single:famous-m02"
+  },
+  {
+    "id": "famous_people-single-002",
+    "type": "text",
+    "question": "من اكتشف النشاط الإشعاعي الطبيعي سنة 1896؟",
+    "correctAnswers": [
+      "هنري بيكريل",
+      "بيكريل"
+    ],
+    "wrongAnswers": [
+      "ماري كوري",
+      "رذرفورد",
+      "طومسون"
+    ],
+    "category": "famous_people",
+    "factKey": "famous_people:single:famous-m02"
+  },
+  {
+    "id": "extra2-famous_people-008",
+    "type": "text",
+    "question": "من الطبيب والفيلسوف المسلم صاحب كتاب القانون في الطب؟",
+    "correctAnswers": [
+      "ابن سينا"
+    ],
+    "wrongAnswers": [
+      "الخوارزمي",
+      "أميليا إيرهارت",
+      "غريغور مندل",
+      "هنري بيكريل",
+      "نيكولو مكيافيلي",
+      "سلفادور دالي"
+    ],
+    "category": "famous_people",
+    "factKey": "extra2:famous_people:008"
+  },
+  {
+    "id": "famous_people-v85-alt-00009",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من مؤسس شركة Microsoft مع بول ألين؟",
+    "correctAnswers": [
+      "بيل غيتس",
+      "بيل جيتس",
+      "Bill Gates"
+    ],
+    "wrongAnswers": [
+      "فنسنت فان غوخ",
+      "ماري كوري",
+      "تشارلز داروين",
+      "نيكولا تسلا",
+      "نيلسون مانديلا",
+      "المهاتما غاندي"
+    ],
+    "category": "famous_people",
+    "factKey": "famous-004"
+  },
+  {
+    "id": "famous_people-v860-new-010-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: الزعيم الجنوب أفريقي الذي أصبح رئيسًا بعد سنوات من السجن؟",
+    "correctAnswers": [
+      "نيلسون مانديلا"
+    ],
+    "wrongAnswers": [
+      "بابلو بيكاسو",
+      "ليوناردو دا فينشي",
+      "آلان تورنغ",
+      "فرديناند ماجلان",
+      "نيكولاس كوبرنيكوس"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:010"
+  },
+  {
+    "id": "famous_people-v85-alt-00018",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من الطبيب والفيلسوف المسلم صاحب كتاب القانون في الطب؟",
+    "correctAnswers": [
+      "ابن سينا"
+    ],
+    "wrongAnswers": [
+      "الخوارزمي",
+      "أميليا إيرهارت",
+      "غريغور مندل",
+      "هنري بيكريل",
+      "نيكولو مكيافيلي",
+      "سلفادور دالي"
+    ],
+    "category": "famous_people",
+    "factKey": "extra2:famous_people:008"
+  },
+  {
+    "id": "famous_people-v860-new-006-a",
+    "type": "text",
+    "question": "من الشاعر والمسرحي الإنجليزي مؤلف هاملت؟",
+    "correctAnswers": [
+      "ويليام شكسبير"
+    ],
+    "wrongAnswers": [
+      "الخوارزمي",
+      "المهاتما غاندي",
+      "إسحاق نيوتن",
+      "غريغور مندل",
+      "بابلو بيكاسو"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:006"
+  },
+  {
+    "id": "famous_people-v85-alt-00008",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من أول إنسان مشى على سطح القمر؟",
+    "correctAnswers": [
+      "نيل أرمسترونغ"
+    ],
+    "wrongAnswers": [
+      "بيل غيتس",
+      "فنسنت فان غوخ",
+      "ماري كوري",
+      "تشارلز داروين",
+      "نيكولا تسلا",
+      "نيلسون مانديلا"
+    ],
+    "category": "famous_people",
+    "factKey": "famous-003"
+  },
+  {
+    "id": "extra2-famous_people-003",
+    "type": "text",
+    "question": "من المخترع والمهندس المرتبط بالتيار المتردد؟",
+    "correctAnswers": [
+      "نيكولا تسلا"
+    ],
+    "wrongAnswers": [
+      "نيلسون مانديلا",
+      "المهاتما غاندي",
+      "بابلو بيكاسو",
+      "ويليام شكسبير",
+      "ابن سينا",
+      "الخوارزمي"
+    ],
+    "category": "famous_people",
+    "factKey": "extra2:famous_people:003"
+  },
+  {
+    "id": "famous_people-v860-new-016-a",
+    "type": "text",
+    "question": "من الفنان الإسباني المرتبط بالتكعيبية ولوحة غيرنيكا؟",
+    "correctAnswers": [
+      "بابلو بيكاسو"
+    ],
+    "wrongAnswers": [
+      "ابن سينا",
+      "إسحاق نيوتن",
+      "الخوارزمي",
+      "ماري كوري",
+      "تشارلز داروين"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:016"
+  },
+  {
+    "id": "famous-003",
+    "type": "text",
+    "question": "من أول إنسان مشى على سطح القمر؟",
+    "correctAnswers": [
+      "نيل أرمسترونغ"
+    ],
+    "wrongAnswers": [
+      "بيل غيتس",
+      "فنسنت فان غوخ",
+      "ماري كوري",
+      "تشارلز داروين",
+      "نيكولا تسلا",
+      "نيلسون مانديلا"
+    ],
+    "category": "famous_people",
+    "factKey": "famous-003"
+  },
+  {
+    "id": "famous-004",
+    "type": "text",
+    "question": "من مؤسس شركة Microsoft مع بول ألين؟",
+    "correctAnswers": [
+      "بيل غيتس",
+      "بيل جيتس",
+      "Bill Gates"
+    ],
+    "wrongAnswers": [
+      "فنسنت فان غوخ",
+      "ماري كوري",
+      "تشارلز داروين",
+      "نيكولا تسلا",
+      "نيلسون مانديلا",
+      "المهاتما غاندي"
+    ],
+    "category": "famous_people",
+    "factKey": "famous-004"
+  },
+  {
+    "id": "famous_people-v860-new-019-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: العالم الذي استخدم التلسكوب لرصد أقمار المشتري الأربعة الكبيرة؟",
+    "correctAnswers": [
+      "غاليليو غاليلي"
+    ],
+    "wrongAnswers": [
+      "نيكولاس كوبرنيكوس",
+      "غريغور مندل",
+      "ابن سينا",
+      "نيل أرمسترونغ",
+      "ماري كوري"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:019"
+  },
+  {
+    "id": "famous_people-v860-new-003-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: وضع قوانين الحركة والجاذبية الكلاسيكية؟",
+    "correctAnswers": [
+      "إسحاق نيوتن"
+    ],
+    "wrongAnswers": [
+      "فنسنت فان غوخ",
+      "هنري بيكريل",
+      "نيكولا تسلا",
+      "ابن سينا",
+      "تشارلز داروين"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:003"
+  },
+  {
+    "id": "famous_people-v860-new-014-a",
+    "type": "text",
+    "question": "من الطيارة الأمريكية التي اختفت أثناء محاولة الطيران حول العالم؟",
+    "correctAnswers": [
+      "أميليا إيرهارت"
+    ],
+    "wrongAnswers": [
+      "تشارلز داروين",
+      "نيل أرمسترونغ",
+      "ابن سينا",
+      "الخوارزمي",
+      "غريغور مندل"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:014"
+  },
+  {
+    "id": "famous_people-v860-new-018-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: صاحب نظرية مركزية الشمس في أوروبا الحديثة؟",
+    "correctAnswers": [
+      "نيكولاس كوبرنيكوس"
+    ],
+    "wrongAnswers": [
+      "نيكولا تسلا",
+      "ويليام شكسبير",
+      "إسحاق نيوتن",
+      "أميليا إيرهارت",
+      "ابن سينا"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:018"
+  },
+  {
+    "id": "famous_people-v85-alt-00020",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من رائدة الطيران الأمريكية الشهيرة التي حاولت الدوران حول العالم؟",
+    "correctAnswers": [
+      "أميليا إيرهارت"
+    ],
+    "wrongAnswers": [
+      "غريغور مندل",
+      "هنري بيكريل",
+      "نيكولو مكيافيلي",
+      "سلفادور دالي",
+      "فرديناند ماجلان",
+      "إسحاق نيوتن"
+    ],
+    "category": "famous_people",
+    "factKey": "extra2:famous_people:010"
+  },
+  {
+    "id": "famous_people-v85-alt-00014",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من الزعيم الجنوب أفريقي الذي أصبح رئيسًا بعد نهاية نظام الفصل العنصري؟",
+    "correctAnswers": [
+      "نيلسون مانديلا"
+    ],
+    "wrongAnswers": [
+      "المهاتما غاندي",
+      "بابلو بيكاسو",
+      "ويليام شكسبير",
+      "ابن سينا",
+      "الخوارزمي",
+      "أميليا إيرهارت"
+    ],
+    "category": "famous_people",
+    "factKey": "extra2:famous_people:004"
+  },
+  {
+    "id": "famous_people-v860-new-011-a",
+    "type": "text",
+    "question": "من الطبيب والفيلسوف المسلم صاحب كتاب القانون في الطب — سؤال إضافي 21؟",
+    "correctAnswers": [
+      "ابن سينا"
+    ],
+    "wrongAnswers": [
+      "إسحاق نيوتن",
+      "نيكولاس كوبرنيكوس",
+      "الخوارزمي",
+      "ألبرت أينشتاين",
+      "بابلو بيكاسو"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:011"
+  },
+  {
+    "id": "extra2-famous_people-007",
+    "type": "text",
+    "question": "من الكاتب الإنجليزي صاحب هاملت وروميو وجولييت؟",
+    "correctAnswers": [
+      "ويليام شكسبير"
+    ],
+    "wrongAnswers": [
+      "ابن سينا",
+      "الخوارزمي",
+      "أميليا إيرهارت",
+      "غريغور مندل",
+      "هنري بيكريل",
+      "نيكولو مكيافيلي"
+    ],
+    "category": "famous_people",
+    "factKey": "extra2:famous_people:007"
+  },
+  {
+    "id": "famous_people-v860-new-013-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: المهندس والمخترع المرتبط بنظام التيار المتردد؟",
+    "correctAnswers": [
+      "نيكولا تسلا"
+    ],
+    "wrongAnswers": [
+      "نيلسون مانديلا",
+      "أميليا إيرهارت",
+      "إسحاق نيوتن",
+      "ويليام شكسبير",
+      "ألبرت أينشتاين"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:013"
+  },
+  {
+    "id": "famous_people-v860-new-005-a",
+    "type": "text",
+    "question": "من الرسام الذي رسم الموناليزا؟",
+    "correctAnswers": [
+      "ليوناردو دا فينشي"
+    ],
+    "wrongAnswers": [
+      "نيكولو مكيافيلي",
+      "المهاتما غاندي",
+      "نيلسون مانديلا",
+      "ألبرت أينشتاين",
+      "تشارلز داروين"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:005"
+  },
+  {
+    "id": "famous_people-v860-new-016-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: الفنان الإسباني المرتبط بالتكعيبية ولوحة غيرنيكا؟",
+    "correctAnswers": [
+      "بابلو بيكاسو"
+    ],
+    "wrongAnswers": [
+      "نيكولو مكيافيلي",
+      "نيكولاس كوبرنيكوس",
+      "أميليا إيرهارت",
+      "ويليام شكسبير",
+      "غاليليو غاليلي"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:016"
+  },
+  {
+    "id": "famous_people-v860-new-003-a",
+    "type": "text",
+    "question": "من وضع قوانين الحركة والجاذبية الكلاسيكية؟",
+    "correctAnswers": [
+      "إسحاق نيوتن"
+    ],
+    "wrongAnswers": [
+      "أميليا إيرهارت",
+      "نيكولا تسلا",
+      "بابلو بيكاسو",
+      "غريغور مندل",
+      "تشارلز داروين"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:003"
+  },
+  {
+    "id": "famous_people-v860-new-007-a",
+    "type": "text",
+    "question": "من رائد الحوسبة الذي ارتبط بفكرة الآلة العامة واختبار الذكاء الآلي؟",
+    "correctAnswers": [
+      "آلان تورنغ"
+    ],
+    "wrongAnswers": [
+      "إسحاق نيوتن",
+      "ماري كوري",
+      "غريغور مندل",
+      "بابلو بيكاسو",
+      "نيل أرمسترونغ"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:007"
+  },
+  {
+    "id": "famous_people-v860-new-004-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: العالم المرتبط بنظرية التطور بالانتخاب الطبيعي؟",
+    "correctAnswers": [
+      "تشارلز داروين"
+    ],
+    "wrongAnswers": [
+      "نيكولا تسلا",
+      "نيلسون مانديلا",
+      "غريغور مندل",
+      "ابن سينا",
+      "غاليليو غاليلي"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:004"
+  },
+  {
+    "id": "famous_people-v85-alt-00005",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من قاد أول رحلة بحرية وصلت بعثتها إلى إكمال الدوران حول الأرض رغم وفاته أثناء الرحلة؟",
+    "correctAnswers": [
+      "فرديناند ماجلان",
+      "ماجلان"
+    ],
+    "wrongAnswers": [
+      "كولومبوس",
+      "فاسكو دا غاما",
+      "جيمس كوك"
+    ],
+    "category": "famous_people",
+    "factKey": "famous_people:single:famous-m05"
+  },
+  {
+    "id": "famous_people-v860-new-014-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: الطيارة الأمريكية التي اختفت أثناء محاولة الطيران حول العالم؟",
+    "correctAnswers": [
+      "أميليا إيرهارت"
+    ],
+    "wrongAnswers": [
+      "فرديناند ماجلان",
+      "نيكولو مكيافيلي",
+      "الخوارزمي",
+      "آلان تورنغ",
+      "نيلسون مانديلا"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:014"
+  },
+  {
+    "id": "famous_people-v860-new-002-a",
+    "type": "text",
+    "question": "من العالمة التي فازت بنوبل في الفيزياء والكيمياء؟",
+    "correctAnswers": [
+      "ماري كوري"
+    ],
+    "wrongAnswers": [
+      "أميليا إيرهارت",
+      "إسحاق نيوتن",
+      "نيكولاس كوبرنيكوس",
+      "ألبرت أينشتاين",
+      "تشارلز داروين"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:002"
+  },
+  {
+    "id": "famous_people-v85-alt-00017",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من الكاتب الإنجليزي صاحب هاملت وروميو وجولييت؟",
+    "correctAnswers": [
+      "ويليام شكسبير"
+    ],
+    "wrongAnswers": [
+      "ابن سينا",
+      "الخوارزمي",
+      "أميليا إيرهارت",
+      "غريغور مندل",
+      "هنري بيكريل",
+      "نيكولو مكيافيلي"
+    ],
+    "category": "famous_people",
+    "factKey": "extra2:famous_people:007"
+  },
+  {
+    "id": "famous_people-v860-new-018-a",
+    "type": "text",
+    "question": "من صاحب نظرية مركزية الشمس في أوروبا الحديثة؟",
+    "correctAnswers": [
+      "نيكولاس كوبرنيكوس"
+    ],
+    "wrongAnswers": [
+      "نيل أرمسترونغ",
+      "أميليا إيرهارت",
+      "نيكولو مكيافيلي",
+      "فنسنت فان غوخ",
+      "المهاتما غاندي"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:018"
+  },
+  {
+    "id": "famous_people-v85-alt-00004",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من رسم لوحة «إصرار الذاكرة» ذات الساعات الذائبة؟",
+    "correctAnswers": [
+      "سلفادور دالي",
+      "دالي"
+    ],
+    "wrongAnswers": [
+      "بيكاسو",
+      "مونيه",
+      "ماغريت"
+    ],
+    "category": "famous_people",
+    "factKey": "famous_people:single:famous-m04"
+  },
+  {
+    "id": "extra2-famous_people-010",
+    "type": "text",
+    "question": "من رائدة الطيران الأمريكية الشهيرة التي حاولت الدوران حول العالم؟",
+    "correctAnswers": [
+      "أميليا إيرهارت"
+    ],
+    "wrongAnswers": [
+      "غريغور مندل",
+      "هنري بيكريل",
+      "نيكولو مكيافيلي",
+      "سلفادور دالي",
+      "فرديناند ماجلان",
+      "إسحاق نيوتن"
+    ],
+    "category": "famous_people",
+    "factKey": "extra2:famous_people:010"
+  },
+  {
+    "id": "extra2-famous_people-005",
+    "type": "text",
+    "question": "من الزعيم الهندي الذي ارتبط بالمقاومة السلمية للاستعمار البريطاني؟",
+    "correctAnswers": [
+      "المهاتما غاندي"
+    ],
+    "wrongAnswers": [
+      "بابلو بيكاسو",
+      "ويليام شكسبير",
+      "ابن سينا",
+      "الخوارزمي",
+      "أميليا إيرهارت",
+      "غريغور مندل"
+    ],
+    "category": "famous_people",
+    "factKey": "extra2:famous_people:005"
+  },
+  {
+    "id": "famous-005",
+    "type": "text",
+    "question": "من الرسام الهولندي صاحب لوحة ليلة النجوم؟",
+    "correctAnswers": [
+      "فنسنت فان غوخ",
+      "فان غوخ",
+      "فان جوخ",
+      "Vincent van Gogh"
+    ],
+    "wrongAnswers": [
+      "ماري كوري",
+      "تشارلز داروين",
+      "نيكولا تسلا",
+      "نيلسون مانديلا",
+      "المهاتما غاندي",
+      "بابلو بيكاسو"
+    ],
+    "category": "famous_people",
+    "factKey": "famous-005"
+  },
+  {
+    "id": "famous_people-v860-new-001-a",
+    "type": "text",
+    "question": "من العالم الذي صاغ نظرية النسبية الخاصة والعامة؟",
+    "correctAnswers": [
+      "ألبرت أينشتاين"
+    ],
+    "wrongAnswers": [
+      "أميليا إيرهارت",
+      "آلان تورنغ",
+      "ويليام شكسبير",
+      "تشارلز داروين",
+      "إسحاق نيوتن"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:001"
+  },
+  {
+    "id": "famous_people-v85-alt-00015",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من الزعيم الهندي الذي ارتبط بالمقاومة السلمية للاستعمار البريطاني؟",
+    "correctAnswers": [
+      "المهاتما غاندي"
+    ],
+    "wrongAnswers": [
+      "بابلو بيكاسو",
+      "ويليام شكسبير",
+      "ابن سينا",
+      "الخوارزمي",
+      "أميليا إيرهارت",
+      "غريغور مندل"
+    ],
+    "category": "famous_people",
+    "factKey": "extra2:famous_people:005"
+  },
+  {
+    "id": "extra2-famous_people-009",
+    "type": "text",
+    "question": "من العالم المسلم الذي ارتبط اسمه بتأسيس علم الجبر؟",
+    "correctAnswers": [
+      "الخوارزمي"
+    ],
+    "wrongAnswers": [
+      "أميليا إيرهارت",
+      "غريغور مندل",
+      "هنري بيكريل",
+      "نيكولو مكيافيلي",
+      "سلفادور دالي",
+      "فرديناند ماجلان"
+    ],
+    "category": "famous_people",
+    "factKey": "extra2:famous_people:009"
+  },
+  {
+    "id": "famous_people-v860-new-008-a",
+    "type": "text",
+    "question": "من أول إنسان مشى على القمر؟",
+    "correctAnswers": [
+      "نيل أرمسترونغ"
+    ],
+    "wrongAnswers": [
+      "ألفرد نوبل",
+      "أميليا إيرهارت",
+      "هنري بيكريل",
+      "الخوارزمي",
+      "نيكولو مكيافيلي"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:008"
+  },
+  {
+    "id": "famous_people-v85-alt-00016",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من الرسام الإسباني المرتبط بالتكعيبية؟",
+    "correctAnswers": [
+      "بابلو بيكاسو"
+    ],
+    "wrongAnswers": [
+      "ويليام شكسبير",
+      "ابن سينا",
+      "الخوارزمي",
+      "أميليا إيرهارت",
+      "غريغور مندل",
+      "هنري بيكريل"
+    ],
+    "category": "famous_people",
+    "factKey": "extra2:famous_people:006"
+  },
+  {
+    "id": "famous_people-v85-alt-00007",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من اشتهر بنظرية النسبية؟",
+    "correctAnswers": [
+      "ألبرت أينشتاين",
+      "أينشتاين"
+    ],
+    "wrongAnswers": [
+      "نيل أرمسترونغ",
+      "بيل غيتس",
+      "فنسنت فان غوخ",
+      "ماري كوري",
+      "تشارلز داروين",
+      "نيكولا تسلا"
+    ],
+    "category": "famous_people",
+    "factKey": "famous-002"
+  },
+  {
+    "id": "famous-001",
+    "type": "text",
+    "question": "من وضع قوانين الحركة الثلاثة الكلاسيكية؟",
+    "correctAnswers": [
+      "إسحاق نيوتن",
+      "نيوتن"
+    ],
+    "wrongAnswers": [
+      "ألبرت أينشتاين",
+      "نيل أرمسترونغ",
+      "بيل غيتس",
+      "فنسنت فان غوخ",
+      "ماري كوري",
+      "تشارلز داروين"
+    ],
+    "category": "famous_people",
+    "factKey": "famous-001"
+  },
+  {
+    "id": "famous_people-v860-new-008-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: أول إنسان مشى على القمر؟",
+    "correctAnswers": [
+      "نيل أرمسترونغ"
+    ],
+    "wrongAnswers": [
+      "ابن سينا",
+      "ماري كوري",
+      "آلان تورنغ",
+      "ألبرت أينشتاين",
+      "نيكولو مكيافيلي"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:008"
+  },
+  {
+    "id": "famous_people-v85-alt-00010",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من الرسام الهولندي صاحب لوحة ليلة النجوم؟",
+    "correctAnswers": [
+      "فنسنت فان غوخ",
+      "فان غوخ",
+      "فان جوخ",
+      "Vincent van Gogh"
+    ],
+    "wrongAnswers": [
+      "ماري كوري",
+      "تشارلز داروين",
+      "نيكولا تسلا",
+      "نيلسون مانديلا",
+      "المهاتما غاندي",
+      "بابلو بيكاسو"
+    ],
+    "category": "famous_people",
+    "factKey": "famous-005"
+  },
+  {
+    "id": "famous_people-v860-new-017-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: المخترع الذي أسس جوائز نوبل في وصيته؟",
+    "correctAnswers": [
+      "ألفرد نوبل"
+    ],
+    "wrongAnswers": [
+      "غريغور مندل",
+      "ماري كوري",
+      "الخوارزمي",
+      "نيكولاس كوبرنيكوس",
+      "المهاتما غاندي"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:017"
+  },
+  {
+    "id": "famous_people-v85-alt-00011",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من العالمة التي اشتهرت بأبحاث النشاط الإشعاعي وفازت بجائزتي نوبل؟",
+    "correctAnswers": [
+      "ماري كوري"
+    ],
+    "wrongAnswers": [
+      "تشارلز داروين",
+      "نيكولا تسلا",
+      "نيلسون مانديلا",
+      "المهاتما غاندي",
+      "بابلو بيكاسو",
+      "ويليام شكسبير"
+    ],
+    "category": "famous_people",
+    "factKey": "extra2:famous_people:001"
+  },
+  {
+    "id": "famous_people-v860-new-012-a",
+    "type": "text",
+    "question": "من العالم المسلم الذي ارتبط اسمه بتأسيس علم الجبر — سؤال إضافي 23؟",
+    "correctAnswers": [
+      "الخوارزمي"
+    ],
+    "wrongAnswers": [
+      "ويليام شكسبير",
+      "نيل أرمسترونغ",
+      "نيكولاس كوبرنيكوس",
+      "سلفادور دالي",
+      "بيل غيتس"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:012"
+  },
+  {
+    "id": "famous_people-v85-alt-00003",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من ألّف كتاب «الأمير»؟",
+    "correctAnswers": [
+      "نيكولو مكيافيلي",
+      "مكيافيلي"
+    ],
+    "wrongAnswers": [
+      "توماس هوبز",
+      "جون لوك",
+      "جان جاك روسو"
+    ],
+    "category": "famous_people",
+    "factKey": "famous_people:single:famous-m03"
+  },
+  {
+    "id": "famous_people-v860-new-019-a",
+    "type": "text",
+    "question": "من العالم الذي استخدم التلسكوب لرصد أقمار المشتري الأربعة الكبيرة؟",
+    "correctAnswers": [
+      "غاليليو غاليلي"
+    ],
+    "wrongAnswers": [
+      "فرديناند ماجلان",
+      "بيل غيتس",
+      "المهاتما غاندي",
+      "ويليام شكسبير",
+      "هنري بيكريل"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:019"
+  },
+  {
+    "id": "famous_people-single-005",
+    "type": "text",
+    "question": "من قاد أول رحلة بحرية وصلت بعثتها إلى إكمال الدوران حول الأرض رغم وفاته أثناء الرحلة؟",
+    "correctAnswers": [
+      "فرديناند ماجلان",
+      "ماجلان"
+    ],
+    "wrongAnswers": [
+      "كولومبوس",
+      "فاسكو دا غاما",
+      "جيمس كوك"
+    ],
+    "category": "famous_people",
+    "factKey": "famous_people:single:famous-m05"
+  },
+  {
+    "id": "famous_people-single-003",
+    "type": "text",
+    "question": "من ألّف كتاب «الأمير»؟",
+    "correctAnswers": [
+      "نيكولو مكيافيلي",
+      "مكيافيلي"
+    ],
+    "wrongAnswers": [
+      "توماس هوبز",
+      "جون لوك",
+      "جان جاك روسو"
+    ],
+    "category": "famous_people",
+    "factKey": "famous_people:single:famous-m03"
+  },
+  {
+    "id": "famous_people-v860-new-005-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: الرسام الذي رسم الموناليزا؟",
+    "correctAnswers": [
+      "ليوناردو دا فينشي"
+    ],
+    "wrongAnswers": [
+      "ألبرت أينشتاين",
+      "بابلو بيكاسو",
+      "المهاتما غاندي",
+      "ابن سينا",
+      "نيكولا تسلا"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:005"
+  },
+  {
+    "id": "famous_people-v860-new-009-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: أول إنسان دار حول الأرض في الفضاء؟",
+    "correctAnswers": [
+      "يوري غاغارين"
+    ],
+    "wrongAnswers": [
+      "سلفادور دالي",
+      "ليوناردو دا فينشي",
+      "الخوارزمي",
+      "نيكولا تسلا",
+      "المهاتما غاندي"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:009"
+  },
+  {
+    "id": "famous_people-v860-new-010-a",
+    "type": "text",
+    "question": "من الزعيم الجنوب أفريقي الذي أصبح رئيسًا بعد سنوات من السجن؟",
+    "correctAnswers": [
+      "نيلسون مانديلا"
+    ],
+    "wrongAnswers": [
+      "إسحاق نيوتن",
+      "نيكولاس كوبرنيكوس",
+      "ألبرت أينشتاين",
+      "نيل أرمسترونغ",
+      "أميليا إيرهارت"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:010"
+  },
+  {
+    "id": "famous_people-v860-new-020-a",
+    "type": "text",
+    "question": "من القائد الهندي المرتبط بالمقاومة السلمية للاستعمار البريطاني؟",
+    "correctAnswers": [
+      "المهاتما غاندي"
+    ],
+    "wrongAnswers": [
+      "ويليام شكسبير",
+      "ألفرد نوبل",
+      "نيلسون مانديلا",
+      "أميليا إيرهارت",
+      "غريغور مندل"
+    ],
+    "category": "famous_people",
+    "factKey": "v860:famous_people:newfact:020"
+  }
+]

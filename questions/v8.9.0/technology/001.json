@@ -1,0 +1,2691 @@
+[
+  {
+    "question": "ماذا يعني الخطأ HTTP 404 عادة؟",
+    "correctAnswers": [
+      "الصفحة غير موجودة"
+    ],
+    "wrongAnswers": [
+      "Firefox",
+      "HTTPS",
+      "رفع",
+      "32",
+      "Web Crawler"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما النظام الذي يحول أسماء النطاقات إلى عناوين IP؟",
+    "correctAnswers": [
+      "DNS",
+      "Domain Name System"
+    ],
+    "wrongAnswers": [
+      "URL",
+      "الراوتر",
+      "عنوان IP",
+      "متصفح الويب",
+      "@",
+      "Wi-Fi"
+    ]
+  },
+  {
+    "question": "ما الاسم الذي يُطلق على الخدمة التي تبحث في صفحات الويب مثل Google؟",
+    "correctAnswers": [
+      "محرك بحث"
+    ],
+    "wrongAnswers": [
+      "رفع",
+      "تنزيل",
+      "32",
+      "53",
+      "404",
+      "SMTP"
+    ]
+  },
+  {
+    "question": "ما النظام الذي يحول أسماء النطاقات إلى عناوين IP؟",
+    "correctAnswers": [
+      "DNS",
+      "Domain Name System"
+    ],
+    "wrongAnswers": [
+      "URL",
+      "الراوتر",
+      "عنوان IP",
+      "متصفح الويب",
+      "@",
+      "Wi-Fi"
+    ]
+  },
+  {
+    "question": "من ابتكر لغة C؟",
+    "correctAnswers": [
+      "دينيس ريتشي"
+    ],
+    "wrongAnswers": [
+      "Stack",
+      "Git",
+      "البرمجة كائنية التوجه",
+      "حلقة تكرار",
+      "JSON"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: المصطلح لإرسال ملف من جهازك إلى خادم على الإنترنت؟",
+    "correctAnswers": [
+      "رفع"
+    ],
+    "wrongAnswers": [
+      "عنوان IP",
+      "32",
+      "Wi-Fi",
+      "World Wide Web",
+      "HTTPS"
+    ]
+  },
+  {
+    "question": "ما الاختصار الشائع للواقع الافتراضي؟",
+    "correctAnswers": [
+      "VR"
+    ],
+    "wrongAnswers": [
+      "الحوسبة السحابية",
+      "ذاكرة فلاش",
+      "RAM",
+      "HDMI",
+      "OLED"
+    ]
+  },
+  {
+    "question": "ما اللغة المشهورة التي تعتمد المسافات البادئة جزءًا من بناء الكود؟",
+    "correctAnswers": [
+      "Python"
+    ],
+    "wrongAnswers": [
+      "حلقة تكرار",
+      "True و False",
+      "دالة",
+      "متغير",
+      "JSON",
+      "واجهة برمجة التطبيقات"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما العنوان الرقمي الذي يميز جهازًا على شبكة تستخدم بروتوكول الإنترنت؟",
+    "correctAnswers": [
+      "عنوان IP"
+    ],
+    "wrongAnswers": [
+      "متصفح الويب",
+      "@",
+      "Wi-Fi",
+      "محرك بحث",
+      ".com",
+      "رفع"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: الرمز المستخدم في عناوين البريد بين اسم المستخدم والنطاق؟",
+    "correctAnswers": [
+      "@"
+    ],
+    "wrongAnswers": [
+      "Chrome",
+      "World Wide Web",
+      "DNS",
+      "Web Crawler",
+      "تنزيل"
+    ]
+  },
+  {
+    "question": "ما الجهاز الذي يوجّه البيانات بين الشبكة المنزلية والإنترنت غالبًا؟",
+    "correctAnswers": [
+      "الراوتر",
+      "الموجه",
+      "Router"
+    ],
+    "wrongAnswers": [
+      "عنوان IP",
+      "متصفح الويب",
+      "@",
+      "Wi-Fi",
+      "محرك بحث",
+      ".com"
+    ]
+  },
+  {
+    "question": "ما الجهاز الذي يحول الورق إلى ملف رقمي بصريًا؟",
+    "correctAnswers": [
+      "الماسح الضوئي"
+    ],
+    "wrongAnswers": [
+      "NFC",
+      "RAM",
+      "Bluetooth",
+      "وحدة المعالجة المركزية",
+      "OLED"
+    ]
+  },
+  {
+    "question": "ما المصطلح لجلب ملف من الإنترنت إلى جهازك؟",
+    "correctAnswers": [
+      "تنزيل"
+    ],
+    "wrongAnswers": [
+      ".com",
+      "URL",
+      "Web Crawler",
+      "CDN",
+      "53"
+    ]
+  },
+  {
+    "question": "ما الذاكرة المؤقتة التي تفقد محتواها غالبًا عند إيقاف تشغيل الحاسوب؟",
+    "correctAnswers": [
+      "RAM"
+    ],
+    "wrongAnswers": [
+      "بلوتوث",
+      "HDMI",
+      "SSD",
+      "الحوسبة السحابية",
+      "USB",
+      "تيم بيرنرز لي"
+    ]
+  },
+  {
+    "question": "ما الاسم الذي يُطلق على البنية التي تكرر مجموعة أوامر عدة مرات؟",
+    "correctAnswers": [
+      "حلقة تكرار"
+    ],
+    "wrongAnswers": [
+      "True و False",
+      "دالة",
+      "متغير",
+      "JSON",
+      "واجهة برمجة التطبيقات",
+      "SQL"
+    ]
+  },
+  {
+    "question": "حدد الاسم الصحيح: ابتكر لغة Python؟",
+    "correctAnswers": [
+      "غيدو فان روسوم"
+    ],
+    "wrongAnswers": [
+      "SQL",
+      "body",
+      "البحث الثنائي",
+      "بريندان آيك",
+      "Stack"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: الجهاز الذي يوجه الحزم بين شبكات مختلفة؟",
+    "correctAnswers": [
+      "الراوتر"
+    ],
+    "wrongAnswers": [
+      "128 بتًا",
+      "@",
+      "الصفحة غير موجودة",
+      "تنزيل",
+      "Web Crawler"
+    ]
+  },
+  {
+    "question": "من ابتكر لغة Python؟",
+    "correctAnswers": [
+      "غيدو فان روسوم"
+    ],
+    "wrongAnswers": [
+      "GitHub",
+      "Stack",
+      "لغة ترميز",
+      ".py",
+      "True و False"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما الجهاز الذي يوجّه البيانات بين الشبكة المنزلية والإنترنت غالبًا؟",
+    "correctAnswers": [
+      "الراوتر",
+      "الموجه",
+      "Router"
+    ],
+    "wrongAnswers": [
+      "عنوان IP",
+      "متصفح الويب",
+      "@",
+      "Wi-Fi",
+      "محرك بحث",
+      ".com"
+    ]
+  },
+  {
+    "question": "ما العنصر البرمجي الذي يخزن قيمة قابلة للاستخدام لاحقًا؟",
+    "correctAnswers": [
+      "متغير"
+    ],
+    "wrongAnswers": [
+      "JSON",
+      "واجهة برمجة التطبيقات",
+      "SQL",
+      "غيدو فان روسوم",
+      "O(1)",
+      "Closure"
+    ]
+  },
+  {
+    "question": "ما المصطلح الذي يعني إرسال ملف من جهازك إلى الإنترنت؟",
+    "correctAnswers": [
+      "رفع"
+    ],
+    "wrongAnswers": [
+      "32",
+      "53",
+      "404",
+      "SMTP",
+      "CDN",
+      "World Wide Web"
+    ]
+  },
+  {
+    "question": "ما رمز حالة HTTP الذي يعني «غير موجود»؟",
+    "correctAnswers": [
+      "404",
+      "HTTP 404"
+    ],
+    "wrongAnswers": [
+      "200",
+      "301",
+      "500"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: التقنية التي تسمح بتشغيل نظام افتراضي داخل جهاز فعلي؟",
+    "correctAnswers": [
+      "المحاكاة الافتراضية"
+    ],
+    "wrongAnswers": [
+      "ذاكرة الوصول العشوائي",
+      "DHCP",
+      "وحدة المعالجة المركزية",
+      "تيم بيرنرز لي",
+      "Wi-Fi"
+    ]
+  },
+  {
+    "question": "ما المتصفح الذي تطوره Google؟",
+    "correctAnswers": [
+      "Chrome"
+    ],
+    "wrongAnswers": [
+      "404",
+      "DNS",
+      "Web Crawler",
+      "رفع",
+      "53"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: البروتوكول الآمن المستخدم لتصفح الويب المشفر؟",
+    "correctAnswers": [
+      "HTTPS"
+    ],
+    "wrongAnswers": [
+      "SMTP",
+      "تنزيل",
+      "رفع",
+      "443",
+      "World Wide Web"
+    ]
+  },
+  {
+    "question": "ما البروتوكول الآمن الشائع لفتح مواقع الويب؟",
+    "correctAnswers": [
+      "HTTPS"
+    ],
+    "wrongAnswers": [
+      "DNS",
+      "URL",
+      "الراوتر",
+      "عنوان IP",
+      "متصفح الويب",
+      "@"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: الكلمة المستخدمة لتعريف دالة في Python؟",
+    "correctAnswers": [
+      "def"
+    ],
+    "wrongAnswers": [
+      "JSON",
+      "دالة",
+      "واجهة برمجة التطبيقات",
+      "Stack",
+      "غيدو فان روسوم"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: الصيغة النصية الشائعة لتبادل البيانات بين تطبيقات الويب؟",
+    "correctAnswers": [
+      "JSON"
+    ],
+    "wrongAnswers": [
+      "undefined",
+      "لغة ترميز",
+      "Queue",
+      ".py",
+      ".js"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما البروتوكول المشفر الشائع لزيارة مواقع الويب بأمان؟",
+    "correctAnswers": [
+      "HTTPS"
+    ],
+    "wrongAnswers": [
+      "404",
+      "SMTP",
+      "CDN",
+      "World Wide Web",
+      "DNS",
+      "URL"
+    ]
+  },
+  {
+    "question": "ما النظام المستخدم لتحديد الموقع عبر الأقمار الصناعية؟",
+    "correctAnswers": [
+      "GPS"
+    ],
+    "wrongAnswers": [
+      "HDMI",
+      "SSD",
+      "الحوسبة السحابية",
+      "USB",
+      "تيم بيرنرز لي",
+      "128"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما المنفذ الشائع لنقل الصوت والصورة الرقمية إلى الشاشات؟",
+    "correctAnswers": [
+      "HDMI"
+    ],
+    "wrongAnswers": [
+      "USB",
+      "تيم بيرنرز لي",
+      "128",
+      "ذاكرة فلاش",
+      "DHCP",
+      "الهرتز"
+    ]
+  },
+  {
+    "question": "ما الذي تعني WWW؟",
+    "correctAnswers": [
+      "World Wide Web",
+      "الشبكة العنكبوتية العالمية"
+    ],
+    "wrongAnswers": [
+      "HTTPS",
+      "DNS",
+      "URL",
+      "الراوتر",
+      "عنوان IP",
+      "متصفح الويب"
+    ]
+  },
+  {
+    "question": "ما البروتوكول الذي يوزع عناوين IP تلقائيًا على الأجهزة في الشبكة المحلية غالبًا؟",
+    "correctAnswers": [
+      "DHCP"
+    ],
+    "wrongAnswers": [
+      "DNS",
+      "FTP",
+      "SMTP"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما اللغة التي تضيف السلوك والتفاعل إلى صفحات الويب في المتصفح؟",
+    "correctAnswers": [
+      "JavaScript",
+      "جافاسكربت",
+      "JS"
+    ],
+    "wrongAnswers": [
+      "body",
+      "const",
+      "Array",
+      "Git",
+      "CSS",
+      "لغة ترميز"
+    ]
+  },
+  {
+    "question": "ما المنفذ الافتراضي الشائع لبروتوكول HTTP؟",
+    "correctAnswers": [
+      "80"
+    ],
+    "wrongAnswers": [
+      "DNS",
+      "متصفح الويب",
+      "عنوان IP",
+      "تنزيل",
+      "Web Crawler"
+    ]
+  },
+  {
+    "question": "ماذا تعني الأحرف CPU في الحاسوب؟",
+    "correctAnswers": [
+      "وحدة المعالجة المركزية"
+    ],
+    "wrongAnswers": [
+      "Portable Document Format",
+      "بلوتوث",
+      "HDMI",
+      "SSD",
+      "الحوسبة السحابية",
+      "USB"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما رمز حالة HTTP الذي يعني «غير موجود»؟",
+    "correctAnswers": [
+      "404",
+      "HTTP 404"
+    ],
+    "wrongAnswers": [
+      "200",
+      "301",
+      "500"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: الامتداد الشائع لملفات Java المصدرية؟",
+    "correctAnswers": [
+      ".java"
+    ],
+    "wrongAnswers": [
+      "O(log n)",
+      "class",
+      "غيدو فان روسوم",
+      "API",
+      "body"
+    ]
+  },
+  {
+    "question": "كم بتًا يحتوي عنوان IPv4؟",
+    "correctAnswers": [
+      "32",
+      "32 بت"
+    ],
+    "wrongAnswers": [
+      "16",
+      "64",
+      "128"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: الاختصار الشائع للواقع الافتراضي؟",
+    "correctAnswers": [
+      "VR"
+    ],
+    "wrongAnswers": [
+      "NFC",
+      "Linux",
+      "الهرتز",
+      "الماسح الضوئي",
+      "Google"
+    ]
+  },
+  {
+    "question": "ما الوسم الأساسي الذي يحتوي محتوى صفحة HTML المرئي؟",
+    "correctAnswers": [
+      "body",
+      "<body>"
+    ],
+    "wrongAnswers": [
+      "const",
+      "Array",
+      "Git",
+      "CSS",
+      "لغة ترميز",
+      "Python"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: المنفذ الرقمي الشائع لنقل الصوت والصورة إلى الشاشة أو التلفاز؟",
+    "correctAnswers": [
+      "HDMI"
+    ],
+    "wrongAnswers": [
+      "GPS",
+      "Wi-Fi",
+      "SSD",
+      "QR Code",
+      "Android"
+    ]
+  },
+  {
+    "question": "ما اللغة المستخدمة أساسًا لتنسيق مظهر صفحات الويب؟",
+    "correctAnswers": [
+      "CSS"
+    ],
+    "wrongAnswers": [
+      "لغة ترميز",
+      "Python",
+      "حلقة تكرار",
+      "True و False",
+      "دالة",
+      "متغير"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما المصطلح الذي يعني إرسال ملف من جهازك إلى الإنترنت؟",
+    "correctAnswers": [
+      "رفع"
+    ],
+    "wrongAnswers": [
+      "32",
+      "53",
+      "404",
+      "SMTP",
+      "CDN",
+      "World Wide Web"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما بنية البيانات التي تخزن عناصر مرتبة في JavaScript؟",
+    "correctAnswers": [
+      "Array",
+      "مصفوفة",
+      "المصفوفة"
+    ],
+    "wrongAnswers": [
+      "Git",
+      "CSS",
+      "لغة ترميز",
+      "Python",
+      "حلقة تكرار",
+      "True و False"
+    ]
+  },
+  {
+    "question": "ما بنية البيانات التي تخزن عناصر مرتبة في JavaScript؟",
+    "correctAnswers": [
+      "Array",
+      "مصفوفة",
+      "المصفوفة"
+    ],
+    "wrongAnswers": [
+      "Git",
+      "CSS",
+      "لغة ترميز",
+      "Python",
+      "حلقة تكرار",
+      "True و False"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما المنفذ الشائع لتوصيل الأجهزة الطرفية بالحاسوب؟",
+    "correctAnswers": [
+      "USB"
+    ],
+    "wrongAnswers": [
+      "DHCP",
+      "الهرتز",
+      "وحدة المعالجة المركزية",
+      "Android",
+      "Bluetooth",
+      "RAM"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: التقنية التي تتيح دفع الهاتف قرب جهاز نقاط البيع دون تلامس؟",
+    "correctAnswers": [
+      "NFC"
+    ],
+    "wrongAnswers": [
+      "الحوسبة السحابية",
+      "128",
+      "QR Code",
+      "بلوتوث",
+      "Android"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: خوارزمية البحث التي تتطلب بيانات مرتبة وتقسم المجال إلى نصفين؟",
+    "correctAnswers": [
+      "البحث الثنائي"
+    ],
+    "wrongAnswers": [
+      "class",
+      ".js",
+      "undefined",
+      "Git",
+      "واجهة برمجة التطبيقات"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: المنفذ الافتراضي الشائع لخدمة DNS؟",
+    "correctAnswers": [
+      "53"
+    ],
+    "wrongAnswers": [
+      "تنزيل",
+      "CDN",
+      "HTTPS",
+      "@",
+      "443"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: المنفذ الافتراضي الشائع لبروتوكول HTTPS؟",
+    "correctAnswers": [
+      "443"
+    ],
+    "wrongAnswers": [
+      "رفع",
+      "متصفح الويب",
+      "@",
+      "HTTPS",
+      "80"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما القيمتان الأساسيتان للنوع المنطقي Boolean؟",
+    "correctAnswers": [
+      "True و False"
+    ],
+    "wrongAnswers": [
+      "دالة",
+      "متغير",
+      "JSON",
+      "واجهة برمجة التطبيقات",
+      "SQL",
+      "غيدو فان روسوم"
+    ]
+  },
+  {
+    "question": "أي نوع من الذاكرة غير المتطايرة تعتمد عليه أقراص SSD الحديثة غالبًا؟",
+    "correctAnswers": [
+      "ذاكرة فلاش",
+      "Flash"
+    ],
+    "wrongAnswers": [
+      "DRAM",
+      "SRAM",
+      "Cache"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: من ابتكر الشبكة العالمية World Wide Web؟",
+    "correctAnswers": [
+      "تيم بيرنرز لي",
+      "تيم برنرز لي",
+      "Tim Berners-Lee"
+    ],
+    "wrongAnswers": [
+      "فينت سيرف",
+      "لينوس تورفالدس",
+      "دينيس ريتشي"
+    ]
+  },
+  {
+    "question": "ما العدد الصحيح في السؤال الآتي: كم بتًا في عنوان IPv4؟",
+    "correctAnswers": [
+      "32 بتًا"
+    ],
+    "wrongAnswers": [
+      "443",
+      "Firefox",
+      "Web Crawler",
+      "Wi-Fi",
+      "53"
+    ]
+  },
+  {
+    "question": "ما الرمز ثنائي الأبعاد الذي تقرؤه كاميرا الهاتف لفتح رابط أو بيانات؟",
+    "correctAnswers": [
+      "QR Code"
+    ],
+    "wrongAnswers": [
+      "المحاكاة الافتراضية",
+      "NFC",
+      "RAM",
+      "وحدة المعالجة المركزية",
+      "Google"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما اللغة الشائعة للاستعلام من قواعد البيانات العلائقية؟",
+    "correctAnswers": [
+      "SQL"
+    ],
+    "wrongAnswers": [
+      "غيدو فان روسوم",
+      "O(1)",
+      "Closure",
+      "Stack",
+      "class",
+      "JavaScript"
+    ]
+  },
+  {
+    "question": "ما المنفذ الرقمي الشائع لنقل الصوت والصورة إلى الشاشة أو التلفاز؟",
+    "correctAnswers": [
+      "HDMI"
+    ],
+    "wrongAnswers": [
+      "Bluetooth",
+      "الهرتز",
+      "SSD",
+      "الحوسبة السحابية",
+      "AR"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما الامتداد الشائع للنطاقات التجارية؟",
+    "correctAnswers": [
+      ".com"
+    ],
+    "wrongAnswers": [
+      "تنزيل",
+      "32",
+      "53",
+      "404",
+      "SMTP",
+      "CDN"
+    ]
+  },
+  {
+    "question": "ما القيمتان الأساسيتان للنوع المنطقي Boolean؟",
+    "correctAnswers": [
+      "True و False"
+    ],
+    "wrongAnswers": [
+      "دالة",
+      "متغير",
+      "JSON",
+      "واجهة برمجة التطبيقات",
+      "SQL",
+      "غيدو فان روسوم"
+    ]
+  },
+  {
+    "question": "ما اسم الخدمة التي تبحث في صفحات الويب مثل Google؟",
+    "correctAnswers": [
+      "محرك بحث"
+    ],
+    "wrongAnswers": [
+      "رفع",
+      "تنزيل",
+      "32",
+      "53",
+      "404",
+      "SMTP"
+    ]
+  },
+  {
+    "question": "ما المصطلح الذي يصف دالة تحتفظ بإمكانية الوصول إلى النطاق الذي أنشئت فيه حتى بعد انتهاء ذلك النطاق؟",
+    "correctAnswers": [
+      "Closure",
+      "كلوجر",
+      "الإغلاق"
+    ],
+    "wrongAnswers": [
+      "Callback",
+      "Promise",
+      "Iterator"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما التقنية اللاسلكية القصيرة المدى الشائعة لتوصيل سماعات الهاتف؟",
+    "correctAnswers": [
+      "Bluetooth",
+      "بلوتوث"
+    ],
+    "wrongAnswers": [
+      "RAM",
+      "QR Code",
+      "GPS",
+      "Portable Document Format",
+      "HDMI"
+    ]
+  },
+  {
+    "question": "كم بتًا يبلغ طول عنوان IPv6؟",
+    "correctAnswers": [
+      "128",
+      "128 بت"
+    ],
+    "wrongAnswers": [
+      "32",
+      "64",
+      "256"
+    ]
+  },
+  {
+    "question": "ما تعقيد البحث الثنائي زمنيًا؟",
+    "correctAnswers": [
+      "O(log n)"
+    ],
+    "wrongAnswers": [
+      "دينيس ريتشي",
+      "Debugging",
+      "غيدو فان روسوم",
+      "متغير",
+      "Stack"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: التقنية التي توزع المحتوى عبر خوادم قريبة من المستخدمين؟",
+    "correctAnswers": [
+      "CDN"
+    ],
+    "wrongAnswers": [
+      "متصفح الويب",
+      "World Wide Web",
+      "HTTPS",
+      "SMTP",
+      "رفع"
+    ]
+  },
+  {
+    "question": "ما التقنية اللاسلكية القصيرة المدى المستخدمة لربط السماعات بالهاتف؟",
+    "correctAnswers": [
+      "بلوتوث"
+    ],
+    "wrongAnswers": [
+      "الحوسبة السحابية",
+      "USB",
+      "تيم بيرنرز لي",
+      "128",
+      "ذاكرة فلاش",
+      "DHCP"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما الذاكرة المؤقتة التي تفقد محتواها غالبًا عند إيقاف تشغيل الحاسوب؟",
+    "correctAnswers": [
+      "RAM"
+    ],
+    "wrongAnswers": [
+      "بلوتوث",
+      "HDMI",
+      "SSD",
+      "الحوسبة السحابية",
+      "USB",
+      "تيم بيرنرز لي"
+    ]
+  },
+  {
+    "question": "ما البروتوكول المشفر الشائع لزيارة مواقع الويب بأمان؟",
+    "correctAnswers": [
+      "HTTPS"
+    ],
+    "wrongAnswers": [
+      "404",
+      "SMTP",
+      "CDN",
+      "World Wide Web",
+      "DNS",
+      "URL"
+    ]
+  },
+  {
+    "question": "ما الجهاز الذي يوجه الحزم بين شبكات مختلفة؟",
+    "correctAnswers": [
+      "الراوتر"
+    ],
+    "wrongAnswers": [
+      "80",
+      "Web Crawler",
+      "DNS",
+      "URL",
+      "World Wide Web"
+    ]
+  },
+  {
+    "question": "ما الوحدة التي تقاس بها سرعة تردد المعالج عادة؟",
+    "correctAnswers": [
+      "الهرتز",
+      "Hz",
+      "هرتز"
+    ],
+    "wrongAnswers": [
+      "البايت",
+      "الفولت",
+      "الأمبير"
+    ]
+  },
+  {
+    "question": "ما نوع وحدة التخزين التي لا تحتوي على أجزاء ميكانيكية متحركة؟",
+    "correctAnswers": [
+      "SSD"
+    ],
+    "wrongAnswers": [
+      "AR",
+      "الهرتز",
+      "بلوتوث",
+      "NFC",
+      "Linux"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: نوع وحدة التخزين التي لا تحتوي على أجزاء ميكانيكية متحركة؟",
+    "correctAnswers": [
+      "SSD"
+    ],
+    "wrongAnswers": [
+      "تيم بيرنرز لي",
+      "الهرتز",
+      "USB",
+      "Android",
+      "Bluetooth"
+    ]
+  },
+  {
+    "question": "ماذا تعني الأحرف CPU في الحاسوب؟",
+    "correctAnswers": [
+      "وحدة المعالجة المركزية",
+      "Central Processing Unit"
+    ],
+    "wrongAnswers": [
+      "Android",
+      "Bluetooth",
+      "RAM",
+      "QR Code",
+      "GPS",
+      "Portable Document Format"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: التقنية التي تتيح تشغيل موارد حاسوبية عبر الإنترنت عند الطلب؟",
+    "correctAnswers": [
+      "الحوسبة السحابية"
+    ],
+    "wrongAnswers": [
+      "RAM",
+      "QR Code",
+      "Google",
+      "VR",
+      "الهرتز"
+    ]
+  },
+  {
+    "question": "ما البروتوكول الذي يحول أسماء النطاقات إلى عناوين IP؟",
+    "correctAnswers": [
+      "DNS"
+    ],
+    "wrongAnswers": [
+      "World Wide Web",
+      "Chrome",
+      "128 بتًا",
+      "@",
+      "عنوان IP"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: العملية التي تبحث عن الأخطاء البرمجية وتصلحها؟",
+    "correctAnswers": [
+      "Debugging"
+    ],
+    "wrongAnswers": [
+      "Git",
+      "لغة ترميز",
+      "True و False",
+      "GitHub",
+      "def"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: الاسم المختصر للشبكة العالمية World Wide Web؟",
+    "correctAnswers": [
+      "WWW"
+    ],
+    "wrongAnswers": [
+      "Web Crawler",
+      "@",
+      "CDN",
+      "URL",
+      "32 بتًا"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: النمط الذي يجمع البيانات والوظائف داخل كائنات؟",
+    "correctAnswers": [
+      "البرمجة كائنية التوجه"
+    ],
+    "wrongAnswers": [
+      "Array",
+      "Debugging",
+      "Stack",
+      "لغة ترميز",
+      "API"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: بنية البيانات التي تعمل بمبدأ آخر داخل أول خارج LIFO؟",
+    "correctAnswers": [
+      "Stack"
+    ],
+    "wrongAnswers": [
+      "Git",
+      "Array",
+      "Debugging",
+      "O(log n)",
+      "متغير"
+    ]
+  },
+  {
+    "question": "ماذا يسمى عنوان الصفحة أو المورد على الإنترنت؟",
+    "correctAnswers": [
+      "URL",
+      "الرابط",
+      "عنوان URL"
+    ],
+    "wrongAnswers": [
+      "الراوتر",
+      "عنوان IP",
+      "متصفح الويب",
+      "@",
+      "Wi-Fi",
+      "محرك بحث"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما الكلمة المحجوزة الشائعة لتعريف ثابت في JavaScript الحديثة؟",
+    "correctAnswers": [
+      "const"
+    ],
+    "wrongAnswers": [
+      "Array",
+      "Git",
+      "CSS",
+      "لغة ترميز",
+      "Python",
+      "حلقة تكرار"
+    ]
+  },
+  {
+    "question": "ماذا تعني الأحرف GPU؟",
+    "correctAnswers": [
+      "وحدة معالجة الرسوميات"
+    ],
+    "wrongAnswers": [
+      "RAM",
+      "Bluetooth",
+      "GPS",
+      "الحوسبة السحابية",
+      "QR Code"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: البروتوكول الذي يحول أسماء النطاقات إلى عناوين IP؟",
+    "correctAnswers": [
+      "DNS"
+    ],
+    "wrongAnswers": [
+      ".com",
+      "404",
+      "Chrome",
+      "CDN",
+      "53"
+    ]
+  },
+  {
+    "question": "ما الشركة التي تطور نظام Android حاليًا؟",
+    "correctAnswers": [
+      "Google"
+    ],
+    "wrongAnswers": [
+      "وحدة المعالجة المركزية",
+      "SSD",
+      "تيم بيرنرز لي",
+      "نظام تحديد المواقع العالمي",
+      "HDMI"
+    ]
+  },
+  {
+    "question": "ما الامتداد الشائع لملفات JavaScript؟",
+    "correctAnswers": [
+      ".js"
+    ],
+    "wrongAnswers": [
+      "Array",
+      "قاعدة بيانات علائقية",
+      "Git",
+      "غيدو فان روسوم",
+      "JSON"
+    ]
+  },
+  {
+    "question": "ما الاختصار لواجهة برمجة التطبيقات؟",
+    "correctAnswers": [
+      "API"
+    ],
+    "wrongAnswers": [
+      "body",
+      "JavaScript",
+      "قاعدة بيانات علائقية",
+      "لغة ترميز",
+      "Python"
+    ]
+  },
+  {
+    "question": "ما التقنية اللاسلكية القصيرة المدى الشائعة لتوصيل سماعات الهاتف؟",
+    "correctAnswers": [
+      "Bluetooth",
+      "بلوتوث"
+    ],
+    "wrongAnswers": [
+      "RAM",
+      "QR Code",
+      "GPS",
+      "Portable Document Format",
+      "HDMI"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: أي نوع من الذاكرة غير المتطايرة تعتمد عليه أقراص SSD الحديثة غالبًا؟",
+    "correctAnswers": [
+      "ذاكرة فلاش",
+      "Flash"
+    ],
+    "wrongAnswers": [
+      "DRAM",
+      "SRAM",
+      "Cache"
+    ]
+  },
+  {
+    "question": "ما الامتداد الشائع لملفات Java المصدرية؟",
+    "correctAnswers": [
+      ".java"
+    ],
+    "wrongAnswers": [
+      "CSS",
+      "قاعدة بيانات علائقية",
+      "دينيس ريتشي",
+      "حلقة تكرار",
+      "البرمجة كائنية التوجه"
+    ]
+  },
+  {
+    "question": "هل HTML لغة برمجة أم لغة ترميز؟",
+    "correctAnswers": [
+      "لغة ترميز"
+    ],
+    "wrongAnswers": [
+      "Python",
+      "حلقة تكرار",
+      "True و False",
+      "دالة",
+      "متغير",
+      "JSON"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما المصطلح الذي يصف شبكة توصيل محتوى موزعة جغرافيًا لتقريب الملفات من المستخدم؟",
+    "correctAnswers": [
+      "CDN",
+      "Content Delivery Network",
+      "شبكة توصيل المحتوى"
+    ],
+    "wrongAnswers": [
+      "VPN",
+      "LAN",
+      "DNS"
+    ]
+  },
+  {
+    "question": "ماذا تعني WWW؟",
+    "correctAnswers": [
+      "World Wide Web",
+      "الشبكة العنكبوتية العالمية"
+    ],
+    "wrongAnswers": [
+      "HTTPS",
+      "DNS",
+      "URL",
+      "الراوتر",
+      "عنوان IP",
+      "متصفح الويب"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما المصطلح الذي يصف دالة تحتفظ بإمكانية الوصول إلى النطاق الذي أنشئت فيه حتى بعد انتهاء ذلك النطاق؟",
+    "correctAnswers": [
+      "Closure",
+      "كلوجر",
+      "الإغلاق"
+    ],
+    "wrongAnswers": [
+      "Callback",
+      "Promise",
+      "Iterator"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: أي بنية بيانات تعمل بمبدأ LIFO؟",
+    "correctAnswers": [
+      "Stack",
+      "المكدس"
+    ],
+    "wrongAnswers": [
+      "Queue",
+      "Heap",
+      "Graph"
+    ]
+  },
+  {
+    "question": "ما العملية التي تبحث عن الأخطاء البرمجية وتصلحها؟",
+    "correctAnswers": [
+      "Debugging"
+    ],
+    "wrongAnswers": [
+      "Queue",
+      "GitHub",
+      "Array",
+      "const",
+      "قاعدة بيانات علائقية"
+    ]
+  },
+  {
+    "question": "ما الكلمة المستخدمة لتعريف دالة في Python؟",
+    "correctAnswers": [
+      "def"
+    ],
+    "wrongAnswers": [
+      "دينيس ريتشي",
+      "Debugging",
+      "CSS",
+      "O(1)",
+      "البرمجة كائنية التوجه"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما الرمز الشائع في عنوان البريد الإلكتروني بين الاسم والنطاق؟",
+    "correctAnswers": [
+      "@"
+    ],
+    "wrongAnswers": [
+      "Wi-Fi",
+      "محرك بحث",
+      ".com",
+      "رفع",
+      "تنزيل",
+      "32"
+    ]
+  },
+  {
+    "question": "ما اللغة الشائعة للاستعلام من قواعد البيانات العلائقية؟",
+    "correctAnswers": [
+      "SQL"
+    ],
+    "wrongAnswers": [
+      "غيدو فان روسوم",
+      "O(1)",
+      "Closure",
+      "Stack",
+      "class",
+      "JavaScript"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: المصطلح لبرنامج يبحث في صفحات الويب ويؤرشفها لمحرك البحث؟",
+    "correctAnswers": [
+      "Web Crawler"
+    ],
+    "wrongAnswers": [
+      "SMTP",
+      "WWW",
+      "محرك بحث",
+      "404",
+      "رفع"
+    ]
+  },
+  {
+    "question": "ما التقنية اللاسلكية قصيرة المدى المستخدمة كثيرًا لربط السماعات؟",
+    "correctAnswers": [
+      "Bluetooth"
+    ],
+    "wrongAnswers": [
+      "DHCP",
+      "USB",
+      "Wi-Fi",
+      "Portable Document Format",
+      "QR Code"
+    ]
+  },
+  {
+    "question": "حدد الاسم الصحيح: ابتكر لغة C؟",
+    "correctAnswers": [
+      "دينيس ريتشي"
+    ],
+    "wrongAnswers": [
+      "const",
+      "Python",
+      "Git",
+      "def",
+      ".py"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما التعقيد الزمني المعتاد للوصول إلى عنصر في Array بواسطة الفهرس؟",
+    "correctAnswers": [
+      "O(1)",
+      "O(1) ثابت"
+    ],
+    "wrongAnswers": [
+      "O(n)",
+      "O(log n)",
+      "O(n²)"
+    ]
+  },
+  {
+    "question": "ما الرمز المربع الذي يمكن مسحه بالكاميرا لفتح رابط أو بيانات؟",
+    "correctAnswers": [
+      "QR Code"
+    ],
+    "wrongAnswers": [
+      "128",
+      "ذاكرة فلاش",
+      "DHCP",
+      "الهرتز",
+      "وحدة المعالجة المركزية",
+      "Android"
+    ]
+  },
+  {
+    "question": "ما الذي تعني الأحرف CPU في الحاسوب؟",
+    "correctAnswers": [
+      "وحدة المعالجة المركزية"
+    ],
+    "wrongAnswers": [
+      "Portable Document Format",
+      "بلوتوث",
+      "HDMI",
+      "SSD",
+      "الحوسبة السحابية",
+      "USB"
+    ]
+  },
+  {
+    "question": "ما تنسيق البيانات النصي الذي يعتمد أزواج المفتاح والقيمة ويستخدم كثيرًا في الويب؟",
+    "correctAnswers": [
+      "JSON"
+    ],
+    "wrongAnswers": [
+      "واجهة برمجة التطبيقات",
+      "SQL",
+      "غيدو فان روسوم",
+      "O(1)",
+      "Closure",
+      "Stack"
+    ]
+  },
+  {
+    "question": "ماذا تعني الأحرف RAM؟",
+    "correctAnswers": [
+      "ذاكرة الوصول العشوائي"
+    ],
+    "wrongAnswers": [
+      "بلوتوث",
+      "الهرتز",
+      "Wi-Fi",
+      "USB",
+      "الحوسبة السحابية"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: التقنية اللاسلكية قصيرة المدى المستخدمة كثيرًا لربط السماعات؟",
+    "correctAnswers": [
+      "Bluetooth"
+    ],
+    "wrongAnswers": [
+      "AR",
+      "RAM",
+      "Android",
+      "SSD",
+      "QR Code"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: كم بتًا يحتوي عنوان IPv4؟",
+    "correctAnswers": [
+      "32",
+      "32 بت"
+    ],
+    "wrongAnswers": [
+      "16",
+      "64",
+      "128"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما البرنامج المستخدم لفتح صفحات الويب مثل Chrome وFirefox؟",
+    "correctAnswers": [
+      "متصفح الويب"
+    ],
+    "wrongAnswers": [
+      "@",
+      "Wi-Fi",
+      "محرك بحث",
+      ".com",
+      "رفع",
+      "تنزيل"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ماذا تعني الأحرف GPU؟",
+    "correctAnswers": [
+      "وحدة معالجة الرسوميات"
+    ],
+    "wrongAnswers": [
+      "Wi-Fi",
+      "HDMI",
+      "DHCP",
+      "NFC",
+      "128"
+    ]
+  },
+  {
+    "question": "ما الوحدة التي تقاس بها ترددات المعالج؟",
+    "correctAnswers": [
+      "الهرتز"
+    ],
+    "wrongAnswers": [
+      "Linux",
+      "Bluetooth",
+      "Android",
+      "Google",
+      "HDMI"
+    ]
+  },
+  {
+    "question": "ما البرنامج المستخدم لفتح صفحات الويب مثل Chrome وFirefox؟",
+    "correctAnswers": [
+      "متصفح الويب"
+    ],
+    "wrongAnswers": [
+      "@",
+      "Wi-Fi",
+      "محرك بحث",
+      ".com",
+      "رفع",
+      "تنزيل"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: أي بروتوكول يستخدم عادة لإرسال البريد الإلكتروني من العميل إلى الخادم؟",
+    "correctAnswers": [
+      "SMTP"
+    ],
+    "wrongAnswers": [
+      "IMAP",
+      "POP3",
+      "FTP"
+    ]
+  },
+  {
+    "question": "ما النظام الشهير لإدارة الإصدارات الذي يستخدم مستودعات commits وفروعًا؟",
+    "correctAnswers": [
+      "Git",
+      "جيت"
+    ],
+    "wrongAnswers": [
+      "CSS",
+      "لغة ترميز",
+      "Python",
+      "حلقة تكرار",
+      "True و False",
+      "دالة"
+    ]
+  },
+  {
+    "question": "صح أم خطأ بحسب الأحداث: هل HTML لغة برمجة أم لغة ترميز؟",
+    "correctAnswers": [
+      "لغة ترميز"
+    ],
+    "wrongAnswers": [
+      "Python",
+      "حلقة تكرار",
+      "True و False",
+      "دالة",
+      "متغير",
+      "JSON"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما الرمز المربع الذي يمكن مسحه بالكاميرا لفتح رابط أو بيانات؟",
+    "correctAnswers": [
+      "QR Code"
+    ],
+    "wrongAnswers": [
+      "128",
+      "ذاكرة فلاش",
+      "DHCP",
+      "الهرتز",
+      "وحدة المعالجة المركزية",
+      "Android"
+    ]
+  },
+  {
+    "question": "ماذا تعني الأحرف CPU في الحاسوب — سؤال إضافي 1؟",
+    "correctAnswers": [
+      "وحدة المعالجة المركزية"
+    ],
+    "wrongAnswers": [
+      "RAM",
+      "OLED",
+      "ذاكرة الوصول العشوائي",
+      "نظام تحديد المواقع العالمي",
+      "وحدة معالجة الرسوميات"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: الرمز ثنائي الأبعاد الذي تقرؤه كاميرا الهاتف لفتح رابط أو بيانات؟",
+    "correctAnswers": [
+      "QR Code"
+    ],
+    "wrongAnswers": [
+      "Android",
+      "Portable Document Format",
+      "OLED",
+      "SSD",
+      "Bluetooth"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: الاختصار لواجهة برمجة التطبيقات؟",
+    "correctAnswers": [
+      "API"
+    ],
+    "wrongAnswers": [
+      "Debugging",
+      "حلقة تكرار",
+      "def",
+      "متغير",
+      "JSON"
+    ]
+  },
+  {
+    "question": "ما الاختصار الشائع للواقع المعزز؟",
+    "correctAnswers": [
+      "AR"
+    ],
+    "wrongAnswers": [
+      "بلوتوث",
+      "NFC",
+      "ذاكرة فلاش",
+      "Google",
+      "وحدة المعالجة المركزية"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ماذا تعني الأحرف RAM؟",
+    "correctAnswers": [
+      "ذاكرة الوصول العشوائي"
+    ],
+    "wrongAnswers": [
+      "وحدة المعالجة المركزية",
+      "الهرتز",
+      "Linux",
+      "نظام تحديد المواقع العالمي",
+      "OLED"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما الكلمة المستخدمة لإنشاء فئة Class في JavaScript الحديثة؟",
+    "correctAnswers": [
+      "class"
+    ],
+    "wrongAnswers": [
+      "struct",
+      "type",
+      "object"
+    ]
+  },
+  {
+    "question": "ما الاسم الشائع لرمز الاستجابة السريعة المربع؟",
+    "correctAnswers": [
+      "QR Code",
+      "QR",
+      "رمز QR",
+      "كيو آر"
+    ],
+    "wrongAnswers": [
+      "GPS",
+      "Portable Document Format",
+      "بلوتوث",
+      "HDMI",
+      "SSD",
+      "الحوسبة السحابية"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما الجهاز الذي يربط أجهزة المنزل بالشبكة ويوجه البيانات بينها؟",
+    "correctAnswers": [
+      "الراوتر"
+    ],
+    "wrongAnswers": [
+      ".com",
+      "رفع",
+      "تنزيل",
+      "32",
+      "53",
+      "404"
+    ]
+  },
+  {
+    "question": "من ابتكر لغة JavaScript؟",
+    "correctAnswers": [
+      "بريندان آيك"
+    ],
+    "wrongAnswers": [
+      "GitHub",
+      "دينيس ريتشي",
+      "Debugging",
+      "O(1)",
+      "JSON"
+    ]
+  },
+  {
+    "question": "ما الذي تعني الأحرف CPU في الحاسوب؟",
+    "correctAnswers": [
+      "وحدة المعالجة المركزية",
+      "Central Processing Unit"
+    ],
+    "wrongAnswers": [
+      "Android",
+      "Bluetooth",
+      "RAM",
+      "QR Code",
+      "GPS",
+      "Portable Document Format"
+    ]
+  },
+  {
+    "question": "ما رقم المنفذ الافتراضي لخدمة DNS عادة؟",
+    "correctAnswers": [
+      "53",
+      "Port 53"
+    ],
+    "wrongAnswers": [
+      "21",
+      "25",
+      "80"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما البروتوكول الذي يوزع عناوين IP تلقائيًا على الأجهزة في الشبكة المحلية غالبًا؟",
+    "correctAnswers": [
+      "DHCP"
+    ],
+    "wrongAnswers": [
+      "DNS",
+      "FTP",
+      "SMTP"
+    ]
+  },
+  {
+    "question": "ما البروتوكول المستخدم عادة لإرسال البريد الإلكتروني بين الخوادم؟",
+    "correctAnswers": [
+      "SMTP"
+    ],
+    "wrongAnswers": [
+      "DHCP",
+      "80",
+      "Web Crawler",
+      "الراوتر",
+      "عنوان IP"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: من أنشأ لغة Python؟",
+    "correctAnswers": [
+      "غيدو فان روسوم",
+      "Guido van Rossum",
+      "غيدو فان روزم"
+    ],
+    "wrongAnswers": [
+      "دينيس ريتشي",
+      "جيمس غوسلينغ",
+      "بريندان آيك"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: الامتداد الشائع لملفات JavaScript؟",
+    "correctAnswers": [
+      ".js"
+    ],
+    "wrongAnswers": [
+      "O(1)",
+      "البرمجة كائنية التوجه",
+      "غيدو فان روسوم",
+      "واجهة برمجة التطبيقات",
+      "Git"
+    ]
+  },
+  {
+    "question": "ماذا تعني API بصورة عامة؟",
+    "correctAnswers": [
+      "واجهة برمجة التطبيقات"
+    ],
+    "wrongAnswers": [
+      "SQL",
+      "غيدو فان روسوم",
+      "O(1)",
+      "Closure",
+      "Stack",
+      "class"
+    ]
+  },
+  {
+    "question": "ما اللغة التي تضيف السلوك والتفاعل إلى صفحات الويب في المتصفح؟",
+    "correctAnswers": [
+      "JavaScript",
+      "جافاسكربت",
+      "JS"
+    ],
+    "wrongAnswers": [
+      "body",
+      "const",
+      "Array",
+      "Git",
+      "CSS",
+      "لغة ترميز"
+    ]
+  },
+  {
+    "question": "ما الرمز الشائع في عنوان البريد الإلكتروني بين الاسم والنطاق؟",
+    "correctAnswers": [
+      "@"
+    ],
+    "wrongAnswers": [
+      "Wi-Fi",
+      "محرك بحث",
+      ".com",
+      "رفع",
+      "تنزيل",
+      "32"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما النظام الشهير لإدارة الإصدارات الذي يستخدم مستودعات commits وفروعًا؟",
+    "correctAnswers": [
+      "Git",
+      "جيت"
+    ],
+    "wrongAnswers": [
+      "CSS",
+      "لغة ترميز",
+      "Python",
+      "حلقة تكرار",
+      "True و False",
+      "دالة"
+    ]
+  },
+  {
+    "question": "ما الاسم الذي يُطلق على كتلة الكود القابلة لإعادة الاستخدام والتي يمكن استدعاؤها؟",
+    "correctAnswers": [
+      "دالة"
+    ],
+    "wrongAnswers": [
+      "متغير",
+      "JSON",
+      "واجهة برمجة التطبيقات",
+      "SQL",
+      "غيدو فان روسوم",
+      "O(1)"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما التقنية اللاسلكية الشائعة للاتصال بالشبكات المحلية دون كابل؟",
+    "correctAnswers": [
+      "Wi-Fi"
+    ],
+    "wrongAnswers": [
+      "محرك بحث",
+      ".com",
+      "رفع",
+      "تنزيل",
+      "32",
+      "53"
+    ]
+  },
+  {
+    "question": "ما الذي تعني API بصورة عامة؟",
+    "correctAnswers": [
+      "واجهة برمجة التطبيقات"
+    ],
+    "wrongAnswers": [
+      "SQL",
+      "غيدو فان روسوم",
+      "O(1)",
+      "Closure",
+      "Stack",
+      "class"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما اللغة المشهورة التي تعتمد المسافات البادئة جزءًا من بناء الكود؟",
+    "correctAnswers": [
+      "Python"
+    ],
+    "wrongAnswers": [
+      "حلقة تكرار",
+      "True و False",
+      "دالة",
+      "متغير",
+      "JSON",
+      "واجهة برمجة التطبيقات"
+    ]
+  },
+  {
+    "question": "ما المصطلح لإرسال ملف من جهازك إلى خادم على الإنترنت؟",
+    "correctAnswers": [
+      "رفع"
+    ],
+    "wrongAnswers": [
+      "80",
+      "CDN",
+      "Web Crawler",
+      "محرك بحث",
+      "الراوتر"
+    ]
+  },
+  {
+    "question": "ما الذي يسمى عنوان الصفحة أو المورد على الإنترنت؟",
+    "correctAnswers": [
+      "URL",
+      "الرابط",
+      "عنوان URL"
+    ],
+    "wrongAnswers": [
+      "الراوتر",
+      "عنوان IP",
+      "متصفح الويب",
+      "@",
+      "Wi-Fi",
+      "محرك بحث"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: كم بتًا يبلغ طول عنوان IPv6؟",
+    "correctAnswers": [
+      "128",
+      "128 بت"
+    ],
+    "wrongAnswers": [
+      "32",
+      "64",
+      "256"
+    ]
+  },
+  {
+    "question": "ما خوارزمية البحث التي تتطلب بيانات مرتبة وتقسم المجال إلى نصفين؟",
+    "correctAnswers": [
+      "البحث الثنائي"
+    ],
+    "wrongAnswers": [
+      "undefined",
+      "غيدو فان روسوم",
+      "Closure",
+      "دالة",
+      "Stack"
+    ]
+  },
+  {
+    "question": "ما الامتداد الشائع لملفات Python؟",
+    "correctAnswers": [
+      ".py"
+    ],
+    "wrongAnswers": [
+      "O(log n)",
+      "Git",
+      "body",
+      "API",
+      "Debugging"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما الاسم الشائع لرمز الاستجابة السريعة المربع؟",
+    "correctAnswers": [
+      "QR Code",
+      "QR",
+      "رمز QR",
+      "كيو آر"
+    ],
+    "wrongAnswers": [
+      "GPS",
+      "Portable Document Format",
+      "بلوتوث",
+      "HDMI",
+      "SSD",
+      "الحوسبة السحابية"
+    ]
+  },
+  {
+    "question": "ما وحدة التخزين الحديثة التي لا تحتوي أجزاء ميكانيكية متحركة؟",
+    "correctAnswers": [
+      "SSD"
+    ],
+    "wrongAnswers": [
+      "تيم بيرنرز لي",
+      "128",
+      "ذاكرة فلاش",
+      "DHCP",
+      "الهرتز",
+      "وحدة المعالجة المركزية"
+    ]
+  },
+  {
+    "question": "ما التعقيد الزمني المعتاد للوصول إلى عنصر في Array بواسطة الفهرس؟",
+    "correctAnswers": [
+      "O(1)",
+      "O(1) ثابت"
+    ],
+    "wrongAnswers": [
+      "O(n)",
+      "O(log n)",
+      "O(n²)"
+    ]
+  },
+  {
+    "question": "أي بروتوكول يستخدم عادة لإرسال البريد الإلكتروني من العميل إلى الخادم؟",
+    "correctAnswers": [
+      "SMTP"
+    ],
+    "wrongAnswers": [
+      "IMAP",
+      "POP3",
+      "FTP"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: الوحدة التي تقاس بها ترددات المعالج؟",
+    "correctAnswers": [
+      "الهرتز"
+    ],
+    "wrongAnswers": [
+      "Bluetooth",
+      "بلوتوث",
+      "ذاكرة الوصول العشوائي",
+      "وحدة معالجة الرسوميات",
+      "HDMI"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما الوسم الأساسي الذي يحتوي محتوى صفحة HTML المرئي؟",
+    "correctAnswers": [
+      "body",
+      "<body>"
+    ],
+    "wrongAnswers": [
+      "const",
+      "Array",
+      "Git",
+      "CSS",
+      "لغة ترميز",
+      "Python"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما المصطلح الذي يعني جلب ملف من الإنترنت إلى جهازك؟",
+    "correctAnswers": [
+      "تنزيل"
+    ],
+    "wrongAnswers": [
+      "53",
+      "404",
+      "SMTP",
+      "CDN",
+      "World Wide Web",
+      "HTTPS"
+    ]
+  },
+  {
+    "question": "ما الكلمة المحجوزة الشائعة لتعريف ثابت في JavaScript الحديثة؟",
+    "correctAnswers": [
+      "const"
+    ],
+    "wrongAnswers": [
+      "Array",
+      "Git",
+      "CSS",
+      "لغة ترميز",
+      "Python",
+      "حلقة تكرار"
+    ]
+  },
+  {
+    "question": "ما الصيغة النصية الشائعة لتبادل البيانات بين تطبيقات الويب؟",
+    "correctAnswers": [
+      "JSON"
+    ],
+    "wrongAnswers": [
+      "Python",
+      "غيدو فان روسوم",
+      "Debugging",
+      "Closure",
+      ".py"
+    ]
+  },
+  {
+    "question": "ما المنفذ الافتراضي الشائع لبروتوكول HTTPS؟",
+    "correctAnswers": [
+      "443"
+    ],
+    "wrongAnswers": [
+      "تنزيل",
+      "Chrome",
+      "Web Crawler",
+      "World Wide Web",
+      "الراوتر"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما التقنية اللاسلكية القصيرة المدى المستخدمة لربط السماعات بالهاتف؟",
+    "correctAnswers": [
+      "بلوتوث"
+    ],
+    "wrongAnswers": [
+      "الحوسبة السحابية",
+      "USB",
+      "تيم بيرنرز لي",
+      "128",
+      "ذاكرة فلاش",
+      "DHCP"
+    ]
+  },
+  {
+    "question": "ما المنفذ الشائع لتوصيل الأجهزة الطرفية بالحاسوب؟",
+    "correctAnswers": [
+      "USB"
+    ],
+    "wrongAnswers": [
+      "DHCP",
+      "الهرتز",
+      "وحدة المعالجة المركزية",
+      "Android",
+      "Bluetooth",
+      "RAM"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: البروتوكول المستخدم غالبًا للحصول على عنوان IP تلقائيًا داخل الشبكة؟",
+    "correctAnswers": [
+      "DHCP"
+    ],
+    "wrongAnswers": [
+      "DNS",
+      "Web Crawler",
+      "World Wide Web",
+      "SMTP",
+      "HTTPS"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: نظام التشغيل مفتوح المصدر الذي تعتمد عليه توزيعات مثل Ubuntu؟",
+    "correctAnswers": [
+      "Linux"
+    ],
+    "wrongAnswers": [
+      "SSD",
+      "Bluetooth",
+      "DHCP",
+      "OLED",
+      "الهرتز"
+    ]
+  },
+  {
+    "question": "أي بنية بيانات تعمل بمبدأ LIFO؟",
+    "correctAnswers": [
+      "Stack",
+      "المكدس"
+    ],
+    "wrongAnswers": [
+      "Queue",
+      "Heap",
+      "Graph"
+    ]
+  },
+  {
+    "question": "ما اسم كتلة الكود القابلة لإعادة الاستخدام والتي يمكن استدعاؤها؟",
+    "correctAnswers": [
+      "دالة"
+    ],
+    "wrongAnswers": [
+      "متغير",
+      "JSON",
+      "واجهة برمجة التطبيقات",
+      "SQL",
+      "غيدو فان روسوم",
+      "O(1)"
+    ]
+  },
+  {
+    "question": "كم بتًا في عنوان IPv6؟",
+    "correctAnswers": [
+      "128 بتًا"
+    ],
+    "wrongAnswers": [
+      "الراوتر",
+      "DHCP",
+      "DNS",
+      ".com",
+      "CDN"
+    ]
+  },
+  {
+    "question": "ما الذاكرة التي تحتفظ بالبيانات مؤقتًا أثناء تشغيل البرامج؟",
+    "correctAnswers": [
+      "RAM"
+    ],
+    "wrongAnswers": [
+      "وحدة المعالجة المركزية",
+      "Portable Document Format",
+      "ذاكرة فلاش",
+      "VR",
+      "QR Code"
+    ]
+  },
+  {
+    "question": "ما العنوان الرقمي الذي يميز جهازًا على شبكة تستخدم بروتوكول الإنترنت؟",
+    "correctAnswers": [
+      "عنوان IP"
+    ],
+    "wrongAnswers": [
+      "متصفح الويب",
+      "@",
+      "Wi-Fi",
+      "محرك بحث",
+      ".com",
+      "رفع"
+    ]
+  },
+  {
+    "question": "ما المصطلح الذي يصف تشغيل الموارد والملفات عبر خوادم الإنترنت بدل الجهاز فقط؟",
+    "correctAnswers": [
+      "الحوسبة السحابية"
+    ],
+    "wrongAnswers": [
+      "ذاكرة فلاش",
+      "DHCP",
+      "الهرتز",
+      "وحدة المعالجة المركزية",
+      "Android",
+      "Bluetooth"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: النطاق الأعلى العام الشائع للشركات التجارية؟",
+    "correctAnswers": [
+      ".com"
+    ],
+    "wrongAnswers": [
+      "HTTPS",
+      "SMTP",
+      "الصفحة غير موجودة",
+      "DNS",
+      "عنوان IP"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما تنسيق البيانات النصي الذي يعتمد أزواج المفتاح والقيمة ويستخدم كثيرًا في الويب؟",
+    "correctAnswers": [
+      "JSON"
+    ],
+    "wrongAnswers": [
+      "واجهة برمجة التطبيقات",
+      "SQL",
+      "غيدو فان روسوم",
+      "O(1)",
+      "Closure",
+      "Stack"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: المصطلح لخطأ في البرنامج يؤدي إلى سلوك غير متوقع؟",
+    "correctAnswers": [
+      "Bug"
+    ],
+    "wrongAnswers": [
+      "JSON",
+      "بريندان آيك",
+      "undefined",
+      "Debugging",
+      "واجهة برمجة التطبيقات"
+    ]
+  },
+  {
+    "question": "ما المنفذ الشائع لنقل الصوت والصورة الرقمية إلى الشاشات؟",
+    "correctAnswers": [
+      "HDMI"
+    ],
+    "wrongAnswers": [
+      "USB",
+      "تيم بيرنرز لي",
+      "128",
+      "ذاكرة فلاش",
+      "DHCP",
+      "الهرتز"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: المصطلح لجلب ملف من الإنترنت إلى جهازك؟",
+    "correctAnswers": [
+      "تنزيل"
+    ],
+    "wrongAnswers": [
+      "الراوتر",
+      "CDN",
+      "متصفح الويب",
+      "32 بتًا",
+      "Firefox"
+    ]
+  },
+  {
+    "question": "ما التقنية التي تسمح بتشغيل نظام افتراضي داخل جهاز فعلي؟",
+    "correctAnswers": [
+      "المحاكاة الافتراضية"
+    ],
+    "wrongAnswers": [
+      "الحوسبة السحابية",
+      "الهرتز",
+      "RAM",
+      "الماسح الضوئي",
+      "SSD"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: نوع الشبكة المحلية اللاسلكية الأكثر شيوعًا في المنازل؟",
+    "correctAnswers": [
+      "Wi-Fi"
+    ],
+    "wrongAnswers": [
+      "USB",
+      "Linux",
+      "ذاكرة فلاش",
+      "الماسح الضوئي",
+      "NFC"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما نظام تشغيل الهواتف الذي تطوره Google؟",
+    "correctAnswers": [
+      "Android",
+      "أندرويد"
+    ],
+    "wrongAnswers": [
+      "Bluetooth",
+      "RAM",
+      "QR Code",
+      "GPS",
+      "Portable Document Format",
+      "بلوتوث"
+    ]
+  },
+  {
+    "question": "ما قاعدة البيانات التي تستخدم الجداول والصفوف وتُستعلم غالبًا بلغة SQL؟",
+    "correctAnswers": [
+      "قاعدة بيانات علائقية"
+    ],
+    "wrongAnswers": [
+      ".java",
+      "Bug",
+      "Git",
+      "GitHub",
+      "JSON"
+    ]
+  },
+  {
+    "question": "كم بتًا في عنوان IPv4؟",
+    "correctAnswers": [
+      "32 بتًا"
+    ],
+    "wrongAnswers": [
+      ".com",
+      "SMTP",
+      "URL",
+      "رفع",
+      "Wi-Fi"
+    ]
+  },
+  {
+    "question": "ما المصطلح لبرنامج يبحث في صفحات الويب ويؤرشفها لمحرك البحث؟",
+    "correctAnswers": [
+      "Web Crawler"
+    ],
+    "wrongAnswers": [
+      ".com",
+      "WWW",
+      "متصفح الويب",
+      "DHCP",
+      "32 بتًا"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: الذاكرة التي تحتفظ بالبيانات مؤقتًا أثناء تشغيل البرامج؟",
+    "correctAnswers": [
+      "RAM"
+    ],
+    "wrongAnswers": [
+      "الماسح الضوئي",
+      "HDMI",
+      "Google",
+      "QR Code",
+      "بلوتوث"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما النظام المستخدم لتحديد الموقع عبر الأقمار الصناعية؟",
+    "correctAnswers": [
+      "GPS"
+    ],
+    "wrongAnswers": [
+      "HDMI",
+      "SSD",
+      "الحوسبة السحابية",
+      "USB",
+      "تيم بيرنرز لي",
+      "128"
+    ]
+  },
+  {
+    "question": "ما النطاق الأعلى العام الشائع للشركات التجارية؟",
+    "correctAnswers": [
+      ".com"
+    ],
+    "wrongAnswers": [
+      "WWW",
+      "الراوتر",
+      "DHCP",
+      "404",
+      "Firefox"
+    ]
+  },
+  {
+    "question": "ما نوع الملفات الذي تشير إليه صيغة PDF؟",
+    "correctAnswers": [
+      "Portable Document Format"
+    ],
+    "wrongAnswers": [
+      "SSD",
+      "الحوسبة السحابية",
+      "USB",
+      "تيم بيرنرز لي",
+      "128",
+      "ذاكرة فلاش"
+    ]
+  },
+  {
+    "question": "ما العدد الصحيح في السؤال الآتي: كم بتًا في عنوان IPv6؟",
+    "correctAnswers": [
+      "128 بتًا"
+    ],
+    "wrongAnswers": [
+      "Chrome",
+      "SMTP",
+      "HTTPS",
+      "DHCP",
+      "CDN"
+    ]
+  },
+  {
+    "question": "ما الامتداد الشائع للنطاقات التجارية؟",
+    "correctAnswers": [
+      ".com"
+    ],
+    "wrongAnswers": [
+      "تنزيل",
+      "32",
+      "53",
+      "404",
+      "SMTP",
+      "CDN"
+    ]
+  },
+  {
+    "question": "ما بنية البيانات التي تعمل بمبدأ أول داخل أول خارج FIFO؟",
+    "correctAnswers": [
+      "Queue"
+    ],
+    "wrongAnswers": [
+      "Bug",
+      "GitHub",
+      "Python",
+      "undefined",
+      "Array"
+    ]
+  },
+  {
+    "question": "ما النظام الشائع لإدارة الإصدارات الموزعة في البرمجيات؟",
+    "correctAnswers": [
+      "Git"
+    ],
+    "wrongAnswers": [
+      "Stack",
+      "Queue",
+      "متغير",
+      "undefined",
+      "const"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: القيمة التي تمثل غياب القيمة في JavaScript؟",
+    "correctAnswers": [
+      "undefined"
+    ],
+    "wrongAnswers": [
+      "Queue",
+      "def",
+      "Git",
+      "JSON",
+      "O(log n)"
+    ]
+  },
+  {
+    "question": "ما المتصفح مفتوح المصدر الذي تطوره Mozilla؟",
+    "correctAnswers": [
+      "Firefox"
+    ],
+    "wrongAnswers": [
+      "53",
+      "URL",
+      "الراوتر",
+      "HTTPS",
+      "محرك بحث"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما اللغة المستخدمة أساسًا لتنسيق مظهر صفحات الويب؟",
+    "correctAnswers": [
+      "CSS"
+    ],
+    "wrongAnswers": [
+      "لغة ترميز",
+      "Python",
+      "حلقة تكرار",
+      "True و False",
+      "دالة",
+      "متغير"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: تعقيد البحث الثنائي زمنيًا؟",
+    "correctAnswers": [
+      "O(log n)"
+    ],
+    "wrongAnswers": [
+      "البرمجة كائنية التوجه",
+      ".js",
+      "Stack",
+      "body",
+      "Debugging"
+    ]
+  },
+  {
+    "question": "ما الجهاز الذي يربط أجهزة المنزل بالشبكة ويوجه البيانات بينها؟",
+    "correctAnswers": [
+      "الراوتر"
+    ],
+    "wrongAnswers": [
+      ".com",
+      "رفع",
+      "تنزيل",
+      "32",
+      "53",
+      "404"
+    ]
+  },
+  {
+    "question": "ما البروتوكول المستخدم غالبًا للحصول على عنوان IP تلقائيًا داخل الشبكة؟",
+    "correctAnswers": [
+      "DHCP"
+    ],
+    "wrongAnswers": [
+      "CDN",
+      "80",
+      "HTTPS",
+      "Firefox",
+      "443"
+    ]
+  },
+  {
+    "question": "اختر الإجابة الصحيحة: ما رقم المنفذ الافتراضي لخدمة DNS عادة؟",
+    "correctAnswers": [
+      "53",
+      "Port 53"
+    ],
+    "wrongAnswers": [
+      "21",
+      "25",
+      "80"
+    ]
+  },
+  {
+    "question": "ما اسم البنية التي تكرر مجموعة أوامر عدة مرات؟",
+    "correctAnswers": [
+      "حلقة تكرار"
+    ],
+    "wrongAnswers": [
+      "True و False",
+      "دالة",
+      "متغير",
+      "JSON",
+      "واجهة برمجة التطبيقات",
+      "SQL"
+    ]
+  },
+  {
+    "question": "ما النمط الذي يجمع البيانات والوظائف داخل كائنات؟",
+    "correctAnswers": [
+      "البرمجة كائنية التوجه"
+    ],
+    "wrongAnswers": [
+      "def",
+      "دينيس ريتشي",
+      "غيدو فان روسوم",
+      "undefined",
+      "بريندان آيك"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: المنفذ الافتراضي الشائع لبروتوكول HTTP؟",
+    "correctAnswers": [
+      "80"
+    ],
+    "wrongAnswers": [
+      "الراوتر",
+      "128 بتًا",
+      "DNS",
+      "Wi-Fi",
+      "HTTPS"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: نوع الشاشة الذي يستخدم الثنائيات العضوية الباعثة للضوء؟",
+    "correctAnswers": [
+      "OLED"
+    ],
+    "wrongAnswers": [
+      "Wi-Fi",
+      "QR Code",
+      "SSD",
+      "AR",
+      "Portable Document Format"
+    ]
+  },
+  {
+    "question": "ما نوع الشاشة الذي يستخدم الثنائيات العضوية الباعثة للضوء؟",
+    "correctAnswers": [
+      "OLED"
+    ],
+    "wrongAnswers": [
+      "Bluetooth",
+      "SSD",
+      "ذاكرة فلاش",
+      "بلوتوث",
+      "128"
+    ]
+  },
+  {
+    "question": "ما المنصة الشهيرة لاستضافة مستودعات Git؟",
+    "correctAnswers": [
+      "GitHub"
+    ],
+    "wrongAnswers": [
+      ".py",
+      "متغير",
+      "Queue",
+      "غيدو فان روسوم",
+      "CSS"
+    ]
+  },
+  {
+    "question": "ما المصطلح الذي يصف شبكة توصيل محتوى موزعة جغرافيًا لتقريب الملفات من المستخدم؟",
+    "correctAnswers": [
+      "CDN",
+      "Content Delivery Network",
+      "شبكة توصيل المحتوى"
+    ],
+    "wrongAnswers": [
+      "VPN",
+      "LAN",
+      "DNS"
+    ]
+  },
+  {
+    "question": "اذكر الإجابة: الاختصار الشائع للواقع المعزز؟",
+    "correctAnswers": [
+      "AR"
+    ],
+    "wrongAnswers": [
+      "الهرتز",
+      "بلوتوث",
+      "وحدة معالجة الرسوميات",
+      "ذاكرة الوصول العشوائي",
+      "تيم بيرنرز لي"
+    ]
+  },
+  {
+    "question": "ما الرمز المستخدم في عناوين البريد بين اسم المستخدم والنطاق؟",
+    "correctAnswers": [
+      "@"
+    ],
+    "wrongAnswers": [
+      "HTTPS",
+      "SMTP",
+      "32 بتًا",
+      "128 بتًا",
+      "الراوتر"
+    ]
+  }
+]

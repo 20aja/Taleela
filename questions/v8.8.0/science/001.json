@@ -1,0 +1,3323 @@
+[
+  {
+    "id": "space-002",
+    "type": "text",
+    "question": "ما أكبر كوكب في المجموعة الشمسية؟",
+    "correctAnswers": [
+      "المشتري"
+    ],
+    "wrongAnswers": [
+      "القمر",
+      "نيل أرمسترونغ",
+      "المريخ",
+      "زحل",
+      "1969",
+      "يوري غاغارين"
+    ],
+    "category": "science",
+    "factKey": "space-002"
+  },
+  {
+    "id": "science-new-0024",
+    "type": "text",
+    "question": "ما العدد الذري لعنصر السيليكون؟",
+    "correctAnswers": [
+      "14"
+    ],
+    "wrongAnswers": [
+      "15",
+      "19",
+      "30"
+    ],
+    "category": "science",
+    "factKey": "science:chem:atomic:Si"
+  },
+  {
+    "id": "extra2-space-009",
+    "type": "text",
+    "question": "ما المجرة التي يوجد فيها النظام الشمسي؟",
+    "correctAnswers": [
+      "درب التبانة"
+    ],
+    "wrongAnswers": [
+      "سبوتنيك 1",
+      "المشتري",
+      "أفق الحدث",
+      "مجرة أندروميدا",
+      "عطارد",
+      "القمر"
+    ],
+    "category": "science",
+    "factKey": "extra2:space:009"
+  },
+  {
+    "id": "science-v860-new-009-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الغاز الأكثر وفرة في الغلاف الجوي للأرض؟",
+    "correctAnswers": [
+      "النيتروجين"
+    ],
+    "wrongAnswers": [
+      "الأكسجين",
+      "300000 كم/ث",
+      "الألماس",
+      "التسامي",
+      "O"
+    ],
+    "category": "science",
+    "factKey": "v860:science:newfact:009"
+  },
+  {
+    "id": "science-new-0065",
+    "type": "text",
+    "question": "ما الصيغة الكيميائية لـكربونات الكالسيوم؟",
+    "correctAnswers": [
+      "CaCO3"
+    ],
+    "wrongAnswers": [
+      "Na2CO3",
+      "CaCl2",
+      "CaO"
+    ],
+    "category": "science",
+    "factKey": "science:chem:formula:CaCO3"
+  },
+  {
+    "id": "science-new-0072",
+    "type": "text",
+    "question": "ما الصيغة الكيميائية لـثاني أكسيد السيليكون؟",
+    "correctAnswers": [
+      "SiO2"
+    ],
+    "wrongAnswers": [
+      "CO2",
+      "SiO",
+      "SO2"
+    ],
+    "category": "science",
+    "factKey": "science:chem:formula:SiO2"
+  },
+  {
+    "id": "space-003",
+    "type": "text",
+    "question": "ما اسم المجرة التي تنتمي إليها المجموعة الشمسية؟",
+    "correctAnswers": [
+      "درب التبانة",
+      "مجرة درب التبانة"
+    ],
+    "wrongAnswers": [
+      "نيل أرمسترونغ",
+      "المريخ",
+      "زحل",
+      "1969",
+      "يوري غاغارين",
+      "فالنتينا تيريشكوفا"
+    ],
+    "category": "science",
+    "factKey": "space-003"
+  },
+  {
+    "id": "science-v860-new-003-a",
+    "type": "text",
+    "question": "ما الرمز الكيميائي للصوديوم؟",
+    "correctAnswers": [
+      "Na"
+    ],
+    "wrongAnswers": [
+      "الأمبير",
+      "التسامي",
+      "الروابط التساهمية",
+      "100",
+      "الزهرة"
+    ],
+    "category": "science",
+    "factKey": "v860:science:newfact:003"
+  },
+  {
+    "id": "space-001",
+    "type": "text",
+    "question": "ما أقرب كوكب إلى الشمس؟",
+    "correctAnswers": [
+      "عطارد"
+    ],
+    "wrongAnswers": [
+      "درب التبانة",
+      "القمر",
+      "نيل أرمسترونغ",
+      "المريخ",
+      "زحل",
+      "1969"
+    ],
+    "category": "science",
+    "factKey": "space-001"
+  },
+  {
+    "id": "medicine-v860-new-018-b",
+    "type": "text",
+    "question": "اذكر الإجابة: العضو الذي يخزن الصفراء؟",
+    "correctAnswers": [
+      "المرارة"
+    ],
+    "wrongAnswers": [
+      "العصب البصري",
+      "الكليتان",
+      "206",
+      "الشريان الأبهر",
+      "الحديد"
+    ],
+    "category": "science",
+    "factKey": "v860:medicine:newfact:018"
+  },
+  {
+    "id": "science-new-0063",
+    "type": "text",
+    "question": "ما الصيغة الكيميائية لـحمض الكبريتيك؟",
+    "correctAnswers": [
+      "H2SO4"
+    ],
+    "wrongAnswers": [
+      "HCl",
+      "HNO3",
+      "H2CO3"
+    ],
+    "category": "science",
+    "factKey": "science:chem:formula:H2SO4"
+  },
+  {
+    "id": "science-new-0068",
+    "type": "text",
+    "question": "ما الصيغة الكيميائية لـالأوزون؟",
+    "correctAnswers": [
+      "O3"
+    ],
+    "wrongAnswers": [
+      "O2",
+      "CO2",
+      "N2"
+    ],
+    "category": "science",
+    "factKey": "science:chem:formula:O3"
+  },
+  {
+    "id": "science-new-0109",
+    "type": "text",
+    "question": "أي عضية تُعرف بأنها مركز إنتاج معظم ATP في الخلية حقيقية النواة؟",
+    "correctAnswers": [
+      "الميتوكوندريا",
+      "المتقدرات"
+    ],
+    "wrongAnswers": [
+      "الريبوسوم",
+      "النواة",
+      "جهاز غولجي"
+    ],
+    "category": "science",
+    "factKey": "science:biology:109"
+  },
+  {
+    "id": "medicine-v860-new-019-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الغدة الموجودة في مقدمة الرقبة وتنظم الأيض بهرموناتها؟",
+    "correctAnswers": [
+      "الغدة الدرقية"
+    ],
+    "wrongAnswers": [
+      "المرارة",
+      "البكتيريا",
+      "الحديد",
+      "الرئتان",
+      "السائل الدماغي الشوكي"
+    ],
+    "category": "science",
+    "factKey": "v860:medicine:newfact:019"
+  },
+  {
+    "id": "science-v85-alt-00009",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الوحدة الأساسية لقياس شدة التيار الكهربائي؟",
+    "correctAnswers": [
+      "الأمبير",
+      "امبير"
+    ],
+    "wrongAnswers": [
+      "الجاذبية",
+      "O",
+      "لا",
+      "الكلوروفيل",
+      "100",
+      "DNA"
+    ],
+    "category": "science",
+    "factKey": "science-004"
+  },
+  {
+    "id": "science-new-0070",
+    "type": "text",
+    "question": "ما الصيغة الكيميائية لـغاز النيتروجين؟",
+    "correctAnswers": [
+      "N2"
+    ],
+    "wrongAnswers": [
+      "NO2",
+      "O2",
+      "H2"
+    ],
+    "category": "science",
+    "factKey": "science:chem:formula:N2"
+  },
+  {
+    "id": "science-new-0152",
+    "type": "text",
+    "question": "أي نوع من الأوعية يعيد الدم إلى القلب عادة؟",
+    "correctAnswers": [
+      "الأوردة",
+      "الوريد"
+    ],
+    "wrongAnswers": [
+      "الشرايين",
+      "الشعيرات فقط",
+      "الأوعية الصفراوية"
+    ],
+    "category": "science",
+    "factKey": "science:mixed:152"
+  },
+  {
+    "id": "science-v85-alt-00001",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما العدد الذري لعنصر الكربون؟",
+    "correctAnswers": [
+      "6",
+      "ستة"
+    ],
+    "wrongAnswers": [
+      "5",
+      "7",
+      "8"
+    ],
+    "category": "science",
+    "factKey": "science:single:science-m01"
+  },
+  {
+    "id": "science-single-002",
+    "type": "text",
+    "question": "ما وحدة القوة في النظام الدولي للوحدات؟",
+    "correctAnswers": [
+      "النيوتن",
+      "نيوتن"
+    ],
+    "wrongAnswers": [
+      "الجول",
+      "الباسكال",
+      "الواط"
+    ],
+    "category": "science",
+    "factKey": "science:single:science-m02"
+  },
+  {
+    "id": "space-v860-new-006-b",
+    "type": "text",
+    "question": "اذكر الإجابة: اسم قمر الأرض الطبيعي؟",
+    "correctAnswers": [
+      "القمر"
+    ],
+    "wrongAnswers": [
+      "السنة الضوئية",
+      "مجرة أندروميدا",
+      "فالنتينا تيريشكوفا",
+      "غانيميد",
+      "نبتون"
+    ],
+    "category": "science",
+    "factKey": "v860:space:newfact:006"
+  },
+  {
+    "id": "space-v860-new-001-b",
+    "type": "text",
+    "question": "اذكر الإجابة: أكبر كوكب في المجموعة الشمسية؟",
+    "correctAnswers": [
+      "المشتري"
+    ],
+    "wrongAnswers": [
+      "سبوتنيك 1",
+      "القمر",
+      "الشمس",
+      "نبتون",
+      "درب التبانة"
+    ],
+    "category": "science",
+    "factKey": "v860:space:newfact:001"
+  },
+  {
+    "id": "science-v85-alt-00007",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الصيغة الكيميائية للماء؟",
+    "correctAnswers": [
+      "H2O"
+    ],
+    "wrongAnswers": [
+      "الأكسجين",
+      "الأمبير",
+      "الجاذبية",
+      "O",
+      "لا",
+      "الكلوروفيل"
+    ],
+    "category": "science",
+    "factKey": "science-002"
+  },
+  {
+    "id": "medicine-v860-new-007-b",
+    "type": "text",
+    "question": "ما العدد الصحيح في السؤال الآتي: كم عظمة في جسم الإنسان البالغ عادة؟",
+    "correctAnswers": [
+      "206 عظام"
+    ],
+    "wrongAnswers": [
+      "العصب البصري",
+      "فيتامين C",
+      "الصفائح الدموية",
+      "المرارة",
+      "فيتامين K"
+    ],
+    "category": "science",
+    "factKey": "v860:medicine:newfact:007"
+  },
+  {
+    "id": "science-new-0020",
+    "type": "text",
+    "question": "ما العدد الذري لعنصر المغنيسيوم؟",
+    "correctAnswers": [
+      "12"
+    ],
+    "wrongAnswers": [
+      "13",
+      "16",
+      "28"
+    ],
+    "category": "science",
+    "factKey": "science:chem:atomic:Mg"
+  },
+  {
+    "id": "space-v860-new-018-a",
+    "type": "text",
+    "question": "ما نوع الجرم الذي تتكون منه الشمس؟",
+    "correctAnswers": [
+      "نجم"
+    ],
+    "wrongAnswers": [
+      "درب التبانة",
+      "أورانوس",
+      "نيل أرمسترونغ",
+      "أفق الحدث",
+      "مجرة أندروميدا"
+    ],
+    "category": "science",
+    "factKey": "v860:space:newfact:018"
+  },
+  {
+    "id": "space-v860-new-006-a",
+    "type": "text",
+    "question": "ما اسم قمر الأرض الطبيعي؟",
+    "correctAnswers": [
+      "القمر"
+    ],
+    "wrongAnswers": [
+      "يوري غاغارين",
+      "زحل",
+      "نجم",
+      "سبوتنيك 1",
+      "غانيميد"
+    ],
+    "category": "science",
+    "factKey": "v860:space:newfact:006"
+  },
+  {
+    "id": "science-new-0125",
+    "type": "text",
+    "question": "ما أكبر عظم في جسم الإنسان؟",
+    "correctAnswers": [
+      "عظم الفخذ",
+      "الفخذ"
+    ],
+    "wrongAnswers": [
+      "العضد",
+      "القص",
+      "الزند"
+    ],
+    "category": "science",
+    "factKey": "science:biology:125"
+  },
+  {
+    "id": "science-new-0095",
+    "type": "text",
+    "question": "أي كمية تساوي المسافة مقسومة على الزمن؟",
+    "correctAnswers": [
+      "السرعة"
+    ],
+    "wrongAnswers": [
+      "التسارع",
+      "القوة",
+      "الزخم"
+    ],
+    "category": "science",
+    "factKey": "science:physics:95"
+  },
+  {
+    "id": "science-new-0053",
+    "type": "text",
+    "question": "ما الرمز الكيميائي لعنصر الرصاص؟",
+    "correctAnswers": [
+      "Pb"
+    ],
+    "wrongAnswers": [
+      "U",
+      "C",
+      "Mg"
+    ],
+    "category": "science",
+    "factKey": "science:chem:symbol:Pb"
+  },
+  {
+    "id": "science-new-0107",
+    "type": "text",
+    "question": "ما اسم ميل الجسم للمحافظة على حالته من الحركة أو السكون؟",
+    "correctAnswers": [
+      "القصور الذاتي",
+      "العطالة"
+    ],
+    "wrongAnswers": [
+      "المرونة",
+      "الطفو",
+      "الانكسار"
+    ],
+    "category": "science",
+    "factKey": "science:physics:107"
+  },
+  {
+    "id": "medicine-v860-new-016-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الخلايا المسؤولة أساسًا عن الدفاع المناعي في الدم؟",
+    "correctAnswers": [
+      "خلايا الدم البيضاء"
+    ],
+    "wrongAnswers": [
+      "الصفائح الدموية",
+      "المرارة",
+      "فيتامين C",
+      "الكليتان",
+      "الغدة الدرقية"
+    ],
+    "category": "science",
+    "factKey": "v860:medicine:newfact:016"
+  },
+  {
+    "id": "science-v85-alt-00003",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: أي كوكب يدور حول محوره باتجاه معاكس لمعظم كواكب المجموعة الشمسية؟",
+    "correctAnswers": [
+      "الزهرة",
+      "كوكب الزهرة"
+    ],
+    "wrongAnswers": [
+      "المريخ",
+      "عطارد",
+      "نبتون"
+    ],
+    "category": "science",
+    "factKey": "science:single:science-m03"
+  },
+  {
+    "id": "medicine-v85-alt-00015",
+    "type": "text",
+    "question": "أيّ عضو داخلي في جسم الإنسان يُعد الأكبر؟",
+    "correctAnswers": [
+      "الكبد"
+    ],
+    "wrongAnswers": [
+      "206",
+      "فيتامين C",
+      "معدل ضربات القلب",
+      "البكتيريا",
+      "الشبكية",
+      "خلايا بيتا"
+    ],
+    "category": "science",
+    "factKey": "extra2:medicine:005"
+  },
+  {
+    "id": "extra2-space-004",
+    "type": "text",
+    "question": "من أول إنسان سافر إلى الفضاء؟",
+    "correctAnswers": [
+      "يوري غاغارين"
+    ],
+    "wrongAnswers": [
+      "نجم",
+      "كوكب قزم",
+      "الأرض",
+      "الزهرة",
+      "غانيميد",
+      "سبوتنيك 1"
+    ],
+    "category": "science",
+    "factKey": "extra2:space:004"
+  },
+  {
+    "id": "space-v85-alt-00009",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما القمر الطبيعي للأرض؟",
+    "correctAnswers": [
+      "القمر"
+    ],
+    "wrongAnswers": [
+      "المريخ",
+      "زحل",
+      "1969",
+      "يوري غاغارين",
+      "فالنتينا تيريشكوفا",
+      "نجم"
+    ],
+    "category": "science",
+    "factKey": "space-004"
+  },
+  {
+    "id": "space-v860-new-017-a",
+    "type": "text",
+    "question": "ما اسم البقعة الحمراء العملاقة على المشتري؟",
+    "correctAnswers": [
+      "البقعة الحمراء العظيمة"
+    ],
+    "wrongAnswers": [
+      "أفق الحدث",
+      "سبوتنيك 1",
+      "غانيميد",
+      "الشمس",
+      "المشتري"
+    ],
+    "category": "science",
+    "factKey": "v860:space:newfact:017"
+  },
+  {
+    "id": "science-new-0133",
+    "type": "text",
+    "question": "ما الطبقة الخارجية الصلبة من الأرض؟",
+    "correctAnswers": [
+      "القشرة الأرضية",
+      "القشرة"
+    ],
+    "wrongAnswers": [
+      "اللب الخارجي",
+      "اللب الداخلي",
+      "الوشاح السفلي"
+    ],
+    "category": "science",
+    "factKey": "science:mixed:133"
+  },
+  {
+    "id": "science-single-001",
+    "type": "text",
+    "question": "ما العدد الذري لعنصر الكربون؟",
+    "correctAnswers": [
+      "6",
+      "ستة"
+    ],
+    "wrongAnswers": [
+      "5",
+      "7",
+      "8"
+    ],
+    "category": "science",
+    "factKey": "science:single:science-m01"
+  },
+  {
+    "id": "medicine-001",
+    "type": "text",
+    "question": "ما العضو الذي يضخ الدم في جسم الإنسان؟",
+    "correctAnswers": [
+      "القلب"
+    ],
+    "wrongAnswers": [
+      "الكليتان",
+      "الدم",
+      "الجلد",
+      "فيتامين د",
+      "37",
+      "البنكرياس"
+    ],
+    "category": "science",
+    "factKey": "medicine-001"
+  },
+  {
+    "id": "science-v860-new-020-a",
+    "type": "text",
+    "question": "ما نوع الروابط التي تشارك فيها الذرات إلكترونات؟",
+    "correctAnswers": [
+      "الروابط التساهمية"
+    ],
+    "wrongAnswers": [
+      "الميتوكوندريا",
+      "365 يومًا",
+      "حمض الهيدروكلوريك",
+      "O سالب",
+      "لا"
+    ],
+    "category": "science",
+    "factKey": "v860:science:newfact:020"
+  },
+  {
+    "id": "medicine-v85-alt-00018",
+    "type": "text",
+    "question": "ما الذي يقيس النبض عادة؟",
+    "correctAnswers": [
+      "معدل ضربات القلب"
+    ],
+    "wrongAnswers": [
+      "البكتيريا",
+      "الشبكية",
+      "خلايا بيتا",
+      "O سالب",
+      "عظم الفخذ",
+      "الصفائح الدموية"
+    ],
+    "category": "science",
+    "factKey": "extra2:medicine:008"
+  },
+  {
+    "id": "science-new-0082",
+    "type": "text",
+    "question": "ما الغاز الأكثر وفرة في الغلاف الجوي للأرض؟",
+    "correctAnswers": [
+      "النيتروجين",
+      "النتروجين"
+    ],
+    "wrongAnswers": [
+      "الأكسجين",
+      "ثاني أكسيد الكربون",
+      "الأرجون"
+    ],
+    "category": "science",
+    "factKey": "science:chem:core:82"
+  },
+  {
+    "id": "science-new-0066",
+    "type": "text",
+    "question": "ما الصيغة الكيميائية لـبيكربونات الصوديوم؟",
+    "correctAnswers": [
+      "NaHCO3"
+    ],
+    "wrongAnswers": [
+      "NaCl",
+      "NaOH",
+      "CaCO3"
+    ],
+    "category": "science",
+    "factKey": "science:chem:formula:NaHCO3"
+  },
+  {
+    "id": "science-new-0151",
+    "type": "text",
+    "question": "أي نوع من الأوعية الدموية يحمل الدم بعيدًا عن القلب عادة؟",
+    "correctAnswers": [
+      "الشرايين",
+      "الشريان"
+    ],
+    "wrongAnswers": [
+      "الأوردة",
+      "الشعيرات فقط",
+      "الأوعية اللمفية"
+    ],
+    "category": "science",
+    "factKey": "science:mixed:151"
+  },
+  {
+    "id": "space-004",
+    "type": "text",
+    "question": "ما القمر الطبيعي للأرض؟",
+    "correctAnswers": [
+      "القمر"
+    ],
+    "wrongAnswers": [
+      "المريخ",
+      "زحل",
+      "1969",
+      "يوري غاغارين",
+      "فالنتينا تيريشكوفا",
+      "نجم"
+    ],
+    "category": "science",
+    "factKey": "space-004"
+  },
+  {
+    "id": "science-v860-new-005-a",
+    "type": "text",
+    "question": "ما الوحدة الدولية للقوة؟",
+    "correctAnswers": [
+      "النيوتن"
+    ],
+    "wrongAnswers": [
+      "DNA",
+      "365 يومًا",
+      "الزهرة",
+      "الزئبق",
+      "الواط"
+    ],
+    "category": "science",
+    "factKey": "v860:science:newfact:005"
+  },
+  {
+    "id": "science-new-0028",
+    "type": "text",
+    "question": "ما العدد الذري لعنصر الكبريت؟",
+    "correctAnswers": [
+      "16"
+    ],
+    "wrongAnswers": [
+      "17",
+      "26",
+      "50"
+    ],
+    "category": "science",
+    "factKey": "science:chem:atomic:S"
+  },
+  {
+    "id": "science-v860-new-014-a",
+    "type": "text",
+    "question": "ما المعدن السائل في درجة حرارة الغرفة؟",
+    "correctAnswers": [
+      "الزئبق"
+    ],
+    "wrongAnswers": [
+      "الأمبير",
+      "H2O",
+      "البناء الضوئي",
+      "300000",
+      "المريخ"
+    ],
+    "category": "science",
+    "factKey": "v860:science:newfact:014"
+  },
+  {
+    "id": "medicine-v860-new-011-b",
+    "type": "text",
+    "question": "اذكر الإجابة: المعدن المهم في تكوين الهيموغلوبين؟",
+    "correctAnswers": [
+      "الحديد"
+    ],
+    "wrongAnswers": [
+      "الكبد",
+      "البنكرياس",
+      "معدل ضربات القلب",
+      "فيتامين C",
+      "O سالب"
+    ],
+    "category": "science",
+    "factKey": "v860:medicine:newfact:011"
+  },
+  {
+    "id": "space-v85-alt-00014",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من أول إنسان سافر إلى الفضاء؟",
+    "correctAnswers": [
+      "يوري غاغارين"
+    ],
+    "wrongAnswers": [
+      "نجم",
+      "كوكب قزم",
+      "الأرض",
+      "الزهرة",
+      "غانيميد",
+      "سبوتنيك 1"
+    ],
+    "category": "science",
+    "factKey": "extra2:space:004"
+  },
+  {
+    "id": "medicine-v860-new-013-b",
+    "type": "text",
+    "question": "اذكر الإجابة: العصب الذي ينقل الإشارات البصرية من العين إلى الدماغ؟",
+    "correctAnswers": [
+      "العصب البصري"
+    ],
+    "wrongAnswers": [
+      "الشبكية",
+      "فيتامين C",
+      "206",
+      "الكليتان",
+      "فيتامين د"
+    ],
+    "category": "science",
+    "factKey": "v860:medicine:newfact:013"
+  },
+  {
+    "id": "science-v85-alt-00012",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الصيغة الكيميائية للماء؟",
+    "correctAnswers": [
+      "H2O"
+    ],
+    "wrongAnswers": [
+      "الكلوروفيل",
+      "100",
+      "DNA",
+      "365 يومًا",
+      "6",
+      "النيوتن"
+    ],
+    "category": "science",
+    "factKey": "extra2:science:002"
+  },
+  {
+    "id": "science-v85-alt-00002",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما وحدة القوة في النظام الدولي للوحدات؟",
+    "correctAnswers": [
+      "النيوتن",
+      "نيوتن"
+    ],
+    "wrongAnswers": [
+      "الجول",
+      "الباسكال",
+      "الواط"
+    ],
+    "category": "science",
+    "factKey": "science:single:science-m02"
+  },
+  {
+    "id": "extra2-space-008",
+    "type": "text",
+    "question": "حول أي كوكب تدور محطة الفضاء الدولية؟",
+    "correctAnswers": [
+      "الأرض"
+    ],
+    "wrongAnswers": [
+      "غانيميد",
+      "سبوتنيك 1",
+      "المشتري",
+      "أفق الحدث",
+      "مجرة أندروميدا",
+      "عطارد"
+    ],
+    "category": "science",
+    "factKey": "extra2:space:008"
+  },
+  {
+    "id": "science-new-0033",
+    "type": "text",
+    "question": "ما الرمز الكيميائي لعنصر الكالسيوم؟",
+    "correctAnswers": [
+      "Ca"
+    ],
+    "wrongAnswers": [
+      "Fe",
+      "Ag",
+      "U"
+    ],
+    "category": "science",
+    "factKey": "science:chem:symbol:Ca"
+  },
+  {
+    "id": "science-new-0038",
+    "type": "text",
+    "question": "ما العدد الذري لعنصر النيكل؟",
+    "correctAnswers": [
+      "28"
+    ],
+    "wrongAnswers": [
+      "29",
+      "50",
+      "92"
+    ],
+    "category": "science",
+    "factKey": "science:chem:atomic:Ni"
+  },
+  {
+    "id": "science-v860-new-001-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الرمز الكيميائي للذهب؟",
+    "correctAnswers": [
+      "Au"
+    ],
+    "wrongAnswers": [
+      "الجاذبية",
+      "لا",
+      "الألماس",
+      "الجول",
+      "الأمبير"
+    ],
+    "category": "science",
+    "factKey": "v860:science:newfact:001"
+  },
+  {
+    "id": "science-new-0129",
+    "type": "text",
+    "question": "ما نوع الانقسام الذي يخفض عدد الكروموسومات إلى النصف لتكوين الأمشاج؟",
+    "correctAnswers": [
+      "الانقسام المنصف",
+      "الاختزالي",
+      "الميوزي"
+    ],
+    "wrongAnswers": [
+      "الانقسام المتساوي",
+      "الانشطار الثنائي",
+      "التبرعم"
+    ],
+    "category": "science",
+    "factKey": "science:biology:129"
+  },
+  {
+    "id": "science-new-0007",
+    "type": "text",
+    "question": "ما الرمز الكيميائي لعنصر الكربون؟",
+    "correctAnswers": [
+      "C"
+    ],
+    "wrongAnswers": [
+      "N",
+      "Na",
+      "Cl"
+    ],
+    "category": "science",
+    "factKey": "science:chem:symbol:C"
+  },
+  {
+    "id": "science-single-003",
+    "type": "text",
+    "question": "أي كوكب يدور حول محوره باتجاه معاكس لمعظم كواكب المجموعة الشمسية؟",
+    "correctAnswers": [
+      "الزهرة",
+      "كوكب الزهرة"
+    ],
+    "wrongAnswers": [
+      "المريخ",
+      "عطارد",
+      "نبتون"
+    ],
+    "category": "science",
+    "factKey": "science:single:science-m03"
+  },
+  {
+    "id": "science-new-0112",
+    "type": "text",
+    "question": "ما الصبغة الخضراء التي تساعد النبات على امتصاص الضوء؟",
+    "correctAnswers": [
+      "الكلوروفيل",
+      "اليخضور"
+    ],
+    "wrongAnswers": [
+      "الهيموغلوبين",
+      "الميلانين",
+      "الكيراتين"
+    ],
+    "category": "science",
+    "factKey": "science:biology:112"
+  },
+  {
+    "id": "medicine-v860-new-019-a",
+    "type": "text",
+    "question": "ما الغدة الموجودة في مقدمة الرقبة وتنظم الأيض بهرموناتها؟",
+    "correctAnswers": [
+      "الغدة الدرقية"
+    ],
+    "wrongAnswers": [
+      "عظم الفخذ",
+      "القلب",
+      "الحبل الشوكي",
+      "الكليتان",
+      "خلايا الدم الحمراء"
+    ],
+    "category": "science",
+    "factKey": "v860:medicine:newfact:019"
+  },
+  {
+    "id": "science-new-0126",
+    "type": "text",
+    "question": "ما أكبر عضو في جسم الإنسان من حيث المساحة؟",
+    "correctAnswers": [
+      "الجلد"
+    ],
+    "wrongAnswers": [
+      "الكبد",
+      "القلب",
+      "الرئة"
+    ],
+    "category": "science",
+    "factKey": "science:biology:126"
+  },
+  {
+    "id": "space-v860-new-003-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الكوكب الأقرب إلى الشمس؟",
+    "correctAnswers": [
+      "عطارد"
+    ],
+    "wrongAnswers": [
+      "أفق الحدث",
+      "يوري غاغارين",
+      "سبوتنيك 1",
+      "القمر",
+      "المريخ"
+    ],
+    "category": "science",
+    "factKey": "v860:space:newfact:003"
+  },
+  {
+    "id": "space-v860-new-001-a",
+    "type": "text",
+    "question": "ما أكبر كوكب في المجموعة الشمسية — سؤال إضافي 1؟",
+    "correctAnswers": [
+      "المشتري"
+    ],
+    "wrongAnswers": [
+      "أورانوس",
+      "المريخ",
+      "عطارد",
+      "القمر",
+      "سبوتنيك 1"
+    ],
+    "category": "science",
+    "factKey": "v860:space:newfact:001"
+  },
+  {
+    "id": "science-v860-new-004-a",
+    "type": "text",
+    "question": "ما الرمز الكيميائي للحديد؟",
+    "correctAnswers": [
+      "Fe"
+    ],
+    "wrongAnswers": [
+      "الزئبق",
+      "التسامي",
+      "لا",
+      "الأمبير",
+      "البناء الضوئي"
+    ],
+    "category": "science",
+    "factKey": "v860:science:newfact:004"
+  },
+  {
+    "id": "extra2-science-004",
+    "type": "text",
+    "question": "هل ينتقل الصوت في الفراغ؟",
+    "correctAnswers": [
+      "لا"
+    ],
+    "wrongAnswers": [
+      "DNA",
+      "365 يومًا",
+      "6",
+      "النيوتن",
+      "الزهرة",
+      "7"
+    ],
+    "category": "science",
+    "factKey": "extra2:science:004"
+  },
+  {
+    "id": "science-002",
+    "type": "text",
+    "question": "ما الصيغة الكيميائية للماء؟",
+    "correctAnswers": [
+      "H2O"
+    ],
+    "wrongAnswers": [
+      "الأكسجين",
+      "الأمبير",
+      "الجاذبية",
+      "O",
+      "لا",
+      "الكلوروفيل"
+    ],
+    "category": "science",
+    "factKey": "science-002"
+  },
+  {
+    "id": "space-v860-new-019-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الاسم لمنطقة الجاذبية الشديدة التي لا يفلت منها الضوء بعد أفق الحدث؟",
+    "correctAnswers": [
+      "الثقب الأسود"
+    ],
+    "wrongAnswers": [
+      "المريخ",
+      "نجم",
+      "سبوتنيك 1",
+      "غانيميد",
+      "البقعة الحمراء العظيمة"
+    ],
+    "category": "science",
+    "factKey": "v860:space:newfact:019"
+  },
+  {
+    "id": "extra2-science-006",
+    "type": "text",
+    "question": "ما قيمة الرقم الهيدروجيني للمحلول المتعادل تقريبًا؟",
+    "correctAnswers": [
+      "7"
+    ],
+    "wrongAnswers": [
+      "6",
+      "النيوتن",
+      "الزهرة",
+      "300000",
+      "المريخ",
+      "H2O"
+    ],
+    "category": "science",
+    "factKey": "extra2:science:006"
+  },
+  {
+    "id": "science-new-0016",
+    "type": "text",
+    "question": "ما العدد الذري لعنصر النيون؟",
+    "correctAnswers": [
+      "10"
+    ],
+    "wrongAnswers": [
+      "11",
+      "14",
+      "20"
+    ],
+    "category": "science",
+    "factKey": "science:chem:atomic:Ne"
+  },
+  {
+    "id": "medicine-v860-new-017-a",
+    "type": "text",
+    "question": "ما الجزء من الدم الذي يساعد على التخثر؟",
+    "correctAnswers": [
+      "الصفائح الدموية"
+    ],
+    "wrongAnswers": [
+      "الصمام التاجي",
+      "خلايا بيتا",
+      "الرئتان",
+      "فيتامين D",
+      "معدل ضربات القلب"
+    ],
+    "category": "science",
+    "factKey": "v860:medicine:newfact:017"
+  },
+  {
+    "id": "space-v85-alt-00015",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من أول امرأة سافرت إلى الفضاء؟",
+    "correctAnswers": [
+      "فالنتينا تيريشكوفا"
+    ],
+    "wrongAnswers": [
+      "كوكب قزم",
+      "الأرض",
+      "الزهرة",
+      "غانيميد",
+      "سبوتنيك 1",
+      "المشتري"
+    ],
+    "category": "science",
+    "factKey": "extra2:space:005"
+  },
+  {
+    "id": "extra2-medicine-007",
+    "type": "text",
+    "question": "أي فيتامين يرتبط نقصه بمرض الإسقربوط؟",
+    "correctAnswers": [
+      "فيتامين C"
+    ],
+    "wrongAnswers": [
+      "معدل ضربات القلب",
+      "البكتيريا",
+      "الشبكية",
+      "خلايا بيتا",
+      "O سالب",
+      "عظم الفخذ"
+    ],
+    "category": "science",
+    "factKey": "extra2:medicine:007"
+  },
+  {
+    "id": "science-new-0060",
+    "type": "text",
+    "question": "ما الصيغة الكيميائية لـالأمونيا؟",
+    "correctAnswers": [
+      "NH3"
+    ],
+    "wrongAnswers": [
+      "NH4",
+      "NO2",
+      "CH4"
+    ],
+    "category": "science",
+    "factKey": "science:chem:formula:NH3"
+  },
+  {
+    "id": "science-new-0110",
+    "type": "text",
+    "question": "أين توجد المادة الوراثية DNA أساسًا في الخلية حقيقية النواة؟",
+    "correctAnswers": [
+      "النواة"
+    ],
+    "wrongAnswers": [
+      "الغشاء الخلوي",
+      "الفجوة",
+      "السيتوبلازم فقط"
+    ],
+    "category": "science",
+    "factKey": "science:biology:110"
+  },
+  {
+    "id": "science-new-0118",
+    "type": "text",
+    "question": "ما الجزء السائل من الدم؟",
+    "correctAnswers": [
+      "البلازما"
+    ],
+    "wrongAnswers": [
+      "الهيموغلوبين",
+      "الصفائح",
+      "اللمف"
+    ],
+    "category": "science",
+    "factKey": "science:biology:118"
+  },
+  {
+    "id": "science-new-0030",
+    "type": "text",
+    "question": "ما العدد الذري لعنصر الكلور؟",
+    "correctAnswers": [
+      "17"
+    ],
+    "wrongAnswers": [
+      "19",
+      "28",
+      "53"
+    ],
+    "category": "science",
+    "factKey": "science:chem:atomic:Cl"
+  },
+  {
+    "id": "medicine-v860-new-015-b",
+    "type": "text",
+    "question": "اذكر الإجابة: السائل الذي يحيط بالدماغ والحبل الشوكي ويحميهما؟",
+    "correctAnswers": [
+      "السائل الدماغي الشوكي"
+    ],
+    "wrongAnswers": [
+      "القرنية",
+      "الكليتان",
+      "الهيموغلوبين",
+      "البنكرياس",
+      "الرئتان"
+    ],
+    "category": "science",
+    "factKey": "v860:medicine:newfact:015"
+  },
+  {
+    "id": "space-v85-alt-00005",
+    "type": "text",
+    "question": "ما الاسم الذي يُطلق على المجرة الكبيرة الأقرب إلى درب التبانة؟",
+    "correctAnswers": [
+      "مجرة أندروميدا",
+      "أندروميدا"
+    ],
+    "wrongAnswers": [
+      "مجرة المثلث",
+      "سحابة ماجلان الكبرى",
+      "مجرة سومبريرو"
+    ],
+    "category": "science",
+    "factKey": "space:single:space-m05"
+  },
+  {
+    "id": "science-new-0018",
+    "type": "text",
+    "question": "ما العدد الذري لعنصر الصوديوم؟",
+    "correctAnswers": [
+      "11"
+    ],
+    "wrongAnswers": [
+      "12",
+      "15",
+      "26"
+    ],
+    "category": "science",
+    "factKey": "science:chem:atomic:Na"
+  },
+  {
+    "id": "science-new-0108",
+    "type": "text",
+    "question": "ما الوحدة الأساسية لبناء الكائنات الحية؟",
+    "correctAnswers": [
+      "الخلية"
+    ],
+    "wrongAnswers": [
+      "النسيج",
+      "العضو",
+      "الجزيء"
+    ],
+    "category": "science",
+    "factKey": "science:biology:108"
+  },
+  {
+    "id": "medicine-v860-new-002-b",
+    "type": "text",
+    "question": "اذكر الإجابة: العضو الذي يضخ الدم في الجسم؟",
+    "correctAnswers": [
+      "القلب"
+    ],
+    "wrongAnswers": [
+      "خلايا الدم البيضاء",
+      "الدم",
+      "206",
+      "الهيموغلوبين",
+      "البنكرياس"
+    ],
+    "category": "science",
+    "factKey": "v860:medicine:newfact:002"
+  },
+  {
+    "id": "medicine-v860-new-002-a",
+    "type": "text",
+    "question": "ما العضو الذي يضخ الدم في الجسم؟",
+    "correctAnswers": [
+      "القلب"
+    ],
+    "wrongAnswers": [
+      "الشريان الأبهر",
+      "الكليتان",
+      "المرارة",
+      "الجلد",
+      "الكبد"
+    ],
+    "category": "science",
+    "factKey": "v860:medicine:newfact:002"
+  },
+  {
+    "id": "space-v860-new-002-a",
+    "type": "text",
+    "question": "ما أصغر كوكب في المجموعة الشمسية؟",
+    "correctAnswers": [
+      "عطارد"
+    ],
+    "wrongAnswers": [
+      "أورانوس",
+      "زحل",
+      "المريخ",
+      "الزهرة",
+      "غانيميد"
+    ],
+    "category": "science",
+    "factKey": "v860:space:newfact:002"
+  },
+  {
+    "id": "science-new-0138",
+    "type": "text",
+    "question": "ما أكثر المعادن صلادة على مقياس موس؟",
+    "correctAnswers": [
+      "الألماس",
+      "الماس"
+    ],
+    "wrongAnswers": [
+      "الكوارتز",
+      "التلك",
+      "الجبس"
+    ],
+    "category": "science",
+    "factKey": "science:mixed:138"
+  },
+  {
+    "id": "science-new-0052",
+    "type": "text",
+    "question": "ما العدد الذري لعنصر الزئبق؟",
+    "correctAnswers": [
+      "80"
+    ],
+    "wrongAnswers": [
+      "82",
+      "2",
+      "9"
+    ],
+    "category": "science",
+    "factKey": "science:chem:atomic:Hg"
+  },
+  {
+    "id": "science-v85-alt-00015",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الصبغة الخضراء الأساسية في عملية البناء الضوئي؟",
+    "correctAnswers": [
+      "الكلوروفيل"
+    ],
+    "wrongAnswers": [
+      "365 يومًا",
+      "6",
+      "النيوتن",
+      "الزهرة",
+      "7",
+      "300000"
+    ],
+    "category": "science",
+    "factKey": "extra2:science:005"
+  },
+  {
+    "id": "medicine-v85-alt-00010",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الفيتامين الذي يصنعه الجلد عند التعرض المناسب لأشعة الشمس؟",
+    "correctAnswers": [
+      "فيتامين د",
+      "Vitamin D",
+      "D"
+    ],
+    "wrongAnswers": [
+      "37",
+      "البنكرياس",
+      "خلايا الدم الحمراء",
+      "الرئتان",
+      "الكبد",
+      "206"
+    ],
+    "category": "science",
+    "factKey": "medicine-005"
+  },
+  {
+    "id": "science-v860-new-019-a",
+    "type": "text",
+    "question": "ما نوع الدم الذي يسمى مانحًا عامًا لخلايا الدم الحمراء؟",
+    "correctAnswers": [
+      "O سالب"
+    ],
+    "wrongAnswers": [
+      "لا",
+      "الكلوروفيل",
+      "Fe",
+      "النيوتن",
+      "الألماس"
+    ],
+    "category": "science",
+    "factKey": "v860:science:newfact:019"
+  },
+  {
+    "id": "science-new-0137",
+    "type": "text",
+    "question": "ما المقياس الذي يستخدم لوصف صلادة المعادن من 1 إلى 10؟",
+    "correctAnswers": [
+      "مقياس موس",
+      "موس"
+    ],
+    "wrongAnswers": [
+      "مقياس ريختر",
+      "مقياس بوفورت",
+      "مقياس سيلسيوس"
+    ],
+    "category": "science",
+    "factKey": "science:mixed:137"
+  },
+  {
+    "id": "science-v860-new-007-a",
+    "type": "text",
+    "question": "ما الوحدة الدولية للقدرة؟",
+    "correctAnswers": [
+      "الواط"
+    ],
+    "wrongAnswers": [
+      "Na",
+      "الجاذبية",
+      "O سالب",
+      "الروابط التساهمية",
+      "البناء الضوئي"
+    ],
+    "category": "science",
+    "factKey": "v860:science:newfact:007"
+  },
+  {
+    "id": "medicine-v860-new-003-a",
+    "type": "text",
+    "question": "ما العضوان المسؤولان أساسًا عن تنقية الدم وإنتاج البول؟",
+    "correctAnswers": [
+      "الكليتان"
+    ],
+    "wrongAnswers": [
+      "فيتامين C",
+      "العصب البصري",
+      "خلايا الدم البيضاء",
+      "البكتيريا",
+      "الكبد"
+    ],
+    "category": "science",
+    "factKey": "v860:medicine:newfact:003"
+  },
+  {
+    "id": "science-new-0054",
+    "type": "text",
+    "question": "ما العدد الذري لعنصر الرصاص؟",
+    "correctAnswers": [
+      "82"
+    ],
+    "wrongAnswers": [
+      "92",
+      "3",
+      "10"
+    ],
+    "category": "science",
+    "factKey": "science:chem:atomic:Pb"
+  },
+  {
+    "id": "medicine-v85-alt-00020",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الجزء الحساس للضوء في مؤخرة العين؟",
+    "correctAnswers": [
+      "الشبكية"
+    ],
+    "wrongAnswers": [
+      "خلايا بيتا",
+      "O سالب",
+      "عظم الفخذ",
+      "الصفائح الدموية",
+      "الصمام التاجي",
+      "القلب"
+    ],
+    "category": "science",
+    "factKey": "extra2:medicine:010"
+  },
+  {
+    "id": "space-005",
+    "type": "text",
+    "question": "من أول إنسان مشى على سطح القمر؟",
+    "correctAnswers": [
+      "نيل أرمسترونغ",
+      "Neil Armstrong"
+    ],
+    "wrongAnswers": [
+      "زحل",
+      "1969",
+      "يوري غاغارين",
+      "فالنتينا تيريشكوفا",
+      "نجم",
+      "كوكب قزم"
+    ],
+    "category": "science",
+    "factKey": "space-005"
+  },
+  {
+    "id": "space-v85-alt-00019",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما المجرة التي يوجد فيها النظام الشمسي؟",
+    "correctAnswers": [
+      "درب التبانة"
+    ],
+    "wrongAnswers": [
+      "سبوتنيك 1",
+      "المشتري",
+      "أفق الحدث",
+      "مجرة أندروميدا",
+      "عطارد",
+      "القمر"
+    ],
+    "category": "science",
+    "factKey": "extra2:space:009"
+  },
+  {
+    "id": "science-v860-new-013-b",
+    "type": "text",
+    "question": "اذكر الإجابة: أقسى مادة طبيعية معروفة؟",
+    "correctAnswers": [
+      "الألماس"
+    ],
+    "wrongAnswers": [
+      "365 يومًا",
+      "الأمبير",
+      "Na",
+      "Fe",
+      "6"
+    ],
+    "category": "science",
+    "factKey": "v860:science:newfact:013"
+  },
+  {
+    "id": "space-v860-new-007-b",
+    "type": "text",
+    "question": "اذكر الإجابة: أكبر قمر في المجموعة الشمسية؟",
+    "correctAnswers": [
+      "غانيميد"
+    ],
+    "wrongAnswers": [
+      "يوري غاغارين",
+      "درب التبانة",
+      "نيل أرمسترونغ",
+      "المريخ",
+      "السنة الضوئية"
+    ],
+    "category": "science",
+    "factKey": "v860:space:newfact:007"
+  },
+  {
+    "id": "medicine-v85-alt-00013",
+    "type": "text",
+    "question": "حدّد المكان الصحيح: في أي خلايا يوجد الهيموغلوبين أساسًا؟",
+    "correctAnswers": [
+      "خلايا الدم الحمراء"
+    ],
+    "wrongAnswers": [
+      "الرئتان",
+      "الكبد",
+      "206",
+      "فيتامين C",
+      "معدل ضربات القلب",
+      "البكتيريا"
+    ],
+    "category": "science",
+    "factKey": "extra2:medicine:003"
+  },
+  {
+    "id": "medicine-v860-new-004-b",
+    "type": "text",
+    "question": "اذكر الإجابة: العضو الذي ينتج الإنسولين؟",
+    "correctAnswers": [
+      "البنكرياس"
+    ],
+    "wrongAnswers": [
+      "فيتامين د",
+      "الشبكية",
+      "البكتيريا",
+      "O سالب",
+      "الغدة الدرقية"
+    ],
+    "category": "science",
+    "factKey": "v860:medicine:newfact:004"
+  },
+  {
+    "id": "extra2-science-002",
+    "type": "text",
+    "question": "ما الصيغة الكيميائية للماء؟",
+    "correctAnswers": [
+      "H2O"
+    ],
+    "wrongAnswers": [
+      "الكلوروفيل",
+      "100",
+      "DNA",
+      "365 يومًا",
+      "6",
+      "النيوتن"
+    ],
+    "category": "science",
+    "factKey": "extra2:science:002"
+  },
+  {
+    "id": "science-new-0096",
+    "type": "text",
+    "question": "ما التغير في السرعة بالنسبة للزمن؟",
+    "correctAnswers": [
+      "التسارع"
+    ],
+    "wrongAnswers": [
+      "الزخم",
+      "الشغل",
+      "القدرة"
+    ],
+    "category": "science",
+    "factKey": "science:physics:96"
+  },
+  {
+    "id": "space-single-001",
+    "type": "text",
+    "question": "ما أكبر قمر في المجموعة الشمسية؟",
+    "correctAnswers": [
+      "غانيميد",
+      "جانيميد"
+    ],
+    "wrongAnswers": [
+      "تيتان",
+      "كاليستو",
+      "آيو"
+    ],
+    "category": "science",
+    "factKey": "space:single:space-m01"
+  },
+  {
+    "id": "extra2-medicine-009",
+    "type": "text",
+    "question": "تستخدم المضادات الحيوية أساسًا ضد أي نوع من مسببات المرض؟",
+    "correctAnswers": [
+      "البكتيريا"
+    ],
+    "wrongAnswers": [
+      "الشبكية",
+      "خلايا بيتا",
+      "O سالب",
+      "عظم الفخذ",
+      "الصفائح الدموية",
+      "الصمام التاجي"
+    ],
+    "category": "science",
+    "factKey": "extra2:medicine:009"
+  },
+  {
+    "id": "science-new-0008",
+    "type": "text",
+    "question": "ما العدد الذري لعنصر الكربون؟",
+    "correctAnswers": [
+      "6"
+    ],
+    "wrongAnswers": [
+      "7",
+      "10",
+      "15"
+    ],
+    "category": "science",
+    "factKey": "science:chem:atomic:C"
+  },
+  {
+    "id": "medicine-v85-alt-00012",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: أي عضو يفرز الإنسولين؟",
+    "correctAnswers": [
+      "البنكرياس"
+    ],
+    "wrongAnswers": [
+      "خلايا الدم الحمراء",
+      "الرئتان",
+      "الكبد",
+      "206",
+      "فيتامين C",
+      "معدل ضربات القلب"
+    ],
+    "category": "science",
+    "factKey": "extra2:medicine:002"
+  },
+  {
+    "id": "science-new-0045",
+    "type": "text",
+    "question": "ما الرمز الكيميائي لعنصر القصدير؟",
+    "correctAnswers": [
+      "Sn"
+    ],
+    "wrongAnswers": [
+      "I",
+      "U",
+      "O"
+    ],
+    "category": "science",
+    "factKey": "science:chem:symbol:Sn"
+  },
+  {
+    "id": "space-v85-alt-00010",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من أول إنسان مشى على سطح القمر؟",
+    "correctAnswers": [
+      "نيل أرمسترونغ",
+      "Neil Armstrong"
+    ],
+    "wrongAnswers": [
+      "زحل",
+      "1969",
+      "يوري غاغارين",
+      "فالنتينا تيريشكوفا",
+      "نجم",
+      "كوكب قزم"
+    ],
+    "category": "science",
+    "factKey": "space-005"
+  },
+  {
+    "id": "science-new-0150",
+    "type": "text",
+    "question": "ما المعدل الطبيعي التقريبي لحرارة جسم الإنسان الذي يُستعمل كمرجع شائع؟",
+    "correctAnswers": [
+      "37 درجة مئوية",
+      "37 مئوية",
+      "37"
+    ],
+    "wrongAnswers": [
+      "30 درجة مئوية",
+      "42 درجة مئوية",
+      "50 درجة مئوية"
+    ],
+    "category": "science",
+    "factKey": "science:mixed:150"
+  },
+  {
+    "id": "science-v860-new-018-a",
+    "type": "text",
+    "question": "ما الحمض الموجود طبيعيًا في المعدة ويساعد على الهضم؟",
+    "correctAnswers": [
+      "حمض الهيدروكلوريك"
+    ],
+    "wrongAnswers": [
+      "البناء الضوئي",
+      "DNA",
+      "Ag",
+      "الأكسجين",
+      "النيتروجين"
+    ],
+    "category": "science",
+    "factKey": "v860:science:newfact:018"
+  },
+  {
+    "id": "science-new-0113",
+    "type": "text",
+    "question": "ما العملية التي يصنع بها النبات غذاءه باستخدام الضوء؟",
+    "correctAnswers": [
+      "البناء الضوئي",
+      "التمثيل الضوئي"
+    ],
+    "wrongAnswers": [
+      "التنفس الخلوي",
+      "التخمر",
+      "النتح"
+    ],
+    "category": "science",
+    "factKey": "science:biology:113"
+  },
+  {
+    "id": "medicine-v860-new-009-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الفيتامين الذي يصنعه الجلد عند التعرض الكافي لضوء الشمس؟",
+    "correctAnswers": [
+      "فيتامين D"
+    ],
+    "wrongAnswers": [
+      "37",
+      "الرئتان",
+      "القرنية",
+      "العصب البصري",
+      "معدل ضربات القلب"
+    ],
+    "category": "science",
+    "factKey": "v860:medicine:newfact:009"
+  },
+  {
+    "id": "science-new-0037",
+    "type": "text",
+    "question": "ما الرمز الكيميائي لعنصر النيكل؟",
+    "correctAnswers": [
+      "Ni"
+    ],
+    "wrongAnswers": [
+      "Cu",
+      "I",
+      "He"
+    ],
+    "category": "science",
+    "factKey": "science:chem:symbol:Ni"
+  },
+  {
+    "id": "science-new-0080",
+    "type": "text",
+    "question": "أي نوع من الروابط ينشأ عادة من مشاركة الإلكترونات بين الذرات؟",
+    "correctAnswers": [
+      "الرابطة التساهمية",
+      "تساهمية"
+    ],
+    "wrongAnswers": [
+      "الرابطة الأيونية",
+      "الرابطة الفلزية",
+      "الرابطة الهيدروجينية"
+    ],
+    "category": "science",
+    "factKey": "science:chem:core:80"
+  },
+  {
+    "id": "science-v85-alt-00019",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما سرعة الضوء تقريبًا بالكيلومتر في الثانية؟",
+    "correctAnswers": [
+      "300000"
+    ],
+    "wrongAnswers": [
+      "7",
+      "المريخ",
+      "H2O",
+      "الأكسجين",
+      "الأمبير",
+      "الجاذبية"
+    ],
+    "category": "science",
+    "factKey": "extra2:science:009"
+  },
+  {
+    "id": "science-new-0147",
+    "type": "text",
+    "question": "ما العضو الذي يفرز العصارة الصفراوية؟",
+    "correctAnswers": [
+      "الكبد"
+    ],
+    "wrongAnswers": [
+      "المرارة",
+      "المعدة",
+      "البنكرياس"
+    ],
+    "category": "science",
+    "factKey": "science:mixed:147"
+  },
+  {
+    "id": "science-new-0135",
+    "type": "text",
+    "question": "ما اسم الصخور التي تتكون غالبًا من تراكم وترسيب المواد؟",
+    "correctAnswers": [
+      "الصخور الرسوبية",
+      "رسوبية"
+    ],
+    "wrongAnswers": [
+      "الصخور النارية",
+      "الصخور المتحولة",
+      "الصهارة"
+    ],
+    "category": "science",
+    "factKey": "science:mixed:135"
+  },
+  {
+    "id": "science-new-0073",
+    "type": "text",
+    "question": "ما قيمة الرقم الهيدروجيني pH للمحلول المتعادل تقريبًا؟",
+    "correctAnswers": [
+      "7"
+    ],
+    "wrongAnswers": [
+      "1",
+      "5",
+      "14"
+    ],
+    "category": "science",
+    "factKey": "science:chem:core:73"
+  },
+  {
+    "id": "extra2-science-007",
+    "type": "text",
+    "question": "عند كم درجة مئوية يغلي الماء النقي عند مستوى سطح البحر؟",
+    "correctAnswers": [
+      "100"
+    ],
+    "wrongAnswers": [
+      "النيوتن",
+      "الزهرة",
+      "7",
+      "300000",
+      "المريخ",
+      "H2O"
+    ],
+    "category": "science",
+    "factKey": "extra2:science:007"
+  },
+  {
+    "id": "science-new-0091",
+    "type": "text",
+    "question": "ما وحدة قياس الشحنة الكهربائية؟",
+    "correctAnswers": [
+      "الكولوم",
+      "كولوم"
+    ],
+    "wrongAnswers": [
+      "الأمبير",
+      "الفولت",
+      "الأوم"
+    ],
+    "category": "science",
+    "factKey": "science:physics:91"
+  },
+  {
+    "id": "science-new-0055",
+    "type": "text",
+    "question": "ما الرمز الكيميائي لعنصر اليورانيوم؟",
+    "correctAnswers": [
+      "U"
+    ],
+    "wrongAnswers": [
+      "H",
+      "N",
+      "Al"
+    ],
+    "category": "science",
+    "factKey": "science:chem:symbol:U"
+  },
+  {
+    "id": "medicine-v860-new-001-b",
+    "type": "text",
+    "question": "اذكر الإجابة: أكبر عضو في جسم الإنسان؟",
+    "correctAnswers": [
+      "الجلد"
+    ],
+    "wrongAnswers": [
+      "خلايا بيتا",
+      "عظم الفخذ",
+      "فيتامين D",
+      "القلب",
+      "فيتامين C"
+    ],
+    "category": "science",
+    "factKey": "v860:medicine:newfact:001"
+  },
+  {
+    "id": "science-new-0120",
+    "type": "text",
+    "question": "أي عضوين مسؤولان أساسًا عن تبادل الغازات مع الهواء؟",
+    "correctAnswers": [
+      "الرئتان",
+      "الرئة"
+    ],
+    "wrongAnswers": [
+      "الكليتان",
+      "المعدة",
+      "الطحال"
+    ],
+    "category": "science",
+    "factKey": "science:biology:120"
+  },
+  {
+    "id": "space-v860-new-002-b",
+    "type": "text",
+    "question": "اذكر الإجابة: أصغر كوكب في المجموعة الشمسية؟",
+    "correctAnswers": [
+      "عطارد"
+    ],
+    "wrongAnswers": [
+      "نجم",
+      "نبتون",
+      "كوكب قزم",
+      "يوري غاغارين",
+      "المشتري"
+    ],
+    "category": "science",
+    "factKey": "v860:space:newfact:002"
+  },
+  {
+    "id": "science-new-0064",
+    "type": "text",
+    "question": "ما الصيغة الكيميائية لـحمض النيتريك؟",
+    "correctAnswers": [
+      "HNO3"
+    ],
+    "wrongAnswers": [
+      "HNO2",
+      "HCl",
+      "NH3"
+    ],
+    "category": "science",
+    "factKey": "science:chem:formula:HNO3"
+  },
+  {
+    "id": "science-v860-new-008-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الوحدة الدولية لشدة التيار الكهربائي؟",
+    "correctAnswers": [
+      "الأمبير"
+    ],
+    "wrongAnswers": [
+      "300000",
+      "الجاذبية",
+      "DNA",
+      "النيوتن",
+      "الزهرة"
+    ],
+    "category": "science",
+    "factKey": "v860:science:newfact:008"
+  },
+  {
+    "id": "extra2-medicine-008",
+    "type": "text",
+    "question": "ماذا يقيس النبض عادة؟",
+    "correctAnswers": [
+      "معدل ضربات القلب"
+    ],
+    "wrongAnswers": [
+      "البكتيريا",
+      "الشبكية",
+      "خلايا بيتا",
+      "O سالب",
+      "عظم الفخذ",
+      "الصفائح الدموية"
+    ],
+    "category": "science",
+    "factKey": "extra2:medicine:008"
+  },
+  {
+    "id": "science-new-0123",
+    "type": "text",
+    "question": "أين يبدأ هضم النشويات كيميائيًا عند الإنسان؟",
+    "correctAnswers": [
+      "الفم"
+    ],
+    "wrongAnswers": [
+      "المعدة",
+      "الأمعاء الغليظة",
+      "الكبد"
+    ],
+    "category": "science",
+    "factKey": "science:biology:123"
+  },
+  {
+    "id": "science-v860-new-018-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الحمض الموجود طبيعيًا في المعدة ويساعد على الهضم؟",
+    "correctAnswers": [
+      "حمض الهيدروكلوريك"
+    ],
+    "wrongAnswers": [
+      "التسامي",
+      "Fe",
+      "Na",
+      "المريخ",
+      "البناء الضوئي"
+    ],
+    "category": "science",
+    "factKey": "v860:science:newfact:018"
+  },
+  {
+    "id": "science-004",
+    "type": "text",
+    "question": "ما الوحدة الأساسية لقياس شدة التيار الكهربائي؟",
+    "correctAnswers": [
+      "الأمبير",
+      "امبير"
+    ],
+    "wrongAnswers": [
+      "الجاذبية",
+      "O",
+      "لا",
+      "الكلوروفيل",
+      "100",
+      "DNA"
+    ],
+    "category": "science",
+    "factKey": "science-004"
+  },
+  {
+    "id": "science-new-0131",
+    "type": "text",
+    "question": "أي جزء من النبات يمتص معظم الماء والأملاح من التربة؟",
+    "correctAnswers": [
+      "الجذور",
+      "الجذر"
+    ],
+    "wrongAnswers": [
+      "الأوراق",
+      "الأزهار",
+      "الثمار"
+    ],
+    "category": "science",
+    "factKey": "science:biology:131"
+  },
+  {
+    "id": "science-v85-alt-00010",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما القوة التي تجذب الأجسام نحو الأرض؟",
+    "correctAnswers": [
+      "الجاذبية",
+      "الجاذبية الأرضية"
+    ],
+    "wrongAnswers": [
+      "O",
+      "لا",
+      "الكلوروفيل",
+      "100",
+      "DNA",
+      "365 يومًا"
+    ],
+    "category": "science",
+    "factKey": "science-005"
+  },
+  {
+    "id": "science-new-0134",
+    "type": "text",
+    "question": "ما اسم الصخور الناتجة عن تبرد الصهارة أو الحمم؟",
+    "correctAnswers": [
+      "الصخور النارية",
+      "نارية"
+    ],
+    "wrongAnswers": [
+      "الصخور الرسوبية",
+      "الصخور المتحولة",
+      "الصخور العضوية"
+    ],
+    "category": "science",
+    "factKey": "science:mixed:134"
+  },
+  {
+    "id": "extra2-science-003",
+    "type": "text",
+    "question": "ما وحدة قياس القوة في النظام الدولي؟",
+    "correctAnswers": [
+      "النيوتن"
+    ],
+    "wrongAnswers": [
+      "100",
+      "DNA",
+      "365 يومًا",
+      "6",
+      "الزهرة",
+      "7"
+    ],
+    "category": "science",
+    "factKey": "extra2:science:003"
+  },
+  {
+    "id": "science-new-0099",
+    "type": "text",
+    "question": "ما سرعة الضوء في الفراغ تقريبًا؟",
+    "correctAnswers": [
+      "300000 كم/ث",
+      "300 ألف كم/ث",
+      "3×10^8 م/ث"
+    ],
+    "wrongAnswers": [
+      "30000 كم/ث",
+      "150000 كم/ث",
+      "340 م/ث"
+    ],
+    "category": "science",
+    "factKey": "science:physics:99"
+  },
+  {
+    "id": "science-new-0004",
+    "type": "text",
+    "question": "ما العدد الذري لعنصر الهيليوم؟",
+    "correctAnswers": [
+      "2"
+    ],
+    "wrongAnswers": [
+      "3",
+      "8",
+      "13"
+    ],
+    "category": "science",
+    "factKey": "science:chem:atomic:He"
+  },
+  {
+    "id": "science-new-0121",
+    "type": "text",
+    "question": "ما العضو الذي يرشح الدم ويساعد في تكوين البول؟",
+    "correctAnswers": [
+      "الكلى",
+      "الكليتان"
+    ],
+    "wrongAnswers": [
+      "الكبد",
+      "البنكرياس",
+      "القلب"
+    ],
+    "category": "science",
+    "factKey": "science:biology:121"
+  },
+  {
+    "id": "medicine-v85-alt-00006",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما العضو الذي يضخ الدم في جسم الإنسان؟",
+    "correctAnswers": [
+      "القلب"
+    ],
+    "wrongAnswers": [
+      "الكليتان",
+      "الدم",
+      "الجلد",
+      "فيتامين د",
+      "37",
+      "البنكرياس"
+    ],
+    "category": "science",
+    "factKey": "medicine-001"
+  },
+  {
+    "id": "science-new-0132",
+    "type": "text",
+    "question": "أي نسيج نباتي ينقل الماء والأملاح من الجذور إلى أعلى النبات؟",
+    "correctAnswers": [
+      "الخشب",
+      "نسيج الخشب"
+    ],
+    "wrongAnswers": [
+      "اللحاء",
+      "البشرة",
+      "الكامبيوم"
+    ],
+    "category": "science",
+    "factKey": "science:biology:132"
+  },
+  {
+    "id": "science-new-0036",
+    "type": "text",
+    "question": "ما العدد الذري لعنصر الحديد؟",
+    "correctAnswers": [
+      "26"
+    ],
+    "wrongAnswers": [
+      "28",
+      "47",
+      "82"
+    ],
+    "category": "science",
+    "factKey": "science:chem:atomic:Fe"
+  },
+  {
+    "id": "extra2-space-001",
+    "type": "text",
+    "question": "ما الكوكب المعروف بالكوكب الأحمر؟",
+    "correctAnswers": [
+      "المريخ"
+    ],
+    "wrongAnswers": [
+      "1969",
+      "يوري غاغارين",
+      "فالنتينا تيريشكوفا",
+      "نجم",
+      "كوكب قزم",
+      "الأرض"
+    ],
+    "category": "science",
+    "factKey": "extra2:space:001"
+  },
+  {
+    "id": "science-new-0119",
+    "type": "text",
+    "question": "أي عضو يضخ الدم عبر الجسم؟",
+    "correctAnswers": [
+      "القلب"
+    ],
+    "wrongAnswers": [
+      "الكبد",
+      "الرئة",
+      "الكلية"
+    ],
+    "category": "science",
+    "factKey": "science:biology:119"
+  },
+  {
+    "id": "science-new-0100",
+    "type": "text",
+    "question": "أي موجات يمكنها الانتقال في الفراغ؟",
+    "correctAnswers": [
+      "الموجات الكهرومغناطيسية",
+      "الضوء"
+    ],
+    "wrongAnswers": [
+      "الموجات الصوتية",
+      "موجات الماء",
+      "الموجات الزلزالية فقط"
+    ],
+    "category": "science",
+    "factKey": "science:physics:100"
+  },
+  {
+    "id": "science-new-0144",
+    "type": "text",
+    "question": "أي معدن يدخل أساسًا في تكوين الهيموغلوبين ويساعد على نقل الأكسجين؟",
+    "correctAnswers": [
+      "الحديد"
+    ],
+    "wrongAnswers": [
+      "الصوديوم",
+      "اليود",
+      "الكالسيوم"
+    ],
+    "category": "science",
+    "factKey": "science:mixed:144"
+  },
+  {
+    "id": "science-v860-new-002-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الرمز الكيميائي للفضة؟",
+    "correctAnswers": [
+      "Ag"
+    ],
+    "wrongAnswers": [
+      "الروابط التساهمية",
+      "الجول",
+      "الكلوروفيل",
+      "المريخ",
+      "Na"
+    ],
+    "category": "science",
+    "factKey": "v860:science:newfact:002"
+  },
+  {
+    "id": "science-new-0081",
+    "type": "text",
+    "question": "أي نوع من الروابط ينشأ غالبًا من انتقال إلكترونات بين ذرات؟",
+    "correctAnswers": [
+      "الرابطة الأيونية",
+      "أيونية"
+    ],
+    "wrongAnswers": [
+      "الرابطة التساهمية",
+      "الرابطة الفلزية",
+      "الرابطة الببتيدية"
+    ],
+    "category": "science",
+    "factKey": "science:chem:core:81"
+  },
+  {
+    "id": "science-new-0103",
+    "type": "text",
+    "question": "ما الجهاز المستخدم لقياس التيار الكهربائي؟",
+    "correctAnswers": [
+      "الأميتر",
+      "اميتر"
+    ],
+    "wrongAnswers": [
+      "الفولتميتر",
+      "البارومتر",
+      "الترمومتر"
+    ],
+    "category": "science",
+    "factKey": "science:physics:103"
+  },
+  {
+    "id": "science-new-0074",
+    "type": "text",
+    "question": "أي جسيم يحمل شحنة سالبة في الذرة؟",
+    "correctAnswers": [
+      "الإلكترون",
+      "الكترون"
+    ],
+    "wrongAnswers": [
+      "البروتون",
+      "النيوترون",
+      "النواة"
+    ],
+    "category": "science",
+    "factKey": "science:chem:core:74"
+  },
+  {
+    "id": "science-new-0023",
+    "type": "text",
+    "question": "ما الرمز الكيميائي لعنصر السيليكون؟",
+    "correctAnswers": [
+      "Si"
+    ],
+    "wrongAnswers": [
+      "P",
+      "Ca",
+      "Sn"
+    ],
+    "category": "science",
+    "factKey": "science:chem:symbol:Si"
+  },
+  {
+    "id": "science-new-0116",
+    "type": "text",
+    "question": "أي خلايا الدم مسؤولة أساسًا عن نقل الأكسجين؟",
+    "correctAnswers": [
+      "كريات الدم الحمراء",
+      "خلايا الدم الحمراء"
+    ],
+    "wrongAnswers": [
+      "الصفائح الدموية",
+      "كريات الدم البيضاء",
+      "الخلايا العصبية"
+    ],
+    "category": "science",
+    "factKey": "science:biology:116"
+  },
+  {
+    "id": "medicine-v85-alt-00014",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما العضوان المسؤولان أساسًا عن تبادل الأكسجين وثاني أكسيد الكربون؟",
+    "correctAnswers": [
+      "الرئتان"
+    ],
+    "wrongAnswers": [
+      "الكبد",
+      "206",
+      "فيتامين C",
+      "معدل ضربات القلب",
+      "البكتيريا",
+      "الشبكية"
+    ],
+    "category": "science",
+    "factKey": "extra2:medicine:004"
+  },
+  {
+    "id": "science-new-0017",
+    "type": "text",
+    "question": "ما الرمز الكيميائي لعنصر الصوديوم؟",
+    "correctAnswers": [
+      "Na"
+    ],
+    "wrongAnswers": [
+      "Mg",
+      "S",
+      "Cu"
+    ],
+    "category": "science",
+    "factKey": "science:chem:symbol:Na"
+  },
+  {
+    "id": "space-v860-new-020-a",
+    "type": "text",
+    "question": "ما الكوكب الذي يشتهر ببركان أوليمبوس مونس؟",
+    "correctAnswers": [
+      "المريخ"
+    ],
+    "wrongAnswers": [
+      "زحل",
+      "الثقب الأسود",
+      "الأرض",
+      "أورانوس",
+      "البقعة الحمراء العظيمة"
+    ],
+    "category": "science",
+    "factKey": "v860:space:newfact:020"
+  },
+  {
+    "id": "space-v860-new-003-a",
+    "type": "text",
+    "question": "ما الكوكب الأقرب إلى الشمس؟",
+    "correctAnswers": [
+      "عطارد"
+    ],
+    "wrongAnswers": [
+      "درب التبانة",
+      "يوري غاغارين",
+      "نجم",
+      "زحل",
+      "1969"
+    ],
+    "category": "science",
+    "factKey": "v860:space:newfact:003"
+  },
+  {
+    "id": "medicine-v85-alt-00004",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: أي جزء من الدم مسؤول أساسًا عن عملية التخثر؟",
+    "correctAnswers": [
+      "الصفائح الدموية",
+      "الصفائح"
+    ],
+    "wrongAnswers": [
+      "كريات الدم الحمراء",
+      "الخلايا اللمفاوية",
+      "البلازما"
+    ],
+    "category": "science",
+    "factKey": "medicine:single:medicine-m04"
+  },
+  {
+    "id": "science-new-0083",
+    "type": "text",
+    "question": "ما وحدة قياس القوة في النظام الدولي؟",
+    "correctAnswers": [
+      "النيوتن",
+      "نيوتن"
+    ],
+    "wrongAnswers": [
+      "الجول",
+      "الواط",
+      "الباسكال"
+    ],
+    "category": "science",
+    "factKey": "science:physics:83"
+  },
+  {
+    "id": "space-v860-new-011-b",
+    "type": "text",
+    "question": "اذكر الإجابة: النجم الأقرب إلى الأرض؟",
+    "correctAnswers": [
+      "الشمس"
+    ],
+    "wrongAnswers": [
+      "زحل",
+      "1969",
+      "المشتري",
+      "درب التبانة",
+      "فالنتينا تيريشكوفا"
+    ],
+    "category": "science",
+    "factKey": "v860:space:newfact:011"
+  },
+  {
+    "id": "extra2-medicine-004",
+    "type": "text",
+    "question": "ما العضوان المسؤولان أساسًا عن تبادل الأكسجين وثاني أكسيد الكربون؟",
+    "correctAnswers": [
+      "الرئتان"
+    ],
+    "wrongAnswers": [
+      "الكبد",
+      "206",
+      "فيتامين C",
+      "معدل ضربات القلب",
+      "البكتيريا",
+      "الشبكية"
+    ],
+    "category": "science",
+    "factKey": "extra2:medicine:004"
+  },
+  {
+    "id": "medicine-v85-alt-00003",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما العظم الأطول في جسم الإنسان؟",
+    "correctAnswers": [
+      "عظم الفخذ",
+      "الفخذ"
+    ],
+    "wrongAnswers": [
+      "القصبة",
+      "العضد",
+      "الشظية"
+    ],
+    "category": "science",
+    "factKey": "medicine:single:medicine-m03"
+  },
+  {
+    "id": "medicine-v860-new-012-a",
+    "type": "text",
+    "question": "ما الجزء الشفاف الأمامي من العين الذي يساعد على تركيز الضوء؟",
+    "correctAnswers": [
+      "القرنية"
+    ],
+    "wrongAnswers": [
+      "4 حجرات",
+      "الرئتان",
+      "المرارة",
+      "37",
+      "القلب"
+    ],
+    "category": "science",
+    "factKey": "v860:medicine:newfact:012"
+  },
+  {
+    "id": "space-v85-alt-00017",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما تصنيف بلوتو الحالي؟",
+    "correctAnswers": [
+      "كوكب قزم"
+    ],
+    "wrongAnswers": [
+      "الزهرة",
+      "غانيميد",
+      "سبوتنيك 1",
+      "المشتري",
+      "أفق الحدث",
+      "مجرة أندروميدا"
+    ],
+    "category": "science",
+    "factKey": "extra2:space:007"
+  },
+  {
+    "id": "extra2-science-001",
+    "type": "text",
+    "question": "ما الرمز الكيميائي لعنصر الأكسجين؟",
+    "correctAnswers": [
+      "O"
+    ],
+    "wrongAnswers": [
+      "لا",
+      "الكلوروفيل",
+      "100",
+      "DNA",
+      "365 يومًا",
+      "6"
+    ],
+    "category": "science",
+    "factKey": "extra2:science:001"
+  },
+  {
+    "id": "science-new-0071",
+    "type": "text",
+    "question": "ما الصيغة الكيميائية لـغاز الهيدروجين؟",
+    "correctAnswers": [
+      "H2"
+    ],
+    "wrongAnswers": [
+      "H2O",
+      "O2",
+      "He"
+    ],
+    "category": "science",
+    "factKey": "science:chem:formula:H2"
+  },
+  {
+    "id": "medicine-v860-new-010-a",
+    "type": "text",
+    "question": "ما الفيتامين المرتبط بتخثر الدم الطبيعي؟",
+    "correctAnswers": [
+      "فيتامين K"
+    ],
+    "wrongAnswers": [
+      "الكليتان",
+      "المرارة",
+      "الجلد",
+      "الرئتان",
+      "فيتامين C"
+    ],
+    "category": "science",
+    "factKey": "v860:medicine:newfact:010"
+  },
+  {
+    "id": "medicine-005",
+    "type": "text",
+    "question": "ما الفيتامين الذي يصنعه الجلد عند التعرض المناسب لأشعة الشمس؟",
+    "correctAnswers": [
+      "فيتامين د",
+      "Vitamin D",
+      "D"
+    ],
+    "wrongAnswers": [
+      "37",
+      "البنكرياس",
+      "خلايا الدم الحمراء",
+      "الرئتان",
+      "الكبد",
+      "206"
+    ],
+    "category": "science",
+    "factKey": "medicine-005"
+  },
+  {
+    "id": "science-v860-new-017-a",
+    "type": "text",
+    "question": "ما اسم تغير المادة من الصلب مباشرة إلى الغاز؟",
+    "correctAnswers": [
+      "التسامي"
+    ],
+    "wrongAnswers": [
+      "Ag",
+      "الجاذبية",
+      "H2O",
+      "الألماس",
+      "O"
+    ],
+    "category": "science",
+    "factKey": "v860:science:newfact:017"
+  },
+  {
+    "id": "science-new-0043",
+    "type": "text",
+    "question": "ما الرمز الكيميائي لعنصر الفضة؟",
+    "correctAnswers": [
+      "Ag"
+    ],
+    "wrongAnswers": [
+      "Sn",
+      "Pb",
+      "N"
+    ],
+    "category": "science",
+    "factKey": "science:chem:symbol:Ag"
+  },
+  {
+    "id": "science-new-0097",
+    "type": "text",
+    "question": "ما نوع الطاقة المرتبطة بحركة الجسم؟",
+    "correctAnswers": [
+      "الطاقة الحركية",
+      "حركية"
+    ],
+    "wrongAnswers": [
+      "الطاقة الكيميائية",
+      "الطاقة النووية",
+      "طاقة الوضع"
+    ],
+    "category": "science",
+    "factKey": "science:physics:97"
+  },
+  {
+    "id": "space-single-003",
+    "type": "text",
+    "question": "ما الكوكب الذي يمتلك أقصر يوم تقريبًا بسبب أسرع دوران حول محوره؟",
+    "correctAnswers": [
+      "المشتري"
+    ],
+    "wrongAnswers": [
+      "زحل",
+      "المريخ",
+      "نبتون"
+    ],
+    "category": "science",
+    "factKey": "space:single:space-m03"
+  },
+  {
+    "id": "medicine-v860-new-006-a",
+    "type": "text",
+    "question": "كم حجرة في قلب الإنسان؟",
+    "correctAnswers": [
+      "4 حجرات"
+    ],
+    "wrongAnswers": [
+      "الدم",
+      "الحبل الشوكي",
+      "الكليتان",
+      "البكتيريا",
+      "خلايا الدم البيضاء"
+    ],
+    "category": "science",
+    "factKey": "v860:medicine:newfact:006"
+  },
+  {
+    "id": "medicine-v85-alt-00007",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما العضوان المسؤولان أساسًا عن تنقية الدم وتكوين البول؟",
+    "correctAnswers": [
+      "الكليتان",
+      "الكلى"
+    ],
+    "wrongAnswers": [
+      "الدم",
+      "الجلد",
+      "فيتامين د",
+      "37",
+      "البنكرياس",
+      "خلايا الدم الحمراء"
+    ],
+    "category": "science",
+    "factKey": "medicine-002"
+  },
+  {
+    "id": "space-v860-new-014-a",
+    "type": "text",
+    "question": "من أول إنسان سار على سطح القمر؟",
+    "correctAnswers": [
+      "نيل أرمسترونغ"
+    ],
+    "wrongAnswers": [
+      "القمر",
+      "غانيميد",
+      "درب التبانة",
+      "فالنتينا تيريشكوفا",
+      "يوري غاغارين"
+    ],
+    "category": "science",
+    "factKey": "v860:space:newfact:014"
+  },
+  {
+    "id": "space-v860-new-017-b",
+    "type": "text",
+    "question": "اذكر الإجابة: اسم البقعة الحمراء العملاقة على المشتري؟",
+    "correctAnswers": [
+      "البقعة الحمراء العظيمة"
+    ],
+    "wrongAnswers": [
+      "نبتون",
+      "نيل أرمسترونغ",
+      "المريخ",
+      "المشتري",
+      "كوكب قزم"
+    ],
+    "category": "science",
+    "factKey": "v860:space:newfact:017"
+  },
+  {
+    "id": "medicine-v860-new-014-b",
+    "type": "text",
+    "question": "اذكر الإجابة: أكبر شريان في الجسم؟",
+    "correctAnswers": [
+      "الشريان الأبهر"
+    ],
+    "wrongAnswers": [
+      "عظم الفخذ",
+      "الصفائح الدموية",
+      "الدم",
+      "206 عظام",
+      "الشبكية"
+    ],
+    "category": "science",
+    "factKey": "v860:medicine:newfact:014"
+  },
+  {
+    "id": "science-new-0044",
+    "type": "text",
+    "question": "ما العدد الذري لعنصر الفضة؟",
+    "correctAnswers": [
+      "47"
+    ],
+    "wrongAnswers": [
+      "50",
+      "80",
+      "3"
+    ],
+    "category": "science",
+    "factKey": "science:chem:atomic:Ag"
+  },
+  {
+    "id": "space-v85-alt-00011",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الكوكب المعروف بالكوكب الأحمر؟",
+    "correctAnswers": [
+      "المريخ"
+    ],
+    "wrongAnswers": [
+      "1969",
+      "يوري غاغارين",
+      "فالنتينا تيريشكوفا",
+      "نجم",
+      "كوكب قزم",
+      "الأرض"
+    ],
+    "category": "science",
+    "factKey": "extra2:space:001"
+  },
+  {
+    "id": "space-v860-new-005-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الكوكب المعروف بحلقاته البارزة؟",
+    "correctAnswers": [
+      "زحل"
+    ],
+    "wrongAnswers": [
+      "الزهرة",
+      "نجم",
+      "عطارد",
+      "المشتري",
+      "فالنتينا تيريشكوفا"
+    ],
+    "category": "science",
+    "factKey": "v860:space:newfact:005"
+  },
+  {
+    "id": "space-v860-new-004-a",
+    "type": "text",
+    "question": "ما الكوكب الأبعد عن الشمس بين الكواكب الثمانية؟",
+    "correctAnswers": [
+      "نبتون"
+    ],
+    "wrongAnswers": [
+      "السنة الضوئية",
+      "يوري غاغارين",
+      "القمر",
+      "المريخ",
+      "درب التبانة"
+    ],
+    "category": "science",
+    "factKey": "v860:space:newfact:004"
+  },
+  {
+    "id": "science-v860-new-006-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الوحدة الدولية للطاقة؟",
+    "correctAnswers": [
+      "الجول"
+    ],
+    "wrongAnswers": [
+      "الزئبق",
+      "الأكسجين",
+      "300000",
+      "لا",
+      "النيتروجين"
+    ],
+    "category": "science",
+    "factKey": "v860:science:newfact:006"
+  },
+  {
+    "id": "science-new-0143",
+    "type": "text",
+    "question": "أي فيتامين يصنعه الجلد عند التعرض المناسب لأشعة الشمس؟",
+    "correctAnswers": [
+      "فيتامين د",
+      "فيتامين D"
+    ],
+    "wrongAnswers": [
+      "فيتامين C",
+      "فيتامين B12",
+      "فيتامين K"
+    ],
+    "category": "science",
+    "factKey": "science:mixed:143"
+  },
+  {
+    "id": "space-v860-new-009-a",
+    "type": "text",
+    "question": "أي كوكب يملك قمرًا اسمه فوبوس؟",
+    "correctAnswers": [
+      "المريخ"
+    ],
+    "wrongAnswers": [
+      "نيل أرمسترونغ",
+      "فالنتينا تيريشكوفا",
+      "1969",
+      "الثقب الأسود",
+      "نجم"
+    ],
+    "category": "science",
+    "factKey": "v860:space:newfact:009"
+  },
+  {
+    "id": "medicine-v860-new-005-a",
+    "type": "text",
+    "question": "ما العضو المسؤول عن تبادل الغازات مع الهواء؟",
+    "correctAnswers": [
+      "الرئتان"
+    ],
+    "wrongAnswers": [
+      "الصفائح الدموية",
+      "الحبل الشوكي",
+      "الشبكية",
+      "الجلد",
+      "الكبد"
+    ],
+    "category": "science",
+    "factKey": "v860:medicine:newfact:005"
+  },
+  {
+    "id": "science-new-0025",
+    "type": "text",
+    "question": "ما الرمز الكيميائي لعنصر الفوسفور؟",
+    "correctAnswers": [
+      "P"
+    ],
+    "wrongAnswers": [
+      "S",
+      "Fe",
+      "I"
+    ],
+    "category": "science",
+    "factKey": "science:chem:symbol:P"
+  },
+  {
+    "id": "space-v860-new-016-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الكوكب الذي يدور على جانبه تقريبًا بسبب ميل محوره الكبير؟",
+    "correctAnswers": [
+      "أورانوس"
+    ],
+    "wrongAnswers": [
+      "نيل أرمسترونغ",
+      "المريخ",
+      "درب التبانة",
+      "عطارد",
+      "المشتري"
+    ],
+    "category": "science",
+    "factKey": "v860:space:newfact:016"
+  },
+  {
+    "id": "extra2-space-002",
+    "type": "text",
+    "question": "أي كوكب يشتهر بحلقاته الواضحة؟",
+    "correctAnswers": [
+      "زحل"
+    ],
+    "wrongAnswers": [
+      "يوري غاغارين",
+      "فالنتينا تيريشكوفا",
+      "نجم",
+      "كوكب قزم",
+      "الأرض",
+      "الزهرة"
+    ],
+    "category": "science",
+    "factKey": "extra2:space:002"
+  },
+  {
+    "id": "science-new-0141",
+    "type": "text",
+    "question": "ما الأداة التي تقيس الضغط الجوي؟",
+    "correctAnswers": [
+      "البارومتر"
+    ],
+    "wrongAnswers": [
+      "الترمومتر",
+      "الأنيمومتر",
+      "الهيجرومتر"
+    ],
+    "category": "science",
+    "factKey": "science:mixed:141"
+  },
+  {
+    "id": "science-new-0115",
+    "type": "text",
+    "question": "ما الغاز الذي تطلقه النباتات غالبًا كناتج للبناء الضوئي؟",
+    "correctAnswers": [
+      "الأكسجين",
+      "O2"
+    ],
+    "wrongAnswers": [
+      "ثاني أكسيد الكربون",
+      "الميثان",
+      "النيتروجين"
+    ],
+    "category": "science",
+    "factKey": "science:biology:115"
+  },
+  {
+    "id": "space-single-005",
+    "type": "text",
+    "question": "ما اسم المجرة الكبيرة الأقرب إلى درب التبانة؟",
+    "correctAnswers": [
+      "مجرة أندروميدا",
+      "أندروميدا"
+    ],
+    "wrongAnswers": [
+      "مجرة المثلث",
+      "سحابة ماجلان الكبرى",
+      "مجرة سومبريرو"
+    ],
+    "category": "science",
+    "factKey": "space:single:space-m05"
+  },
+  {
+    "id": "science-new-0005",
+    "type": "text",
+    "question": "ما الرمز الكيميائي لعنصر الليثيوم؟",
+    "correctAnswers": [
+      "Li"
+    ],
+    "wrongAnswers": [
+      "C",
+      "Ne",
+      "S"
+    ],
+    "category": "science",
+    "factKey": "science:chem:symbol:Li"
+  },
+  {
+    "id": "science-new-0136",
+    "type": "text",
+    "question": "ما الجهاز المستخدم لتسجيل الموجات الزلزالية؟",
+    "correctAnswers": [
+      "السيزموجراف",
+      "مقياس الزلازل",
+      "راسم الزلازل"
+    ],
+    "wrongAnswers": [
+      "البارومتر",
+      "الترمومتر",
+      "الهيدرومتر"
+    ],
+    "category": "science",
+    "factKey": "science:mixed:136"
+  },
+  {
+    "id": "science-v860-new-004-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الرمز الكيميائي للحديد؟",
+    "correctAnswers": [
+      "Fe"
+    ],
+    "wrongAnswers": [
+      "6",
+      "365 يومًا",
+      "100",
+      "300000",
+      "الواط"
+    ],
+    "category": "science",
+    "factKey": "v860:science:newfact:004"
+  },
+  {
+    "id": "science-new-0124",
+    "type": "text",
+    "question": "أي عظم يحمي الدماغ؟",
+    "correctAnswers": [
+      "الجمجمة"
+    ],
+    "wrongAnswers": [
+      "عظم الفخذ",
+      "القص",
+      "الترقوة"
+    ],
+    "category": "science",
+    "factKey": "science:biology:124"
+  },
+  {
+    "id": "medicine-v860-new-001-a",
+    "type": "text",
+    "question": "ما أكبر عضو في جسم الإنسان؟",
+    "correctAnswers": [
+      "الجلد"
+    ],
+    "wrongAnswers": [
+      "الشريان الأبهر",
+      "206 عظام",
+      "الكليتان",
+      "البنكرياس",
+      "206"
+    ],
+    "category": "science",
+    "factKey": "v860:medicine:newfact:001"
+  },
+  {
+    "id": "science-v860-new-002-a",
+    "type": "text",
+    "question": "ما الرمز الكيميائي للفضة؟",
+    "correctAnswers": [
+      "Ag"
+    ],
+    "wrongAnswers": [
+      "حمض الهيدروكلوريك",
+      "الواط",
+      "7",
+      "الزهرة",
+      "النيتروجين"
+    ],
+    "category": "science",
+    "factKey": "v860:science:newfact:002"
+  },
+  {
+    "id": "science-new-0058",
+    "type": "text",
+    "question": "ما الصيغة الكيميائية لـثاني أكسيد الكربون؟",
+    "correctAnswers": [
+      "CO2"
+    ],
+    "wrongAnswers": [
+      "CO",
+      "O2",
+      "CH4"
+    ],
+    "category": "science",
+    "factKey": "science:chem:formula:CO2"
+  },
+  {
+    "id": "space-v85-alt-00018",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: حول أي كوكب تدور محطة الفضاء الدولية؟",
+    "correctAnswers": [
+      "الأرض"
+    ],
+    "wrongAnswers": [
+      "غانيميد",
+      "سبوتنيك 1",
+      "المشتري",
+      "أفق الحدث",
+      "مجرة أندروميدا",
+      "عطارد"
+    ],
+    "category": "science",
+    "factKey": "extra2:space:008"
+  },
+  {
+    "id": "space-v860-new-013-b",
+    "type": "text",
+    "question": "اذكر الإجابة: اسم أول قمر صناعي أطلقه الإنسان إلى المدار؟",
+    "correctAnswers": [
+      "سبوتنيك 1"
+    ],
+    "wrongAnswers": [
+      "الأرض",
+      "درب التبانة",
+      "المشتري",
+      "عطارد",
+      "المريخ"
+    ],
+    "category": "science",
+    "factKey": "v860:space:newfact:013"
+  },
+  {
+    "id": "science-v860-new-020-b",
+    "type": "text",
+    "question": "اذكر الإجابة: نوع الروابط التي تشارك فيها الذرات إلكترونات؟",
+    "correctAnswers": [
+      "الروابط التساهمية"
+    ],
+    "wrongAnswers": [
+      "Fe",
+      "المريخ",
+      "النيوتن",
+      "6",
+      "Au"
+    ],
+    "category": "science",
+    "factKey": "v860:science:newfact:020"
+  },
+  {
+    "id": "science-new-0062",
+    "type": "text",
+    "question": "ما الصيغة الكيميائية لـحمض الهيدروكلوريك؟",
+    "correctAnswers": [
+      "HCl"
+    ],
+    "wrongAnswers": [
+      "H2SO4",
+      "HNO3",
+      "NaCl"
+    ],
+    "category": "science",
+    "factKey": "science:chem:formula:HCl"
+  }
+]

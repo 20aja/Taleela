@@ -1,0 +1,1390 @@
+[
+  {
+    "id": "general-v860-new-009-b",
+    "type": "text",
+    "question": "ما العدد الصحيح في السؤال الآتي: كم سنة في نصف قرن؟",
+    "correctAnswers": [
+      "50 سنة"
+    ],
+    "wrongAnswers": [
+      "6",
+      "5",
+      "500 ورقة",
+      "25 سنة",
+      "50"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:009"
+  },
+  {
+    "id": "general-v860-new-020-b",
+    "type": "text",
+    "question": "اذكر الإجابة: البادئة في النظام المتري التي تعني ألفًا؟",
+    "correctAnswers": [
+      "كيلو"
+    ],
+    "wrongAnswers": [
+      "8",
+      "1852 مترًا",
+      "6",
+      "الفورنت",
+      "المشتري"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:020"
+  },
+  {
+    "id": "general-v860-new-014-b",
+    "type": "text",
+    "question": "اذكر الإجابة: قيمة الرقم الروماني L؟",
+    "correctAnswers": [
+      "50"
+    ],
+    "wrongAnswers": [
+      "بغداد",
+      "الفهد",
+      "الفورنت",
+      "4",
+      "التنغستن"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:014"
+  },
+  {
+    "id": "general-v85-alt-00004",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: أي معدن سائل في درجة حرارة الغرفة ويستخدم رمز Hg؟",
+    "correctAnswers": [
+      "الزئبق"
+    ],
+    "wrongAnswers": [
+      "الغاليوم",
+      "الفضة",
+      "القصدير"
+    ],
+    "category": "general",
+    "factKey": "general:single:general-m04"
+  },
+  {
+    "id": "general-single-004",
+    "type": "text",
+    "question": "أي معدن سائل في درجة حرارة الغرفة ويستخدم رمز Hg؟",
+    "correctAnswers": [
+      "الزئبق"
+    ],
+    "wrongAnswers": [
+      "الغاليوم",
+      "الفضة",
+      "القصدير"
+    ],
+    "category": "general",
+    "factKey": "general:single:general-m04"
+  },
+  {
+    "id": "general-v860-new-009-a",
+    "type": "text",
+    "question": "كم سنة في نصف قرن؟",
+    "correctAnswers": [
+      "50 سنة"
+    ],
+    "wrongAnswers": [
+      "500 ورقة",
+      "12",
+      "7",
+      "خندق ماريانا",
+      "4"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:009"
+  },
+  {
+    "id": "general-v860-new-012-b",
+    "type": "text",
+    "question": "ما العدد الصحيح في السؤال الآتي: كم بتًا في الـ Nibble؟",
+    "correctAnswers": [
+      "4 بتات"
+    ],
+    "wrongAnswers": [
+      "50 سنة",
+      "التنغستن",
+      "90 درجة",
+      "500 ورقة",
+      "8 بتات"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:012"
+  },
+  {
+    "id": "general-v860-new-003-a",
+    "type": "text",
+    "question": "كم وحدة يساوي الـ Gross في العد التقليدي؟",
+    "correctAnswers": [
+      "144"
+    ],
+    "wrongAnswers": [
+      "القمر",
+      "50",
+      "360 درجة",
+      "الأرض",
+      "الين"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:003"
+  },
+  {
+    "id": "general-v860-new-018-a",
+    "type": "text",
+    "question": "كم وجهًا للمكعب؟",
+    "correctAnswers": [
+      "6"
+    ],
+    "wrongAnswers": [
+      "50 سنة",
+      "100",
+      "الفهد",
+      "الزئبق",
+      "4"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:018"
+  },
+  {
+    "id": "extra2-general-010",
+    "type": "text",
+    "question": "ما الحيوان المعروف بأنه أسرع حيوان بري؟",
+    "correctAnswers": [
+      "الفهد"
+    ],
+    "wrongAnswers": [
+      "خندق ماريانا",
+      "الفورنت",
+      "الزئبق",
+      "مقياس موهس",
+      "بغداد",
+      "7"
+    ],
+    "category": "general",
+    "factKey": "extra2:general:010"
+  },
+  {
+    "id": "general-v860-new-005-a",
+    "type": "text",
+    "question": "كم مربعًا في رقعة الشطرنج؟",
+    "correctAnswers": [
+      "64"
+    ],
+    "wrongAnswers": [
+      "الفهد",
+      "التنغستن",
+      "10000 متر مربع",
+      "الين",
+      "8 بتات"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:005"
+  },
+  {
+    "id": "general-v860-new-010-b",
+    "type": "text",
+    "question": "ما العدد الصحيح في السؤال الآتي: كم سنة في ربع قرن؟",
+    "correctAnswers": [
+      "25 سنة"
+    ],
+    "wrongAnswers": [
+      "360 درجة",
+      "5",
+      "4",
+      "بغداد",
+      "8"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:010"
+  },
+  {
+    "id": "general-v860-new-007-a",
+    "type": "text",
+    "question": "كم ضلعًا للمضلع الاثني عشري؟",
+    "correctAnswers": [
+      "12"
+    ],
+    "wrongAnswers": [
+      "البرتغالية",
+      "إيفرست",
+      "90 درجة",
+      "360 درجة",
+      "50 سنة"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:007"
+  },
+  {
+    "id": "general-v860-new-002-b",
+    "type": "text",
+    "question": "ما العدد الصحيح في السؤال الآتي: كم مترًا مربعًا يساوي الهكتار؟",
+    "correctAnswers": [
+      "10000 متر مربع"
+    ],
+    "wrongAnswers": [
+      "360 درجة",
+      "144",
+      "المحيط الهادئ",
+      "الفورنت",
+      "البرتغالية"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:002"
+  },
+  {
+    "id": "general-v860-new-008-a",
+    "type": "text",
+    "question": "كم اتجاهًا أصليًا للبوصلة؟",
+    "correctAnswers": [
+      "4"
+    ],
+    "wrongAnswers": [
+      "6",
+      "50 سنة",
+      "100",
+      "المشتري",
+      "500 ورقة"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:008"
+  },
+  {
+    "id": "general-v85-alt-00012",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما اللون الشائع لحجر الزمرد؟",
+    "correctAnswers": [
+      "الأخضر"
+    ],
+    "wrongAnswers": [
+      "6",
+      "المشتري",
+      "القمر",
+      "إيفرست",
+      "الين",
+      "60"
+    ],
+    "category": "general",
+    "factKey": "extra2:general:002"
+  },
+  {
+    "id": "general-001",
+    "type": "text",
+    "question": "ما عاصمة العراق؟",
+    "correctAnswers": [
+      "بغداد"
+    ],
+    "wrongAnswers": [
+      "7",
+      "المحيط الهادئ",
+      "12",
+      "الأرض",
+      "الأخضر",
+      "البرتغالية"
+    ],
+    "category": "general",
+    "factKey": "general-001"
+  },
+  {
+    "id": "general-v85-alt-00008",
+    "type": "text",
+    "question": "أيّ محيط في العالم يُعد الأكبر؟",
+    "correctAnswers": [
+      "المحيط الهادئ",
+      "الهادئ"
+    ],
+    "wrongAnswers": [
+      "12",
+      "الأرض",
+      "الأخضر",
+      "البرتغالية",
+      "6",
+      "المشتري"
+    ],
+    "category": "general",
+    "factKey": "general-003"
+  },
+  {
+    "id": "general-v85-alt-00005",
+    "type": "text",
+    "question": "ما الاسم الذي يُطلق على المقياس المستخدم تقليديًا لقياس صلادة المعادن من 1 إلى 10؟",
+    "correctAnswers": [
+      "مقياس موهس",
+      "موهس"
+    ],
+    "wrongAnswers": [
+      "مقياس ريختر",
+      "مقياس بوفورت",
+      "مقياس كلفن"
+    ],
+    "category": "general",
+    "factKey": "general:single:general-m05"
+  },
+  {
+    "id": "general-v860-new-006-a",
+    "type": "text",
+    "question": "كم حلقة في شعار الألعاب الأولمبية؟",
+    "correctAnswers": [
+      "5"
+    ],
+    "wrongAnswers": [
+      "الفورنت",
+      "13",
+      "الأرض",
+      "360 درجة",
+      "كيلو"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:006"
+  },
+  {
+    "id": "general-v85-alt-00014",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: كم ضلعًا للشكل السداسي؟",
+    "correctAnswers": [
+      "6"
+    ],
+    "wrongAnswers": [
+      "القمر",
+      "إيفرست",
+      "الين",
+      "60",
+      "الفهد",
+      "التنغستن"
+    ],
+    "category": "general",
+    "factKey": "extra2:general:004"
+  },
+  {
+    "id": "general-v85-alt-00017",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما أعلى جبل فوق مستوى سطح البحر؟",
+    "correctAnswers": [
+      "إيفرست"
+    ],
+    "wrongAnswers": [
+      "60",
+      "الفهد",
+      "التنغستن",
+      "خندق ماريانا",
+      "الفورنت",
+      "الزئبق"
+    ],
+    "category": "general",
+    "factKey": "extra2:general:007"
+  },
+  {
+    "id": "general-v860-new-011-b",
+    "type": "text",
+    "question": "ما العدد الصحيح في السؤال الآتي: كم بتًا في البايت الواحد؟",
+    "correctAnswers": [
+      "8 بتات"
+    ],
+    "wrongAnswers": [
+      "الين",
+      "خندق ماريانا",
+      "60",
+      "القمر",
+      "12"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:011"
+  },
+  {
+    "id": "general-v860-new-003-b",
+    "type": "text",
+    "question": "ما العدد الصحيح في السؤال الآتي: كم وحدة يساوي الـ Gross في العد التقليدي؟",
+    "correctAnswers": [
+      "144"
+    ],
+    "wrongAnswers": [
+      "الزئبق",
+      "المشتري",
+      "50",
+      "4 بتات",
+      "64"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:003"
+  },
+  {
+    "id": "general-v860-new-019-a",
+    "type": "text",
+    "question": "كم ضلعًا للمثمن؟",
+    "correctAnswers": [
+      "8"
+    ],
+    "wrongAnswers": [
+      "بغداد",
+      "المحيط الهادئ",
+      "1852 مترًا",
+      "المشتري",
+      "90 درجة"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:019"
+  },
+  {
+    "id": "general-v85-alt-00011",
+    "type": "text",
+    "question": "ما عدد أشهر السنة الميلادية؟",
+    "correctAnswers": [
+      "12"
+    ],
+    "wrongAnswers": [
+      "البرتغالية",
+      "6",
+      "المشتري",
+      "القمر",
+      "إيفرست",
+      "الين"
+    ],
+    "category": "general",
+    "factKey": "extra2:general:001"
+  },
+  {
+    "id": "general-v85-alt-00018",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما العملة الرسمية لليابان؟",
+    "correctAnswers": [
+      "الين"
+    ],
+    "wrongAnswers": [
+      "الفهد",
+      "التنغستن",
+      "خندق ماريانا",
+      "الفورنت",
+      "الزئبق",
+      "مقياس موهس"
+    ],
+    "category": "general",
+    "factKey": "extra2:general:008"
+  },
+  {
+    "id": "general-single-002",
+    "type": "text",
+    "question": "ما أعمق خندق محيطي معروف على الأرض؟",
+    "correctAnswers": [
+      "خندق ماريانا",
+      "ماريانا"
+    ],
+    "wrongAnswers": [
+      "خندق تونغا",
+      "خندق بورتوريكو",
+      "خندق اليابان"
+    ],
+    "category": "general",
+    "factKey": "general:single:general-m02"
+  },
+  {
+    "id": "general-v860-new-001-a",
+    "type": "text",
+    "question": "كم مترًا يساوي الميل البحري الدولي؟",
+    "correctAnswers": [
+      "1852 مترًا"
+    ],
+    "wrongAnswers": [
+      "100",
+      "4",
+      "64",
+      "البرتغالية",
+      "إيفرست"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:001"
+  },
+  {
+    "id": "general-v85-alt-00015",
+    "type": "text",
+    "question": "أيّ كوكب في المجموعة الشمسية يُعد الأكبر؟",
+    "correctAnswers": [
+      "المشتري"
+    ],
+    "wrongAnswers": [
+      "إيفرست",
+      "الين",
+      "60",
+      "الفهد",
+      "التنغستن",
+      "خندق ماريانا"
+    ],
+    "category": "general",
+    "factKey": "extra2:general:005"
+  },
+  {
+    "id": "extra2-general-007",
+    "type": "text",
+    "question": "ما أعلى جبل فوق مستوى سطح البحر؟",
+    "correctAnswers": [
+      "إيفرست"
+    ],
+    "wrongAnswers": [
+      "60",
+      "الفهد",
+      "التنغستن",
+      "خندق ماريانا",
+      "الفورنت",
+      "الزئبق"
+    ],
+    "category": "general",
+    "factKey": "extra2:general:007"
+  },
+  {
+    "id": "general-v860-new-016-b",
+    "type": "text",
+    "question": "ما العدد الصحيح في السؤال الآتي: كم درجة في الزاوية القائمة؟",
+    "correctAnswers": [
+      "90 درجة"
+    ],
+    "wrongAnswers": [
+      "الفهد",
+      "8",
+      "القمر",
+      "1852 مترًا",
+      "كيلو"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:016"
+  },
+  {
+    "id": "extra2-general-003",
+    "type": "text",
+    "question": "ما اللغة الرسمية الأكثر استخدامًا في البرازيل؟",
+    "correctAnswers": [
+      "البرتغالية"
+    ],
+    "wrongAnswers": [
+      "المشتري",
+      "القمر",
+      "إيفرست",
+      "الين",
+      "60",
+      "الفهد"
+    ],
+    "category": "general",
+    "factKey": "extra2:general:003"
+  },
+  {
+    "id": "general-v860-new-012-a",
+    "type": "text",
+    "question": "كم بتًا في الـ Nibble؟",
+    "correctAnswers": [
+      "4 بتات"
+    ],
+    "wrongAnswers": [
+      "12",
+      "الأخضر",
+      "8",
+      "6",
+      "المحيط الهادئ"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:012"
+  },
+  {
+    "id": "general-v860-new-013-a",
+    "type": "text",
+    "question": "كم ورقة في الرزمة الورقية Ream القياسية غالبًا؟",
+    "correctAnswers": [
+      "500 ورقة"
+    ],
+    "wrongAnswers": [
+      "القمر",
+      "50 سنة",
+      "الأخضر",
+      "الزئبق",
+      "360 درجة"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:013"
+  },
+  {
+    "id": "general-v860-new-018-b",
+    "type": "text",
+    "question": "ما العدد الصحيح في السؤال الآتي: كم وجهًا للمكعب؟",
+    "correctAnswers": [
+      "6"
+    ],
+    "wrongAnswers": [
+      "50",
+      "1852 مترًا",
+      "البرتغالية",
+      "100",
+      "4 بتات"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:018"
+  },
+  {
+    "id": "general-v85-alt-00001",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما العنصر الكيميائي الذي يحمل الرمز W؟",
+    "correctAnswers": [
+      "التنغستن",
+      "تنجستن"
+    ],
+    "wrongAnswers": [
+      "التنتالوم",
+      "التيتانيوم",
+      "القصدير"
+    ],
+    "category": "general",
+    "factKey": "general:single:general-m01"
+  },
+  {
+    "id": "general-v85-alt-00013",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما اللغة الرسمية الأكثر استخدامًا في البرازيل؟",
+    "correctAnswers": [
+      "البرتغالية"
+    ],
+    "wrongAnswers": [
+      "المشتري",
+      "القمر",
+      "إيفرست",
+      "الين",
+      "60",
+      "الفهد"
+    ],
+    "category": "general",
+    "factKey": "extra2:general:003"
+  },
+  {
+    "id": "extra2-general-005",
+    "type": "text",
+    "question": "ما أكبر كوكب في المجموعة الشمسية؟",
+    "correctAnswers": [
+      "المشتري"
+    ],
+    "wrongAnswers": [
+      "إيفرست",
+      "الين",
+      "60",
+      "الفهد",
+      "التنغستن",
+      "خندق ماريانا"
+    ],
+    "category": "general",
+    "factKey": "extra2:general:005"
+  },
+  {
+    "id": "general-v85-alt-00016",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما القمر الطبيعي لكوكب الأرض؟",
+    "correctAnswers": [
+      "القمر"
+    ],
+    "wrongAnswers": [
+      "الين",
+      "60",
+      "الفهد",
+      "التنغستن",
+      "خندق ماريانا",
+      "الفورنت"
+    ],
+    "category": "general",
+    "factKey": "extra2:general:006"
+  },
+  {
+    "id": "extra2-general-008",
+    "type": "text",
+    "question": "ما العملة الرسمية لليابان؟",
+    "correctAnswers": [
+      "الين"
+    ],
+    "wrongAnswers": [
+      "الفهد",
+      "التنغستن",
+      "خندق ماريانا",
+      "الفورنت",
+      "الزئبق",
+      "مقياس موهس"
+    ],
+    "category": "general",
+    "factKey": "extra2:general:008"
+  },
+  {
+    "id": "extra2-general-002",
+    "type": "text",
+    "question": "ما اللون الشائع لحجر الزمرد؟",
+    "correctAnswers": [
+      "الأخضر"
+    ],
+    "wrongAnswers": [
+      "6",
+      "المشتري",
+      "القمر",
+      "إيفرست",
+      "الين",
+      "60"
+    ],
+    "category": "general",
+    "factKey": "extra2:general:002"
+  },
+  {
+    "id": "general-v860-new-006-b",
+    "type": "text",
+    "question": "ما العدد الصحيح في السؤال الآتي: كم حلقة في شعار الألعاب الأولمبية؟",
+    "correctAnswers": [
+      "5"
+    ],
+    "wrongAnswers": [
+      "8 بتات",
+      "6",
+      "12",
+      "كيلو",
+      "بغداد"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:006"
+  },
+  {
+    "id": "general-single-003",
+    "type": "text",
+    "question": "ما العملة الرسمية للمجر؟",
+    "correctAnswers": [
+      "الفورنت",
+      "فورنت"
+    ],
+    "wrongAnswers": [
+      "الزلوتي",
+      "الكرونة",
+      "الليو"
+    ],
+    "category": "general",
+    "factKey": "general:single:general-m03"
+  },
+  {
+    "id": "extra2-general-001",
+    "type": "text",
+    "question": "كم عدد أشهر السنة الميلادية؟",
+    "correctAnswers": [
+      "12"
+    ],
+    "wrongAnswers": [
+      "البرتغالية",
+      "6",
+      "المشتري",
+      "القمر",
+      "إيفرست",
+      "الين"
+    ],
+    "category": "general",
+    "factKey": "extra2:general:001"
+  },
+  {
+    "id": "general-v860-new-020-a",
+    "type": "text",
+    "question": "ما البادئة في النظام المتري التي تعني ألفًا؟",
+    "correctAnswers": [
+      "كيلو"
+    ],
+    "wrongAnswers": [
+      "12",
+      "6",
+      "التنغستن",
+      "100",
+      "90 درجة"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:020"
+  },
+  {
+    "id": "general-v860-new-001-b",
+    "type": "text",
+    "question": "ما العدد الصحيح في السؤال الآتي: كم مترًا يساوي الميل البحري الدولي؟",
+    "correctAnswers": [
+      "1852 مترًا"
+    ],
+    "wrongAnswers": [
+      "إيفرست",
+      "بغداد",
+      "25 سنة",
+      "144",
+      "القمر"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:001"
+  },
+  {
+    "id": "general-v860-new-014-a",
+    "type": "text",
+    "question": "ما قيمة الرقم الروماني L؟",
+    "correctAnswers": [
+      "50"
+    ],
+    "wrongAnswers": [
+      "64",
+      "الأخضر",
+      "50 سنة",
+      "12",
+      "الفورنت"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:014"
+  },
+  {
+    "id": "general-v860-new-007-b",
+    "type": "text",
+    "question": "ما العدد الصحيح في السؤال الآتي: كم ضلعًا للمضلع الاثني عشري؟",
+    "correctAnswers": [
+      "12"
+    ],
+    "wrongAnswers": [
+      "50",
+      "القمر",
+      "الفهد",
+      "8",
+      "8 بتات"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:007"
+  },
+  {
+    "id": "general-v85-alt-00009",
+    "type": "text",
+    "question": "ما عدد أشهر السنة؟",
+    "correctAnswers": [
+      "12",
+      "اثنا عشر",
+      "اثني عشر"
+    ],
+    "wrongAnswers": [
+      "الأرض",
+      "الأخضر",
+      "البرتغالية",
+      "6",
+      "المشتري",
+      "القمر"
+    ],
+    "category": "general",
+    "factKey": "general-004"
+  },
+  {
+    "id": "general-v85-alt-00010",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الكوكب الذي نعيش عليه؟",
+    "correctAnswers": [
+      "الأرض",
+      "كوكب الأرض"
+    ],
+    "wrongAnswers": [
+      "الأخضر",
+      "البرتغالية",
+      "6",
+      "المشتري",
+      "القمر",
+      "إيفرست"
+    ],
+    "category": "general",
+    "factKey": "general-005"
+  },
+  {
+    "id": "general-v860-new-017-b",
+    "type": "text",
+    "question": "ما العدد الصحيح في السؤال الآتي: كم درجة في دورة كاملة؟",
+    "correctAnswers": [
+      "360 درجة"
+    ],
+    "wrongAnswers": [
+      "90 درجة",
+      "144",
+      "500 ورقة",
+      "8",
+      "60"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:017"
+  },
+  {
+    "id": "general-002",
+    "type": "text",
+    "question": "كم عدد أيام الأسبوع؟",
+    "correctAnswers": [
+      "7",
+      "سبعة"
+    ],
+    "wrongAnswers": [
+      "المحيط الهادئ",
+      "12",
+      "الأرض",
+      "الأخضر",
+      "البرتغالية",
+      "6"
+    ],
+    "category": "general",
+    "factKey": "general-002"
+  },
+  {
+    "id": "general-v860-new-015-b",
+    "type": "text",
+    "question": "اذكر الإجابة: قيمة الرقم الروماني C؟",
+    "correctAnswers": [
+      "100"
+    ],
+    "wrongAnswers": [
+      "500 ورقة",
+      "1852 مترًا",
+      "50 سنة",
+      "64",
+      "5"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:015"
+  },
+  {
+    "id": "general-v860-new-019-b",
+    "type": "text",
+    "question": "ما العدد الصحيح في السؤال الآتي: كم ضلعًا للمثمن؟",
+    "correctAnswers": [
+      "8"
+    ],
+    "wrongAnswers": [
+      "الأرض",
+      "4 بتات",
+      "الأخضر",
+      "90 درجة",
+      "50 سنة"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:019"
+  },
+  {
+    "id": "general-v860-new-004-b",
+    "type": "text",
+    "question": "ما العدد الصحيح في السؤال الآتي: كم عددًا في دزينة الخباز التقليدية؟",
+    "correctAnswers": [
+      "13"
+    ],
+    "wrongAnswers": [
+      "7",
+      "التنغستن",
+      "الأرض",
+      "12",
+      "كيلو"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:004"
+  },
+  {
+    "id": "general-v85-alt-00020",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الحيوان المعروف بأنه أسرع حيوان بري؟",
+    "correctAnswers": [
+      "الفهد"
+    ],
+    "wrongAnswers": [
+      "خندق ماريانا",
+      "الفورنت",
+      "الزئبق",
+      "مقياس موهس",
+      "بغداد",
+      "7"
+    ],
+    "category": "general",
+    "factKey": "extra2:general:010"
+  },
+  {
+    "id": "general-v85-alt-00019",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: كم دقيقة في الساعة الواحدة؟",
+    "correctAnswers": [
+      "60"
+    ],
+    "wrongAnswers": [
+      "التنغستن",
+      "خندق ماريانا",
+      "الفورنت",
+      "الزئبق",
+      "مقياس موهس",
+      "بغداد"
+    ],
+    "category": "general",
+    "factKey": "extra2:general:009"
+  },
+  {
+    "id": "general-003",
+    "type": "text",
+    "question": "ما أكبر محيط في العالم؟",
+    "correctAnswers": [
+      "المحيط الهادئ",
+      "الهادئ"
+    ],
+    "wrongAnswers": [
+      "12",
+      "الأرض",
+      "الأخضر",
+      "البرتغالية",
+      "6",
+      "المشتري"
+    ],
+    "category": "general",
+    "factKey": "general-003"
+  },
+  {
+    "id": "extra2-general-004",
+    "type": "text",
+    "question": "كم ضلعًا للشكل السداسي؟",
+    "correctAnswers": [
+      "6"
+    ],
+    "wrongAnswers": [
+      "القمر",
+      "إيفرست",
+      "الين",
+      "60",
+      "الفهد",
+      "التنغستن"
+    ],
+    "category": "general",
+    "factKey": "extra2:general:004"
+  },
+  {
+    "id": "general-single-001",
+    "type": "text",
+    "question": "ما العنصر الكيميائي الذي يحمل الرمز W؟",
+    "correctAnswers": [
+      "التنغستن",
+      "تنجستن"
+    ],
+    "wrongAnswers": [
+      "التنتالوم",
+      "التيتانيوم",
+      "القصدير"
+    ],
+    "category": "general",
+    "factKey": "general:single:general-m01"
+  },
+  {
+    "id": "general-v860-new-004-a",
+    "type": "text",
+    "question": "كم عددًا في دزينة الخباز التقليدية؟",
+    "correctAnswers": [
+      "13"
+    ],
+    "wrongAnswers": [
+      "8 بتات",
+      "50",
+      "بغداد",
+      "كيلو",
+      "8"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:004"
+  },
+  {
+    "id": "general-v860-new-002-a",
+    "type": "text",
+    "question": "كم مترًا مربعًا يساوي الهكتار؟",
+    "correctAnswers": [
+      "10000 متر مربع"
+    ],
+    "wrongAnswers": [
+      "100",
+      "13",
+      "8",
+      "مقياس موهس",
+      "الين"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:002"
+  },
+  {
+    "id": "general-v85-alt-00002",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما أعمق خندق محيطي معروف على الأرض؟",
+    "correctAnswers": [
+      "خندق ماريانا",
+      "ماريانا"
+    ],
+    "wrongAnswers": [
+      "خندق تونغا",
+      "خندق بورتوريكو",
+      "خندق اليابان"
+    ],
+    "category": "general",
+    "factKey": "general:single:general-m02"
+  },
+  {
+    "id": "extra2-general-009",
+    "type": "text",
+    "question": "كم دقيقة في الساعة الواحدة؟",
+    "correctAnswers": [
+      "60"
+    ],
+    "wrongAnswers": [
+      "التنغستن",
+      "خندق ماريانا",
+      "الفورنت",
+      "الزئبق",
+      "مقياس موهس",
+      "بغداد"
+    ],
+    "category": "general",
+    "factKey": "extra2:general:009"
+  },
+  {
+    "id": "general-v85-alt-00007",
+    "type": "text",
+    "question": "ما عدد أيام الأسبوع؟",
+    "correctAnswers": [
+      "7",
+      "سبعة"
+    ],
+    "wrongAnswers": [
+      "المحيط الهادئ",
+      "12",
+      "الأرض",
+      "الأخضر",
+      "البرتغالية",
+      "6"
+    ],
+    "category": "general",
+    "factKey": "general-002"
+  },
+  {
+    "id": "general-v85-alt-00003",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما العملة الرسمية للمجر؟",
+    "correctAnswers": [
+      "الفورنت",
+      "فورنت"
+    ],
+    "wrongAnswers": [
+      "الزلوتي",
+      "الكرونة",
+      "الليو"
+    ],
+    "category": "general",
+    "factKey": "general:single:general-m03"
+  },
+  {
+    "id": "extra2-general-006",
+    "type": "text",
+    "question": "ما القمر الطبيعي لكوكب الأرض؟",
+    "correctAnswers": [
+      "القمر"
+    ],
+    "wrongAnswers": [
+      "الين",
+      "60",
+      "الفهد",
+      "التنغستن",
+      "خندق ماريانا",
+      "الفورنت"
+    ],
+    "category": "general",
+    "factKey": "extra2:general:006"
+  },
+  {
+    "id": "general-v860-new-015-a",
+    "type": "text",
+    "question": "ما قيمة الرقم الروماني C؟",
+    "correctAnswers": [
+      "100"
+    ],
+    "wrongAnswers": [
+      "المشتري",
+      "10000 متر مربع",
+      "8",
+      "7",
+      "64"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:015"
+  },
+  {
+    "id": "general-004",
+    "type": "text",
+    "question": "كم عدد أشهر السنة؟",
+    "correctAnswers": [
+      "12",
+      "اثنا عشر",
+      "اثني عشر"
+    ],
+    "wrongAnswers": [
+      "الأرض",
+      "الأخضر",
+      "البرتغالية",
+      "6",
+      "المشتري",
+      "القمر"
+    ],
+    "category": "general",
+    "factKey": "general-004"
+  },
+  {
+    "id": "general-v860-new-011-a",
+    "type": "text",
+    "question": "كم بتًا في البايت الواحد؟",
+    "correctAnswers": [
+      "8 بتات"
+    ],
+    "wrongAnswers": [
+      "13",
+      "4 بتات",
+      "8",
+      "الفورنت",
+      "مقياس موهس"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:011"
+  },
+  {
+    "id": "general-v860-new-008-b",
+    "type": "text",
+    "question": "ما العدد الصحيح في السؤال الآتي: كم اتجاهًا أصليًا للبوصلة؟",
+    "correctAnswers": [
+      "4"
+    ],
+    "wrongAnswers": [
+      "12",
+      "إيفرست",
+      "10000 متر مربع",
+      "الفهد",
+      "الين"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:008"
+  },
+  {
+    "id": "general-v860-new-017-a",
+    "type": "text",
+    "question": "كم درجة في دورة كاملة؟",
+    "correctAnswers": [
+      "360 درجة"
+    ],
+    "wrongAnswers": [
+      "الزئبق",
+      "إيفرست",
+      "الأخضر",
+      "25 سنة",
+      "60"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:017"
+  },
+  {
+    "id": "general-v860-new-013-b",
+    "type": "text",
+    "question": "ما العدد الصحيح في السؤال الآتي: كم ورقة في الرزمة الورقية Ream القياسية غالبًا؟",
+    "correctAnswers": [
+      "500 ورقة"
+    ],
+    "wrongAnswers": [
+      "التنغستن",
+      "القمر",
+      "البرتغالية",
+      "1852 مترًا",
+      "7"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:013"
+  },
+  {
+    "id": "general-single-005",
+    "type": "text",
+    "question": "ما اسم المقياس المستخدم تقليديًا لقياس صلادة المعادن من 1 إلى 10؟",
+    "correctAnswers": [
+      "مقياس موهس",
+      "موهس"
+    ],
+    "wrongAnswers": [
+      "مقياس ريختر",
+      "مقياس بوفورت",
+      "مقياس كلفن"
+    ],
+    "category": "general",
+    "factKey": "general:single:general-m05"
+  },
+  {
+    "id": "general-v85-alt-00006",
+    "type": "text",
+    "question": "أي مدينة هي عاصمة العراق؟",
+    "correctAnswers": [
+      "بغداد"
+    ],
+    "wrongAnswers": [
+      "7",
+      "المحيط الهادئ",
+      "12",
+      "الأرض",
+      "الأخضر",
+      "البرتغالية"
+    ],
+    "category": "general",
+    "factKey": "general-001"
+  },
+  {
+    "id": "general-v860-new-010-a",
+    "type": "text",
+    "question": "كم سنة في ربع قرن؟",
+    "correctAnswers": [
+      "25 سنة"
+    ],
+    "wrongAnswers": [
+      "13",
+      "8",
+      "10000 متر مربع",
+      "الأخضر",
+      "القمر"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:010"
+  },
+  {
+    "id": "general-v860-new-005-b",
+    "type": "text",
+    "question": "ما العدد الصحيح في السؤال الآتي: كم مربعًا في رقعة الشطرنج؟",
+    "correctAnswers": [
+      "64"
+    ],
+    "wrongAnswers": [
+      "مقياس موهس",
+      "360 درجة",
+      "10000 متر مربع",
+      "60",
+      "12"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:005"
+  },
+  {
+    "id": "general-v860-new-016-a",
+    "type": "text",
+    "question": "كم درجة في الزاوية القائمة؟",
+    "correctAnswers": [
+      "90 درجة"
+    ],
+    "wrongAnswers": [
+      "4 بتات",
+      "13",
+      "12",
+      "500 ورقة",
+      "144"
+    ],
+    "category": "general",
+    "factKey": "v860:general:newfact:016"
+  },
+  {
+    "id": "general-005",
+    "type": "text",
+    "question": "ما الكوكب الذي نعيش عليه؟",
+    "correctAnswers": [
+      "الأرض",
+      "كوكب الأرض"
+    ],
+    "wrongAnswers": [
+      "الأخضر",
+      "البرتغالية",
+      "6",
+      "المشتري",
+      "القمر",
+      "إيفرست"
+    ],
+    "category": "general",
+    "factKey": "general-005"
+  }
+]

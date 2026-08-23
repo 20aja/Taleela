@@ -1,0 +1,1388 @@
+[
+  {
+    "id": "fashion-v860-new-004-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الليف النباتي المصنوع من نبات الكتان؟",
+    "correctAnswers": [
+      "الكتان"
+    ],
+    "wrongAnswers": [
+      "القطن",
+      "هوت كوتور",
+      "Selvedge",
+      "القلادة",
+      "الوشاح"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:004"
+  },
+  {
+    "id": "fashion-v85-alt-00004",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما المصطلح الذي يشير إلى حافة القماش المنسوجة ذاتيًا لمنع التفكك ويشتهر في الجينز؟",
+    "correctAnswers": [
+      "Selvedge",
+      "سيلفيدج"
+    ],
+    "wrongAnswers": [
+      "Hem",
+      "Pleat",
+      "Lapel"
+    ],
+    "category": "fashion",
+    "factKey": "fashion:single:fashion-m04"
+  },
+  {
+    "id": "extra2-fashion-004",
+    "type": "text",
+    "question": "ما الإكسسوار الذي يلبس حول المعصم؟",
+    "correctAnswers": [
+      "السوار"
+    ],
+    "wrongAnswers": [
+      "الوشاح",
+      "سنيكرز",
+      "البليزر",
+      "هوت كوتور",
+      "الحرير",
+      "الدنيم"
+    ],
+    "category": "fashion",
+    "factKey": "extra2:fashion:004"
+  },
+  {
+    "id": "fashion-v85-alt-00017",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الاسم الشائع للأحذية الرياضية اليومية؟",
+    "correctAnswers": [
+      "سنيكرز"
+    ],
+    "wrongAnswers": [
+      "هوت كوتور",
+      "الحرير",
+      "الدنيم",
+      "Selvedge",
+      "الكتان",
+      "الجورب"
+    ],
+    "category": "fashion",
+    "factKey": "extra2:fashion:007"
+  },
+  {
+    "id": "extra2-fashion-005",
+    "type": "text",
+    "question": "ما الإكسسوار الذي يلبس حول العنق؟",
+    "correctAnswers": [
+      "القلادة"
+    ],
+    "wrongAnswers": [
+      "سنيكرز",
+      "البليزر",
+      "هوت كوتور",
+      "الحرير",
+      "الدنيم",
+      "Selvedge"
+    ],
+    "category": "fashion",
+    "factKey": "extra2:fashion:005"
+  },
+  {
+    "id": "fashion-v860-new-008-b",
+    "type": "text",
+    "question": "اذكر الإجابة: السترة شبه الرسمية التي تشبه سترة البدلة وتلبس منفردة؟",
+    "correctAnswers": [
+      "البليزر"
+    ],
+    "wrongAnswers": [
+      "القلادة",
+      "الحزام",
+      "مصمم الأزياء",
+      "الكتان",
+      "الجورب"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:008"
+  },
+  {
+    "id": "fashion-v860-new-002-a",
+    "type": "text",
+    "question": "من أي كائن ينتج الحرير الطبيعي؟",
+    "correctAnswers": [
+      "دودة القز"
+    ],
+    "wrongAnswers": [
+      "جلد صناعي",
+      "الوشاح",
+      "مصمم الأزياء",
+      "البليزر",
+      "سنيكرز"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:002"
+  },
+  {
+    "id": "extra2-fashion-002",
+    "type": "text",
+    "question": "من أي حيوان يأتي الصوف التقليدي الأكثر شيوعًا؟",
+    "correctAnswers": [
+      "الخروف"
+    ],
+    "wrongAnswers": [
+      "السوار",
+      "القلادة",
+      "الوشاح",
+      "سنيكرز",
+      "البليزر",
+      "هوت كوتور"
+    ],
+    "category": "fashion",
+    "factKey": "extra2:fashion:002"
+  },
+  {
+    "id": "fashion-single-003",
+    "type": "text",
+    "question": "ما اسم النسيج القطني المتين المستخدم تقليديًا في صناعة الجينز؟",
+    "correctAnswers": [
+      "الدنيم",
+      "Denim"
+    ],
+    "wrongAnswers": [
+      "تويل",
+      "ساتان",
+      "شيفون"
+    ],
+    "category": "fashion",
+    "factKey": "fashion:single:fashion-m03"
+  },
+  {
+    "id": "fashion-v860-new-008-a",
+    "type": "text",
+    "question": "ما السترة شبه الرسمية التي تشبه سترة البدلة وتلبس منفردة؟",
+    "correctAnswers": [
+      "البليزر"
+    ],
+    "wrongAnswers": [
+      "المعطف",
+      "القطن",
+      "جلد صناعي",
+      "السوار",
+      "Selvedge"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:008"
+  },
+  {
+    "id": "fashion-v860-new-004-a",
+    "type": "text",
+    "question": "ما الليف النباتي المصنوع من نبات الكتان؟",
+    "correctAnswers": [
+      "الكتان"
+    ],
+    "wrongAnswers": [
+      "السوار",
+      "المخمل",
+      "البليزر",
+      "الدنيم",
+      "القطن"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:004"
+  },
+  {
+    "id": "fashion-005",
+    "type": "text",
+    "question": "ماذا يسمى الشخص الذي يصمم الملابس والأزياء؟",
+    "correctAnswers": [
+      "مصمم الأزياء",
+      "مصمم ازياء"
+    ],
+    "wrongAnswers": [
+      "الخروف",
+      "دودة القز",
+      "السوار",
+      "القلادة",
+      "الوشاح",
+      "سنيكرز"
+    ],
+    "category": "fashion",
+    "factKey": "fashion-005"
+  },
+  {
+    "id": "fashion-v860-new-005-a",
+    "type": "text",
+    "question": "ما القطعة التي ترتدى على الرأس للزينة أو الحماية؟",
+    "correctAnswers": [
+      "القبعة"
+    ],
+    "wrongAnswers": [
+      "الجورب",
+      "هوت كوتور",
+      "الكتان",
+      "مصمم الأزياء",
+      "السوار"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:005"
+  },
+  {
+    "id": "fashion-v860-new-016-a",
+    "type": "text",
+    "question": "ما النسيج الذي يتميز بسطح وبرّي ناعم وقد يصنع من الحرير أو مواد صناعية؟",
+    "correctAnswers": [
+      "المخمل"
+    ],
+    "wrongAnswers": [
+      "القلادة",
+      "الوشاح",
+      "Selvedge",
+      "القبعة",
+      "سنيكرز"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:016"
+  },
+  {
+    "id": "fashion-v860-new-013-a",
+    "type": "text",
+    "question": "ما قطعة المجوهرات التي ترتدى حول المعصم؟",
+    "correctAnswers": [
+      "السوار"
+    ],
+    "wrongAnswers": [
+      "الدنيم",
+      "القطن",
+      "الحرير",
+      "Selvedge",
+      "الخروف"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:013"
+  },
+  {
+    "id": "fashion-v860-new-010-a",
+    "type": "text",
+    "question": "ما الشخص الذي يبتكر تصاميم الملابس والمجموعات؟",
+    "correctAnswers": [
+      "مصمم الأزياء"
+    ],
+    "wrongAnswers": [
+      "الوشاح",
+      "الكتان",
+      "الحرير",
+      "الدنيم",
+      "سنيكرز"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:010"
+  },
+  {
+    "id": "fashion-004",
+    "type": "text",
+    "question": "ما القطعة التي تستخدم لتغطية الرأس؟",
+    "correctAnswers": [
+      "القبعة",
+      "قبعة"
+    ],
+    "wrongAnswers": [
+      "مصمم الأزياء",
+      "الخروف",
+      "دودة القز",
+      "السوار",
+      "القلادة",
+      "الوشاح"
+    ],
+    "category": "fashion",
+    "factKey": "fashion-004"
+  },
+  {
+    "id": "fashion-v85-alt-00001",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما المصطلح الفرنسي المستخدم للأزياء الراقية المصنوعة حسب الطلب؟",
+    "correctAnswers": [
+      "هوت كوتور",
+      "Haute Couture"
+    ],
+    "wrongAnswers": [
+      "Pret-a-porter",
+      "Streetwear",
+      "Fast Fashion"
+    ],
+    "category": "fashion",
+    "factKey": "fashion:single:fashion-m01"
+  },
+  {
+    "id": "fashion-v860-new-018-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الجزء في القميص الذي يحيط بالرقبة؟",
+    "correctAnswers": [
+      "الياقة"
+    ],
+    "wrongAnswers": [
+      "المخمل",
+      "الدنيم",
+      "دودة القز",
+      "جلد صناعي",
+      "القلادة"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:018"
+  },
+  {
+    "id": "fashion-v85-alt-00005",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: أي ألياف نباتية تستخرج من ساق نبات الكتان؟",
+    "correctAnswers": [
+      "الكتان",
+      "Linen"
+    ],
+    "wrongAnswers": [
+      "القطن",
+      "الجوت",
+      "الرايون"
+    ],
+    "category": "fashion",
+    "factKey": "fashion:single:fashion-m05"
+  },
+  {
+    "id": "fashion-v860-new-018-a",
+    "type": "text",
+    "question": "ما الجزء في القميص الذي يحيط بالرقبة؟",
+    "correctAnswers": [
+      "الياقة"
+    ],
+    "wrongAnswers": [
+      "القطن",
+      "جلد صناعي",
+      "الجورب",
+      "الخروف",
+      "مصمم الأزياء"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:018"
+  },
+  {
+    "id": "fashion-v85-alt-00016",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما القطعة القماشية الطويلة التي تلبس حول العنق أو الرأس للزينة أو الدفء؟",
+    "correctAnswers": [
+      "الوشاح"
+    ],
+    "wrongAnswers": [
+      "البليزر",
+      "هوت كوتور",
+      "الحرير",
+      "الدنيم",
+      "Selvedge",
+      "الكتان"
+    ],
+    "category": "fashion",
+    "factKey": "extra2:fashion:006"
+  },
+  {
+    "id": "fashion-v860-new-003-b",
+    "type": "text",
+    "question": "اذكر الإجابة: القماش المرتبط تقليديًا بصناعة الجينز؟",
+    "correctAnswers": [
+      "الدنيم"
+    ],
+    "wrongAnswers": [
+      "الخروف",
+      "السوار",
+      "المخمل",
+      "القلادة",
+      "سنيكرز"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:003"
+  },
+  {
+    "id": "fashion-v85-alt-00007",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الإكسسوار الذي يلبس حول الخصر لتثبيت البنطال؟",
+    "correctAnswers": [
+      "الحزام"
+    ],
+    "wrongAnswers": [
+      "القطن",
+      "القبعة",
+      "مصمم الأزياء",
+      "الخروف",
+      "دودة القز",
+      "السوار"
+    ],
+    "category": "fashion",
+    "factKey": "fashion-002"
+  },
+  {
+    "id": "fashion-single-002",
+    "type": "text",
+    "question": "أي ألياف طبيعية تنتجها دودة القز؟",
+    "correctAnswers": [
+      "الحرير"
+    ],
+    "wrongAnswers": [
+      "الكتان",
+      "الصوف",
+      "القطن"
+    ],
+    "category": "fashion",
+    "factKey": "fashion:single:fashion-m02"
+  },
+  {
+    "id": "fashion-v860-new-012-b",
+    "type": "text",
+    "question": "اذكر الإجابة: المعدن الثمين الشائع في صناعة المجوهرات الصفراء؟",
+    "correctAnswers": [
+      "الذهب"
+    ],
+    "wrongAnswers": [
+      "القطن",
+      "القلادة",
+      "هوت كوتور",
+      "الياقة",
+      "Selvedge"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:012"
+  },
+  {
+    "id": "fashion-v860-new-002-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: أي كائن ينتج الحرير الطبيعي؟",
+    "correctAnswers": [
+      "دودة القز"
+    ],
+    "wrongAnswers": [
+      "السحّاب الأمامي",
+      "القبعة",
+      "الكتان",
+      "القطن",
+      "سنيكرز"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:002"
+  },
+  {
+    "id": "extra2-fashion-010",
+    "type": "text",
+    "question": "ما القماش الأزرق الشائع في صناعة سراويل الجينز؟",
+    "correctAnswers": [
+      "الدنيم"
+    ],
+    "wrongAnswers": [
+      "Selvedge",
+      "الكتان",
+      "الجورب",
+      "الحزام",
+      "القطن",
+      "القبعة"
+    ],
+    "category": "fashion",
+    "factKey": "extra2:fashion:010"
+  },
+  {
+    "id": "fashion-002",
+    "type": "text",
+    "question": "ما الإكسسوار الذي يلبس حول الخصر لتثبيت البنطال؟",
+    "correctAnswers": [
+      "الحزام"
+    ],
+    "wrongAnswers": [
+      "القطن",
+      "القبعة",
+      "مصمم الأزياء",
+      "الخروف",
+      "دودة القز",
+      "السوار"
+    ],
+    "category": "fashion",
+    "factKey": "fashion-002"
+  },
+  {
+    "id": "fashion-v85-alt-00018",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما نوع السترة الرسمية الخفيفة التي تسمى بالإنجليزية Blazer؟",
+    "correctAnswers": [
+      "البليزر"
+    ],
+    "wrongAnswers": [
+      "الحرير",
+      "الدنيم",
+      "Selvedge",
+      "الكتان",
+      "الجورب",
+      "الحزام"
+    ],
+    "category": "fashion",
+    "factKey": "extra2:fashion:008"
+  },
+  {
+    "id": "fashion-v85-alt-00002",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: أي ألياف طبيعية تنتجها دودة القز؟",
+    "correctAnswers": [
+      "الحرير"
+    ],
+    "wrongAnswers": [
+      "الكتان",
+      "الصوف",
+      "القطن"
+    ],
+    "category": "fashion",
+    "factKey": "fashion:single:fashion-m02"
+  },
+  {
+    "id": "fashion-v860-new-007-a",
+    "type": "text",
+    "question": "ما الاسم الشائع للحذاء الرياضي اليومي؟",
+    "correctAnswers": [
+      "سنيكرز"
+    ],
+    "wrongAnswers": [
+      "دودة القز",
+      "الحزام",
+      "الياقة",
+      "السحّاب الأمامي",
+      "القطن"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:007"
+  },
+  {
+    "id": "fashion-v860-new-013-b",
+    "type": "text",
+    "question": "اذكر الإجابة: قطعة المجوهرات التي ترتدى حول المعصم؟",
+    "correctAnswers": [
+      "السوار"
+    ],
+    "wrongAnswers": [
+      "هوت كوتور",
+      "الدنيم",
+      "دودة القز",
+      "القطن",
+      "القلادة"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:013"
+  },
+  {
+    "id": "fashion-v860-new-014-a",
+    "type": "text",
+    "question": "ما قطعة المجوهرات التي ترتدى حول العنق؟",
+    "correctAnswers": [
+      "القلادة"
+    ],
+    "wrongAnswers": [
+      "سنيكرز",
+      "الحرير",
+      "القطن",
+      "القبعة",
+      "Selvedge"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:014"
+  },
+  {
+    "id": "fashion-v860-new-001-b",
+    "type": "text",
+    "question": "حدد الاسم الصحيح: أي حيوان يؤخذ الصوف التقليدي غالبًا؟",
+    "correctAnswers": [
+      "الخروف"
+    ],
+    "wrongAnswers": [
+      "الحزام",
+      "البليزر",
+      "الذهب",
+      "القبعة",
+      "الدنيم"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:001"
+  },
+  {
+    "id": "fashion-v860-new-015-a",
+    "type": "text",
+    "question": "ما المصطلح لحافة الدنيم المنسوجة ذاتيًا لمنع التفكك؟",
+    "correctAnswers": [
+      "Selvedge"
+    ],
+    "wrongAnswers": [
+      "السوار",
+      "الكتان",
+      "القطن",
+      "سنيكرز",
+      "جلد صناعي"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:015"
+  },
+  {
+    "id": "fashion-v860-new-020-b",
+    "type": "text",
+    "question": "اذكر الإجابة: القطعة الطويلة التي تلبس فوق الملابس للحماية من البرد؟",
+    "correctAnswers": [
+      "المعطف"
+    ],
+    "wrongAnswers": [
+      "الدنيم",
+      "القبعة",
+      "السوار",
+      "القطن",
+      "السحّاب الأمامي"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:020"
+  },
+  {
+    "id": "extra2-fashion-001",
+    "type": "text",
+    "question": "من أي نسيج يصنع قماش الدنيم المستخدم في الجينز غالبًا؟",
+    "correctAnswers": [
+      "القطن"
+    ],
+    "wrongAnswers": [
+      "دودة القز",
+      "السوار",
+      "القلادة",
+      "الوشاح",
+      "سنيكرز",
+      "البليزر"
+    ],
+    "category": "fashion",
+    "factKey": "extra2:fashion:001"
+  },
+  {
+    "id": "fashion-v860-new-015-b",
+    "type": "text",
+    "question": "اذكر الإجابة: المصطلح لحافة الدنيم المنسوجة ذاتيًا لمنع التفكك؟",
+    "correctAnswers": [
+      "Selvedge"
+    ],
+    "wrongAnswers": [
+      "الدنيم",
+      "القطن",
+      "سنيكرز",
+      "البليزر",
+      "السوار"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:015"
+  },
+  {
+    "id": "fashion-v85-alt-00010",
+    "type": "text",
+    "question": "ما الذي يسمى الشخص الذي يصمم الملابس والأزياء؟",
+    "correctAnswers": [
+      "مصمم الأزياء",
+      "مصمم ازياء"
+    ],
+    "wrongAnswers": [
+      "الخروف",
+      "دودة القز",
+      "السوار",
+      "القلادة",
+      "الوشاح",
+      "سنيكرز"
+    ],
+    "category": "fashion",
+    "factKey": "fashion-005"
+  },
+  {
+    "id": "fashion-v85-alt-00015",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الإكسسوار الذي يلبس حول العنق؟",
+    "correctAnswers": [
+      "القلادة"
+    ],
+    "wrongAnswers": [
+      "سنيكرز",
+      "البليزر",
+      "هوت كوتور",
+      "الحرير",
+      "الدنيم",
+      "Selvedge"
+    ],
+    "category": "fashion",
+    "factKey": "extra2:fashion:005"
+  },
+  {
+    "id": "fashion-v860-new-017-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الجلد الصناعي الذي يحاكي الجلد الطبيعي ويعرف اختصارًا بـ PU في بعض أنواعه؟",
+    "correctAnswers": [
+      "جلد صناعي"
+    ],
+    "wrongAnswers": [
+      "الياقة",
+      "القبعة",
+      "Selvedge",
+      "الوشاح",
+      "الكتان"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:017"
+  },
+  {
+    "id": "fashion-v85-alt-00012",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من أي حيوان يأتي الصوف التقليدي الأكثر شيوعًا؟",
+    "correctAnswers": [
+      "الخروف"
+    ],
+    "wrongAnswers": [
+      "السوار",
+      "القلادة",
+      "الوشاح",
+      "سنيكرز",
+      "البليزر",
+      "هوت كوتور"
+    ],
+    "category": "fashion",
+    "factKey": "extra2:fashion:002"
+  },
+  {
+    "id": "fashion-v860-new-014-b",
+    "type": "text",
+    "question": "اذكر الإجابة: قطعة المجوهرات التي ترتدى حول العنق؟",
+    "correctAnswers": [
+      "القلادة"
+    ],
+    "wrongAnswers": [
+      "البليزر",
+      "الجورب",
+      "القبعة",
+      "مصمم الأزياء",
+      "هوت كوتور"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:014"
+  },
+  {
+    "id": "fashion-v860-new-016-b",
+    "type": "text",
+    "question": "اذكر الإجابة: النسيج الذي يتميز بسطح وبرّي ناعم وقد يصنع من الحرير أو مواد صناعية؟",
+    "correctAnswers": [
+      "المخمل"
+    ],
+    "wrongAnswers": [
+      "الجورب",
+      "الدنيم",
+      "دودة القز",
+      "الكتان",
+      "مصمم الأزياء"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:016"
+  },
+  {
+    "id": "fashion-v860-new-009-b",
+    "type": "text",
+    "question": "اذكر الإجابة: المصطلح الفرنسي للأزياء الراقية المصنوعة حسب الطلب؟",
+    "correctAnswers": [
+      "هوت كوتور"
+    ],
+    "wrongAnswers": [
+      "الخروف",
+      "البليزر",
+      "Selvedge",
+      "الذهب",
+      "المخمل"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:009"
+  },
+  {
+    "id": "fashion-v85-alt-00019",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما المصطلح الفرنسي للأزياء الراقية المصنوعة حسب الطلب؟",
+    "correctAnswers": [
+      "هوت كوتور"
+    ],
+    "wrongAnswers": [
+      "الدنيم",
+      "Selvedge",
+      "الكتان",
+      "الجورب",
+      "الحزام",
+      "القطن"
+    ],
+    "category": "fashion",
+    "factKey": "extra2:fashion:009"
+  },
+  {
+    "id": "fashion-v860-new-009-a",
+    "type": "text",
+    "question": "ما المصطلح الفرنسي للأزياء الراقية المصنوعة حسب الطلب — سؤال إضافي 17؟",
+    "correctAnswers": [
+      "هوت كوتور"
+    ],
+    "wrongAnswers": [
+      "Selvedge",
+      "القلادة",
+      "القطن",
+      "سنيكرز",
+      "مصمم الأزياء"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:009"
+  },
+  {
+    "id": "fashion-003",
+    "type": "text",
+    "question": "ما القماش المصنوع تقليديًا من ألياف نبات القطن؟",
+    "correctAnswers": [
+      "القطن",
+      "قماش القطن"
+    ],
+    "wrongAnswers": [
+      "القبعة",
+      "مصمم الأزياء",
+      "الخروف",
+      "دودة القز",
+      "السوار",
+      "القلادة"
+    ],
+    "category": "fashion",
+    "factKey": "fashion-003"
+  },
+  {
+    "id": "fashion-v860-new-005-b",
+    "type": "text",
+    "question": "اذكر الإجابة: القطعة التي ترتدى على الرأس للزينة أو الحماية؟",
+    "correctAnswers": [
+      "القبعة"
+    ],
+    "wrongAnswers": [
+      "دودة القز",
+      "السحّاب الأمامي",
+      "الكتان",
+      "الوشاح",
+      "القلادة"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:005"
+  },
+  {
+    "id": "fashion-single-005",
+    "type": "text",
+    "question": "أي ألياف نباتية تستخرج من ساق نبات الكتان؟",
+    "correctAnswers": [
+      "الكتان",
+      "Linen"
+    ],
+    "wrongAnswers": [
+      "القطن",
+      "الجوت",
+      "الرايون"
+    ],
+    "category": "fashion",
+    "factKey": "fashion:single:fashion-m05"
+  },
+  {
+    "id": "fashion-v860-new-019-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الجزء في البنطال الذي يغلق عادة بسحاب أو أزرار في الأمام؟",
+    "correctAnswers": [
+      "السحّاب الأمامي"
+    ],
+    "wrongAnswers": [
+      "Selvedge",
+      "القلادة",
+      "الحرير",
+      "الياقة",
+      "القطن"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:019"
+  },
+  {
+    "id": "fashion-v85-alt-00013",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من أي كائن تنتج ألياف الحرير الطبيعية؟",
+    "correctAnswers": [
+      "دودة القز"
+    ],
+    "wrongAnswers": [
+      "القلادة",
+      "الوشاح",
+      "سنيكرز",
+      "البليزر",
+      "هوت كوتور",
+      "الحرير"
+    ],
+    "category": "fashion",
+    "factKey": "extra2:fashion:003"
+  },
+  {
+    "id": "fashion-single-001",
+    "type": "text",
+    "question": "ما المصطلح الفرنسي المستخدم للأزياء الراقية المصنوعة حسب الطلب؟",
+    "correctAnswers": [
+      "هوت كوتور",
+      "Haute Couture"
+    ],
+    "wrongAnswers": [
+      "Pret-a-porter",
+      "Streetwear",
+      "Fast Fashion"
+    ],
+    "category": "fashion",
+    "factKey": "fashion:single:fashion-m01"
+  },
+  {
+    "id": "fashion-v860-new-007-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الاسم الشائع للحذاء الرياضي اليومي؟",
+    "correctAnswers": [
+      "سنيكرز"
+    ],
+    "wrongAnswers": [
+      "المخمل",
+      "الدنيم",
+      "الجورب",
+      "السوار",
+      "الحرير"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:007"
+  },
+  {
+    "id": "extra2-fashion-008",
+    "type": "text",
+    "question": "ما نوع السترة الرسمية الخفيفة التي تسمى بالإنجليزية Blazer؟",
+    "correctAnswers": [
+      "البليزر"
+    ],
+    "wrongAnswers": [
+      "الحرير",
+      "الدنيم",
+      "Selvedge",
+      "الكتان",
+      "الجورب",
+      "الحزام"
+    ],
+    "category": "fashion",
+    "factKey": "extra2:fashion:008"
+  },
+  {
+    "id": "fashion-v860-new-006-b",
+    "type": "text",
+    "question": "اذكر الإجابة: القطعة التي ترتدى حول العنق للدفء أو الزينة؟",
+    "correctAnswers": [
+      "الوشاح"
+    ],
+    "wrongAnswers": [
+      "السوار",
+      "الخروف",
+      "القلادة",
+      "البليزر",
+      "القبعة"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:006"
+  },
+  {
+    "id": "fashion-v860-new-020-a",
+    "type": "text",
+    "question": "ما القطعة الطويلة التي تلبس فوق الملابس للحماية من البرد؟",
+    "correctAnswers": [
+      "المعطف"
+    ],
+    "wrongAnswers": [
+      "هوت كوتور",
+      "جلد صناعي",
+      "الياقة",
+      "البليزر",
+      "الخروف"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:020"
+  },
+  {
+    "id": "fashion-v860-new-010-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الشخص الذي يبتكر تصاميم الملابس والمجموعات؟",
+    "correctAnswers": [
+      "مصمم الأزياء"
+    ],
+    "wrongAnswers": [
+      "السحّاب الأمامي",
+      "البليزر",
+      "السوار",
+      "الحزام",
+      "الدنيم"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:010"
+  },
+  {
+    "id": "fashion-v85-alt-00011",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: من أي نسيج يصنع قماش الدنيم المستخدم في الجينز غالبًا؟",
+    "correctAnswers": [
+      "القطن"
+    ],
+    "wrongAnswers": [
+      "دودة القز",
+      "السوار",
+      "القلادة",
+      "الوشاح",
+      "سنيكرز",
+      "البليزر"
+    ],
+    "category": "fashion",
+    "factKey": "extra2:fashion:001"
+  },
+  {
+    "id": "fashion-v860-new-003-a",
+    "type": "text",
+    "question": "ما القماش المرتبط تقليديًا بصناعة الجينز؟",
+    "correctAnswers": [
+      "الدنيم"
+    ],
+    "wrongAnswers": [
+      "المخمل",
+      "السحّاب الأمامي",
+      "Selvedge",
+      "مصمم الأزياء",
+      "سنيكرز"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:003"
+  },
+  {
+    "id": "fashion-v85-alt-00014",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الإكسسوار الذي يلبس حول المعصم؟",
+    "correctAnswers": [
+      "السوار"
+    ],
+    "wrongAnswers": [
+      "الوشاح",
+      "سنيكرز",
+      "البليزر",
+      "هوت كوتور",
+      "الحرير",
+      "الدنيم"
+    ],
+    "category": "fashion",
+    "factKey": "extra2:fashion:004"
+  },
+  {
+    "id": "fashion-v860-new-006-a",
+    "type": "text",
+    "question": "ما القطعة التي ترتدى حول العنق للدفء أو الزينة؟",
+    "correctAnswers": [
+      "الوشاح"
+    ],
+    "wrongAnswers": [
+      "القبعة",
+      "Selvedge",
+      "السحّاب الأمامي",
+      "الحزام",
+      "البليزر"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:006"
+  },
+  {
+    "id": "fashion-001",
+    "type": "text",
+    "question": "ما قطعة الملابس التي تلبس في القدم داخل الحذاء؟",
+    "correctAnswers": [
+      "الجورب",
+      "الجوارب"
+    ],
+    "wrongAnswers": [
+      "الحزام",
+      "القطن",
+      "القبعة",
+      "مصمم الأزياء",
+      "الخروف",
+      "دودة القز"
+    ],
+    "category": "fashion",
+    "factKey": "fashion-001"
+  },
+  {
+    "id": "fashion-v860-new-011-b",
+    "type": "text",
+    "question": "اذكر الإجابة: القماش الطبيعي المنتج من ألياف نبات القطن؟",
+    "correctAnswers": [
+      "القطن"
+    ],
+    "wrongAnswers": [
+      "مصمم الأزياء",
+      "سنيكرز",
+      "الوشاح",
+      "الدنيم",
+      "القلادة"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:011"
+  },
+  {
+    "id": "fashion-single-004",
+    "type": "text",
+    "question": "ما المصطلح الذي يشير إلى حافة القماش المنسوجة ذاتيًا لمنع التفكك ويشتهر في الجينز؟",
+    "correctAnswers": [
+      "Selvedge",
+      "سيلفيدج"
+    ],
+    "wrongAnswers": [
+      "Hem",
+      "Pleat",
+      "Lapel"
+    ],
+    "category": "fashion",
+    "factKey": "fashion:single:fashion-m04"
+  },
+  {
+    "id": "extra2-fashion-007",
+    "type": "text",
+    "question": "ما الاسم الشائع للأحذية الرياضية اليومية؟",
+    "correctAnswers": [
+      "سنيكرز"
+    ],
+    "wrongAnswers": [
+      "هوت كوتور",
+      "الحرير",
+      "الدنيم",
+      "Selvedge",
+      "الكتان",
+      "الجورب"
+    ],
+    "category": "fashion",
+    "factKey": "extra2:fashion:007"
+  },
+  {
+    "id": "fashion-v860-new-019-a",
+    "type": "text",
+    "question": "ما الجزء في البنطال الذي يغلق عادة بسحاب أو أزرار في الأمام؟",
+    "correctAnswers": [
+      "السحّاب الأمامي"
+    ],
+    "wrongAnswers": [
+      "البليزر",
+      "الكتان",
+      "الدنيم",
+      "السوار",
+      "الياقة"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:019"
+  },
+  {
+    "id": "fashion-v860-new-017-a",
+    "type": "text",
+    "question": "ما الجلد الصناعي الذي يحاكي الجلد الطبيعي ويعرف اختصارًا بـ PU في بعض أنواعه؟",
+    "correctAnswers": [
+      "جلد صناعي"
+    ],
+    "wrongAnswers": [
+      "الخروف",
+      "الحزام",
+      "الحرير",
+      "الذهب",
+      "الوشاح"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:017"
+  },
+  {
+    "id": "fashion-v85-alt-00020",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما القماش الأزرق الشائع في صناعة سراويل الجينز؟",
+    "correctAnswers": [
+      "الدنيم"
+    ],
+    "wrongAnswers": [
+      "Selvedge",
+      "الكتان",
+      "الجورب",
+      "الحزام",
+      "القطن",
+      "القبعة"
+    ],
+    "category": "fashion",
+    "factKey": "extra2:fashion:010"
+  },
+  {
+    "id": "extra2-fashion-003",
+    "type": "text",
+    "question": "من أي كائن تنتج ألياف الحرير الطبيعية؟",
+    "correctAnswers": [
+      "دودة القز"
+    ],
+    "wrongAnswers": [
+      "القلادة",
+      "الوشاح",
+      "سنيكرز",
+      "البليزر",
+      "هوت كوتور",
+      "الحرير"
+    ],
+    "category": "fashion",
+    "factKey": "extra2:fashion:003"
+  },
+  {
+    "id": "extra2-fashion-009",
+    "type": "text",
+    "question": "ما المصطلح الفرنسي للأزياء الراقية المصنوعة حسب الطلب؟",
+    "correctAnswers": [
+      "هوت كوتور"
+    ],
+    "wrongAnswers": [
+      "الدنيم",
+      "Selvedge",
+      "الكتان",
+      "الجورب",
+      "الحزام",
+      "القطن"
+    ],
+    "category": "fashion",
+    "factKey": "extra2:fashion:009"
+  },
+  {
+    "id": "fashion-v85-alt-00006",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما قطعة الملابس التي تلبس في القدم داخل الحذاء؟",
+    "correctAnswers": [
+      "الجورب",
+      "الجوارب"
+    ],
+    "wrongAnswers": [
+      "الحزام",
+      "القطن",
+      "القبعة",
+      "مصمم الأزياء",
+      "الخروف",
+      "دودة القز"
+    ],
+    "category": "fashion",
+    "factKey": "fashion-001"
+  },
+  {
+    "id": "extra2-fashion-006",
+    "type": "text",
+    "question": "ما القطعة القماشية الطويلة التي تلبس حول العنق أو الرأس للزينة أو الدفء؟",
+    "correctAnswers": [
+      "الوشاح"
+    ],
+    "wrongAnswers": [
+      "البليزر",
+      "هوت كوتور",
+      "الحرير",
+      "الدنيم",
+      "Selvedge",
+      "الكتان"
+    ],
+    "category": "fashion",
+    "factKey": "extra2:fashion:006"
+  },
+  {
+    "id": "fashion-v85-alt-00008",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما القماش المصنوع تقليديًا من ألياف نبات القطن؟",
+    "correctAnswers": [
+      "القطن",
+      "قماش القطن"
+    ],
+    "wrongAnswers": [
+      "القبعة",
+      "مصمم الأزياء",
+      "الخروف",
+      "دودة القز",
+      "السوار",
+      "القلادة"
+    ],
+    "category": "fashion",
+    "factKey": "fashion-003"
+  },
+  {
+    "id": "fashion-v860-new-012-a",
+    "type": "text",
+    "question": "ما المعدن الثمين الشائع في صناعة المجوهرات الصفراء؟",
+    "correctAnswers": [
+      "الذهب"
+    ],
+    "wrongAnswers": [
+      "هوت كوتور",
+      "الحرير",
+      "الخروف",
+      "الكتان",
+      "مصمم الأزياء"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:012"
+  },
+  {
+    "id": "fashion-v85-alt-00003",
+    "type": "text",
+    "question": "ما الاسم الذي يُطلق على النسيج القطني المتين المستخدم تقليديًا في صناعة الجينز؟",
+    "correctAnswers": [
+      "الدنيم",
+      "Denim"
+    ],
+    "wrongAnswers": [
+      "تويل",
+      "ساتان",
+      "شيفون"
+    ],
+    "category": "fashion",
+    "factKey": "fashion:single:fashion-m03"
+  },
+  {
+    "id": "fashion-v860-new-011-a",
+    "type": "text",
+    "question": "ما القماش الطبيعي المنتج من ألياف نبات القطن؟",
+    "correctAnswers": [
+      "القطن"
+    ],
+    "wrongAnswers": [
+      "الوشاح",
+      "القلادة",
+      "القبعة",
+      "دودة القز",
+      "السحّاب الأمامي"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:011"
+  },
+  {
+    "id": "fashion-v860-new-001-a",
+    "type": "text",
+    "question": "من أي حيوان يؤخذ الصوف التقليدي غالبًا؟",
+    "correctAnswers": [
+      "الخروف"
+    ],
+    "wrongAnswers": [
+      "جلد صناعي",
+      "مصمم الأزياء",
+      "الدنيم",
+      "سنيكرز",
+      "دودة القز"
+    ],
+    "category": "fashion",
+    "factKey": "v860:fashion:newfact:001"
+  },
+  {
+    "id": "fashion-v85-alt-00009",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما القطعة التي تستخدم لتغطية الرأس؟",
+    "correctAnswers": [
+      "القبعة",
+      "قبعة"
+    ],
+    "wrongAnswers": [
+      "مصمم الأزياء",
+      "الخروف",
+      "دودة القز",
+      "السوار",
+      "القلادة",
+      "الوشاح"
+    ],
+    "category": "fashion",
+    "factKey": "fashion-004"
+  }
+]

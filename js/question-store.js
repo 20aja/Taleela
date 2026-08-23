@@ -1,4 +1,4 @@
-const QUESTION_VERSION = "8.6.0";
+const QUESTION_VERSION = "8.9.0";
 const MANIFEST_URL = new URL(`../questions/v${QUESTION_VERSION}/manifest.json`, import.meta.url);
 const HISTORY_KEY = `taleela_question_history_v${QUESTION_VERSION}`;
 
@@ -57,16 +57,45 @@ function shuffle(items) {
   return out;
 }
 
-function expandQuestion(raw) {
+function normalizedKeyPart(value) {
+  return String(value || "")
+    .normalize("NFKC")
+    .trim()
+    .toLowerCase()
+    .replace(/[\u064B-\u065F\u0670]/g, "")
+    .replace(/[أإآ]/g, "ا")
+    .replace(/ى/g, "ي")
+    .replace(/ة/g, "ه")
+    .replace(/\s+/g, " ");
+}
+
+function expandQuestion(raw, {file, index}) {
+  // v8.9.0 keeps the stored question schema deliberately minimal:
+  // question / correctAnswers / wrongAnswers (+ image/imageAlt only when needed).
+  // Runtime-only metadata is derived from the shard location and content.
+  const accepted = Array.isArray(raw.correctAnswers)
+    ? raw.correctAnswers.filter(Boolean)
+    : [];
+  const answer = accepted[0] ?? "";
+  const decoys = Array.isArray(raw.wrongAnswers)
+    ? raw.wrongAnswers.filter(Boolean)
+    : [];
+  const image = raw.image ?? null;
+  const category = String(file || "").split("/")[0] || null;
+  const id = `${QUESTION_VERSION}:${file}:${index + 1}`;
+  const factKey = `${category || "question"}:${normalizedKeyPart(raw.question)}:${normalizedKeyPart(answer)}`;
+
   return {
-    id: raw.i,
-    prompt: raw.q,
-    answer: raw.a,
-    accepted: Array.isArray(raw.x) && raw.x.length ? raw.x : [raw.a],
-    decoys: Array.isArray(raw.d) ? raw.d : [],
-    factKey: raw.f || raw.i,
-    image: raw.m || null,
-    imageAlt: raw.m ? raw.t || "صورة السؤال" : "",
+    id,
+    prompt: raw.question ?? "",
+    answer,
+    accepted,
+    decoys,
+    factKey,
+    image,
+    imageAlt: image ? raw.imageAlt ?? "صورة السؤال" : "",
+    type: image ? "image" : "text",
+    category,
   };
 }
 
@@ -94,7 +123,7 @@ async function loadShard(file) {
   if (shardCache.has(file)) return shardCache.get(file);
   const url = new URL(`../questions/v${QUESTION_VERSION}/${file}`, import.meta.url);
   const promise = fetchJSON(url)
-    .then((items) => (Array.isArray(items) ? items.map(expandQuestion) : []))
+    .then((items) => (Array.isArray(items) ? items.map((raw, index) => expandQuestion(raw, {file, index})) : []))
     .catch((error) => {
       shardCache.delete(file);
       throw error;

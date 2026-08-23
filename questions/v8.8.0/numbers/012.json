@@ -1,0 +1,3398 @@
+[
+  {
+    "id": "numbers-v860-new-09388",
+    "type": "text",
+    "question": "احسب مع مراعاة أولوية العمليات: 26 + (12 × 8) = ؟",
+    "correctAnswers": [
+      "122"
+    ],
+    "wrongAnswers": [
+      "120",
+      "121",
+      "123",
+      "124",
+      "125"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr1:26:12:8"
+  },
+  {
+    "id": "numbers-gcd-180",
+    "type": "text",
+    "question": "ما القاسم المشترك الأكبر للعددين 108 و135؟",
+    "correctAnswers": [
+      "27"
+    ],
+    "wrongAnswers": [
+      "26",
+      "28",
+      "25",
+      "29",
+      "37"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:gcd:108:135"
+  },
+  {
+    "id": "numbers-v860-new-06710",
+    "type": "text",
+    "question": "اقسم من دون آلة حاسبة: 2162 ÷ 23 = ؟",
+    "correctAnswers": [
+      "94"
+    ],
+    "wrongAnswers": [
+      "92",
+      "93",
+      "95",
+      "96",
+      "97"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:div:2162:23"
+  },
+  {
+    "id": "numbers-v860-new-14263",
+    "type": "text",
+    "question": "احسب مع مراعاة أولوية العمليات: 40 + (13 × 9) = ؟",
+    "correctAnswers": [
+      "157"
+    ],
+    "wrongAnswers": [
+      "155",
+      "156",
+      "158",
+      "159",
+      "160"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr1:40:13:9"
+  },
+  {
+    "id": "numbers-v85-03591",
+    "type": "text",
+    "question": "ما ناتج الضرب: 117 × 23 = ؟",
+    "correctAnswers": [
+      "2691"
+    ],
+    "wrongAnswers": [
+      "2690",
+      "2692",
+      "2689",
+      "2693",
+      "2688"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:mul:117:23"
+  },
+  {
+    "id": "numbers-v85-01566",
+    "type": "text",
+    "question": "كم يساوي 10% من العدد 1580؟",
+    "correctAnswers": [
+      "158"
+    ],
+    "wrongAnswers": [
+      "157",
+      "159",
+      "156",
+      "160",
+      "155"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:pct:10:1580"
+  },
+  {
+    "id": "numbers-v860-new-08890",
+    "type": "text",
+    "question": "احسب: 1471 + 371 = ؟",
+    "correctAnswers": [
+      "1842"
+    ],
+    "wrongAnswers": [
+      "1840",
+      "1841",
+      "1843",
+      "1844",
+      "1845"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:add:1471:371"
+  },
+  {
+    "id": "numbers-easy2-2164",
+    "type": "text",
+    "question": "احسب: 128 + 8 = ؟",
+    "correctAnswers": [
+      "136"
+    ],
+    "wrongAnswers": [
+      "134",
+      "138",
+      "132",
+      "140",
+      "146"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:easy2:add:128:8"
+  },
+  {
+    "id": "numbers-v860-new-08519",
+    "type": "text",
+    "question": "احسب مع مراعاة أولوية العمليات: 61 + (12 × 3) = ؟",
+    "correctAnswers": [
+      "97"
+    ],
+    "wrongAnswers": [
+      "95",
+      "96",
+      "98",
+      "99",
+      "100"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr1:61:12:3"
+  },
+  {
+    "id": "numbers-easy2-3609",
+    "type": "text",
+    "question": "احسب: 200 + 13 = ؟",
+    "correctAnswers": [
+      "213"
+    ],
+    "wrongAnswers": [
+      "211",
+      "215",
+      "209",
+      "217",
+      "223"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:easy2:add:200:13"
+  },
+  {
+    "id": "numbers-medium-0699",
+    "type": "text",
+    "question": "إذا كان 144 ÷ 12 = ؟",
+    "correctAnswers": [
+      "12"
+    ],
+    "wrongAnswers": [
+      "11",
+      "13",
+      "10",
+      "14",
+      "22"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:medium:division:144:12"
+  },
+  {
+    "id": "numbers-v860-new-03029",
+    "type": "text",
+    "question": "احسب: 1618 + 521 = ؟",
+    "correctAnswers": [
+      "2139"
+    ],
+    "wrongAnswers": [
+      "2137",
+      "2138",
+      "2140",
+      "2141",
+      "2142"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:add:1618:521"
+  },
+  {
+    "id": "numbers-v85-05665",
+    "type": "text",
+    "question": "احسب: 653 + 133 = ؟",
+    "correctAnswers": [
+      "786"
+    ],
+    "wrongAnswers": [
+      "785",
+      "787",
+      "784",
+      "788",
+      "783"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:add:653:133"
+  },
+  {
+    "id": "numbers-v85-05479",
+    "type": "text",
+    "question": "احسب: 133 + 44 = ؟",
+    "correctAnswers": [
+      "177"
+    ],
+    "wrongAnswers": [
+      "176",
+      "178",
+      "175",
+      "179",
+      "174"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:add:133:44"
+  },
+  {
+    "id": "numbers-mod-394",
+    "type": "text",
+    "question": "ما باقي قسمة 35^5 على 9؟",
+    "correctAnswers": [
+      "8"
+    ],
+    "wrongAnswers": [
+      "0",
+      "1",
+      "7"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:mod:35:5:9"
+  },
+  {
+    "id": "numbers-v85-07149",
+    "type": "text",
+    "question": "ما ناتج الضرب: 143 × 10 = ؟",
+    "correctAnswers": [
+      "1430"
+    ],
+    "wrongAnswers": [
+      "1429",
+      "1431",
+      "1428",
+      "1432",
+      "1427"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:mul:143:10"
+  },
+  {
+    "id": "numbers-v85-05262",
+    "type": "text",
+    "question": "كم يساوي 60% من العدد 1180؟",
+    "correctAnswers": [
+      "708"
+    ],
+    "wrongAnswers": [
+      "707",
+      "709",
+      "706",
+      "710",
+      "705"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:pct:60:1180"
+  },
+  {
+    "id": "numbers-v860-new-07983",
+    "type": "text",
+    "question": "احسب حاصل الضرب: 53 × 81 = ؟",
+    "correctAnswers": [
+      "4293"
+    ],
+    "wrongAnswers": [
+      "4291",
+      "4292",
+      "4294",
+      "4295",
+      "4296"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:mul:53:81"
+  },
+  {
+    "id": "numbers-medium-0710",
+    "type": "text",
+    "question": "إذا كان 408 ÷ 12 = ؟",
+    "correctAnswers": [
+      "34"
+    ],
+    "wrongAnswers": [
+      "33",
+      "35",
+      "32",
+      "36",
+      "44"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:medium:division:408:12"
+  },
+  {
+    "id": "numbers-v860-new-07449",
+    "type": "text",
+    "question": "احسب: 1029 − 528 = ؟",
+    "correctAnswers": [
+      "501"
+    ],
+    "wrongAnswers": [
+      "499",
+      "500",
+      "502",
+      "503",
+      "504"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:sub:1029:528"
+  },
+  {
+    "id": "numbers-v860-new-04617",
+    "type": "text",
+    "question": "احسب حاصل الضرب: 61 × 46 = ؟",
+    "correctAnswers": [
+      "2806"
+    ],
+    "wrongAnswers": [
+      "2804",
+      "2805",
+      "2807",
+      "2808",
+      "2809"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:mul:61:46"
+  },
+  {
+    "id": "numbers-v860-new-08189",
+    "type": "text",
+    "question": "اقسم من دون آلة حاسبة: 2196 ÷ 12 = ؟",
+    "correctAnswers": [
+      "183"
+    ],
+    "wrongAnswers": [
+      "181",
+      "182",
+      "184",
+      "185",
+      "186"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:div:2196:12"
+  },
+  {
+    "id": "numbers-v860-new-13199",
+    "type": "text",
+    "question": "احسب مع مراعاة أولوية العمليات: 44 + (15 × 10) = ؟",
+    "correctAnswers": [
+      "194"
+    ],
+    "wrongAnswers": [
+      "192",
+      "193",
+      "195",
+      "196",
+      "197"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr1:44:15:10"
+  },
+  {
+    "id": "numbers-v85-01216",
+    "type": "text",
+    "question": "احسب القسمة: 1530 ÷ 30 = ؟",
+    "correctAnswers": [
+      "51"
+    ],
+    "wrongAnswers": [
+      "50",
+      "52",
+      "49",
+      "53",
+      "48"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:div:1530:30"
+  },
+  {
+    "id": "numbers-v860-new-13488",
+    "type": "text",
+    "question": "احسب حاصل الضرب: 23 × 77 = ؟",
+    "correctAnswers": [
+      "1771"
+    ],
+    "wrongAnswers": [
+      "1769",
+      "1770",
+      "1772",
+      "1773",
+      "1774"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:mul:23:77"
+  },
+  {
+    "id": "numbers-v860-new-03566",
+    "type": "text",
+    "question": "احسب: 2231 + 657 = ؟",
+    "correctAnswers": [
+      "2888"
+    ],
+    "wrongAnswers": [
+      "2886",
+      "2887",
+      "2889",
+      "2890",
+      "2891"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:add:2231:657"
+  },
+  {
+    "id": "numbers-v860-new-13770",
+    "type": "text",
+    "question": "احسب مع مراعاة أولوية العمليات: 71 + (11 × 9) = ؟",
+    "correctAnswers": [
+      "170"
+    ],
+    "wrongAnswers": [
+      "168",
+      "169",
+      "171",
+      "172",
+      "173"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr1:71:11:9"
+  },
+  {
+    "id": "numbers-v85-06455",
+    "type": "text",
+    "question": "احسب من دون آلة حاسبة: (44 × 4) + 42 = ؟",
+    "correctAnswers": [
+      "218"
+    ],
+    "wrongAnswers": [
+      "217",
+      "219",
+      "216",
+      "220",
+      "215"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:expr1:44:4:42"
+  },
+  {
+    "id": "numbers-v85-06791",
+    "type": "text",
+    "question": "احسب من دون آلة حاسبة: (39 × 5) + 77 = ؟",
+    "correctAnswers": [
+      "272"
+    ],
+    "wrongAnswers": [
+      "271",
+      "273",
+      "270",
+      "274",
+      "269"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:expr1:39:5:77"
+  },
+  {
+    "id": "numbers-v85-03110",
+    "type": "text",
+    "question": "احسب: 320 − 151 = ؟",
+    "correctAnswers": [
+      "169"
+    ],
+    "wrongAnswers": [
+      "168",
+      "170",
+      "167",
+      "171",
+      "166"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:sub:320:151"
+  },
+  {
+    "id": "numbers-v860-new-10626",
+    "type": "text",
+    "question": "احسب مع مراعاة أولوية العمليات: 86 + (3 × 10) = ؟",
+    "correctAnswers": [
+      "116"
+    ],
+    "wrongAnswers": [
+      "114",
+      "115",
+      "117",
+      "118",
+      "119"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr1:86:3:10"
+  },
+  {
+    "id": "numbers-v860-new-00244",
+    "type": "text",
+    "question": "احسب: (28 × 11) − 7² = ؟",
+    "correctAnswers": [
+      "259"
+    ],
+    "wrongAnswers": [
+      "257",
+      "258",
+      "260",
+      "261",
+      "262"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr2:28:11:7"
+  },
+  {
+    "id": "numbers-v85-04910",
+    "type": "text",
+    "question": "احسب: 313 − 175 = ؟",
+    "correctAnswers": [
+      "138"
+    ],
+    "wrongAnswers": [
+      "137",
+      "139",
+      "136",
+      "140",
+      "135"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:sub:313:175"
+  },
+  {
+    "id": "numbers-v860-new-14717",
+    "type": "text",
+    "question": "احسب: 1251 + 598 = ؟",
+    "correctAnswers": [
+      "1849"
+    ],
+    "wrongAnswers": [
+      "1847",
+      "1848",
+      "1850",
+      "1851",
+      "1852"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:add:1251:598"
+  },
+  {
+    "id": "numbers-v85-00701",
+    "type": "text",
+    "question": "احسب من دون آلة حاسبة: (55 × 14) + 9 = ؟",
+    "correctAnswers": [
+      "779"
+    ],
+    "wrongAnswers": [
+      "778",
+      "780",
+      "777",
+      "781",
+      "776"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:expr1:55:14:9"
+  },
+  {
+    "id": "numbers-v860-new-13315",
+    "type": "text",
+    "question": "احسب مع مراعاة أولوية العمليات: 35 + (3 × 5) = ؟",
+    "correctAnswers": [
+      "50"
+    ],
+    "wrongAnswers": [
+      "48",
+      "49",
+      "51",
+      "52",
+      "53"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr1:35:3:5"
+  },
+  {
+    "id": "numbers-v85-04712",
+    "type": "text",
+    "question": "احسب: 566 − 225 = ؟",
+    "correctAnswers": [
+      "341"
+    ],
+    "wrongAnswers": [
+      "340",
+      "342",
+      "339",
+      "343",
+      "338"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:sub:566:225"
+  },
+  {
+    "id": "numbers-easy2-1762",
+    "type": "text",
+    "question": "احسب: 108 + 6 = ؟",
+    "correctAnswers": [
+      "114"
+    ],
+    "wrongAnswers": [
+      "112",
+      "116",
+      "110",
+      "118",
+      "124"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:easy2:add:108:6"
+  },
+  {
+    "id": "numbers-v860-new-00931",
+    "type": "text",
+    "question": "اقسم من دون آلة حاسبة: 1750 ÷ 14 = ؟",
+    "correctAnswers": [
+      "125"
+    ],
+    "wrongAnswers": [
+      "123",
+      "124",
+      "126",
+      "127",
+      "128"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:div:1750:14"
+  },
+  {
+    "id": "numbers-v860-new-01522",
+    "type": "text",
+    "question": "احسب: (63 × 11) − 7² = ؟",
+    "correctAnswers": [
+      "644"
+    ],
+    "wrongAnswers": [
+      "642",
+      "643",
+      "645",
+      "646",
+      "647"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr2:63:11:7"
+  },
+  {
+    "id": "numbers-v860-new-15062",
+    "type": "text",
+    "question": "احسب: 913 − 739 = ؟",
+    "correctAnswers": [
+      "174"
+    ],
+    "wrongAnswers": [
+      "172",
+      "173",
+      "175",
+      "176",
+      "177"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:sub:913:739"
+  },
+  {
+    "id": "numbers-v860-new-14833",
+    "type": "text",
+    "question": "احسب: 482 + 605 = ؟",
+    "correctAnswers": [
+      "1087"
+    ],
+    "wrongAnswers": [
+      "1085",
+      "1086",
+      "1088",
+      "1089",
+      "1090"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:add:482:605"
+  },
+  {
+    "id": "numbers-easy2-0997",
+    "type": "text",
+    "question": "احسب: 69 + 21 = ؟",
+    "correctAnswers": [
+      "90"
+    ],
+    "wrongAnswers": [
+      "88",
+      "92",
+      "86",
+      "94",
+      "100"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:easy2:add:69:21"
+  },
+  {
+    "id": "numbers-v860-new-08857",
+    "type": "text",
+    "question": "احسب: 786 + 500 = ؟",
+    "correctAnswers": [
+      "1286"
+    ],
+    "wrongAnswers": [
+      "1284",
+      "1285",
+      "1287",
+      "1288",
+      "1289"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:add:786:500"
+  },
+  {
+    "id": "numbers-expression-266",
+    "type": "text",
+    "question": "احسب من دون آلة حاسبة: (44 × 15) − 5² + 22 = ؟",
+    "correctAnswers": [
+      "657"
+    ],
+    "wrongAnswers": [
+      "654",
+      "660",
+      "651",
+      "663",
+      "667"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:expression:44:15:5:22"
+  },
+  {
+    "id": "numbers-v85-00106",
+    "type": "text",
+    "question": "احسب القسمة: 5476 ÷ 37 = ؟",
+    "correctAnswers": [
+      "148"
+    ],
+    "wrongAnswers": [
+      "147",
+      "149",
+      "146",
+      "150",
+      "145"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:div:5476:37"
+  },
+  {
+    "id": "numbers-lcm-343",
+    "type": "text",
+    "question": "ما المضاعف المشترك الأصغر للعددين 162 و105؟",
+    "correctAnswers": [
+      "5670"
+    ],
+    "wrongAnswers": [
+      "5667",
+      "5673",
+      "5664",
+      "5676",
+      "5680"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:lcm:162:105"
+  },
+  {
+    "id": "numbers-v85-00206",
+    "type": "text",
+    "question": "احسب: 321 − 25 = ؟",
+    "correctAnswers": [
+      "296"
+    ],
+    "wrongAnswers": [
+      "295",
+      "297",
+      "294",
+      "298",
+      "293"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:sub:321:25"
+  },
+  {
+    "id": "numbers-v860-new-04231",
+    "type": "text",
+    "question": "احسب: (41 × 11) − 5² = ؟",
+    "correctAnswers": [
+      "426"
+    ],
+    "wrongAnswers": [
+      "424",
+      "425",
+      "427",
+      "428",
+      "429"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr2:41:11:5"
+  },
+  {
+    "id": "numbers-v860-new-04646",
+    "type": "text",
+    "question": "اقسم من دون آلة حاسبة: 2444 ÷ 13 = ؟",
+    "correctAnswers": [
+      "188"
+    ],
+    "wrongAnswers": [
+      "186",
+      "187",
+      "189",
+      "190",
+      "191"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:div:2444:13"
+  },
+  {
+    "id": "numbers-v860-new-02024",
+    "type": "text",
+    "question": "احسب حاصل الضرب: 96 × 86 = ؟",
+    "correctAnswers": [
+      "8256"
+    ],
+    "wrongAnswers": [
+      "8254",
+      "8255",
+      "8257",
+      "8258",
+      "8259"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:mul:96:86"
+  },
+  {
+    "id": "numbers-easy2-1470",
+    "type": "text",
+    "question": "احسب: 93 + 14 = ؟",
+    "correctAnswers": [
+      "107"
+    ],
+    "wrongAnswers": [
+      "105",
+      "109",
+      "103",
+      "111",
+      "117"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:easy2:add:93:14"
+  },
+  {
+    "id": "numbers-expression-675",
+    "type": "text",
+    "question": "احسب من دون آلة حاسبة: (80 × 9) − 13² + 9 = ؟",
+    "correctAnswers": [
+      "560"
+    ],
+    "wrongAnswers": [
+      "549",
+      "571",
+      "538",
+      "582",
+      "570"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:expression:80:9:13:9"
+  },
+  {
+    "id": "numbers-v860-new-04011",
+    "type": "text",
+    "question": "اقسم من دون آلة حاسبة: 5082 ÷ 22 = ؟",
+    "correctAnswers": [
+      "231"
+    ],
+    "wrongAnswers": [
+      "229",
+      "230",
+      "232",
+      "233",
+      "234"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:div:5082:22"
+  },
+  {
+    "id": "numbers-v860-new-12750",
+    "type": "text",
+    "question": "احسب حاصل الضرب: 44 × 82 = ؟",
+    "correctAnswers": [
+      "3608"
+    ],
+    "wrongAnswers": [
+      "3606",
+      "3607",
+      "3609",
+      "3610",
+      "3611"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:mul:44:82"
+  },
+  {
+    "id": "numbers-v860-new-10040",
+    "type": "text",
+    "question": "احسب: (77 × 10) − 9² = ؟",
+    "correctAnswers": [
+      "689"
+    ],
+    "wrongAnswers": [
+      "687",
+      "688",
+      "690",
+      "691",
+      "692"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr2:77:10:9"
+  },
+  {
+    "id": "numbers-v860-new-11313",
+    "type": "text",
+    "question": "احسب: 1822 − 594 = ؟",
+    "correctAnswers": [
+      "1228"
+    ],
+    "wrongAnswers": [
+      "1226",
+      "1227",
+      "1229",
+      "1230",
+      "1231"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:sub:1822:594"
+  },
+  {
+    "id": "numbers-v85-04823",
+    "type": "text",
+    "question": "احسب من دون آلة حاسبة: (27 × 3) + 18 = ؟",
+    "correctAnswers": [
+      "99"
+    ],
+    "wrongAnswers": [
+      "98",
+      "100",
+      "97",
+      "101",
+      "96"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:expr1:27:3:18"
+  },
+  {
+    "id": "numbers-v860-new-04559",
+    "type": "text",
+    "question": "احسب حاصل الضرب: 39 × 72 = ؟",
+    "correctAnswers": [
+      "2808"
+    ],
+    "wrongAnswers": [
+      "2806",
+      "2807",
+      "2809",
+      "2810",
+      "2811"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:mul:39:72"
+  },
+  {
+    "id": "numbers-v85-04410",
+    "type": "text",
+    "question": "كم يساوي 20% من العدد 1520؟",
+    "correctAnswers": [
+      "304"
+    ],
+    "wrongAnswers": [
+      "303",
+      "305",
+      "302",
+      "306",
+      "301"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:pct:20:1520"
+  },
+  {
+    "id": "numbers-v860-new-07972",
+    "type": "text",
+    "question": "احسب: 1903 − 756 = ؟",
+    "correctAnswers": [
+      "1147"
+    ],
+    "wrongAnswers": [
+      "1145",
+      "1146",
+      "1148",
+      "1149",
+      "1150"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:sub:1903:756"
+  },
+  {
+    "id": "numbers-v85-03700",
+    "type": "text",
+    "question": "احسب القسمة: 747 ÷ 9 = ؟",
+    "correctAnswers": [
+      "83"
+    ],
+    "wrongAnswers": [
+      "82",
+      "84",
+      "81",
+      "85",
+      "80"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:div:747:9"
+  },
+  {
+    "id": "numbers-v860-new-04627",
+    "type": "text",
+    "question": "احسب: 1093 − 737 = ؟",
+    "correctAnswers": [
+      "356"
+    ],
+    "wrongAnswers": [
+      "354",
+      "355",
+      "357",
+      "358",
+      "359"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:sub:1093:737"
+  },
+  {
+    "id": "numbers-v860-new-05333",
+    "type": "text",
+    "question": "احسب حاصل الضرب: 25 × 52 = ؟",
+    "correctAnswers": [
+      "1300"
+    ],
+    "wrongAnswers": [
+      "1298",
+      "1299",
+      "1301",
+      "1302",
+      "1303"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:mul:25:52"
+  },
+  {
+    "id": "numbers-v85-02135",
+    "type": "text",
+    "question": "احسب من دون آلة حاسبة: (48 × 15) + 10 = ؟",
+    "correctAnswers": [
+      "730"
+    ],
+    "wrongAnswers": [
+      "729",
+      "731",
+      "728",
+      "732",
+      "727"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:expr1:48:15:10"
+  },
+  {
+    "id": "numbers-v860-new-09887",
+    "type": "text",
+    "question": "احسب مع مراعاة أولوية العمليات: 53 + (8 × 9) = ؟",
+    "correctAnswers": [
+      "125"
+    ],
+    "wrongAnswers": [
+      "123",
+      "124",
+      "126",
+      "127",
+      "128"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr1:53:8:9"
+  },
+  {
+    "id": "numbers-v860-new-02508",
+    "type": "text",
+    "question": "احسب مع مراعاة أولوية العمليات: 87 + (14 × 5) = ؟",
+    "correctAnswers": [
+      "157"
+    ],
+    "wrongAnswers": [
+      "155",
+      "156",
+      "158",
+      "159",
+      "160"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr1:87:14:5"
+  },
+  {
+    "id": "numbers-v860-new-08507",
+    "type": "text",
+    "question": "احسب: 1311 + 151 = ؟",
+    "correctAnswers": [
+      "1462"
+    ],
+    "wrongAnswers": [
+      "1460",
+      "1461",
+      "1463",
+      "1464",
+      "1465"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:add:1311:151"
+  },
+  {
+    "id": "numbers-v860-new-06324",
+    "type": "text",
+    "question": "احسب: 1786 − 883 = ؟",
+    "correctAnswers": [
+      "903"
+    ],
+    "wrongAnswers": [
+      "901",
+      "902",
+      "904",
+      "905",
+      "906"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:sub:1786:883"
+  },
+  {
+    "id": "numbers-v860-new-05441",
+    "type": "text",
+    "question": "احسب: 706 − 385 = ؟",
+    "correctAnswers": [
+      "321"
+    ],
+    "wrongAnswers": [
+      "319",
+      "320",
+      "322",
+      "323",
+      "324"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:sub:706:385"
+  },
+  {
+    "id": "numbers-v860-new-11460",
+    "type": "text",
+    "question": "احسب: 1031 + 36 = ؟",
+    "correctAnswers": [
+      "1067"
+    ],
+    "wrongAnswers": [
+      "1065",
+      "1066",
+      "1068",
+      "1069",
+      "1070"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:add:1031:36"
+  },
+  {
+    "id": "numbers-easy2-0581",
+    "type": "text",
+    "question": "احسب: 49 + 5 = ؟",
+    "correctAnswers": [
+      "54"
+    ],
+    "wrongAnswers": [
+      "52",
+      "56",
+      "50",
+      "58",
+      "64"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:easy2:add:49:5"
+  },
+  {
+    "id": "numbers-v85-04278",
+    "type": "text",
+    "question": "كم يساوي 50% من العدد 1040؟",
+    "correctAnswers": [
+      "520"
+    ],
+    "wrongAnswers": [
+      "519",
+      "521",
+      "518",
+      "522",
+      "517"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:pct:50:1040"
+  },
+  {
+    "id": "numbers-medium-1477",
+    "type": "text",
+    "question": "ما المتوسط الحسابي للأعداد 251، 261، 271؟",
+    "correctAnswers": [
+      "261"
+    ],
+    "wrongAnswers": [
+      "259",
+      "263",
+      "257",
+      "265",
+      "271"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:medium:average:251:261:271"
+  },
+  {
+    "id": "numbers-v860-new-14172",
+    "type": "text",
+    "question": "احسب: 1307 + 236 = ؟",
+    "correctAnswers": [
+      "1543"
+    ],
+    "wrongAnswers": [
+      "1541",
+      "1542",
+      "1544",
+      "1545",
+      "1546"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:add:1307:236"
+  },
+  {
+    "id": "numbers-v860-new-01252",
+    "type": "text",
+    "question": "احسب مع مراعاة أولوية العمليات: 56 + (14 × 12) = ؟",
+    "correctAnswers": [
+      "224"
+    ],
+    "wrongAnswers": [
+      "222",
+      "223",
+      "225",
+      "226",
+      "227"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr1:56:14:12"
+  },
+  {
+    "id": "numbers-v860-new-08888",
+    "type": "text",
+    "question": "اقسم من دون آلة حاسبة: 435 ÷ 15 = ؟",
+    "correctAnswers": [
+      "29"
+    ],
+    "wrongAnswers": [
+      "27",
+      "28",
+      "30",
+      "31",
+      "32"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:div:435:15"
+  },
+  {
+    "id": "numbers-v860-new-11243",
+    "type": "text",
+    "question": "احسب: 1986 + 40 = ؟",
+    "correctAnswers": [
+      "2026"
+    ],
+    "wrongAnswers": [
+      "2024",
+      "2025",
+      "2027",
+      "2028",
+      "2029"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:add:1986:40"
+  },
+  {
+    "id": "numbers-v860-new-05911",
+    "type": "text",
+    "question": "احسب: (34 × 11) − 5² = ؟",
+    "correctAnswers": [
+      "349"
+    ],
+    "wrongAnswers": [
+      "347",
+      "348",
+      "350",
+      "351",
+      "352"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr2:34:11:5"
+  },
+  {
+    "id": "numbers-v860-new-00655",
+    "type": "text",
+    "question": "احسب: (27 × 11) − 8² = ؟",
+    "correctAnswers": [
+      "233"
+    ],
+    "wrongAnswers": [
+      "231",
+      "232",
+      "234",
+      "235",
+      "236"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr2:27:11:8"
+  },
+  {
+    "id": "numbers-v860-new-07688",
+    "type": "text",
+    "question": "احسب: 1570 + 391 = ؟",
+    "correctAnswers": [
+      "1961"
+    ],
+    "wrongAnswers": [
+      "1959",
+      "1960",
+      "1962",
+      "1963",
+      "1964"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:add:1570:391"
+  },
+  {
+    "id": "numbers-easy2-2963",
+    "type": "text",
+    "question": "احسب: 168 + 7 = ؟",
+    "correctAnswers": [
+      "175"
+    ],
+    "wrongAnswers": [
+      "173",
+      "177",
+      "171",
+      "179",
+      "185"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:easy2:add:168:7"
+  },
+  {
+    "id": "numbers-medium-1675",
+    "type": "text",
+    "question": "احسب: 143 − 54 + 10 = ؟",
+    "correctAnswers": [
+      "99"
+    ],
+    "wrongAnswers": [
+      "97",
+      "101",
+      "95",
+      "103",
+      "109"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:medium:final:23:143:54:10"
+  },
+  {
+    "id": "numbers-v860-new-00439",
+    "type": "text",
+    "question": "اقسم من دون آلة حاسبة: 3026 ÷ 17 = ؟",
+    "correctAnswers": [
+      "178"
+    ],
+    "wrongAnswers": [
+      "176",
+      "177",
+      "179",
+      "180",
+      "181"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:div:3026:17"
+  },
+  {
+    "id": "numbers-v85-05821",
+    "type": "text",
+    "question": "احسب: 250 + 151 = ؟",
+    "correctAnswers": [
+      "401"
+    ],
+    "wrongAnswers": [
+      "400",
+      "402",
+      "399",
+      "403",
+      "398"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:add:250:151"
+  },
+  {
+    "id": "numbers-v860-new-12029",
+    "type": "text",
+    "question": "احسب: (76 × 8) − 6² = ؟",
+    "correctAnswers": [
+      "572"
+    ],
+    "wrongAnswers": [
+      "570",
+      "571",
+      "573",
+      "574",
+      "575"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr2:76:8:6"
+  },
+  {
+    "id": "numbers-v860-new-04573",
+    "type": "text",
+    "question": "احسب: (38 × 8) − 9² = ؟",
+    "correctAnswers": [
+      "223"
+    ],
+    "wrongAnswers": [
+      "221",
+      "222",
+      "224",
+      "225",
+      "226"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr2:38:8:9"
+  },
+  {
+    "id": "numbers-v85-07171",
+    "type": "text",
+    "question": "احسب: 528 + 52 = ؟",
+    "correctAnswers": [
+      "580"
+    ],
+    "wrongAnswers": [
+      "579",
+      "581",
+      "578",
+      "582",
+      "577"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:add:528:52"
+  },
+  {
+    "id": "numbers-v860-new-01910",
+    "type": "text",
+    "question": "احسب: (73 × 2) − 7² = ؟",
+    "correctAnswers": [
+      "97"
+    ],
+    "wrongAnswers": [
+      "95",
+      "96",
+      "98",
+      "99",
+      "100"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr2:73:2:7"
+  },
+  {
+    "id": "numbers-v860-new-04501",
+    "type": "text",
+    "question": "احسب: 2126 − 679 = ؟",
+    "correctAnswers": [
+      "1447"
+    ],
+    "wrongAnswers": [
+      "1445",
+      "1446",
+      "1448",
+      "1449",
+      "1450"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:sub:2126:679"
+  },
+  {
+    "id": "numbers-v860-new-11093",
+    "type": "text",
+    "question": "اقسم من دون آلة حاسبة: 1494 ÷ 9 = ؟",
+    "correctAnswers": [
+      "166"
+    ],
+    "wrongAnswers": [
+      "164",
+      "165",
+      "167",
+      "168",
+      "169"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:div:1494:9"
+  },
+  {
+    "id": "numbers-easy2-0528",
+    "type": "text",
+    "question": "احسب: 46 + 12 = ؟",
+    "correctAnswers": [
+      "58"
+    ],
+    "wrongAnswers": [
+      "56",
+      "60",
+      "54",
+      "62",
+      "68"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:easy2:add:46:12"
+  },
+  {
+    "id": "numbers-v860-new-09374",
+    "type": "text",
+    "question": "احسب: 756 − 87 = ؟",
+    "correctAnswers": [
+      "669"
+    ],
+    "wrongAnswers": [
+      "667",
+      "668",
+      "670",
+      "671",
+      "672"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:sub:756:87"
+  },
+  {
+    "id": "numbers-v85-05609",
+    "type": "text",
+    "question": "احسب من دون آلة حاسبة: (64 × 11) + 37 = ؟",
+    "correctAnswers": [
+      "741"
+    ],
+    "wrongAnswers": [
+      "740",
+      "742",
+      "739",
+      "743",
+      "738"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:expr1:64:11:37"
+  },
+  {
+    "id": "numbers-v85-05519",
+    "type": "text",
+    "question": "احسب من دون آلة حاسبة: (58 × 10) + 56 = ؟",
+    "correctAnswers": [
+      "636"
+    ],
+    "wrongAnswers": [
+      "635",
+      "637",
+      "634",
+      "638",
+      "633"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:expr1:58:10:56"
+  },
+  {
+    "id": "numbers-v860-new-09591",
+    "type": "text",
+    "question": "احسب مع مراعاة أولوية العمليات: 64 + (5 × 7) = ؟",
+    "correctAnswers": [
+      "99"
+    ],
+    "wrongAnswers": [
+      "97",
+      "98",
+      "100",
+      "101",
+      "102"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr1:64:5:7"
+  },
+  {
+    "id": "numbers-v860-new-07284",
+    "type": "text",
+    "question": "احسب مع مراعاة أولوية العمليات: 32 + (7 × 8) = ؟",
+    "correctAnswers": [
+      "88"
+    ],
+    "wrongAnswers": [
+      "86",
+      "87",
+      "89",
+      "90",
+      "91"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr1:32:7:8"
+  },
+  {
+    "id": "numbers-v860-new-03524",
+    "type": "text",
+    "question": "اقسم من دون آلة حاسبة: 484 ÷ 11 = ؟",
+    "correctAnswers": [
+      "44"
+    ],
+    "wrongAnswers": [
+      "42",
+      "43",
+      "45",
+      "46",
+      "47"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:div:484:11"
+  },
+  {
+    "id": "numbers-v860-new-02133",
+    "type": "text",
+    "question": "احسب: (29 × 6) − 6² = ؟",
+    "correctAnswers": [
+      "138"
+    ],
+    "wrongAnswers": [
+      "136",
+      "137",
+      "139",
+      "140",
+      "141"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr2:29:6:6"
+  },
+  {
+    "id": "numbers-v85-00857",
+    "type": "text",
+    "question": "احسب من دون آلة حاسبة: (65 × 12) + 74 = ؟",
+    "correctAnswers": [
+      "854"
+    ],
+    "wrongAnswers": [
+      "853",
+      "855",
+      "852",
+      "856",
+      "851"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:expr1:65:12:74"
+  },
+  {
+    "id": "numbers-v860-new-07883",
+    "type": "text",
+    "question": "احسب: 1055 − 811 = ؟",
+    "correctAnswers": [
+      "244"
+    ],
+    "wrongAnswers": [
+      "242",
+      "243",
+      "245",
+      "246",
+      "247"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:sub:1055:811"
+  },
+  {
+    "id": "numbers-v860-new-06550",
+    "type": "text",
+    "question": "احسب: 2350 + 629 = ؟",
+    "correctAnswers": [
+      "2979"
+    ],
+    "wrongAnswers": [
+      "2977",
+      "2978",
+      "2980",
+      "2981",
+      "2982"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:add:2350:629"
+  },
+  {
+    "id": "numbers-v860-new-01679",
+    "type": "text",
+    "question": "احسب حاصل الضرب: 61 × 13 = ؟",
+    "correctAnswers": [
+      "793"
+    ],
+    "wrongAnswers": [
+      "791",
+      "792",
+      "794",
+      "795",
+      "796"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:mul:61:13"
+  },
+  {
+    "id": "numbers-v860-new-14549",
+    "type": "text",
+    "question": "احسب: 690 + 211 = ؟",
+    "correctAnswers": [
+      "901"
+    ],
+    "wrongAnswers": [
+      "899",
+      "900",
+      "902",
+      "903",
+      "904"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:add:690:211"
+  },
+  {
+    "id": "numbers-v85-01666",
+    "type": "text",
+    "question": "احسب القسمة: 1323 ÷ 21 = ؟",
+    "correctAnswers": [
+      "63"
+    ],
+    "wrongAnswers": [
+      "62",
+      "64",
+      "61",
+      "65",
+      "60"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:div:1323:21"
+  },
+  {
+    "id": "numbers-v85-07010",
+    "type": "text",
+    "question": "احسب: 725 − 229 = ؟",
+    "correctAnswers": [
+      "496"
+    ],
+    "wrongAnswers": [
+      "495",
+      "497",
+      "494",
+      "498",
+      "493"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:sub:725:229"
+  },
+  {
+    "id": "numbers-v860-new-12832",
+    "type": "text",
+    "question": "احسب: 1449 − 307 = ؟",
+    "correctAnswers": [
+      "1142"
+    ],
+    "wrongAnswers": [
+      "1140",
+      "1141",
+      "1143",
+      "1144",
+      "1145"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:sub:1449:307"
+  },
+  {
+    "id": "numbers-v860-new-06692",
+    "type": "text",
+    "question": "اقسم من دون آلة حاسبة: 1659 ÷ 7 = ؟",
+    "correctAnswers": [
+      "237"
+    ],
+    "wrongAnswers": [
+      "235",
+      "236",
+      "238",
+      "239",
+      "240"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:div:1659:7"
+  },
+  {
+    "id": "numbers-v860-new-03962",
+    "type": "text",
+    "question": "احسب مع مراعاة أولوية العمليات: 44 + (6 × 11) = ؟",
+    "correctAnswers": [
+      "110"
+    ],
+    "wrongAnswers": [
+      "108",
+      "109",
+      "111",
+      "112",
+      "113"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr1:44:6:11"
+  },
+  {
+    "id": "numbers-medium-1416",
+    "type": "text",
+    "question": "ما المتوسط الحسابي للأعداد 217، 225، 233؟",
+    "correctAnswers": [
+      "225"
+    ],
+    "wrongAnswers": [
+      "223",
+      "227",
+      "221",
+      "229",
+      "235"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:medium:average:217:225:233"
+  },
+  {
+    "id": "numbers-v860-new-05906",
+    "type": "text",
+    "question": "احسب: 1141 + 58 = ؟",
+    "correctAnswers": [
+      "1199"
+    ],
+    "wrongAnswers": [
+      "1197",
+      "1198",
+      "1200",
+      "1201",
+      "1202"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:add:1141:58"
+  },
+  {
+    "id": "numbers-v85-01525",
+    "type": "text",
+    "question": "احسب: 499 + 203 = ؟",
+    "correctAnswers": [
+      "702"
+    ],
+    "wrongAnswers": [
+      "701",
+      "703",
+      "700",
+      "704",
+      "699"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:add:499:203"
+  },
+  {
+    "id": "numbers-v860-new-13469",
+    "type": "text",
+    "question": "احسب: (47 × 7) − 2² = ؟",
+    "correctAnswers": [
+      "325"
+    ],
+    "wrongAnswers": [
+      "323",
+      "324",
+      "326",
+      "327",
+      "328"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr2:47:7:2"
+  },
+  {
+    "id": "numbers-v860-new-03637",
+    "type": "text",
+    "question": "احسب: 1182 + 749 = ؟",
+    "correctAnswers": [
+      "1931"
+    ],
+    "wrongAnswers": [
+      "1929",
+      "1930",
+      "1932",
+      "1933",
+      "1934"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:add:1182:749"
+  },
+  {
+    "id": "numbers-v860-new-09760",
+    "type": "text",
+    "question": "احسب: (43 × 12) − 2² = ؟",
+    "correctAnswers": [
+      "512"
+    ],
+    "wrongAnswers": [
+      "510",
+      "511",
+      "513",
+      "514",
+      "515"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr2:43:12:2"
+  },
+  {
+    "id": "numbers-v85-05506",
+    "type": "text",
+    "question": "احسب القسمة: 3885 ÷ 37 = ؟",
+    "correctAnswers": [
+      "105"
+    ],
+    "wrongAnswers": [
+      "104",
+      "106",
+      "103",
+      "107",
+      "102"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:div:3885:37"
+  },
+  {
+    "id": "numbers-v860-new-13421",
+    "type": "text",
+    "question": "احسب مع مراعاة أولوية العمليات: 84 + (4 × 4) = ؟",
+    "correctAnswers": [
+      "100"
+    ],
+    "wrongAnswers": [
+      "98",
+      "99",
+      "101",
+      "102",
+      "103"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr1:84:4:4"
+  },
+  {
+    "id": "numbers-v860-new-08232",
+    "type": "text",
+    "question": "احسب: (43 × 7) − 2² = ؟",
+    "correctAnswers": [
+      "297"
+    ],
+    "wrongAnswers": [
+      "295",
+      "296",
+      "298",
+      "299",
+      "300"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr2:43:7:2"
+  },
+  {
+    "id": "numbers-v860-new-05160",
+    "type": "text",
+    "question": "احسب: (32 × 9) − 7² = ؟",
+    "correctAnswers": [
+      "239"
+    ],
+    "wrongAnswers": [
+      "237",
+      "238",
+      "240",
+      "241",
+      "242"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr2:32:9:7"
+  },
+  {
+    "id": "numbers-v860-new-02098",
+    "type": "text",
+    "question": "احسب: (39 × 8) − 7² = ؟",
+    "correctAnswers": [
+      "263"
+    ],
+    "wrongAnswers": [
+      "261",
+      "262",
+      "264",
+      "265",
+      "266"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr2:39:8:7"
+  },
+  {
+    "id": "numbers-v860-new-09454",
+    "type": "text",
+    "question": "احسب: 1588 + 299 = ؟",
+    "correctAnswers": [
+      "1887"
+    ],
+    "wrongAnswers": [
+      "1885",
+      "1886",
+      "1888",
+      "1889",
+      "1890"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:add:1588:299"
+  },
+  {
+    "id": "numbers-v860-new-00151",
+    "type": "text",
+    "question": "احسب حاصل الضرب: 47 × 73 = ؟",
+    "correctAnswers": [
+      "3431"
+    ],
+    "wrongAnswers": [
+      "3429",
+      "3430",
+      "3432",
+      "3433",
+      "3434"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:mul:47:73"
+  },
+  {
+    "id": "numbers-easy2-0134",
+    "type": "text",
+    "question": "احسب: 26 + 18 = ؟",
+    "correctAnswers": [
+      "44"
+    ],
+    "wrongAnswers": [
+      "42",
+      "46",
+      "40",
+      "48",
+      "54"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:easy2:add:26:18"
+  },
+  {
+    "id": "numbers-v860-new-02257",
+    "type": "text",
+    "question": "احسب: 1163 + 511 = ؟",
+    "correctAnswers": [
+      "1674"
+    ],
+    "wrongAnswers": [
+      "1672",
+      "1673",
+      "1675",
+      "1676",
+      "1677"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:add:1163:511"
+  },
+  {
+    "id": "numbers-easy2-1640",
+    "type": "text",
+    "question": "احسب: 101 + 24 = ؟",
+    "correctAnswers": [
+      "125"
+    ],
+    "wrongAnswers": [
+      "123",
+      "127",
+      "121",
+      "129",
+      "135"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:easy2:add:101:24"
+  },
+  {
+    "id": "numbers-v85-05430",
+    "type": "text",
+    "question": "كم يساوي 15% من العدد 1060؟",
+    "correctAnswers": [
+      "159"
+    ],
+    "wrongAnswers": [
+      "158",
+      "160",
+      "157",
+      "161",
+      "156"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:pct:15:1060"
+  },
+  {
+    "id": "numbers-v860-new-14814",
+    "type": "text",
+    "question": "احسب حاصل الضرب: 28 × 58 = ؟",
+    "correctAnswers": [
+      "1624"
+    ],
+    "wrongAnswers": [
+      "1622",
+      "1623",
+      "1625",
+      "1626",
+      "1627"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:mul:28:58"
+  },
+  {
+    "id": "numbers-v860-new-02031",
+    "type": "text",
+    "question": "اقسم من دون آلة حاسبة: 1001 ÷ 13 = ؟",
+    "correctAnswers": [
+      "77"
+    ],
+    "wrongAnswers": [
+      "75",
+      "76",
+      "78",
+      "79",
+      "80"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:div:1001:13"
+  },
+  {
+    "id": "numbers-v85-06214",
+    "type": "text",
+    "question": "احسب القسمة: 3570 ÷ 30 = ؟",
+    "correctAnswers": [
+      "119"
+    ],
+    "wrongAnswers": [
+      "118",
+      "120",
+      "117",
+      "121",
+      "116"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:div:3570:30"
+  },
+  {
+    "id": "numbers-v860-new-14894",
+    "type": "text",
+    "question": "احسب مع مراعاة أولوية العمليات: 81 + (6 × 8) = ؟",
+    "correctAnswers": [
+      "129"
+    ],
+    "wrongAnswers": [
+      "127",
+      "128",
+      "130",
+      "131",
+      "132"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr1:81:6:8"
+  },
+  {
+    "id": "numbers-v860-new-08726",
+    "type": "text",
+    "question": "احسب: 1167 − 212 = ؟",
+    "correctAnswers": [
+      "955"
+    ],
+    "wrongAnswers": [
+      "953",
+      "954",
+      "956",
+      "957",
+      "958"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:sub:1167:212"
+  },
+  {
+    "id": "numbers-easy2-0512",
+    "type": "text",
+    "question": "احسب: 45 + 16 = ؟",
+    "correctAnswers": [
+      "61"
+    ],
+    "wrongAnswers": [
+      "59",
+      "63",
+      "57",
+      "65",
+      "71"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:easy2:add:45:16"
+  },
+  {
+    "id": "numbers-easy2-0046",
+    "type": "text",
+    "question": "احسب: 22 + 10 = ؟",
+    "correctAnswers": [
+      "32"
+    ],
+    "wrongAnswers": [
+      "30",
+      "34",
+      "28",
+      "36",
+      "42"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:easy2:add:22:10"
+  },
+  {
+    "id": "numbers-v85-02740",
+    "type": "text",
+    "question": "احسب القسمة: 2700 ÷ 20 = ؟",
+    "correctAnswers": [
+      "135"
+    ],
+    "wrongAnswers": [
+      "134",
+      "136",
+      "133",
+      "137",
+      "132"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:div:2700:20"
+  },
+  {
+    "id": "numbers-v85-06737",
+    "type": "text",
+    "question": "احسب من دون آلة حاسبة: (46 × 4) + 13 = ؟",
+    "correctAnswers": [
+      "197"
+    ],
+    "wrongAnswers": [
+      "196",
+      "198",
+      "195",
+      "199",
+      "194"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:expr1:46:4:13"
+  },
+  {
+    "id": "numbers-medium-1706",
+    "type": "text",
+    "question": "احسب: 174 − 27 + 10 = ؟",
+    "correctAnswers": [
+      "157"
+    ],
+    "wrongAnswers": [
+      "155",
+      "159",
+      "153",
+      "161",
+      "167"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:medium:final:54:174:27:10"
+  },
+  {
+    "id": "numbers-v860-new-08123",
+    "type": "text",
+    "question": "اقسم من دون آلة حاسبة: 2212 ÷ 14 = ؟",
+    "correctAnswers": [
+      "158"
+    ],
+    "wrongAnswers": [
+      "156",
+      "157",
+      "159",
+      "160",
+      "161"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:div:2212:14"
+  },
+  {
+    "id": "numbers-v860-new-05810",
+    "type": "text",
+    "question": "احسب مع مراعاة أولوية العمليات: 43 + (8 × 7) = ؟",
+    "correctAnswers": [
+      "99"
+    ],
+    "wrongAnswers": [
+      "97",
+      "98",
+      "100",
+      "101",
+      "102"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr1:43:8:7"
+  },
+  {
+    "id": "numbers-v860-new-06245",
+    "type": "text",
+    "question": "احسب حاصل الضرب: 21 × 50 = ؟",
+    "correctAnswers": [
+      "1050"
+    ],
+    "wrongAnswers": [
+      "1048",
+      "1049",
+      "1051",
+      "1052",
+      "1053"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:mul:21:50"
+  },
+  {
+    "id": "numbers-v85-07376",
+    "type": "text",
+    "question": "احسب: 577 − 150 = ؟",
+    "correctAnswers": [
+      "427"
+    ],
+    "wrongAnswers": [
+      "426",
+      "428",
+      "425",
+      "429",
+      "424"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:sub:577:150"
+  },
+  {
+    "id": "numbers-v85-03311",
+    "type": "text",
+    "question": "احسب من دون آلة حاسبة: (54 × 7) + 71 = ؟",
+    "correctAnswers": [
+      "449"
+    ],
+    "wrongAnswers": [
+      "448",
+      "450",
+      "447",
+      "451",
+      "446"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:expr1:54:7:71"
+  },
+  {
+    "id": "numbers-v85-05834",
+    "type": "text",
+    "question": "احسب: 213 − 105 = ؟",
+    "correctAnswers": [
+      "108"
+    ],
+    "wrongAnswers": [
+      "107",
+      "109",
+      "106",
+      "110",
+      "105"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:sub:213:105"
+  },
+  {
+    "id": "numbers-v85-03703",
+    "type": "text",
+    "question": "احسب: 154 + 46 = ؟",
+    "correctAnswers": [
+      "200"
+    ],
+    "wrongAnswers": [
+      "199",
+      "201",
+      "198",
+      "202",
+      "197"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:add:154:46"
+  },
+  {
+    "id": "numbers-easy2-2233",
+    "type": "text",
+    "question": "احسب: 131 + 17 = ؟",
+    "correctAnswers": [
+      "148"
+    ],
+    "wrongAnswers": [
+      "146",
+      "150",
+      "144",
+      "152",
+      "158"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:easy2:add:131:17"
+  },
+  {
+    "id": "numbers-v85-06834",
+    "type": "text",
+    "question": "كم يساوي 90% من العدد 1700؟",
+    "correctAnswers": [
+      "1530"
+    ],
+    "wrongAnswers": [
+      "1529",
+      "1531",
+      "1528",
+      "1532",
+      "1527"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:pct:90:1700"
+  },
+  {
+    "id": "numbers-v860-new-07041",
+    "type": "text",
+    "question": "احسب حاصل الضرب: 68 × 21 = ؟",
+    "correctAnswers": [
+      "1428"
+    ],
+    "wrongAnswers": [
+      "1426",
+      "1427",
+      "1429",
+      "1430",
+      "1431"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:mul:68:21"
+  },
+  {
+    "id": "numbers-v85-06562",
+    "type": "text",
+    "question": "احسب القسمة: 360 ÷ 30 = ؟",
+    "correctAnswers": [
+      "12"
+    ],
+    "wrongAnswers": [
+      "11",
+      "13",
+      "10",
+      "14",
+      "9"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:div:360:30"
+  },
+  {
+    "id": "numbers-easy2-0861",
+    "type": "text",
+    "question": "احسب: 63 + 5 = ؟",
+    "correctAnswers": [
+      "68"
+    ],
+    "wrongAnswers": [
+      "66",
+      "70",
+      "64",
+      "72",
+      "78"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:easy2:add:63:5"
+  },
+  {
+    "id": "numbers-v860-new-07973",
+    "type": "text",
+    "question": "اقسم من دون آلة حاسبة: 1512 ÷ 7 = ؟",
+    "correctAnswers": [
+      "216"
+    ],
+    "wrongAnswers": [
+      "214",
+      "215",
+      "217",
+      "218",
+      "219"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:div:1512:7"
+  },
+  {
+    "id": "numbers-v860-new-06876",
+    "type": "text",
+    "question": "احسب: 933 − 55 = ؟",
+    "correctAnswers": [
+      "878"
+    ],
+    "wrongAnswers": [
+      "876",
+      "877",
+      "879",
+      "880",
+      "881"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:sub:933:55"
+  },
+  {
+    "id": "numbers-v860-new-13172",
+    "type": "text",
+    "question": "احسب: 1627 + 208 = ؟",
+    "correctAnswers": [
+      "1835"
+    ],
+    "wrongAnswers": [
+      "1833",
+      "1834",
+      "1836",
+      "1837",
+      "1838"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:add:1627:208"
+  },
+  {
+    "id": "numbers-v85-05309",
+    "type": "text",
+    "question": "احسب من دون آلة حاسبة: (54 × 5) + 9 = ؟",
+    "correctAnswers": [
+      "279"
+    ],
+    "wrongAnswers": [
+      "278",
+      "280",
+      "277",
+      "281",
+      "276"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:expr1:54:5:9"
+  },
+  {
+    "id": "numbers-v860-new-01828",
+    "type": "text",
+    "question": "اقسم من دون آلة حاسبة: 639 ÷ 3 = ؟",
+    "correctAnswers": [
+      "213"
+    ],
+    "wrongAnswers": [
+      "211",
+      "212",
+      "214",
+      "215",
+      "216"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:div:639:3"
+  },
+  {
+    "id": "numbers-v860-new-05125",
+    "type": "text",
+    "question": "احسب: 1802 − 203 = ؟",
+    "correctAnswers": [
+      "1599"
+    ],
+    "wrongAnswers": [
+      "1597",
+      "1598",
+      "1600",
+      "1601",
+      "1602"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:sub:1802:203"
+  },
+  {
+    "id": "numbers-v860-new-04680",
+    "type": "text",
+    "question": "احسب حاصل الضرب: 86 × 90 = ؟",
+    "correctAnswers": [
+      "7740"
+    ],
+    "wrongAnswers": [
+      "7738",
+      "7739",
+      "7741",
+      "7742",
+      "7743"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:mul:86:90"
+  },
+  {
+    "id": "numbers-v860-new-07155",
+    "type": "text",
+    "question": "احسب مع مراعاة أولوية العمليات: 56 + (8 × 3) = ؟",
+    "correctAnswers": [
+      "80"
+    ],
+    "wrongAnswers": [
+      "78",
+      "79",
+      "81",
+      "82",
+      "83"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr1:56:8:3"
+  },
+  {
+    "id": "numbers-v85-05567",
+    "type": "text",
+    "question": "احسب من دون آلة حاسبة: (52 × 13) + 46 = ؟",
+    "correctAnswers": [
+      "722"
+    ],
+    "wrongAnswers": [
+      "721",
+      "723",
+      "720",
+      "724",
+      "719"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:expr1:52:13:46"
+  },
+  {
+    "id": "numbers-v860-new-08037",
+    "type": "text",
+    "question": "احسب: (18 × 4) − 5² = ؟",
+    "correctAnswers": [
+      "47"
+    ],
+    "wrongAnswers": [
+      "45",
+      "46",
+      "48",
+      "49",
+      "50"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr2:18:4:5"
+  },
+  {
+    "id": "numbers-v860-new-14367",
+    "type": "text",
+    "question": "احسب حاصل الضرب: 75 × 23 = ؟",
+    "correctAnswers": [
+      "1725"
+    ],
+    "wrongAnswers": [
+      "1723",
+      "1724",
+      "1726",
+      "1727",
+      "1728"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:mul:75:23"
+  },
+  {
+    "id": "numbers-v85-01881",
+    "type": "text",
+    "question": "ما ناتج الضرب: 73 × 38 = ؟",
+    "correctAnswers": [
+      "2774"
+    ],
+    "wrongAnswers": [
+      "2773",
+      "2775",
+      "2772",
+      "2776",
+      "2771"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:mul:73:38"
+  },
+  {
+    "id": "numbers-v860-new-14504",
+    "type": "text",
+    "question": "احسب: 221 + 618 = ؟",
+    "correctAnswers": [
+      "839"
+    ],
+    "wrongAnswers": [
+      "837",
+      "838",
+      "840",
+      "841",
+      "842"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:add:221:618"
+  },
+  {
+    "id": "numbers-v860-new-00702",
+    "type": "text",
+    "question": "احسب مع مراعاة أولوية العمليات: 31 + (5 × 7) = ؟",
+    "correctAnswers": [
+      "66"
+    ],
+    "wrongAnswers": [
+      "64",
+      "65",
+      "67",
+      "68",
+      "69"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr1:31:5:7"
+  },
+  {
+    "id": "numbers-v860-new-11544",
+    "type": "text",
+    "question": "احسب حاصل الضرب: 82 × 73 = ؟",
+    "correctAnswers": [
+      "5986"
+    ],
+    "wrongAnswers": [
+      "5984",
+      "5985",
+      "5987",
+      "5988",
+      "5989"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:mul:82:73"
+  },
+  {
+    "id": "numbers-v860-new-01859",
+    "type": "text",
+    "question": "احسب: 2305 + 156 = ؟",
+    "correctAnswers": [
+      "2461"
+    ],
+    "wrongAnswers": [
+      "2459",
+      "2460",
+      "2462",
+      "2463",
+      "2464"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:add:2305:156"
+  },
+  {
+    "id": "numbers-v85-05226",
+    "type": "text",
+    "question": "كم يساوي 35% من العدد 300؟",
+    "correctAnswers": [
+      "105"
+    ],
+    "wrongAnswers": [
+      "104",
+      "106",
+      "103",
+      "107",
+      "102"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:pct:35:300"
+  },
+  {
+    "id": "numbers-v85-02242",
+    "type": "text",
+    "question": "احسب القسمة: 2002 ÷ 26 = ؟",
+    "correctAnswers": [
+      "77"
+    ],
+    "wrongAnswers": [
+      "76",
+      "78",
+      "75",
+      "79",
+      "74"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:div:2002:26"
+  },
+  {
+    "id": "numbers-lcm-81",
+    "type": "text",
+    "question": "ما المضاعف المشترك الأصغر للعددين 78 و75؟",
+    "correctAnswers": [
+      "1950"
+    ],
+    "wrongAnswers": [
+      "1947",
+      "1953",
+      "1944",
+      "1956",
+      "1960"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:lcm:78:75"
+  },
+  {
+    "id": "numbers-v860-new-02848",
+    "type": "text",
+    "question": "احسب: 1417 − 95 = ؟",
+    "correctAnswers": [
+      "1322"
+    ],
+    "wrongAnswers": [
+      "1320",
+      "1321",
+      "1323",
+      "1324",
+      "1325"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:sub:1417:95"
+  },
+  {
+    "id": "numbers-v85-00215",
+    "type": "text",
+    "question": "احسب من دون آلة حاسبة: (16 × 8) + 7 = ؟",
+    "correctAnswers": [
+      "135"
+    ],
+    "wrongAnswers": [
+      "134",
+      "136",
+      "133",
+      "137",
+      "132"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:expr1:16:8:7"
+  },
+  {
+    "id": "numbers-v860-new-04753",
+    "type": "text",
+    "question": "احسب: (52 × 6) − 2² = ؟",
+    "correctAnswers": [
+      "308"
+    ],
+    "wrongAnswers": [
+      "306",
+      "307",
+      "309",
+      "310",
+      "311"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr2:52:6:2"
+  },
+  {
+    "id": "numbers-v85-07090",
+    "type": "text",
+    "question": "احسب القسمة: 1825 ÷ 25 = ؟",
+    "correctAnswers": [
+      "73"
+    ],
+    "wrongAnswers": [
+      "72",
+      "74",
+      "71",
+      "75",
+      "70"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:div:1825:25"
+  },
+  {
+    "id": "numbers-easy2-1371",
+    "type": "text",
+    "question": "احسب: 88 + 15 = ؟",
+    "correctAnswers": [
+      "103"
+    ],
+    "wrongAnswers": [
+      "101",
+      "105",
+      "99",
+      "107",
+      "113"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:easy2:add:88:15"
+  },
+  {
+    "id": "numbers-v860-new-05942",
+    "type": "text",
+    "question": "اقسم من دون آلة حاسبة: 552 ÷ 4 = ؟",
+    "correctAnswers": [
+      "138"
+    ],
+    "wrongAnswers": [
+      "136",
+      "137",
+      "139",
+      "140",
+      "141"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:div:552:4"
+  },
+  {
+    "id": "numbers-v860-new-14215",
+    "type": "text",
+    "question": "احسب: (34 × 6) − 2² = ؟",
+    "correctAnswers": [
+      "200"
+    ],
+    "wrongAnswers": [
+      "198",
+      "199",
+      "201",
+      "202",
+      "203"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr2:34:6:2"
+  },
+  {
+    "id": "numbers-v860-new-13831",
+    "type": "text",
+    "question": "احسب حاصل الضرب: 80 × 43 = ؟",
+    "correctAnswers": [
+      "3440"
+    ],
+    "wrongAnswers": [
+      "3438",
+      "3439",
+      "3441",
+      "3442",
+      "3443"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:mul:80:43"
+  },
+  {
+    "id": "numbers-v860-new-06070",
+    "type": "text",
+    "question": "اقسم من دون آلة حاسبة: 2394 ÷ 14 = ؟",
+    "correctAnswers": [
+      "171"
+    ],
+    "wrongAnswers": [
+      "169",
+      "170",
+      "172",
+      "173",
+      "174"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:div:2394:14"
+  },
+  {
+    "id": "numbers-v860-new-00638",
+    "type": "text",
+    "question": "احسب: (54 × 5) − 6² = ؟",
+    "correctAnswers": [
+      "234"
+    ],
+    "wrongAnswers": [
+      "232",
+      "233",
+      "235",
+      "236",
+      "237"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr2:54:5:6"
+  },
+  {
+    "id": "numbers-gcd-249",
+    "type": "text",
+    "question": "ما القاسم المشترك الأكبر للعددين 132 و80؟",
+    "correctAnswers": [
+      "4"
+    ],
+    "wrongAnswers": [
+      "3",
+      "5",
+      "2",
+      "6",
+      "14"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:gcd:132:80"
+  },
+  {
+    "id": "numbers-v860-new-06526",
+    "type": "text",
+    "question": "احسب: (71 × 5) − 9² = ؟",
+    "correctAnswers": [
+      "274"
+    ],
+    "wrongAnswers": [
+      "272",
+      "273",
+      "275",
+      "276",
+      "277"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr2:71:5:9"
+  },
+  {
+    "id": "numbers-v85-04456",
+    "type": "text",
+    "question": "احسب القسمة: 3680 ÷ 32 = ؟",
+    "correctAnswers": [
+      "115"
+    ],
+    "wrongAnswers": [
+      "114",
+      "116",
+      "113",
+      "117",
+      "112"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:div:3680:32"
+  },
+  {
+    "id": "numbers-v85-02445",
+    "type": "text",
+    "question": "ما ناتج الضرب: 17 × 15 = ؟",
+    "correctAnswers": [
+      "255"
+    ],
+    "wrongAnswers": [
+      "254",
+      "256",
+      "253",
+      "257",
+      "252"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:mul:17:15"
+  },
+  {
+    "id": "numbers-easy2-2967",
+    "type": "text",
+    "question": "احسب: 168 + 11 = ؟",
+    "correctAnswers": [
+      "179"
+    ],
+    "wrongAnswers": [
+      "177",
+      "181",
+      "175",
+      "183",
+      "189"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:easy2:add:168:11"
+  },
+  {
+    "id": "numbers-v85-01221",
+    "type": "text",
+    "question": "ما ناتج الضرب: 58 × 31 = ؟",
+    "correctAnswers": [
+      "1798"
+    ],
+    "wrongAnswers": [
+      "1797",
+      "1799",
+      "1796",
+      "1800",
+      "1795"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:mul:58:31"
+  },
+  {
+    "id": "numbers-v860-new-03464",
+    "type": "text",
+    "question": "احسب مع مراعاة أولوية العمليات: 79 + (12 × 11) = ؟",
+    "correctAnswers": [
+      "211"
+    ],
+    "wrongAnswers": [
+      "209",
+      "210",
+      "212",
+      "213",
+      "214"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr1:79:12:11"
+  },
+  {
+    "id": "numbers-mod-187",
+    "type": "text",
+    "question": "ما باقي قسمة 25^5 على 15؟",
+    "correctAnswers": [
+      "10"
+    ],
+    "wrongAnswers": [
+      "0",
+      "1",
+      "11",
+      "12",
+      "9"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:mod:25:5:15"
+  },
+  {
+    "id": "numbers-v860-new-10969",
+    "type": "text",
+    "question": "اقسم من دون آلة حاسبة: 182 ÷ 13 = ؟",
+    "correctAnswers": [
+      "14"
+    ],
+    "wrongAnswers": [
+      "12",
+      "13",
+      "15",
+      "16",
+      "17"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:div:182:13"
+  },
+  {
+    "id": "numbers-v860-new-13730",
+    "type": "text",
+    "question": "احسب: 1187 + 37 = ؟",
+    "correctAnswers": [
+      "1224"
+    ],
+    "wrongAnswers": [
+      "1222",
+      "1223",
+      "1225",
+      "1226",
+      "1227"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:add:1187:37"
+  },
+  {
+    "id": "numbers-v85-05549",
+    "type": "text",
+    "question": "احسب من دون آلة حاسبة: (65 × 10) + 75 = ؟",
+    "correctAnswers": [
+      "725"
+    ],
+    "wrongAnswers": [
+      "724",
+      "726",
+      "723",
+      "727",
+      "722"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:expr1:65:10:75"
+  },
+  {
+    "id": "numbers-v85-03218",
+    "type": "text",
+    "question": "احسب: 873 − 240 = ؟",
+    "correctAnswers": [
+      "633"
+    ],
+    "wrongAnswers": [
+      "632",
+      "634",
+      "631",
+      "635",
+      "630"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:sub:873:240"
+  },
+  {
+    "id": "numbers-v860-new-06963",
+    "type": "text",
+    "question": "احسب: 2141 + 213 = ؟",
+    "correctAnswers": [
+      "2354"
+    ],
+    "wrongAnswers": [
+      "2352",
+      "2353",
+      "2355",
+      "2356",
+      "2357"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:add:2141:213"
+  },
+  {
+    "id": "numbers-easy2-1706",
+    "type": "text",
+    "question": "احسب: 105 + 10 = ؟",
+    "correctAnswers": [
+      "115"
+    ],
+    "wrongAnswers": [
+      "113",
+      "117",
+      "111",
+      "119",
+      "125"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:easy2:add:105:10"
+  },
+  {
+    "id": "numbers-v85-02984",
+    "type": "text",
+    "question": "احسب: 395 − 206 = ؟",
+    "correctAnswers": [
+      "189"
+    ],
+    "wrongAnswers": [
+      "188",
+      "190",
+      "187",
+      "191",
+      "186"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:sub:395:206"
+  },
+  {
+    "id": "numbers-v85-04109",
+    "type": "text",
+    "question": "احسب من دون آلة حاسبة: (25 × 7) + 80 = ؟",
+    "correctAnswers": [
+      "255"
+    ],
+    "wrongAnswers": [
+      "254",
+      "256",
+      "253",
+      "257",
+      "252"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:v85:expr1:25:7:80"
+  },
+  {
+    "id": "numbers-v860-new-03016",
+    "type": "text",
+    "question": "احسب مع مراعاة أولوية العمليات: 38 + (12 × 7) = ؟",
+    "correctAnswers": [
+      "122"
+    ],
+    "wrongAnswers": [
+      "120",
+      "121",
+      "123",
+      "124",
+      "125"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr1:38:12:7"
+  },
+  {
+    "id": "numbers-v860-new-09839",
+    "type": "text",
+    "question": "احسب: (77 × 3) − 2² = ؟",
+    "correctAnswers": [
+      "227"
+    ],
+    "wrongAnswers": [
+      "225",
+      "226",
+      "228",
+      "229",
+      "230"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr2:77:3:2"
+  },
+  {
+    "id": "numbers-mod-120",
+    "type": "text",
+    "question": "ما باقي قسمة 21^8 على 7؟",
+    "correctAnswers": [
+      "0"
+    ],
+    "wrongAnswers": [
+      "1",
+      "2",
+      "6"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:mod:21:8:7"
+  },
+  {
+    "id": "numbers-v860-new-00004",
+    "type": "text",
+    "question": "احسب مع مراعاة أولوية العمليات: 82 + (5 × 12) = ؟",
+    "correctAnswers": [
+      "142"
+    ],
+    "wrongAnswers": [
+      "140",
+      "141",
+      "143",
+      "144",
+      "145"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr1:82:5:12"
+  },
+  {
+    "id": "numbers-v860-new-02975",
+    "type": "text",
+    "question": "احسب مع مراعاة أولوية العمليات: 23 + (4 × 12) = ؟",
+    "correctAnswers": [
+      "71"
+    ],
+    "wrongAnswers": [
+      "69",
+      "70",
+      "72",
+      "73",
+      "74"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:expr1:23:4:12"
+  },
+  {
+    "id": "numbers-easy2-1119",
+    "type": "text",
+    "question": "احسب: 75 + 23 = ؟",
+    "correctAnswers": [
+      "98"
+    ],
+    "wrongAnswers": [
+      "96",
+      "100",
+      "94",
+      "102",
+      "108"
+    ],
+    "category": "numbers",
+    "factKey": "numbers:easy2:add:75:23"
+  },
+  {
+    "id": "numbers-v860-new-05577",
+    "type": "text",
+    "question": "اقسم من دون آلة حاسبة: 3240 ÷ 18 = ؟",
+    "correctAnswers": [
+      "180"
+    ],
+    "wrongAnswers": [
+      "178",
+      "179",
+      "181",
+      "182",
+      "183"
+    ],
+    "category": "numbers",
+    "factKey": "v860:numbers:div:3240:18"
+  }
+]

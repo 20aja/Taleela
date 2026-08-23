@@ -1,0 +1,1386 @@
+[
+  {
+    "id": "geography-v85-alt-00006",
+    "type": "text",
+    "question": "أيّ قارة في العالم مساحة يُعد الأكبر؟",
+    "correctAnswers": [
+      "آسيا",
+      "قارة آسيا"
+    ],
+    "wrongAnswers": [
+      "باريس",
+      "نهر دجلة",
+      "أمريكا الجنوبية",
+      "روسيا",
+      "أستراليا",
+      "أفريقيا"
+    ],
+    "category": "geography",
+    "factKey": "geography-001"
+  },
+  {
+    "id": "geography-v860-new-014-a",
+    "type": "text",
+    "question": "ما عاصمة سويسرا الاتحادية؟",
+    "correctAnswers": [
+      "برن"
+    ],
+    "wrongAnswers": [
+      "البحر الأحمر",
+      "غرينلاند",
+      "ويلينغتون",
+      "الدانوب",
+      "خط غرينتش"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:014"
+  },
+  {
+    "id": "geography-single-003",
+    "type": "text",
+    "question": "ما الهضبة التي توصف غالبًا بأنها سقف العالم؟",
+    "correctAnswers": [
+      "هضبة التبت",
+      "التبت"
+    ],
+    "wrongAnswers": [
+      "هضبة الدكن",
+      "هضبة الأناضول",
+      "هضبة إثيوبيا"
+    ],
+    "category": "geography",
+    "factKey": "geography:single:geography-m03"
+  },
+  {
+    "id": "geography-004",
+    "type": "text",
+    "question": "في أي قارة تقع البرازيل؟",
+    "correctAnswers": [
+      "أمريكا الجنوبية"
+    ],
+    "wrongAnswers": [
+      "روسيا",
+      "أستراليا",
+      "أفريقيا",
+      "خط الاستواء",
+      "خط غرينتش",
+      "تنزانيا"
+    ],
+    "category": "geography",
+    "factKey": "geography-004"
+  },
+  {
+    "id": "geography-005",
+    "type": "text",
+    "question": "ما أكبر دولة في العالم من حيث المساحة؟",
+    "correctAnswers": [
+      "روسيا",
+      "روسيا الاتحادية"
+    ],
+    "wrongAnswers": [
+      "أستراليا",
+      "أفريقيا",
+      "خط الاستواء",
+      "خط غرينتش",
+      "تنزانيا",
+      "البحر المتوسط"
+    ],
+    "category": "geography",
+    "factKey": "geography-005"
+  },
+  {
+    "id": "geography-v860-new-011-a",
+    "type": "text",
+    "question": "ما عاصمة نيوزيلندا؟",
+    "correctAnswers": [
+      "ويلينغتون"
+    ],
+    "wrongAnswers": [
+      "بحيرة سوبيريور",
+      "برن",
+      "الدانوب",
+      "باريس",
+      "الأرجنتين"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:011"
+  },
+  {
+    "id": "geography-v860-new-007-b",
+    "type": "text",
+    "question": "اذكر الإجابة: البحر الذي يفصل شبه الجزيرة العربية عن أفريقيا؟",
+    "correctAnswers": [
+      "البحر الأحمر"
+    ],
+    "wrongAnswers": [
+      "أفريقيا",
+      "مضيق بيرينغ",
+      "برازيليا",
+      "غرينلاند",
+      "أمريكا الجنوبية"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:007"
+  },
+  {
+    "id": "extra2-geography-004",
+    "type": "text",
+    "question": "في أي قارة تقع جبال الأنديز؟",
+    "correctAnswers": [
+      "أمريكا الجنوبية"
+    ],
+    "wrongAnswers": [
+      "تنزانيا",
+      "البحر المتوسط",
+      "الدانوب",
+      "مضيق بيرينغ",
+      "جبال الأنديز",
+      "هضبة التبت"
+    ],
+    "category": "geography",
+    "factKey": "extra2:geography:004"
+  },
+  {
+    "id": "extra2-geography-006",
+    "type": "text",
+    "question": "ما خط الطول المرجعي الذي درجته صفر؟",
+    "correctAnswers": [
+      "خط غرينتش"
+    ],
+    "wrongAnswers": [
+      "الدانوب",
+      "مضيق بيرينغ",
+      "جبال الأنديز",
+      "هضبة التبت",
+      "البحر الأحمر",
+      "غرينلاند"
+    ],
+    "category": "geography",
+    "factKey": "extra2:geography:006"
+  },
+  {
+    "id": "geography-v860-new-020-b",
+    "type": "text",
+    "question": "اذكر الإجابة: النهر الذي يمر في القاهرة؟",
+    "correctAnswers": [
+      "نهر النيل"
+    ],
+    "wrongAnswers": [
+      "مضيق بيرينغ",
+      "الدانوب",
+      "أمريكا الجنوبية",
+      "جبال الأنديز",
+      "الأرجنتين"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:020"
+  },
+  {
+    "id": "geography-v85-alt-00016",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما خط الطول المرجعي الذي درجته صفر؟",
+    "correctAnswers": [
+      "خط غرينتش"
+    ],
+    "wrongAnswers": [
+      "الدانوب",
+      "مضيق بيرينغ",
+      "جبال الأنديز",
+      "هضبة التبت",
+      "البحر الأحمر",
+      "غرينلاند"
+    ],
+    "category": "geography",
+    "factKey": "extra2:geography:006"
+  },
+  {
+    "id": "geography-v860-new-008-a",
+    "type": "text",
+    "question": "في أي دولة يقع جبل فوجي؟",
+    "correctAnswers": [
+      "اليابان"
+    ],
+    "wrongAnswers": [
+      "نهر النيل",
+      "ويلينغتون",
+      "المحيط الهندي",
+      "أمريكا الجنوبية",
+      "أوسلو"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:008"
+  },
+  {
+    "id": "geography-v860-new-009-b",
+    "type": "text",
+    "question": "اذكر الإجابة: السلسلة الجبلية التي تفصل تقليديًا بين أوروبا وآسيا في روسيا؟",
+    "correctAnswers": [
+      "جبال الأورال"
+    ],
+    "wrongAnswers": [
+      "تنزانيا",
+      "اليابان",
+      "أوسلو",
+      "أوتاوا",
+      "أفريقيا"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:009"
+  },
+  {
+    "id": "geography-v860-new-002-a",
+    "type": "text",
+    "question": "ما أكبر جزيرة في العالم من حيث المساحة باستثناء القارات؟",
+    "correctAnswers": [
+      "غرينلاند"
+    ],
+    "wrongAnswers": [
+      "المحيط الهندي",
+      "بحيرة سوبيريور",
+      "باريس",
+      "روسيا",
+      "اليابان"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:002"
+  },
+  {
+    "id": "geography-v860-new-010-a",
+    "type": "text",
+    "question": "ما النهر الذي يمر بمدينة بودابست؟",
+    "correctAnswers": [
+      "نهر الدانوب"
+    ],
+    "wrongAnswers": [
+      "بحيرة سوبيريور",
+      "أمريكا الجنوبية",
+      "غرينلاند",
+      "مضيق بيرينغ",
+      "أستراليا"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:010"
+  },
+  {
+    "id": "geography-single-005",
+    "type": "text",
+    "question": "ما أكبر جزيرة في العالم إذا استُبعدت القارات؟",
+    "correctAnswers": [
+      "غرينلاند",
+      "جرينلاند"
+    ],
+    "wrongAnswers": [
+      "غينيا الجديدة",
+      "بورنيو",
+      "مدغشقر"
+    ],
+    "category": "geography",
+    "factKey": "geography:single:geography-m05"
+  },
+  {
+    "id": "geography-v860-new-019-b",
+    "type": "text",
+    "question": "اذكر الإجابة: الدولة التي تضم إقليم باتاغونيا مع تشيلي؟",
+    "correctAnswers": [
+      "الأرجنتين"
+    ],
+    "wrongAnswers": [
+      "خط غرينتش",
+      "برن",
+      "غرينلاند",
+      "شبه الجزيرة العربية",
+      "ويلينغتون"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:019"
+  },
+  {
+    "id": "geography-v860-new-020-a",
+    "type": "text",
+    "question": "ما النهر الذي يمر في القاهرة؟",
+    "correctAnswers": [
+      "نهر النيل"
+    ],
+    "wrongAnswers": [
+      "جبال الأورال",
+      "هضبة التبت",
+      "المحيط الهندي",
+      "شبه الجزيرة العربية",
+      "نهر دجلة"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:020"
+  },
+  {
+    "id": "geography-v860-new-012-a",
+    "type": "text",
+    "question": "ما عاصمة كندا؟",
+    "correctAnswers": [
+      "أوتاوا"
+    ],
+    "wrongAnswers": [
+      "جبال الأورال",
+      "غرينلاند",
+      "تنزانيا",
+      "آسيا",
+      "نهر الدانوب"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:012"
+  },
+  {
+    "id": "extra2-geography-010",
+    "type": "text",
+    "question": "ما النهر الأوروبي الذي يمر بعدة عواصم منها فيينا وبودابست؟",
+    "correctAnswers": [
+      "الدانوب"
+    ],
+    "wrongAnswers": [
+      "البحر الأحمر",
+      "غرينلاند",
+      "آسيا",
+      "باريس",
+      "نهر دجلة",
+      "أمريكا الجنوبية"
+    ],
+    "category": "geography",
+    "factKey": "extra2:geography:010"
+  },
+  {
+    "id": "extra2-geography-007",
+    "type": "text",
+    "question": "ما أكبر جزيرة في العالم؟",
+    "correctAnswers": [
+      "غرينلاند"
+    ],
+    "wrongAnswers": [
+      "مضيق بيرينغ",
+      "جبال الأنديز",
+      "هضبة التبت",
+      "البحر الأحمر",
+      "آسيا",
+      "باريس"
+    ],
+    "category": "geography",
+    "factKey": "extra2:geography:007"
+  },
+  {
+    "id": "geography-v85-alt-00001",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما المضيق الذي يفصل آسيا عن أمريكا الشمالية؟",
+    "correctAnswers": [
+      "مضيق بيرينغ",
+      "بيرينغ"
+    ],
+    "wrongAnswers": [
+      "مضيق جبل طارق",
+      "مضيق ملقا",
+      "مضيق هرمز"
+    ],
+    "category": "geography",
+    "factKey": "geography:single:geography-m01"
+  },
+  {
+    "id": "geography-v860-new-017-b",
+    "type": "text",
+    "question": "اذكر الإجابة: المحيط الواقع بين أفريقيا وأستراليا؟",
+    "correctAnswers": [
+      "المحيط الهندي"
+    ],
+    "wrongAnswers": [
+      "شبه الجزيرة العربية",
+      "شلال آنجل",
+      "أوسلو",
+      "خط الاستواء",
+      "آسيا"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:017"
+  },
+  {
+    "id": "geography-v860-new-002-b",
+    "type": "text",
+    "question": "اذكر الإجابة: أكبر جزيرة في العالم من حيث المساحة باستثناء القارات؟",
+    "correctAnswers": [
+      "غرينلاند"
+    ],
+    "wrongAnswers": [
+      "الأرجنتين",
+      "شلال آنجل",
+      "آسيا",
+      "الدانوب",
+      "ويلينغتون"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:002"
+  },
+  {
+    "id": "geography-single-002",
+    "type": "text",
+    "question": "ما أطول سلسلة جبلية قارية فوق سطح الأرض؟",
+    "correctAnswers": [
+      "جبال الأنديز",
+      "الأنديز"
+    ],
+    "wrongAnswers": [
+      "الهيمالايا",
+      "الألب",
+      "جبال الروكي"
+    ],
+    "category": "geography",
+    "factKey": "geography:single:geography-m02"
+  },
+  {
+    "id": "geography-single-001",
+    "type": "text",
+    "question": "ما المضيق الذي يفصل آسيا عن أمريكا الشمالية؟",
+    "correctAnswers": [
+      "مضيق بيرينغ",
+      "بيرينغ"
+    ],
+    "wrongAnswers": [
+      "مضيق جبل طارق",
+      "مضيق ملقا",
+      "مضيق هرمز"
+    ],
+    "category": "geography",
+    "factKey": "geography:single:geography-m01"
+  },
+  {
+    "id": "geography-v85-alt-00009",
+    "type": "text",
+    "question": "حدّد المكان الصحيح: في أي قارة تقع البرازيل؟",
+    "correctAnswers": [
+      "أمريكا الجنوبية"
+    ],
+    "wrongAnswers": [
+      "روسيا",
+      "أستراليا",
+      "أفريقيا",
+      "خط الاستواء",
+      "خط غرينتش",
+      "تنزانيا"
+    ],
+    "category": "geography",
+    "factKey": "geography-004"
+  },
+  {
+    "id": "geography-v860-new-016-b",
+    "type": "text",
+    "question": "حدد الإجابة الصحيحة: في أي قارة تقع ناميبيا؟",
+    "correctAnswers": [
+      "أفريقيا"
+    ],
+    "wrongAnswers": [
+      "مضيق بيرينغ",
+      "غرينلاند",
+      "آسيا",
+      "روسيا",
+      "المحيط الهندي"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:016"
+  },
+  {
+    "id": "geography-v860-new-009-a",
+    "type": "text",
+    "question": "ما السلسلة الجبلية التي تفصل تقليديًا بين أوروبا وآسيا في روسيا؟",
+    "correctAnswers": [
+      "جبال الأورال"
+    ],
+    "wrongAnswers": [
+      "أوسلو",
+      "البحر الأحمر",
+      "جبال الأنديز",
+      "أستراليا",
+      "نهر الدانوب"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:009"
+  },
+  {
+    "id": "geography-v860-new-016-a",
+    "type": "text",
+    "question": "في أي قارة تقع ناميبيا؟",
+    "correctAnswers": [
+      "أفريقيا"
+    ],
+    "wrongAnswers": [
+      "برن",
+      "بحيرة سوبيريور",
+      "البحر الأحمر",
+      "أوسلو",
+      "شلال آنجل"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:016"
+  },
+  {
+    "id": "extra2-geography-001",
+    "type": "text",
+    "question": "ما أكبر قارة من حيث المساحة؟",
+    "correctAnswers": [
+      "آسيا"
+    ],
+    "wrongAnswers": [
+      "أفريقيا",
+      "خط الاستواء",
+      "خط غرينتش",
+      "تنزانيا",
+      "البحر المتوسط",
+      "الدانوب"
+    ],
+    "category": "geography",
+    "factKey": "extra2:geography:001"
+  },
+  {
+    "id": "geography-v860-new-018-b",
+    "type": "text",
+    "question": "اذكر الإجابة: أكبر شبه جزيرة في العالم؟",
+    "correctAnswers": [
+      "شبه الجزيرة العربية"
+    ],
+    "wrongAnswers": [
+      "أفريقيا",
+      "مضيق بيرينغ",
+      "غرينلاند",
+      "المحيط الهندي",
+      "برن"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:018"
+  },
+  {
+    "id": "geography-v85-alt-00015",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما خط العرض الذي درجته صفر؟",
+    "correctAnswers": [
+      "خط الاستواء"
+    ],
+    "wrongAnswers": [
+      "البحر المتوسط",
+      "الدانوب",
+      "مضيق بيرينغ",
+      "جبال الأنديز",
+      "هضبة التبت",
+      "البحر الأحمر"
+    ],
+    "category": "geography",
+    "factKey": "extra2:geography:005"
+  },
+  {
+    "id": "geography-v860-new-014-b",
+    "type": "text",
+    "question": "اذكر الإجابة: عاصمة سويسرا الاتحادية؟",
+    "correctAnswers": [
+      "برن"
+    ],
+    "wrongAnswers": [
+      "نهر دجلة",
+      "أفريقيا",
+      "الدانوب",
+      "نهر الدانوب",
+      "هضبة التبت"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:014"
+  },
+  {
+    "id": "geography-v860-new-008-b",
+    "type": "text",
+    "question": "حدد الإجابة الصحيحة: في أي دولة يقع جبل فوجي؟",
+    "correctAnswers": [
+      "اليابان"
+    ],
+    "wrongAnswers": [
+      "البحر الأحمر",
+      "البحر المتوسط",
+      "نهر الدانوب",
+      "أمريكا الجنوبية",
+      "أفريقيا"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:008"
+  },
+  {
+    "id": "geography-v860-new-001-a",
+    "type": "text",
+    "question": "ما أطول نهر في أوروبا؟",
+    "correctAnswers": [
+      "نهر الفولغا"
+    ],
+    "wrongAnswers": [
+      "المحيط الهندي",
+      "نهر الدانوب",
+      "مضيق بيرينغ",
+      "البحر الأحمر",
+      "غرينلاند"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:001"
+  },
+  {
+    "id": "geography-001",
+    "type": "text",
+    "question": "ما أكبر قارة في العالم مساحة؟",
+    "correctAnswers": [
+      "آسيا",
+      "قارة آسيا"
+    ],
+    "wrongAnswers": [
+      "باريس",
+      "نهر دجلة",
+      "أمريكا الجنوبية",
+      "روسيا",
+      "أستراليا",
+      "أفريقيا"
+    ],
+    "category": "geography",
+    "factKey": "geography-001"
+  },
+  {
+    "id": "geography-v85-alt-00003",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما الهضبة التي توصف غالبًا بأنها سقف العالم؟",
+    "correctAnswers": [
+      "هضبة التبت",
+      "التبت"
+    ],
+    "wrongAnswers": [
+      "هضبة الدكن",
+      "هضبة الأناضول",
+      "هضبة إثيوبيا"
+    ],
+    "category": "geography",
+    "factKey": "geography:single:geography-m03"
+  },
+  {
+    "id": "geography-002",
+    "type": "text",
+    "question": "ما عاصمة فرنسا؟",
+    "correctAnswers": [
+      "باريس"
+    ],
+    "wrongAnswers": [
+      "نهر دجلة",
+      "أمريكا الجنوبية",
+      "روسيا",
+      "أستراليا",
+      "أفريقيا",
+      "خط الاستواء"
+    ],
+    "category": "geography",
+    "factKey": "geography-002"
+  },
+  {
+    "id": "geography-v860-new-018-a",
+    "type": "text",
+    "question": "ما أكبر شبه جزيرة في العالم؟",
+    "correctAnswers": [
+      "شبه الجزيرة العربية"
+    ],
+    "wrongAnswers": [
+      "ويلينغتون",
+      "المحيط الهندي",
+      "أفريقيا",
+      "نهر الفولغا",
+      "تنزانيا"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:018"
+  },
+  {
+    "id": "geography-v860-new-013-a",
+    "type": "text",
+    "question": "ما عاصمة البرازيل؟",
+    "correctAnswers": [
+      "برازيليا"
+    ],
+    "wrongAnswers": [
+      "مضيق بيرينغ",
+      "ويلينغتون",
+      "غرينلاند",
+      "أوسلو",
+      "نهر الفولغا"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:013"
+  },
+  {
+    "id": "geography-v860-new-017-a",
+    "type": "text",
+    "question": "ما المحيط الواقع بين أفريقيا وأستراليا؟",
+    "correctAnswers": [
+      "المحيط الهندي"
+    ],
+    "wrongAnswers": [
+      "نهر الفولغا",
+      "البحر المتوسط",
+      "غرينلاند",
+      "أوتاوا",
+      "خط الاستواء"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:017"
+  },
+  {
+    "id": "geography-v860-new-003-b",
+    "type": "text",
+    "question": "اذكر الإجابة: المضيق الذي يفصل آسيا عن أمريكا الشمالية؟",
+    "correctAnswers": [
+      "مضيق بيرينغ"
+    ],
+    "wrongAnswers": [
+      "نهر الفولغا",
+      "أمريكا الجنوبية",
+      "أفريقيا",
+      "برن",
+      "البحر الأحمر"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:003"
+  },
+  {
+    "id": "geography-v85-alt-00014",
+    "type": "text",
+    "question": "حدّد المكان الصحيح: في أي قارة تقع جبال الأنديز؟",
+    "correctAnswers": [
+      "أمريكا الجنوبية"
+    ],
+    "wrongAnswers": [
+      "تنزانيا",
+      "البحر المتوسط",
+      "الدانوب",
+      "مضيق بيرينغ",
+      "جبال الأنديز",
+      "هضبة التبت"
+    ],
+    "category": "geography",
+    "factKey": "extra2:geography:004"
+  },
+  {
+    "id": "geography-v860-new-007-a",
+    "type": "text",
+    "question": "ما البحر الذي يفصل شبه الجزيرة العربية عن أفريقيا؟",
+    "correctAnswers": [
+      "البحر الأحمر"
+    ],
+    "wrongAnswers": [
+      "غرينلاند",
+      "البحر المتوسط",
+      "شبه الجزيرة العربية",
+      "الأرجنتين",
+      "ويلينغتون"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:007"
+  },
+  {
+    "id": "extra2-geography-009",
+    "type": "text",
+    "question": "ما البحر الذي يفصل جنوب أوروبا عن شمال أفريقيا؟",
+    "correctAnswers": [
+      "البحر المتوسط"
+    ],
+    "wrongAnswers": [
+      "هضبة التبت",
+      "البحر الأحمر",
+      "غرينلاند",
+      "آسيا",
+      "باريس",
+      "نهر دجلة"
+    ],
+    "category": "geography",
+    "factKey": "extra2:geography:009"
+  },
+  {
+    "id": "geography-v860-new-006-b",
+    "type": "text",
+    "question": "اذكر الإجابة: أكبر بحيرة عذبة في العالم من حيث المساحة؟",
+    "correctAnswers": [
+      "بحيرة سوبيريور"
+    ],
+    "wrongAnswers": [
+      "برازيليا",
+      "تنزانيا",
+      "البحر الأحمر",
+      "نهر دجلة",
+      "اليابان"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:006"
+  },
+  {
+    "id": "extra2-geography-005",
+    "type": "text",
+    "question": "ما خط العرض الذي درجته صفر؟",
+    "correctAnswers": [
+      "خط الاستواء"
+    ],
+    "wrongAnswers": [
+      "البحر المتوسط",
+      "الدانوب",
+      "مضيق بيرينغ",
+      "جبال الأنديز",
+      "هضبة التبت",
+      "البحر الأحمر"
+    ],
+    "category": "geography",
+    "factKey": "extra2:geography:005"
+  },
+  {
+    "id": "geography-v85-alt-00008",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما أطول نهر في العراق؟",
+    "correctAnswers": [
+      "نهر دجلة",
+      "دجلة"
+    ],
+    "wrongAnswers": [
+      "أمريكا الجنوبية",
+      "روسيا",
+      "أستراليا",
+      "أفريقيا",
+      "خط الاستواء",
+      "خط غرينتش"
+    ],
+    "category": "geography",
+    "factKey": "geography-003"
+  },
+  {
+    "id": "geography-v860-new-005-a",
+    "type": "text",
+    "question": "ما أعلى شلال متصل في العالم؟",
+    "correctAnswers": [
+      "شلال آنجل"
+    ],
+    "wrongAnswers": [
+      "أفريقيا",
+      "هضبة التبت",
+      "أمريكا الجنوبية",
+      "روسيا",
+      "برازيليا"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:005"
+  },
+  {
+    "id": "geography-v860-new-011-b",
+    "type": "text",
+    "question": "اذكر الإجابة: عاصمة نيوزيلندا؟",
+    "correctAnswers": [
+      "ويلينغتون"
+    ],
+    "wrongAnswers": [
+      "روسيا",
+      "أستراليا",
+      "خط الاستواء",
+      "مضيق بيرينغ",
+      "البحر الأحمر"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:011"
+  },
+  {
+    "id": "geography-003",
+    "type": "text",
+    "question": "ما أطول نهر في العراق؟",
+    "correctAnswers": [
+      "نهر دجلة",
+      "دجلة"
+    ],
+    "wrongAnswers": [
+      "أمريكا الجنوبية",
+      "روسيا",
+      "أستراليا",
+      "أفريقيا",
+      "خط الاستواء",
+      "خط غرينتش"
+    ],
+    "category": "geography",
+    "factKey": "geography-003"
+  },
+  {
+    "id": "geography-v85-alt-00013",
+    "type": "text",
+    "question": "حدّد المكان الصحيح: في أي قارة تقع الصحراء الكبرى؟",
+    "correctAnswers": [
+      "أفريقيا"
+    ],
+    "wrongAnswers": [
+      "خط غرينتش",
+      "تنزانيا",
+      "البحر المتوسط",
+      "الدانوب",
+      "مضيق بيرينغ",
+      "جبال الأنديز"
+    ],
+    "category": "geography",
+    "factKey": "extra2:geography:003"
+  },
+  {
+    "id": "geography-v85-alt-00012",
+    "type": "text",
+    "question": "أيّ قارة من حيث المساحة يُعد الأصغر؟",
+    "correctAnswers": [
+      "أستراليا"
+    ],
+    "wrongAnswers": [
+      "خط الاستواء",
+      "خط غرينتش",
+      "تنزانيا",
+      "البحر المتوسط",
+      "الدانوب",
+      "مضيق بيرينغ"
+    ],
+    "category": "geography",
+    "factKey": "extra2:geography:002"
+  },
+  {
+    "id": "geography-v860-new-006-a",
+    "type": "text",
+    "question": "ما أكبر بحيرة عذبة في العالم من حيث المساحة؟",
+    "correctAnswers": [
+      "بحيرة سوبيريور"
+    ],
+    "wrongAnswers": [
+      "الدانوب",
+      "خط غرينتش",
+      "الأرجنتين",
+      "البحر المتوسط",
+      "اليابان"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:006"
+  },
+  {
+    "id": "geography-v860-new-004-b",
+    "type": "text",
+    "question": "حدد الإجابة الصحيحة: في أي قارة تقع صحراء أتاكاما؟",
+    "correctAnswers": [
+      "أمريكا الجنوبية"
+    ],
+    "wrongAnswers": [
+      "جبال الأنديز",
+      "هضبة التبت",
+      "خط غرينتش",
+      "البحر الأحمر",
+      "بحيرة سوبيريور"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:004"
+  },
+  {
+    "id": "geography-v860-new-015-a",
+    "type": "text",
+    "question": "ما عاصمة النرويج؟",
+    "correctAnswers": [
+      "أوسلو"
+    ],
+    "wrongAnswers": [
+      "أمريكا الجنوبية",
+      "جبال الأنديز",
+      "البحر الأحمر",
+      "آسيا",
+      "المحيط الهندي"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:015"
+  },
+  {
+    "id": "geography-v85-alt-00004",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: أي بحر يفصل شبه الجزيرة العربية عن شمال شرق أفريقيا؟",
+    "correctAnswers": [
+      "البحر الأحمر"
+    ],
+    "wrongAnswers": [
+      "بحر العرب",
+      "البحر الأسود",
+      "بحر قزوين"
+    ],
+    "category": "geography",
+    "factKey": "geography:single:geography-m04"
+  },
+  {
+    "id": "geography-v860-new-001-b",
+    "type": "text",
+    "question": "اذكر الإجابة: أطول نهر في أوروبا؟",
+    "correctAnswers": [
+      "نهر الفولغا"
+    ],
+    "wrongAnswers": [
+      "البحر المتوسط",
+      "نهر دجلة",
+      "أوتاوا",
+      "شلال آنجل",
+      "مضيق بيرينغ"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:001"
+  },
+  {
+    "id": "geography-v860-new-013-b",
+    "type": "text",
+    "question": "اذكر الإجابة: عاصمة البرازيل؟",
+    "correctAnswers": [
+      "برازيليا"
+    ],
+    "wrongAnswers": [
+      "هضبة التبت",
+      "مضيق بيرينغ",
+      "غرينلاند",
+      "جبال الأنديز",
+      "باريس"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:013"
+  },
+  {
+    "id": "geography-v85-alt-00018",
+    "type": "text",
+    "question": "حدّد المكان الصحيح: في أي دولة يقع جبل كليمنجارو؟",
+    "correctAnswers": [
+      "تنزانيا"
+    ],
+    "wrongAnswers": [
+      "جبال الأنديز",
+      "هضبة التبت",
+      "البحر الأحمر",
+      "غرينلاند",
+      "آسيا",
+      "باريس"
+    ],
+    "category": "geography",
+    "factKey": "extra2:geography:008"
+  },
+  {
+    "id": "geography-single-004",
+    "type": "text",
+    "question": "أي بحر يفصل شبه الجزيرة العربية عن شمال شرق أفريقيا؟",
+    "correctAnswers": [
+      "البحر الأحمر"
+    ],
+    "wrongAnswers": [
+      "بحر العرب",
+      "البحر الأسود",
+      "بحر قزوين"
+    ],
+    "category": "geography",
+    "factKey": "geography:single:geography-m04"
+  },
+  {
+    "id": "geography-v860-new-003-a",
+    "type": "text",
+    "question": "ما المضيق الذي يفصل آسيا عن أمريكا الشمالية — سؤال إضافي 5؟",
+    "correctAnswers": [
+      "مضيق بيرينغ"
+    ],
+    "wrongAnswers": [
+      "أفريقيا",
+      "الأرجنتين",
+      "خط غرينتش",
+      "روسيا",
+      "أستراليا"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:003"
+  },
+  {
+    "id": "geography-v860-new-010-b",
+    "type": "text",
+    "question": "اذكر الإجابة: النهر الذي يمر بمدينة بودابست؟",
+    "correctAnswers": [
+      "نهر الدانوب"
+    ],
+    "wrongAnswers": [
+      "الأرجنتين",
+      "اليابان",
+      "نهر دجلة",
+      "برازيليا",
+      "البحر المتوسط"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:010"
+  },
+  {
+    "id": "geography-v860-new-005-b",
+    "type": "text",
+    "question": "اذكر الإجابة: أعلى شلال متصل في العالم؟",
+    "correctAnswers": [
+      "شلال آنجل"
+    ],
+    "wrongAnswers": [
+      "باريس",
+      "الأرجنتين",
+      "أمريكا الجنوبية",
+      "خط الاستواء",
+      "البحر الأحمر"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:005"
+  },
+  {
+    "id": "extra2-geography-008",
+    "type": "text",
+    "question": "في أي دولة يقع جبل كليمنجارو؟",
+    "correctAnswers": [
+      "تنزانيا"
+    ],
+    "wrongAnswers": [
+      "جبال الأنديز",
+      "هضبة التبت",
+      "البحر الأحمر",
+      "غرينلاند",
+      "آسيا",
+      "باريس"
+    ],
+    "category": "geography",
+    "factKey": "extra2:geography:008"
+  },
+  {
+    "id": "geography-v85-alt-00017",
+    "type": "text",
+    "question": "أيّ جزيرة في العالم يُعد الأكبر؟",
+    "correctAnswers": [
+      "غرينلاند"
+    ],
+    "wrongAnswers": [
+      "مضيق بيرينغ",
+      "جبال الأنديز",
+      "هضبة التبت",
+      "البحر الأحمر",
+      "آسيا",
+      "باريس"
+    ],
+    "category": "geography",
+    "factKey": "extra2:geography:007"
+  },
+  {
+    "id": "extra2-geography-002",
+    "type": "text",
+    "question": "ما أصغر قارة من حيث المساحة؟",
+    "correctAnswers": [
+      "أستراليا"
+    ],
+    "wrongAnswers": [
+      "خط الاستواء",
+      "خط غرينتش",
+      "تنزانيا",
+      "البحر المتوسط",
+      "الدانوب",
+      "مضيق بيرينغ"
+    ],
+    "category": "geography",
+    "factKey": "extra2:geography:002"
+  },
+  {
+    "id": "geography-v860-new-015-b",
+    "type": "text",
+    "question": "اذكر الإجابة: عاصمة النرويج؟",
+    "correctAnswers": [
+      "أوسلو"
+    ],
+    "wrongAnswers": [
+      "مضيق بيرينغ",
+      "ويلينغتون",
+      "البحر الأحمر",
+      "اليابان",
+      "جبال الأنديز"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:015"
+  },
+  {
+    "id": "geography-v85-alt-00020",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما النهر الأوروبي الذي يمر بعدة عواصم منها فيينا وبودابست؟",
+    "correctAnswers": [
+      "الدانوب"
+    ],
+    "wrongAnswers": [
+      "البحر الأحمر",
+      "غرينلاند",
+      "آسيا",
+      "باريس",
+      "نهر دجلة",
+      "أمريكا الجنوبية"
+    ],
+    "category": "geography",
+    "factKey": "extra2:geography:010"
+  },
+  {
+    "id": "geography-v85-alt-00007",
+    "type": "text",
+    "question": "أي مدينة هي عاصمة فرنسا؟",
+    "correctAnswers": [
+      "باريس"
+    ],
+    "wrongAnswers": [
+      "نهر دجلة",
+      "أمريكا الجنوبية",
+      "روسيا",
+      "أستراليا",
+      "أفريقيا",
+      "خط الاستواء"
+    ],
+    "category": "geography",
+    "factKey": "geography-002"
+  },
+  {
+    "id": "geography-v85-alt-00011",
+    "type": "text",
+    "question": "أيّ قارة من حيث المساحة يُعد الأكبر؟",
+    "correctAnswers": [
+      "آسيا"
+    ],
+    "wrongAnswers": [
+      "أفريقيا",
+      "خط الاستواء",
+      "خط غرينتش",
+      "تنزانيا",
+      "البحر المتوسط",
+      "الدانوب"
+    ],
+    "category": "geography",
+    "factKey": "extra2:geography:001"
+  },
+  {
+    "id": "geography-v860-new-019-a",
+    "type": "text",
+    "question": "ما الدولة التي تضم إقليم باتاغونيا مع تشيلي؟",
+    "correctAnswers": [
+      "الأرجنتين"
+    ],
+    "wrongAnswers": [
+      "نهر دجلة",
+      "آسيا",
+      "مضيق بيرينغ",
+      "أمريكا الجنوبية",
+      "شبه الجزيرة العربية"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:019"
+  },
+  {
+    "id": "geography-v85-alt-00019",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما البحر الذي يفصل جنوب أوروبا عن شمال أفريقيا؟",
+    "correctAnswers": [
+      "البحر المتوسط"
+    ],
+    "wrongAnswers": [
+      "هضبة التبت",
+      "البحر الأحمر",
+      "غرينلاند",
+      "آسيا",
+      "باريس",
+      "نهر دجلة"
+    ],
+    "category": "geography",
+    "factKey": "extra2:geography:009"
+  },
+  {
+    "id": "extra2-geography-003",
+    "type": "text",
+    "question": "في أي قارة تقع الصحراء الكبرى؟",
+    "correctAnswers": [
+      "أفريقيا"
+    ],
+    "wrongAnswers": [
+      "خط غرينتش",
+      "تنزانيا",
+      "البحر المتوسط",
+      "الدانوب",
+      "مضيق بيرينغ",
+      "جبال الأنديز"
+    ],
+    "category": "geography",
+    "factKey": "extra2:geography:003"
+  },
+  {
+    "id": "geography-v860-new-004-a",
+    "type": "text",
+    "question": "في أي قارة تقع صحراء أتاكاما؟",
+    "correctAnswers": [
+      "أمريكا الجنوبية"
+    ],
+    "wrongAnswers": [
+      "برازيليا",
+      "أفريقيا",
+      "نهر دجلة",
+      "مضيق بيرينغ",
+      "ويلينغتون"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:004"
+  },
+  {
+    "id": "geography-v860-new-012-b",
+    "type": "text",
+    "question": "اذكر الإجابة: عاصمة كندا؟",
+    "correctAnswers": [
+      "أوتاوا"
+    ],
+    "wrongAnswers": [
+      "ويلينغتون",
+      "برن",
+      "هضبة التبت",
+      "شبه الجزيرة العربية",
+      "أوسلو"
+    ],
+    "category": "geography",
+    "factKey": "v860:geography:newfact:012"
+  },
+  {
+    "id": "geography-v85-alt-00002",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: ما أطول سلسلة جبلية قارية فوق سطح الأرض؟",
+    "correctAnswers": [
+      "جبال الأنديز",
+      "الأنديز"
+    ],
+    "wrongAnswers": [
+      "الهيمالايا",
+      "الألب",
+      "جبال الروكي"
+    ],
+    "category": "geography",
+    "factKey": "geography:single:geography-m02"
+  },
+  {
+    "id": "geography-v85-alt-00005",
+    "type": "text",
+    "question": "أيّ جزيرة في العالم إذا استُبعدت القارات يُعد الأكبر؟",
+    "correctAnswers": [
+      "غرينلاند",
+      "جرينلاند"
+    ],
+    "wrongAnswers": [
+      "غينيا الجديدة",
+      "بورنيو",
+      "مدغشقر"
+    ],
+    "category": "geography",
+    "factKey": "geography:single:geography-m05"
+  },
+  {
+    "id": "geography-v85-alt-00010",
+    "type": "text",
+    "question": "أيّ دولة في العالم من حيث المساحة يُعد الأكبر؟",
+    "correctAnswers": [
+      "روسيا",
+      "روسيا الاتحادية"
+    ],
+    "wrongAnswers": [
+      "أستراليا",
+      "أفريقيا",
+      "خط الاستواء",
+      "خط غرينتش",
+      "تنزانيا",
+      "البحر المتوسط"
+    ],
+    "category": "geography",
+    "factKey": "geography-005"
+  }
+]

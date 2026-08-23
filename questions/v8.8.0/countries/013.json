@@ -1,0 +1,3475 @@
+[
+  {
+    "id": "countries-v860-new-0002-a",
+    "type": "text",
+    "question": "إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «AD»؟",
+    "correctAnswers": [
+      "أندورا"
+    ],
+    "wrongAnswers": [
+      "جورج تاون",
+      "إيطاليا",
+      "tn",
+      "LY",
+      "سانتياغو"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:AD"
+  },
+  {
+    "id": "countries-flag-country-49",
+    "type": "image",
+    "question": "خمن اسم الدولة أو الإقليم من خلال صورة العلم:",
+    "correctAnswers": [
+      "بلجيكا"
+    ],
+    "wrongAnswers": [
+      "هولندا",
+      "فرنسا",
+      "لوكسمبورغ",
+      "اليونان",
+      "أوكرانيا"
+    ],
+    "category": "countries",
+    "factKey": "countries:flag-country:بلجيكا",
+    "image": "assets/Countries/be.svg",
+    "imageAlt": "علم بلجيكا"
+  },
+  {
+    "id": "countries-v860-new-0089-a",
+    "type": "text",
+    "question": "ما رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «ألمانيا»؟",
+    "correctAnswers": [
+      "DE"
+    ],
+    "wrongAnswers": [
+      "hr",
+      "أفغانستان",
+      "بكين",
+      "SM",
+      "نيودلهي"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:DE"
+  },
+  {
+    "id": "countries-v860-new-0310-b",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «SK»؟",
+    "correctAnswers": [
+      "سلوفاكيا"
+    ],
+    "wrongAnswers": [
+      "جزر مارشال",
+      "اليونان",
+      "الولايات المتحدة",
+      "LI",
+      "براغ"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:SK"
+  },
+  {
+    "id": "countries-v85-flag-capital-130",
+    "type": "image",
+    "question": "ما عاصمة الدولة أو الإقليم الذي يظهر علمه في الصورة؟",
+    "correctAnswers": [
+      "أوتاوا"
+    ],
+    "wrongAnswers": [
+      "أبوجا",
+      "القاهرة",
+      "بوغوتا",
+      "باريس",
+      "الرباط"
+    ],
+    "category": "countries",
+    "factKey": "countries:flag-capital:كندا",
+    "image": "assets/Countries/ca.svg",
+    "imageAlt": "علم كندا"
+  },
+  {
+    "id": "countries-v860-new-0147-a",
+    "type": "text",
+    "question": "ما رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «هايتي»؟",
+    "correctAnswers": [
+      "HT"
+    ],
+    "wrongAnswers": [
+      "برايا",
+      "bo",
+      "سوفا",
+      "BS",
+      "بيروت"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:HT"
+  },
+  {
+    "id": "countries-v860-new-0068-b",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «CI»؟",
+    "correctAnswers": [
+      "ساحل العاج"
+    ],
+    "wrongAnswers": [
+      "طوكيو",
+      "jp",
+      "بروناي",
+      "تونس",
+      "AT"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:CI"
+  },
+  {
+    "id": "countries-v85-flag-capital-108",
+    "type": "image",
+    "question": "ما عاصمة الدولة أو الإقليم الذي يظهر علمه في الصورة؟",
+    "correctAnswers": [
+      "أثينا"
+    ],
+    "wrongAnswers": [
+      "مانيلا",
+      "هانوي",
+      "بكين",
+      "أنقرة",
+      "سان خوسيه"
+    ],
+    "category": "countries",
+    "factKey": "countries:flag-capital:اليونان",
+    "image": "assets/Countries/gr.svg",
+    "imageAlt": "علم اليونان"
+  },
+  {
+    "id": "countries-v860-new-0069-b",
+    "type": "text",
+    "question": "اذكر الإجابة: رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «جزر كوك»؟",
+    "correctAnswers": [
+      "CK"
+    ],
+    "wrongAnswers": [
+      "سوفا",
+      "mk",
+      "النيجر",
+      "RU",
+      "بوغوتا"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:CK"
+  },
+  {
+    "id": "countries-v860-new-0085-b",
+    "type": "text",
+    "question": "اذكر الإجابة: رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «قبرص»؟",
+    "correctAnswers": [
+      "CY"
+    ],
+    "wrongAnswers": [
+      "AZ",
+      "jm",
+      "AU",
+      "بوغوتا",
+      "SN"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:CY"
+  },
+  {
+    "id": "countries-v860-new-0640-a",
+    "type": "text",
+    "question": "ما رمز ISO alpha-2 للدولة أو الإقليم الذي عاصمته «ماسيرو»؟",
+    "correctAnswers": [
+      "LS"
+    ],
+    "wrongAnswers": [
+      "بروكسل",
+      "الدنمارك",
+      "جمهورية أفريقيا الوسطى",
+      "جنوب أفريقيا",
+      "مونتفيديو"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:capital-iso:LS"
+  },
+  {
+    "id": "countries-v860-new-0113-b",
+    "type": "text",
+    "question": "اذكر الإجابة: رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «فنلندا»؟",
+    "correctAnswers": [
+      "FI"
+    ],
+    "wrongAnswers": [
+      "أوسلو",
+      "ألمانيا",
+      "جنوب تاراوا",
+      "تنزانيا",
+      "كوبنهاغن"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:FI"
+  },
+  {
+    "id": "countries-v85-flag-capital-72",
+    "type": "image",
+    "question": "ما عاصمة الدولة أو الإقليم الذي يظهر علمه في الصورة؟",
+    "correctAnswers": [
+      "سنغافورة"
+    ],
+    "wrongAnswers": [
+      "دودوما",
+      "بروكسل",
+      "طهران",
+      "باريس",
+      "بيروت"
+    ],
+    "category": "countries",
+    "factKey": "countries:flag-capital:سنغافورة",
+    "image": "assets/Countries/sg.svg",
+    "imageAlt": "علم سنغافورة"
+  },
+  {
+    "id": "countries-v860-new-0020-a",
+    "type": "text",
+    "question": "إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «AZ»؟",
+    "correctAnswers": [
+      "أذربيجان"
+    ],
+    "wrongAnswers": [
+      "نيقوسيا",
+      "نيودلهي",
+      "UY",
+      "UA",
+      "MG"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:AZ"
+  },
+  {
+    "id": "countries-v85-reverse-157",
+    "type": "text",
+    "question": "أي دولة أو إقليم عاصمته دودوما؟",
+    "correctAnswers": [
+      "تنزانيا",
+      "دودوما"
+    ],
+    "wrongAnswers": [
+      "سويسرا",
+      "كوستاريكا",
+      "بيرو",
+      "الهند",
+      "جيبوتي"
+    ],
+    "category": "countries",
+    "factKey": "countries:reverse-capital:تنزانيا"
+  },
+  {
+    "id": "countries-v860-new-0582-a",
+    "type": "text",
+    "question": "ما رمز ISO alpha-2 للدولة أو الإقليم الذي عاصمته «كوناكري»؟",
+    "correctAnswers": [
+      "GN"
+    ],
+    "wrongAnswers": [
+      "MX",
+      "MC",
+      "أوروغواي",
+      "كابول",
+      "سانت لوسيا"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:capital-iso:GN"
+  },
+  {
+    "id": "countries-v860-new-0296-b",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «SA»؟",
+    "correctAnswers": [
+      "السعودية"
+    ],
+    "wrongAnswers": [
+      "بوخارست",
+      "سويسرا",
+      "بورت أو برنس",
+      "قيرغيزستان",
+      "صربيا"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:SA"
+  },
+  {
+    "id": "countries-v85-alt-574",
+    "type": "image",
+    "question": "ما الاسم الذي يُطلق على الدولة أو الإقليم الذي يمثله هذا العلم؟",
+    "correctAnswers": [
+      "كوريا الجنوبية"
+    ],
+    "wrongAnswers": [
+      "اليابان",
+      "الصين",
+      "كوريا الشمالية",
+      "سنغافورة",
+      "ألمانيا"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:flag:countries:flag-country:كوريا الجنوبية",
+    "image": "assets/Countries/kr.svg",
+    "imageAlt": "علم كوريا الجنوبية"
+  },
+  {
+    "id": "countries-v860-new-0148-a",
+    "type": "text",
+    "question": "إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «HT»؟",
+    "correctAnswers": [
+      "هايتي"
+    ],
+    "wrongAnswers": [
+      "باكستان",
+      "كوستاريكا",
+      "HR",
+      "فنلندا",
+      "kr"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:HT"
+  },
+  {
+    "id": "countries-v85-alt-181",
+    "type": "image",
+    "question": "اختر الإجابة الصحيحة: خمن اسم الدولة أو الإقليم من خلال صورة العلم:",
+    "correctAnswers": [
+      "الكويت"
+    ],
+    "wrongAnswers": [
+      "قطر",
+      "البحرين",
+      "العراق",
+      "ليبيا",
+      "الصومال"
+    ],
+    "category": "countries",
+    "factKey": "countries:flag-country:الكويت",
+    "image": "assets/Countries/kw.svg",
+    "imageAlt": "علم الكويت"
+  },
+  {
+    "id": "countries-v860-new-0810-a",
+    "type": "text",
+    "question": "كيف يكتب رمز ISO alpha-2 للدولة أو الإقليم «موزمبيق» بحروف لاتينية صغيرة؟",
+    "correctAnswers": [
+      "mz"
+    ],
+    "wrongAnswers": [
+      "MM",
+      "ES",
+      "السنغال",
+      "تونس",
+      "كينشاسا"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-lower:MZ"
+  },
+  {
+    "id": "countries-flag-country-8",
+    "type": "image",
+    "question": "خمن اسم الدولة أو الإقليم من خلال صورة العلم:",
+    "correctAnswers": [
+      "عُمان"
+    ],
+    "wrongAnswers": [
+      "اليمن",
+      "الإمارات",
+      "السعودية",
+      "الجزائر",
+      "جزر القمر"
+    ],
+    "category": "countries",
+    "factKey": "countries:flag-country:عُمان",
+    "image": "assets/Countries/om.svg",
+    "imageAlt": "علم عُمان"
+  },
+  {
+    "id": "countries-v860-new-0138-a",
+    "type": "text",
+    "question": "إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «GT»؟",
+    "correctAnswers": [
+      "غواتيمالا"
+    ],
+    "wrongAnswers": [
+      "IS",
+      "غرينادا",
+      "مالاوي",
+      "GR",
+      "غينيا"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:GT"
+  },
+  {
+    "id": "countries-v860-new-0217-b",
+    "type": "text",
+    "question": "اذكر الإجابة: رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «مولدوفا»؟",
+    "correctAnswers": [
+      "MD"
+    ],
+    "wrongAnswers": [
+      "البحرين",
+      "صوفيا",
+      "bt",
+      "سيشل",
+      "lc"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:MD"
+  },
+  {
+    "id": "countries-v860-new-0628-a",
+    "type": "text",
+    "question": "ما رمز ISO alpha-2 للدولة أو الإقليم الذي عاصمته «بيروت»؟",
+    "correctAnswers": [
+      "LB"
+    ],
+    "wrongAnswers": [
+      "سريلانكا",
+      "بيساو",
+      "NI",
+      "الهند",
+      "BY"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:capital-iso:LB"
+  },
+  {
+    "id": "countries-v85-alt-639",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: اذكر عاصمة كرواتيا.",
+    "correctAnswers": [
+      "زغرب"
+    ],
+    "wrongAnswers": [
+      "مكسيكو سيتي",
+      "كاراكاس",
+      "أنتاناناريفو",
+      "بغداد"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:capital:countries:capital:كرواتيا"
+  },
+  {
+    "id": "countries-medium-flag-2",
+    "type": "image",
+    "question": "خمن اسم الدولة من خلال صورة العلم:",
+    "correctAnswers": [
+      "أفغانستان"
+    ],
+    "wrongAnswers": [
+      "البوسنة والهرسك",
+      "جزر البهاما",
+      "إريتريا",
+      "جامايكا"
+    ],
+    "category": "countries",
+    "factKey": "countries:medium:flag:af",
+    "image": "assets/Countries/af.svg",
+    "imageAlt": "علم أفغانستان"
+  },
+  {
+    "id": "countries-v860-new-0377-a",
+    "type": "text",
+    "question": "ما عاصمة الدولة أو الإقليم الذي يحمل رمز ISO «BA»؟",
+    "correctAnswers": [
+      "سراييفو"
+    ],
+    "wrongAnswers": [
+      "HT",
+      "إيران",
+      "FM",
+      "ng",
+      "إثيوبيا"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-capital:BA"
+  },
+  {
+    "id": "countries-v860-new-0205-b",
+    "type": "text",
+    "question": "اذكر الإجابة: رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «ليتوانيا»؟",
+    "correctAnswers": [
+      "LT"
+    ],
+    "wrongAnswers": [
+      "TZ",
+      "سنغافورة",
+      "ليبيا",
+      "جمهورية الكونغو",
+      "cn"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:LT"
+  },
+  {
+    "id": "countries-v85-reverse-99",
+    "type": "text",
+    "question": "أي دولة أو إقليم عاصمته برن؟",
+    "correctAnswers": [
+      "سويسرا",
+      "برن"
+    ],
+    "wrongAnswers": [
+      "السودان",
+      "إيرلندا",
+      "المغرب",
+      "أوكرانيا",
+      "اليابان"
+    ],
+    "category": "countries",
+    "factKey": "countries:reverse-capital:سويسرا"
+  },
+  {
+    "id": "countries-v85-flag-capital-20",
+    "type": "image",
+    "question": "ما عاصمة الدولة أو الإقليم الذي يظهر علمه في الصورة؟",
+    "correctAnswers": [
+      "القاهرة"
+    ],
+    "wrongAnswers": [
+      "باريس",
+      "بغداد",
+      "أوسلو",
+      "زغرب",
+      "براغ"
+    ],
+    "category": "countries",
+    "factKey": "countries:flag-capital:مصر",
+    "image": "assets/Countries/eg.svg",
+    "imageAlt": "علم مصر"
+  },
+  {
+    "id": "countries-v860-new-0681-a",
+    "type": "text",
+    "question": "ما عاصمة الدولة أو الإقليم الذي يحمل رمز ISO «HN»؟",
+    "correctAnswers": [
+      "تيغوسيغالبا"
+    ],
+    "wrongAnswers": [
+      "أفغانستان",
+      "lb",
+      "أنقرة",
+      "ML",
+      "cy"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-capital:HN"
+  },
+  {
+    "id": "countries-v85-alt-606",
+    "type": "image",
+    "question": "ما الاسم الذي يُطلق على الدولة أو الإقليم الذي يمثله هذا العلم؟",
+    "correctAnswers": [
+      "إيرلندا"
+    ],
+    "wrongAnswers": [
+      "المملكة المتحدة",
+      "آيسلندا",
+      "بلجيكا",
+      "بولندا",
+      "الدنمارك"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:flag:countries:flag-country:إيرلندا",
+    "image": "assets/Countries/ie.svg",
+    "imageAlt": "علم إيرلندا"
+  },
+  {
+    "id": "countries-v860-new-0615-a",
+    "type": "text",
+    "question": "ما عاصمة الدولة أو الإقليم الذي يحمل رمز ISO «CR»؟",
+    "correctAnswers": [
+      "سان خوسيه"
+    ],
+    "wrongAnswers": [
+      "so",
+      "بودابست",
+      "دبلن",
+      "بيرو",
+      "gn"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-capital:CR"
+  },
+  {
+    "id": "countries-v85-flag-capital-68",
+    "type": "image",
+    "question": "ما عاصمة الدولة أو الإقليم الذي يظهر علمه في الصورة؟",
+    "correctAnswers": [
+      "هانوي"
+    ],
+    "wrongAnswers": [
+      "بكين",
+      "أفاروا",
+      "سانتياغو",
+      "برن",
+      "عمّان"
+    ],
+    "category": "countries",
+    "factKey": "countries:flag-capital:فيتنام",
+    "image": "assets/Countries/vn.svg",
+    "imageAlt": "علم فيتنام"
+  },
+  {
+    "id": "countries-v860-new-0132-a",
+    "type": "text",
+    "question": "إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «GM»؟",
+    "correctAnswers": [
+      "غامبيا"
+    ],
+    "wrongAnswers": [
+      "أفغانستان",
+      "CR",
+      "ae",
+      "فيلنيوس",
+      "sr"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:GM"
+  },
+  {
+    "id": "countries-v860-new-0437-b",
+    "type": "text",
+    "question": "اذكر الإجابة: عاصمة الدولة أو الإقليم الذي يحمل رمز ISO «AD»؟",
+    "correctAnswers": [
+      "أندورا لا فيلا"
+    ],
+    "wrongAnswers": [
+      "إسلام آباد",
+      "برايا",
+      "BS",
+      "JO",
+      "pt"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-capital:AD"
+  },
+  {
+    "id": "countries-v860-new-0580-a",
+    "type": "text",
+    "question": "ما رمز ISO alpha-2 للدولة أو الإقليم الذي عاصمته «جورج تاون»؟",
+    "correctAnswers": [
+      "GY"
+    ],
+    "wrongAnswers": [
+      "المجر",
+      "mw",
+      "ياموسوكرو",
+      "LY",
+      "ليوبليانا"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:capital-iso:GY"
+  },
+  {
+    "id": "countries-capital-86",
+    "type": "text",
+    "question": "ما هي عاصمة الرأس الأخضر؟",
+    "correctAnswers": [
+      "برايا"
+    ],
+    "wrongAnswers": [
+      "أبوظبي",
+      "القاهرة",
+      "جيبوتي",
+      "إسلام آباد"
+    ],
+    "category": "countries",
+    "factKey": "countries:capital:الرأس الأخضر"
+  },
+  {
+    "id": "countries-v860-new-0361-b",
+    "type": "text",
+    "question": "اذكر الإجابة: عاصمة الدولة أو الإقليم الذي يحمل رمز ISO «AR»؟",
+    "correctAnswers": [
+      "بوينس آيرس"
+    ],
+    "wrongAnswers": [
+      "بريتوريا",
+      "ليما",
+      "مونتفيديو",
+      "موريتانيا",
+      "hr"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-capital:AR"
+  },
+  {
+    "id": "countries-v860-new-0425-b",
+    "type": "text",
+    "question": "اذكر الإجابة: عاصمة الدولة أو الإقليم الذي يحمل رمز ISO «NE»؟",
+    "correctAnswers": [
+      "نيامي"
+    ],
+    "wrongAnswers": [
+      "YE",
+      "ليوبليانا",
+      "مانيلا",
+      "hr",
+      "المكسيك"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-capital:NE"
+  },
+  {
+    "id": "countries-v860-new-0760-a",
+    "type": "text",
+    "question": "كيف يكتب رمز ISO alpha-2 للدولة أو الإقليم «هايتي» بحروف لاتينية صغيرة؟",
+    "correctAnswers": [
+      "ht"
+    ],
+    "wrongAnswers": [
+      "ME",
+      "RS",
+      "إسلام آباد",
+      "LA",
+      "MW"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-lower:HT"
+  },
+  {
+    "id": "countries-v85-flag-capital-60",
+    "type": "image",
+    "question": "ما عاصمة الدولة أو الإقليم الذي يظهر علمه في الصورة؟",
+    "correctAnswers": [
+      "طوكيو"
+    ],
+    "wrongAnswers": [
+      "كانبيرا",
+      "أنقرة",
+      "أوتاوا",
+      "عمّان",
+      "غابورون"
+    ],
+    "category": "countries",
+    "factKey": "countries:flag-capital:اليابان",
+    "image": "assets/Countries/jp.svg",
+    "imageAlt": "علم اليابان"
+  },
+  {
+    "id": "countries-v860-new-0770-a",
+    "type": "text",
+    "question": "كيف يكتب رمز ISO alpha-2 للدولة أو الإقليم «الأردن» بحروف لاتينية صغيرة؟",
+    "correctAnswers": [
+      "jo"
+    ],
+    "wrongAnswers": [
+      "الإكوادور",
+      "mv",
+      "LS",
+      "سانتو دومينغو",
+      "ميانمار"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-lower:JO"
+  },
+  {
+    "id": "countries-v860-new-0436-a",
+    "type": "text",
+    "question": "ما رمز ISO alpha-2 للدولة أو الإقليم الذي عاصمته «أثينا»؟",
+    "correctAnswers": [
+      "GR"
+    ],
+    "wrongAnswers": [
+      "كيتو",
+      "النمسا",
+      "مصر",
+      "AL",
+      "الكويت"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:capital-iso:GR"
+  },
+  {
+    "id": "countries-v860-new-0648-a",
+    "type": "text",
+    "question": "ما رمز ISO alpha-2 للدولة أو الإقليم الذي عاصمته «كوالالمبور»؟",
+    "correctAnswers": [
+      "MY"
+    ],
+    "wrongAnswers": [
+      "CU",
+      "بلغراد",
+      "LK",
+      "ad",
+      "كازاخستان"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:capital-iso:MY"
+  },
+  {
+    "id": "countries-medium-flag-72",
+    "type": "image",
+    "question": "خمن اسم الدولة من خلال صورة العلم:",
+    "correctAnswers": [
+      "نيكاراغوا"
+    ],
+    "wrongAnswers": [
+      "روسيا",
+      "السنغال",
+      "الجزائر",
+      "نيبال"
+    ],
+    "category": "countries",
+    "factKey": "countries:medium:flag:ni",
+    "image": "assets/Countries/ni.svg",
+    "imageAlt": "علم نيكاراغوا"
+  },
+  {
+    "id": "countries-v860-new-0503-b",
+    "type": "text",
+    "question": "اذكر الإجابة: عاصمة الدولة أو الإقليم الذي يحمل رمز ISO «TN»؟",
+    "correctAnswers": [
+      "تونس"
+    ],
+    "wrongAnswers": [
+      "SE",
+      "أوسلو",
+      "KZ",
+      "براغ",
+      "مولدوفا"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-capital:TN"
+  },
+  {
+    "id": "countries-v860-new-0245-a",
+    "type": "text",
+    "question": "ما رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «ماليزيا»؟",
+    "correctAnswers": [
+      "MY"
+    ],
+    "wrongAnswers": [
+      "CD",
+      "سويسرا",
+      "يريفان",
+      "ماجورو",
+      "DO"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:MY"
+  },
+  {
+    "id": "countries-v85-alt-431",
+    "type": "text",
+    "question": "أي مدينة هي عاصمة كمبوديا؟",
+    "correctAnswers": [
+      "بنوم بنه"
+    ],
+    "wrongAnswers": [
+      "بيونغ يانغ",
+      "لوكسمبورغ",
+      "نايبيداو",
+      "أسونسيون"
+    ],
+    "category": "countries",
+    "factKey": "countries:medium:capital:kh"
+  },
+  {
+    "id": "countries-medium-flag-45",
+    "type": "image",
+    "question": "خمن اسم الدولة من خلال صورة العلم:",
+    "correctAnswers": [
+      "كمبوديا"
+    ],
+    "wrongAnswers": [
+      "لاوس",
+      "موناكو",
+      "نيكاراغوا",
+      "سورينام"
+    ],
+    "category": "countries",
+    "factKey": "countries:medium:flag:kh",
+    "image": "assets/Countries/kh.svg",
+    "imageAlt": "علم كمبوديا"
+  },
+  {
+    "id": "countries-medium-capital-37",
+    "type": "text",
+    "question": "ما هي عاصمة غواتيمالا؟",
+    "correctAnswers": [
+      "غواتيمالا سيتي"
+    ],
+    "wrongAnswers": [
+      "تيغوسيغالبا",
+      "بيونغ يانغ",
+      "لوكسمبورغ",
+      "ليلونغوي"
+    ],
+    "category": "countries",
+    "factKey": "countries:medium:capital:gt"
+  },
+  {
+    "id": "countries-v860-new-0071-a",
+    "type": "text",
+    "question": "ما رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «تشيلي»؟",
+    "correctAnswers": [
+      "CL"
+    ],
+    "wrongAnswers": [
+      "اليابان",
+      "سيراليون",
+      "سيول",
+      "TN",
+      "BO"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:CL"
+  },
+  {
+    "id": "countries-v860-new-0235-b",
+    "type": "text",
+    "question": "اذكر الإجابة: رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «مالطا»؟",
+    "correctAnswers": [
+      "MT"
+    ],
+    "wrongAnswers": [
+      "GW",
+      "CZ",
+      "رومانيا",
+      "براتيسلافا",
+      "جمهورية الدومينيكان"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:MT"
+  },
+  {
+    "id": "countries-v860-new-0456-b",
+    "type": "text",
+    "question": "اذكر الإجابة: رمز ISO alpha-2 للدولة أو الإقليم الذي عاصمته «بورت مورسبي»؟",
+    "correctAnswers": [
+      "PG"
+    ],
+    "wrongAnswers": [
+      "موروني",
+      "بورت مورسبي",
+      "LK",
+      "أبوظبي",
+      "كييف"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:capital-iso:PG"
+  },
+  {
+    "id": "countries-medium-flag-24",
+    "type": "image",
+    "question": "خمن اسم الدولة من خلال صورة العلم:",
+    "correctAnswers": [
+      "قبرص"
+    ],
+    "wrongAnswers": [
+      "إريتريا",
+      "غواتيمالا",
+      "سانت لوسيا",
+      "مالطا"
+    ],
+    "category": "countries",
+    "factKey": "countries:medium:flag:cy",
+    "image": "assets/Countries/cy.svg",
+    "imageAlt": "علم قبرص"
+  },
+  {
+    "id": "countries-medium-flag-63",
+    "type": "image",
+    "question": "خمن اسم الدولة من خلال صورة العلم:",
+    "correctAnswers": [
+      "مالي"
+    ],
+    "wrongAnswers": [
+      "مالاوي",
+      "باراغواي",
+      "الإمارات العربية المتحدة",
+      "جيبوتي"
+    ],
+    "category": "countries",
+    "factKey": "countries:medium:flag:ml",
+    "image": "assets/Countries/ml.svg",
+    "imageAlt": "علم مالي"
+  },
+  {
+    "id": "countries-v860-new-0447-a",
+    "type": "text",
+    "question": "ما عاصمة الدولة أو الإقليم الذي يحمل رمز ISO «IR»؟",
+    "correctAnswers": [
+      "طهران"
+    ],
+    "wrongAnswers": [
+      "الكويت",
+      "النمسا",
+      "أبوظبي",
+      "pk",
+      "كيريباتي"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-capital:IR"
+  },
+  {
+    "id": "countries-flag-country-21",
+    "type": "image",
+    "question": "خمن اسم الدولة أو الإقليم من خلال صورة العلم:",
+    "correctAnswers": [
+      "سوريا"
+    ],
+    "wrongAnswers": [
+      "لبنان",
+      "الأردن",
+      "العراق",
+      "بنغلادش",
+      "منغوليا"
+    ],
+    "category": "countries",
+    "factKey": "countries:flag-country:سوريا",
+    "image": "assets/Countries/sy.svg",
+    "imageAlt": "علم سوريا"
+  },
+  {
+    "id": "countries-v860-new-0469-a",
+    "type": "text",
+    "question": "ما عاصمة الدولة أو الإقليم الذي يحمل رمز ISO «BG»؟",
+    "correctAnswers": [
+      "صوفيا"
+    ],
+    "wrongAnswers": [
+      "CV",
+      "ميانمار",
+      "نيقوسيا",
+      "PW",
+      "لشبونة"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-capital:BG"
+  },
+  {
+    "id": "countries-v85-alt-578",
+    "type": "image",
+    "question": "ما الاسم الذي يُطلق على الدولة أو الإقليم الذي يمثله هذا العلم؟",
+    "correctAnswers": [
+      "تايلاند"
+    ],
+    "wrongAnswers": [
+      "فيتنام",
+      "كمبوديا",
+      "لاوس",
+      "الفلبين",
+      "إسبانيا"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:flag:countries:flag-country:تايلاند",
+    "image": "assets/Countries/th.svg",
+    "imageAlt": "علم تايلاند"
+  },
+  {
+    "id": "countries-easy2-capital-98",
+    "type": "text",
+    "question": "اذكر عاصمة بلجيكا.",
+    "correctAnswers": [
+      "بروكسل"
+    ],
+    "wrongAnswers": [
+      "وارسو",
+      "كوبنهاغن",
+      "مكسيكو سيتي",
+      "كاراكاس"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:capital:countries:capital:بلجيكا"
+  },
+  {
+    "id": "countries-medium-capital-71",
+    "type": "text",
+    "question": "ما هي عاصمة النيجر؟",
+    "correctAnswers": [
+      "نيامي"
+    ],
+    "wrongAnswers": [
+      "بورت مورسبي",
+      "براتيسلافا",
+      "أبوظبي",
+      "الخرطوم"
+    ],
+    "category": "countries",
+    "factKey": "countries:medium:capital:ne"
+  },
+  {
+    "id": "countries-v860-new-0543-a",
+    "type": "text",
+    "question": "ما عاصمة الدولة أو الإقليم الذي يحمل رمز ISO «SM»؟",
+    "correctAnswers": [
+      "سان مارينو"
+    ],
+    "wrongAnswers": [
+      "البوسنة والهرسك",
+      "يريفان",
+      "IT",
+      "JM",
+      "سانتو دومينغو"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-capital:SM"
+  },
+  {
+    "id": "countries-v860-new-0817-a",
+    "type": "text",
+    "question": "كيف يكتب رمز ISO alpha-2 للدولة أو الإقليم «نيبال» بحروف لاتينية صغيرة؟",
+    "correctAnswers": [
+      "np"
+    ],
+    "wrongAnswers": [
+      "تيغوسيغالبا",
+      "البرتغال",
+      "سان مارينو",
+      "نيروبي",
+      "by"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-lower:NP"
+  },
+  {
+    "id": "countries-v85-alt-194",
+    "type": "text",
+    "question": "أي مدينة هي عاصمة تونس؟",
+    "correctAnswers": [
+      "تونس"
+    ],
+    "wrongAnswers": [
+      "نواكشوط",
+      "دمشق",
+      "بكين",
+      "كوالالمبور"
+    ],
+    "category": "countries",
+    "factKey": "countries:capital:تونس"
+  },
+  {
+    "id": "countries-v860-new-0048-a",
+    "type": "text",
+    "question": "إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «BT»؟",
+    "correctAnswers": [
+      "بوتان"
+    ],
+    "wrongAnswers": [
+      "KI",
+      "بلغراد",
+      "جزر مارشال",
+      "سانتو دومينغو",
+      "بيونغ يانغ"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:BT"
+  },
+  {
+    "id": "countries-easy2-flag-192",
+    "type": "image",
+    "question": "ما اسم الدولة أو الإقليم الذي يمثله هذا العلم؟",
+    "correctAnswers": [
+      "بوروندي"
+    ],
+    "wrongAnswers": [
+      "بوتان",
+      "قبرص",
+      "غينيا بيساو",
+      "ليختنشتاين"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:flag:countries:medium:flag:bi",
+    "image": "assets/Countries/bi.svg",
+    "imageAlt": "علم بوروندي"
+  },
+  {
+    "id": "countries-v860-new-0444-a",
+    "type": "text",
+    "question": "ما رمز ISO alpha-2 للدولة أو الإقليم الذي عاصمته «مونتفيديو»؟",
+    "correctAnswers": [
+      "UY"
+    ],
+    "wrongAnswers": [
+      "أوتاوا",
+      "OM",
+      "DE",
+      "فنلندا",
+      "أكرا"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:capital-iso:UY"
+  },
+  {
+    "id": "countries-v85-alt-392",
+    "type": "image",
+    "question": "اختر الإجابة الصحيحة: خمن اسم الدولة من خلال صورة العلم:",
+    "correctAnswers": [
+      "جمهورية الدومينيكان"
+    ],
+    "wrongAnswers": [
+      "ولايات ميكرونيسيا المتحدة",
+      "غيانا",
+      "ليبيريا",
+      "جزر المالديف"
+    ],
+    "category": "countries",
+    "factKey": "countries:medium:flag:do",
+    "image": "assets/Countries/do.svg",
+    "imageAlt": "علم جمهورية الدومينيكان"
+  },
+  {
+    "id": "countries-v860-new-0491-b",
+    "type": "text",
+    "question": "اذكر الإجابة: عاصمة الدولة أو الإقليم الذي يحمل رمز ISO «PE»؟",
+    "correctAnswers": [
+      "ليما"
+    ],
+    "wrongAnswers": [
+      "mm",
+      "KW",
+      "الجبل الأسود",
+      "li",
+      "PY"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-capital:PE"
+  },
+  {
+    "id": "countries-medium-flag-73",
+    "type": "image",
+    "question": "خمن اسم الدولة من خلال صورة العلم:",
+    "correctAnswers": [
+      "بنما"
+    ],
+    "wrongAnswers": [
+      "رواندا",
+      "سورينام",
+      "المغرب",
+      "سريلانكا"
+    ],
+    "category": "countries",
+    "factKey": "countries:medium:flag:pa",
+    "image": "assets/Countries/pa.svg",
+    "imageAlt": "علم بنما"
+  },
+  {
+    "id": "countries-v860-new-0283-b",
+    "type": "text",
+    "question": "اذكر الإجابة: رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «باراغواي»؟",
+    "correctAnswers": [
+      "PY"
+    ],
+    "wrongAnswers": [
+      "سانت جورجز",
+      "ua",
+      "غواتيمالا سيتي",
+      "سنغافورة",
+      "تركيا"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:PY"
+  },
+  {
+    "id": "countries-v85-alt-667",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: اذكر عاصمة كينيا.",
+    "correctAnswers": [
+      "نيروبي"
+    ],
+    "wrongAnswers": [
+      "أنتاناناريفو",
+      "بغداد",
+      "صنعاء",
+      "نواكشوط"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:capital:countries:capital:كينيا"
+  },
+  {
+    "id": "countries-v860-new-0346-b",
+    "type": "text",
+    "question": "اذكر الإجابة: رمز ISO alpha-2 للدولة أو الإقليم الذي عاصمته «أديس أبابا»؟",
+    "correctAnswers": [
+      "ET"
+    ],
+    "wrongAnswers": [
+      "كينغستون",
+      "نيودلهي",
+      "نيقوسيا",
+      "JM",
+      "كاستريس"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:capital-iso:ET"
+  },
+  {
+    "id": "countries-easy2-flag-105",
+    "type": "image",
+    "question": "ما اسم الدولة أو الإقليم الذي يمثله هذا العلم؟",
+    "correctAnswers": [
+      "التشيك"
+    ],
+    "wrongAnswers": [
+      "سلوفاكيا",
+      "بولندا",
+      "النمسا",
+      "الدنمارك",
+      "الولايات المتحدة"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:flag:countries:flag-country:التشيك",
+    "image": "assets/Countries/cz.svg",
+    "imageAlt": "علم التشيك"
+  },
+  {
+    "id": "countries-v85-alt-444",
+    "type": "image",
+    "question": "اختر الإجابة الصحيحة: خمن اسم الدولة من خلال صورة العلم:",
+    "correctAnswers": [
+      "ليختنشتاين"
+    ],
+    "wrongAnswers": [
+      "لاتفيا",
+      "مالطا",
+      "جزر سليمان",
+      "البحرين"
+    ],
+    "category": "countries",
+    "factKey": "countries:medium:flag:li",
+    "image": "assets/Countries/li.svg",
+    "imageAlt": "علم ليختنشتاين"
+  },
+  {
+    "id": "countries-easy2-flag-51",
+    "type": "image",
+    "question": "ما اسم الدولة أو الإقليم الذي يمثله هذا العلم؟",
+    "correctAnswers": [
+      "بنغلادش"
+    ],
+    "wrongAnswers": [
+      "الهند",
+      "نيبال",
+      "ميانمار",
+      "كوريا الجنوبية",
+      "إندونيسيا"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:flag:countries:flag-country:بنغلادش",
+    "image": "assets/Countries/bd.svg",
+    "imageAlt": "علم بنغلادش"
+  },
+  {
+    "id": "countries-v85-alt-419",
+    "type": "text",
+    "question": "أي مدينة هي عاصمة غيانا؟",
+    "correctAnswers": [
+      "جورج تاون"
+    ],
+    "wrongAnswers": [
+      "بودابست",
+      "فيينتيان",
+      "موناكو",
+      "ويندهوك"
+    ],
+    "category": "countries",
+    "factKey": "countries:medium:capital:gy"
+  },
+  {
+    "id": "countries-medium-flag-10",
+    "type": "image",
+    "question": "خمن اسم الدولة من خلال صورة العلم:",
+    "correctAnswers": [
+      "بلغاريا"
+    ],
+    "wrongAnswers": [
+      "جزر البهاما",
+      "كوبا",
+      "غواتيمالا",
+      "سانت لوسيا"
+    ],
+    "category": "countries",
+    "factKey": "countries:medium:flag:bg",
+    "image": "assets/Countries/bg.svg",
+    "imageAlt": "علم بلغاريا"
+  },
+  {
+    "id": "countries-v860-new-0015-b",
+    "type": "text",
+    "question": "اذكر الإجابة: رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «النمسا»؟",
+    "correctAnswers": [
+      "AT"
+    ],
+    "wrongAnswers": [
+      "AO",
+      "بودابست",
+      "باريس",
+      "ht",
+      "هايتي"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:AT"
+  },
+  {
+    "id": "countries-easy2-flag-288",
+    "type": "image",
+    "question": "ما اسم الدولة أو الإقليم الذي يمثله هذا العلم؟",
+    "correctAnswers": [
+      "مولدوفا"
+    ],
+    "wrongAnswers": [
+      "ميانمار",
+      "نيكاراغوا",
+      "سورينام",
+      "المغرب"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:flag:countries:medium:flag:md",
+    "image": "assets/Countries/md.svg",
+    "imageAlt": "علم مولدوفا"
+  },
+  {
+    "id": "countries-v860-new-0741-a",
+    "type": "text",
+    "question": "كيف يكتب رمز ISO alpha-2 للدولة أو الإقليم «إسبانيا» بحروف لاتينية صغيرة؟",
+    "correctAnswers": [
+      "es"
+    ],
+    "wrongAnswers": [
+      "موناكو",
+      "فيتنام",
+      "الصين",
+      "om",
+      "بريدجتاون"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-lower:ES"
+  },
+  {
+    "id": "countries-easy2-capital-146",
+    "type": "text",
+    "question": "اذكر عاصمة أوروغواي.",
+    "correctAnswers": [
+      "مونتفيديو"
+    ],
+    "wrongAnswers": [
+      "أكرا",
+      "أفاروا",
+      "الدوحة",
+      "طرابلس"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:capital:countries:capital:أوروغواي"
+  },
+  {
+    "id": "countries-v860-new-0680-a",
+    "type": "text",
+    "question": "ما رمز ISO alpha-2 للدولة أو الإقليم الذي عاصمته «بورت أو برنس»؟",
+    "correctAnswers": [
+      "HT"
+    ],
+    "wrongAnswers": [
+      "mg",
+      "lr",
+      "ls",
+      "ME",
+      "دومينيكا"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:capital-iso:HT"
+  },
+  {
+    "id": "countries-v85-reverse-151",
+    "type": "text",
+    "question": "أي دولة أو إقليم عاصمته أكرا؟",
+    "correctAnswers": [
+      "غانا",
+      "أكرا"
+    ],
+    "wrongAnswers": [
+      "لبنان",
+      "أستراليا",
+      "جزر القمر",
+      "البحرين",
+      "ألمانيا"
+    ],
+    "category": "countries",
+    "factKey": "countries:reverse-capital:غانا"
+  },
+  {
+    "id": "countries-v860-new-0262-b",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «NP»؟",
+    "correctAnswers": [
+      "نيبال"
+    ],
+    "wrongAnswers": [
+      "الدنمارك",
+      "الصين",
+      "الغابون",
+      "أثينا",
+      "ألبانيا"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:NP"
+  },
+  {
+    "id": "countries-v860-new-0363-a",
+    "type": "text",
+    "question": "ما عاصمة الدولة أو الإقليم الذي يحمل رمز ISO «JO»؟",
+    "correctAnswers": [
+      "عمّان"
+    ],
+    "wrongAnswers": [
+      "MC",
+      "باليكير",
+      "bd",
+      "ir",
+      "MD"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-capital:JO"
+  },
+  {
+    "id": "countries-v860-new-0355-b",
+    "type": "text",
+    "question": "اذكر الإجابة: عاصمة الدولة أو الإقليم الذي يحمل رمز ISO «AU»؟",
+    "correctAnswers": [
+      "كانبيرا"
+    ],
+    "wrongAnswers": [
+      "أمستردام",
+      "جمهورية الدومينيكان",
+      "الفلبين",
+      "الصومال",
+      "بورتو نوفو"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-capital:AU"
+  },
+  {
+    "id": "countries-v860-new-0057-b",
+    "type": "text",
+    "question": "اذكر الإجابة: رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «كندا»؟",
+    "correctAnswers": [
+      "CA"
+    ],
+    "wrongAnswers": [
+      "نيبال",
+      "CI",
+      "ستوكهولم",
+      "كاستريس",
+      "السويد"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:CA"
+  },
+  {
+    "id": "countries-v860-new-0414-a",
+    "type": "text",
+    "question": "ما رمز ISO alpha-2 للدولة أو الإقليم الذي عاصمته «بودابست»؟",
+    "correctAnswers": [
+      "HU"
+    ],
+    "wrongAnswers": [
+      "براغ",
+      "IE",
+      "cf",
+      "مدريد",
+      "بلغاريا"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:capital-iso:HU"
+  },
+  {
+    "id": "countries-v860-new-0326-b",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «TN»؟",
+    "correctAnswers": [
+      "تونس"
+    ],
+    "wrongAnswers": [
+      "بوتسوانا",
+      "اليونان",
+      "de",
+      "سانت جورجز",
+      "مالي"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:TN"
+  },
+  {
+    "id": "countries-v85-flag-capital-76",
+    "type": "image",
+    "question": "ما عاصمة الدولة أو الإقليم الذي يظهر علمه في الصورة؟",
+    "correctAnswers": [
+      "مانيلا"
+    ],
+    "wrongAnswers": [
+      "أنقرة",
+      "ستوكهولم",
+      "طوكيو",
+      "مسقط",
+      "أثينا"
+    ],
+    "category": "countries",
+    "factKey": "countries:flag-capital:الفلبين",
+    "image": "assets/Countries/ph.svg",
+    "imageAlt": "علم الفلبين"
+  },
+  {
+    "id": "countries-medium-capital-34",
+    "type": "text",
+    "question": "ما هي عاصمة جورجيا؟",
+    "correctAnswers": [
+      "تبليسي"
+    ],
+    "wrongAnswers": [
+      "غواتيمالا سيتي",
+      "بنوم بنه",
+      "مونروفيا",
+      "فاليتا"
+    ],
+    "category": "countries",
+    "factKey": "countries:medium:capital:ge"
+  },
+  {
+    "id": "countries-easy2-flag-166",
+    "type": "image",
+    "question": "ما اسم الدولة أو الإقليم الذي يمثله هذا العلم؟",
+    "correctAnswers": [
+      "جمهورية الكونغو"
+    ],
+    "wrongAnswers": [
+      "جمهورية الكونغو الديمقراطية",
+      "الغابون",
+      "الكاميرون",
+      "السعودية",
+      "اليمن"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:flag:countries:flag-country:جمهورية الكونغو",
+    "image": "assets/Countries/cg.svg",
+    "imageAlt": "علم جمهورية الكونغو"
+  },
+  {
+    "id": "countries-easy2-flag-316",
+    "type": "image",
+    "question": "ما اسم الدولة أو الإقليم الذي يمثله هذا العلم؟",
+    "correctAnswers": [
+      "بنما"
+    ],
+    "wrongAnswers": [
+      "رواندا",
+      "سورينام",
+      "المغرب",
+      "سريلانكا"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:flag:countries:medium:flag:pa",
+    "image": "assets/Countries/pa.svg",
+    "imageAlt": "علم بنما"
+  },
+  {
+    "id": "countries-easy2-flag-252",
+    "type": "image",
+    "question": "ما اسم الدولة أو الإقليم الذي يمثله هذا العلم؟",
+    "correctAnswers": [
+      "هايتي"
+    ],
+    "wrongAnswers": [
+      "كيريباتي",
+      "ليسوتو",
+      "مالاوي",
+      "سلوفاكيا"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:flag:countries:medium:flag:ht",
+    "image": "assets/Countries/ht.svg",
+    "imageAlt": "علم هايتي"
+  },
+  {
+    "id": "countries-v860-new-0745-a",
+    "type": "text",
+    "question": "كيف يكتب رمز ISO alpha-2 للدولة أو الإقليم «ولايات ميكرونيسيا المتحدة» بحروف لاتينية صغيرة؟",
+    "correctAnswers": [
+      "fm"
+    ],
+    "wrongAnswers": [
+      "EG",
+      "السعودية",
+      "إيرلندا",
+      "SE",
+      "LS"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-lower:FM"
+  },
+  {
+    "id": "countries-v860-new-0459-b",
+    "type": "text",
+    "question": "اذكر الإجابة: عاصمة الدولة أو الإقليم الذي يحمل رمز ISO «PK»؟",
+    "correctAnswers": [
+      "إسلام آباد"
+    ],
+    "wrongAnswers": [
+      "مقديشو",
+      "كوريا الجنوبية",
+      "سان خوسيه",
+      "GH",
+      "المكسيك"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-capital:PK"
+  },
+  {
+    "id": "countries-v85-alt-290",
+    "type": "text",
+    "question": "أي مدينة هي عاصمة أوكرانيا؟",
+    "correctAnswers": [
+      "كييف"
+    ],
+    "wrongAnswers": [
+      "زغرب",
+      "سانتياغو",
+      "نيروبي",
+      "برازافيل"
+    ],
+    "category": "countries",
+    "factKey": "countries:capital:أوكرانيا"
+  },
+  {
+    "id": "countries-v85-flag-capital-94",
+    "type": "image",
+    "question": "ما عاصمة الدولة أو الإقليم الذي يظهر علمه في الصورة؟",
+    "correctAnswers": [
+      "دبلن"
+    ],
+    "wrongAnswers": [
+      "وارسو",
+      "ستوكهولم",
+      "سنغافورة",
+      "أوسلو",
+      "الرياض"
+    ],
+    "category": "countries",
+    "factKey": "countries:flag-capital:إيرلندا",
+    "image": "assets/Countries/ie.svg",
+    "imageAlt": "علم إيرلندا"
+  },
+  {
+    "id": "countries-v860-new-0260-a",
+    "type": "text",
+    "question": "إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «NO»؟",
+    "correctAnswers": [
+      "النرويج"
+    ],
+    "wrongAnswers": [
+      "عمّان",
+      "ie",
+      "سوفا",
+      "سلوفينيا",
+      "cn"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:NO"
+  },
+  {
+    "id": "countries-flag-country-55",
+    "type": "image",
+    "question": "خمن اسم الدولة أو الإقليم من خلال صورة العلم:",
+    "correctAnswers": [
+      "النرويج"
+    ],
+    "wrongAnswers": [
+      "السويد",
+      "فنلندا",
+      "الدنمارك",
+      "أوكرانيا",
+      "المكسيك"
+    ],
+    "category": "countries",
+    "factKey": "countries:flag-country:النرويج",
+    "image": "assets/Countries/no.svg",
+    "imageAlt": "علم النرويج"
+  },
+  {
+    "id": "countries-v860-new-0024-a",
+    "type": "text",
+    "question": "إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «BB»؟",
+    "correctAnswers": [
+      "بربادوس"
+    ],
+    "wrongAnswers": [
+      "ليختنشتاين",
+      "أستانا",
+      "الدنمارك",
+      "ولايات ميكرونيسيا المتحدة",
+      "بولندا"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:BB"
+  },
+  {
+    "id": "countries-v860-new-0016-a",
+    "type": "text",
+    "question": "إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «AT»؟",
+    "correctAnswers": [
+      "النمسا"
+    ],
+    "wrongAnswers": [
+      "موسكو",
+      "PE",
+      "البحرين",
+      "جزر القمر",
+      "BR"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:AT"
+  },
+  {
+    "id": "countries-v860-new-0017-a",
+    "type": "text",
+    "question": "ما رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «أستراليا»؟",
+    "correctAnswers": [
+      "AU"
+    ],
+    "wrongAnswers": [
+      "KM",
+      "كوالالمبور",
+      "فيلنيوس",
+      "ألبانيا",
+      "IQ"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:AU"
+  },
+  {
+    "id": "countries-medium-flag-15",
+    "type": "image",
+    "question": "خمن اسم الدولة من خلال صورة العلم:",
+    "correctAnswers": [
+      "جزر البهاما"
+    ],
+    "wrongAnswers": [
+      "جمهورية أفريقيا الوسطى",
+      "إستونيا",
+      "المجر",
+      "لوكسمبورغ"
+    ],
+    "category": "countries",
+    "factKey": "countries:medium:flag:bs",
+    "image": "assets/Countries/bs.svg",
+    "imageAlt": "علم جزر البهاما"
+  },
+  {
+    "id": "countries-v85-alt-214",
+    "type": "text",
+    "question": "أي مدينة هي عاصمة تركيا؟",
+    "correctAnswers": [
+      "أنقرة"
+    ],
+    "wrongAnswers": [
+      "نيودلهي",
+      "سيول",
+      "كانبيرا",
+      "لشبونة"
+    ],
+    "category": "countries",
+    "factKey": "countries:capital:تركيا"
+  },
+  {
+    "id": "countries-v860-new-0668-a",
+    "type": "text",
+    "question": "ما رمز ISO alpha-2 للدولة أو الإقليم الذي عاصمته «نايبيداو»؟",
+    "correctAnswers": [
+      "MM"
+    ],
+    "wrongAnswers": [
+      "لشبونة",
+      "ألمانيا",
+      "PT",
+      "US",
+      "باليكير"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:capital-iso:MM"
+  },
+  {
+    "id": "countries-v85-alt-228",
+    "type": "text",
+    "question": "أي مدينة هي عاصمة الصين؟",
+    "correctAnswers": [
+      "بكين"
+    ],
+    "wrongAnswers": [
+      "أولان باتور",
+      "مانيلا",
+      "لندن",
+      "وارسو"
+    ],
+    "category": "countries",
+    "factKey": "countries:capital:الصين"
+  },
+  {
+    "id": "countries-easy2-flag-7",
+    "type": "image",
+    "question": "ما اسم الدولة أو الإقليم الذي يمثله هذا العلم؟",
+    "correctAnswers": [
+      "الإمارات العربية المتحدة"
+    ],
+    "wrongAnswers": [
+      "قطر",
+      "البحرين",
+      "عُمان",
+      "اليمن",
+      "موريتانيا"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:flag:countries:flag-country:الإمارات العربية المتحدة",
+    "image": "assets/Countries/ae.svg",
+    "imageAlt": "علم الإمارات العربية المتحدة"
+  },
+  {
+    "id": "countries-v85-alt-484",
+    "type": "image",
+    "question": "اختر الإجابة الصحيحة: خمن اسم الدولة من خلال صورة العلم:",
+    "correctAnswers": [
+      "نيكاراغوا"
+    ],
+    "wrongAnswers": [
+      "روسيا",
+      "السنغال",
+      "الجزائر",
+      "نيبال"
+    ],
+    "category": "countries",
+    "factKey": "countries:medium:flag:ni",
+    "image": "assets/Countries/ni.svg",
+    "imageAlt": "علم نيكاراغوا"
+  },
+  {
+    "id": "countries-v85-alt-683",
+    "type": "image",
+    "question": "ما الاسم الذي يُطلق على الدولة أو الإقليم الذي يمثله هذا العلم؟",
+    "correctAnswers": [
+      "الرأس الأخضر"
+    ],
+    "wrongAnswers": [
+      "السنغال",
+      "غامبيا",
+      "غينيا بيساو",
+      "قطر",
+      "ليبيا"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:flag:countries:flag-country:الرأس الأخضر",
+    "image": "assets/Countries/cv.svg",
+    "imageAlt": "علم الرأس الأخضر"
+  },
+  {
+    "id": "countries-v85-alt-429",
+    "type": "text",
+    "question": "أي مدينة هي عاصمة قيرغيزستان؟",
+    "correctAnswers": [
+      "بشكيك"
+    ],
+    "wrongAnswers": [
+      "باستير",
+      "فيلنيوس",
+      "باماكو",
+      "نغيرولمود"
+    ],
+    "category": "countries",
+    "factKey": "countries:medium:capital:kg"
+  },
+  {
+    "id": "countries-easy2-flag-97",
+    "type": "image",
+    "question": "ما اسم الدولة أو الإقليم الذي يمثله هذا العلم؟",
+    "correctAnswers": [
+      "بلجيكا"
+    ],
+    "wrongAnswers": [
+      "هولندا",
+      "فرنسا",
+      "لوكسمبورغ",
+      "اليونان",
+      "أوكرانيا"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:flag:countries:flag-country:بلجيكا",
+    "image": "assets/Countries/be.svg",
+    "imageAlt": "علم بلجيكا"
+  },
+  {
+    "id": "countries-v860-new-0102-a",
+    "type": "text",
+    "question": "إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «EC»؟",
+    "correctAnswers": [
+      "الإكوادور"
+    ],
+    "wrongAnswers": [
+      "LT",
+      "بودغوريتسا",
+      "AR",
+      "DE",
+      "id"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:EC"
+  },
+  {
+    "id": "countries-v860-new-0595-a",
+    "type": "text",
+    "question": "ما عاصمة الدولة أو الإقليم الذي يحمل رمز ISO «CY»؟",
+    "correctAnswers": [
+      "نيقوسيا"
+    ],
+    "wrongAnswers": [
+      "باريس",
+      "ناميبيا",
+      "pg",
+      "KN",
+      "مالي"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-capital:CY"
+  },
+  {
+    "id": "countries-easy2-flag-298",
+    "type": "image",
+    "question": "ما اسم الدولة أو الإقليم الذي يمثله هذا العلم؟",
+    "correctAnswers": [
+      "ميانمار"
+    ],
+    "wrongAnswers": [
+      "موزمبيق",
+      "روسيا",
+      "قطر",
+      "جزر القمر"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:flag:countries:medium:flag:mm",
+    "image": "assets/Countries/mm.svg",
+    "imageAlt": "علم ميانمار"
+  },
+  {
+    "id": "countries-v860-new-0497-b",
+    "type": "text",
+    "question": "اذكر الإجابة: عاصمة الدولة أو الإقليم الذي يحمل رمز ISO «TR»؟",
+    "correctAnswers": [
+      "أنقرة"
+    ],
+    "wrongAnswers": [
+      "بربادوس",
+      "إستونيا",
+      "HN",
+      "موناكو",
+      "SC"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-capital:TR"
+  },
+  {
+    "id": "countries-v85-alt-626",
+    "type": "image",
+    "question": "ما الاسم الذي يُطلق على الدولة أو الإقليم الذي يمثله هذا العلم؟",
+    "correctAnswers": [
+      "فنلندا"
+    ],
+    "wrongAnswers": [
+      "السويد",
+      "النرويج",
+      "إستونيا",
+      "صربيا",
+      "الأرجنتين"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:flag:countries:flag-country:فنلندا",
+    "image": "assets/Countries/fi.svg",
+    "imageAlt": "علم فنلندا"
+  },
+  {
+    "id": "countries-v860-new-0842-a",
+    "type": "text",
+    "question": "كيف يكتب رمز ISO alpha-2 للدولة أو الإقليم «سيراليون» بحروف لاتينية صغيرة؟",
+    "correctAnswers": [
+      "sl"
+    ],
+    "wrongAnswers": [
+      "الهند",
+      "كوريا الجنوبية",
+      "ساحل العاج",
+      "اليابان",
+      "BS"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-lower:SL"
+  },
+  {
+    "id": "countries-v860-new-0110-a",
+    "type": "text",
+    "question": "إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «ES»؟",
+    "correctAnswers": [
+      "إسبانيا"
+    ],
+    "wrongAnswers": [
+      "BH",
+      "AL",
+      "سيول",
+      "ch",
+      "مولدوفا"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:ES"
+  },
+  {
+    "id": "countries-easy2-flag-53",
+    "type": "image",
+    "question": "ما اسم الدولة أو الإقليم الذي يمثله هذا العلم؟",
+    "correctAnswers": [
+      "نيبال"
+    ],
+    "wrongAnswers": [
+      "بوتان",
+      "الهند",
+      "بنغلادش",
+      "منغوليا",
+      "الفلبين"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:flag:countries:flag-country:نيبال",
+    "image": "assets/Countries/np.svg",
+    "imageAlt": "علم نيبال"
+  },
+  {
+    "id": "countries-v860-new-0849-a",
+    "type": "text",
+    "question": "كيف يكتب رمز ISO alpha-2 للدولة أو الإقليم «تونس» بحروف لاتينية صغيرة؟",
+    "correctAnswers": [
+      "tn"
+    ],
+    "wrongAnswers": [
+      "GM",
+      "فيكتوريا",
+      "برازيليا",
+      "IS",
+      "النمسا"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-lower:TN"
+  },
+  {
+    "id": "countries-v85-flag-capital-30",
+    "type": "image",
+    "question": "ما عاصمة الدولة أو الإقليم الذي يظهر علمه في الصورة؟",
+    "correctAnswers": [
+      "نواكشوط"
+    ],
+    "wrongAnswers": [
+      "مدريد",
+      "مسقط",
+      "براغ",
+      "واشنطن العاصمة",
+      "طوكيو"
+    ],
+    "category": "countries",
+    "factKey": "countries:flag-capital:موريتانيا",
+    "image": "assets/Countries/mr.svg",
+    "imageAlt": "علم موريتانيا"
+  },
+  {
+    "id": "countries-easy2-flag-174",
+    "type": "image",
+    "question": "ما اسم الدولة أو الإقليم الذي يمثله هذا العلم؟",
+    "correctAnswers": [
+      "أفغانستان"
+    ],
+    "wrongAnswers": [
+      "البوسنة والهرسك",
+      "جزر البهاما",
+      "إريتريا",
+      "جامايكا"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:flag:countries:medium:flag:af",
+    "image": "assets/Countries/af.svg",
+    "imageAlt": "علم أفغانستان"
+  },
+  {
+    "id": "countries-v860-new-0043-b",
+    "type": "text",
+    "question": "اذكر الإجابة: رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «البرازيل»؟",
+    "correctAnswers": [
+      "BR"
+    ],
+    "wrongAnswers": [
+      "تيمفو",
+      "do",
+      "عُمان",
+      "بودابست",
+      "BO"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:BR"
+  },
+  {
+    "id": "countries-v860-new-0521-a",
+    "type": "text",
+    "question": "ما عاصمة الدولة أو الإقليم الذي يحمل رمز ISO «DO»؟",
+    "correctAnswers": [
+      "سانتو دومينغو"
+    ],
+    "wrongAnswers": [
+      "NG",
+      "FM",
+      "غيتيغا",
+      "المكسيك",
+      "ليختنشتاين"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-capital:DO"
+  },
+  {
+    "id": "countries-v85-alt-242",
+    "type": "text",
+    "question": "أي مدينة هي عاصمة سنغافورة؟",
+    "correctAnswers": [
+      "سنغافورة"
+    ],
+    "wrongAnswers": [
+      "كانبيرا",
+      "لشبونة",
+      "براغ",
+      "ريكيافيك"
+    ],
+    "category": "countries",
+    "factKey": "countries:capital:سنغافورة"
+  },
+  {
+    "id": "countries-v85-reverse-101",
+    "type": "text",
+    "question": "أي دولة أو إقليم عاصمته فيينا؟",
+    "correctAnswers": [
+      "النمسا",
+      "فيينا"
+    ],
+    "wrongAnswers": [
+      "تونس",
+      "السودان",
+      "الولايات المتحدة",
+      "كولومبيا",
+      "موريتانيا"
+    ],
+    "category": "countries",
+    "factKey": "countries:reverse-capital:النمسا"
+  },
+  {
+    "id": "countries-v85-alt-329",
+    "type": "image",
+    "question": "اختر الإجابة الصحيحة: خمن اسم الدولة أو الإقليم من خلال صورة العلم:",
+    "correctAnswers": [
+      "مدغشقر"
+    ],
+    "wrongAnswers": [
+      "موريشيوس",
+      "موزمبيق",
+      "جزر القمر",
+      "كوستاريكا",
+      "قطر"
+    ],
+    "category": "countries",
+    "factKey": "countries:flag-country:مدغشقر",
+    "image": "assets/Countries/mg.svg",
+    "imageAlt": "علم مدغشقر"
+  },
+  {
+    "id": "countries-v860-new-0046-b",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «BS»؟",
+    "correctAnswers": [
+      "جزر البهاما"
+    ],
+    "wrongAnswers": [
+      "KG",
+      "برازيليا",
+      "SR",
+      "ht",
+      "سانت كيتس ونيفيس"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:BS"
+  },
+  {
+    "id": "countries-v85-flag-capital-164",
+    "type": "image",
+    "question": "ما عاصمة الدولة أو الإقليم الذي يظهر علمه في الصورة؟",
+    "correctAnswers": [
+      "أفاروا"
+    ],
+    "wrongAnswers": [
+      "ويلينغتون",
+      "بغداد",
+      "براغ",
+      "أبوظبي",
+      "سانتياغو"
+    ],
+    "category": "countries",
+    "factKey": "countries:flag-capital:جزر كوك",
+    "image": "assets/Countries/ck.svg",
+    "imageAlt": "علم جزر كوك"
+  },
+  {
+    "id": "countries-v860-new-0157-b",
+    "type": "text",
+    "question": "اذكر الإجابة: رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «العراق»؟",
+    "correctAnswers": [
+      "IQ"
+    ],
+    "wrongAnswers": [
+      "ميانمار",
+      "فيينتيان",
+      "mu",
+      "cz",
+      "أنتاناناريفو"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:IQ"
+  },
+  {
+    "id": "countries-v860-new-0610-a",
+    "type": "text",
+    "question": "ما رمز ISO alpha-2 للدولة أو الإقليم الذي عاصمته «هافانا»؟",
+    "correctAnswers": [
+      "CU"
+    ],
+    "wrongAnswers": [
+      "CA",
+      "موناكو",
+      "مقديشو",
+      "بيروت",
+      "GN"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:capital-iso:CU"
+  },
+  {
+    "id": "countries-easy2-capital-120",
+    "type": "text",
+    "question": "اذكر عاصمة أوكرانيا.",
+    "correctAnswers": [
+      "كييف"
+    ],
+    "wrongAnswers": [
+      "زغرب",
+      "سانتياغو",
+      "نيروبي",
+      "برازافيل"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:capital:countries:capital:أوكرانيا"
+  },
+  {
+    "id": "countries-v860-new-0506-a",
+    "type": "text",
+    "question": "ما رمز ISO alpha-2 للدولة أو الإقليم الذي عاصمته «كينغستون»؟",
+    "correctAnswers": [
+      "JM"
+    ],
+    "wrongAnswers": [
+      "أولان باتور",
+      "بيلاروس",
+      "MR",
+      "المكسيك",
+      "CL"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:capital-iso:JM"
+  },
+  {
+    "id": "countries-v860-new-0711-a",
+    "type": "text",
+    "question": "كيف يكتب رمز ISO alpha-2 للدولة أو الإقليم «جزيرة بوفيه» بحروف لاتينية صغيرة؟",
+    "correctAnswers": [
+      "bv"
+    ],
+    "wrongAnswers": [
+      "باكستان",
+      "جمهورية الكونغو الديمقراطية",
+      "HN",
+      "CZ",
+      "ماناغوا"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-lower:BV"
+  },
+  {
+    "id": "countries-v860-new-0258-b",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «NL»؟",
+    "correctAnswers": [
+      "هولندا"
+    ],
+    "wrongAnswers": [
+      "مونروفيا",
+      "fi",
+      "ياموسوكرو",
+      "جيبوتي",
+      "PW"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:NL"
+  },
+  {
+    "id": "countries-v860-new-0471-b",
+    "type": "text",
+    "question": "اذكر الإجابة: عاصمة الدولة أو الإقليم الذي يحمل رمز ISO «BZ»؟",
+    "correctAnswers": [
+      "بلموبان"
+    ],
+    "wrongAnswers": [
+      "sy",
+      "الأرجنتين",
+      "الصين",
+      "bv",
+      "إسبانيا"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-capital:BZ"
+  },
+  {
+    "id": "countries-easy2-flag-178",
+    "type": "image",
+    "question": "ما اسم الدولة أو الإقليم الذي يمثله هذا العلم؟",
+    "correctAnswers": [
+      "أرمينيا"
+    ],
+    "wrongAnswers": [
+      "بوركينا فاسو",
+      "بيلاروس",
+      "ولايات ميكرونيسيا المتحدة",
+      "كمبوديا"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:flag:countries:medium:flag:am",
+    "image": "assets/Countries/am.svg",
+    "imageAlt": "علم أرمينيا"
+  },
+  {
+    "id": "countries-medium-flag-49",
+    "type": "image",
+    "question": "خمن اسم الدولة من خلال صورة العلم:",
+    "correctAnswers": [
+      "كازاخستان"
+    ],
+    "wrongAnswers": [
+      "ليسوتو",
+      "مقدونيا الشمالية",
+      "باراغواي",
+      "الإمارات العربية المتحدة"
+    ],
+    "category": "countries",
+    "factKey": "countries:medium:flag:kz",
+    "image": "assets/Countries/kz.svg",
+    "imageAlt": "علم كازاخستان"
+  },
+  {
+    "id": "countries-v860-new-0839-a",
+    "type": "text",
+    "question": "كيف يكتب رمز ISO alpha-2 للدولة أو الإقليم «سنغافورة» بحروف لاتينية صغيرة؟",
+    "correctAnswers": [
+      "sg"
+    ],
+    "wrongAnswers": [
+      "lk",
+      "GT",
+      "بانغي",
+      "أذربيجان",
+      "مينسك"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-lower:SG"
+  },
+  {
+    "id": "countries-v860-new-0091-a",
+    "type": "text",
+    "question": "ما رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «جيبوتي»؟",
+    "correctAnswers": [
+      "DJ"
+    ],
+    "wrongAnswers": [
+      "mw",
+      "جزر مارشال",
+      "LU",
+      "ZA",
+      "الصين"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:DJ"
+  },
+  {
+    "id": "countries-v85-alt-465",
+    "type": "text",
+    "question": "أي مدينة هي عاصمة مقدونيا الشمالية؟",
+    "correctAnswers": [
+      "سكوبيه"
+    ],
+    "wrongAnswers": [
+      "فاليتا",
+      "بنما سيتي",
+      "ليوبليانا",
+      "المنامة"
+    ],
+    "category": "countries",
+    "factKey": "countries:medium:capital:mk"
+  },
+  {
+    "id": "countries-v85-alt-328",
+    "type": "text",
+    "question": "أي مدينة هي عاصمة تنزانيا؟",
+    "correctAnswers": [
+      "دودوما"
+    ],
+    "wrongAnswers": [
+      "أفاروا",
+      "الرياض",
+      "طرابلس",
+      "مقديشو"
+    ],
+    "category": "countries",
+    "factKey": "countries:capital:تنزانيا"
+  },
+  {
+    "id": "countries-v85-alt-496",
+    "type": "image",
+    "question": "اختر الإجابة الصحيحة: خمن اسم الدولة من خلال صورة العلم:",
+    "correctAnswers": [
+      "رواندا"
+    ],
+    "wrongAnswers": [
+      "سيراليون",
+      "قطر",
+      "جزر القمر",
+      "تايلاند"
+    ],
+    "category": "countries",
+    "factKey": "countries:medium:flag:rw",
+    "image": "assets/Countries/rw.svg",
+    "imageAlt": "علم رواندا"
+  },
+  {
+    "id": "countries-v85-alt-417",
+    "type": "text",
+    "question": "أي مدينة هي عاصمة غينيا بيساو؟",
+    "correctAnswers": [
+      "بيساو"
+    ],
+    "wrongAnswers": [
+      "بورت أو برنس",
+      "أستانا",
+      "ريغا",
+      "مابوتو"
+    ],
+    "category": "countries",
+    "factKey": "countries:medium:capital:gw"
+  },
+  {
+    "id": "countries-v860-new-0275-b",
+    "type": "text",
+    "question": "اذكر الإجابة: رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «باكستان»؟",
+    "correctAnswers": [
+      "PK"
+    ],
+    "wrongAnswers": [
+      "ZA",
+      "السعودية",
+      "بوليفيا",
+      "كييف",
+      "ad"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:PK"
+  },
+  {
+    "id": "countries-v85-flag-capital-86",
+    "type": "image",
+    "question": "ما عاصمة الدولة أو الإقليم الذي يظهر علمه في الصورة؟",
+    "correctAnswers": [
+      "روما"
+    ],
+    "wrongAnswers": [
+      "بوخارست",
+      "سيول",
+      "أفاروا",
+      "أوسلو",
+      "مونتفيديو"
+    ],
+    "category": "countries",
+    "factKey": "countries:flag-capital:إيطاليا",
+    "image": "assets/Countries/it.svg",
+    "imageAlt": "علم إيطاليا"
+  },
+  {
+    "id": "countries-v860-new-0452-b",
+    "type": "text",
+    "question": "اذكر الإجابة: رمز ISO alpha-2 للدولة أو الإقليم الذي عاصمته «ريكيافيك»؟",
+    "correctAnswers": [
+      "IS"
+    ],
+    "wrongAnswers": [
+      "KH",
+      "رومانيا",
+      "جمهورية الدومينيكان",
+      "صنعاء",
+      "بروكسل"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:capital-iso:IS"
+  },
+  {
+    "id": "countries-v860-new-0348-a",
+    "type": "text",
+    "question": "ما رمز ISO alpha-2 للدولة أو الإقليم الذي عاصمته «باكو»؟",
+    "correctAnswers": [
+      "AZ"
+    ],
+    "wrongAnswers": [
+      "روسيا",
+      "الكويت",
+      "غينيا بيساو",
+      "الأرجنتين",
+      "هايتي"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:capital-iso:AZ"
+  },
+  {
+    "id": "countries-v860-new-0164-b",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «IT»؟",
+    "correctAnswers": [
+      "إيطاليا"
+    ],
+    "wrongAnswers": [
+      "MD",
+      "NI",
+      "نيودلهي",
+      "mz",
+      "bw"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:IT"
+  },
+  {
+    "id": "countries-v860-new-0035-a",
+    "type": "text",
+    "question": "ما رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «بوروندي»؟",
+    "correctAnswers": [
+      "BI"
+    ],
+    "wrongAnswers": [
+      "KN",
+      "البحرين",
+      "lv",
+      "جامايكا",
+      "al"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:BI"
+  },
+  {
+    "id": "countries-v860-new-0735-a",
+    "type": "text",
+    "question": "كيف يكتب رمز ISO alpha-2 للدولة أو الإقليم «جمهورية الدومينيكان» بحروف لاتينية صغيرة؟",
+    "correctAnswers": [
+      "do"
+    ],
+    "wrongAnswers": [
+      "PH",
+      "ee",
+      "SY",
+      "سيشل",
+      "lc"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-lower:DO"
+  },
+  {
+    "id": "countries-v85-alt-255",
+    "type": "image",
+    "question": "اختر الإجابة الصحيحة: خمن اسم الدولة أو الإقليم من خلال صورة العلم:",
+    "correctAnswers": [
+      "إيطاليا"
+    ],
+    "wrongAnswers": [
+      "فرنسا",
+      "إسبانيا",
+      "اليونان",
+      "هولندا"
+    ],
+    "category": "countries",
+    "factKey": "countries:flag-country:إيطاليا",
+    "image": "assets/Countries/it.svg",
+    "imageAlt": "علم إيطاليا"
+  },
+  {
+    "id": "countries-v860-new-0275-a",
+    "type": "text",
+    "question": "ما رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «باكستان»؟",
+    "correctAnswers": [
+      "PK"
+    ],
+    "wrongAnswers": [
+      "دمشق",
+      "NG",
+      "RO",
+      "الرياض",
+      "إسلام آباد"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:PK"
+  },
+  {
+    "id": "countries-v860-new-0480-b",
+    "type": "text",
+    "question": "اذكر الإجابة: رمز ISO alpha-2 للدولة أو الإقليم الذي عاصمته «تيمفو»؟",
+    "correctAnswers": [
+      "BT"
+    ],
+    "wrongAnswers": [
+      "رواندا",
+      "بوركينا فاسو",
+      "DM",
+      "الجزائر",
+      "كوريا الشمالية"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:capital-iso:BT"
+  },
+  {
+    "id": "countries-flag-country-12",
+    "type": "image",
+    "question": "خمن اسم الدولة أو الإقليم من خلال صورة العلم:",
+    "correctAnswers": [
+      "تونس"
+    ],
+    "wrongAnswers": [
+      "الجزائر",
+      "ليبيا",
+      "المغرب",
+      "الصومال",
+      "إيران"
+    ],
+    "category": "countries",
+    "factKey": "countries:flag-country:تونس",
+    "image": "assets/Countries/tn.svg",
+    "imageAlt": "علم تونس"
+  },
+  {
+    "id": "countries-v860-new-0107-b",
+    "type": "text",
+    "question": "اذكر الإجابة: رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «إريتريا»؟",
+    "correctAnswers": [
+      "ER"
+    ],
+    "wrongAnswers": [
+      "جزر مارشال",
+      "KP",
+      "GR",
+      "بنوم بنه",
+      "الأرجنتين"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:ER"
+  },
+  {
+    "id": "countries-v860-new-0174-a",
+    "type": "text",
+    "question": "إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «KG»؟",
+    "correctAnswers": [
+      "قيرغيزستان"
+    ],
+    "wrongAnswers": [
+      "LR",
+      "BJ",
+      "LV",
+      "RU",
+      "IQ"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:KG"
+  },
+  {
+    "id": "countries-v860-new-0854-a",
+    "type": "text",
+    "question": "كيف يكتب رمز ISO alpha-2 للدولة أو الإقليم «أوروغواي» بحروف لاتينية صغيرة؟",
+    "correctAnswers": [
+      "uy"
+    ],
+    "wrongAnswers": [
+      "ma",
+      "ua",
+      "بوليفيا",
+      "PE",
+      "العراق"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-lower:UY"
+  },
+  {
+    "id": "countries-v860-new-0708-a",
+    "type": "text",
+    "question": "كيف يكتب رمز ISO alpha-2 للدولة أو الإقليم «البرازيل» بحروف لاتينية صغيرة؟",
+    "correctAnswers": [
+      "br"
+    ],
+    "wrongAnswers": [
+      "مونروفيا",
+      "موسكو",
+      "بلموبان",
+      "NE",
+      "MU"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-lower:BR"
+  },
+  {
+    "id": "countries-v860-new-0119-b",
+    "type": "text",
+    "question": "اذكر الإجابة: رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «فرنسا»؟",
+    "correctAnswers": [
+      "FR"
+    ],
+    "wrongAnswers": [
+      "مقدونيا الشمالية",
+      "الرأس الأخضر",
+      "bv",
+      "باكو",
+      "تالين"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:FR"
+  },
+  {
+    "id": "countries-v860-new-0723-a",
+    "type": "text",
+    "question": "كيف يكتب رمز ISO alpha-2 للدولة أو الإقليم «الكاميرون» بحروف لاتينية صغيرة؟",
+    "correctAnswers": [
+      "cm"
+    ],
+    "wrongAnswers": [
+      "برن",
+      "منغوليا",
+      "hr",
+      "باراماريبو",
+      "AM"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-lower:CM"
+  },
+  {
+    "id": "countries-easy2-flag-29",
+    "type": "image",
+    "question": "ما اسم الدولة أو الإقليم الذي يمثله هذا العلم؟",
+    "correctAnswers": [
+      "موريتانيا"
+    ],
+    "wrongAnswers": [
+      "المغرب",
+      "السنغال",
+      "مالي",
+      "لبنان",
+      "بنغلادش"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:flag:countries:flag-country:موريتانيا",
+    "image": "assets/Countries/mr.svg",
+    "imageAlt": "علم موريتانيا"
+  },
+  {
+    "id": "countries-v860-new-0446-a",
+    "type": "text",
+    "question": "ما رمز ISO alpha-2 للدولة أو الإقليم الذي عاصمته «كييف»؟",
+    "correctAnswers": [
+      "UA"
+    ],
+    "wrongAnswers": [
+      "غيانا",
+      "بانجول",
+      "بريدجتاون",
+      "فنزويلا",
+      "فيينتيان"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:capital-iso:UA"
+  },
+  {
+    "id": "countries-v860-new-0097-a",
+    "type": "text",
+    "question": "ما رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «جمهورية الدومينيكان»؟",
+    "correctAnswers": [
+      "DO"
+    ],
+    "wrongAnswers": [
+      "DJ",
+      "المجر",
+      "VE",
+      "منغوليا",
+      "pa"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:DO"
+  },
+  {
+    "id": "countries-v85-reverse-139",
+    "type": "text",
+    "question": "أي دولة أو إقليم عاصمته ليما؟",
+    "correctAnswers": [
+      "بيرو",
+      "ليما"
+    ],
+    "wrongAnswers": [
+      "الفلبين",
+      "التشيك",
+      "موريتانيا",
+      "الصين",
+      "جيبوتي"
+    ],
+    "category": "countries",
+    "factKey": "countries:reverse-capital:بيرو"
+  },
+  {
+    "id": "countries-v860-new-0453-a",
+    "type": "text",
+    "question": "ما عاصمة الدولة أو الإقليم الذي يحمل رمز ISO «IT»؟",
+    "correctAnswers": [
+      "روما"
+    ],
+    "wrongAnswers": [
+      "روسيا",
+      "la",
+      "بورت لويس",
+      "my",
+      "فنلندا"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-capital:IT"
+  },
+  {
+    "id": "countries-v860-new-0236-a",
+    "type": "text",
+    "question": "إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «MT»؟",
+    "correctAnswers": [
+      "مالطا"
+    ],
+    "wrongAnswers": [
+      "BR",
+      "سنغافورة",
+      "MK",
+      "جمهورية الدومينيكان",
+      "CF"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:MT"
+  },
+  {
+    "id": "countries-v85-alt-433",
+    "type": "text",
+    "question": "أي مدينة هي عاصمة كيريباتي؟",
+    "correctAnswers": [
+      "جنوب تاراوا"
+    ],
+    "wrongAnswers": [
+      "أستانا",
+      "ريغا",
+      "فاليتا",
+      "موسكو"
+    ],
+    "category": "countries",
+    "factKey": "countries:medium:capital:ki"
+  },
+  {
+    "id": "countries-v860-new-0209-b",
+    "type": "text",
+    "question": "اذكر الإجابة: رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «لاتفيا»؟",
+    "correctAnswers": [
+      "LV"
+    ],
+    "wrongAnswers": [
+      "جورج تاون",
+      "dk",
+      "السعودية",
+      "مكسيكو سيتي",
+      "براتيسلافا"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:LV"
+  },
+  {
+    "id": "countries-easy2-capital-247",
+    "type": "text",
+    "question": "اذكر عاصمة غينيا بيساو.",
+    "correctAnswers": [
+      "بيساو"
+    ],
+    "wrongAnswers": [
+      "بورت أو برنس",
+      "أستانا",
+      "ريغا",
+      "مابوتو"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:capital:countries:medium:capital:gw"
+  },
+  {
+    "id": "countries-v860-new-0156-b",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «IN»؟",
+    "correctAnswers": [
+      "الهند"
+    ],
+    "wrongAnswers": [
+      "إيرلندا",
+      "فيتنام",
+      "السويد",
+      "فيلنيوس",
+      "قيرغيزستان"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:IN"
+  },
+  {
+    "id": "countries-medium-flag-84",
+    "type": "image",
+    "question": "خمن اسم الدولة من خلال صورة العلم:",
+    "correctAnswers": [
+      "سان مارينو"
+    ],
+    "wrongAnswers": [
+      "السعودية",
+      "ليبيا",
+      "الهند",
+      "أستراليا"
+    ],
+    "category": "countries",
+    "factKey": "countries:medium:flag:sm",
+    "image": "assets/Countries/sm.svg",
+    "imageAlt": "علم سان مارينو"
+  },
+  {
+    "id": "countries-easy2-capital-271",
+    "type": "text",
+    "question": "اذكر عاصمة لاوس.",
+    "correctAnswers": [
+      "فيينتيان"
+    ],
+    "wrongAnswers": [
+      "مونروفيا",
+      "ماجورو",
+      "مابوتو",
+      "ليوبليانا"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:capital:countries:medium:capital:la"
+  },
+  {
+    "id": "countries-flag-country-46",
+    "type": "image",
+    "question": "خمن اسم الدولة أو الإقليم من خلال صورة العلم:",
+    "correctAnswers": [
+      "المملكة المتحدة"
+    ],
+    "wrongAnswers": [
+      "إيرلندا",
+      "فرنسا",
+      "هولندا",
+      "النمسا",
+      "فنلندا"
+    ],
+    "category": "countries",
+    "factKey": "countries:flag-country:المملكة المتحدة",
+    "image": "assets/Countries/gb.svg",
+    "imageAlt": "علم المملكة المتحدة"
+  },
+  {
+    "id": "countries-v860-new-0699-a",
+    "type": "text",
+    "question": "كيف يكتب رمز ISO alpha-2 للدولة أو الإقليم «بنغلادش» بحروف لاتينية صغيرة؟",
+    "correctAnswers": [
+      "bd"
+    ],
+    "wrongAnswers": [
+      "فريتاون",
+      "ويندهوك",
+      "بالاو",
+      "MW",
+      "ID"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-lower:BD"
+  },
+  {
+    "id": "countries-flag-country-76",
+    "type": "image",
+    "question": "خمن اسم الدولة أو الإقليم من خلال صورة العلم:",
+    "correctAnswers": [
+      "غانا"
+    ],
+    "wrongAnswers": [
+      "نيجيريا",
+      "ساحل العاج",
+      "توغو",
+      "جزيرة بوفيه",
+      "العراق"
+    ],
+    "category": "countries",
+    "factKey": "countries:flag-country:غانا",
+    "image": "assets/Countries/gh.svg",
+    "imageAlt": "علم غانا"
+  },
+  {
+    "id": "countries-v860-new-0599-a",
+    "type": "text",
+    "question": "ما عاصمة الدولة أو الإقليم الذي يحمل رمز ISO «KG»؟",
+    "correctAnswers": [
+      "بشكيك"
+    ],
+    "wrongAnswers": [
+      "أستانا",
+      "لندن",
+      "بورت أو برنس",
+      "MT",
+      "الغابون"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-capital:KG"
+  },
+  {
+    "id": "countries-v860-new-0693-a",
+    "type": "text",
+    "question": "كيف يكتب رمز ISO alpha-2 للدولة أو الإقليم «الأرجنتين» بحروف لاتينية صغيرة؟",
+    "correctAnswers": [
+      "ar"
+    ],
+    "wrongAnswers": [
+      "CA",
+      "CD",
+      "هلسنكي",
+      "بكين",
+      "غيانا"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-lower:AR"
+  },
+  {
+    "id": "countries-v860-new-0282-a",
+    "type": "text",
+    "question": "إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «PW»؟",
+    "correctAnswers": [
+      "بالاو"
+    ],
+    "wrongAnswers": [
+      "كوبنهاغن",
+      "ET",
+      "ES",
+      "ليبيا",
+      "BR"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:PW"
+  },
+  {
+    "id": "countries-medium-flag-34",
+    "type": "image",
+    "question": "خمن اسم الدولة من خلال صورة العلم:",
+    "correctAnswers": [
+      "جورجيا"
+    ],
+    "wrongAnswers": [
+      "غيانا",
+      "سانت كيتس ونيفيس",
+      "جزر مارشال",
+      "بالاو"
+    ],
+    "category": "countries",
+    "factKey": "countries:medium:flag:ge",
+    "image": "assets/Countries/ge.svg",
+    "imageAlt": "علم جورجيا"
+  },
+  {
+    "id": "countries-v860-new-0416-a",
+    "type": "text",
+    "question": "ما رمز ISO alpha-2 للدولة أو الإقليم الذي عاصمته «الرباط»؟",
+    "correctAnswers": [
+      "MA"
+    ],
+    "wrongAnswers": [
+      "CO",
+      "سانت كيتس ونيفيس",
+      "أديس أبابا",
+      "PE",
+      "رواندا"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:capital-iso:MA"
+  },
+  {
+    "id": "countries-v85-alt-275",
+    "type": "image",
+    "question": "اختر الإجابة الصحيحة: خمن اسم الدولة أو الإقليم من خلال صورة العلم:",
+    "correctAnswers": [
+      "التشيك"
+    ],
+    "wrongAnswers": [
+      "سلوفاكيا",
+      "بولندا",
+      "النمسا",
+      "الدنمارك",
+      "الولايات المتحدة"
+    ],
+    "category": "countries",
+    "factKey": "countries:flag-country:التشيك",
+    "image": "assets/Countries/cz.svg",
+    "imageAlt": "علم التشيك"
+  },
+  {
+    "id": "countries-v860-new-0672-a",
+    "type": "text",
+    "question": "ما رمز ISO alpha-2 للدولة أو الإقليم الذي عاصمته «كاتماندو»؟",
+    "correctAnswers": [
+      "NP"
+    ],
+    "wrongAnswers": [
+      "لشبونة",
+      "أرمينيا",
+      "بولندا",
+      "by",
+      "GA"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:capital-iso:NP"
+  },
+  {
+    "id": "countries-v860-new-0114-a",
+    "type": "text",
+    "question": "إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «FI»؟",
+    "correctAnswers": [
+      "فنلندا"
+    ],
+    "wrongAnswers": [
+      "ليلونغوي",
+      "مولدوفا",
+      "LR",
+      "LU",
+      "SC"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:FI"
+  },
+  {
+    "id": "countries-medium-flag-64",
+    "type": "image",
+    "question": "خمن اسم الدولة من خلال صورة العلم:",
+    "correctAnswers": [
+      "ميانمار"
+    ],
+    "wrongAnswers": [
+      "موزمبيق",
+      "روسيا",
+      "قطر",
+      "جزر القمر"
+    ],
+    "category": "countries",
+    "factKey": "countries:medium:flag:mm",
+    "image": "assets/Countries/mm.svg",
+    "imageAlt": "علم ميانمار"
+  },
+  {
+    "id": "countries-v860-new-0308-b",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «SI»؟",
+    "correctAnswers": [
+      "سلوفينيا"
+    ],
+    "wrongAnswers": [
+      "الصين",
+      "بيونغ يانغ",
+      "MH",
+      "كيتو",
+      "أمستردام"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:SI"
+  },
+  {
+    "id": "countries-v860-new-0315-a",
+    "type": "text",
+    "question": "ما رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «السنغال»؟",
+    "correctAnswers": [
+      "SN"
+    ],
+    "wrongAnswers": [
+      "rw",
+      "ls",
+      "CK",
+      "جزر البهاما",
+      "بندر سري بكاوان"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:SN"
+  },
+  {
+    "id": "countries-v860-new-0379-b",
+    "type": "text",
+    "question": "اذكر الإجابة: عاصمة الدولة أو الإقليم الذي يحمل رمز ISO «CZ»؟",
+    "correctAnswers": [
+      "براغ"
+    ],
+    "wrongAnswers": [
+      "ويلينغتون",
+      "جمهورية الكونغو",
+      "أمستردام",
+      "تيمفو",
+      "سيراليون"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-capital:CZ"
+  },
+  {
+    "id": "countries-v860-new-0510-b",
+    "type": "text",
+    "question": "اذكر الإجابة: رمز ISO alpha-2 للدولة أو الإقليم الذي عاصمته «موروني»؟",
+    "correctAnswers": [
+      "KM"
+    ],
+    "wrongAnswers": [
+      "ماسيرو",
+      "BE",
+      "بولندا",
+      "كاتماندو",
+      "كيغالي"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:capital-iso:KM"
+  },
+  {
+    "id": "countries-v860-new-0847-a",
+    "type": "text",
+    "question": "كيف يكتب رمز ISO alpha-2 للدولة أو الإقليم «سوريا» بحروف لاتينية صغيرة؟",
+    "correctAnswers": [
+      "sy"
+    ],
+    "wrongAnswers": [
+      "موسكو",
+      "بلجيكا",
+      "مولدوفا",
+      "كينيا",
+      "غابورون"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-lower:SY"
+  },
+  {
+    "id": "countries-v860-new-0208-b",
+    "type": "text",
+    "question": "اختر الإجابة الصحيحة: إلى أي دولة أو إقليم يشير رمز ISO 3166-1 alpha-2 «LU»؟",
+    "correctAnswers": [
+      "لوكسمبورغ"
+    ],
+    "wrongAnswers": [
+      "BD",
+      "BJ",
+      "لندن",
+      "كينشاسا",
+      "jo"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:country-iso:LU"
+  },
+  {
+    "id": "countries-v860-new-0343-b",
+    "type": "text",
+    "question": "اذكر الإجابة: رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «جنوب أفريقيا»؟",
+    "correctAnswers": [
+      "ZA"
+    ],
+    "wrongAnswers": [
+      "NA",
+      "لاتفيا",
+      "CD",
+      "ir",
+      "بنوم بنه"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:ZA"
+  },
+  {
+    "id": "countries-v860-new-0407-b",
+    "type": "text",
+    "question": "اذكر الإجابة: عاصمة الدولة أو الإقليم الذي يحمل رمز ISO «CM»؟",
+    "correctAnswers": [
+      "ياوندي"
+    ],
+    "wrongAnswers": [
+      "بلجيكا",
+      "cf",
+      "مانيلا",
+      "نيروبي",
+      "SA"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-capital:CM"
+  },
+  {
+    "id": "countries-easy2-capital-112",
+    "type": "text",
+    "question": "اذكر عاصمة السويد.",
+    "correctAnswers": [
+      "ستوكهولم"
+    ],
+    "wrongAnswers": [
+      "ريكيافيك",
+      "أوتاوا",
+      "مونتفيديو",
+      "دودوما"
+    ],
+    "category": "countries",
+    "factKey": "countries:easy2:capital:countries:capital:السويد"
+  },
+  {
+    "id": "countries-v860-new-0187-b",
+    "type": "text",
+    "question": "اذكر الإجابة: رمز ISO 3166-1 alpha-2 للدولة أو الإقليم «الكويت»؟",
+    "correctAnswers": [
+      "KW"
+    ],
+    "wrongAnswers": [
+      "tr",
+      "MR",
+      "اليمن",
+      "se",
+      "غواتيمالا سيتي"
+    ],
+    "category": "countries",
+    "factKey": "v860:countries:iso-country:KW"
+  },
+  {
+    "id": "countries-v85-alt-205",
+    "type": "image",
+    "question": "اختر الإجابة الصحيحة: خمن اسم الدولة أو الإقليم من خلال صورة العلم:",
+    "correctAnswers": [
+      "جيبوتي"
+    ],
+    "wrongAnswers": [
+      "الصومال",
+      "إريتريا",
+      "إثيوبيا",
+      "إيران",
+      "الصين"
+    ],
+    "category": "countries",
+    "factKey": "countries:flag-country:جيبوتي",
+    "image": "assets/Countries/dj.svg",
+    "imageAlt": "علم جيبوتي"
+  }
+]
