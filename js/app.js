@@ -446,7 +446,9 @@ function renderCategories(room) {
     if (!categoryHasQuestions(category.id)) card.classList.add("unavailable");
 
     card.innerHTML = `
-      <div class="category-icon"><i class="${category.icon}"></i></div>
+      <div class="category-icon">
+        <img class="category-icon-image" src="${escapeHTML(category.image || "")}" alt="" loading="lazy" decoding="async" />
+      </div>
       <div class="category-name">${escapeHTML(category.name)}</div>
       <div class="category-check"><i class="fa-solid fa-check"></i></div>
     `;
@@ -458,7 +460,13 @@ function renderCategories(room) {
     categoriesGrid.appendChild(card);
   });
 
-  if (selectedCategoriesCount) selectedCategoriesCount.textContent = `${selected.length} / ${GAME_CATEGORIES.filter((item) => categoryHasQuestions(item.id)).length}`;
+  if (selectedCategoriesCount) {
+    const availableCategoryCount = GAME_CATEGORIES.filter((item) => categoryHasQuestions(item.id)).length;
+    const validSelectedCount = selected.filter((id) => categoryHasQuestions(id)).length;
+    selectedCategoriesCount.textContent = `${validSelectedCount} / ${availableCategoryCount}`;
+    selectedCategoriesCount.classList.toggle("minimum-met", validSelectedCount >= MIN_CATEGORIES);
+    selectedCategoriesCount.setAttribute("aria-label", validSelectedCount >= MIN_CATEGORIES ? `تم اختيار الحد الأدنى: ${validSelectedCount} فئات` : `تم اختيار ${validSelectedCount} من أصل ${MIN_CATEGORIES} فئات مطلوبة على الأقل`);
+  }
   if (categoriesMessage) {
     categoriesMessage.classList.toggle("hidden", canEdit);
     if (!canEdit) categoriesMessage.textContent = room?.status === "waiting" ? "المضيف فقط يستطيع تغيير الفئات." : "لا يمكن تغيير الفئات أثناء المباراة.";
@@ -1450,4 +1458,4 @@ async function bootstrap() {
 }
 
 bootstrap();
-console.log("Taleela App v8.1.0 Question Shards loaded");
+console.log("Taleela App v8.3.0 3D Category Icons + Question Shards loaded");

@@ -1,4 +1,4 @@
-const VERSION = "v8.1.0-question-shards";
+const VERSION = "v8.4.0-unified-visual-refresh";
 const STATIC_CACHE = `taleela-static-${VERSION}`;
 const PAGE_CACHE = `taleela-pages-${VERSION}`;
 
@@ -7,8 +7,8 @@ const PAGE_CACHE = `taleela-pages-${VERSION}`;
 const APP_SHELL = [
   "./",
   "./index.html",
-  "./css/style.css",
-  "./js/app.js",
+  "./css/style.css?v=8.4.0",
+  "./js/app.js?v=8.4.0",
   "./js/ui.js",
   "./js/firebase.js",
   "./js/categories.js",

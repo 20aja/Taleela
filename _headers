@@ -20,6 +20,9 @@
 /assets/Countries/*
   Cache-Control: public, max-age=31536000, immutable
 
+/assets/categories/*
+  Cache-Control: public, max-age=31536000, immutable
+
 
 /questions/*
   Cache-Control: public, max-age=31536000, immutable

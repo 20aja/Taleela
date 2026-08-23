@@ -836,8 +836,8 @@ function renderCategorySelection(room) {
         const disabled = !isChooser || Boolean(choice);
         return `
         <button type="button" class="round-category-choice" data-round-category="${escapeHTML(categoryId)}" ${disabled ? "disabled" : ""}>
-          <i class="${category?.icon || "fa-solid fa-layer-group"}"></i>
-          ${escapeHTML(category?.name || categoryId)}
+          <img class="round-category-icon" src="${escapeHTML(category?.image || "")}" alt="" loading="lazy" decoding="async" />
+          <span>${escapeHTML(category?.name || categoryId)}</span>
         </button>
       `;
       })
@@ -1575,4 +1575,4 @@ document.getElementById("gameLeaveButton")?.addEventListener("click", () => {
   window.dispatchEvent(new CustomEvent("taleela:leave-room"));
 });
 
-console.log("Taleela Game Engine v8.1.0 Question Shards loaded");
+console.log("Taleela Game Engine v8.3.0 3D Category Icons + Question Shards loaded");
