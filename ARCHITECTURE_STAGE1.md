@@ -40,14 +40,14 @@ rounds/{roundId}/revealReady/{uid}
 
 - الصفحة الرئيسية لا تستورد `game.js` حتى يدخل اللاعب غرفة.
 - أجهزة اللاعبين لا تحمل بنك الأسئلة.
-- جهاز المضيف يحمل `questions.js` مرة واحدة في الخلفية عند بدء اللعبة.
+- جهاز المضيف يحمل `manifest.json` صغيرًا عند بدء اللعبة، ثم Shard واحدًا من الفئة المختارة عند الحاجة.
 - صور الملف الشخصي داخل النافذة تستخدم Lazy Loading.
 
 ### Cache
 
 - HTML: Network First بمهلة قصيرة.
 - JS/CSS/Images: Stale While Revalidate.
-- `questions.js`: لا يدخل Precache، لكنه يُخزن بعد أول استخدام.
+- ملفات `questions/v8.1.0/*.json`: لا تدخل Precache، وتستخدم Cache First بعد أول طلب لأنها Versioned وImmutable.
 - Firebase والطلبات الخارجية لا يعترضها Service Worker.
 
 ## ما لم يُنفذ بعد

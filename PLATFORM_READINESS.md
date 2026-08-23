@@ -1,4 +1,4 @@
-# جاهزية المنصات — v8.0.0
+# جاهزية المنصات — v8.1.0
 
 المشروع ما زال HTML/CSS/JavaScript ES Modules، ويمكن نشره مباشرة على Netlify أو Firebase Hosting وتغليفه مستقبلًا بواسطة Capacitor.
 
@@ -9,6 +9,7 @@
 - Service Worker باستراتيجية Cache مناسبة.
 - صور WebP أخف.
 - Lazy Loading لصور المستخدمين.
+- Lazy Loading لبنك الأسئلة عبر JSON Shards بدل ملف واحد كبير.
 - Safe Area وStandalone metadata موجودان.
 
 عند الانتقال إلى Android/iOS لاحقًا، لا تغيّر منطق Firestore داخل الواجهة قبل إكمال المرحلتين الثانية والثالثة؛ Presence وCloud Functions هما العاملان الأهم لاستقرار التطبيق الأصلي في الخلفية.

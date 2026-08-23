@@ -18,6 +18,7 @@ import {
 
 import {CATEGORY_NAMES, GAME_CATEGORIES, categoryHasQuestions} from "./categories.js";
 import {subscribeRoomState} from "./room-store.js";
+import {preloadQuestionManifest, selectQuestion} from "./question-store.js";
 export {GAME_CATEGORIES, categoryHasQuestions} from "./categories.js";
 
 const CORRECT_GUESS_POINTS = 2;
@@ -39,15 +40,7 @@ let chatListenerStartedAt = 0;
 let seenChatMessageIds = new Set();
 let lastTimeoutNoticeKey = null;
 let lastRevealNoticeKey = null;
-let questionBankPromise = null;
 let lastGameRenderRevision = null;
-
-function loadQuestionBank() {
-  if (!questionBankPromise) {
-    questionBankPromise = import("./questions.js").then((module) => module.QUESTION_BANK);
-  }
-  return questionBankPromise;
-}
 
 function getRoomRef() {
   return doc(db, "rooms", roomId);
@@ -296,33 +289,6 @@ function buildNewRound(room, number) {
   };
 }
 
-function pickQuestion(room, categoryId, questionBank) {
-  const questions = questionBank?.[categoryId] || [];
-  if (!questions.length) return null;
-  const usedIds = new Set(Array.isArray(room?.usedQuestionIds) ? room.usedQuestionIds : []);
-  const usedFacts = new Set(Array.isArray(room?.usedFactKeys) ? room.usedFactKeys : []);
-  const freshFacts = questions.filter((question) => !usedFacts.has(question.factKey || question.id));
-  const freshIds = questions.filter((question) => !usedIds.has(question.id));
-  const pool = freshFacts.length ? freshFacts : freshIds.length ? freshIds : questions;
-  return pool[Math.floor(Math.random() * pool.length)] || null;
-}
-
-function answerSimilarity(a, b) {
-  const x = normalizeAnswer(a);
-  const y = normalizeAnswer(b);
-  if (!x || !y) return 0;
-  const xs = new Set(x.split(" "));
-  const ys = new Set(y.split(" "));
-  let shared = 0;
-  xs.forEach((token) => {
-    if (ys.has(token)) shared += 1;
-  });
-  const union = new Set([...xs, ...ys]).size || 1;
-  const tokenScore = shared / union;
-  const lengthScore = 1 - Math.min(1, Math.abs(x.length - y.length) / Math.max(x.length, y.length, 1));
-  return tokenScore * 0.7 + lengthScore * 0.3;
-}
-
 function generatedCloseDecoys(answer) {
   const raw = String(answer || "").trim();
   const normalized = normalizeAnswer(raw);
@@ -347,15 +313,13 @@ function generatedCloseDecoys(answer) {
   return [];
 }
 
-function buildSystemDecoys(round, excludedNormalized, needed, questionBank) {
+function buildSystemDecoys(round, excludedNormalized, needed) {
   if (needed <= 0) return [];
+  // Each JSON question already carries curated/same-category decoys. Keeping
+  // them on the round means the guessing phase never needs to download the
+  // whole category just to manufacture fallback options.
   const preferred = Array.isArray(round.systemDecoys) ? round.systemDecoys : [];
-  const sameCategory = (questionBank?.[round.categoryId] || [])
-    .filter((question) => question.factKey !== round.questionFactKey)
-    .map((question) => question.answer)
-    .filter(Boolean)
-    .sort((a, b) => answerSimilarity(b, round.correctAnswer) - answerSimilarity(a, round.correctAnswer));
-  const candidates = [...preferred, ...generatedCloseDecoys(round.correctAnswer), ...sameCategory];
+  const candidates = [...preferred, ...generatedCloseDecoys(round.correctAnswer)];
   const chosen = [];
   for (const text of candidates) {
     const normalized = normalizeAnswer(text);
@@ -367,7 +331,7 @@ function buildSystemDecoys(round, excludedNormalized, needed, questionBank) {
   return chosen;
 }
 
-function buildGuessOptions(room, questionBank) {
+function buildGuessOptions(room) {
   const round = room.round;
   const players = playerList(room);
   const options = {};
@@ -392,7 +356,7 @@ function buildGuessOptions(room, questionBank) {
   });
 
   const targetSharedOptionCount = Math.max(5, order.length);
-  const decoys = buildSystemDecoys(round, excluded, targetSharedOptionCount - order.length, questionBank);
+  const decoys = buildSystemDecoys(round, excluded, targetSharedOptionCount - order.length);
   decoys.forEach((text, index) => {
     const id = `system_${index + 1}_${round.id}`;
     options[id] = {id, text, type: "system", authorId: null};
@@ -498,7 +462,27 @@ async function advanceFromCategorySelection(roomSnapshot = currentRoom) {
   if (!roomId || !playerId || transitionInProgress || roomSnapshot?.hostId !== playerId) return;
   transitionInProgress = true;
   try {
-    const questionBank = await loadQuestionBank();
+    const snapshotRound = roomSnapshot?.round;
+    if (!snapshotRound) return;
+    if (!snapshotRound.categoryChoice && valueToMillis(snapshotRound.selectionDeadline) > Date.now()) return;
+
+    const categoryOptions = Array.isArray(snapshotRound.categoryOptions) ? snapshotRound.categoryOptions.filter(categoryHasQuestions) : [];
+    const categoryId = snapshotRound.categoryChoice || categoryOptions[Math.floor(Math.random() * categoryOptions.length)];
+    if (!categoryId) {
+      await updateDoc(getRoomRef(), {status: "finished", finalResults: rankingFromPlayers(playersMap(roomSnapshot)), gameError: "لا توجد فئة صالحة."});
+      return;
+    }
+
+    // Only one small JSON shard for the selected category is downloaded here.
+    const question = await selectQuestion(categoryId, {
+      usedQuestionIds: roomSnapshot.usedQuestionIds,
+      usedFactKeys: roomSnapshot.usedFactKeys,
+    });
+    if (!question) {
+      await updateDoc(getRoomRef(), {status: "finished", finalResults: rankingFromPlayers(playersMap(roomSnapshot)), gameError: "لا توجد أسئلة متاحة لهذه الفئة."});
+      return;
+    }
+
     const roomRef = getRoomRef();
     const roundRef = getRoundRef(roomSnapshot);
     if (!roundRef) return;
@@ -509,18 +493,9 @@ async function advanceFromCategorySelection(roomSnapshot = currentRoom) {
       const round = roundDoc.data();
       if (room.hostId !== playerId || room.status !== "playing" || room.currentRoundId !== roundDoc.id || round.phase !== "category_selection") return;
       if (!round.categoryChoice && valueToMillis(round.selectionDeadline) > Date.now()) return;
-      const categoryOptions = Array.isArray(round.categoryOptions) ? round.categoryOptions.filter(categoryHasQuestions) : [];
-      const categoryId = round.categoryChoice || categoryOptions[Math.floor(Math.random() * categoryOptions.length)];
+      if (round.categoryChoice && round.categoryChoice !== categoryId) return;
+
       const merged = {...roomSnapshot, ...room, round: {...round, id: roundDoc.id}};
-      if (!categoryId) {
-        transaction.update(roomRef, {status: "finished", finalResults: rankingFromPlayers(playersMap(roomSnapshot)), gameError: "لا توجد فئة صالحة."});
-        return;
-      }
-      const question = pickQuestion(merged, categoryId, questionBank);
-      if (!question) {
-        transaction.update(roomRef, {status: "finished", finalResults: rankingFromPlayers(playersMap(roomSnapshot)), gameError: "لا توجد أسئلة متاحة لهذه الفئة."});
-        return;
-      }
       const answerTime = phaseDuration(merged, "bluffing");
       transaction.update(roundRef, {
         categoryChoice: categoryId,
@@ -545,6 +520,7 @@ async function advanceFromCategorySelection(roomSnapshot = currentRoom) {
     });
   } catch (error) {
     console.error("advanceFromCategorySelection failed:", error);
+    showGameError("تعذر تحميل سؤال الفئة. تحقق من الاتصال وحاول مرة أخرى.");
   } finally {
     transitionInProgress = false;
   }
@@ -593,7 +569,6 @@ async function advanceToGuessing(roomSnapshot = currentRoom) {
   if (!roomId || !playerId || transitionInProgress || roomSnapshot?.hostId !== playerId) return;
   transitionInProgress = true;
   try {
-    const questionBank = await loadQuestionBank();
     const roomRef = getRoomRef();
     const roundRef = getRoundRef(roomSnapshot);
     if (!roundRef) return;
@@ -607,7 +582,7 @@ async function advanceToGuessing(roomSnapshot = currentRoom) {
       const allSubmitted = ids.length > 0 && ids.every((id) => Boolean(roomSnapshot.round?.bluffs?.[id]?.text));
       if (!allSubmitted && valueToMillis(round.bluffDeadline) > Date.now()) return;
       const merged = {...roomSnapshot, ...room, round: {...round, id: roundDoc.id, bluffs: roomSnapshot.round?.bluffs || {}}};
-      const {options, optionOrder} = buildGuessOptions(merged, questionBank);
+      const {options, optionOrder} = buildGuessOptions(merged);
       const answerTime = phaseDuration(merged, "guessing");
       transaction.update(roundRef, {
         phase: "guessing",
@@ -1524,7 +1499,7 @@ function listenToGameRoom() {
       setPhaseVisibility(null);
       showLoading(true, "جاري بدء اللعبة...", "يتم تحديد صاحب الدور الأول.");
       if (room.hostId === playerId) {
-        void loadQuestionBank().catch((error) => console.error("Question bank preload failed:", error));
+        void preloadQuestionManifest().catch((error) => console.error("Question manifest preload failed:", error));
         createFirstRound();
       }
       return;
@@ -1532,7 +1507,7 @@ function listenToGameRoom() {
     showLoading(false);
     if (room.status === "playing") {
       if (room.hostId === playerId && room.round?.phase === "category_selection") {
-        void loadQuestionBank().catch((error) => console.error("Question bank preload failed:", error));
+        void preloadQuestionManifest().catch((error) => console.error("Question manifest preload failed:", error));
       }
       if (!room.round) {
         showLoading(true, "جاري مزامنة الجولة...", "يتم تحميل السؤال وحالة اللاعبين.");
@@ -1600,4 +1575,4 @@ document.getElementById("gameLeaveButton")?.addEventListener("click", () => {
   window.dispatchEvent(new CustomEvent("taleela:leave-room"));
 });
 
-console.log("Taleela Game Engine v8.0.0 Stage 1 loaded");
+console.log("Taleela Game Engine v8.1.0 Question Shards loaded");

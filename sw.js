@@ -1,4 +1,4 @@
-const VERSION = "v8.0.0-stage1";
+const VERSION = "v8.1.0-question-shards";
 const STATIC_CACHE = `taleela-static-${VERSION}`;
 const PAGE_CACHE = `taleela-pages-${VERSION}`;
 
@@ -61,6 +61,14 @@ async function networkFirst(request, timeoutMs = 3000) {
   }
 }
 
+
+async function cacheFirst(request) {
+  const cached = await caches.match(request);
+  if (cached) return cached;
+  const response = await fetch(request);
+  return putIfUsable(STATIC_CACHE, request, response);
+}
+
 async function staleWhileRevalidate(request, event) {
   const cached = await caches.match(request);
   const network = fetch(request)
@@ -95,9 +103,16 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // JS/CSS/images/fonts and lazy question chunks respond immediately from the
-  // cache after their first use, while a fresh copy is fetched in background.
-  if (["script", "style", "image", "font"].includes(request.destination) || url.pathname.endsWith(".json")) {
+  // Versioned question JSON is immutable. After the first request it should
+  // never wait for the network again on this device.
+  if (url.pathname.includes("/questions/v8.1.0/") && url.pathname.endsWith(".json")) {
+    event.respondWith(cacheFirst(request));
+    return;
+  }
+
+  // JS/CSS/images/fonts respond immediately from cache after first use while
+  // a fresh copy is checked in the background.
+  if (["script", "style", "image", "font"].includes(request.destination)) {
     event.respondWith(staleWhileRevalidate(request, event));
     return;
   }

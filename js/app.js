@@ -1450,4 +1450,4 @@ async function bootstrap() {
 }
 
 bootstrap();
-console.log("Taleela App v8.0.0 Stage 1 loaded");
+console.log("Taleela App v8.1.0 Question Shards loaded");
