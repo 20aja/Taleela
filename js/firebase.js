@@ -1,12 +1,10 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
+import {initializeApp} from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
 import {
-  browserLocalPersistence,
-  getAuth,
-  onAuthStateChanged,
-  setPersistence,
-  signInAnonymously,
-} from "https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js";
+  initializeFirestore,
+  persistentLocalCache,
+  persistentMultipleTabManager,
+} from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
+import {browserLocalPersistence, getAuth, onAuthStateChanged, setPersistence, signInAnonymously} from "https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyD-trapOJ-EbVhWuoz0p7_oBpLSkkYCxng",
@@ -18,25 +16,22 @@ const firebaseConfig = {
 };
 
 export const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
-export const auth = getAuth(app);
 
+// Persistent IndexedDB cache makes room restoration and repeat visits faster.
+// Multiple-tab mode avoids the old single-tab lock when the same player opens
+// Taleela in more than one tab. Persistent web cache is supported by current
+// Chrome, Safari, and Firefox; test private/incognito modes separately.
+export const db = initializeFirestore(app, {
+  localCache: persistentLocalCache({tabManager: persistentMultipleTabManager()}),
+});
+
+export const auth = getAuth(app);
 let authPromise = null;
 
-/**
- * Ensures every browser tab has a stable anonymous Firebase identity.
- * Local persistence keeps the same anonymous UID across refreshes, mobile app
- * backgrounding, and installed-PWA process restarts. Use Incognito/a separate
- * browser profile when testing multiple players on one physical device.
- */
+/** Ensures the browser keeps a stable anonymous Firebase identity. */
 export function ensureAuth() {
-  if (auth.currentUser) {
-    return Promise.resolve(auth.currentUser);
-  }
-
-  if (authPromise) {
-    return authPromise;
-  }
+  if (auth.currentUser) return Promise.resolve(auth.currentUser);
+  if (authPromise) return authPromise;
 
   authPromise = (async () => {
     await setPersistence(auth, browserLocalPersistence);
@@ -58,10 +53,7 @@ export function ensureAuth() {
       }, 1500);
     });
 
-    if (existingUser) {
-      return existingUser;
-    }
-
+    if (existingUser) return existingUser;
     const credential = await signInAnonymously(auth);
     return credential.user;
   })().finally(() => {

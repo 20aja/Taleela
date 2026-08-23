@@ -1,5 +1,5 @@
-import { db } from "./firebase.js";
-import { notify } from "./ui.js";
+import {db} from "./firebase.js";
+import {notify} from "./ui.js";
 
 import {
   Timestamp,
@@ -12,10 +12,13 @@ import {
   query,
   runTransaction,
   serverTimestamp,
+  setDoc,
+  updateDoc,
 } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
 
-import { QUESTION_BANK, categoryHasQuestions, getQuestionCount } from "./questions.js";
-export { categoryHasQuestions, getQuestionCount } from "./questions.js";
+import {CATEGORY_NAMES, GAME_CATEGORIES, categoryHasQuestions} from "./categories.js";
+import {subscribeRoomState} from "./room-store.js";
+export {GAME_CATEGORIES, categoryHasQuestions} from "./categories.js";
 
 const CORRECT_GUESS_POINTS = 2;
 const FOOLED_PLAYER_POINTS = 1;
@@ -25,7 +28,7 @@ let roomId = null;
 let roomCode = null;
 let playerId = null;
 let currentRoom = null;
-let unsubscribeGameRoom = null;
+let unsubscribeGameState = null;
 let timerInterval = null;
 let activeDeadlineMs = null;
 let activeTimerPhase = null;
@@ -36,45 +39,32 @@ let chatListenerStartedAt = 0;
 let seenChatMessageIds = new Set();
 let lastTimeoutNoticeKey = null;
 let lastRevealNoticeKey = null;
+let questionBankPromise = null;
+let lastGameRenderRevision = null;
 
-export const GAME_CATEGORIES = [
-  { id: "general", name: "معلومات عامة", icon: "fa-solid fa-globe" },
-  { id: "history", name: "التاريخ", icon: "fa-solid fa-landmark" },
-  { id: "geography", name: "الجغرافيا", icon: "fa-solid fa-earth-americas" },
-  { id: "science", name: "العلوم", icon: "fa-solid fa-flask" },
-  { id: "technology", name: "التكنولوجيا", icon: "fa-solid fa-microchip" },
-  { id: "sports", name: "الرياضة", icon: "fa-solid fa-medal" },
-  { id: "football", name: "كرة القدم", icon: "fa-solid fa-futbol" },
-  { id: "player_guess", name: "خمن اللاعب", icon: "fa-solid fa-user-secret" },
-  { id: "movies", name: "الأفلام", icon: "fa-solid fa-film" },
-  { id: "series", name: "المسلسلات", icon: "fa-solid fa-tv" },
-  { id: "bab_al_hara", name: "باب الحارة", icon: "fa-solid fa-door-open" },
-  { id: "music", name: "الموسيقى", icon: "fa-solid fa-music" },
-  { id: "literature", name: "الأدب", icon: "fa-solid fa-book" },
-  { id: "language", name: "اللغة العربية", icon: "fa-solid fa-language" },
-  { id: "islamic", name: "الثقافة الإسلامية", icon: "fa-solid fa-mosque" },
-  { id: "countries", name: "الدول والعواصم", icon: "fa-solid fa-city" },
-  { id: "animals", name: "الحيوانات", icon: "fa-solid fa-paw" },
-  { id: "food", name: "الطعام", icon: "fa-solid fa-utensils" },
-  { id: "inventions", name: "الاختراعات", icon: "fa-solid fa-lightbulb" },
-  { id: "space", name: "الفضاء", icon: "fa-solid fa-rocket" },
-  { id: "medicine", name: "الطب", icon: "fa-solid fa-stethoscope" },
-  { id: "cars", name: "السيارات", icon: "fa-solid fa-car" },
-  { id: "programming", name: "البرمجة", icon: "fa-solid fa-code" },
-  { id: "internet", name: "الإنترنت", icon: "fa-solid fa-wifi" },
-  { id: "art", name: "الفن", icon: "fa-solid fa-palette" },
-  { id: "fashion", name: "الموضة", icon: "fa-solid fa-shirt" },
-  { id: "brands", name: "العلامات التجارية", icon: "fa-solid fa-tag" },
-  { id: "famous_people", name: "شخصيات مشهورة", icon: "fa-solid fa-user" },
-  { id: "riddles", name: "ألغاز", icon: "fa-solid fa-puzzle-piece" },
-  { id: "logic", name: "المنطق", icon: "fa-solid fa-brain" },
-  { id: "numbers", name: "الأرقام والحساب", icon: "fa-solid fa-calculator" },
-  { id: "culture", name: "الثقافة", icon: "fa-solid fa-masks-theater" },
-  { id: "iraq", name: "بلاد الرافدين", icon: "fa-solid fa-landmark-dome" },
-];
+function loadQuestionBank() {
+  if (!questionBankPromise) {
+    questionBankPromise = import("./questions.js").then((module) => module.QUESTION_BANK);
+  }
+  return questionBankPromise;
+}
 
-const CATEGORY_NAMES = Object.fromEntries(GAME_CATEGORIES.map((category) => [category.id, category.name]));
+function getRoomRef() {
+  return doc(db, "rooms", roomId);
+}
 
+function getRoundId(room = currentRoom) {
+  return room?.currentRoundId || room?.round?.id || null;
+}
+
+function getRoundRef(roundOrId = getRoundId()) {
+  const resolvedId = typeof roundOrId === "string" ? roundOrId : getRoundId(roundOrId);
+  return resolvedId ? doc(db, "rooms", roomId, "rounds", resolvedId) : null;
+}
+
+function getRoundChildRef(kind, id, roundId = getRoundId()) {
+  return roundId && id ? doc(db, "rooms", roomId, "rounds", roundId, kind, id) : null;
+}
 
 
 function playersMap(room) {
@@ -117,7 +107,7 @@ function normalizeAvatarId(value) {
 }
 
 function avatarSrc(value) {
-  return `assets/Users/${normalizeAvatarId(value)}.png`;
+  return `assets/Users/${normalizeAvatarId(value)}.webp`;
 }
 
 function avatarHTML(value, className = "avatar-image", alt = "صورة اللاعب") {
@@ -164,14 +154,7 @@ function phaseDuration(room, phase) {
 }
 
 function setPhaseVisibility(activeId) {
-  [
-    "categorySelectionPhase",
-    "bluffPhase",
-    "guessPhase",
-    "revealPhase",
-    "roundResultsPhase",
-    "finalResultsPhase",
-  ].forEach((id) => {
+  ["categorySelectionPhase", "bluffPhase", "guessPhase", "revealPhase", "roundResultsPhase", "finalResultsPhase"].forEach((id) => {
     document.getElementById(id)?.classList.toggle("hidden", id !== activeId);
   });
 }
@@ -263,7 +246,7 @@ function startTimer(room, deadlineValue, phase) {
           guessing: "انتهى وقت اختيار الإجابة.",
           reveal: "انتهى وقت مراجعة الإجابات.",
         };
-        notify(messages[phase] || "انتهى الوقت.", { type: "warning", title: "انتهى الوقت", duration: 3200 });
+        notify(messages[phase] || "انتهى الوقت.", {type: "warning", title: "انتهى الوقت", duration: 3200});
       }
       stopTimer();
       if (currentRoom?.hostId === playerId) coordinateHost(currentRoom);
@@ -304,20 +287,17 @@ function buildNewRound(room, number) {
     systemDecoys: [],
     questionFactKey: null,
     bluffDeadline: null,
-    bluffs: {},
     options: {},
     optionOrder: [],
     guessDeadline: null,
-    guesses: {},
     revealDeadline: null,
-    revealReady: {},
     results: null,
     resultsDeadline: null,
   };
 }
 
-function pickQuestion(room, categoryId) {
-  const questions = QUESTION_BANK[categoryId] || [];
+function pickQuestion(room, categoryId, questionBank) {
+  const questions = questionBank?.[categoryId] || [];
   if (!questions.length) return null;
   const usedIds = new Set(Array.isArray(room?.usedQuestionIds) ? room.usedQuestionIds : []);
   const usedFacts = new Set(Array.isArray(room?.usedFactKeys) ? room.usedFactKeys : []);
@@ -334,7 +314,9 @@ function answerSimilarity(a, b) {
   const xs = new Set(x.split(" "));
   const ys = new Set(y.split(" "));
   let shared = 0;
-  xs.forEach((token) => { if (ys.has(token)) shared += 1; });
+  xs.forEach((token) => {
+    if (ys.has(token)) shared += 1;
+  });
   const union = new Set([...xs, ...ys]).size || 1;
   const tokenScore = shared / union;
   const lengthScore = 1 - Math.min(1, Math.abs(x.length - y.length) / Math.max(x.length, y.length, 1));
@@ -365,17 +347,16 @@ function generatedCloseDecoys(answer) {
   return [];
 }
 
-function buildSystemDecoys(round, excludedNormalized, needed) {
+function buildSystemDecoys(round, excludedNormalized, needed, questionBank) {
   if (needed <= 0) return [];
   const preferred = Array.isArray(round.systemDecoys) ? round.systemDecoys : [];
-  const sameCategory = (QUESTION_BANK[round.categoryId] || [])
+  const sameCategory = (questionBank?.[round.categoryId] || [])
     .filter((question) => question.factKey !== round.questionFactKey)
     .map((question) => question.answer)
     .filter(Boolean)
     .sort((a, b) => answerSimilarity(b, round.correctAnswer) - answerSimilarity(a, round.correctAnswer));
   const candidates = [...preferred, ...generatedCloseDecoys(round.correctAnswer), ...sameCategory];
   const chosen = [];
-
   for (const text of candidates) {
     const normalized = normalizeAnswer(text);
     if (!normalized || normalized === normalizeAnswer(round.correctAnswer) || excludedNormalized.has(normalized)) continue;
@@ -386,16 +367,15 @@ function buildSystemDecoys(round, excludedNormalized, needed) {
   return chosen;
 }
 
-function buildGuessOptions(room) {
+function buildGuessOptions(room, questionBank) {
   const round = room.round;
   const players = playerList(room);
   const options = {};
   const order = [];
   const excluded = new Set();
-
   const correctText = round.correctAnswer || "";
   const correctId = `correct_${round.questionId || "answer"}`;
-  options[correctId] = { id: correctId, text: correctText, type: "correct", authorId: null };
+  options[correctId] = {id: correctId, text: correctText, type: "correct", authorId: null};
   order.push(correctId);
   excluded.add(normalizeAnswer(correctText));
 
@@ -407,19 +387,18 @@ function buildGuessOptions(room) {
     if (!normalized || excluded.has(normalized)) return;
     excluded.add(normalized);
     const id = `bluff_${player.id}`;
-    options[id] = { id, text, type: "bluff", authorId: player.id };
+    options[id] = {id, text, type: "bluff", authorId: player.id};
     order.push(id);
   });
 
   const targetSharedOptionCount = Math.max(5, order.length);
-  const decoys = buildSystemDecoys(round, excluded, targetSharedOptionCount - order.length);
+  const decoys = buildSystemDecoys(round, excluded, targetSharedOptionCount - order.length, questionBank);
   decoys.forEach((text, index) => {
     const id = `system_${index + 1}_${round.id}`;
-    options[id] = { id, text, type: "system", authorId: null };
+    options[id] = {id, text, type: "system", authorId: null};
     order.push(id);
   });
-
-  return { options, optionOrder: shuffle(order) };
+  return {options, optionOrder: shuffle(order)};
 }
 
 function comparePlayersForRanking(a, b) {
@@ -455,39 +434,33 @@ function rankingFromPlayers(playersObject) {
 }
 
 async function createFirstRound() {
-  if (!roomId || !playerId || transitionInProgress) return;
+  if (!roomId || !playerId || transitionInProgress || !currentRoom) return;
   transitionInProgress = true;
-
   try {
-    const roomRef = doc(db, "rooms", roomId);
+    const roomRef = getRoomRef();
+    const round = buildNewRound(currentRoom, 1);
+    if (!round) throw new Error("ROUND_BUILD_FAILED");
+    const roundRef = doc(db, "rooms", roomId, "rounds", round.id);
     await runTransaction(db, async (transaction) => {
-      const snapshot = await transaction.get(roomRef);
-      if (!snapshot.exists()) return;
-      const room = snapshot.data();
-      if (room.hostId !== playerId || room.status !== "starting" || room.round) return;
-
-      const players = playerList(room);
-      if (players.length < 2) {
-        transaction.update(roomRef, { status: "waiting", gameError: "يجب أن يبقى لاعبان على الأقل لبدء اللعبة." });
+      const roomSnapshot = await transaction.get(roomRef);
+      if (!roomSnapshot.exists()) return;
+      const room = roomSnapshot.data();
+      if (room.hostId !== playerId || room.status !== "starting" || room.currentRoundId) return;
+      if ((Number(room.playerCount) || 0) < 2) {
+        transaction.update(roomRef, {status: "waiting", gameError: "يجب أن يبقى لاعبان على الأقل لبدء اللعبة."});
         return;
       }
-
-      const round = buildNewRound(room, 1);
-      if (!round) {
-        transaction.update(roomRef, { status: "waiting", gameError: "لا توجد فئات صالحة لبدء اللعبة." });
-        return;
-      }
-
+      transaction.set(roundRef, round);
       transaction.update(roomRef, {
         status: "playing",
-        round,
+        currentRoundId: round.id,
+        currentRoundNumber: 1,
         usedQuestionIds: [],
         usedFactKeys: [],
         finalResults: null,
         gameError: null,
         finishedAt: null,
-        replayRequests: {},
-        returnRequests: {},
+        lastActivityAt: serverTimestamp(),
       });
     });
   } catch (error) {
@@ -501,75 +474,73 @@ async function createFirstRound() {
 async function selectCategory(categoryId) {
   if (!roomId || !playerId || !currentRoom?.round) return;
   try {
-    const roomRef = doc(db, "rooms", roomId);
+    const roundRef = getRoundRef();
+    if (!roundRef) return;
     await runTransaction(db, async (transaction) => {
-      const snapshot = await transaction.get(roomRef);
-      if (!snapshot.exists()) throw new Error("ROOM_NOT_FOUND");
-      const room = snapshot.data();
-      const round = room.round;
-      if (room.status !== "playing" || round?.phase !== "category_selection") throw new Error("PHASE_CLOSED");
+      const snapshot = await transaction.get(roundRef);
+      if (!snapshot.exists()) throw new Error("ROUND_NOT_FOUND");
+      const round = snapshot.data();
+      if (round.phase !== "category_selection") throw new Error("PHASE_CLOSED");
       if (round.chooserId !== playerId) throw new Error("NOT_CHOOSER");
       if (round.categoryChoice) return;
       if (!Array.isArray(round.categoryOptions) || !round.categoryOptions.includes(categoryId)) throw new Error("INVALID_CATEGORY");
-      const deadline = valueToMillis(round.selectionDeadline);
-      if (deadline && Date.now() >= deadline) throw new Error("TIME_EXPIRED");
-
-      transaction.update(roomRef, { "round.categoryChoice": categoryId });
+      if (valueToMillis(round.selectionDeadline) <= Date.now()) throw new Error("TIME_EXPIRED");
+      transaction.update(roundRef, {categoryChoice: categoryId});
     });
   } catch (error) {
     console.error("selectCategory failed:", error);
-    if (error?.message === "NOT_CHOOSER") notify("اختيار الفئة متاح للاعب صاحب الدور فقط.", { type: "warning" });
-    else if (error?.message === "TIME_EXPIRED") notify("انتهى وقت اختيار الفئة.", { type: "warning" });
+    if (error?.message === "NOT_CHOOSER") notify("اختيار الفئة متاح للاعب صاحب الدور فقط.", {type: "warning"});
+    else if (error?.message === "TIME_EXPIRED") notify("انتهى وقت اختيار الفئة.", {type: "warning"});
   }
 }
 
 async function advanceFromCategorySelection(roomSnapshot = currentRoom) {
   if (!roomId || !playerId || transitionInProgress || roomSnapshot?.hostId !== playerId) return;
   transitionInProgress = true;
-
   try {
-    const roomRef = doc(db, "rooms", roomId);
+    const questionBank = await loadQuestionBank();
+    const roomRef = getRoomRef();
+    const roundRef = getRoundRef(roomSnapshot);
+    if (!roundRef) return;
     await runTransaction(db, async (transaction) => {
-      const snapshot = await transaction.get(roomRef);
-      if (!snapshot.exists()) return;
-      const room = snapshot.data();
-      const round = room.round;
-      if (room.hostId !== playerId || room.status !== "playing" || round?.phase !== "category_selection") return;
-
-      const deadline = valueToMillis(round.selectionDeadline);
-      if (!round.categoryChoice && deadline > Date.now()) return;
-
+      const [roomDoc, roundDoc] = await Promise.all([transaction.get(roomRef), transaction.get(roundRef)]);
+      if (!roomDoc.exists() || !roundDoc.exists()) return;
+      const room = roomDoc.data();
+      const round = roundDoc.data();
+      if (room.hostId !== playerId || room.status !== "playing" || room.currentRoundId !== roundDoc.id || round.phase !== "category_selection") return;
+      if (!round.categoryChoice && valueToMillis(round.selectionDeadline) > Date.now()) return;
       const categoryOptions = Array.isArray(round.categoryOptions) ? round.categoryOptions.filter(categoryHasQuestions) : [];
       const categoryId = round.categoryChoice || categoryOptions[Math.floor(Math.random() * categoryOptions.length)];
+      const merged = {...roomSnapshot, ...room, round: {...round, id: roundDoc.id}};
       if (!categoryId) {
-        transaction.update(roomRef, { status: "finished", finalResults: rankingFromPlayers(playersMap(room)), gameError: "لا توجد فئة صالحة." });
+        transaction.update(roomRef, {status: "finished", finalResults: rankingFromPlayers(playersMap(roomSnapshot)), gameError: "لا توجد فئة صالحة."});
         return;
       }
-
-      const question = pickQuestion(room, categoryId);
+      const question = pickQuestion(merged, categoryId, questionBank);
       if (!question) {
-        transaction.update(roomRef, { status: "finished", finalResults: rankingFromPlayers(playersMap(room)), gameError: "لا توجد أسئلة متاحة لهذه الفئة." });
+        transaction.update(roomRef, {status: "finished", finalResults: rankingFromPlayers(playersMap(roomSnapshot)), gameError: "لا توجد أسئلة متاحة لهذه الفئة."});
         return;
       }
-
-      const answerTime = phaseDuration(room, "bluffing");
+      const answerTime = phaseDuration(merged, "bluffing");
+      transaction.update(roundRef, {
+        categoryChoice: categoryId,
+        categoryId,
+        categoryName: CATEGORY_NAMES[categoryId] || categoryId,
+        questionId: question.id,
+        question: question.prompt,
+        questionImage: question.image || null,
+        questionImageAlt: question.imageAlt || null,
+        correctAnswer: question.answer,
+        acceptedAnswers: question.accepted,
+        systemDecoys: Array.isArray(question.decoys) ? question.decoys.slice(0, 8) : [],
+        questionFactKey: question.factKey || question.id,
+        phase: "bluffing",
+        bluffDeadline: Timestamp.fromMillis(Date.now() + answerTime * 1000),
+      });
       transaction.update(roomRef, {
-        "round.categoryChoice": categoryId,
-        "round.categoryId": categoryId,
-        "round.categoryName": CATEGORY_NAMES[categoryId] || categoryId,
-        "round.questionId": question.id,
-        "round.question": question.prompt,
-        "round.questionImage": question.image || null,
-        "round.questionImageAlt": question.imageAlt || null,
-        "round.correctAnswer": question.answer,
-        "round.acceptedAnswers": question.accepted,
-        "round.systemDecoys": Array.isArray(question.decoys) ? question.decoys.slice(0, 8) : [],
-        "round.questionFactKey": question.factKey || question.id,
-        "round.phase": "bluffing",
-        "round.bluffDeadline": Timestamp.fromMillis(Date.now() + answerTime * 1000),
-        "round.bluffs": {},
         usedQuestionIds: [...(Array.isArray(room.usedQuestionIds) ? room.usedQuestionIds : []), question.id],
         usedFactKeys: [...(Array.isArray(room.usedFactKeys) ? room.usedFactKeys : []), question.factKey || question.id],
+        lastActivityAt: serverTimestamp(),
       });
     });
   } catch (error) {
@@ -584,59 +555,35 @@ async function submitBluff() {
   const input = document.getElementById("gameAnswer");
   const button = document.getElementById("confirmAnswer");
   const text = input?.value?.trim() || "";
-
   if (!text) {
-    notify("اكتب كذبة أولًا.", { type: "warning" });
+    notify("اكتب كذبة أولًا.", {type: "warning"});
     input?.focus();
     return;
   }
-
   const accepted = Array.isArray(currentRoom.round.acceptedAnswers) ? currentRoom.round.acceptedAnswers : [currentRoom.round.correctAnswer];
   if (accepted.some((answer) => normalizeAnswer(answer) === normalizeAnswer(text))) {
-    notify("هذه هي الإجابة الصحيحة فعلًا. اكتب إجابة خاطئة مقنعة.", { type: "warning", title: "هذه ليست كذبة" });
+    notify("هذه هي الإجابة الصحيحة فعلًا. اكتب إجابة خاطئة مقنعة.", {type: "warning", title: "هذه ليست كذبة"});
     input?.focus();
     return;
   }
-
+  const duplicate = Object.values(currentRoom.round.bluffs || {}).some((bluff) => normalizeAnswer(bluff?.text) === normalizeAnswer(text));
+  if (duplicate) {
+    notify("لا يمكن استخدام نفس كذبة لاعب آخر. اكتب كذبة مختلفة.", {type: "warning"});
+    return;
+  }
+  if (valueToMillis(currentRoom.round.bluffDeadline) <= Date.now()) {
+    notify("انتهى وقت كتابة الكذبة.", {type: "warning"});
+    return;
+  }
   if (button) button.disabled = true;
-
   try {
-    const roomRef = doc(db, "rooms", roomId);
-    await runTransaction(db, async (transaction) => {
-      const snapshot = await transaction.get(roomRef);
-      if (!snapshot.exists()) throw new Error("ROOM_NOT_FOUND");
-      const room = snapshot.data();
-      const round = room.round;
-      if (!playersMap(room)[playerId]) throw new Error("PLAYER_NOT_FOUND");
-      if (room.status !== "playing" || round?.phase !== "bluffing") throw new Error("PHASE_CLOSED");
-      if (round.bluffs?.[playerId]) throw new Error("ALREADY_SUBMITTED");
-      const deadline = valueToMillis(round.bluffDeadline);
-      if (deadline && Date.now() >= deadline) throw new Error("TIME_EXPIRED");
-
-      const normalized = normalizeAnswer(text);
-      const acceptedAnswers = Array.isArray(round.acceptedAnswers) ? round.acceptedAnswers : [round.correctAnswer];
-      if (acceptedAnswers.some((answer) => normalizeAnswer(answer) === normalized)) throw new Error("IS_CORRECT");
-
-      const duplicate = Object.values(round.bluffs || {}).some((bluff) => normalizeAnswer(bluff?.text) === normalized);
-      if (duplicate) throw new Error("DUPLICATE_BLUFF");
-
-      transaction.update(roomRef, {
-        [`round.bluffs.${playerId}`]: {
-          text: text.slice(0, 120),
-          submittedAt: serverTimestamp(),
-        },
-      });
-    });
-    notify("تم إرسال كذبتك بنجاح.", { type: "success", duration: 2200 });
+    const ref = getRoundChildRef("bluffs", playerId);
+    if (!ref) throw new Error("ROUND_NOT_FOUND");
+    await setDoc(ref, {playerId, text: text.slice(0, 120), submittedAt: serverTimestamp()});
+    notify("تم إرسال كذبتك بنجاح.", {type: "success", duration: 2200});
   } catch (error) {
     console.error("submitBluff failed:", error);
-    const messages = {
-      IS_CORRECT: "هذه هي الإجابة الصحيحة. اكتب كذبة أخرى.",
-      DUPLICATE_BLUFF: "لا يمكن استخدام نفس كذبة لاعب آخر. اكتب كذبة مختلفة.",
-      TIME_EXPIRED: "انتهى وقت كتابة الكذبة.",
-      ALREADY_SUBMITTED: "أرسلت كذبتك بالفعل.",
-    };
-    notify(messages[error?.message] || "تعذر إرسال الكذبة.", { type: error?.message === "ALREADY_SUBMITTED" ? "info" : "warning" });
+    notify(error?.code === "permission-denied" ? "أرسلت كذبتك بالفعل أو انتهى الوقت." : "تعذر إرسال الكذبة.", {type: "warning"});
   } finally {
     if (button) button.disabled = false;
   }
@@ -645,31 +592,30 @@ async function submitBluff() {
 async function advanceToGuessing(roomSnapshot = currentRoom) {
   if (!roomId || !playerId || transitionInProgress || roomSnapshot?.hostId !== playerId) return;
   transitionInProgress = true;
-
   try {
-    const roomRef = doc(db, "rooms", roomId);
+    const questionBank = await loadQuestionBank();
+    const roomRef = getRoomRef();
+    const roundRef = getRoundRef(roomSnapshot);
+    if (!roundRef) return;
     await runTransaction(db, async (transaction) => {
-      const snapshot = await transaction.get(roomRef);
-      if (!snapshot.exists()) return;
-      const room = snapshot.data();
-      const round = room.round;
-      if (room.hostId !== playerId || room.status !== "playing" || round?.phase !== "bluffing") return;
-
-      const ids = playerList(room).map((player) => player.id);
-      const allSubmitted = ids.length > 0 && ids.every((id) => Boolean(round.bluffs?.[id]?.text));
-      const deadline = valueToMillis(round.bluffDeadline);
-      if (!allSubmitted && deadline > Date.now()) return;
-
-      const { options, optionOrder } = buildGuessOptions(room);
-      const answerTime = phaseDuration(room, "guessing");
-
-      transaction.update(roomRef, {
-        "round.phase": "guessing",
-        "round.options": options,
-        "round.optionOrder": optionOrder,
-        "round.guesses": {},
-        "round.guessDeadline": Timestamp.fromMillis(Date.now() + answerTime * 1000),
+      const [roomDoc, roundDoc] = await Promise.all([transaction.get(roomRef), transaction.get(roundRef)]);
+      if (!roomDoc.exists() || !roundDoc.exists()) return;
+      const room = roomDoc.data();
+      const round = roundDoc.data();
+      if (room.hostId !== playerId || room.status !== "playing" || room.currentRoundId !== roundDoc.id || round.phase !== "bluffing") return;
+      const ids = playerList(roomSnapshot).map((player) => player.id);
+      const allSubmitted = ids.length > 0 && ids.every((id) => Boolean(roomSnapshot.round?.bluffs?.[id]?.text));
+      if (!allSubmitted && valueToMillis(round.bluffDeadline) > Date.now()) return;
+      const merged = {...roomSnapshot, ...room, round: {...round, id: roundDoc.id, bluffs: roomSnapshot.round?.bluffs || {}}};
+      const {options, optionOrder} = buildGuessOptions(merged, questionBank);
+      const answerTime = phaseDuration(merged, "guessing");
+      transaction.update(roundRef, {
+        phase: "guessing",
+        options,
+        optionOrder,
+        guessDeadline: Timestamp.fromMillis(Date.now() + answerTime * 1000),
       });
+      transaction.update(roomRef, {lastActivityAt: serverTimestamp()});
     });
   } catch (error) {
     console.error("advanceToGuessing failed:", error);
@@ -679,67 +625,44 @@ async function advanceToGuessing(roomSnapshot = currentRoom) {
 }
 
 async function submitGuess(optionId) {
-  if (!roomId || !playerId || !optionId) return;
+  if (!roomId || !playerId || !optionId || currentRoom?.round?.phase !== "guessing") return;
   try {
-    const roomRef = doc(db, "rooms", roomId);
-    await runTransaction(db, async (transaction) => {
-      const snapshot = await transaction.get(roomRef);
-      if (!snapshot.exists()) throw new Error("ROOM_NOT_FOUND");
-      const room = snapshot.data();
-      const round = room.round;
-      if (!playersMap(room)[playerId]) throw new Error("PLAYER_NOT_FOUND");
-      if (room.status !== "playing" || round?.phase !== "guessing") throw new Error("PHASE_CLOSED");
-      if (round.guesses?.[playerId]) throw new Error("ALREADY_GUESSED");
-      const deadline = valueToMillis(round.guessDeadline);
-      if (deadline && Date.now() >= deadline) throw new Error("TIME_EXPIRED");
-
-      const option = round.options?.[optionId];
-      if (!option) throw new Error("INVALID_OPTION");
-      if (option.type === "bluff" && option.authorId === playerId) throw new Error("OWN_BLUFF");
-
-      transaction.update(roomRef, {
-        [`round.guesses.${playerId}`]: {
-          optionId,
-          submittedAt: serverTimestamp(),
-        },
-      });
-    });
-    notify("تم حفظ اختيارك. بانتظار بقية اللاعبين...", { type: "success", duration: 2400 });
+    const round = currentRoom.round;
+    if (round.guesses?.[playerId]) throw new Error("ALREADY_GUESSED");
+    if (valueToMillis(round.guessDeadline) <= Date.now()) throw new Error("TIME_EXPIRED");
+    const option = round.options?.[optionId];
+    if (!option) throw new Error("INVALID_OPTION");
+    if (option.type === "bluff" && option.authorId === playerId) throw new Error("OWN_BLUFF");
+    const ref = getRoundChildRef("guesses", playerId);
+    if (!ref) throw new Error("ROUND_NOT_FOUND");
+    await setDoc(ref, {playerId, optionId, submittedAt: serverTimestamp()});
+    notify("تم حفظ اختيارك. بانتظار بقية اللاعبين...", {type: "success", duration: 2400});
   } catch (error) {
     console.error("submitGuess failed:", error);
-    const messages = {
-      OWN_BLUFF: "لا يمكنك اختيار كذبتك.",
-      TIME_EXPIRED: "انتهى وقت الاختيار.",
-      ALREADY_GUESSED: "اخترت إجابتك بالفعل.",
-    };
-    notify(messages[error?.message] || "تعذر حفظ اختيارك.", { type: error?.message === "ALREADY_GUESSED" ? "info" : "warning" });
+    const messages = {OWN_BLUFF: "لا يمكنك اختيار كذبتك.", TIME_EXPIRED: "انتهى وقت الاختيار.", ALREADY_GUESSED: "اخترت إجابتك بالفعل."};
+    notify(messages[error?.message] || (error?.code === "permission-denied" ? "اخترت إجابتك بالفعل أو انتهى الوقت." : "تعذر حفظ اختيارك."), {type: error?.message === "ALREADY_GUESSED" ? "info" : "warning"});
   }
 }
 
 async function advanceToReveal(roomSnapshot = currentRoom) {
   if (!roomId || !playerId || transitionInProgress || roomSnapshot?.hostId !== playerId) return;
   transitionInProgress = true;
-
   try {
-    const roomRef = doc(db, "rooms", roomId);
+    const roomRef = getRoomRef();
+    const roundRef = getRoundRef(roomSnapshot);
+    if (!roundRef) return;
     await runTransaction(db, async (transaction) => {
-      const snapshot = await transaction.get(roomRef);
-      if (!snapshot.exists()) return;
-      const room = snapshot.data();
-      const round = room.round;
-      if (room.hostId !== playerId || room.status !== "playing" || round?.phase !== "guessing") return;
-
-      const ids = playerList(room).map((player) => player.id);
-      const allGuessed = ids.length > 0 && ids.every((id) => Boolean(round.guesses?.[id]?.optionId));
-      const deadline = valueToMillis(round.guessDeadline);
-      if (!allGuessed && deadline > Date.now()) return;
-
-      const revealTime = phaseDuration(room, "reveal");
-      transaction.update(roomRef, {
-        "round.phase": "reveal",
-        "round.revealReady": {},
-        "round.revealDeadline": Timestamp.fromMillis(Date.now() + revealTime * 1000),
-      });
+      const [roomDoc, roundDoc] = await Promise.all([transaction.get(roomRef), transaction.get(roundRef)]);
+      if (!roomDoc.exists() || !roundDoc.exists()) return;
+      const room = roomDoc.data();
+      const round = roundDoc.data();
+      if (room.hostId !== playerId || room.status !== "playing" || room.currentRoundId !== roundDoc.id || round.phase !== "guessing") return;
+      const ids = playerList(roomSnapshot).map((player) => player.id);
+      const allGuessed = ids.length > 0 && ids.every((id) => Boolean(roomSnapshot.round?.guesses?.[id]?.optionId));
+      if (!allGuessed && valueToMillis(round.guessDeadline) > Date.now()) return;
+      const revealTime = phaseDuration({...roomSnapshot, ...room}, "reveal");
+      transaction.update(roundRef, {phase: "reveal", revealDeadline: Timestamp.fromMillis(Date.now() + revealTime * 1000)});
+      transaction.update(roomRef, {lastActivityAt: serverTimestamp()});
     });
   } catch (error) {
     console.error("advanceToReveal failed:", error);
@@ -749,22 +672,13 @@ async function advanceToReveal(roomSnapshot = currentRoom) {
 }
 
 async function markRevealReady() {
-  if (!roomId || !playerId) return;
+  if (!roomId || !playerId || currentRoom?.round?.phase !== "reveal") return;
   const button = document.getElementById("revealReadyButton");
   if (button) button.disabled = true;
-
   try {
-    const roomRef = doc(db, "rooms", roomId);
-    await runTransaction(db, async (transaction) => {
-      const snapshot = await transaction.get(roomRef);
-      if (!snapshot.exists()) throw new Error("ROOM_NOT_FOUND");
-      const room = snapshot.data();
-      const round = room.round;
-      if (!playersMap(room)[playerId]) throw new Error("PLAYER_NOT_FOUND");
-      if (room.status !== "playing" || round?.phase !== "reveal") throw new Error("PHASE_CLOSED");
-      if (round.revealReady?.[playerId] === true) return;
-      transaction.update(roomRef, { [`round.revealReady.${playerId}`]: true });
-    });
+    const ref = getRoundChildRef("revealReady", playerId);
+    if (!ref) throw new Error("ROUND_NOT_FOUND");
+    await setDoc(ref, {playerId, ready: true, submittedAt: serverTimestamp()});
   } catch (error) {
     console.error("markRevealReady failed:", error);
     if (button) button.disabled = false;
@@ -774,38 +688,38 @@ async function markRevealReady() {
 async function scoreRound(roomSnapshot = currentRoom) {
   if (!roomId || !playerId || transitionInProgress || roomSnapshot?.hostId !== playerId) return;
   transitionInProgress = true;
-
   try {
-    const roomRef = doc(db, "rooms", roomId);
+    const roomRef = getRoomRef();
+    const roundRef = getRoundRef(roomSnapshot);
+    if (!roundRef) return;
+    const ids = playerList(roomSnapshot).map((player) => player.id);
     await runTransaction(db, async (transaction) => {
-      const snapshot = await transaction.get(roomRef);
-      if (!snapshot.exists()) return;
-      const room = snapshot.data();
-      const round = room.round;
-      if (room.hostId !== playerId || room.status !== "playing" || round?.phase !== "reveal") return;
+      const [roomDoc, roundDoc] = await Promise.all([transaction.get(roomRef), transaction.get(roundRef)]);
+      if (!roomDoc.exists() || !roundDoc.exists()) return;
+      const room = roomDoc.data();
+      const round = roundDoc.data();
+      if (room.hostId !== playerId || room.status !== "playing" || room.currentRoundId !== roundDoc.id || round.phase !== "reveal") return;
+      const allReady = ids.length > 0 && ids.every((id) => roomSnapshot.round?.revealReady?.[id] === true);
+      if (!allReady && valueToMillis(round.revealDeadline) > Date.now()) return;
 
-      const ids = playerList(room).map((player) => player.id);
-      const allReady = ids.length > 0 && ids.every((id) => round.revealReady?.[id] === true);
-      const deadline = valueToMillis(round.revealDeadline);
-      if (!allReady && deadline > Date.now()) return;
-
-      const updatedPlayers = Object.fromEntries(
-        Object.entries(playersMap(room)).map(([id, player]) => [id, { ...player }]),
-      );
+      const playerDocs = [];
+      for (const id of ids) playerDocs.push(await transaction.get(doc(db, "rooms", roomId, "players", id)));
+      const updatedPlayers = Object.fromEntries(playerDocs.filter((item) => item.exists()).map((item) => [item.id, {id: item.id, ...item.data()}]));
       const roundPoints = Object.fromEntries(ids.map((id) => [id, 0]));
       const correctThisRound = Object.fromEntries(ids.map((id) => [id, false]));
       const fooledThisRound = Object.fromEntries(ids.map((id) => [id, 0]));
+      const guesses = roomSnapshot.round?.guesses || {};
+      const options = round.options || {};
 
       ids.forEach((guesserId) => {
-        const guess = round.guesses?.[guesserId];
+        const guess = guesses[guesserId];
         if (!guess?.optionId) return;
-        const option = round.options?.[guess.optionId];
+        const option = options[guess.optionId];
         if (!option) return;
-
         if (option.type === "correct") {
           roundPoints[guesserId] += CORRECT_GUESS_POINTS;
           correctThisRound[guesserId] = true;
-          updatedPlayers[guesserId].correctGuesses = (Number(updatedPlayers[guesserId].correctGuesses) || 0) + 1;
+          if (updatedPlayers[guesserId]) updatedPlayers[guesserId].correctGuesses = (Number(updatedPlayers[guesserId].correctGuesses) || 0) + 1;
         } else if (option.type === "bluff" && option.authorId && option.authorId !== guesserId && updatedPlayers[option.authorId]) {
           roundPoints[option.authorId] += FOOLED_PLAYER_POINTS;
           fooledThisRound[option.authorId] += 1;
@@ -814,25 +728,19 @@ async function scoreRound(roomSnapshot = currentRoom) {
       });
 
       const results = {};
-      ids.forEach((id) => {
-        const previous = Number(updatedPlayers[id].score) || 0;
+      playerDocs.forEach((item) => {
+        if (!item.exists()) return;
+        const id = item.id;
+        const player = updatedPlayers[id];
         const gained = Number(roundPoints[id]) || 0;
-        updatedPlayers[id].score = previous + gained;
-        results[id] = {
-          roundPoints: gained,
-          totalScore: updatedPlayers[id].score,
-          correct: correctThisRound[id] === true,
-          fooled: Number(fooledThisRound[id]) || 0,
-        };
+        player.score = (Number(player.score) || 0) + gained;
+        results[id] = {roundPoints: gained, totalScore: player.score, correct: correctThisRound[id] === true, fooled: Number(fooledThisRound[id]) || 0};
+        transaction.update(item.ref, {score: player.score, correctGuesses: player.correctGuesses || 0, fooledPlayers: player.fooledPlayers || 0});
       });
-
-      const resultsTime = phaseDuration(room, "results");
-      transaction.update(roomRef, {
-        players: updatedPlayers,
-        "round.phase": "results",
-        "round.results": results,
-        "round.resultsDeadline": Timestamp.fromMillis(Date.now() + resultsTime * 1000),
-      });
+      const ranking = rankingFromPlayers(updatedPlayers);
+      const resultsTime = phaseDuration({...roomSnapshot, ...room}, "results");
+      transaction.update(roundRef, {phase: "results", results, ranking, resultsDeadline: Timestamp.fromMillis(Date.now() + resultsTime * 1000)});
+      transaction.update(roomRef, {lastActivityAt: serverTimestamp()});
     });
   } catch (error) {
     console.error("scoreRound failed:", error);
@@ -844,45 +752,33 @@ async function scoreRound(roomSnapshot = currentRoom) {
 async function advanceAfterResults(roomSnapshot = currentRoom) {
   if (!roomId || !playerId || transitionInProgress || roomSnapshot?.hostId !== playerId) return;
   transitionInProgress = true;
-
   try {
-    const roomRef = doc(db, "rooms", roomId);
+    const roomRef = getRoomRef();
+    const roundRef = getRoundRef(roomSnapshot);
+    if (!roundRef) return;
     await runTransaction(db, async (transaction) => {
-      const snapshot = await transaction.get(roomRef);
-      if (!snapshot.exists()) return;
-      const room = snapshot.data();
-      const round = room.round;
-      if (room.hostId !== playerId || room.status !== "playing" || round?.phase !== "results") return;
-
-      const deadline = valueToMillis(round.resultsDeadline);
-      if (deadline > Date.now()) return;
-
+      const [roomDoc, roundDoc] = await Promise.all([transaction.get(roomRef), transaction.get(roundRef)]);
+      if (!roomDoc.exists() || !roundDoc.exists()) return;
+      const room = roomDoc.data();
+      const round = roundDoc.data();
+      if (room.hostId !== playerId || room.status !== "playing" || room.currentRoundId !== roundDoc.id || round.phase !== "results") return;
+      if (valueToMillis(round.resultsDeadline) > Date.now()) return;
       const currentNumber = Number(round.number) || 1;
       const total = Math.max(1, Math.min(50, Number(room?.settings?.rounds) || 6));
-
-      if (currentNumber >= total || playerList(room).length < 2) {
-        transaction.update(roomRef, {
-          status: "finished",
-          finalResults: rankingFromPlayers(playersMap(room)),
-          finishedAt: Timestamp.now(),
-          replayRequests: {},
-          returnRequests: {},
-        });
+      const ranking = Array.isArray(round.ranking) && round.ranking.length ? round.ranking : rankingFromPlayers(playersMap(roomSnapshot));
+      if (currentNumber >= total || (Number(room.playerCount) || 0) < 2) {
+        transaction.update(roomRef, {status: "finished", finalResults: ranking, finishedAt: Timestamp.now(), lastActivityAt: serverTimestamp()});
         return;
       }
-
-      const nextRound = buildNewRound(room, currentNumber + 1);
+      const merged = {...roomSnapshot, ...room};
+      const nextRound = buildNewRound(merged, currentNumber + 1);
       if (!nextRound) {
-        transaction.update(roomRef, {
-          status: "finished",
-          finalResults: rankingFromPlayers(playersMap(room)),
-          finishedAt: Timestamp.now(),
-          gameError: "تعذر إنشاء الجولة التالية.",
-        });
+        transaction.update(roomRef, {status: "finished", finalResults: ranking, finishedAt: Timestamp.now(), gameError: "تعذر إنشاء الجولة التالية."});
         return;
       }
-
-      transaction.update(roomRef, { round: nextRound, gameError: null });
+      const nextRef = doc(db, "rooms", roomId, "rounds", nextRound.id);
+      transaction.set(nextRef, nextRound);
+      transaction.update(roomRef, {currentRoundId: nextRound.id, currentRoundNumber: currentNumber + 1, gameError: null, lastActivityAt: serverTimestamp()});
     });
   } catch (error) {
     console.error("advanceAfterResults failed:", error);
@@ -955,24 +851,22 @@ function renderCategorySelection(room) {
   if (name) name.textContent = chooser?.name || "لاعب";
   if (label) label.textContent = isChooser ? "الدور على: (أنت)" : "الدور على:";
   if (instruction) {
-    instruction.textContent = choice
-      ? "تم اختيار الفئة، جاري تجهيز السؤال..."
-      : isChooser
-        ? "اختر فئة هذه الجولة قبل انتهاء الوقت."
-        : `بانتظار ${chooser?.name || "صاحب الدور"} لاختيار الفئة.`;
+    instruction.textContent = choice ? "تم اختيار الفئة، جاري تجهيز السؤال..." : isChooser ? "اختر فئة هذه الجولة قبل انتهاء الوقت." : `بانتظار ${chooser?.name || "صاحب الدور"} لاختيار الفئة.`;
   }
 
   if (grid) {
-    grid.innerHTML = (round.categoryOptions || []).map((categoryId) => {
-      const category = GAME_CATEGORIES.find((item) => item.id === categoryId);
-      const disabled = !isChooser || Boolean(choice);
-      return `
+    grid.innerHTML = (round.categoryOptions || [])
+      .map((categoryId) => {
+        const category = GAME_CATEGORIES.find((item) => item.id === categoryId);
+        const disabled = !isChooser || Boolean(choice);
+        return `
         <button type="button" class="round-category-choice" data-round-category="${escapeHTML(categoryId)}" ${disabled ? "disabled" : ""}>
           <i class="${category?.icon || "fa-solid fa-layer-group"}"></i>
           ${escapeHTML(category?.name || categoryId)}
         </button>
       `;
-    }).join("");
+      })
+      .join("");
 
     grid.querySelectorAll("[data-round-category]").forEach((button) => {
       button.addEventListener("click", () => selectCategory(button.dataset.roundCategory));
@@ -998,10 +892,14 @@ function renderQuestionMedia(containerId, round) {
   image.alt = round?.questionImageAlt || "صورة السؤال";
   image.loading = "eager";
   image.decoding = "async";
-  image.addEventListener("error", () => {
-    container.replaceChildren();
-    container.classList.add("hidden");
-  }, { once: true });
+  image.addEventListener(
+    "error",
+    () => {
+      container.replaceChildren();
+      container.classList.add("hidden");
+    },
+    {once: true},
+  );
   container.replaceChildren(image);
   container.classList.remove("hidden");
 }
@@ -1031,9 +929,7 @@ function renderBluffing(room) {
   }
   if (button) {
     button.disabled = Boolean(myBluff);
-    button.innerHTML = myBluff
-      ? '<i class="fa-solid fa-circle-check"></i> تم إرسال كذبتك'
-      : '<i class="fa-solid fa-paper-plane"></i> أرسل الكذبة';
+    button.innerHTML = myBluff ? '<i class="fa-solid fa-circle-check"></i> تم إرسال كذبتك' : '<i class="fa-solid fa-paper-plane"></i> أرسل الكذبة';
   }
 
   startTimer(room, round.bluffDeadline, round.phase);
@@ -1071,27 +967,33 @@ function renderGuessing(room) {
     }
 
     if (playersGrid) {
-      playersGrid.innerHTML = playerList(room).map((player) => {
-        const done = Boolean(round.guesses?.[player.id]?.optionId);
-        return `
+      playersGrid.innerHTML = playerList(room)
+        .map((player) => {
+          const done = Boolean(round.guesses?.[player.id]?.optionId);
+          return `
           <div class="guess-player-state ${done ? "done" : ""}">
             <div class="avatar-mini">${avatarHTML(player.avatar, "avatar-mini-img", `صورة ${player.name || "لاعب"}`)}</div>
             <strong>${escapeHTML(player.name || "لاعب")}</strong>
             <small>${done ? "✓" : "..."}</small>
           </div>
         `;
-      }).join("");
+        })
+        .join("");
     }
   } else {
     if (waiting) waiting.classList.add("hidden");
     if (optionsGrid) {
       optionsGrid.classList.remove("hidden");
       const visibleIds = (round.optionOrder || []).filter((id) => id !== myBluffId && round.options?.[id]);
-      optionsGrid.innerHTML = visibleIds.map((id) => `
+      optionsGrid.innerHTML = visibleIds
+        .map(
+          (id) => `
         <button type="button" class="guess-option" data-option-id="${escapeHTML(id)}">
           ${escapeHTML(round.options[id].text)}
         </button>
-      `).join("");
+      `,
+        )
+        .join("");
       optionsGrid.querySelectorAll("[data-option-id]").forEach((button) => {
         button.addEventListener("click", () => submitGuess(button.dataset.optionId));
       });
@@ -1115,11 +1017,11 @@ function renderReveal(room) {
     const myGuess = round?.guesses?.[playerId];
     const chosen = myGuess ? round?.options?.[myGuess.optionId] : null;
     if (!myGuess) {
-      notify("لم تسجل اختيارًا قبل انتهاء الوقت.", { type: "warning", title: "انتهى الوقت" });
+      notify("لم تسجل اختيارًا قبل انتهاء الوقت.", {type: "warning", title: "انتهى الوقت"});
     } else if (chosen?.type === "correct") {
-      notify("إجابتك صحيحة!", { type: "success", title: "أحسنت", duration: 3500 });
+      notify("إجابتك صحيحة!", {type: "success", title: "أحسنت", duration: 3500});
     } else {
-      notify("اختيارك لم يكن الإجابة الصحيحة.", { type: "error", title: "إجابة غير صحيحة", duration: 3500 });
+      notify("اختيارك لم يكن الإجابة الصحيحة.", {type: "error", title: "إجابة غير صحيحة", duration: 3500});
     }
   }
   const question = document.getElementById("revealQuestion");
@@ -1136,38 +1038,41 @@ function renderReveal(room) {
   if (count) count.textContent = `${readyCount} / ${ids.length}`;
   if (button) {
     button.disabled = myReady;
-    button.innerHTML = myReady
-      ? '<i class="fa-solid fa-circle-check"></i> جاهز ✓'
-      : '<i class="fa-solid fa-check"></i> جاهز';
+    button.innerHTML = myReady ? '<i class="fa-solid fa-circle-check"></i> جاهز ✓' : '<i class="fa-solid fa-check"></i> جاهز';
   }
 
   if (grid) {
-    grid.innerHTML = (round.optionOrder || []).map((id) => {
-      const option = round.options?.[id];
-      if (!option) return "";
-      const author = option.authorId ? players[option.authorId] : null;
-      const voters = ids
-        .filter((pid) => round.guesses?.[pid]?.optionId === id)
-        .map((pid) => players[pid])
-        .filter(Boolean);
-      const ownerText = option.type === "correct"
-        ? "الإجابة الصح!"
-        : option.type === "bluff"
-          ? `إجابة: ${author?.id === playerId ? "أنت" : author?.name || "لاعب"}`
-          : "إجابة إضافية";
+    grid.innerHTML = (round.optionOrder || [])
+      .map((id) => {
+        const option = round.options?.[id];
+        if (!option) return "";
+        const author = option.authorId ? players[option.authorId] : null;
+        const voters = ids
+          .filter((pid) => round.guesses?.[pid]?.optionId === id)
+          .map((pid) => players[pid])
+          .filter(Boolean);
+        const ownerText = option.type === "correct" ? "الإجابة الصح!" : option.type === "bluff" ? `إجابة: ${author?.id === playerId ? "أنت" : author?.name || "لاعب"}` : "إجابة إضافية";
 
-      return `
+        return `
         <div class="reveal-option ${option.type === "correct" ? "correct-option" : ""}">
           <div class="reveal-option-title">${escapeHTML(option.text)}</div>
           <div class="reveal-option-owner">${escapeHTML(ownerText)}</div>
           <div class="reveal-voters">
-            ${voters.length
-              ? voters.map((voter) => `<span class="reveal-voter">${avatarHTML(voter.avatar, "reveal-voter-avatar", `صورة ${voter.name || "لاعب"}`)} <span>${escapeHTML(voter.name || "لاعب")}</span></span>`).join("")
-              : '<span class="reveal-voter">لم يخترها أحد</span>'}
+            ${
+              voters.length
+                ? voters
+                    .map(
+                      (voter) =>
+                        `<span class="reveal-voter">${avatarHTML(voter.avatar, "reveal-voter-avatar", `صورة ${voter.name || "لاعب"}`)} <span>${escapeHTML(voter.name || "لاعب")}</span></span>`,
+                    )
+                    .join("")
+                : '<span class="reveal-voter">لم يخترها أحد</span>'
+            }
           </div>
         </div>
       `;
-    }).join("");
+      })
+      .join("");
   }
 
   startTimer(room, round.revealDeadline, round.phase);
@@ -1181,7 +1086,7 @@ function theoreticalFinalMaxScore(room) {
 }
 
 function scoreWidthPercent(room, score) {
-  return Math.max(0, Math.min(100, (Number(score) || 0) / theoreticalFinalMaxScore(room) * 100));
+  return Math.max(0, Math.min(100, ((Number(score) || 0) / theoreticalFinalMaxScore(room)) * 100));
 }
 
 function renderRoundResults(room) {
@@ -1195,24 +1100,32 @@ function renderRoundResults(room) {
   if (board) {
     // لا نعيد بناء لوحة النتائج عند heartbeat أو أي snapshot لا يغيّر النتيجة.
     // هذا يمنع شريط النقاط من العودة إلى الصفر وإعادة الأنيميشن مرارًا على الجوال.
-    const renderKey = JSON.stringify(ranking.map((entry) => {
-      const player = playersMap(room)[entry.id];
-      const result = round.results?.[entry.id] || {};
-      return [
-        entry.id, entry.rank, Number(entry.score) || 0,
-        Number(player?.correctGuesses) || 0,
-        Number(player?.fooledPlayers) || 0,
-        Number(result.roundPoints) || 0,
-        entry.avatar, entry.name, round.number, round.total,
-      ];
-    }));
+    const renderKey = JSON.stringify(
+      ranking.map((entry) => {
+        const player = playersMap(room)[entry.id];
+        const result = round.results?.[entry.id] || {};
+        return [
+          entry.id,
+          entry.rank,
+          Number(entry.score) || 0,
+          Number(player?.correctGuesses) || 0,
+          Number(player?.fooledPlayers) || 0,
+          Number(result.roundPoints) || 0,
+          entry.avatar,
+          entry.name,
+          round.number,
+          round.total,
+        ];
+      }),
+    );
 
     if (board.dataset.renderKey !== renderKey) {
       board.dataset.renderKey = renderKey;
-      board.innerHTML = ranking.map((entry) => {
-        const player = playersMap(room)[entry.id];
-        const result = round.results?.[entry.id] || {};
-        return `
+      board.innerHTML = ranking
+        .map((entry) => {
+          const player = playersMap(room)[entry.id];
+          const result = round.results?.[entry.id] || {};
+          return `
           <div class="leaderboard-row rank-${entry.rank} ${entry.id === playerId ? "is-me" : ""}">
             <div class="leaderboard-rank">${entry.rank}</div>
             <div class="leaderboard-avatar">${avatarHTML(entry.avatar, "leaderboard-avatar-img", `صورة ${entry.name || "لاعب"}`)}</div>
@@ -1227,7 +1140,8 @@ function renderRoundResults(room) {
             </div>
           </div>
         `;
-      }).join("");
+        })
+        .join("");
     }
   }
 
@@ -1244,9 +1158,11 @@ function activePlayerIds(room, now = Date.now()) {
   return ids.length ? ids : playerList(room).map((player) => player.id);
 }
 
-
 function countWords(text) {
-  return String(text || "").trim().split(/\s+/).filter(Boolean).length;
+  return String(text || "")
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean).length;
 }
 
 function setChatOpen(open) {
@@ -1282,14 +1198,18 @@ function renderChatMessages(snapshot) {
   const list = document.getElementById("gameChatMessages");
   if (!list) return;
   const docs = [...snapshot.docs].reverse();
-  list.innerHTML = docs.length ? docs.map((item) => {
-    const message = item.data();
-    const mine = message.authorId === playerId;
-    return `<div class="chat-message ${mine ? "mine" : ""}">
+  list.innerHTML = docs.length
+    ? docs
+        .map((item) => {
+          const message = item.data();
+          const mine = message.authorId === playerId;
+          return `<div class="chat-message ${mine ? "mine" : ""}">
       <div class="chat-message-head"><span>${avatarHTML(message.avatar, "chat-message-avatar-img", `صورة ${message.name || "لاعب"}`)}</span><strong>${escapeHTML(message.name || "لاعب")}</strong></div>
       <p>${escapeHTML(message.text || "")}</p>
     </div>`;
-  }).join("") : '<div class="chat-empty">لا توجد رسائل بعد.</div>';
+        })
+        .join("")
+    : '<div class="chat-empty">لا توجد رسائل بعد.</div>';
   list.scrollTop = list.scrollHeight;
 
   snapshot.docChanges().forEach((change) => {
@@ -1322,11 +1242,13 @@ async function sendChatMessage() {
   const input = document.getElementById("gameChatInput");
   const button = document.getElementById("gameChatSend");
   const counter = document.getElementById("chatWordCount");
-  const text = String(input?.value || "").trim().replace(/\s+/g, " ");
+  const text = String(input?.value || "")
+    .trim()
+    .replace(/\s+/g, " ");
   const words = countWords(text);
   if (!text) return;
   if (words > 10) {
-    notify("الرسالة لا يمكن أن تتجاوز 10 كلمات.", { type: "warning" });
+    notify("الرسالة لا يمكن أن تتجاوز 10 كلمات.", {type: "warning"});
     return;
   }
   const me = playersMap(currentRoom)[playerId];
@@ -1345,7 +1267,7 @@ async function sendChatMessage() {
     setChatOpen(false);
   } catch (error) {
     console.error("sendChatMessage failed:", error);
-    notify("تعذر إرسال الرسالة.", { type: "error" });
+    notify("تعذر إرسال الرسالة.", {type: "error"});
   } finally {
     if (button) button.disabled = false;
   }
@@ -1394,9 +1316,7 @@ function renderFinal(room) {
   setPhaseVisibility("finalResultsPhase");
   stopTimer();
   document.getElementById("timerRing")?.classList.add("hidden");
-  const ranking = Array.isArray(room.finalResults) && room.finalResults.length
-    ? room.finalResults
-    : rankingFromPlayers(playersMap(room));
+  const ranking = Array.isArray(room.finalResults) && room.finalResults.length ? room.finalResults : rankingFromPlayers(playersMap(room));
   const winner = ranking[0];
   const winnerCard = document.getElementById("winnerCard");
   const board = document.getElementById("finalLeaderboard");
@@ -1416,14 +1336,14 @@ function renderFinal(room) {
   }
 
   if (board) {
-    const renderKey = JSON.stringify(ranking.map((entry) => [
-      entry.id, entry.rank, Number(entry.score) || 0,
-      Number(entry.correctGuesses) || 0, Number(entry.fooledPlayers) || 0,
-      entry.avatar, entry.name,
-    ]));
+    const renderKey = JSON.stringify(
+      ranking.map((entry) => [entry.id, entry.rank, Number(entry.score) || 0, Number(entry.correctGuesses) || 0, Number(entry.fooledPlayers) || 0, entry.avatar, entry.name]),
+    );
     if (board.dataset.renderKey !== renderKey) {
       board.dataset.renderKey = renderKey;
-      board.innerHTML = ranking.map((entry) => `
+      board.innerHTML = ranking
+        .map(
+          (entry) => `
         <div class="leaderboard-row rank-${entry.rank} ${entry.id === playerId ? "is-me" : ""}">
           <div class="leaderboard-rank">${entry.rank}</div>
           <div class="leaderboard-avatar">${avatarHTML(entry.avatar, "leaderboard-avatar-img", `صورة ${entry.name || "لاعب"}`)}</div>
@@ -1437,7 +1357,9 @@ function renderFinal(room) {
             <small>نقطة</small>
           </div>
         </div>
-      `).join("");
+      `,
+        )
+        .join("");
     }
   }
 
@@ -1450,15 +1372,11 @@ function renderFinal(room) {
   const returnRequested = room.returnRequests?.[playerId] === true;
   if (replayButton) {
     replayButton.disabled = replayRequested;
-    replayButton.innerHTML = replayRequested
-      ? '<i class="fa-solid fa-circle-check"></i> تم طلب إعادة اللعب'
-      : '<i class="fa-solid fa-rotate-right"></i> لعب مرة أخرى';
+    replayButton.innerHTML = replayRequested ? '<i class="fa-solid fa-circle-check"></i> تم طلب إعادة اللعب' : '<i class="fa-solid fa-rotate-right"></i> لعب مرة أخرى';
   }
   if (returnButton) {
     returnButton.disabled = returnRequested;
-    returnButton.innerHTML = returnRequested
-      ? '<i class="fa-solid fa-circle-check"></i> تم طلب العودة'
-      : '<i class="fa-solid fa-door-open"></i> العودة إلى الغرفة';
+    returnButton.innerHTML = returnRequested ? '<i class="fa-solid fa-circle-check"></i> تم طلب العودة' : '<i class="fa-solid fa-door-open"></i> العودة إلى الغرفة';
   }
 }
 
@@ -1490,32 +1408,18 @@ function renderRound(room) {
 }
 
 async function requestReplay() {
-  if (!roomId || !playerId) return;
+  if (!roomId || !playerId || currentRoom?.status !== "finished") return;
   try {
-    await runTransaction(db, async (transaction) => {
-      const roomRef = doc(db, "rooms", roomId);
-      const snapshot = await transaction.get(roomRef);
-      if (!snapshot.exists()) return;
-      const room = snapshot.data();
-      if (room.status !== "finished" || !playersMap(room)[playerId]) return;
-      transaction.update(roomRef, { [`replayRequests.${playerId}`]: true });
-    });
+    await updateDoc(doc(db, "rooms", roomId, "players", playerId), {replayRequested: true, returnRequested: false});
   } catch (error) {
     console.error("requestReplay failed:", error);
   }
 }
 
 async function requestReturnToRoom() {
-  if (!roomId || !playerId) return;
+  if (!roomId || !playerId || currentRoom?.status !== "finished") return;
   try {
-    await runTransaction(db, async (transaction) => {
-      const roomRef = doc(db, "rooms", roomId);
-      const snapshot = await transaction.get(roomRef);
-      if (!snapshot.exists()) return;
-      const room = snapshot.data();
-      if (room.status !== "finished" || !playersMap(room)[playerId]) return;
-      transaction.update(roomRef, { [`returnRequests.${playerId}`]: true });
-    });
+    await updateDoc(doc(db, "rooms", roomId, "players", playerId), {returnRequested: true, replayRequested: false});
   } catch (error) {
     console.error("requestReturnToRoom failed:", error);
   }
@@ -1534,36 +1438,27 @@ async function coordinateFinishedState(room) {
 }
 
 async function startReplay() {
-  if (transitionInProgress) return;
+  if (transitionInProgress || !currentRoom) return;
   transitionInProgress = true;
   try {
-    const roomRef = doc(db, "rooms", roomId);
+    const roomRef = getRoomRef();
+    const ids = playerList(currentRoom).map((player) => player.id);
     await runTransaction(db, async (transaction) => {
-      const snapshot = await transaction.get(roomRef);
-      if (!snapshot.exists()) return;
-      const room = snapshot.data();
+      const roomDoc = await transaction.get(roomRef);
+      if (!roomDoc.exists()) return;
+      const room = roomDoc.data();
       if (room.hostId !== playerId || room.status !== "finished") return;
-
-      const resetPlayers = Object.fromEntries(Object.entries(playersMap(room)).map(([id, player]) => [id, {
-        ...player,
-        score: 0,
-        correctGuesses: 0,
-        fooledPlayers: 0,
-      }]));
-
-      transaction.update(roomRef, {
-        status: "starting",
-        players: resetPlayers,
-        round: null,
-        usedQuestionIds: [],
-        usedFactKeys: [],
-        finalResults: null,
-        replayRequests: {},
-        returnRequests: {},
-        gameError: null,
-        finishedAt: null,
-        gamePlayerCount: playerList(room).length,
+      const playerEntries = await Promise.all(
+        ids.map(async (id) => {
+          const ref = doc(db, "rooms", roomId, "players", id);
+          const snap = await transaction.get(ref);
+          return {ref, snap};
+        }),
+      );
+      playerEntries.forEach(({ref, snap}) => {
+        if (snap.exists()) transaction.update(ref, {score: 0, correctGuesses: 0, fooledPlayers: 0, replayRequested: false, returnRequested: false});
       });
+      transaction.update(roomRef, {status: "starting", currentRoundId: null, currentRoundNumber: 0, usedQuestionIds: [], usedFactKeys: [], finalResults: null, gameError: null, finishedAt: null, gamePlayerCount: ids.length, lastActivityAt: serverTimestamp()});
     });
   } catch (error) {
     console.error("startReplay failed:", error);
@@ -1573,37 +1468,27 @@ async function startReplay() {
 }
 
 async function resetToLobby() {
-  if (transitionInProgress) return;
+  if (transitionInProgress || !currentRoom) return;
   transitionInProgress = true;
   try {
-    const roomRef = doc(db, "rooms", roomId);
+    const roomRef = getRoomRef();
+    const ids = playerList(currentRoom).map((player) => player.id);
     await runTransaction(db, async (transaction) => {
-      const snapshot = await transaction.get(roomRef);
-      if (!snapshot.exists()) return;
-      const room = snapshot.data();
+      const roomDoc = await transaction.get(roomRef);
+      if (!roomDoc.exists()) return;
+      const room = roomDoc.data();
       if (room.hostId !== playerId || room.status !== "finished") return;
-
-      const resetPlayers = Object.fromEntries(Object.entries(playersMap(room)).map(([id, player]) => [id, {
-        ...player,
-        ready: id === room.hostId,
-        score: 0,
-        correctGuesses: 0,
-        fooledPlayers: 0,
-      }]));
-
-      transaction.update(roomRef, {
-        status: "waiting",
-        players: resetPlayers,
-        round: null,
-        usedQuestionIds: [],
-        usedFactKeys: [],
-        finalResults: null,
-        replayRequests: {},
-        returnRequests: {},
-        gameError: null,
-        finishedAt: null,
-        gamePlayerCount: 0,
+      const playerEntries = await Promise.all(
+        ids.map(async (id) => {
+          const ref = doc(db, "rooms", roomId, "players", id);
+          const snap = await transaction.get(ref);
+          return {ref, snap};
+        }),
+      );
+      playerEntries.forEach(({ref, snap}) => {
+        if (snap.exists()) transaction.update(ref, {ready: ref.id === room.hostId, score: 0, correctGuesses: 0, fooledPlayers: 0, replayRequested: false, returnRequested: false});
       });
+      transaction.update(roomRef, {status: "waiting", currentRoundId: null, currentRoundNumber: 0, usedQuestionIds: [], usedFactKeys: [], finalResults: null, gameError: null, finishedAt: null, gamePlayerCount: 0, lastActivityAt: serverTimestamp(), expiresAt: Timestamp.fromMillis(Date.now() + (room.isPublic ? 5 * 60_000 : 24 * 60 * 60_000))});
     });
   } catch (error) {
     console.error("resetToLobby failed:", error);
@@ -1613,55 +1498,58 @@ async function resetToLobby() {
 }
 
 function listenToGameRoom() {
-  if (!roomId) return;
-  if (unsubscribeGameRoom) unsubscribeGameRoom();
-
-  unsubscribeGameRoom = onSnapshot(
-    doc(db, "rooms", roomId),
-    (snapshot) => {
-      if (!snapshot.exists()) return;
-      const room = snapshot.data();
-      if (!playersMap(room)[playerId]) return;
-
-      currentRoom = room;
-
-      if (room.status === "waiting") {
-        stopTimer();
-        showLoading(false);
-        setPhaseVisibility(null);
-        return;
-      }
-
-      showGameScreen();
-
-      if (room.status === "starting") {
-        setPhaseVisibility(null);
-        showLoading(true, "جاري بدء اللعبة...", "يتم تحديد صاحب الدور الأول.");
-        if (room.hostId === playerId) createFirstRound();
-        return;
-      }
-
-      showLoading(false);
-
-      if (room.status === "playing") {
-        renderRound(room);
-        if (room.hostId === playerId) coordinateHost(room);
-        return;
-      }
-
-      if (room.status === "finished") {
-        renderFinal(room);
-        if (room.hostId === playerId) coordinateFinishedState(room);
-      }
-    },
-    (error) => {
-      console.error("game room listener failed:", error);
+  if (unsubscribeGameState) unsubscribeGameState();
+  unsubscribeGameState = subscribeRoomState((snapshot) => {
+    if (snapshot.error) {
       showGameError("انقطع الاتصال بمزامنة اللعبة. سيحاول Firebase إعادة الاتصال تلقائيًا.");
-    },
-  );
+      return;
+    }
+    const room = snapshot.room;
+    if (!room || !snapshot.playersLoaded || !playersMap(room)[playerId]) return;
+    currentRoom = room;
+
+    // A presence heartbeat must not redraw the question, choices, score bars,
+    // and timers. renderRevision changes only for gameplay-relevant data.
+    if (snapshot.renderRevision === lastGameRenderRevision) return;
+    lastGameRenderRevision = snapshot.renderRevision;
+
+    if (room.status === "waiting") {
+      stopTimer();
+      showLoading(false);
+      setPhaseVisibility(null);
+      return;
+    }
+    showGameScreen();
+    if (room.status === "starting") {
+      setPhaseVisibility(null);
+      showLoading(true, "جاري بدء اللعبة...", "يتم تحديد صاحب الدور الأول.");
+      if (room.hostId === playerId) {
+        void loadQuestionBank().catch((error) => console.error("Question bank preload failed:", error));
+        createFirstRound();
+      }
+      return;
+    }
+    showLoading(false);
+    if (room.status === "playing") {
+      if (room.hostId === playerId && room.round?.phase === "category_selection") {
+        void loadQuestionBank().catch((error) => console.error("Question bank preload failed:", error));
+      }
+      if (!room.round) {
+        showLoading(true, "جاري مزامنة الجولة...", "يتم تحميل السؤال وحالة اللاعبين.");
+        return;
+      }
+      renderRound(room);
+      if (room.hostId === playerId) coordinateHost(room);
+      return;
+    }
+    if (room.status === "finished") {
+      renderFinal(room);
+      if (room.hostId === playerId) coordinateFinishedState(room);
+    }
+  });
 }
 
-export function initGameForRoom({ roomId: id, roomCode: code, playerId: pid }) {
+export function initGameForRoom({roomId: id, roomCode: code, playerId: pid}) {
   const changed = roomId !== id || playerId !== pid;
   roomId = id;
   roomCode = code;
@@ -1671,6 +1559,7 @@ export function initGameForRoom({ roomId: id, roomCode: code, playerId: pid }) {
     stopTimer();
     transitionInProgress = false;
     currentRoom = null;
+    lastGameRenderRevision = null;
   }
 
   bindChatControls();
@@ -1686,13 +1575,14 @@ export function stopGame() {
   chatListenerStartedAt = 0;
   seenChatMessageIds = new Set();
   setChatOpen(false);
-  if (unsubscribeGameRoom) unsubscribeGameRoom();
-  unsubscribeGameRoom = null;
+  if (unsubscribeGameState) unsubscribeGameState();
+  unsubscribeGameState = null;
   roomId = null;
   roomCode = null;
   playerId = null;
   currentRoom = null;
   transitionInProgress = false;
+  lastGameRenderRevision = null;
   showGameError("");
 }
 
@@ -1710,4 +1600,4 @@ document.getElementById("gameLeaveButton")?.addEventListener("click", () => {
   window.dispatchEvent(new CustomEvent("taleela:leave-room"));
 });
 
-console.log("Taleela Game Engine v7.2 loaded");
+console.log("Taleela Game Engine v8.0.0 Stage 1 loaded");

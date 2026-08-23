@@ -1,37 +1,59 @@
-import { db, ensureAuth } from "./firebase.js";
-import { notify, confirmAction } from "./ui.js";
+import {db, ensureAuth} from "./firebase.js";
+import {notify, confirmAction} from "./ui.js";
 
 import {
   Timestamp,
-  addDoc,
   collection,
   doc,
   getDoc,
-  getDocFromServer,
   getDocs,
-  onSnapshot,
+  limit,
+  orderBy,
   query,
   runTransaction,
   serverTimestamp,
+  setDoc,
   updateDoc,
   where,
 } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
 
-import {
-  GAME_CATEGORIES,
-  categoryHasQuestions,
-  initGameForRoom,
-  stopGame,
-} from "./game.js";
+import {GAME_CATEGORIES, categoryHasQuestions} from "./categories.js";
+import {startRoomStore, stopRoomStore, subscribeRoomState} from "./room-store.js";
 
-const ROOM_SCHEMA_VERSION = 5;
-const HEARTBEAT_INTERVAL_MS = 15_000;
-const HOST_STALE_MS = 45_000;
+let gameModulePromise = null;
+let loadedGameModule = null;
+let gameLifecycleToken = 0;
+
+function loadGameModule() {
+  if (!gameModulePromise) {
+    gameModulePromise = import("./game.js").then((module) => {
+      loadedGameModule = module;
+      return module;
+    });
+  }
+  return gameModulePromise;
+}
+
+async function initLoadedGameForRoom(options) {
+  const token = ++gameLifecycleToken;
+  const module = await loadGameModule();
+  if (token !== gameLifecycleToken) return;
+  module.initGameForRoom(options);
+}
+
+function stopLoadedGame() {
+  gameLifecycleToken += 1;
+  loadedGameModule?.stopGame?.();
+}
+
+const ROOM_SCHEMA_VERSION = 6;
+const HEARTBEAT_INTERVAL_MS = 30_000;
+const HOST_STALE_MS = 90_000;
 const MIN_PLAYERS = 2;
 const MAX_PLAYER_LIMIT = 8;
 const MIN_CATEGORIES = 5;
 const DEFAULT_AVATAR = "avatar-01";
-const AVATAR_IDS = Array.from({ length: 20 }, (_, index) => `avatar-${String(index + 1).padStart(2, "0")}`);
+const AVATAR_IDS = Array.from({length: 20}, (_, index) => `avatar-${String(index + 1).padStart(2, "0")}`);
 const PROFILE_NAME_KEY = "taleela_profile_name";
 const PROFILE_AVATAR_KEY = "taleela_profile_avatar";
 const ACTIVE_SESSION_KEY = "taleela_active_room_v1";
@@ -51,6 +73,8 @@ let profileModalContext = "home";
 let profileReservationRoom = null;
 let resumeInProgress = false;
 let bootstrapComplete = false;
+let lastRoomKeepAliveAt = 0;
+let lastLobbyRevision = null;
 
 const homeScreen = document.getElementById("homeScreen");
 const roomScreen = document.getElementById("roomScreen");
@@ -118,7 +142,7 @@ function normalizeAvatarId(value) {
 }
 
 function avatarSrc(value) {
-  return `assets/Users/${normalizeAvatarId(value)}.png`;
+  return `assets/Users/${normalizeAvatarId(value)}.webp`;
 }
 
 function avatarHTML(value, className = "avatar-image", alt = "صورة اللاعب") {
@@ -134,7 +158,9 @@ function getTakenAvatars(room, exceptPlayerId = null) {
 }
 
 function saveLocalProfile(name, avatar) {
-  const cleanName = String(name || "").trim().slice(0, 20);
+  const cleanName = String(name || "")
+    .trim()
+    .slice(0, 20);
   const cleanAvatar = normalizeAvatarId(avatar);
   try {
     localStorage.setItem(PROFILE_NAME_KEY, cleanName);
@@ -151,7 +177,9 @@ function loadLocalProfile() {
   let name = "";
   let avatar = DEFAULT_AVATAR;
   try {
-    name = String(localStorage.getItem(PROFILE_NAME_KEY) || "").trim().slice(0, 20);
+    name = String(localStorage.getItem(PROFILE_NAME_KEY) || "")
+      .trim()
+      .slice(0, 20);
     avatar = normalizeAvatarId(localStorage.getItem(PROFILE_AVATAR_KEY));
   } catch {
     // Keep defaults when storage is blocked.
@@ -165,6 +193,13 @@ function updateHomeProfileSummary() {
   const name = nameInput?.value?.trim() || "";
   if (homeProfileName) homeProfileName.textContent = name || "سجّل اسمك وصورتك";
   if (homeProfileAvatar) homeProfileAvatar.src = avatarSrc(selectedAvatar);
+}
+
+function ensureProfileAvatarImages() {
+  document.querySelectorAll("#profileAvatars img[data-src]").forEach((image) => {
+    image.src = image.dataset.src;
+    image.removeAttribute("data-src");
+  });
 }
 
 function setProfileMessage(message = "", type = "info") {
@@ -197,16 +232,15 @@ function renderProfileAvatars(room = profileReservationRoom) {
     }
   });
   if (avatarReservationHint) {
-    avatarReservationHint.textContent = room
-      ? "الصور التي اختارها لاعبو الغرفة تظهر مقفلة ومحجوزة فورًا."
-      : "اختر أي صورة؛ داخل الغرفة لا يمكن للاعبين استخدام الصورة نفسها.";
+    avatarReservationHint.textContent = room ? "الصور التي اختارها لاعبو الغرفة تظهر مقفلة ومحجوزة فورًا." : "اختر أي صورة؛ داخل الغرفة لا يمكن للاعبين استخدام الصورة نفسها.";
   }
 }
 
 function openProfileEditor(context = "home", room = currentRoom) {
   if (!profileModal) return;
+  ensureProfileAvatarImages();
   if (context === "room" && room?.status !== "waiting") {
-    notify("يمكن تعديل الاسم والصورة من غرفة الانتظار فقط.", { type: "warning" });
+    notify("يمكن تعديل الاسم والصورة من غرفة الانتظار فقط.", {type: "warning"});
     return;
   }
   profileModalContext = context;
@@ -248,7 +282,7 @@ function playerList(room) {
 }
 
 function isLegacyRoom(room) {
-  return Array.isArray(room?.players) || Number(room?.schemaVersion || 1) < ROOM_SCHEMA_VERSION;
+  return Number(room?.schemaVersion || 1) < ROOM_SCHEMA_VERSION;
 }
 
 function valueToMillis(value) {
@@ -263,7 +297,7 @@ function valueToMillis(value) {
 
 function generateRoomCode() {
   const characters = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
-  return Array.from({ length: 6 }, () => characters[Math.floor(Math.random() * characters.length)]).join("");
+  return Array.from({length: 6}, () => characters[Math.floor(Math.random() * characters.length)]).join("");
 }
 
 function getCurrentPlayer(room) {
@@ -332,9 +366,7 @@ function setRoomStatus(room) {
 
 function renderPlayers(room) {
   if (!playersList) return;
-  const players = playerList(room).sort(
-    (a, b) => valueToMillis(a.joinedAt) - valueToMillis(b.joinedAt) || String(a.id).localeCompare(String(b.id)),
-  );
+  const players = playerList(room).sort((a, b) => valueToMillis(a.joinedAt) - valueToMillis(b.joinedAt) || String(a.id).localeCompare(String(b.id)));
   const maxPlayers = roomMaxPlayers(room);
 
   playersList.innerHTML = "";
@@ -360,11 +392,15 @@ function renderPlayers(room) {
       <span class="${ready ? "player-ready" : "player-waiting"}">
         ${ready ? '<i class="fa-solid fa-check"></i> جاهز' : "في الانتظار"}
       </span>
-      ${room.hostId === currentPlayerId && player.id !== currentPlayerId && room.status === "waiting" ? `
+      ${
+        room.hostId === currentPlayerId && player.id !== currentPlayerId && room.status === "waiting"
+          ? `
         <button class="remove-player-button" type="button" data-remove-player="${escapeHTML(player.id)}" title="إزالة ${escapeHTML(player.name || "اللاعب")}" aria-label="إزالة ${escapeHTML(player.name || "اللاعب")}">
           <i class="fa-solid fa-user-minus"></i>
         </button>
-      ` : ""}
+      `
+          : ""
+      }
     `;
     const removeButton = card.querySelector("[data-remove-player]");
     removeButton?.addEventListener("click", () => removePlayerFromRoom(player.id));
@@ -408,7 +444,7 @@ function renderCategories(room) {
     if (isSelected) card.classList.add("selected");
     if (!canEdit) card.classList.add("disabled");
     if (!categoryHasQuestions(category.id)) card.classList.add("unavailable");
-    
+
     card.innerHTML = `
       <div class="category-icon"><i class="${category.icon}"></i></div>
       <div class="category-name">${escapeHTML(category.name)}</div>
@@ -433,10 +469,7 @@ function canStartGame(room) {
   if (!room || room.status !== "waiting") return false;
   const players = playerList(room);
   const validCategories = Array.isArray(room.categories) ? room.categories.filter(categoryHasQuestions) : [];
-  return players.length >= MIN_PLAYERS
-    && players.length <= roomMaxPlayers(room)
-    && players.every((player) => player.ready === true)
-    && validCategories.length >= MIN_CATEGORIES;
+  return players.length >= MIN_PLAYERS && players.length <= roomMaxPlayers(room) && players.every((player) => player.ready === true) && validCategories.length >= MIN_CATEGORIES;
 }
 
 function updateReadyButton(room) {
@@ -449,9 +482,7 @@ function updateReadyButton(room) {
 
   readyButton.disabled = room.status !== "waiting";
   readyButton.classList.toggle("ready-active", player.ready === true);
-  readyButton.innerHTML = player.ready
-    ? '<i class="fa-solid fa-circle-check"></i> جاهز ✓'
-    : '<i class="fa-solid fa-check"></i> جاهز';
+  readyButton.innerHTML = player.ready ? '<i class="fa-solid fa-circle-check"></i> جاهز ✓' : '<i class="fa-solid fa-check"></i> جاهز';
 }
 
 function updateStartButton(room) {
@@ -518,7 +549,7 @@ function readSession() {
     const roomCode = sessionStorage.getItem("taleela_room_code");
     const playerId = sessionStorage.getItem("taleela_player_id");
     if (!roomId || !roomCode || !playerId) return null;
-    const migrated = { roomId, roomCode, playerId, savedAt: Date.now() };
+    const migrated = {roomId, roomCode, playerId, savedAt: Date.now()};
     localStorage.setItem(ACTIVE_SESSION_KEY, JSON.stringify(migrated));
     return migrated;
   } catch (error) {
@@ -541,6 +572,8 @@ function clearSession() {
 function stopRoomListener() {
   if (unsubscribeRoom) unsubscribeRoom();
   unsubscribeRoom = null;
+  lastLobbyRevision = null;
+  stopRoomStore();
 }
 
 function stopHeartbeat() {
@@ -551,9 +584,23 @@ function stopHeartbeat() {
 async function sendHeartbeat() {
   if (!currentRoomId || !currentPlayerId || isLeavingRoom) return;
   try {
-    await updateDoc(doc(db, "rooms", currentRoomId), {
-      [`players.${currentPlayerId}.lastSeen`]: serverTimestamp(),
-    });
+    await setDoc(
+      doc(db, "rooms", currentRoomId, "presence", currentPlayerId),
+      {id: currentPlayerId, lastSeen: serverTimestamp()},
+      {merge: true},
+    );
+
+    // Temporary Stage-1 expiry refresh for public waiting rooms. Presence will
+    // move to Realtime Database in Stage 2, but this already prevents abandoned
+    // public rooms from remaining visible forever.
+    const now = Date.now();
+    if (currentRoom?.hostId === currentPlayerId && currentRoom?.isPublic && currentRoom?.status === "waiting" && now - lastRoomKeepAliveAt >= 60_000) {
+      lastRoomKeepAliveAt = now;
+      await updateDoc(doc(db, "rooms", currentRoomId), {
+        lastActivityAt: serverTimestamp(),
+        expiresAt: Timestamp.fromMillis(now + 5 * 60_000),
+      });
+    }
   } catch (error) {
     console.warn("heartbeat failed:", error);
   }
@@ -570,12 +617,20 @@ function isHostStale(room) {
   const host = map[room?.hostId];
   if (!host) return true;
   const lastSeen = valueToMillis(host.lastSeen);
-  return lastSeen > 0 && Date.now() - lastSeen > HOST_STALE_MS;
+  return !lastSeen || Date.now() - lastSeen > HOST_STALE_MS;
 }
 
 function chooseTakeoverCandidate(room) {
-  return playerList(room)
-    .sort((a, b) => valueToMillis(a.joinedAt) - valueToMillis(b.joinedAt) || String(a.id).localeCompare(String(b.id)))[0] || null;
+  const now = Date.now();
+  return (
+    playerList(room)
+      .filter((player) => player.id !== room?.hostId)
+      .filter((player) => {
+        const lastSeen = valueToMillis(player.lastSeen);
+        return !lastSeen || now - lastSeen <= HOST_STALE_MS;
+      })
+      .sort((a, b) => valueToMillis(a.joinedAt) - valueToMillis(b.joinedAt) || String(a.id).localeCompare(String(b.id)))[0] || null
+  );
 }
 
 async function attemptHostTakeover(room) {
@@ -587,11 +642,22 @@ async function attemptHostTakeover(room) {
   try {
     const roomRef = doc(db, "rooms", currentRoomId);
     await runTransaction(db, async (transaction) => {
-      const snapshot = await transaction.get(roomRef);
-      if (!snapshot.exists()) return;
-      const latest = snapshot.data();
-      if (!playersMap(latest)[currentPlayerId] || latest.hostId === currentPlayerId || !isHostStale(latest)) return;
-      transaction.update(roomRef, { hostId: currentPlayerId });
+      const roomSnapshot = await transaction.get(roomRef);
+      if (!roomSnapshot.exists()) return;
+      const latest = roomSnapshot.data();
+      if (latest.hostId === currentPlayerId) return;
+
+      const hostPresenceRef = latest.hostId ? doc(db, "rooms", currentRoomId, "presence", latest.hostId) : null;
+      const hostPresenceSnapshot = hostPresenceRef ? await transaction.get(hostPresenceRef) : null;
+      const hostLastSeen = hostPresenceSnapshot?.exists() ? valueToMillis(hostPresenceSnapshot.data().lastSeen) : 0;
+      if (hostLastSeen && Date.now() - hostLastSeen <= HOST_STALE_MS) return;
+
+      transaction.update(roomRef, {
+        hostId: currentPlayerId,
+        hostName: candidate.name || "لاعب",
+        hostAvatar: normalizeAvatarId(candidate.avatar),
+        lastActivityAt: serverTimestamp(),
+      });
     });
   } catch (error) {
     console.warn("host takeover failed:", error);
@@ -602,45 +668,48 @@ async function attemptHostTakeover(room) {
 
 function listenToRoom(id) {
   stopRoomListener();
-  const roomRef = doc(db, "rooms", id);
+  startRoomStore({roomId: id, playerId: currentPlayerId});
 
-  unsubscribeRoom = onSnapshot(
-    roomRef,
-    (snapshot) => {
-      if (!snapshot.exists()) {
-        if (!isLeavingRoom) {
-          notify("الغرفة لم تعد موجودة.", { type: "warning", title: "تم إغلاق الغرفة" });
-          resetApplicationToHome();
-        }
-        return;
+  unsubscribeRoom = subscribeRoomState((snapshot) => {
+    if (snapshot.error) {
+      console.error("Room store error:", snapshot.error);
+      showRoomError("انقطع الاتصال بالغرفة. سيتم الاستمرار في محاولة الاتصال تلقائيًا.");
+      return;
+    }
+
+    if (snapshot.roomLoaded && !snapshot.roomExists) {
+      if (!isLeavingRoom) {
+        notify("الغرفة لم تعد موجودة.", {type: "warning", title: "تم إغلاق الغرفة"});
+        resetApplicationToHome();
       }
+      return;
+    }
 
-      const room = snapshot.data();
-      if (isLegacyRoom(room)) {
-        showRoomError("هذه الغرفة أُنشئت بإصدار قديم. أنشئ غرفة جديدة باستخدام النسخة الحالية.");
-        return;
+    const room = snapshot.room;
+    if (!room) return;
+    if (isLegacyRoom(room)) {
+      showRoomError("هذه الغرفة أُنشئت بإصدار قديم. أنشئ غرفة جديدة باستخدام النسخة الحالية.");
+      return;
+    }
+
+    if (snapshot.playersLoaded && !playersMap(room)[currentPlayerId]) {
+      if (!isLeavingRoom) {
+        notify("لم تعد عضوًا في هذه الغرفة. قد يكون المضيف قد أزالك.", {type: "warning", title: "تمت مغادرة الغرفة"});
+        resetApplicationToHome();
       }
+      return;
+    }
 
-      if (!playersMap(room)[currentPlayerId]) {
-        // Firestore can briefly deliver a cached pre-join snapshot when the
-        // document listener starts. During the short join grace period we
-        // ignore that stale snapshot instead of ejecting the player.
-        if (Date.now() < membershipGraceUntil) {
-          console.debug("Ignoring stale pre-join room snapshot.");
-          return;
-        }
-        if (!isLeavingRoom) {
-          notify("لم تعد عضوًا في هذه الغرفة. قد يكون المضيف قد أزالك.", { type: "warning", title: "تمت مغادرة الغرفة" });
-          resetApplicationToHome();
-        }
-        return;
-      }
+    if (!snapshot.playersLoaded) return;
+    currentRoom = room;
+    currentRoomCode = room.code || currentRoomCode;
+    saveSession();
 
-      membershipGraceUntil = 0;
-
-      currentRoom = room;
-      currentRoomCode = room.code || currentRoomCode;
-      saveSession();
+    // Presence heartbeats update frequently. They are kept in currentRoom for
+    // takeover checks, but they must not rebuild the entire lobby/game DOM.
+    const needsLobbyRender = snapshot.lobbyRevision !== lastLobbyRevision;
+    if (needsLobbyRender) {
+      lastLobbyRevision = snapshot.lobbyRevision;
       removeRoomError();
       setRoomStatus(room);
       renderPlayers(room);
@@ -654,83 +723,52 @@ function listenToRoom(id) {
       updateStartButton(room);
 
       if (room.gameError) showRoomError(room.gameError);
+      if (["starting", "playing", "finished"].includes(room.status)) showGameScreen();
+      else showRoomScreen(currentRoomCode);
+    }
 
-      if (["starting", "playing", "finished"].includes(room.status)) {
-        showGameScreen();
-      } else {
-        showRoomScreen(currentRoomCode);
-      }
-
-      if (room.hostId !== currentPlayerId && isHostStale(room)) {
-        attemptHostTakeover(room);
-      }
-    },
-    (error) => {
-      console.error("Room listener failed:", error);
-      showRoomError("انقطع الاتصال بالغرفة. سيتم الاستمرار في محاولة الاتصال تلقائيًا.");
-    },
-  );
+    if (room.hostId !== currentPlayerId && isHostStale(room)) attemptHostTakeover(room);
+  });
 }
 
 async function toggleCategory(categoryId) {
-  if (!currentRoomId || !currentPlayerId) return;
+  if (!currentRoomId || !currentPlayerId || !currentRoom) return;
   try {
-    const roomRef = doc(db, "rooms", currentRoomId);
-    await runTransaction(db, async (transaction) => {
-      const snapshot = await transaction.get(roomRef);
-      if (!snapshot.exists()) throw new Error("ROOM_NOT_FOUND");
-      const room = snapshot.data();
-      if (room.hostId !== currentPlayerId) throw new Error("HOST_ONLY");
-      if (room.status !== "waiting") return;
-
-      const categories = new Set(Array.isArray(room.categories) ? room.categories : []);
-      if (categories.has(categoryId)) {
-        categories.delete(categoryId);
-      } else {
-        categories.add(categoryId);
-      }
-
-      transaction.update(roomRef, { categories: [...categories], gameError: null });
+    if (currentRoom.hostId !== currentPlayerId) throw new Error("HOST_ONLY");
+    if (currentRoom.status !== "waiting") return;
+    const categories = new Set(Array.isArray(currentRoom.categories) ? currentRoom.categories : []);
+    if (categories.has(categoryId)) categories.delete(categoryId);
+    else categories.add(categoryId);
+    await updateDoc(doc(db, "rooms", currentRoomId), {
+      categories: [...categories],
+      gameError: null,
+      lastActivityAt: serverTimestamp(),
     });
   } catch (error) {
     console.error("toggleCategory failed:", error);
-    const messages = {
-      HOST_ONLY: "فقط المضيف يستطيع اختيار الفئات.",
-    };
-    notify(messages[error?.message] || "تعذر حفظ الفئات.", { type: "error" });
+    notify(error?.message === "HOST_ONLY" ? "فقط المضيف يستطيع اختيار الفئات." : "تعذر حفظ الفئات.", {type: "error"});
   }
 }
 
 async function adjustSetting(key, delta) {
-  if (!currentRoomId || !currentPlayerId) return;
+  if (!currentRoomId || !currentPlayerId || !currentRoom) return;
   try {
-    const roomRef = doc(db, "rooms", currentRoomId);
-    await runTransaction(db, async (transaction) => {
-      const snapshot = await transaction.get(roomRef);
-      if (!snapshot.exists()) throw new Error("ROOM_NOT_FOUND");
-      const room = snapshot.data();
-      if (room.hostId !== currentPlayerId) throw new Error("HOST_ONLY");
-      if (room.status !== "waiting") return;
-
-      const current = room.settings || {};
-      const updates = {};
-
-      if (key === "rounds") {
-        updates["settings.rounds"] = Math.max(3, Math.min(12, (Number(current.rounds) || 6) + delta));
-      } else if (key === "answerTime") {
-        updates["settings.answerTime"] = Math.max(10, Math.min(60, (Number(current.answerTime) || 15) + delta * 5));
-      } else if (key === "maxPlayers") {
-        const count = playerList(room).length;
-        const next = Math.max(MIN_PLAYERS, Math.min(MAX_PLAYER_LIMIT, (Number(current.maxPlayers) || 4) + delta));
-        if (next < count) throw new Error("PLAYERS_PRESENT");
-        updates["settings.maxPlayers"] = next;
-      }
-
-      transaction.update(roomRef, updates);
-    });
+    if (currentRoom.hostId !== currentPlayerId) throw new Error("HOST_ONLY");
+    if (currentRoom.status !== "waiting") return;
+    const current = currentRoom.settings || {};
+    const updates = {lastActivityAt: serverTimestamp()};
+    if (key === "rounds") updates["settings.rounds"] = Math.max(3, Math.min(12, (Number(current.rounds) || 6) + delta));
+    else if (key === "answerTime") updates["settings.answerTime"] = Math.max(10, Math.min(60, (Number(current.answerTime) || 15) + delta * 5));
+    else if (key === "maxPlayers") {
+      const count = playerList(currentRoom).length;
+      const next = Math.max(MIN_PLAYERS, Math.min(MAX_PLAYER_LIMIT, (Number(current.maxPlayers) || 4) + delta));
+      if (next < count) throw new Error("PLAYERS_PRESENT");
+      updates["settings.maxPlayers"] = next;
+    }
+    await updateDoc(doc(db, "rooms", currentRoomId), updates);
   } catch (error) {
     console.error("adjustSetting failed:", error);
-    if (error?.message === "PLAYERS_PRESENT") notify("لا يمكن جعل الحد الأقصى أقل من عدد اللاعبين الموجودين حاليًا.", { type: "warning" });
+    if (error?.message === "PLAYERS_PRESENT") notify("لا يمكن جعل الحد الأقصى أقل من عدد اللاعبين الموجودين حاليًا.", {type: "warning"});
   }
 }
 
@@ -744,70 +782,73 @@ async function createRoom() {
   try {
     authenticatedUser = authenticatedUser || (await ensureAuth());
     const playerId = authenticatedUser.uid;
-
+    const isPublic = publicRoomToggle?.checked === true;
     let roomCode = null;
-    for (let attempt = 0; attempt < 20; attempt += 1) {
+
+    for (let attempt = 0; attempt < 20 && !roomCode; attempt += 1) {
       const candidate = generateRoomCode();
-      const existing = await getDocs(query(collection(db, "rooms"), where("code", "==", candidate)));
-      if (existing.empty) {
+      const roomRef = doc(db, "rooms", candidate);
+      try {
+        await runTransaction(db, async (transaction) => {
+          const existing = await transaction.get(roomRef);
+          if (existing.exists()) throw new Error("CODE_COLLISION");
+          const now = Timestamp.now();
+          transaction.set(roomRef, {
+            schemaVersion: ROOM_SCHEMA_VERSION,
+            code: candidate,
+            hostId: playerId,
+            hostName: name.slice(0, 20),
+            hostAvatar: selectedAvatar,
+            status: "waiting",
+            isPublic,
+            createdAt: now,
+            lastActivityAt: now,
+            expiresAt: Timestamp.fromMillis(Date.now() + (isPublic ? 5 * 60_000 : 24 * 60 * 60_000)),
+            playerCount: 1,
+            settings: {rounds: 6, answerTime: 15, selectionTime: 20, revealTime: 20, resultsTime: 5, maxPlayers: 4},
+            categories: [],
+            usedQuestionIds: [],
+            usedFactKeys: [],
+            currentRoundId: null,
+            currentRoundNumber: 0,
+            finalResults: null,
+            gameError: null,
+            finishedAt: null,
+            gamePlayerCount: 0,
+          });
+          transaction.set(doc(db, "rooms", candidate, "players", playerId), {
+            id: playerId,
+            name: name.slice(0, 20),
+            avatar: selectedAvatar,
+            ready: true,
+            score: 0,
+            correctGuesses: 0,
+            fooledPlayers: 0,
+            replayRequested: false,
+            returnRequested: false,
+            joinedAt: now,
+          });
+          transaction.set(doc(db, "rooms", candidate, "avatars", selectedAvatar), {playerId, reservedAt: now});
+          transaction.set(doc(db, "rooms", candidate, "presence", playerId), {id: playerId, lastSeen: now});
+        });
         roomCode = candidate;
-        break;
+      } catch (error) {
+        if (error?.message !== "CODE_COLLISION") throw error;
       }
     }
     if (!roomCode) throw new Error("CODE_GENERATION_FAILED");
 
-    const now = Timestamp.now();
-    const roomRef = await addDoc(collection(db, "rooms"), {
-      schemaVersion: ROOM_SCHEMA_VERSION,
-      code: roomCode,
-      hostId: playerId,
-      status: "waiting",
-      isPublic: publicRoomToggle?.checked === true,
-      createdAt: now,
-      settings: {
-        rounds: 6,
-        answerTime: 15,
-        selectionTime: 20,
-        revealTime: 20,
-        resultsTime: 5,
-        maxPlayers: 4,
-      },
-      categories: [],
-      usedQuestionIds: [],
-      usedFactKeys: [],
-      round: null,
-      finalResults: null,
-      replayRequests: {},
-      returnRequests: {},
-      gameError: null,
-      finishedAt: null,
-      gamePlayerCount: 0,
-      players: {
-        [playerId]: {
-          id: playerId,
-          name: name.slice(0, 20),
-          avatar: selectedAvatar,
-          ready: true,
-          score: 0,
-          correctGuesses: 0,
-          fooledPlayers: 0,
-          joinedAt: now,
-          lastSeen: now,
-        },
-      },
-    });
-
     currentRoomCode = roomCode;
     currentPlayerId = playerId;
-    currentRoomId = roomRef.id;
+    currentRoomId = roomCode;
     saveSession();
     showRoomScreen(roomCode);
-    listenToRoom(roomRef.id);
+    listenToRoom(roomCode);
     startHeartbeat();
-    initGameForRoom({ roomId: roomRef.id, roomCode, playerId });
+    void initLoadedGameForRoom({roomId: roomCode, roomCode, playerId}).catch((error) => console.error("Game module load failed:", error));
   } catch (error) {
     console.error("createRoom failed:", error);
-    notify(`تعذر إنشاء الغرفة. ${error.message || "خطأ غير معروف"}`, { type: "error", title: "تعذر إنشاء الغرفة", duration: 6000 });
+    notify(`تعذر إنشاء الغرفة. ${error.message || "خطأ غير معروف"}`, {type: "error", title: "تعذر إنشاء الغرفة", duration: 6000});
   } finally {
     createRoomButton.disabled = false;
     createRoomButton.innerHTML = '<i class="fa-solid fa-plus"></i> إنشاء غرفة';
@@ -818,94 +859,101 @@ async function joinRoom(codeOverride = null) {
   const name = nameInput?.value?.trim();
   const rawCode = codeOverride || homeRoomCodeInput?.value || roomCodeInput?.value || "";
   const code = normalizeCode(rawCode);
-
   if (!requireRegisteredProfile()) return;
   if (code.length !== 6) {
-    notify("رمز الغرفة يجب أن يتكون من 6 أحرف وأرقام.", { type: "warning" });
+    notify("رمز الغرفة يجب أن يتكون من 6 أحرف وأرقام.", {type: "warning"});
     return;
   }
 
   if (confirmJoin) confirmJoin.disabled = true;
   if (joinRoomButton) joinRoomButton.disabled = true;
-  let joinRoomPreview = null;
 
   try {
     authenticatedUser = authenticatedUser || (await ensureAuth());
     const playerId = authenticatedUser.uid;
-    const result = await getDocs(query(collection(db, "rooms"), where("code", "==", code)));
-    if (result.empty) throw new Error("ROOM_NOT_FOUND");
+    const roomRef = doc(db, "rooms", code);
+    const playerRef = doc(db, "rooms", code, "players", playerId);
+    const avatarRef = doc(db, "rooms", code, "avatars", selectedAvatar);
+    const presenceRef = doc(db, "rooms", code, "presence", playerId);
 
-    const roomDoc = result.docs[0];
-    joinRoomPreview = roomDoc.data();
-    const roomRef = doc(db, "rooms", roomDoc.id);
-
-    await runTransaction(db, async (transaction) => {
-      const snapshot = await transaction.get(roomRef);
-      if (!snapshot.exists()) throw new Error("ROOM_NOT_FOUND");
-      const room = snapshot.data();
+    // One transaction is sufficient. The old implementation performed a
+    // preview read, the transaction, then two confirmation reads, which added
+    // several network round trips before the lobby could open.
+    const joined = await runTransaction(db, async (transaction) => {
+      const roomSnapshot = await transaction.get(roomRef);
+      if (!roomSnapshot.exists()) throw new Error("ROOM_NOT_FOUND");
+      const room = roomSnapshot.data();
       if (isLegacyRoom(room)) throw new Error("LEGACY_ROOM");
-      if (room.status !== "waiting") throw new Error("GAME_STARTED");
 
-      const map = playersMap(room);
-      if (map[playerId]) return;
-      if (Object.keys(map).length >= roomMaxPlayers(room)) throw new Error("ROOM_FULL");
-      if (Object.values(map).some((player) => normalizeAvatarId(player.avatar) === selectedAvatar)) {
-        throw new Error("AVATAR_TAKEN");
+      const existingPlayer = await transaction.get(playerRef);
+      if (existingPlayer.exists()) {
+        transaction.set(presenceRef, {id: playerId, lastSeen: serverTimestamp()}, {merge: true});
+        return {room, player: existingPlayer.data()};
       }
 
+      if (room.status !== "waiting") throw new Error("GAME_STARTED");
+      if ((Number(room.playerCount) || 0) >= roomMaxPlayers(room)) throw new Error("ROOM_FULL");
+
+      const avatarSnapshot = await transaction.get(avatarRef);
+      if (avatarSnapshot.exists()) throw new Error("AVATAR_TAKEN");
+
       const now = Timestamp.now();
+      const playerData = {
+        id: playerId,
+        name: name.slice(0, 20),
+        avatar: selectedAvatar,
+        ready: false,
+        score: 0,
+        correctGuesses: 0,
+        fooledPlayers: 0,
+        replayRequested: false,
+        returnRequested: false,
+        joinedAt: now,
+      };
+      const nextCount = (Number(room.playerCount) || 0) + 1;
+      const expiresAt = Timestamp.fromMillis(Date.now() + (room.isPublic ? 5 * 60_000 : 24 * 60 * 60_000));
+
+      transaction.set(playerRef, playerData);
+      transaction.set(avatarRef, {playerId, reservedAt: now});
+      transaction.set(presenceRef, {id: playerId, lastSeen: now});
       transaction.update(roomRef, {
-        [`players.${playerId}`]: {
-          id: playerId,
-          name: name.slice(0, 20),
-          avatar: selectedAvatar,
-          ready: false,
-          score: 0,
-          correctGuesses: 0,
-          fooledPlayers: 0,
-          joinedAt: now,
-          lastSeen: now,
-        },
+        playerCount: nextCount,
+        lastActivityAt: now,
+        expiresAt,
       });
+
+      return {room: {...room, playerCount: nextCount, lastActivityAt: now, expiresAt}, player: playerData};
     });
 
-    // Confirm the committed membership from the server before subscribing.
-    // This prevents the first listener callback from seeing the cached room
-    // state that existed before this player was added.
-    const confirmedSnapshot = await getDocFromServer(roomRef);
-    if (!confirmedSnapshot.exists() || !playersMap(confirmedSnapshot.data())[playerId]) {
-      throw new Error("JOIN_NOT_CONFIRMED");
-    }
+    if (!joined?.player || !joined?.room) throw new Error("JOIN_NOT_CONFIRMED");
+    selectedAvatar = normalizeAvatarId(joined.player.avatar);
+    saveLocalProfile(joined.player.name, joined.player.avatar);
 
     currentRoomCode = code;
     currentPlayerId = playerId;
-    currentRoomId = roomDoc.id;
-    currentRoom = confirmedSnapshot.data();
-    membershipGraceUntil = Date.now() + 6_000;
+    currentRoomId = code;
+    currentRoom = {...joined.room, players: {[playerId]: joined.player}};
     saveSession();
     joinModal?.classList.add("hidden");
     publicRoomsModal?.classList.add("hidden");
     if (roomCodeInput) roomCodeInput.value = "";
     if (homeRoomCodeInput) homeRoomCodeInput.value = "";
     showRoomScreen(code);
-    listenToRoom(roomDoc.id);
+    listenToRoom(code);
     startHeartbeat();
-    initGameForRoom({ roomId: roomDoc.id, roomCode: code, playerId });
+    void initLoadedGameForRoom({roomId: code, roomCode: code, playerId}).catch((error) => console.error("Game module load failed:", error));
   } catch (error) {
     console.error("joinRoom failed:", error);
     const messages = {
       ROOM_NOT_FOUND: "لم يتم العثور على غرفة بهذا الرمز.",
-      LEGACY_ROOM: "هذه الغرفة من إصدار قديم. أنشئ غرفة جديدة بعد تحديث جميع الأجهزة.",
-      GAME_STARTED: "بدأت هذه الغرفة اللعب بالفعل.",
+      LEGACY_ROOM: "هذه الغرفة تعمل بإصدار قديم. اطلب من المضيف إنشاء غرفة جديدة.",
+      GAME_STARTED: "بدأت اللعبة بالفعل ولا يمكن الانضمام الآن.",
       ROOM_FULL: "الغرفة ممتلئة.",
-      AVATAR_TAKEN: "الصورة التي اخترتها محجوزة من لاعب آخر. اختر صورة مختلفة.",
-      JOIN_NOT_CONFIRMED: "تعذر تأكيد انضمامك إلى الغرفة. حاول مرة أخرى.",
+      AVATAR_TAKEN: "الصورة التي اخترتها محجوزة في هذه الغرفة. اختر صورة مختلفة.",
+      JOIN_NOT_CONFIRMED: "تعذر تأكيد عضويتك في الغرفة. حاول مرة أخرى.",
     };
-    notify(messages[error?.message] || "تعذر الانضمام إلى الغرفة.", { type: "error" });
-    if (error?.message === "AVATAR_TAKEN") {
-      openProfileEditor("home", joinRoomPreview);
-      setProfileMessage("هذه الصورة محجوزة في الغرفة. اختر صورة غير محجوزة ثم اضغط تسجيل.", "warning");
-    }
+    notify(messages[error?.message] || `تعذر الانضمام إلى الغرفة. ${error?.message || ""}`, {type: "error", title: "تعذر الانضمام", duration: 6500});
+    if (error?.message === "AVATAR_TAKEN") openProfileEditor("home", null);
   } finally {
     if (confirmJoin) confirmJoin.disabled = false;
     if (joinRoomButton) joinRoomButton.disabled = false;
@@ -915,13 +963,34 @@ async function joinRoom(codeOverride = null) {
 async function loadPublicRooms() {
   if (!publicRoomsList) return;
   publicRoomsList.innerHTML = '<div class="empty-state"><i class="fa-solid fa-spinner fa-spin"></i><p>جاري تحميل الغرف...</p></div>';
-
   try {
     authenticatedUser = authenticatedUser || (await ensureAuth());
-    const result = await getDocs(query(collection(db, "rooms"), where("isPublic", "==", true)));
+    const nowTimestamp = Timestamp.now();
+    let result;
+    try {
+      // The expiry predicate keeps abandoned public rooms out of the result on
+      // the server instead of downloading and filtering them on every phone.
+      result = await getDocs(
+        query(
+          collection(db, "rooms"),
+          where("isPublic", "==", true),
+          where("status", "==", "waiting"),
+          where("expiresAt", ">", nowTimestamp),
+          orderBy("expiresAt", "asc"),
+          limit(40),
+        ),
+      );
+    } catch (error) {
+      // Until the included composite index is deployed, keep the public-room
+      // list functional with the legacy equality-only query.
+      if (error?.code !== "failed-precondition") throw error;
+      console.warn("Public-room expiry index is not deployed yet; using fallback query.");
+      result = await getDocs(query(collection(db, "rooms"), where("isPublic", "==", true), where("status", "==", "waiting"), limit(40)));
+    }
+    const now = Date.now();
     const rooms = result.docs
-      .map((item) => ({ id: item.id, ...item.data() }))
-      .filter((room) => !isLegacyRoom(room) && room.status === "waiting" && playerList(room).length < roomMaxPlayers(room))
+      .map((item) => ({id: item.id, ...item.data()}))
+      .filter((room) => !isLegacyRoom(room) && valueToMillis(room.expiresAt) > now && (Number(room.playerCount) || 0) < roomMaxPlayers(room))
       .sort((a, b) => valueToMillis(b.createdAt) - valueToMillis(a.createdAt))
       .slice(0, 20);
 
@@ -930,23 +999,17 @@ async function loadPublicRooms() {
       return;
     }
 
-    publicRoomsList.innerHTML = rooms.map((room) => {
-      const host = playersMap(room)[room.hostId];
-      const count = playerList(room).length;
-      return `
+    publicRoomsList.innerHTML = rooms
+      .map((room) => `
         <div class="public-room-item">
           <div class="public-room-info">
-            <strong>${avatarHTML(host?.avatar, "public-room-avatar-img", `صورة ${host?.name || "لاعب"}`)} <span>غرفة ${escapeHTML(host?.name || "لاعب")}</span></strong>
-            <small>${count}/${roomMaxPlayers(room)} لاعبين • ${escapeHTML(room.code || "------")}</small>
+            <strong>${avatarHTML(room.hostAvatar, "public-room-avatar-img", `صورة ${room.hostName || "لاعب"}`)} <span>غرفة ${escapeHTML(room.hostName || "لاعب")}</span></strong>
+            <small>${Number(room.playerCount) || 0}/${roomMaxPlayers(room)} لاعبين • ${escapeHTML(room.code || room.id)}</small>
           </div>
-          <button type="button" data-public-code="${escapeHTML(room.code || "")}">انضم</button>
-        </div>
-      `;
-    }).join("");
-
-    publicRoomsList.querySelectorAll("[data-public-code]").forEach((button) => {
-      button.addEventListener("click", () => joinRoom(button.dataset.publicCode));
-    });
+          <button type="button" data-public-code="${escapeHTML(room.code || room.id)}">انضم</button>
+        </div>`)
+      .join("");
+    publicRoomsList.querySelectorAll("[data-public-code]").forEach((button) => button.addEventListener("click", () => joinRoom(button.dataset.publicCode)));
   } catch (error) {
     console.error("loadPublicRooms failed:", error);
     publicRoomsList.innerHTML = '<div class="empty-state"><i class="fa-solid fa-triangle-exclamation"></i><p>تعذر تحميل الغرف العامة.</p></div>';
@@ -957,119 +1020,91 @@ async function removePlayerFromRoom(targetPlayerId) {
   if (!currentRoomId || !currentPlayerId || !targetPlayerId || targetPlayerId === currentPlayerId) return;
   const target = playersMap(currentRoom)[targetPlayerId];
   if (!target) return;
-
-  const confirmed = await confirmAction({
-    title: "إزالة لاعب",
-    message: `هل تريد إزالة ${target.name || "هذا اللاعب"} من الغرفة؟`,
-    confirmText: "إزالة",
-    cancelText: "إلغاء",
-    danger: true,
-  });
+  const confirmed = await confirmAction({title: "إزالة لاعب", message: `هل تريد إزالة ${target.name || "هذا اللاعب"} من الغرفة؟`, confirmText: "إزالة", cancelText: "إلغاء", danger: true});
   if (!confirmed) return;
 
   try {
     const roomRef = doc(db, "rooms", currentRoomId);
     await runTransaction(db, async (transaction) => {
-      const snapshot = await transaction.get(roomRef);
-      if (!snapshot.exists()) throw new Error("ROOM_NOT_FOUND");
-      const room = snapshot.data();
+      const roomSnapshot = await transaction.get(roomRef);
+      if (!roomSnapshot.exists()) throw new Error("ROOM_NOT_FOUND");
+      const room = roomSnapshot.data();
       if (room.hostId !== currentPlayerId) throw new Error("HOST_ONLY");
       if (room.status !== "waiting") throw new Error("WAITING_ONLY");
-      if (targetPlayerId === room.hostId) throw new Error("CANNOT_REMOVE_HOST");
-
-      const updatedPlayers = { ...playersMap(room) };
-      if (!updatedPlayers[targetPlayerId]) return;
-      delete updatedPlayers[targetPlayerId];
-
-      const replayRequests = { ...(room.replayRequests || {}) };
-      const returnRequests = { ...(room.returnRequests || {}) };
-      delete replayRequests[targetPlayerId];
-      delete returnRequests[targetPlayerId];
-
+      const targetRef = doc(db, "rooms", currentRoomId, "players", targetPlayerId);
+      const targetSnapshot = await transaction.get(targetRef);
+      if (!targetSnapshot.exists()) return;
+      const targetData = targetSnapshot.data();
+      transaction.delete(targetRef);
+      transaction.delete(doc(db, "rooms", currentRoomId, "presence", targetPlayerId));
+      transaction.delete(doc(db, "rooms", currentRoomId, "avatars", normalizeAvatarId(targetData.avatar)));
       transaction.update(roomRef, {
-        players: updatedPlayers,
-        replayRequests,
-        returnRequests,
+        playerCount: Math.max(0, (Number(room.playerCount) || 1) - 1),
+        lastActivityAt: serverTimestamp(),
       });
     });
-    notify(`تمت إزالة ${target.name || "اللاعب"} من الغرفة.`, { type: "success" });
+    notify(`تمت إزالة ${target.name || "اللاعب"} من الغرفة.`, {type: "success"});
   } catch (error) {
     console.error("removePlayerFromRoom failed:", error);
-    const messages = {
-      HOST_ONLY: "فقط المضيف يستطيع إزالة اللاعبين.",
-      WAITING_ONLY: "يمكن إزالة اللاعبين من غرفة الانتظار فقط.",
-      CANNOT_REMOVE_HOST: "لا يمكن للمضيف إزالة نفسه بهذه الطريقة.",
-      ROOM_NOT_FOUND: "الغرفة لم تعد موجودة.",
-    };
-    notify(messages[error?.message] || "تعذر إزالة اللاعب.", { type: "error" });
+    const messages = {HOST_ONLY: "فقط المضيف يستطيع إزالة اللاعبين.", WAITING_ONLY: "يمكن إزالة اللاعبين من غرفة الانتظار فقط.", ROOM_NOT_FOUND: "الغرفة لم تعد موجودة."};
+    notify(messages[error?.message] || "تعذر إزالة اللاعب.", {type: "error"});
   }
 }
 
 async function toggleReady() {
-  if (!currentRoomId || !currentPlayerId) return;
+  if (!currentRoomId || !currentPlayerId || !currentRoom) return;
   readyButton.disabled = true;
   try {
-    const roomRef = doc(db, "rooms", currentRoomId);
-    await runTransaction(db, async (transaction) => {
-      const snapshot = await transaction.get(roomRef);
-      if (!snapshot.exists()) throw new Error("ROOM_NOT_FOUND");
-      const room = snapshot.data();
-      const player = playersMap(room)[currentPlayerId];
-      if (!player) throw new Error("PLAYER_NOT_FOUND");
-      if (room.status !== "waiting") return;
-      transaction.update(roomRef, { [`players.${currentPlayerId}.ready`]: player.ready !== true });
-    });
+    const player = playersMap(currentRoom)[currentPlayerId];
+    if (!player) throw new Error("PLAYER_NOT_FOUND");
+    if (currentRoom.status !== "waiting") return;
+    await updateDoc(doc(db, "rooms", currentRoomId, "players", currentPlayerId), {ready: player.ready !== true});
   } catch (error) {
     console.error("toggleReady failed:", error);
-    notify("تعذر تغيير حالة الجاهزية.", { type: "error" });
+    notify("تعذر تغيير حالة الجاهزية.", {type: "error"});
   } finally {
     readyButton.disabled = false;
   }
 }
 
 async function startGame() {
-  if (!currentRoomId || !currentPlayerId) return;
+  if (!currentRoomId || !currentPlayerId || !currentRoom) return;
   startGameButton.disabled = true;
   try {
     const roomRef = doc(db, "rooms", currentRoomId);
+    const ids = playerList(currentRoom).map((player) => player.id);
     await runTransaction(db, async (transaction) => {
-      const snapshot = await transaction.get(roomRef);
-      if (!snapshot.exists()) throw new Error("ROOM_NOT_FOUND");
-      const room = snapshot.data();
+      const roomSnapshot = await transaction.get(roomRef);
+      if (!roomSnapshot.exists()) throw new Error("ROOM_NOT_FOUND");
+      const room = roomSnapshot.data();
       if (room.hostId !== currentPlayerId) throw new Error("HOST_ONLY");
-      if (!canStartGame(room)) throw new Error("NOT_READY");
-
-      const resetPlayers = Object.fromEntries(
-        Object.entries(playersMap(room)).map(([id, player]) => [id, {
-          ...player,
-          score: 0,
-          correctGuesses: 0,
-          fooledPlayers: 0,
-        }]),
-      );
-
+      if (room.status !== "waiting") throw new Error("NOT_READY");
+      const playerSnapshots = [];
+      for (const id of ids) playerSnapshots.push(await transaction.get(doc(db, "rooms", currentRoomId, "players", id)));
+      const players = Object.fromEntries(playerSnapshots.filter((item) => item.exists()).map((item) => [item.id, {id: item.id, ...item.data()}]));
+      const merged = {...room, players};
+      if (!canStartGame(merged) || Object.keys(players).length !== Number(room.playerCount)) throw new Error("NOT_READY");
+      playerSnapshots.forEach((item) => {
+        if (!item.exists()) return;
+        transaction.update(item.ref, {score: 0, correctGuesses: 0, fooledPlayers: 0, replayRequested: false, returnRequested: false});
+      });
       transaction.update(roomRef, {
         status: "starting",
-        players: resetPlayers,
-        round: null,
+        currentRoundId: null,
+        currentRoundNumber: 0,
         usedQuestionIds: [],
         usedFactKeys: [],
         finalResults: null,
-        replayRequests: {},
-        returnRequests: {},
         gameError: null,
         finishedAt: null,
-        gamePlayerCount: playerList(room).length,
+        gamePlayerCount: Object.keys(players).length,
+        lastActivityAt: serverTimestamp(),
       });
     });
   } catch (error) {
     console.error("startGame failed:", error);
-    const message = error?.message === "HOST_ONLY"
-      ? "فقط المضيف يستطيع بدء اللعبة."
-      : error?.message === "NOT_READY"
-        ? "اختر 5 فئات على الأقل، وتأكد من وجود لاعبين على الأقل وجاهزية الجميع."
-        : "تعذر بدء اللعبة.";
-    notify(message, { type: "warning" });
+    const message = error?.message === "HOST_ONLY" ? "فقط المضيف يستطيع بدء اللعبة." : error?.message === "NOT_READY" ? "اختر 5 فئات على الأقل، وتأكد من وجود لاعبين على الأقل وجاهزية الجميع." : "تعذر بدء اللعبة.";
+    notify(message, {type: "warning"});
   } finally {
     startGameButton.disabled = false;
   }
@@ -1077,36 +1112,40 @@ async function startGame() {
 
 async function leaveRoom() {
   if (!currentRoomId || !currentPlayerId) return;
-  if (!(await confirmAction({ title: "مغادرة الغرفة", message: "هل تريد مغادرة الغرفة؟", confirmText: "مغادرة", cancelText: "البقاء", danger: true }))) return;
-
+  if (!(await confirmAction({title: "مغادرة الغرفة", message: "هل تريد مغادرة الغرفة؟", confirmText: "مغادرة", cancelText: "البقاء", danger: true}))) return;
   isLeavingRoom = true;
   if (leaveRoomButton) leaveRoomButton.disabled = true;
 
   try {
     const roomRef = doc(db, "rooms", currentRoomId);
+    const remaining = playerList(currentRoom).filter((player) => player.id !== currentPlayerId);
+    const nextHost = remaining[0] || null;
     await runTransaction(db, async (transaction) => {
-      const snapshot = await transaction.get(roomRef);
-      if (!snapshot.exists()) return;
-      const room = snapshot.data();
-      const map = playersMap(room);
-      if (!map[currentPlayerId]) return;
+      const roomSnapshot = await transaction.get(roomRef);
+      if (!roomSnapshot.exists()) return;
+      const room = roomSnapshot.data();
+      const playerRef = doc(db, "rooms", currentRoomId, "players", currentPlayerId);
+      const playerSnapshot = await transaction.get(playerRef);
+      if (!playerSnapshot.exists()) return;
+      const player = playerSnapshot.data();
+      transaction.delete(playerRef);
+      transaction.delete(doc(db, "rooms", currentRoomId, "presence", currentPlayerId));
+      transaction.delete(doc(db, "rooms", currentRoomId, "avatars", normalizeAvatarId(player.avatar)));
 
-      const ids = Object.keys(map);
-      if (ids.length === 1) {
+      if ((Number(room.playerCount) || 1) <= 1) {
         transaction.delete(roomRef);
         return;
       }
-
-      const updated = { ...map };
-      delete updated[currentPlayerId];
-
-      if (room.hostId === currentPlayerId) {
-        const nextHost = Object.values(updated)
-          .sort((a, b) => valueToMillis(a.joinedAt) - valueToMillis(b.joinedAt) || String(a.id).localeCompare(String(b.id)))[0];
-        transaction.update(roomRef, { players: updated, hostId: nextHost.id });
-      } else {
-        transaction.update(roomRef, { players: updated });
+      const updates = {
+        playerCount: Math.max(0, (Number(room.playerCount) || 1) - 1),
+        lastActivityAt: serverTimestamp(),
+      };
+      if (room.hostId === currentPlayerId && nextHost) {
+        updates.hostId = nextHost.id;
+        updates.hostName = nextHost.name || "لاعب";
+        updates.hostAvatar = normalizeAvatarId(nextHost.avatar);
       }
+      transaction.update(roomRef, updates);
     });
   } catch (error) {
     console.error("leaveRoom failed:", error);
@@ -1118,7 +1157,7 @@ async function leaveRoom() {
 function resetApplicationToHome() {
   stopRoomListener();
   stopHeartbeat();
-  stopGame();
+  stopLoadedGame();
   clearSession();
   currentRoomCode = null;
   currentPlayerId = null;
@@ -1169,7 +1208,6 @@ async function resumeActiveSession() {
 async function recoverRoom() {
   const session = readSession();
   if (!session) return false;
-
   authenticatedUser = authenticatedUser || (await ensureAuth());
   if (session.playerId !== authenticatedUser.uid) {
     clearSession();
@@ -1177,14 +1215,14 @@ async function recoverRoom() {
   }
 
   const roomRef = doc(db, "rooms", session.roomId);
-  const snapshot = await getDoc(roomRef);
-  if (!snapshot.exists()) {
+  const playerRef = doc(db, "rooms", session.roomId, "players", authenticatedUser.uid);
+  const [roomSnapshot, playerSnapshot] = await Promise.all([getDoc(roomRef), getDoc(playerRef)]);
+  if (!roomSnapshot.exists() || !playerSnapshot.exists()) {
     clearSession();
     return false;
   }
-
-  const room = snapshot.data();
-  if (isLegacyRoom(room) || !playersMap(room)[authenticatedUser.uid]) {
+  const room = roomSnapshot.data();
+  if (isLegacyRoom(room)) {
     clearSession();
     return false;
   }
@@ -1192,18 +1230,15 @@ async function recoverRoom() {
   currentRoomId = session.roomId;
   currentRoomCode = room.code || session.roomCode;
   currentPlayerId = authenticatedUser.uid;
-  currentRoom = room;
-  const recoveredPlayer = playersMap(room)[authenticatedUser.uid];
-  if (recoveredPlayer) saveLocalProfile(recoveredPlayer.name, recoveredPlayer.avatar);
+  currentRoom = {...room, players: {[authenticatedUser.uid]: playerSnapshot.data()}};
+  saveLocalProfile(playerSnapshot.data().name, playerSnapshot.data().avatar);
   listenToRoom(currentRoomId);
   startHeartbeat();
-  initGameForRoom({ roomId: currentRoomId, roomCode: currentRoomCode, playerId: currentPlayerId });
-
+  await initLoadedGameForRoom({roomId: currentRoomId, roomCode: currentRoomCode, playerId: currentPlayerId});
   if (["starting", "playing", "finished"].includes(room.status)) showGameScreen();
   else showRoomScreen(currentRoomCode);
   return true;
 }
-
 
 const helpButton = document.getElementById("helpButton");
 const exitGameButton = document.getElementById("exitGameButton");
@@ -1221,19 +1256,22 @@ document.querySelectorAll(".social-link").forEach((link) => {
     const href = link.getAttribute("href")?.trim();
     if (!href) {
       event.preventDefault();
-      notify("أضف رابط هذا الحساب داخل index.html أولًا.", { type: "info" });
+      notify("أضف رابط هذا الحساب داخل index.html أولًا.", {type: "info"});
     }
   });
 });
 
 exitGameButton?.addEventListener("click", async () => {
-  if (!(await confirmAction({ title: "الخروج من تعليلة", message: "هل أنت متأكد أنك تريد الخروج من اللعبة؟", confirmText: "خروج", cancelText: "إلغاء", danger: true }))) return;
-  try { window.close(); } catch {}
+  if (!(await confirmAction({title: "الخروج من تعليلة", message: "هل أنت متأكد أنك تريد الخروج من اللعبة؟", confirmText: "خروج", cancelText: "إلغاء", danger: true}))) return;
+  try {
+    window.close();
+  } catch {}
   setTimeout(() => {
-    try { window.location.replace("about:blank"); } catch {}
+    try {
+      window.location.replace("about:blank");
+    } catch {}
   }, 80);
 });
-
 
 avatarButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -1267,38 +1305,31 @@ saveProfileButton?.addEventListener("click", async () => {
   try {
     if (profileModalContext === "room" && currentRoomId && currentPlayerId) {
       const roomRef = doc(db, "rooms", currentRoomId);
+      const playerRef = doc(db, "rooms", currentRoomId, "players", currentPlayerId);
       await runTransaction(db, async (transaction) => {
-        const snapshot = await transaction.get(roomRef);
-        if (!snapshot.exists()) throw new Error("ROOM_NOT_FOUND");
-        const room = snapshot.data();
+        const [roomSnapshot, playerSnapshot] = await Promise.all([transaction.get(roomRef), transaction.get(playerRef)]);
+        if (!roomSnapshot.exists()) throw new Error("ROOM_NOT_FOUND");
+        if (!playerSnapshot.exists()) throw new Error("PLAYER_NOT_FOUND");
+        const room = roomSnapshot.data();
+        const player = playerSnapshot.data();
         if (room.status !== "waiting") throw new Error("GAME_STARTED");
-        const map = playersMap(room);
-        if (!map[currentPlayerId]) throw new Error("PLAYER_NOT_FOUND");
-        const taken = Object.values(map).some((player) =>
-          player?.id !== currentPlayerId && normalizeAvatarId(player.avatar) === selectedAvatar
-        );
-        if (taken) throw new Error("AVATAR_TAKEN");
-        transaction.update(roomRef, {
-          [`players.${currentPlayerId}.name`]: name,
-          [`players.${currentPlayerId}.avatar`]: selectedAvatar,
-        });
+        const oldAvatar = normalizeAvatarId(player.avatar);
+        if (selectedAvatar !== oldAvatar) {
+          const newAvatarRef = doc(db, "rooms", currentRoomId, "avatars", selectedAvatar);
+          const newAvatarSnapshot = await transaction.get(newAvatarRef);
+          if (newAvatarSnapshot.exists()) throw new Error("AVATAR_TAKEN");
+          transaction.delete(doc(db, "rooms", currentRoomId, "avatars", oldAvatar));
+          transaction.set(newAvatarRef, {playerId: currentPlayerId, reservedAt: Timestamp.now()});
+        }
+        transaction.update(playerRef, {name, avatar: selectedAvatar});
+        if (room.hostId === currentPlayerId) transaction.update(roomRef, {hostName: name, hostAvatar: selectedAvatar, lastActivityAt: serverTimestamp()});
       });
-    } else if (profileReservationRoom) {
-      const taken = Object.values(playersMap(profileReservationRoom)).some((player) =>
-        normalizeAvatarId(player.avatar) === selectedAvatar
-      );
-      if (taken) throw new Error("AVATAR_TAKEN");
     }
-
     saveLocalProfile(name, selectedAvatar);
     closeProfileEditor();
   } catch (error) {
     console.error("saveProfile failed:", error);
-    const message = error?.message === "AVATAR_TAKEN"
-      ? "هذه الصورة حُجزت للتو من لاعب آخر. اختر صورة مختلفة."
-      : error?.message === "GAME_STARTED"
-        ? "لا يمكن تعديل الملف الشخصي بعد بدء المباراة."
-        : "تعذر حفظ الملف الشخصي.";
+    const message = error?.message === "AVATAR_TAKEN" ? "هذه الصورة حُجزت للتو من لاعب آخر. اختر صورة مختلفة." : error?.message === "GAME_STARTED" ? "لا يمكن تعديل الملف الشخصي بعد بدء المباراة." : "تعذر حفظ الملف الشخصي.";
     setProfileMessage(message, "error");
     if (currentRoom) renderProfileAvatars(currentRoom);
   } finally {
@@ -1368,7 +1399,7 @@ copyRoomCodeButton?.addEventListener("click", async () => {
       copyRoomCodeButton.innerHTML = '<i class="fa-solid fa-copy"></i> نسخ الرمز';
     }, 1500);
   } catch {
-    notify(`رمز الغرفة: ${currentRoomCode}`, { type: "info", title: "تعذر النسخ تلقائيًا", duration: 7000 });
+    notify(`رمز الغرفة: ${currentRoomCode}`, {type: "info", title: "تعذر النسخ تلقائيًا", duration: 7000});
   }
 });
 
@@ -1402,13 +1433,13 @@ async function bootstrap() {
 
     const code = error?.code || "";
     if (code === "auth/operation-not-allowed") {
-      notify("Anonymous Authentication غير مفعّل في Firebase.", { type: "error", duration: 7000 });
+      notify("Anonymous Authentication غير مفعّل في Firebase.", {type: "error", duration: 7000});
     } else if (code === "auth/admin-restricted-operation") {
-      notify("Firebase يمنع إنشاء المستخدم المجهول. فعّل Anonymous Authentication والسماح بإنشاء الحسابات.", { type: "error", duration: 8000 });
+      notify("Firebase يمنع إنشاء المستخدم المجهول. فعّل Anonymous Authentication والسماح بإنشاء الحسابات.", {type: "error", duration: 8000});
     } else if (code === "auth/network-request-failed") {
-      notify("تعذر الاتصال بـ Firebase بسبب الشبكة.", { type: "error", duration: 7000 });
+      notify("تعذر الاتصال بـ Firebase بسبب الشبكة.", {type: "error", duration: 7000});
     } else {
-      notify(`تعذر الاتصال بخدمات Firebase. ${error?.message || ""}`, { type: "error", duration: 8000 });
+      notify(`تعذر الاتصال بخدمات Firebase. ${error?.message || ""}`, {type: "error", duration: 8000});
     }
   } finally {
     bootstrapComplete = true;
@@ -1419,4 +1450,4 @@ async function bootstrap() {
 }
 
 bootstrap();
-console.log("Taleela App v7.3.0 loaded");
+console.log("Taleela App v8.0.0 Stage 1 loaded");

@@ -17,13 +17,14 @@
     <title>Taleela - تعليلة</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
-    <!-- Taleela v7.2.0 -->
+    <!-- Taleela v8.0.0 — Performance Stage 1 -->
     <!-- =====================================================
          1) الصفحة الرئيسية: إنشاء / انضمام / غرف عامة
     ====================================================== -->
@@ -45,13 +46,13 @@
             <div class="home-mascot-wrap">
               <div class="mascot-orbit orbit-one"></div>
               <div class="mascot-orbit orbit-two"></div>
-              <img class="home-mascot" src="assets/home.png" alt="شخصية تعليلة" draggable="false" />
+              <img class="home-mascot" src="assets/home.webp" alt="شخصية تعليلة" draggable="false" decoding="async" fetchpriority="high" />
               <button id="editProfileButton" class="profile-pencil-button" type="button" aria-label="تعديل الملف الشخصي" title="تعديل الاسم والصورة">
                 <i class="fa-solid fa-pen"></i>
               </button>
             </div>
             <div id="homeProfileSummary" class="home-profile-summary">
-              <img id="homeProfileAvatar" src="assets/Users/avatar-01.png" alt="صورتك" draggable="false" />
+              <img id="homeProfileAvatar" src="assets/Users/avatar-01.webp" alt="صورتك" draggable="false" decoding="async" />
               <div>
                 <small>اللاعب</small>
                 <strong id="homeProfileName">سجّل اسمك وصورتك</strong>
@@ -264,26 +265,26 @@
           <small id="avatarReservationHint">الصورة المحجوزة داخل الغرفة لا يمكن اختيارها.</small>
         </div>
         <div id="profileAvatars" class="profile-avatars">
-          <button class="avatar active" data-avatar="avatar-01" type="button"><img src="assets/Users/avatar-01.png" alt="الصورة 1" draggable="false" /></button>
-          <button class="avatar" data-avatar="avatar-02" type="button"><img src="assets/Users/avatar-02.png" alt="الصورة 2" draggable="false" /></button>
-          <button class="avatar" data-avatar="avatar-03" type="button"><img src="assets/Users/avatar-03.png" alt="الصورة 3" draggable="false" /></button>
-          <button class="avatar" data-avatar="avatar-04" type="button"><img src="assets/Users/avatar-04.png" alt="الصورة 4" draggable="false" /></button>
-          <button class="avatar" data-avatar="avatar-05" type="button"><img src="assets/Users/avatar-05.png" alt="الصورة 5" draggable="false" /></button>
-          <button class="avatar" data-avatar="avatar-06" type="button"><img src="assets/Users/avatar-06.png" alt="الصورة 6" draggable="false" /></button>
-          <button class="avatar" data-avatar="avatar-07" type="button"><img src="assets/Users/avatar-07.png" alt="الصورة 7" draggable="false" /></button>
-          <button class="avatar" data-avatar="avatar-08" type="button"><img src="assets/Users/avatar-08.png" alt="الصورة 8" draggable="false" /></button>
-          <button class="avatar" data-avatar="avatar-09" type="button"><img src="assets/Users/avatar-09.png" alt="الصورة 9" draggable="false" /></button>
-          <button class="avatar" data-avatar="avatar-10" type="button"><img src="assets/Users/avatar-10.png" alt="الصورة 10" draggable="false" /></button>
-          <button class="avatar" data-avatar="avatar-11" type="button"><img src="assets/Users/avatar-11.png" alt="الصورة 11" draggable="false" /></button>
-          <button class="avatar" data-avatar="avatar-12" type="button"><img src="assets/Users/avatar-12.png" alt="الصورة 12" draggable="false" /></button>
-          <button class="avatar" data-avatar="avatar-13" type="button"><img src="assets/Users/avatar-13.png" alt="الصورة 13" draggable="false" /></button>
-          <button class="avatar" data-avatar="avatar-14" type="button"><img src="assets/Users/avatar-14.png" alt="الصورة 14" draggable="false" /></button>
-          <button class="avatar" data-avatar="avatar-15" type="button"><img src="assets/Users/avatar-15.png" alt="الصورة 15" draggable="false" /></button>
-          <button class="avatar" data-avatar="avatar-16" type="button"><img src="assets/Users/avatar-16.png" alt="الصورة 16" draggable="false" /></button>
-          <button class="avatar" data-avatar="avatar-17" type="button"><img src="assets/Users/avatar-17.png" alt="الصورة 17" draggable="false" /></button>
-          <button class="avatar" data-avatar="avatar-18" type="button"><img src="assets/Users/avatar-18.png" alt="الصورة 18" draggable="false" /></button>
-          <button class="avatar" data-avatar="avatar-19" type="button"><img src="assets/Users/avatar-19.png" alt="الصورة 19" draggable="false" /></button>
-          <button class="avatar" data-avatar="avatar-20" type="button"><img src="assets/Users/avatar-20.png" alt="الصورة 20" draggable="false" /></button>
+          <button class="avatar active" data-avatar="avatar-01" type="button"><img data-src="assets/Users/avatar-01.webp" alt="الصورة 1" draggable="false" loading="lazy" decoding="async" /></button>
+          <button class="avatar" data-avatar="avatar-02" type="button"><img data-src="assets/Users/avatar-02.webp" alt="الصورة 2" draggable="false" loading="lazy" decoding="async" /></button>
+          <button class="avatar" data-avatar="avatar-03" type="button"><img data-src="assets/Users/avatar-03.webp" alt="الصورة 3" draggable="false" loading="lazy" decoding="async" /></button>
+          <button class="avatar" data-avatar="avatar-04" type="button"><img data-src="assets/Users/avatar-04.webp" alt="الصورة 4" draggable="false" loading="lazy" decoding="async" /></button>
+          <button class="avatar" data-avatar="avatar-05" type="button"><img data-src="assets/Users/avatar-05.webp" alt="الصورة 5" draggable="false" loading="lazy" decoding="async" /></button>
+          <button class="avatar" data-avatar="avatar-06" type="button"><img data-src="assets/Users/avatar-06.webp" alt="الصورة 6" draggable="false" loading="lazy" decoding="async" /></button>
+          <button class="avatar" data-avatar="avatar-07" type="button"><img data-src="assets/Users/avatar-07.webp" alt="الصورة 7" draggable="false" loading="lazy" decoding="async" /></button>
+          <button class="avatar" data-avatar="avatar-08" type="button"><img data-src="assets/Users/avatar-08.webp" alt="الصورة 8" draggable="false" loading="lazy" decoding="async" /></button>
+          <button class="avatar" data-avatar="avatar-09" type="button"><img data-src="assets/Users/avatar-09.webp" alt="الصورة 9" draggable="false" loading="lazy" decoding="async" /></button>
+          <button class="avatar" data-avatar="avatar-10" type="button"><img data-src="assets/Users/avatar-10.webp" alt="الصورة 10" draggable="false" loading="lazy" decoding="async" /></button>
+          <button class="avatar" data-avatar="avatar-11" type="button"><img data-src="assets/Users/avatar-11.webp" alt="الصورة 11" draggable="false" loading="lazy" decoding="async" /></button>
+          <button class="avatar" data-avatar="avatar-12" type="button"><img data-src="assets/Users/avatar-12.webp" alt="الصورة 12" draggable="false" loading="lazy" decoding="async" /></button>
+          <button class="avatar" data-avatar="avatar-13" type="button"><img data-src="assets/Users/avatar-13.webp" alt="الصورة 13" draggable="false" loading="lazy" decoding="async" /></button>
+          <button class="avatar" data-avatar="avatar-14" type="button"><img data-src="assets/Users/avatar-14.webp" alt="الصورة 14" draggable="false" loading="lazy" decoding="async" /></button>
+          <button class="avatar" data-avatar="avatar-15" type="button"><img data-src="assets/Users/avatar-15.webp" alt="الصورة 15" draggable="false" loading="lazy" decoding="async" /></button>
+          <button class="avatar" data-avatar="avatar-16" type="button"><img data-src="assets/Users/avatar-16.webp" alt="الصورة 16" draggable="false" loading="lazy" decoding="async" /></button>
+          <button class="avatar" data-avatar="avatar-17" type="button"><img data-src="assets/Users/avatar-17.webp" alt="الصورة 17" draggable="false" loading="lazy" decoding="async" /></button>
+          <button class="avatar" data-avatar="avatar-18" type="button"><img data-src="assets/Users/avatar-18.webp" alt="الصورة 18" draggable="false" loading="lazy" decoding="async" /></button>
+          <button class="avatar" data-avatar="avatar-19" type="button"><img data-src="assets/Users/avatar-19.webp" alt="الصورة 19" draggable="false" loading="lazy" decoding="async" /></button>
+          <button class="avatar" data-avatar="avatar-20" type="button"><img data-src="assets/Users/avatar-20.webp" alt="الصورة 20" draggable="false" loading="lazy" decoding="async" /></button>
         </div>
         <div id="profileMessage" class="profile-message hidden"></div>
         <button id="saveProfileButton" class="primary-button profile-save-button" type="button">
@@ -351,7 +352,7 @@
         <!-- 3: اختيار الفئة -->
         <section id="categorySelectionPhase" class="game-phase hidden">
           <div class="turn-player-block">
-            <div id="turnPlayerAvatar" class="turn-avatar"><img src="assets/Users/avatar-01.png" alt="صورة اللاعب" draggable="false" /></div>
+            <div id="turnPlayerAvatar" class="turn-avatar"><img src="assets/Users/avatar-01.webp" alt="صورة اللاعب" draggable="false" decoding="async" /></div>
             <div>
               <p id="turnLabel">الدور على:</p>
               <h2 id="turnPlayerName">لاعب</h2>

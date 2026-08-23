@@ -10,45 +10,45 @@ service cloud.firestore {
       return request.auth.uid;
     }
 
-    function hasPlayersMap(data) {
-      return data.players is map;
+    function roomPath(roomId) {
+      return /databases/$(database)/documents/rooms/$(roomId);
     }
 
-    function isMember(data) {
-      return signedIn()
-        && hasPlayersMap(data)
-        && data.players.keys().hasAny([uid()]);
+    function playerPath(roomId, playerId) {
+      return /databases/$(database)/documents/rooms/$(roomId)/players/$(playerId);
     }
 
-    function isHost(data) {
-      return isMember(data) && data.hostId == uid();
+    function avatarPath(roomId, avatarId) {
+      return /databases/$(database)/documents/rooms/$(roomId)/avatars/$(avatarId);
     }
 
-    function validPlayerShape(player, mustBeReady) {
-      return player is map
-        && player.keys().hasAll([
-          'id', 'name', 'avatar', 'ready', 'score',
-          'correctGuesses', 'fooledPlayers', 'joinedAt', 'lastSeen'
-        ])
-        && player.keys().hasOnly([
-          'id', 'name', 'avatar', 'ready', 'score',
-          'correctGuesses', 'fooledPlayers', 'joinedAt', 'lastSeen'
-        ])
-        && player.id == uid()
-        && player.name is string
-        && player.name.size() >= 1
-        && player.name.size() <= 20
-        && player.avatar is string
-        && player.avatar.size() >= 1
-        && player.avatar.size() <= 16
-        && player.avatar.matches('^avatar-(0[1-9]|1[0-9]|20)$')
-        && player.ready is bool
-        && player.ready == mustBeReady
-        && player.score == 0
-        && player.correctGuesses == 0
-        && player.fooledPlayers == 0
-        && player.joinedAt is timestamp
-        && player.lastSeen is timestamp;
+    function roomExists(roomId) {
+      return exists(roomPath(roomId));
+    }
+
+    function roomData(roomId) {
+      return get(roomPath(roomId)).data;
+    }
+
+    function roomDataAfter(roomId) {
+      return getAfter(roomPath(roomId)).data;
+    }
+
+    function isMember(roomId) {
+      return signedIn() && exists(playerPath(roomId, uid()));
+    }
+
+    function isHost(roomId) {
+      return isMember(roomId) && roomData(roomId).hostId == uid();
+    }
+
+    function validAvatar(avatar) {
+      return avatar is string
+        && avatar.matches('^avatar-(0[1-9]|1[0-9]|20)$');
+    }
+
+    function validName(name) {
+      return name is string && name.size() >= 1 && name.size() <= 20;
     }
 
     function validSettings(settings) {
@@ -64,7 +64,7 @@ service cloud.firestore {
         && settings.answerTime >= 10
         && settings.answerTime <= 60
         && settings.selectionTime is int
-        && settings.selectionTime >= 3
+        && settings.selectionTime >= 5
         && settings.selectionTime <= 20
         && settings.revealTime is int
         && settings.revealTime >= 8
@@ -77,252 +77,313 @@ service cloud.firestore {
         && settings.maxPlayers <= 8;
     }
 
-    function validCreate() {
+    function validRoomCreate(roomId) {
+      let data = request.resource.data;
       return signedIn()
-        && request.resource.data.schemaVersion == 5
-        && request.resource.data.code is string
-        && request.resource.data.code.size() == 6
-        && request.resource.data.hostId == uid()
-        && request.resource.data.status == 'waiting'
-        && request.resource.data.isPublic is bool
-        && validSettings(request.resource.data.settings)
-        && request.resource.data.categories is list
-        && request.resource.data.categories.size() == 0
-        && request.resource.data.players is map
-        && request.resource.data.players.size() == 1
-        && request.resource.data.players.keys().hasOnly([uid()])
-        && validPlayerShape(request.resource.data.players[uid()], true);
+        && data.schemaVersion == 6
+        && data.code == roomId
+        && data.code is string
+        && data.code.size() == 6
+        && data.code.matches('^[A-Z0-9]{6}$')
+        && data.hostId == uid()
+        && validName(data.hostName)
+        && validAvatar(data.hostAvatar)
+        && data.status == 'waiting'
+        && data.isPublic is bool
+        && data.createdAt is timestamp
+        && data.lastActivityAt is timestamp
+        && data.expiresAt is timestamp
+        && data.playerCount == 1
+        && validSettings(data.settings)
+        && data.categories is list
+        && data.categories.size() == 0
+        && data.usedQuestionIds is list
+        && data.usedFactKeys is list
+        && data.currentRoundId == null
+        && existsAfter(playerPath(roomId, uid()))
+        && getAfter(playerPath(roomId, uid())).data.avatar == data.hostAvatar
+        && existsAfter(avatarPath(roomId, data.hostAvatar))
+        && getAfter(avatarPath(roomId, data.hostAvatar)).data.playerId == uid();
     }
 
-    function joiningSelf() {
+    function immutableRoomFieldsUnchanged() {
+      return request.resource.data.schemaVersion == resource.data.schemaVersion
+        && request.resource.data.code == resource.data.code
+        && request.resource.data.createdAt == resource.data.createdAt;
+    }
+
+    function joiningRoom(roomId) {
       return signedIn()
-        && resource.data.schemaVersion == 5
+        && resource.data.schemaVersion == 6
         && resource.data.status == 'waiting'
-        && resource.data.players is map
-        && request.resource.data.players is map
-        && !resource.data.players.keys().hasAny([uid()])
-        && request.resource.data.players.keys().hasAny([uid()])
-        && request.resource.data.players.size() <= resource.data.settings.maxPlayers
-        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['players'])
-        && request.resource.data.players.diff(resource.data.players).affectedKeys().hasOnly([uid()])
-        && request.resource.data.players.diff(resource.data.players).addedKeys().hasOnly([uid()])
-        && validPlayerShape(request.resource.data.players[uid()], false);
+        && !exists(playerPath(roomId, uid()))
+        && existsAfter(playerPath(roomId, uid()))
+        && request.resource.data.diff(resource.data).affectedKeys()
+          .hasOnly(['playerCount', 'lastActivityAt', 'expiresAt'])
+        && request.resource.data.playerCount == resource.data.playerCount + 1
+        && request.resource.data.playerCount <= resource.data.settings.maxPlayers
+        && request.resource.data.lastActivityAt is timestamp
+        && request.resource.data.expiresAt is timestamp;
     }
 
-    function updatingOwnPlayerState() {
-      let nextPlayer = request.resource.data.players[uid()];
-      let oldPlayer = resource.data.players[uid()];
-      let playerDiff = nextPlayer.diff(oldPlayer).affectedKeys();
-      return isMember(resource.data)
-        && request.resource.data.players is map
-        && request.resource.data.players.keys().hasAny([uid()])
-        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['players'])
-        && request.resource.data.players.diff(resource.data.players).affectedKeys().hasOnly([uid()])
-        && playerDiff.hasOnly(['ready', 'lastSeen', 'name', 'avatar'])
-        && nextPlayer.id == oldPlayer.id
-        && nextPlayer.name is string
-        && nextPlayer.name.size() >= 1
-        && nextPlayer.name.size() <= 20
-        && nextPlayer.avatar is string
-        && (
-          nextPlayer.avatar == oldPlayer.avatar
-          || nextPlayer.avatar.matches('^avatar-(0[1-9]|1[0-9]|20)$')
-        )
-        && nextPlayer.score == oldPlayer.score
-        && nextPlayer.correctGuesses == oldPlayer.correctGuesses
-        && nextPlayer.fooledPlayers == oldPlayer.fooledPlayers
-        && nextPlayer.joinedAt == oldPlayer.joinedAt
-        && nextPlayer.ready is bool
-        && nextPlayer.lastSeen is timestamp
-        && (
-          !playerDiff.hasAny(['ready', 'name', 'avatar'])
-          || resource.data.status == 'waiting'
-        );
-    }
-
-    function leavingSelf() {
-      return isMember(resource.data)
+    function leavingRoom(roomId) {
+      return isMember(roomId)
         && resource.data.hostId != uid()
-        && request.resource.data.players is map
-        && resource.data.players.keys().hasAny([uid()])
-        && !request.resource.data.players.keys().hasAny([uid()])
-        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['players'])
-        && request.resource.data.players.diff(resource.data.players).affectedKeys().hasOnly([uid()])
-        && request.resource.data.players.diff(resource.data.players).removedKeys().hasOnly([uid()]);
+        && !existsAfter(playerPath(roomId, uid()))
+        && request.resource.data.diff(resource.data).affectedKeys()
+          .hasOnly(['playerCount', 'lastActivityAt'])
+        && request.resource.data.playerCount == resource.data.playerCount - 1
+        && request.resource.data.playerCount >= 0
+        && request.resource.data.lastActivityAt is timestamp;
     }
 
-    function chooserSelectsCategory() {
-      return isMember(resource.data)
-        && resource.data.status == 'playing'
-        && request.resource.data.status == 'playing'
-        && resource.data.round is map
-        && request.resource.data.round is map
-        && resource.data.round.phase == 'category_selection'
-        && request.resource.data.round.phase == 'category_selection'
-        && resource.data.round.chooserId == uid()
-        && resource.data.round.categoryChoice == null
-        && resource.data.round.selectionDeadline is timestamp
-        && request.time < resource.data.round.selectionDeadline
-        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['round'])
-        && request.resource.data.round.diff(resource.data.round).affectedKeys().hasOnly(['categoryChoice'])
-        && request.resource.data.round.categoryChoice is string
-        && resource.data.round.categoryOptions is list
-        && resource.data.round.categoryOptions.hasAny([request.resource.data.round.categoryChoice]);
+    function oldHostIsStale(roomId) {
+      let oldHost = resource.data.hostId;
+      return !(oldHost is string)
+        || !exists(/databases/$(database)/documents/rooms/$(roomId)/presence/$(oldHost))
+        || get(/databases/$(database)/documents/rooms/$(roomId)/presence/$(oldHost)).data.lastSeen
+          < request.time - duration.value(90, 's');
     }
 
-    function submittingOwnBluff() {
-      return isMember(resource.data)
-        && resource.data.status == 'playing'
-        && request.resource.data.status == 'playing'
-        && resource.data.round is map
-        && request.resource.data.round is map
-        && resource.data.round.phase == 'bluffing'
-        && request.resource.data.round.phase == 'bluffing'
-        && resource.data.round.bluffDeadline is timestamp
-        && request.time < resource.data.round.bluffDeadline
-        && resource.data.round.bluffs is map
-        && request.resource.data.round.bluffs is map
-        && !resource.data.round.bluffs.keys().hasAny([uid()])
-        && request.resource.data.round.bluffs.keys().hasAny([uid()])
-        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['round'])
-        && request.resource.data.round.diff(resource.data.round).affectedKeys().hasOnly(['bluffs'])
-        && request.resource.data.round.bluffs.diff(resource.data.round.bluffs).affectedKeys().hasOnly([uid()])
-        && request.resource.data.round.bluffs.diff(resource.data.round.bluffs).addedKeys().hasOnly([uid()])
-        && request.resource.data.round.bluffs[uid()] is map
-        && request.resource.data.round.bluffs[uid()].keys().hasAll(['text', 'submittedAt'])
-        && request.resource.data.round.bluffs[uid()].keys().hasOnly(['text', 'submittedAt'])
-        && request.resource.data.round.bluffs[uid()].text is string
-        && request.resource.data.round.bluffs[uid()].text.size() >= 1
-        && request.resource.data.round.bluffs[uid()].text.size() <= 120
-        && request.resource.data.round.bluffs[uid()].submittedAt == request.time;
-    }
-
-    function submittingOwnGuess() {
-      let optionId = request.resource.data.round.guesses[uid()].optionId;
-      return isMember(resource.data)
-        && resource.data.status == 'playing'
-        && request.resource.data.status == 'playing'
-        && resource.data.round is map
-        && request.resource.data.round is map
-        && resource.data.round.phase == 'guessing'
-        && request.resource.data.round.phase == 'guessing'
-        && resource.data.round.guessDeadline is timestamp
-        && request.time < resource.data.round.guessDeadline
-        && resource.data.round.guesses is map
-        && request.resource.data.round.guesses is map
-        && !resource.data.round.guesses.keys().hasAny([uid()])
-        && request.resource.data.round.guesses.keys().hasAny([uid()])
-        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['round'])
-        && request.resource.data.round.diff(resource.data.round).affectedKeys().hasOnly(['guesses'])
-        && request.resource.data.round.guesses.diff(resource.data.round.guesses).affectedKeys().hasOnly([uid()])
-        && request.resource.data.round.guesses.diff(resource.data.round.guesses).addedKeys().hasOnly([uid()])
-        && request.resource.data.round.guesses[uid()] is map
-        && request.resource.data.round.guesses[uid()].keys().hasAll(['optionId', 'submittedAt'])
-        && request.resource.data.round.guesses[uid()].keys().hasOnly(['optionId', 'submittedAt'])
-        && optionId is string
-        && request.resource.data.round.guesses[uid()].submittedAt == request.time
-        && resource.data.round.options is map
-        && resource.data.round.options.keys().hasAny([optionId])
-        && !(
-          resource.data.round.options[optionId].type == 'bluff'
-          && resource.data.round.options[optionId].authorId == uid()
-        );
-    }
-
-    function markingRevealReady() {
-      return isMember(resource.data)
-        && resource.data.status == 'playing'
-        && request.resource.data.status == 'playing'
-        && resource.data.round.phase == 'reveal'
-        && request.resource.data.round.phase == 'reveal'
-        && resource.data.round.revealReady is map
-        && request.resource.data.round.revealReady is map
-        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['round'])
-        && request.resource.data.round.diff(resource.data.round).affectedKeys().hasOnly(['revealReady'])
-        && request.resource.data.round.revealReady.diff(resource.data.round.revealReady).affectedKeys().hasOnly([uid()])
-        && request.resource.data.round.revealReady[uid()] == true;
-    }
-
-    function requestingReplay() {
-      return isMember(resource.data)
-        && resource.data.status == 'finished'
-        && resource.data.replayRequests is map
-        && request.resource.data.replayRequests is map
-        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['replayRequests'])
-        && request.resource.data.replayRequests.diff(resource.data.replayRequests).affectedKeys().hasOnly([uid()])
-        && request.resource.data.replayRequests[uid()] == true;
-    }
-
-    function requestingReturn() {
-      return isMember(resource.data)
-        && resource.data.status == 'finished'
-        && resource.data.returnRequests is map
-        && request.resource.data.returnRequests is map
-        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['returnRequests'])
-        && request.resource.data.returnRequests.diff(resource.data.returnRequests).affectedKeys().hasOnly([uid()])
-        && request.resource.data.returnRequests[uid()] == true;
-    }
-
-    function hostIsMissing(data) {
-      return !(data.hostId is string)
-        || !data.players.keys().hasAny([data.hostId]);
-    }
-
-    function hostIsStale(data) {
-      return hostIsMissing(data)
-        || (
-          data.players[data.hostId].lastSeen is timestamp
-          && data.players[data.hostId].lastSeen < request.time - duration.value(45, 's')
-        );
-    }
-
-    function takingOverStaleHost() {
-      return isMember(resource.data)
+    function takingOverStaleHost(roomId) {
+      return isMember(roomId)
         && resource.data.hostId != uid()
         && request.resource.data.hostId == uid()
-        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['hostId'])
-        && hostIsStale(resource.data);
+        && request.resource.data.diff(resource.data).affectedKeys()
+          .hasOnly(['hostId', 'hostName', 'hostAvatar', 'lastActivityAt'])
+        && validName(request.resource.data.hostName)
+        && validAvatar(request.resource.data.hostAvatar)
+        && oldHostIsStale(roomId);
     }
 
     match /rooms/{roomId} {
+      // Signed-in users need room metadata to join by code and list public rooms.
       allow read: if signedIn();
-      allow create: if validCreate();
+      allow create: if validRoomCreate(roomId);
 
-      allow update: if isHost(resource.data)
-        || joiningSelf()
-        || updatingOwnPlayerState()
-        || leavingSelf()
-        || chooserSelectsCategory()
-        || submittingOwnBluff()
-        || submittingOwnGuess()
-        || markingRevealReady()
-        || requestingReplay()
-        || requestingReturn()
-        || takingOverStaleHost();
+      allow update: if immutableRoomFieldsUnchanged()
+        && (
+          isHost(roomId)
+          || joiningRoom(roomId)
+          || leavingRoom(roomId)
+          || takingOverStaleHost(roomId)
+        );
 
-      allow delete: if isHost(resource.data);
+      allow delete: if isHost(roomId);
+
+      match /players/{playerId} {
+        function validPlayerCreate() {
+          let data = request.resource.data;
+          let room = roomDataAfter(roomId);
+          return signedIn()
+            && playerId == uid()
+            && room.schemaVersion == 6
+            && room.status == 'waiting'
+            && data.keys().hasAll([
+              'id', 'name', 'avatar', 'ready', 'score',
+              'correctGuesses', 'fooledPlayers',
+              'replayRequested', 'returnRequested', 'joinedAt'
+            ])
+            && data.keys().hasOnly([
+              'id', 'name', 'avatar', 'ready', 'score',
+              'correctGuesses', 'fooledPlayers',
+              'replayRequested', 'returnRequested', 'joinedAt'
+            ])
+            && data.id == uid()
+            && validName(data.name)
+            && validAvatar(data.avatar)
+            && data.ready is bool
+            && data.ready == (room.hostId == uid())
+            && data.score == 0
+            && data.correctGuesses == 0
+            && data.fooledPlayers == 0
+            && data.replayRequested == false
+            && data.returnRequested == false
+            && data.joinedAt is timestamp
+            && existsAfter(avatarPath(roomId, data.avatar))
+            && getAfter(avatarPath(roomId, data.avatar)).data.playerId == uid();
+        }
+
+        function validOwnUpdate() {
+          let changed = request.resource.data.diff(resource.data).affectedKeys();
+          let room = roomData(roomId);
+          return playerId == uid()
+            && changed.hasOnly(['name', 'avatar', 'ready', 'replayRequested', 'returnRequested'])
+            && request.resource.data.id == resource.data.id
+            && request.resource.data.joinedAt == resource.data.joinedAt
+            && request.resource.data.score == resource.data.score
+            && request.resource.data.correctGuesses == resource.data.correctGuesses
+            && request.resource.data.fooledPlayers == resource.data.fooledPlayers
+            && validName(request.resource.data.name)
+            && validAvatar(request.resource.data.avatar)
+            && request.resource.data.ready is bool
+            && request.resource.data.replayRequested is bool
+            && request.resource.data.returnRequested is bool
+            && (
+              !changed.hasAny(['name', 'avatar', 'ready'])
+              || room.status == 'waiting'
+            )
+            && (
+              !changed.hasAny(['replayRequested', 'returnRequested'])
+              || room.status == 'finished'
+            )
+            && (
+              request.resource.data.avatar == resource.data.avatar
+              || (
+                existsAfter(avatarPath(roomId, request.resource.data.avatar))
+                && getAfter(avatarPath(roomId, request.resource.data.avatar)).data.playerId == uid()
+              )
+            );
+        }
+
+        // A user may check only their own membership before joining. Collection
+        // listing is available only after membership is established.
+        allow get: if signedIn() && (playerId == uid() || isMember(roomId));
+        allow list: if isMember(roomId);
+        allow create: if validPlayerCreate();
+        allow update: if isHost(roomId)
+          || (isMember(roomId) && validOwnUpdate());
+        allow delete: if isHost(roomId) || (playerId == uid() && isMember(roomId));
+      }
+
+      match /avatars/{avatarId} {
+        allow read: if signedIn();
+        allow create: if signedIn()
+          && validAvatar(avatarId)
+          && request.resource.data.keys().hasAll(['playerId', 'reservedAt'])
+          && request.resource.data.keys().hasOnly(['playerId', 'reservedAt'])
+          && request.resource.data.playerId == uid()
+          && request.resource.data.reservedAt is timestamp
+          && existsAfter(playerPath(roomId, uid()))
+          && getAfter(playerPath(roomId, uid())).data.avatar == avatarId;
+        allow update: if false;
+        allow delete: if signedIn()
+          && (resource.data.playerId == uid() || isHost(roomId));
+      }
+
+      match /presence/{playerId} {
+        allow read: if isMember(roomId);
+        allow create, update: if signedIn()
+          && playerId == uid()
+          && request.resource.data.keys().hasAll(['id', 'lastSeen'])
+          && request.resource.data.keys().hasOnly(['id', 'lastSeen'])
+          && request.resource.data.id == uid()
+          && request.resource.data.lastSeen is timestamp
+          && (
+            exists(playerPath(roomId, uid()))
+            || existsAfter(playerPath(roomId, uid()))
+          );
+        allow delete: if signedIn()
+          && (playerId == uid() || isHost(roomId));
+      }
+
+      match /rounds/{roundId} {
+        function parentRoom() {
+          return roomData(roomId);
+        }
+
+        function chooserCategoryUpdate() {
+          let changed = request.resource.data.diff(resource.data).affectedKeys();
+          return isMember(roomId)
+            && parentRoom().status == 'playing'
+            && parentRoom().currentRoundId == roundId
+            && resource.data.phase == 'category_selection'
+            && resource.data.chooserId == uid()
+            && resource.data.categoryChoice == null
+            && resource.data.selectionDeadline is timestamp
+            && request.time < resource.data.selectionDeadline
+            && changed.hasOnly(['categoryChoice'])
+            && request.resource.data.categoryChoice is string
+            && resource.data.categoryOptions is list
+            && resource.data.categoryOptions.hasAny([request.resource.data.categoryChoice]);
+        }
+
+        allow read: if isMember(roomId);
+        allow create: if isHost(roomId)
+          && request.resource.data.id == roundId
+          && request.resource.data.number is int
+          && request.resource.data.phase == 'category_selection';
+        allow update: if isHost(roomId) || chooserCategoryUpdate();
+        allow delete: if isHost(roomId);
+
+        match /bluffs/{playerId} {
+          function round() {
+            return get(/databases/$(database)/documents/rooms/$(roomId)/rounds/$(roundId)).data;
+          }
+
+          allow read: if isMember(roomId);
+          allow create: if isMember(roomId)
+            && playerId == uid()
+            && roomData(roomId).status == 'playing'
+            && roomData(roomId).currentRoundId == roundId
+            && round().phase == 'bluffing'
+            && round().bluffDeadline is timestamp
+            && request.time < round().bluffDeadline
+            && request.resource.data.keys().hasAll(['playerId', 'text', 'submittedAt'])
+            && request.resource.data.keys().hasOnly(['playerId', 'text', 'submittedAt'])
+            && request.resource.data.playerId == uid()
+            && request.resource.data.text is string
+            && request.resource.data.text.size() >= 1
+            && request.resource.data.text.size() <= 120
+            && request.resource.data.submittedAt == request.time;
+          allow update, delete: if false;
+        }
+
+        match /guesses/{playerId} {
+          function round() {
+            return get(/databases/$(database)/documents/rooms/$(roomId)/rounds/$(roundId)).data;
+          }
+
+          allow read: if isMember(roomId);
+          allow create: if isMember(roomId)
+            && playerId == uid()
+            && roomData(roomId).status == 'playing'
+            && roomData(roomId).currentRoundId == roundId
+            && round().phase == 'guessing'
+            && round().guessDeadline is timestamp
+            && request.time < round().guessDeadline
+            && request.resource.data.keys().hasAll(['playerId', 'optionId', 'submittedAt'])
+            && request.resource.data.keys().hasOnly(['playerId', 'optionId', 'submittedAt'])
+            && request.resource.data.playerId == uid()
+            && request.resource.data.optionId is string
+            && request.resource.data.submittedAt == request.time
+            && round().options is map
+            && round().options.keys().hasAny([request.resource.data.optionId])
+            && !(
+              round().options[request.resource.data.optionId].type == 'bluff'
+              && round().options[request.resource.data.optionId].authorId == uid()
+            );
+          allow update, delete: if false;
+        }
+
+        match /revealReady/{playerId} {
+          function round() {
+            return get(/databases/$(database)/documents/rooms/$(roomId)/rounds/$(roundId)).data;
+          }
+
+          allow read: if isMember(roomId);
+          allow create: if isMember(roomId)
+            && playerId == uid()
+            && roomData(roomId).status == 'playing'
+            && roomData(roomId).currentRoundId == roundId
+            && round().phase == 'reveal'
+            && request.resource.data.keys().hasAll(['playerId', 'ready', 'submittedAt'])
+            && request.resource.data.keys().hasOnly(['playerId', 'ready', 'submittedAt'])
+            && request.resource.data.playerId == uid()
+            && request.resource.data.ready == true
+            && request.resource.data.submittedAt == request.time;
+          allow update, delete: if false;
+        }
+      }
 
       match /messages/{messageId} {
-        function parentRoom() {
-          return get(/databases/$(database)/documents/rooms/$(roomId)).data;
-        }
-        function chatMember() {
-          return signedIn()
-            && parentRoom().players is map
-            && parentRoom().players.keys().hasAny([uid()]);
-        }
-        allow read: if chatMember();
-        allow create: if chatMember()
+        allow read: if isMember(roomId);
+        allow create: if isMember(roomId)
           && request.resource.data.keys().hasAll(['authorId', 'name', 'avatar', 'text', 'createdAt'])
           && request.resource.data.keys().hasOnly(['authorId', 'name', 'avatar', 'text', 'createdAt'])
           && request.resource.data.authorId == uid()
-          && request.resource.data.name is string
-          && request.resource.data.name.size() >= 1
-          && request.resource.data.name.size() <= 20
-          && request.resource.data.avatar is string
-          && request.resource.data.avatar.size() >= 1
-          && request.resource.data.avatar.size() <= 16
-          && request.resource.data.avatar.matches('^avatar-(0[1-9]|1[0-9]|20)$')
+          && validName(request.resource.data.name)
+          && validAvatar(request.resource.data.avatar)
           && request.resource.data.text is string
           && request.resource.data.text.size() >= 1
           && request.resource.data.text.size() <= 140

@@ -81,7 +81,7 @@ export function notify(message, options = {}) {
   }
 
   requestAnimationFrame(() => toast.classList.add("app-notification-visible"));
-  return { dismiss };
+  return {dismiss};
 }
 
 export function confirmAction(options = {}) {
