@@ -1,44 +1,32 @@
-# نشر Taleela v8.9.0
+# نشر Taleela v8.10.0
 
-## إذا كان Netlify مربوطًا بـ GitHub
+## ملفات يجب رفعها
 
-1. استبدل ملفات المشروع في مستودع GitHub بمحتويات هذه الحزمة.
-2. نفّذ Commit ثم Push.
-3. تأكد أن آخر Deploy في Netlify أصبح `Published`.
-4. افتح الموقع مرة واحدة مع اتصال بالإنترنت ليُحدّث Service Worker.
-5. إذا بقي الإصدار القديم في PWA، أغلقه وأعد فتحه. عند الحاجة امسح بيانات الموقع/Cache مرة واحدة.
-
-## مهم جدًا: Firestore Rules
-
-هذه النسخة غيّرت `firestore.rules`، لذلك **رفع الملفات إلى GitHub/Netlify وحده لا يكفي**.
-
-بعد تحديث الموقع، انشر قواعد Firestore من مشروع Firebase نفسه. إذا كنت تستخدم Firebase CLI من مجلد المشروع:
-
-```bash
-firebase deploy --only firestore:rules
-```
-
-أو انسخ محتوى `firestore.rules` إلى Firebase Console > Firestore Database > Rules ثم انشره.
-
-إذا لم تنشر القواعد الجديدة، قد تظهر الواجهة وكأنها تسمح حتى 30 جولة بينما Firestore يرفض بعض عمليات إنشاء/تحديث الغرف وفق القواعد القديمة.
-
-## ملفات مهمة يجب ألا تُحذف
+ارفع محتويات مجلد المشروع كاملًا، وبالأخص:
 
 ```text
-_headers
-firestore.rules
-questions/v8.9.0/
+questions/v1/
+assets/countries/
 js/question-store.js
+js/categories.js
+js/game.js
 sw.js
+_headers
+firebase.json
 ```
 
-`_headers` يسمح بالتخزين الطويل لملفات `/questions/*` لأن ملفات البنك Versioned.
+## Netlify
 
-## التوافق
+استبدل ملفات المشروع في المستودع ثم نفذ Commit وPush. بعد اكتمال النشر افتح الموقع مرة واحدة متصلًا بالإنترنت. إذا بقي إصدار قديم، أغلق PWA وافتحه مجددًا أو امسح بيانات الموقع.
 
-بنية الغرف ما زالت تستخدم `schemaVersion: 7`. يفضّل بعد النشر إنشاء غرفة جديدة واختبار مباراة حقيقية بأكثر من جهاز، خصوصًا:
+## Firebase Hosting
 
-- 30 جولة.
-- فئة واحدة فقط.
-- لاعبان يرسلان الكذبة نفسها.
-- تعادل كامل في النقاط والإصابات والخداع.
+```bash
+firebase deploy --only hosting,firestore:rules,firestore:indexes
+```
+
+قواعد Firestore ما زالت تستخدم `schemaVersion: 7`. حقلا `usedQuestionIds` و`usedFactKeys` موجودان أصلًا، ويستعملان الآن لحفظ دورة الأسئلة عبر إعادة اللعب.
+
+## Cache
+
+Service Worker الجديد يستخدم Cache باسم الإصدار `v8.10.0-question-bank-v1-no-repeat`، ويعامل ملفات `questions/v1/*.json` كملفات ثابتة Immutable بعد أول تحميل.

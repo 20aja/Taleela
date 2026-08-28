@@ -1,0 +1,41 @@
+{
+  "appVersion": "8.10.0",
+  "questionBank": {
+    "path": "questions/v1/",
+    "manifestVersion": "1.0.0",
+    "categories": 20,
+    "questions": 600,
+    "questionShards": 60,
+    "jsonFilesIncludingManifest": 61,
+    "sourceFilesByteIdentical": 61,
+    "modifiedQuestionFiles": 0,
+    "addedQuestions": 0,
+    "duplicateQuestionAnswerPairsInSource": 0
+  },
+  "noRepeatValidation": {
+    "testedSelections": 1200,
+    "testedCategories": 20,
+    "completeCyclesPerCategory": 2,
+    "questionsPerCycle": 30,
+    "repeatsBeforeCycleCompletion": 0,
+    "immediateBoundaryRepeats": 0,
+    "hostTakeoverTest": {
+      "firstHostSelections": 10,
+      "secondHostSelections": 20,
+      "uniqueQuestionsBeforeRepeat": 30,
+      "passed": true
+    }
+  },
+  "flags": {
+    "svgAssets": 254,
+    "flagCategoryImagesResolved": 30,
+    "countryCategoryRevealFlagsResolved": 30,
+    "missingPaths": 0
+  },
+  "project": {
+    "javascriptSyntax": "pass",
+    "jsonValidation": "pass",
+    "legacyQuestionDirectories": 0,
+    "legacyJsQuestionBankPresent": false
+  }
+}

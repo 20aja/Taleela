@@ -56,7 +56,7 @@
         ]
       },
       {
-        "source": "/assets/Countries/**",
+        "source": "/assets/countries/**",
         "headers": [
           {
             "key": "Cache-Control",

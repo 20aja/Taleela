@@ -1,0 +1,132 @@
+{
+  "version": "1.0.0",
+  "shardSize": 10,
+  "categories": [
+    {
+      "id": "general",
+      "name": "معلومات عامة",
+      "icon": "/assets/categories/general.png",
+      "count": 920,
+      "shards": ["general_001.json", "general_002.json", "general_003.json"]
+    },
+    {
+      "id": "science",
+      "name": "العلوم",
+      "icon": "/assets/categories/science.png",
+      "count": 900,
+      "shards": ["science_001.json", "science_002.json", "science_003.json"]
+    },
+    {
+      "id": "sports",
+      "name": "الرياضة",
+      "icon": "/assets/categories/sports.png",
+      "count": 906,
+      "shards": ["sports_001.json", "sports_002.json", "sports_003.json"]
+    },
+    {
+      "id": "technology",
+      "name": "التكنولوجيا",
+      "icon": "/assets/categories/technology.png",
+      "count": 1011,
+      "shards": ["technology_001.json", "technology_002.json", "technology_003.json"]
+    },
+    {
+      "id": "history",
+      "name": "التاريخ",
+      "icon": "/assets/categories/history.png",
+      "count": 1044,
+      "shards": ["history_001.json", "history_002.json", "history_003.json"]
+    },
+    {
+      "id": "geography",
+      "name": "الجغرافيا",
+      "icon": "/assets/categories/geography.png",
+      "count": 900,
+      "shards": ["geography_001.json", "geography_002.json", "geography_003.json"]
+    },
+    {
+      "id": "countries",
+      "name": "الدول",
+      "icon": "/assets/categories/countries.png",
+      "count": 254,
+      "shards": ["countries_001.json", "countries_002.json"]
+    },
+    {
+      "id": "arabic-literature",
+      "name": "اللغة العربية والأدب العربي",
+      "icon": "/assets/categories/language.png",
+      "count": 900,
+      "shards": ["arabic-literature_001.json", "arabic-literature_002.json", "arabic-literature_003.json"]
+    },
+    {
+      "id": "origins",
+      "name": "أصل الأشياء",
+      "icon": "/assets/categories/origins.png",
+      "count": 900,
+      "shards": ["origins_001.json", "origins_002.json", "origins_003.json"]
+    },
+    {
+      "id": "movies-series",
+      "name": "الأفلام ومسلسلات",
+      "icon": "/assets/categories/movies.png",
+      "count": 900,
+      "shards": ["movies-series_001.json", "movies-series_002.json", "movies-series_003.json"]
+    },
+    {
+      "id": "arts",
+      "name": "الفنون",
+      "icon": "/assets/categories/arts.png",
+      "count": 900,
+      "shards": ["arts_001.json", "arts_002.json", "arts_003.json"]
+    },
+    {
+      "id": "people",
+      "name": "الشخصيات",
+      "icon": "/assets/categories/famous_people.png",
+      "count": 600,
+      "shards": ["people_001.json", "people_002.json", "people_003.json"]
+    },
+    {
+      "id": "player-guess",
+      "name": "خمن اللاعب",
+      "icon": "/assets/categories/player_guess.png",
+      "count": 900,
+      "shards": ["player-guess_001.json", "player-guess_002.json", "player-guess_003.json"]
+    },
+    {
+      "id": "animals",
+      "name": "عالم الحيوان",
+      "icon": "/assets/categories/animals.png",
+      "count": 900,
+      "shards": ["animals_001.json", "animals_002.json", "animals_003.json"]
+    },
+    {
+      "id": "food",
+      "name": "الطعام",
+      "icon": "/assets/categories/food.png",
+      "count": 900,
+      "shards": ["food_001.json", "food_002.json", "food_003.json"]
+    },
+    {
+      "id": "inventions",
+      "name": "الاختراعات",
+      "icon": "/assets/categories/inventions.png",
+      "count": 900,
+      "shards": ["inventions_001.json", "inventions_002.json", "inventions_003.json"]
+    },
+    {
+      "id": "mathematics",
+      "name": "الأرقام والحسابات",
+      "icon": "/assets/categories/mathematics.png",
+      "count": 900,
+      "shards": ["mathematics_001.json", "mathematics_002.json", "mathematics_003.json"]
+    },
+    {
+      "id": "puzzles",
+      "name": "الأرقام والحسابات",
+      "icon": "/assets/categories/puzzles.png",
+      "count": 900,
+      "shards": ["puzzles_001.json", "puzzles_002.json", "puzzles_003.json"]
+    }
+  ]
+}

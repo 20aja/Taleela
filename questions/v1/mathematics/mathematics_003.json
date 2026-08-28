@@ -1,0 +1,1502 @@
+[
+  {
+    "question": "احسب الناتج: (11 + 3)^2 - 2",
+    "correctAnswers": ["194", "١٩٤"],
+    "wrongAnswers": ["195", "193", "196", "192"]
+  },
+  {
+    "question": "احسب الناتج: (9 × 4)^2",
+    "correctAnswers": ["1296", "١٢٩٦"],
+    "wrongAnswers": ["1297", "1295", "1301", "1291"]
+  },
+  {
+    "question": "احسب الناتج: 8^3 - 2 × 4",
+    "correctAnswers": ["504", "٥٠٤"],
+    "wrongAnswers": ["505", "503", "509", "499"]
+  },
+  {
+    "question": "احسب الناتج: 25 - 12 × 6",
+    "correctAnswers": ["-47", "-٤٧", "سالب 47"],
+    "wrongAnswers": ["-46", "-48", "-45", "-49"]
+  },
+  {
+    "question": "احسب الناتج: 3 + 8 × 12 - 2",
+    "correctAnswers": ["97", "٩٧"],
+    "wrongAnswers": ["98", "96", "99", "95"]
+  },
+  {
+    "question": "احسب الناتج: 84 ÷ 3 + 5",
+    "correctAnswers": ["33", "٣٣"],
+    "wrongAnswers": ["34", "32", "35", "31"]
+  },
+  {
+    "question": "عدد إذا أضفت إليه 8 ثم ضاعفته أصبح 62، فما العدد؟",
+    "correctAnswers": ["23", "٢٣"],
+    "wrongAnswers": ["24", "22", "25", "21"]
+  },
+  {
+    "question": "احسب الناتج: (30 ÷ 6 + 20) × 2",
+    "correctAnswers": ["50", "٥٠"],
+    "wrongAnswers": ["51", "49", "52", "48"]
+  },
+  {
+    "question": "احسب الناتج: (14 + 7) × (7 + 5)",
+    "correctAnswers": ["252", "٢٥٢"],
+    "wrongAnswers": ["253", "251", "254", "250"]
+  },
+  {
+    "question": "احسب الناتج: 30 - 15 × 4",
+    "correctAnswers": ["-30", "-٣٠", "سالب 30"],
+    "wrongAnswers": ["-29", "-31", "-28", "-32"]
+  },
+  {
+    "question": "احسب الناتج: 5 - 15 × 10",
+    "correctAnswers": ["-145", "-١٤٥", "سالب 145"],
+    "wrongAnswers": ["-144", "-146", "-143", "-147"]
+  },
+  {
+    "question": "احسب الناتج: 9^2 + 7 × 5",
+    "correctAnswers": ["116", "١١٦"],
+    "wrongAnswers": ["117", "115", "118", "114"]
+  },
+  {
+    "question": "احسب الناتج: (26 + 8) × (10 - 7)",
+    "correctAnswers": ["102", "١٠٢"],
+    "wrongAnswers": ["103", "101", "104", "100"]
+  },
+  {
+    "question": "احسب الناتج: (154 ÷ 7 - 19) × 10",
+    "correctAnswers": ["30", "٣٠"],
+    "wrongAnswers": ["31", "29", "32", "28"]
+  },
+  {
+    "question": "ربع عدد ناقص 3 يساوي 40، فما العدد؟",
+    "correctAnswers": ["172", "١٧٢"],
+    "wrongAnswers": ["173", "171", "174", "170"]
+  },
+  {
+    "question": "احسب الناتج: 12 × (6 + 5) - 7",
+    "correctAnswers": ["125", "١٢٥"],
+    "wrongAnswers": ["126", "124", "127", "123"]
+  },
+  {
+    "question": "احسب الناتج: (2 × 4)^2",
+    "correctAnswers": ["64", "٦٤"],
+    "wrongAnswers": ["65", "63", "66", "62"]
+  },
+  {
+    "question": "احسب الناتج: 18 - 6 × 7",
+    "correctAnswers": ["-24", "-٢٤", "سالب 24"],
+    "wrongAnswers": ["-23", "-25", "-22", "-26"]
+  },
+  {
+    "question": "احسب الناتج: 20 - 5 × 4",
+    "correctAnswers": ["0", "٠"],
+    "wrongAnswers": ["1", "-1", "2", "-2"]
+  },
+  {
+    "question": "احسب الناتج: (32 + 4 - 6) × 6",
+    "correctAnswers": ["180", "١٨٠"],
+    "wrongAnswers": ["181", "179", "182", "178"]
+  },
+  {
+    "question": "احسب الناتج: (10 + 8)^2 - 6",
+    "correctAnswers": ["318", "٣١٨"],
+    "wrongAnswers": ["319", "317", "320", "316"]
+  },
+  {
+    "question": "احسب الناتج: 4^3 - 5 × 5",
+    "correctAnswers": ["39", "٣٩"],
+    "wrongAnswers": ["40", "38", "41", "37"]
+  },
+  {
+    "question": "احسب الناتج: 5^3 - 3 × 2",
+    "correctAnswers": ["119", "١١٩"],
+    "wrongAnswers": ["120", "118", "121", "117"]
+  },
+  {
+    "question": "احسب الناتج: (10 + 6)^2 - 2",
+    "correctAnswers": ["254", "٢٥٤"],
+    "wrongAnswers": ["255", "253", "256", "252"]
+  },
+  {
+    "question": "احسب الناتج: 14 - 3 × 2",
+    "correctAnswers": ["8", "٨"],
+    "wrongAnswers": ["9", "7", "10", "6"]
+  },
+  {
+    "question": "احسب الناتج: 52 ÷ 4 × (6 - 3)",
+    "correctAnswers": ["39", "٣٩"],
+    "wrongAnswers": ["40", "38", "41", "37"]
+  },
+  {
+    "question": "احسب الناتج: 11^2 + 2 × 5",
+    "correctAnswers": ["131", "١٣١"],
+    "wrongAnswers": ["132", "130", "133", "129"]
+  },
+  {
+    "question": "احسب الناتج: (5 + 8)^2 - 3",
+    "correctAnswers": ["166", "١٦٦"],
+    "wrongAnswers": ["167", "165", "168", "164"]
+  },
+  {
+    "question": "احسب الناتج: 19 - 2 × 6",
+    "correctAnswers": ["7", "٧"],
+    "wrongAnswers": ["8", "6", "9", "5"]
+  },
+  {
+    "question": "احسب الناتج: 2^2 + 4 × 5",
+    "correctAnswers": ["24", "٢٤"],
+    "wrongAnswers": ["25", "23", "26", "22"]
+  },
+  {
+    "question": "احسب الناتج: 56 ÷ 7 + 11 - 9",
+    "correctAnswers": ["10", "١٠"],
+    "wrongAnswers": ["11", "9", "12", "8"]
+  },
+  {
+    "question": "عدد إذا أضفت إليه 8 ثم ضاعفته أصبح 44، فما العدد؟",
+    "correctAnswers": ["14", "١٤"],
+    "wrongAnswers": ["15", "13", "16", "12"]
+  },
+  {
+    "question": "احسب الناتج: (112 ÷ 7 + 10) × 4",
+    "correctAnswers": ["104", "١٠٤"],
+    "wrongAnswers": ["105", "103", "106", "102"]
+  },
+  {
+    "question": "احسب الناتج: (22 + 11) × (12 - 5)",
+    "correctAnswers": ["231", "٢٣١"],
+    "wrongAnswers": ["232", "230", "233", "229"]
+  },
+  {
+    "question": "احسب الناتج: (3 + 12) × (9 + 3)",
+    "correctAnswers": ["180", "١٨٠"],
+    "wrongAnswers": ["181", "179", "182", "178"]
+  },
+  {
+    "question": "احسب الناتج: 46 ÷ 2 + 8",
+    "correctAnswers": ["31", "٣١"],
+    "wrongAnswers": ["32", "30", "33", "29"]
+  },
+  {
+    "question": "احسب الناتج: 9^2 + 5 × 3",
+    "correctAnswers": ["96", "٩٦"],
+    "wrongAnswers": ["97", "95", "98", "94"]
+  },
+  {
+    "question": "احسب الناتج: 174 ÷ 6 + 6",
+    "correctAnswers": ["35", "٣٥"],
+    "wrongAnswers": ["36", "34", "37", "33"]
+  },
+  {
+    "question": "احسب الناتج: 10^2 + 2 × 5",
+    "correctAnswers": ["110", "١١٠"],
+    "wrongAnswers": ["111", "109", "112", "108"]
+  },
+  {
+    "question": "احسب الناتج: (28 ÷ 2 + 12) × 3",
+    "correctAnswers": ["78", "٧٨"],
+    "wrongAnswers": ["79", "77", "80", "76"]
+  },
+  {
+    "question": "احسب الناتج: (6 × 2)^2",
+    "correctAnswers": ["144", "١٤٤"],
+    "wrongAnswers": ["145", "143", "146", "142"]
+  },
+  {
+    "question": "احسب الناتج: 9^2 + 6^2 - 5",
+    "correctAnswers": ["112", "١١٢"],
+    "wrongAnswers": ["113", "111", "114", "110"]
+  },
+  {
+    "question": "احسب الناتج: (336 ÷ 12 + 12) × 4",
+    "correctAnswers": ["160", "١٦٠"],
+    "wrongAnswers": ["161", "159", "162", "158"]
+  },
+  {
+    "question": "احسب الناتج: 196 ÷ 7 + 11",
+    "correctAnswers": ["39", "٣٩"],
+    "wrongAnswers": ["40", "38", "41", "37"]
+  },
+  {
+    "question": "احسب الناتج: (4 + 8)^2 - 3",
+    "correctAnswers": ["141", "١٤١"],
+    "wrongAnswers": ["142", "140", "143", "139"]
+  },
+  {
+    "question": "احسب الناتج: (4 + 7)^2 - 2",
+    "correctAnswers": ["119", "١١٩"],
+    "wrongAnswers": ["120", "118", "121", "117"]
+  },
+  {
+    "question": "احسب الناتج: (2 + 2)^2 - 6",
+    "correctAnswers": ["10", "١٠"],
+    "wrongAnswers": ["11", "9", "12", "8"]
+  },
+  {
+    "question": "احسب الناتج: 5^2 + 4 × 2",
+    "correctAnswers": ["33", "٣٣"],
+    "wrongAnswers": ["34", "32", "35", "31"]
+  },
+  {
+    "question": "احسب الناتج: (31 + 16 - 6) × 3",
+    "correctAnswers": ["123", "١٢٣"],
+    "wrongAnswers": ["124", "122", "125", "121"]
+  },
+  {
+    "question": "احسب الناتج: (8 + 8)^2 - 4",
+    "correctAnswers": ["252", "٢٥٢"],
+    "wrongAnswers": ["253", "251", "254", "250"]
+  },
+  {
+    "question": "عدد إذا ضربته في 3 ثم طرحت 5 أصبح 85، فما العدد؟",
+    "correctAnswers": ["30", "٣٠"],
+    "wrongAnswers": ["31", "29", "32", "28"]
+  },
+  {
+    "question": "احسب الناتج: 232 ÷ 8 × (8 - 5)",
+    "correctAnswers": ["87", "٨٧"],
+    "wrongAnswers": ["88", "86", "89", "85"]
+  },
+  {
+    "question": "احسب الناتج: 2^3 - 3 × 3",
+    "correctAnswers": ["-1", "-١", "سالب 1"],
+    "wrongAnswers": ["0", "-2", "1", "-3"]
+  },
+  {
+    "question": "احسب الناتج: -(20 - 4) + 2",
+    "correctAnswers": ["-14", "-١٤", "سالب 14"],
+    "wrongAnswers": ["-13", "-15", "-12", "-16"]
+  },
+  {
+    "question": "احسب الناتج: 6^2 + 5 × 5",
+    "correctAnswers": ["61", "٦١"],
+    "wrongAnswers": ["62", "60", "63", "59"]
+  },
+  {
+    "question": "احسب الناتج: 88 ÷ 11 + 4 - 3",
+    "correctAnswers": ["9", "٩"],
+    "wrongAnswers": ["10", "8", "11", "7"]
+  },
+  {
+    "question": "احسب الناتج: 17 - 5 × 9",
+    "correctAnswers": ["-28", "-٢٨", "سالب 28"],
+    "wrongAnswers": ["-27", "-29", "-26", "-30"]
+  },
+  {
+    "question": "احسب الناتج: 20 + 10 × 9 - 4",
+    "correctAnswers": ["106", "١٠٦"],
+    "wrongAnswers": ["107", "105", "108", "104"]
+  },
+  {
+    "question": "احسب الناتج: (2 + 2)^2 - 4",
+    "correctAnswers": ["12", "١٢"],
+    "wrongAnswers": ["13", "11", "14", "10"]
+  },
+  {
+    "question": "احسب الناتج: 9^2 + 3 × 2",
+    "correctAnswers": ["87", "٨٧"],
+    "wrongAnswers": ["88", "86", "89", "85"]
+  },
+  {
+    "question": "احسب الناتج: 29 + (9 + 12) × 4",
+    "correctAnswers": ["113", "١١٣"],
+    "wrongAnswers": ["114", "112", "115", "111"]
+  },
+  {
+    "question": "احسب الناتج: 152 ÷ 8 + 4",
+    "correctAnswers": ["23", "٢٣"],
+    "wrongAnswers": ["24", "22", "25", "21"]
+  },
+  {
+    "question": "احسب الناتج: (153 ÷ 9) × (12 - 1)",
+    "correctAnswers": ["187", "١٨٧"],
+    "wrongAnswers": ["188", "186", "189", "185"]
+  },
+  {
+    "question": "احسب الناتج: 33 × (9 + 2) - 5",
+    "correctAnswers": ["358", "٣٥٨"],
+    "wrongAnswers": ["359", "357", "360", "356"]
+  },
+  {
+    "question": "احسب الناتج: -(6 - 13) + 7",
+    "correctAnswers": ["14", "١٤"],
+    "wrongAnswers": ["15", "13", "16", "12"]
+  },
+  {
+    "question": "احسب الناتج: -(12 - 15) + 3",
+    "correctAnswers": ["6", "٦"],
+    "wrongAnswers": ["7", "5", "8", "4"]
+  },
+  {
+    "question": "احسب الناتج: (7 + 2) × 4^2",
+    "correctAnswers": ["144", "١٤٤"],
+    "wrongAnswers": ["145", "143", "146", "142"]
+  },
+  {
+    "question": "احسب الناتج: -(14 - 5) + 9",
+    "correctAnswers": ["0", "٠"],
+    "wrongAnswers": ["1", "-1", "2", "-2"]
+  },
+  {
+    "question": "احسب الناتج: -(24 - 10) + 9",
+    "correctAnswers": ["-5", "-٥", "سالب 5"],
+    "wrongAnswers": ["-4", "-6", "-3", "-7"]
+  },
+  {
+    "question": "احسب الناتج: 216 ÷ 9 × (8 + 4)",
+    "correctAnswers": ["288", "٢٨٨"],
+    "wrongAnswers": ["289", "287", "290", "286"]
+  },
+  {
+    "question": "احسب الناتج: (9 + 5)^2 - 4",
+    "correctAnswers": ["192", "١٩٢"],
+    "wrongAnswers": ["193", "191", "194", "190"]
+  },
+  {
+    "question": "احسب الناتج: (54 ÷ 2 + 11) × 4",
+    "correctAnswers": ["152", "١٥٢"],
+    "wrongAnswers": ["153", "151", "154", "150"]
+  },
+  {
+    "question": "احسب الناتج: (49 ÷ 7) × (8 - 1)",
+    "correctAnswers": ["49", "٤٩"],
+    "wrongAnswers": ["50", "48", "51", "47"]
+  },
+  {
+    "question": "احسب الناتج: 56 ÷ 7 × (4 + 10)",
+    "correctAnswers": ["112", "١١٢"],
+    "wrongAnswers": ["113", "111", "114", "110"]
+  },
+  {
+    "question": "احسب الناتج: (348 ÷ 12 - 12) × 9",
+    "correctAnswers": ["153", "١٥٣"],
+    "wrongAnswers": ["154", "152", "155", "151"]
+  },
+  {
+    "question": "احسب الناتج: 4^2 - 4^2",
+    "correctAnswers": ["0", "٠"],
+    "wrongAnswers": ["1", "-1", "2", "-2"]
+  },
+  {
+    "question": "احسب الناتج: (20 + 17) × (12 - 9)",
+    "correctAnswers": ["111", "١١١"],
+    "wrongAnswers": ["112", "110", "113", "109"]
+  },
+  {
+    "question": "احسب الناتج: 4^2 + 6^2 - 4",
+    "correctAnswers": ["48", "٤٨"],
+    "wrongAnswers": ["49", "47", "50", "46"]
+  },
+  {
+    "question": "احسب الناتج: 270 ÷ 10 × (22 + 7)",
+    "correctAnswers": ["783", "٧٨٣"],
+    "wrongAnswers": ["784", "782", "788", "778"]
+  },
+  {
+    "question": "احسب الناتج: (16 - 10) × 10 + 8",
+    "correctAnswers": ["68", "٦٨"],
+    "wrongAnswers": ["69", "67", "70", "66"]
+  },
+  {
+    "question": "ابدأ بـ 20، ضاعفه ثم اطرح 10، ما الناتج؟",
+    "correctAnswers": ["30", "٣٠"],
+    "wrongAnswers": ["31", "29", "32", "28"]
+  },
+  {
+    "question": "احسب الناتج: 10^3 - 6 × 6",
+    "correctAnswers": ["964", "٩٦٤"],
+    "wrongAnswers": ["965", "963", "969", "959"]
+  },
+  {
+    "question": "احسب الناتج: (17 + 3 - 2) × 10",
+    "correctAnswers": ["180", "١٨٠"],
+    "wrongAnswers": ["181", "179", "182", "178"]
+  },
+  {
+    "question": "احسب الناتج: (160 ÷ 10 + 16) × 10",
+    "correctAnswers": ["320", "٣٢٠"],
+    "wrongAnswers": ["321", "319", "322", "318"]
+  },
+  {
+    "question": "احسب الناتج: (15 + 17) × (11 + 7)",
+    "correctAnswers": ["576", "٥٧٦"],
+    "wrongAnswers": ["577", "575", "581", "571"]
+  },
+  {
+    "question": "ربع عدد ناقص 3 يساوي 36، فما العدد؟",
+    "correctAnswers": ["156", "١٥٦"],
+    "wrongAnswers": ["157", "155", "158", "154"]
+  },
+  {
+    "question": "احسب الناتج: 72 ÷ 3 × (7 + 2)",
+    "correctAnswers": ["216", "٢١٦"],
+    "wrongAnswers": ["217", "215", "218", "214"]
+  },
+  {
+    "question": "احسب الناتج: 7^3 - 8 × 3",
+    "correctAnswers": ["319", "٣١٩"],
+    "wrongAnswers": ["320", "318", "321", "317"]
+  },
+  {
+    "question": "احسب الناتج: 48 ÷ 3 × (20 + 8)",
+    "correctAnswers": ["448", "٤٤٨"],
+    "wrongAnswers": ["449", "447", "450", "446"]
+  },
+  {
+    "question": "احسب الناتج: (4 + 2)^2 - 6",
+    "correctAnswers": ["30", "٣٠"],
+    "wrongAnswers": ["31", "29", "32", "28"]
+  },
+  {
+    "question": "احسب الناتج: -(17 - 3) + 9",
+    "correctAnswers": ["-5", "-٥", "سالب 5"],
+    "wrongAnswers": ["-4", "-6", "-3", "-7"]
+  },
+  {
+    "question": "احسب الناتج: 7^2 + 3 × 4",
+    "correctAnswers": ["61", "٦١"],
+    "wrongAnswers": ["62", "60", "63", "59"]
+  },
+  {
+    "question": "احسب الناتج: (35 + 4) × 11 - 6",
+    "correctAnswers": ["423", "٤٢٣"],
+    "wrongAnswers": ["424", "422", "425", "421"]
+  },
+  {
+    "question": "احسب الناتج: -(14 - 6) + 9",
+    "correctAnswers": ["1", "١"],
+    "wrongAnswers": ["2", "0", "3", "-1"]
+  },
+  {
+    "question": "احسب الناتج: 168 ÷ 8 + 15 - 9",
+    "correctAnswers": ["27", "٢٧"],
+    "wrongAnswers": ["28", "26", "29", "25"]
+  },
+  {
+    "question": "احسب الناتج: 88 ÷ 4 × (8 - 5)",
+    "correctAnswers": ["66", "٦٦"],
+    "wrongAnswers": ["67", "65", "68", "64"]
+  },
+  {
+    "question": "احسب الناتج: 4^2 + 8^2 - 5",
+    "correctAnswers": ["75", "٧٥"],
+    "wrongAnswers": ["76", "74", "77", "73"]
+  },
+  {
+    "question": "احسب الناتج: 6^2 + 8 × 2",
+    "correctAnswers": ["52", "٥٢"],
+    "wrongAnswers": ["53", "51", "54", "50"]
+  },
+  {
+    "question": "احسب الناتج: 12^2 + 9 × 6",
+    "correctAnswers": ["198", "١٩٨"],
+    "wrongAnswers": ["199", "197", "200", "196"]
+  },
+  {
+    "question": "احسب الناتج: 25 - 5 × 3",
+    "correctAnswers": ["10", "١٠"],
+    "wrongAnswers": ["11", "9", "12", "8"]
+  },
+  {
+    "question": "احسب الناتج: -(6 - 14) + 7",
+    "correctAnswers": ["15", "١٥"],
+    "wrongAnswers": ["16", "14", "17", "13"]
+  },
+  {
+    "question": "احسب الناتج: 108 ÷ 9 × (19 + 3)",
+    "correctAnswers": ["264", "٢٦٤"],
+    "wrongAnswers": ["265", "263", "266", "262"]
+  },
+  {
+    "question": "احسب الناتج: 80 ÷ 10 + 3 × 8",
+    "correctAnswers": ["32", "٣٢"],
+    "wrongAnswers": ["33", "31", "34", "30"]
+  },
+  {
+    "question": "احسب الناتج: 6 × 3 - 9 + 8",
+    "correctAnswers": ["17", "١٧"],
+    "wrongAnswers": ["18", "16", "19", "15"]
+  },
+  {
+    "question": "احسب الناتج: (11 + 7)^2 - 3",
+    "correctAnswers": ["321", "٣٢١"],
+    "wrongAnswers": ["322", "320", "323", "319"]
+  },
+  {
+    "question": "احسب الناتج: 12 ÷ 2 × (6 - 6)",
+    "correctAnswers": ["0", "٠"],
+    "wrongAnswers": ["1", "-1", "2", "-2"]
+  },
+  {
+    "question": "ما مجموع ثلاثة أعداد متتالية تبدأ بـ 26؟",
+    "correctAnswers": ["81", "٨١"],
+    "wrongAnswers": ["82", "80", "83", "79"]
+  },
+  {
+    "question": "احسب الناتج: 110 ÷ 10 + 10 × 5",
+    "correctAnswers": ["61", "٦١"],
+    "wrongAnswers": ["62", "60", "63", "59"]
+  },
+  {
+    "question": "احسب الناتج: -(6 - 10) + 10",
+    "correctAnswers": ["14", "١٤"],
+    "wrongAnswers": ["15", "13", "16", "12"]
+  },
+  {
+    "question": "عدد إذا ضربته في 3 ثم طرحت 5 أصبح 76، فما العدد؟",
+    "correctAnswers": ["27", "٢٧"],
+    "wrongAnswers": ["28", "26", "29", "25"]
+  },
+  {
+    "question": "احسب الناتج: 9^3 - 8 × 4",
+    "correctAnswers": ["697", "٦٩٧"],
+    "wrongAnswers": ["698", "696", "702", "692"]
+  },
+  {
+    "question": "احسب الناتج: (2 + 9)^2 - 5",
+    "correctAnswers": ["116", "١١٦"],
+    "wrongAnswers": ["117", "115", "118", "114"]
+  },
+  {
+    "question": "احسب الناتج: 4^2 + 7 × 2",
+    "correctAnswers": ["30", "٣٠"],
+    "wrongAnswers": ["31", "29", "32", "28"]
+  },
+  {
+    "question": "احسب الناتج: 5 × (17 + 3) - 6",
+    "correctAnswers": ["94", "٩٤"],
+    "wrongAnswers": ["95", "93", "96", "92"]
+  },
+  {
+    "question": "احسب الناتج: 27 - (4 - 4) × 7",
+    "correctAnswers": ["27", "٢٧"],
+    "wrongAnswers": ["28", "26", "29", "25"]
+  },
+  {
+    "question": "ربع عدد ناقص 3 يساوي 6، فما العدد؟",
+    "correctAnswers": ["36", "٣٦"],
+    "wrongAnswers": ["37", "35", "38", "34"]
+  },
+  {
+    "question": "عدد إذا أضفت إليه 8 ثم ضاعفته أصبح 68، فما العدد؟",
+    "correctAnswers": ["26", "٢٦"],
+    "wrongAnswers": ["27", "25", "28", "24"]
+  },
+  {
+    "question": "احسب الناتج: (5 + 12) × 4 - 6",
+    "correctAnswers": ["62", "٦٢"],
+    "wrongAnswers": ["63", "61", "64", "60"]
+  },
+  {
+    "question": "احسب الناتج: (4 + 8)^2 - 2",
+    "correctAnswers": ["142", "١٤٢"],
+    "wrongAnswers": ["143", "141", "144", "140"]
+  },
+  {
+    "question": "احسب الناتج: 3^2 + 7 × 3",
+    "correctAnswers": ["30", "٣٠"],
+    "wrongAnswers": ["31", "29", "32", "28"]
+  },
+  {
+    "question": "احسب الناتج: 25 + 14 × 11 - 10",
+    "correctAnswers": ["169", "١٦٩"],
+    "wrongAnswers": ["170", "168", "171", "167"]
+  },
+  {
+    "question": "احسب الناتج: 2^3 - 9 × 6",
+    "correctAnswers": ["-46", "-٤٦", "سالب 46"],
+    "wrongAnswers": ["-45", "-47", "-44", "-48"]
+  },
+  {
+    "question": "احسب الناتج: (23 + 16) × (8 + 10)",
+    "correctAnswers": ["702", "٧٠٢"],
+    "wrongAnswers": ["703", "701", "707", "697"]
+  },
+  {
+    "question": "احسب الناتج: 22 × (16 + 10) - 2",
+    "correctAnswers": ["570", "٥٧٠"],
+    "wrongAnswers": ["571", "569", "575", "565"]
+  },
+  {
+    "question": "احسب الناتج: 12^3 - 7 × 5",
+    "correctAnswers": ["1693", "١٦٩٣"],
+    "wrongAnswers": ["1694", "1692", "1698", "1688"]
+  },
+  {
+    "question": "احسب الناتج: 26 - 12 × 4",
+    "correctAnswers": ["-22", "-٢٢", "سالب 22"],
+    "wrongAnswers": ["-21", "-23", "-20", "-24"]
+  },
+  {
+    "question": "احسب الناتج: 8^3 - 4 × 2",
+    "correctAnswers": ["504", "٥٠٤"],
+    "wrongAnswers": ["505", "503", "509", "499"]
+  },
+  {
+    "question": "احسب الناتج: 20 × 6 - 6 + 5",
+    "correctAnswers": ["119", "١١٩"],
+    "wrongAnswers": ["120", "118", "121", "117"]
+  },
+  {
+    "question": "احسب الناتج: 9^2 + 2 × 4",
+    "correctAnswers": ["89", "٨٩"],
+    "wrongAnswers": ["90", "88", "91", "87"]
+  },
+  {
+    "question": "ما حاصل ضرب العددين المتتاليين 14 و15؟",
+    "correctAnswers": ["210", "٢١٠"],
+    "wrongAnswers": ["211", "209", "212", "208"]
+  },
+  {
+    "question": "احسب الناتج: 9 - 14 × 8",
+    "correctAnswers": ["-103", "-١٠٣", "سالب 103"],
+    "wrongAnswers": ["-102", "-104", "-101", "-105"]
+  },
+  {
+    "question": "احسب الناتج: 174 ÷ 6 + 4",
+    "correctAnswers": ["33", "٣٣"],
+    "wrongAnswers": ["34", "32", "35", "31"]
+  },
+  {
+    "question": "احسب الناتج: (10 + 2)^2 - 6",
+    "correctAnswers": ["138", "١٣٨"],
+    "wrongAnswers": ["139", "137", "140", "136"]
+  },
+  {
+    "question": "احسب الناتج: (4 + 5)^2 - 5",
+    "correctAnswers": ["76", "٧٦"],
+    "wrongAnswers": ["77", "75", "78", "74"]
+  },
+  {
+    "question": "احسب الناتج: 16 ÷ 4 + 3 - 10",
+    "correctAnswers": ["-3", "-٣", "سالب 3"],
+    "wrongAnswers": ["-2", "-4", "-1", "-5"]
+  },
+  {
+    "question": "احسب الناتج: 11^2 + 2 × 4",
+    "correctAnswers": ["129", "١٢٩"],
+    "wrongAnswers": ["130", "128", "131", "127"]
+  },
+  {
+    "question": "احسب الناتج: 11^3 - 6 × 4",
+    "correctAnswers": ["1307", "١٣٠٧"],
+    "wrongAnswers": ["1308", "1306", "1312", "1302"]
+  },
+  {
+    "question": "احسب الناتج: 4^2 + 6 × 6",
+    "correctAnswers": ["52", "٥٢"],
+    "wrongAnswers": ["53", "51", "54", "50"]
+  },
+  {
+    "question": "احسب الناتج: 9^3 - 6 × 5",
+    "correctAnswers": ["699", "٦٩٩"],
+    "wrongAnswers": ["700", "698", "704", "694"]
+  },
+  {
+    "question": "احسب الناتج: (10 + 3)^2 - 3",
+    "correctAnswers": ["166", "١٦٦"],
+    "wrongAnswers": ["167", "165", "168", "164"]
+  },
+  {
+    "question": "احسب الناتج: 4^3 - 2 × 3",
+    "correctAnswers": ["58", "٥٨"],
+    "wrongAnswers": ["59", "57", "60", "56"]
+  },
+  {
+    "question": "احسب الناتج: -(5 - 12) + 9",
+    "correctAnswers": ["16", "١٦"],
+    "wrongAnswers": ["17", "15", "18", "14"]
+  },
+  {
+    "question": "احسب الناتج: (4 + 9) × 3^2",
+    "correctAnswers": ["117", "١١٧"],
+    "wrongAnswers": ["118", "116", "119", "115"]
+  },
+  {
+    "question": "احسب الناتج: 3 × (3 + 4) - 8",
+    "correctAnswers": ["13", "١٣"],
+    "wrongAnswers": ["14", "12", "15", "11"]
+  },
+  {
+    "question": "احسب الناتج: (135 ÷ 9) × (4 - 1)",
+    "correctAnswers": ["45", "٤٥"],
+    "wrongAnswers": ["46", "44", "47", "43"]
+  },
+  {
+    "question": "احسب الناتج: (30 ÷ 3 - 8) × 3",
+    "correctAnswers": ["6", "٦"],
+    "wrongAnswers": ["7", "5", "8", "4"]
+  },
+  {
+    "question": "احسب الناتج: (13 + 9) × (10 - 5)",
+    "correctAnswers": ["110", "١١٠"],
+    "wrongAnswers": ["111", "109", "112", "108"]
+  },
+  {
+    "question": "احسب الناتج: 10 × 12 - 2 + 3",
+    "correctAnswers": ["121", "١٢١"],
+    "wrongAnswers": ["122", "120", "123", "119"]
+  },
+  {
+    "question": "احسب الناتج: 140 ÷ 10 × (7 + 3)",
+    "correctAnswers": ["140", "١٤٠"],
+    "wrongAnswers": ["141", "139", "142", "138"]
+  },
+  {
+    "question": "احسب الناتج: 4^3 - 4 × 3",
+    "correctAnswers": ["52", "٥٢"],
+    "wrongAnswers": ["53", "51", "54", "50"]
+  },
+  {
+    "question": "احسب الناتج: 60 ÷ 12 + 25 × 10",
+    "correctAnswers": ["255", "٢٥٥"],
+    "wrongAnswers": ["256", "254", "257", "253"]
+  },
+  {
+    "question": "احسب الناتج: (27 + 10) × (4 + 10)",
+    "correctAnswers": ["518", "٥١٨"],
+    "wrongAnswers": ["519", "517", "523", "513"]
+  },
+  {
+    "question": "احسب الناتج: 12 ÷ 3 × (24 - 3)",
+    "correctAnswers": ["84", "٨٤"],
+    "wrongAnswers": ["85", "83", "86", "82"]
+  },
+  {
+    "question": "احسب الناتج: 110 ÷ 10 + 3 × 10",
+    "correctAnswers": ["41", "٤١"],
+    "wrongAnswers": ["42", "40", "43", "39"]
+  },
+  {
+    "question": "احسب الناتج: -(30 - 12) + 3",
+    "correctAnswers": ["-15", "-١٥", "سالب 15"],
+    "wrongAnswers": ["-14", "-16", "-13", "-17"]
+  },
+  {
+    "question": "احسب الناتج: (132 ÷ 6 + 12) × 8",
+    "correctAnswers": ["272", "٢٧٢"],
+    "wrongAnswers": ["273", "271", "274", "270"]
+  },
+  {
+    "question": "احسب الناتج: 12^2 + 7 × 2",
+    "correctAnswers": ["158", "١٥٨"],
+    "wrongAnswers": ["159", "157", "160", "156"]
+  },
+  {
+    "question": "احسب الناتج: 270 ÷ 9 + 6 - 5",
+    "correctAnswers": ["31", "٣١"],
+    "wrongAnswers": ["32", "30", "33", "29"]
+  },
+  {
+    "question": "احسب الناتج: (56 ÷ 2 - 13) × 3",
+    "correctAnswers": ["45", "٤٥"],
+    "wrongAnswers": ["46", "44", "47", "43"]
+  },
+  {
+    "question": "عدد إذا ضاعفته ثم أضفت 7 أصبح 99، فما العدد؟",
+    "correctAnswers": ["46", "٤٦"],
+    "wrongAnswers": ["47", "45", "48", "44"]
+  },
+  {
+    "question": "احسب الناتج: (9 + 13) × 11 - 3",
+    "correctAnswers": ["239", "٢٣٩"],
+    "wrongAnswers": ["240", "238", "241", "237"]
+  },
+  {
+    "question": "احسب الناتج: (8 + 3)^2 - 6",
+    "correctAnswers": ["115", "١١٥"],
+    "wrongAnswers": ["116", "114", "117", "113"]
+  },
+  {
+    "question": "احسب الناتج: (72 ÷ 8 + 16) × 5",
+    "correctAnswers": ["125", "١٢٥"],
+    "wrongAnswers": ["126", "124", "127", "123"]
+  },
+  {
+    "question": "احسب الناتج: 12^3 - 3 × 6",
+    "correctAnswers": ["1710", "١٧١٠"],
+    "wrongAnswers": ["1711", "1709", "1715", "1705"]
+  },
+  {
+    "question": "احسب الناتج: 8 - 4 × 4",
+    "correctAnswers": ["-8", "-٨", "سالب 8"],
+    "wrongAnswers": ["-7", "-9", "-6", "-10"]
+  },
+  {
+    "question": "احسب الناتج: (9 + 8)^2 - 5",
+    "correctAnswers": ["284", "٢٨٤"],
+    "wrongAnswers": ["285", "283", "286", "282"]
+  },
+  {
+    "question": "احسب الناتج: 176 ÷ 11 + 5 - 9",
+    "correctAnswers": ["12", "١٢"],
+    "wrongAnswers": ["13", "11", "14", "10"]
+  },
+  {
+    "question": "احسب الناتج: 4^3 - 8 × 3",
+    "correctAnswers": ["40", "٤٠"],
+    "wrongAnswers": ["41", "39", "42", "38"]
+  },
+  {
+    "question": "احسب الناتج: 8^2 + 5 × 4",
+    "correctAnswers": ["84", "٨٤"],
+    "wrongAnswers": ["85", "83", "86", "82"]
+  },
+  {
+    "question": "عدد إذا ضاعفته ثم أضفت 7 أصبح 79، فما العدد؟",
+    "correctAnswers": ["36", "٣٦"],
+    "wrongAnswers": ["37", "35", "38", "34"]
+  },
+  {
+    "question": "احسب الناتج: 9 - (17 - 7) × 3",
+    "correctAnswers": ["-21", "-٢١", "سالب 21"],
+    "wrongAnswers": ["-20", "-22", "-19", "-23"]
+  },
+  {
+    "question": "احسب الناتج: 6^3 - 5 × 4",
+    "correctAnswers": ["196", "١٩٦"],
+    "wrongAnswers": ["197", "195", "198", "194"]
+  },
+  {
+    "question": "احسب الناتج: 11 × 16 - 8 + 4",
+    "correctAnswers": ["172", "١٧٢"],
+    "wrongAnswers": ["173", "171", "174", "170"]
+  },
+  {
+    "question": "احسب الناتج: 8 - 6 × 5",
+    "correctAnswers": ["-22", "-٢٢", "سالب 22"],
+    "wrongAnswers": ["-21", "-23", "-20", "-24"]
+  },
+  {
+    "question": "احسب الناتج: 63 ÷ 3 + 21 - 6",
+    "correctAnswers": ["36", "٣٦"],
+    "wrongAnswers": ["37", "35", "38", "34"]
+  },
+  {
+    "question": "احسب الناتج: 11^3 - 4 × 4",
+    "correctAnswers": ["1315", "١٣١٥"],
+    "wrongAnswers": ["1316", "1314", "1320", "1310"]
+  },
+  {
+    "question": "احسب الناتج: 16 - 4 × 4",
+    "correctAnswers": ["0", "٠"],
+    "wrongAnswers": ["1", "-1", "2", "-2"]
+  },
+  {
+    "question": "احسب الناتج: 320 ÷ 8 + 10",
+    "correctAnswers": ["50", "٥٠"],
+    "wrongAnswers": ["51", "49", "52", "48"]
+  },
+  {
+    "question": "احسب الناتج: 9^3 - 3 × 2",
+    "correctAnswers": ["723", "٧٢٣"],
+    "wrongAnswers": ["724", "722", "728", "718"]
+  },
+  {
+    "question": "احسب الناتج: 22 - 6 × 7",
+    "correctAnswers": ["-20", "-٢٠", "سالب 20"],
+    "wrongAnswers": ["-19", "-21", "-18", "-22"]
+  },
+  {
+    "question": "احسب الناتج: 324 ÷ 12 × (18 - 2)",
+    "correctAnswers": ["432", "٤٣٢"],
+    "wrongAnswers": ["433", "431", "434", "430"]
+  },
+  {
+    "question": "احسب الناتج: -(8 - 10) + 5",
+    "correctAnswers": ["7", "٧"],
+    "wrongAnswers": ["8", "6", "9", "5"]
+  },
+  {
+    "question": "احسب الناتج: (5 + 9) × 2^2",
+    "correctAnswers": ["56", "٥٦"],
+    "wrongAnswers": ["57", "55", "58", "54"]
+  },
+  {
+    "question": "عدد إذا ضربته في 3 ثم طرحت 5 أصبح 31، فما العدد؟",
+    "correctAnswers": ["12", "١٢"],
+    "wrongAnswers": ["13", "11", "14", "10"]
+  },
+  {
+    "question": "احسب الناتج: 6^3 - 5 × 2",
+    "correctAnswers": ["206", "٢٠٦"],
+    "wrongAnswers": ["207", "205", "208", "204"]
+  },
+  {
+    "question": "احسب الناتج: 8^3 - 3 × 6",
+    "correctAnswers": ["494", "٤٩٤"],
+    "wrongAnswers": ["495", "493", "496", "492"]
+  },
+  {
+    "question": "احسب الناتج: 19 - 5 × 2",
+    "correctAnswers": ["9", "٩"],
+    "wrongAnswers": ["10", "8", "11", "7"]
+  },
+  {
+    "question": "احسب الناتج: (7 - 4) × 3 + 7",
+    "correctAnswers": ["16", "١٦"],
+    "wrongAnswers": ["17", "15", "18", "14"]
+  },
+  {
+    "question": "احسب الناتج: 16 × 10 - 12 + 4",
+    "correctAnswers": ["152", "١٥٢"],
+    "wrongAnswers": ["153", "151", "154", "150"]
+  },
+  {
+    "question": "احسب الناتج: 4^3 - 5 × 3",
+    "correctAnswers": ["49", "٤٩"],
+    "wrongAnswers": ["50", "48", "51", "47"]
+  },
+  {
+    "question": "احسب الناتج: 25 - (15 - 5) × 9",
+    "correctAnswers": ["-65", "-٦٥", "سالب 65"],
+    "wrongAnswers": ["-64", "-66", "-63", "-67"]
+  },
+  {
+    "question": "احسب الناتج: 21 + 4 × 10 - 4",
+    "correctAnswers": ["57", "٥٧"],
+    "wrongAnswers": ["58", "56", "59", "55"]
+  },
+  {
+    "question": "احسب الناتج: (8 + 4)^2 - 6",
+    "correctAnswers": ["138", "١٣٨"],
+    "wrongAnswers": ["139", "137", "140", "136"]
+  },
+  {
+    "question": "احسب الناتج: 224 ÷ 8 + 11 × 8",
+    "correctAnswers": ["116", "١١٦"],
+    "wrongAnswers": ["117", "115", "118", "114"]
+  },
+  {
+    "question": "احسب الناتج: 11^2 + 5 × 2",
+    "correctAnswers": ["131", "١٣١"],
+    "wrongAnswers": ["132", "130", "133", "129"]
+  },
+  {
+    "question": "احسب الناتج: 180 ÷ 6 + 9 × 4",
+    "correctAnswers": ["66", "٦٦"],
+    "wrongAnswers": ["67", "65", "68", "64"]
+  },
+  {
+    "question": "احسب الناتج: 9^2 + 8 × 3",
+    "correctAnswers": ["105", "١٠٥"],
+    "wrongAnswers": ["106", "104", "107", "103"]
+  },
+  {
+    "question": "احسب الناتج: -(29 - 6) + 7",
+    "correctAnswers": ["-16", "-١٦", "سالب 16"],
+    "wrongAnswers": ["-15", "-17", "-14", "-18"]
+  },
+  {
+    "question": "احسب الناتج: 4^2 + 8 × 6",
+    "correctAnswers": ["64", "٦٤"],
+    "wrongAnswers": ["65", "63", "66", "62"]
+  },
+  {
+    "question": "احسب الناتج: (230 ÷ 10 - 21) × 9",
+    "correctAnswers": ["18", "١٨"],
+    "wrongAnswers": ["19", "17", "20", "16"]
+  },
+  {
+    "question": "احسب الناتج: 8^2 + 2 × 3",
+    "correctAnswers": ["70", "٧٠"],
+    "wrongAnswers": ["71", "69", "72", "68"]
+  },
+  {
+    "question": "احسب الناتج: (8 + 7) × 2^2",
+    "correctAnswers": ["60", "٦٠"],
+    "wrongAnswers": ["61", "59", "62", "58"]
+  },
+  {
+    "question": "احسب الناتج: -(15 - 7) + 8",
+    "correctAnswers": ["0", "٠"],
+    "wrongAnswers": ["1", "-1", "2", "-2"]
+  },
+  {
+    "question": "احسب الناتج: 30 + (13 + 6) × 5",
+    "correctAnswers": ["125", "١٢٥"],
+    "wrongAnswers": ["126", "124", "127", "123"]
+  },
+  {
+    "question": "احسب الناتج: (20 + 11 - 8) × 7",
+    "correctAnswers": ["161", "١٦١"],
+    "wrongAnswers": ["162", "160", "163", "159"]
+  },
+  {
+    "question": "احسب الناتج: (5 + 18) × 4 - 3",
+    "correctAnswers": ["89", "٨٩"],
+    "wrongAnswers": ["90", "88", "91", "87"]
+  },
+  {
+    "question": "احسب الناتج: 22 × 16 - 11 + 10",
+    "correctAnswers": ["351", "٣٥١"],
+    "wrongAnswers": ["352", "350", "353", "349"]
+  },
+  {
+    "question": "احسب الناتج: 7^3 - 8 × 5",
+    "correctAnswers": ["303", "٣٠٣"],
+    "wrongAnswers": ["304", "302", "305", "301"]
+  },
+  {
+    "question": "احسب الناتج: (6 + 13 - 6) × 8",
+    "correctAnswers": ["104", "١٠٤"],
+    "wrongAnswers": ["105", "103", "106", "102"]
+  },
+  {
+    "question": "احسب الناتج: 17 × (3 + 2) - 5",
+    "correctAnswers": ["80", "٨٠"],
+    "wrongAnswers": ["81", "79", "82", "78"]
+  },
+  {
+    "question": "احسب الناتج: 2^3 - 5 × 5",
+    "correctAnswers": ["-17", "-١٧", "سالب 17"],
+    "wrongAnswers": ["-16", "-18", "-15", "-19"]
+  },
+  {
+    "question": "احسب الناتج: 6^3 - 2 × 3",
+    "correctAnswers": ["210", "٢١٠"],
+    "wrongAnswers": ["211", "209", "212", "208"]
+  },
+  {
+    "question": "احسب الناتج: (6 + 18) × 2 - 4",
+    "correctAnswers": ["44", "٤٤"],
+    "wrongAnswers": ["45", "43", "46", "42"]
+  },
+  {
+    "question": "احسب الناتج: (32 - 9) × 12 + 6",
+    "correctAnswers": ["282", "٢٨٢"],
+    "wrongAnswers": ["283", "281", "284", "280"]
+  },
+  {
+    "question": "احسب الناتج: (16 + 10 - 10) × 2",
+    "correctAnswers": ["32", "٣٢"],
+    "wrongAnswers": ["33", "31", "34", "30"]
+  },
+  {
+    "question": "احسب الناتج: 6 - 4 × 2",
+    "correctAnswers": ["-2", "-٢", "سالب 2"],
+    "wrongAnswers": ["-1", "-3", "0", "-4"]
+  },
+  {
+    "question": "احسب الناتج: 11^2 + 6 × 4",
+    "correctAnswers": ["145", "١٤٥"],
+    "wrongAnswers": ["146", "144", "147", "143"]
+  },
+  {
+    "question": "احسب الناتج: 10^2 + 7 × 5",
+    "correctAnswers": ["135", "١٣٥"],
+    "wrongAnswers": ["136", "134", "137", "133"]
+  },
+  {
+    "question": "احسب الناتج: (34 - 11) × 11 + 2",
+    "correctAnswers": ["255", "٢٥٥"],
+    "wrongAnswers": ["256", "254", "257", "253"]
+  },
+  {
+    "question": "احسب الناتج: (32 + 10 - 4) × 3",
+    "correctAnswers": ["114", "١١٤"],
+    "wrongAnswers": ["115", "113", "116", "112"]
+  },
+  {
+    "question": "احسب الناتج: 18 - 3 × 8",
+    "correctAnswers": ["-6", "-٦", "سالب 6"],
+    "wrongAnswers": ["-5", "-7", "-4", "-8"]
+  },
+  {
+    "question": "احسب الناتج: 5^3 - 8 × 6",
+    "correctAnswers": ["77", "٧٧"],
+    "wrongAnswers": ["78", "76", "79", "75"]
+  },
+  {
+    "question": "احسب الناتج: 9^2 - 6^2",
+    "correctAnswers": ["45", "٤٥"],
+    "wrongAnswers": ["46", "44", "47", "43"]
+  },
+  {
+    "question": "احسب الناتج: -(20 - 14) + 8",
+    "correctAnswers": ["2", "٢"],
+    "wrongAnswers": ["3", "1", "4", "0"]
+  },
+  {
+    "question": "احسب الناتج: -(24 - 3) + 8",
+    "correctAnswers": ["-13", "-١٣", "سالب 13"],
+    "wrongAnswers": ["-12", "-14", "-11", "-15"]
+  },
+  {
+    "question": "احسب الناتج: -(28 - 7) + 8",
+    "correctAnswers": ["-13", "-١٣", "سالب 13"],
+    "wrongAnswers": ["-12", "-14", "-11", "-15"]
+  },
+  {
+    "question": "احسب الناتج: 6 + (17 + 4) × 6",
+    "correctAnswers": ["132", "١٣٢"],
+    "wrongAnswers": ["133", "131", "134", "130"]
+  },
+  {
+    "question": "احسب الناتج: 8^2 + 3^2 - 6",
+    "correctAnswers": ["67", "٦٧"],
+    "wrongAnswers": ["68", "66", "69", "65"]
+  },
+  {
+    "question": "احسب الناتج: 5 - 12 × 9",
+    "correctAnswers": ["-103", "-١٠٣", "سالب 103"],
+    "wrongAnswers": ["-102", "-104", "-101", "-105"]
+  },
+  {
+    "question": "احسب الناتج: 22 - 4 × 6",
+    "correctAnswers": ["-2", "-٢", "سالب 2"],
+    "wrongAnswers": ["-1", "-3", "0", "-4"]
+  },
+  {
+    "question": "احسب الناتج: 40 ÷ 5 + 12 - 4",
+    "correctAnswers": ["16", "١٦"],
+    "wrongAnswers": ["17", "15", "18", "14"]
+  },
+  {
+    "question": "احسب الناتج: (7 + 2)^2 - 4",
+    "correctAnswers": ["77", "٧٧"],
+    "wrongAnswers": ["78", "76", "79", "75"]
+  },
+  {
+    "question": "عدد إذا أضفت إليه 8 ثم ضاعفته أصبح 48، فما العدد؟",
+    "correctAnswers": ["16", "١٦"],
+    "wrongAnswers": ["17", "15", "18", "14"]
+  },
+  {
+    "question": "احسب الناتج: (174 ÷ 6 - 19) × 7",
+    "correctAnswers": ["70", "٧٠"],
+    "wrongAnswers": ["71", "69", "72", "68"]
+  },
+  {
+    "question": "احسب الناتج: 13 - 9 × 9",
+    "correctAnswers": ["-68", "-٦٨", "سالب 68"],
+    "wrongAnswers": ["-67", "-69", "-66", "-70"]
+  },
+  {
+    "question": "احسب الناتج: -(16 - 12) + 10",
+    "correctAnswers": ["6", "٦"],
+    "wrongAnswers": ["7", "5", "8", "4"]
+  },
+  {
+    "question": "احسب الناتج: (7 + 9)^2 - 5",
+    "correctAnswers": ["251", "٢٥١"],
+    "wrongAnswers": ["252", "250", "253", "249"]
+  },
+  {
+    "question": "احسب الناتج: 84 ÷ 6 × (8 + 3)",
+    "correctAnswers": ["154", "١٥٤"],
+    "wrongAnswers": ["155", "153", "156", "152"]
+  },
+  {
+    "question": "احسب الناتج: 3^3 - 9 × 4",
+    "correctAnswers": ["-9", "-٩", "سالب 9"],
+    "wrongAnswers": ["-8", "-10", "-7", "-11"]
+  },
+  {
+    "question": "احسب الناتج: -(10 - 15) + 8",
+    "correctAnswers": ["13", "١٣"],
+    "wrongAnswers": ["14", "12", "15", "11"]
+  },
+  {
+    "question": "احسب الناتج: 9 - (16 - 8) × 8",
+    "correctAnswers": ["-55", "-٥٥", "سالب 55"],
+    "wrongAnswers": ["-54", "-56", "-53", "-57"]
+  },
+  {
+    "question": "احسب الناتج: -(26 - 8) + 8",
+    "correctAnswers": ["-10", "-١٠", "سالب 10"],
+    "wrongAnswers": ["-9", "-11", "-8", "-12"]
+  },
+  {
+    "question": "احسب الناتج: (28 ÷ 2) × (3 - 1)",
+    "correctAnswers": ["28", "٢٨"],
+    "wrongAnswers": ["29", "27", "30", "26"]
+  },
+  {
+    "question": "احسب الناتج: (8 + 8)^2 - 2",
+    "correctAnswers": ["254", "٢٥٤"],
+    "wrongAnswers": ["255", "253", "256", "252"]
+  },
+  {
+    "question": "احسب الناتج: (34 + 2) × (7 - 4)",
+    "correctAnswers": ["108", "١٠٨"],
+    "wrongAnswers": ["109", "107", "110", "106"]
+  },
+  {
+    "question": "احسب الناتج: -(19 - 15) + 4",
+    "correctAnswers": ["0", "٠"],
+    "wrongAnswers": ["1", "-1", "2", "-2"]
+  },
+  {
+    "question": "احسب الناتج: 54 ÷ 2 + 4",
+    "correctAnswers": ["31", "٣١"],
+    "wrongAnswers": ["32", "30", "33", "29"]
+  },
+  {
+    "question": "احسب الناتج: 21 - 12 × 6",
+    "correctAnswers": ["-51", "-٥١", "سالب 51"],
+    "wrongAnswers": ["-50", "-52", "-49", "-53"]
+  },
+  {
+    "question": "احسب الناتج: -(24 - 8) + 2",
+    "correctAnswers": ["-14", "-١٤", "سالب 14"],
+    "wrongAnswers": ["-13", "-15", "-12", "-16"]
+  },
+  {
+    "question": "احسب الناتج: -(26 - 13) + 8",
+    "correctAnswers": ["-5", "-٥", "سالب 5"],
+    "wrongAnswers": ["-4", "-6", "-3", "-7"]
+  },
+  {
+    "question": "احسب الناتج: 4^2 + 5 × 5",
+    "correctAnswers": ["41", "٤١"],
+    "wrongAnswers": ["42", "40", "43", "39"]
+  },
+  {
+    "question": "احسب الناتج: (12 + 3)^2 - 4",
+    "correctAnswers": ["221", "٢٢١"],
+    "wrongAnswers": ["222", "220", "223", "219"]
+  },
+  {
+    "question": "احسب الناتج: (12 + 5)^2 - 6",
+    "correctAnswers": ["283", "٢٨٣"],
+    "wrongAnswers": ["284", "282", "285", "281"]
+  },
+  {
+    "question": "احسب الناتج: (7 + 9)^2 - 4",
+    "correctAnswers": ["252", "٢٥٢"],
+    "wrongAnswers": ["253", "251", "254", "250"]
+  },
+  {
+    "question": "احسب الناتج: 9^2 + 7 × 2",
+    "correctAnswers": ["95", "٩٥"],
+    "wrongAnswers": ["96", "94", "97", "93"]
+  },
+  {
+    "question": "احسب الناتج: 29 - 14 × 9",
+    "correctAnswers": ["-97", "-٩٧", "سالب 97"],
+    "wrongAnswers": ["-96", "-98", "-95", "-99"]
+  },
+  {
+    "question": "احسب الناتج: 49 ÷ 7 × (7 + 6)",
+    "correctAnswers": ["91", "٩١"],
+    "wrongAnswers": ["92", "90", "93", "89"]
+  },
+  {
+    "question": "احسب الناتج: (5 + 18) × (2 + 7)",
+    "correctAnswers": ["207", "٢٠٧"],
+    "wrongAnswers": ["208", "206", "209", "205"]
+  },
+  {
+    "question": "ربع عدد ناقص 3 يساوي 20، فما العدد؟",
+    "correctAnswers": ["92", "٩٢"],
+    "wrongAnswers": ["93", "91", "94", "90"]
+  },
+  {
+    "question": "احسب الناتج: (7 + 13) × 7 - 5",
+    "correctAnswers": ["135", "١٣٥"],
+    "wrongAnswers": ["136", "134", "137", "133"]
+  },
+  {
+    "question": "احسب الناتج: (8 + 4)^2 - 2",
+    "correctAnswers": ["142", "١٤٢"],
+    "wrongAnswers": ["143", "141", "144", "140"]
+  },
+  {
+    "question": "احسب الناتج: (32 + 2) × (10 - 5)",
+    "correctAnswers": ["170", "١٧٠"],
+    "wrongAnswers": ["171", "169", "172", "168"]
+  },
+  {
+    "question": "احسب الناتج: 120 ÷ 12 + 19 × 8",
+    "correctAnswers": ["162", "١٦٢"],
+    "wrongAnswers": ["163", "161", "164", "160"]
+  },
+  {
+    "question": "احسب الناتج: (24 ÷ 6) × (3 - 1)",
+    "correctAnswers": ["8", "٨"],
+    "wrongAnswers": ["9", "7", "10", "6"]
+  },
+  {
+    "question": "احسب الناتج: 36 ÷ 2 × (16 + 7)",
+    "correctAnswers": ["414", "٤١٤"],
+    "wrongAnswers": ["415", "413", "416", "412"]
+  },
+  {
+    "question": "احسب الناتج: (3 + 15 - 10) × 3",
+    "correctAnswers": ["24", "٢٤"],
+    "wrongAnswers": ["25", "23", "26", "22"]
+  },
+  {
+    "question": "احسب الناتج: (3 + 4) × 4^2",
+    "correctAnswers": ["112", "١١٢"],
+    "wrongAnswers": ["113", "111", "114", "110"]
+  },
+  {
+    "question": "احسب الناتج: (7 × 6)^2",
+    "correctAnswers": ["1764", "١٧٦٤"],
+    "wrongAnswers": ["1765", "1763", "1769", "1759"]
+  },
+  {
+    "question": "احسب الناتج: 9 - (14 - 11) × 5",
+    "correctAnswers": ["-6", "-٦", "سالب 6"],
+    "wrongAnswers": ["-5", "-7", "-4", "-8"]
+  },
+  {
+    "question": "احسب الناتج: 24 - 9 × 4",
+    "correctAnswers": ["-12", "-١٢", "سالب 12"],
+    "wrongAnswers": ["-11", "-13", "-10", "-14"]
+  },
+  {
+    "question": "احسب الناتج: 35 + (4 + 6) × 5",
+    "correctAnswers": ["85", "٨٥"],
+    "wrongAnswers": ["86", "84", "87", "83"]
+  },
+  {
+    "question": "عدد إذا أضفت إليه 8 ثم ضاعفته أصبح 82، فما العدد؟",
+    "correctAnswers": ["33", "٣٣"],
+    "wrongAnswers": ["34", "32", "35", "31"]
+  },
+  {
+    "question": "احسب الناتج: (6 + 9)^2 - 3",
+    "correctAnswers": ["222", "٢٢٢"],
+    "wrongAnswers": ["223", "221", "224", "220"]
+  },
+  {
+    "question": "احسب الناتج: 7 - (8 - 12) × 4",
+    "correctAnswers": ["23", "٢٣"],
+    "wrongAnswers": ["24", "22", "25", "21"]
+  },
+  {
+    "question": "احسب الناتج: 11^2 + 2 × 3",
+    "correctAnswers": ["127", "١٢٧"],
+    "wrongAnswers": ["128", "126", "129", "125"]
+  },
+  {
+    "question": "ما حاصل ضرب العددين المتتاليين 40 و41؟",
+    "correctAnswers": ["1640", "١٦٤٠"],
+    "wrongAnswers": ["1641", "1639", "1645", "1635"]
+  },
+  {
+    "question": "احسب الناتج: (63 ÷ 7) × (11 - 1)",
+    "correctAnswers": ["90", "٩٠"],
+    "wrongAnswers": ["91", "89", "92", "88"]
+  },
+  {
+    "question": "احسب الناتج: 16 ÷ 4 × (10 + 5)",
+    "correctAnswers": ["60", "٦٠"],
+    "wrongAnswers": ["61", "59", "62", "58"]
+  },
+  {
+    "question": "احسب الناتج: (100 ÷ 4 - 6) × 5",
+    "correctAnswers": ["95", "٩٥"],
+    "wrongAnswers": ["96", "94", "97", "93"]
+  },
+  {
+    "question": "احسب الناتج: 12^2 + 3 × 2",
+    "correctAnswers": ["150", "١٥٠"],
+    "wrongAnswers": ["151", "149", "152", "148"]
+  },
+  {
+    "question": "احسب الناتج: 30 - (12 - 9) × 3",
+    "correctAnswers": ["21", "٢١"],
+    "wrongAnswers": ["22", "20", "23", "19"]
+  },
+  {
+    "question": "احسب الناتج: -(26 - 3) + 7",
+    "correctAnswers": ["-16", "-١٦", "سالب 16"],
+    "wrongAnswers": ["-15", "-17", "-14", "-18"]
+  },
+  {
+    "question": "ما حاصل ضرب العددين المتتاليين 12 و13؟",
+    "correctAnswers": ["156", "١٥٦"],
+    "wrongAnswers": ["157", "155", "158", "154"]
+  },
+  {
+    "question": "احسب الناتج: (28 - 16) × 3 + 2",
+    "correctAnswers": ["38", "٣٨"],
+    "wrongAnswers": ["39", "37", "40", "36"]
+  },
+  {
+    "question": "احسب الناتج: 15 - 9 × 2",
+    "correctAnswers": ["-3", "-٣", "سالب 3"],
+    "wrongAnswers": ["-2", "-4", "-1", "-5"]
+  },
+  {
+    "question": "احسب الناتج: 4^3 - 9 × 2",
+    "correctAnswers": ["46", "٤٦"],
+    "wrongAnswers": ["47", "45", "48", "44"]
+  },
+  {
+    "question": "احسب الناتج: 12^2 + 5 × 4",
+    "correctAnswers": ["164", "١٦٤"],
+    "wrongAnswers": ["165", "163", "166", "162"]
+  },
+  {
+    "question": "احسب الناتج: (63 ÷ 9) × (4 - 1)",
+    "correctAnswers": ["21", "٢١"],
+    "wrongAnswers": ["22", "20", "23", "19"]
+  },
+  {
+    "question": "احسب الناتج: 12^2 + 7 × 4",
+    "correctAnswers": ["172", "١٧٢"],
+    "wrongAnswers": ["173", "171", "174", "170"]
+  },
+  {
+    "question": "احسب الناتج: (15 + 4) × (5 + 7)",
+    "correctAnswers": ["228", "٢٢٨"],
+    "wrongAnswers": ["229", "227", "230", "226"]
+  },
+  {
+    "question": "احسب الناتج: 5^2 + 4 × 4",
+    "correctAnswers": ["41", "٤١"],
+    "wrongAnswers": ["42", "40", "43", "39"]
+  },
+  {
+    "question": "احسب الناتج: -(6 - 8) + 7",
+    "correctAnswers": ["9", "٩"],
+    "wrongAnswers": ["10", "8", "11", "7"]
+  },
+  {
+    "question": "احسب الناتج: 2^2 - 8^2",
+    "correctAnswers": ["-60", "-٦٠", "سالب 60"],
+    "wrongAnswers": ["-59", "-61", "-58", "-62"]
+  },
+  {
+    "question": "احسب الناتج: (3 + 6 - 3) × 9",
+    "correctAnswers": ["54", "٥٤"],
+    "wrongAnswers": ["55", "53", "56", "52"]
+  },
+  {
+    "question": "احسب الناتج: (9 + 5) × 2^2",
+    "correctAnswers": ["56", "٥٦"],
+    "wrongAnswers": ["57", "55", "58", "54"]
+  },
+  {
+    "question": "احسب الناتج: 2^3 - 2 × 2",
+    "correctAnswers": ["4", "٤"],
+    "wrongAnswers": ["5", "3", "6", "2"]
+  },
+  {
+    "question": "احسب الناتج: (136 ÷ 8 + 10) × 5",
+    "correctAnswers": ["135", "١٣٥"],
+    "wrongAnswers": ["136", "134", "137", "133"]
+  },
+  {
+    "question": "احسب الناتج: (5 + 2)^2 - 5",
+    "correctAnswers": ["44", "٤٤"],
+    "wrongAnswers": ["45", "43", "46", "42"]
+  },
+  {
+    "question": "احسب الناتج: (2 + 3)^2",
+    "correctAnswers": ["25", "٢٥"],
+    "wrongAnswers": ["26", "24", "27", "23"]
+  },
+  {
+    "question": "احسب الناتج: (18 + 17) × (9 + 3)",
+    "correctAnswers": ["420", "٤٢٠"],
+    "wrongAnswers": ["421", "419", "422", "418"]
+  }
+]

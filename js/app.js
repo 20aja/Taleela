@@ -1193,8 +1193,6 @@ async function startGame() {
         status: "starting",
         currentRoundId: null,
         currentRoundNumber: 0,
-        usedQuestionIds: [],
-        usedFactKeys: [],
         finalResults: null,
         gameError: null,
         finishedAt: null,
@@ -1592,4 +1590,4 @@ document.addEventListener(
   {capture: true},
 );
 
-console.log("Taleela App v8.9.0 Mobile Input + Custom Avatar + Expanded Question Bank loaded");
+console.log("Taleela App v8.10.0 Question Bank v1 + Persistent No-Repeat Cycles loaded");

@@ -17,7 +17,7 @@
 /assets/Users/*
   Cache-Control: public, max-age=31536000, immutable
 
-/assets/Countries/*
+/assets/countries/*
   Cache-Control: public, max-age=31536000, immutable
 
 /assets/categories/*

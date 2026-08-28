@@ -1,10 +1,15 @@
-const QUESTION_VERSION = "8.9.0";
-const MANIFEST_URL = new URL(`../questions/v${QUESTION_VERSION}/manifest.json`, import.meta.url);
-const HISTORY_KEY = `taleela_question_history_v${QUESTION_VERSION}`;
+const QUESTION_PATH_VERSION = "1";
+const QUESTION_BANK_VERSION = "1.0.0";
+const QUESTION_ROOT_URL = new URL(`../questions/v${QUESTION_PATH_VERSION}/`, import.meta.url);
+const MANIFEST_URL = new URL("manifest.json", QUESTION_ROOT_URL);
+const HISTORY_SCHEMA_VERSION = 2;
+const HISTORY_KEY = `taleela_question_history_bank_v${QUESTION_PATH_VERSION}_schema_${HISTORY_SCHEMA_VERSION}`;
+const QUESTION_ID_PREFIX = `qb-v${QUESTION_PATH_VERSION}`;
 
 let manifestPromise = null;
+let flagIndexPromise = null;
 const shardCache = new Map();
-const activeShardByCategory = new Map();
+const categoryCache = new Map();
 
 function safeParse(json, fallback) {
   try {
@@ -14,21 +19,37 @@ function safeParse(json, fallback) {
   }
 }
 
+function emptyHistory() {
+  return {
+    schemaVersion: HISTORY_SCHEMA_VERSION,
+    bankVersion: QUESTION_BANK_VERSION,
+    categories: {},
+  };
+}
+
 function readHistory() {
   try {
-    const raw = safeParse(localStorage.getItem(HISTORY_KEY), null);
-    if (!raw || raw.version !== QUESTION_VERSION || typeof raw.categories !== "object") {
-      return {version: QUESTION_VERSION, categories: {}};
+    const storage = globalThis.localStorage;
+    if (!storage) return emptyHistory();
+    const raw = safeParse(storage.getItem(HISTORY_KEY), null);
+    if (
+      !raw
+      || raw.schemaVersion !== HISTORY_SCHEMA_VERSION
+      || raw.bankVersion !== QUESTION_BANK_VERSION
+      || !raw.categories
+      || typeof raw.categories !== "object"
+    ) {
+      return emptyHistory();
     }
     return raw;
   } catch {
-    return {version: QUESTION_VERSION, categories: {}};
+    return emptyHistory();
   }
 }
 
 function writeHistory(history) {
   try {
-    localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
+    globalThis.localStorage?.setItem(HISTORY_KEY, JSON.stringify(history));
   } catch (error) {
     console.warn("Question history could not be saved:", error);
   }
@@ -37,8 +58,12 @@ function writeHistory(history) {
 function randomIndex(length) {
   if (length <= 1) return 0;
   if (globalThis.crypto?.getRandomValues) {
+    const range = 0x1_0000_0000;
+    const limit = range - (range % length);
     const values = new Uint32Array(1);
-    globalThis.crypto.getRandomValues(values);
+    do {
+      globalThis.crypto.getRandomValues(values);
+    } while (values[0] >= limit);
     return values[0] % length;
   }
   return Math.floor(Math.random() * length);
@@ -46,15 +71,6 @@ function randomIndex(length) {
 
 function randomItem(items) {
   return items.length ? items[randomIndex(items.length)] : null;
-}
-
-function shuffle(items) {
-  const out = [...items];
-  for (let i = out.length - 1; i > 0; i -= 1) {
-    const j = randomIndex(i + 1);
-    [out[i], out[j]] = [out[j], out[i]];
-  }
-  return out;
 }
 
 function normalizedKeyPart(value) {
@@ -69,31 +85,133 @@ function normalizedKeyPart(value) {
     .replace(/\s+/g, " ");
 }
 
+const COUNTRY_FLAG_CODES_BY_NORMALIZED_NAME = new Map(
+  Object.entries({
+    "إيطاليا": "it",
+    "المغرب": "ma",
+    "اليابان": "jp",
+    "كندا": "ca",
+    "تركيا": "tr",
+    "العراق": "iq",
+    "إسبانيا": "es",
+    "البرازيل": "br",
+    "مصر": "eg",
+    "السعودية": "sa",
+    "الأردن": "jo",
+    "سوريا": "sy",
+    "لبنان": "lb",
+    "الكويت": "kw",
+    "الإمارات": "ae",
+    "عُمان": "om",
+    "قطر": "qa",
+    "البحرين": "bh",
+    "الولايات المتحدة": "us",
+    "المكسيك": "mx",
+    "الأرجنتين": "ar",
+    "تشيلي": "cl",
+    "بيرو": "pe",
+    "كولومبيا": "co",
+    "المملكة المتحدة": "gb",
+    "ألمانيا": "de",
+    "البرتغال": "pt",
+    "اليونان": "gr",
+  }).map(([name, code]) => [normalizedKeyPart(name), code]),
+);
+
+function normalizeShardPath(categoryId, file) {
+  const clean = String(file || "").replace(/^\/+/, "");
+  if (!clean || clean.includes("..")) return null;
+  return clean.includes("/") ? clean : `${categoryId}/${clean}`;
+}
+
+function shardCountFromManifest(categoryCount, shardSize, index) {
+  const start = index * shardSize;
+  return Math.max(0, Math.min(shardSize, categoryCount - start));
+}
+
+function normalizeManifest(raw) {
+  const shardSize = Math.max(1, Number(raw?.shardSize) || 10);
+  const categoryOrder = [];
+  const categories = {};
+
+  if (Array.isArray(raw?.categories)) {
+    for (const category of raw.categories) {
+      const id = String(category?.id || "").trim();
+      if (!id || categories[id]) continue;
+      const count = Math.max(0, Number(category?.count) || 0);
+      const shards = (Array.isArray(category?.shards) ? category.shards : [])
+        .map((entry, index) => {
+          const sourceFile = typeof entry === "string" ? entry : entry?.file;
+          const file = normalizeShardPath(id, sourceFile);
+          if (!file) return null;
+          const declaredCount = typeof entry === "object" ? Number(entry?.count) : 0;
+          return {
+            file,
+            count: declaredCount > 0 ? declaredCount : shardCountFromManifest(count, shardSize, index),
+          };
+        })
+        .filter(Boolean);
+
+      categoryOrder.push(id);
+      categories[id] = {
+        id,
+        name: String(category?.name || id),
+        icon: category?.icon || null,
+        count,
+        shards,
+      };
+    }
+  } else if (raw?.categories && typeof raw.categories === "object") {
+    for (const [id, category] of Object.entries(raw.categories)) {
+      const count = Math.max(0, Number(category?.count) || 0);
+      const shards = (Array.isArray(category?.shards) ? category.shards : [])
+        .map((entry, index) => {
+          const sourceFile = typeof entry === "string" ? entry : entry?.file;
+          const file = normalizeShardPath(id, sourceFile);
+          if (!file) return null;
+          const declaredCount = typeof entry === "object" ? Number(entry?.count) : 0;
+          return {
+            file,
+            count: declaredCount > 0 ? declaredCount : shardCountFromManifest(count, shardSize, index),
+          };
+        })
+        .filter(Boolean);
+      categoryOrder.push(id);
+      categories[id] = {id, name: category?.name || id, icon: category?.icon || null, count, shards};
+    }
+  }
+
+  const totalQuestions = categoryOrder.reduce((sum, id) => sum + (Number(categories[id]?.count) || 0), 0);
+  return {
+    version: String(raw?.version || QUESTION_BANK_VERSION),
+    shardSize,
+    totalQuestions,
+    categoryOrder,
+    categories,
+  };
+}
+
 function expandQuestion(raw, {file, index}) {
-  // v8.9.0 keeps the stored question schema deliberately minimal:
-  // question / correctAnswers / wrongAnswers (+ image/imageAlt only when needed).
-  // Runtime-only metadata is derived from the shard location and content.
-  const accepted = Array.isArray(raw.correctAnswers)
-    ? raw.correctAnswers.filter(Boolean)
-    : [];
+  // The supplied JSON remains untouched. Runtime-only metadata is derived here.
+  const accepted = Array.isArray(raw?.correctAnswers) ? raw.correctAnswers.filter(Boolean) : [];
   const answer = accepted[0] ?? "";
-  const decoys = Array.isArray(raw.wrongAnswers)
-    ? raw.wrongAnswers.filter(Boolean)
-    : [];
-  const image = raw.image ?? null;
+  const decoys = Array.isArray(raw?.wrongAnswers) ? raw.wrongAnswers.filter(Boolean) : [];
+  const image = raw?.image ?? null;
   const category = String(file || "").split("/")[0] || null;
-  const id = `${QUESTION_VERSION}:${file}:${index + 1}`;
-  const factKey = `${category || "question"}:${normalizedKeyPart(raw.question)}:${normalizedKeyPart(answer)}`;
+  const id = `${QUESTION_ID_PREFIX}:${file}:${index + 1}`;
+  const factKey = `${category || "question"}:${normalizedKeyPart(raw?.question)}:${normalizedKeyPart(answer)}`;
 
   return {
     id,
-    prompt: raw.question ?? "",
+    prompt: raw?.question ?? "",
     answer,
     accepted,
     decoys,
     factKey,
     image,
-    imageAlt: image ? raw.imageAlt ?? "صورة السؤال" : "",
+    imageAlt: image ? raw?.imageAlt ?? "صورة السؤال" : "",
+    answerImage: null,
+    answerImageAlt: "",
     type: image ? "image" : "text",
     category,
   };
@@ -107,10 +225,12 @@ async function fetchJSON(url) {
 
 export async function getQuestionManifest() {
   if (!manifestPromise) {
-    manifestPromise = fetchJSON(MANIFEST_URL).catch((error) => {
-      manifestPromise = null;
-      throw error;
-    });
+    manifestPromise = fetchJSON(MANIFEST_URL)
+      .then(normalizeManifest)
+      .catch((error) => {
+        manifestPromise = null;
+        throw error;
+      });
   }
   return manifestPromise;
 }
@@ -121,7 +241,7 @@ export function preloadQuestionManifest() {
 
 async function loadShard(file) {
   if (shardCache.has(file)) return shardCache.get(file);
-  const url = new URL(`../questions/v${QUESTION_VERSION}/${file}`, import.meta.url);
+  const url = new URL(file, QUESTION_ROOT_URL);
   const promise = fetchJSON(url)
     .then((items) => (Array.isArray(items) ? items.map((raw, index) => expandQuestion(raw, {file, index})) : []))
     .catch((error) => {
@@ -132,215 +252,178 @@ async function loadShard(file) {
   return promise;
 }
 
-function categoryHistory(history, categoryId) {
+async function loadCategoryQuestions(categoryId) {
+  if (categoryCache.has(categoryId)) return categoryCache.get(categoryId);
+  const promise = (async () => {
+    const manifest = await getQuestionManifest();
+    const categoryInfo = manifest.categories?.[categoryId];
+    if (!categoryInfo?.shards?.length) return [];
+    const groups = await Promise.all(categoryInfo.shards.map((shard) => loadShard(shard.file)));
+    const questions = groups.flat();
+    if (categoryInfo.count && questions.length !== categoryInfo.count) {
+      console.warn(`Question count mismatch for ${categoryId}: manifest=${categoryInfo.count}, loaded=${questions.length}`);
+    }
+    return questions;
+  })().catch((error) => {
+    categoryCache.delete(categoryId);
+    throw error;
+  });
+  categoryCache.set(categoryId, promise);
+  return promise;
+}
+
+async function getCountryFlagIndex() {
+  if (!flagIndexPromise) {
+    flagIndexPromise = loadCategoryQuestions("flags")
+      .then((questions) => {
+        const index = new Map();
+        for (const question of questions) {
+          if (!question.image) continue;
+          for (const answer of question.accepted) {
+            const key = normalizedKeyPart(answer);
+            if (key && !index.has(key)) {
+              index.set(key, {
+                image: question.image,
+                imageAlt: question.imageAlt || `علم ${answer}`,
+              });
+            }
+          }
+        }
+        return index;
+      })
+      .catch((error) => {
+        flagIndexPromise = null;
+        throw error;
+      });
+  }
+  return flagIndexPromise;
+}
+
+async function addCountryRevealFlag(question) {
+  if (question?.category !== "countries") return question;
+  const index = await getCountryFlagIndex();
+  for (const answer of question.accepted || []) {
+    const normalizedAnswer = normalizedKeyPart(answer);
+    const flag = index.get(normalizedAnswer);
+    if (flag) {
+      return {
+        ...question,
+        answerImage: flag.image,
+        answerImageAlt: flag.imageAlt,
+      };
+    }
+
+    // Some text-country questions (for example Turkey) do not have a matching
+    // entry in the supplied flags category. Use the existing SVG asset by ISO
+    // code without changing or supplementing the question JSON.
+    const code = COUNTRY_FLAG_CODES_BY_NORMALIZED_NAME.get(normalizedAnswer);
+    if (code) {
+      return {
+        ...question,
+        answerImage: `/assets/countries/${code}.svg`,
+        answerImageAlt: `علم ${answer}`,
+      };
+    }
+  }
+  return question;
+}
+
+function categoryHistory(history, categoryId, validQuestionIds) {
   history.categories ||= {};
+  const validIds = new Set(validQuestionIds);
   const current = history.categories[categoryId];
-  if (!current || typeof current !== "object" || typeof current.shards !== "object") {
-    history.categories[categoryId] = {shards: {}, facts: []};
-  } else if (!Array.isArray(current.facts)) {
-    current.facts = [];
-  }
-  return history.categories[categoryId];
-}
+  const seenIds = Array.isArray(current?.seenIds)
+    ? [...new Set(current.seenIds.filter((id) => validIds.has(id)))]
+    : [];
 
-function seenIdsForShard(categoryState, file) {
-  const ids = categoryState.shards?.[file];
-  return Array.isArray(ids) ? ids : [];
-}
+  const state = {
+    seenIds,
+    lastId: validIds.has(current?.lastId) ? current.lastId : null,
+    cycle: Math.max(0, Number(current?.cycle) || 0),
+  };
 
-function setSeenIdsForShard(categoryState, file, ids) {
-  categoryState.shards ||= {};
-  categoryState.shards[file] = ids;
-}
-
-function categoryCycleComplete(categoryInfo, categoryState) {
-  // A local cycle is complete only after every concrete question entry has
-  // appeared. factKey is used as a preference to postpone alternate wording
-  // of the same fact, not as a reason to end the cycle early.
-  return (categoryInfo.shards || []).every((shard) => seenIdsForShard(categoryState, shard.file).length >= Number(shard.count || 0));
-}
-
-function resetCategoryCycle(history, categoryId) {
-  history.categories ||= {};
-  history.categories[categoryId] = {shards: {}, facts: []};
-  activeShardByCategory.delete(categoryId);
-  writeHistory(history);
-  return history.categories[categoryId];
-}
-
-function orderedShards(categoryId, categoryInfo, categoryState, respectHistory) {
-  const all = categoryInfo.shards || [];
-  const eligible = respectHistory
-    ? all.filter((shard) => seenIdsForShard(categoryState, shard.file).length < Number(shard.count || 0))
-    : all;
-
-  const activeFile = activeShardByCategory.get(categoryId);
-  const active = eligible.find((shard) => shard.file === activeFile);
-  const rest = shuffle(eligible.filter((shard) => shard.file !== activeFile));
-  return active ? [active, ...rest] : rest;
-}
-
-async function trySelectFromShards({
-  categoryId,
-  categoryInfo,
-  categoryState,
-  roomUsed,
-  usedFacts,
-  respectHistoryIds = true,
-  respectHistoryFacts = true,
-  respectRoomIds = true,
-  respectRoomFacts = true,
-}) {
-  const shardOrder = orderedShards(categoryId, categoryInfo, categoryState, respectHistoryIds);
-
-  for (const shardMeta of shardOrder) {
-    const questions = await loadShard(shardMeta.file);
-    const seen = new Set(respectHistoryIds ? seenIdsForShard(categoryState, shardMeta.file) : []);
-    const seenFacts = new Set(respectHistoryFacts ? categoryState.facts || [] : []);
-    const candidates = questions.filter((question) => {
-      const factKey = question.factKey || question.id;
-      if (respectHistoryIds && seen.has(question.id)) return false;
-      if (respectHistoryFacts && seenFacts.has(factKey)) return false;
-      if (respectRoomIds && roomUsed.has(question.id)) return false;
-      if (respectRoomFacts && usedFacts.has(factKey)) return false;
-      return true;
-    });
-
-    if (!candidates.length) continue;
-    const question = randomItem(candidates);
-    activeShardByCategory.set(categoryId, shardMeta.file);
-    return {question, shardFile: shardMeta.file};
+  // A new local cycle starts only after every concrete question has appeared.
+  if (validQuestionIds.length && state.seenIds.length >= validQuestionIds.length) {
+    state.seenIds = [];
+    state.cycle += 1;
   }
 
-  return null;
+  history.categories[categoryId] = state;
+  return state;
+}
+
+function chooseWithoutImmediateBoundaryRepeat(candidates, lastId) {
+  if (candidates.length <= 1 || !lastId) return randomItem(candidates);
+  const withoutLast = candidates.filter((question) => question.id !== lastId);
+  return randomItem(withoutLast.length ? withoutLast : candidates);
 }
 
 /**
- * Lazy question selection:
- * - Manifest only at game start (~a few KB).
- * - One category shard is fetched when a question is actually needed.
- * - The same shard stays active, so consecutive rounds normally reuse cache.
- * - No question repeats inside a room until that category is exhausted.
- * - On the host device, a question is not repeated across matches until every
- *   question in that category has been seen once.
+ * Selects one exact question entry without replacement.
+ *
+ * Two independent protections are used:
+ * 1. usedQuestionIds is the authoritative current-cycle record stored in the
+ *    Firestore room, so host takeover and replay do not reintroduce questions.
+ * 2. localStorage remembers the host device's cycle across newly created rooms.
+ *
+ * A category is reset only when all of its concrete question IDs have been used.
+ * Question JSON files are never rewritten or supplemented.
  */
-export async function selectQuestion(categoryId, {usedQuestionIds = [], usedFactKeys = []} = {}) {
-  const manifest = await getQuestionManifest();
-  const categoryInfo = manifest.categories?.[categoryId];
-  if (!categoryInfo?.count || !Array.isArray(categoryInfo.shards) || !categoryInfo.shards.length) return null;
+export async function selectQuestion(categoryId, {usedQuestionIds = []} = {}) {
+  const questions = await loadCategoryQuestions(categoryId);
+  if (!questions.length) return null;
 
-  const roomUsed = new Set((Array.isArray(usedQuestionIds) ? usedQuestionIds : []).filter(Boolean));
-  const usedFacts = new Set((Array.isArray(usedFactKeys) ? usedFactKeys : []).filter(Boolean));
+  const categoryQuestionIds = questions.map((question) => question.id);
+  const validIds = new Set(categoryQuestionIds);
+  const roomUsed = new Set(
+    (Array.isArray(usedQuestionIds) ? usedQuestionIds : [])
+      .filter((id) => validIds.has(id)),
+  );
+
+  const roomCycleComplete = roomUsed.size >= categoryQuestionIds.length;
+  const activeRoomUsed = roomCycleComplete ? new Set() : roomUsed;
+
   const history = readHistory();
-  let state = categoryHistory(history, categoryId);
+  const state = categoryHistory(history, categoryId, categoryQuestionIds);
+  const locallySeen = new Set(state.seenIds);
+  const available = questions.filter((question) => !activeRoomUsed.has(question.id));
+  if (!available.length) return null;
 
-  if (categoryCycleComplete(categoryInfo, state)) {
-    state = resetCategoryCycle(history, categoryId);
-  }
+  // Prefer an entry unseen in both the room cycle and the persistent host cycle.
+  // If a different host takes over, room safety has priority over that device's
+  // private history, so any still-unused room entry remains eligible.
+  const locallyUnseen = available.filter((question) => !locallySeen.has(question.id));
+  const selected = chooseWithoutImmediateBoundaryRepeat(
+    locallyUnseen.length ? locallyUnseen : available,
+    state.lastId,
+  );
+  if (!selected) return null;
 
-  // First preference: a concrete question ID that has never appeared locally
-  // and whose underlying fact has not appeared locally or in this room.
-  let selected = await trySelectFromShards({
-    categoryId,
-    categoryInfo,
-    categoryState: state,
-    roomUsed,
-    usedFacts,
-  });
-
-  // When all distinct facts have been covered, keep consuming unused question
-  // entries (alternate formulations/clues) before allowing an exact repeat.
-  if (!selected) {
-    selected = await trySelectFromShards({
-      categoryId,
-      categoryInfo,
-      categoryState: state,
-      roomUsed,
-      usedFacts,
-      respectHistoryIds: true,
-      respectHistoryFacts: false,
-      respectRoomIds: true,
-      respectRoomFacts: false,
-    });
-  }
-
-  // Local history may have exhausted the category across earlier matches. Start
-  // a new local cycle while still protecting every concrete ID used in this room.
-  if (!selected) {
-    state = resetCategoryCycle(history, categoryId);
-    selected = await trySelectFromShards({
-      categoryId,
-      categoryInfo,
-      categoryState: state,
-      roomUsed,
-      usedFacts,
-      respectHistoryIds: true,
-      respectHistoryFacts: true,
-      respectRoomIds: true,
-      respectRoomFacts: true,
-    });
-  }
-
-  if (!selected) {
-    selected = await trySelectFromShards({
-      categoryId,
-      categoryInfo,
-      categoryState: state,
-      roomUsed,
-      usedFacts,
-      respectHistoryIds: true,
-      respectHistoryFacts: false,
-      respectRoomIds: true,
-      respectRoomFacts: false,
-    });
-  }
-
-  // Only after every concrete question ID in the room has been consumed is an
-  // exact repeat unavoidable. This matters when one small category is selected
-  // for a long (up to 30-round) game.
-  if (!selected) {
-    selected = await trySelectFromShards({
-      categoryId,
-      categoryInfo,
-      categoryState: state,
-      roomUsed,
-      usedFacts,
-      respectHistoryIds: false,
-      respectHistoryFacts: false,
-      respectRoomIds: false,
-      respectRoomFacts: false,
-    });
-  }
-
-  if (!selected?.question) return null;
-
-  const currentSeen = seenIdsForShard(state, selected.shardFile);
-  if (!currentSeen.includes(selected.question.id)) {
-    setSeenIdsForShard(state, selected.shardFile, [...currentSeen, selected.question.id]);
-  }
-  state.facts ||= [];
-  const factKey = selected.question.factKey || selected.question.id;
-  if (!state.facts.includes(factKey)) state.facts.push(factKey);
+  if (!locallySeen.has(selected.id)) state.seenIds.push(selected.id);
+  state.lastId = selected.id;
+  history.categories[categoryId] = state;
   writeHistory(history);
-  return selected.question;
+
+  const enriched = await addCountryRevealFlag(selected);
+  return {
+    ...enriched,
+    selectionMeta: {
+      categoryId,
+      categoryQuestionIds,
+      categoryQuestionCount: categoryQuestionIds.length,
+      roomCycleComplete,
+    },
+  };
 }
 
 export async function warmCategory(categoryId) {
-  const manifest = await getQuestionManifest();
-  const categoryInfo = manifest.categories?.[categoryId];
-  if (!categoryInfo?.shards?.length) return false;
-  const history = readHistory();
-  const state = categoryHistory(history, categoryId);
-  const shard = orderedShards(categoryId, categoryInfo, state, true)[0] || randomItem(categoryInfo.shards);
-  if (!shard) return false;
-  activeShardByCategory.set(categoryId, shard.file);
-  await loadShard(shard.file);
-  return true;
+  const questions = await loadCategoryQuestions(categoryId);
+  return questions.length > 0;
 }
 
 export async function getQuestionCount(categoryId) {
-  const manifest = await getQuestionManifest();
-  return Number(manifest.categories?.[categoryId]?.count) || 0;
+  const questions = await loadCategoryQuestions(categoryId);
+  return questions.length;
 }
 
 export async function getTotalQuestionCount() {
@@ -350,14 +433,15 @@ export async function getTotalQuestionCount() {
 
 export function clearQuestionHistory(categoryId = null) {
   if (!categoryId) {
-    try { localStorage.removeItem(HISTORY_KEY); } catch {}
-    activeShardByCategory.clear();
+    try {
+      globalThis.localStorage?.removeItem(HISTORY_KEY);
+    } catch {}
     return;
   }
   const history = readHistory();
-  if (history.categories) delete history.categories[categoryId];
-  activeShardByCategory.delete(categoryId);
+  delete history.categories?.[categoryId];
   writeHistory(history);
 }
 
-export const QUESTION_STORE_VERSION = QUESTION_VERSION;
+export const QUESTION_STORE_VERSION = QUESTION_BANK_VERSION;
+export const QUESTION_BANK_PATH = `questions/v${QUESTION_PATH_VERSION}/`;

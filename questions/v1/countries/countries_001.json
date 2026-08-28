@@ -1,0 +1,891 @@
+[
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["مصر", "جمهورية مصر العربية", "مصر 🇪🇬"],
+    "wrongAnswers": ["السودان", "ليبيا", "الجزائر", "تونس"],
+    "image": "/assets/countries/eg.svg",
+    "imageAlt": "علم مصر"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["الجزائر", "الجمهورية الجزائرية الديمقراطية الشعبية", "الجزائر 🇩🇿"],
+    "wrongAnswers": ["المغرب", "تونس", "ليبيا", "موريتانيا"],
+    "image": "/assets/countries/dz.svg",
+    "imageAlt": "علم الجزائر"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["المغرب", "المملكة المغربية", "المغرب 🇲🇦"],
+    "wrongAnswers": ["الجزائر", "تونس", "موريتانيا", "إسبانيا"],
+    "image": "/assets/countries/ma.svg",
+    "imageAlt": "علم المغرب"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["تونس", "الجمهورية التونسية", "تونس 🇹🇳"],
+    "wrongAnswers": ["الجزائر", "ليبيا", "المغرب", "مصر"],
+    "image": "/assets/countries/tn.svg",
+    "imageAlt": "علم تونس"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["ليبيا", "دولة ليبيا", "ليبيا 🇱🇾"],
+    "wrongAnswers": ["تونس", "مصر", "الجزائر", "السودان"],
+    "image": "/assets/countries/ly.svg",
+    "imageAlt": "علم ليبيا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["السودان", "جمهورية السودان", "السودان 🇸🇩"],
+    "wrongAnswers": ["مصر", "تشاد", "إثيوبيا", "جنوب السودان"],
+    "image": "/assets/countries/sd.svg",
+    "imageAlt": "علم السودان"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["موريتانيا", "الجمهورية الإسلامية الموريتانية", "موريتانيا 🇲🇷"],
+    "wrongAnswers": ["مالي", "السنغال", "المغرب", "الجزائر"],
+    "image": "/assets/countries/mr.svg",
+    "imageAlt": "علم موريتانيا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["الصومال", "جمهورية الصومال", "الصومال 🇸🇴"],
+    "wrongAnswers": ["جيبوتي", "إثيوبيا", "كينيا", "إريتريا"],
+    "image": "/assets/countries/so.svg",
+    "imageAlt": "علم الصومال"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["جيبوتي", "جمهورية جيبوتي", "جيبوتي 🇩🇯"],
+    "wrongAnswers": ["الصومال", "إريتريا", "إثيوبيا", "اليمن"],
+    "image": "/assets/countries/dj.svg",
+    "imageAlt": "علم جيبوتي"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["جزر القمر", "اتحاد جزر القمر", "جزر القمر 🇰🇲"],
+    "wrongAnswers": ["مدغشقر", "موريشيوس", "سيشل", "موزمبيق"],
+    "image": "/assets/countries/km.svg",
+    "imageAlt": "علم جزر القمر"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["جنوب أفريقيا", "جمهورية جنوب أفريقيا", "جنوب أفريقيا 🇿🇦"],
+    "wrongAnswers": ["ناميبيا", "بوتسوانا", "زيمبابوي", "ليسوتو"],
+    "image": "/assets/countries/za.svg",
+    "imageAlt": "علم جنوب أفريقيا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["نيجيريا", "جمهورية نيجيريا الاتحادية", "نيجيريا 🇳🇬"],
+    "wrongAnswers": ["غانا", "الكاميرون", "السنغال", "بنين"],
+    "image": "/assets/countries/ng.svg",
+    "imageAlt": "علم نيجيريا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["كينيا", "جمهورية كينيا", "كينيا 🇰🇪"],
+    "wrongAnswers": ["أوغندا", "تنزانيا", "إثيوبيا", "الصومال"],
+    "image": "/assets/countries/ke.svg",
+    "imageAlt": "علم كينيا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["إثيوبيا", "جمهورية إثيوبيا الديمقراطية الاتحادية", "إثيوبيا 🇪🇹"],
+    "wrongAnswers": ["إريتريا", "السودان", "كينيا", "الصومال"],
+    "image": "/assets/countries/et.svg",
+    "imageAlt": "علم إثيوبيا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["غانا", "جمهورية غانا", "غانا 🇬🇭"],
+    "wrongAnswers": ["ساحل العاج", "توغو", "نيجيريا", "بوركينا فاسو"],
+    "image": "/assets/countries/gh.svg",
+    "imageAlt": "علم غانا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["أنغولا", "جمهورية أنغولا", "أنغولا 🇦🇴"],
+    "wrongAnswers": ["زامبيا", "ناميبيا", "الكونغو", "موزمبيق"],
+    "image": "/assets/countries/ao.svg",
+    "imageAlt": "علم أنغولا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["تنزانيا", "جمهورية تنزانيا المتحدة", "تنزانيا 🇹🇿"],
+    "wrongAnswers": ["كينيا", "أوغندا", "زامبيا", "موزمبيق"],
+    "image": "/assets/countries/tz.svg",
+    "imageAlt": "علم تنزانيا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["أوغندا", "جمهورية أوغندا", "أوغندا 🇺🇬"],
+    "wrongAnswers": ["كينيا", "رواندا", "تنزانيا", "جنوب السودان"],
+    "image": "/assets/countries/ug.svg",
+    "imageAlt": "علم أوغندا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["زيمبابوي", "جمهورية زيمبابوي", "زيمبابوي 🇿🇼"],
+    "wrongAnswers": ["زامبيا", "بوتسوانا", "موزمبيق", "ناميبيا"],
+    "image": "/assets/countries/zw.svg",
+    "imageAlt": "علم زيمبابوي"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["زامبيا", "جمهورية زامبيا", "زامبيا 🇿🇲"],
+    "wrongAnswers": ["زيمبابوي", "مالاوي", "أنغولا", "تنزانيا"],
+    "image": "/assets/countries/zm.svg",
+    "imageAlt": "علم زامبيا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["موزمبيق", "جمهورية موزمبيق", "موزمبيق 🇲🇿"],
+    "wrongAnswers": ["مدغشقر", "تنزانيا", "زيمبابوي", "مالاوي"],
+    "image": "/assets/countries/mz.svg",
+    "imageAlt": "علم موزمبيق"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["مدغشقر", "جمهورية مدغشقر", "مدغشقر 🇲🇬"],
+    "wrongAnswers": ["موزمبيق", "موريشيوس", "جزر القمر", "سيشل"],
+    "image": "/assets/countries/mg.svg",
+    "imageAlt": "علم مدغشقر"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["السنغال", "جمهورية السنغال", "السنغال 🇸🇳"],
+    "wrongAnswers": ["مالي", "موريتانيا", "غامبيا", "غينيا"],
+    "image": "/assets/countries/sn.svg",
+    "imageAlt": "علم السنغال"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["ساحل العاج", "كوت ديفوار", "جمهورية كوت ديفوار", "ساحل العاج 🇨🇮"],
+    "wrongAnswers": ["غانا", "غينيا", "ليبيريا", "بوركينا فاسو"],
+    "image": "/assets/countries/ci.svg",
+    "imageAlt": "علم ساحل العاج"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["الكاميرون", "جمهورية الكاميرون", "الكاميرون 🇨🇲"],
+    "wrongAnswers": ["نيجيريا", "تشاد", "الغابون", "جمهورية أفريقيا الوسطى"],
+    "image": "/assets/countries/cm.svg",
+    "imageAlt": "علم الكاميرون"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["جمهورية الكونغو الديمقراطية", "الكونغو الديمقراطية", "الكونغو كينشاسا", "جمهورية الكونغو الديمقراطية 🇨🇩"],
+    "wrongAnswers": ["جمهورية الكونغو", "الغابون", "أنغولا", "زامبيا"],
+    "image": "/assets/countries/cd.svg",
+    "imageAlt": "علم جمهورية الكونغو الديمقراطية"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["جمهورية الكونغو", "الكونغو", "الكونغو برازافيل", "جمهورية الكونغو 🇨🇬"],
+    "wrongAnswers": ["جمهورية الكونغو الديمقراطية", "الغابون", "الكاميرون", "أنغولا"],
+    "image": "/assets/countries/cg.svg",
+    "imageAlt": "علم جمهورية الكونغو"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["الغابون", "جمهورية الغابون", "الغابون 🇬🇦"],
+    "wrongAnswers": ["الكاميرون", "جمهورية الكونغو", "غينيا الاستوائية", "أنغولا"],
+    "image": "/assets/countries/ga.svg",
+    "imageAlt": "علم الغابون"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["ناميبيا", "جمهورية ناميبيا", "ناميبيا 🇳🇦"],
+    "wrongAnswers": ["بوتسوانا", "جنوب أفريقيا", "أنغولا", "زامبيا"],
+    "image": "/assets/countries/na.svg",
+    "imageAlt": "علم ناميبيا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["بوتسوانا", "جمهورية بوتسوانا", "بوتسوانا 🇧🇼"],
+    "wrongAnswers": ["ناميبيا", "زيمبابوي", "جنوب أفريقيا", "زامبيا"],
+    "image": "/assets/countries/bw.svg",
+    "imageAlt": "علم بوتسوانا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["مالاوي", "جمهورية مالاوي", "مالاوي 🇲🇼"],
+    "wrongAnswers": ["زامبيا", "موزمبيق", "تنزانيا", "زيمبابوي"],
+    "image": "/assets/countries/mw.svg",
+    "imageAlt": "علم مالاوي"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["رواندا", "جمهورية رواندا", "رواندا 🇷🇼"],
+    "wrongAnswers": ["بوروندي", "أوغندا", "تنزانيا", "كينيا"],
+    "image": "/assets/countries/rw.svg",
+    "imageAlt": "علم رواندا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["بوروندي", "جمهورية بوروندي", "بوروندي 🇧🇮"],
+    "wrongAnswers": ["رواندا", "تنزانيا", "أوغندا", "جمهورية الكونغو الديمقراطية"],
+    "image": "/assets/countries/bi.svg",
+    "imageAlt": "علم بوروندي"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["تشاد", "جمهورية تشاد", "تشاد 🇹🇩"],
+    "wrongAnswers": ["النيجر", "السودان", "الكاميرون", "ليبيا"],
+    "image": "/assets/countries/td.svg",
+    "imageAlt": "علم تشاد"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["النيجر", "جمهورية النيجر", "النيجر 🇳🇪"],
+    "wrongAnswers": ["نيجيريا", "مالي", "تشاد", "بوركينا فاسو"],
+    "image": "/assets/countries/ne.svg",
+    "imageAlt": "علم النيجر"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["مالي", "جمهورية مالي", "مالي 🇲🇱"],
+    "wrongAnswers": ["النيجر", "موريتانيا", "السنغال", "بوركينا فاسو"],
+    "image": "/assets/countries/ml.svg",
+    "imageAlt": "علم مالي"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["بوركينا فاسو", "بوركينا فاسو 🇧🇫", "دولة بوركينا فاسو"],
+    "wrongAnswers": ["مالي", "النيجر", "غانا", "ساحل العاج"],
+    "image": "/assets/countries/bf.svg",
+    "imageAlt": "علم بوركينا فاسو"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["غينيا", "جمهورية غينيا", "غينيا 🇬🇳"],
+    "wrongAnswers": ["غينيا بيساو", "سيراليون", "ليبيريا", "السنغال"],
+    "image": "/assets/countries/gn.svg",
+    "imageAlt": "علم غينيا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["غينيا بيساو", "جمهورية غينيا بيساو", "غينيا بيساو 🇬🇼"],
+    "wrongAnswers": ["غينيا", "غامبيا", "السنغال", "سيراليون"],
+    "image": "/assets/countries/gw.svg",
+    "imageAlt": "علم غينيا بيساو"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["سيراليون", "جمهورية سيراليون", "سيراليون 🇸🇱"],
+    "wrongAnswers": ["ليبيريا", "غينيا", "ساحل العاج", "غامبيا"],
+    "image": "/assets/countries/sl.svg",
+    "imageAlt": "علم سيراليون"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["ليبيريا", "جمهورية ليبيريا", "ليبيريا 🇱🇷"],
+    "wrongAnswers": ["سيراليون", "غينيا", "ساحل العاج", "غانا"],
+    "image": "/assets/countries/lr.svg",
+    "imageAlt": "علم ليبيريا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["توغو", "جمهورية توغو", "توغو 🇹🇬"],
+    "wrongAnswers": ["بنين", "غانا", "بوركينا فاسو", "ساحل العاج"],
+    "image": "/assets/countries/tg.svg",
+    "imageAlt": "علم توغو"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["بنين", "جمهورية بنين", "بنين 🇧🇯"],
+    "wrongAnswers": ["توغو", "نيجيريا", "غانا", "بوركينا فاسو"],
+    "image": "/assets/countries/bj.svg",
+    "imageAlt": "علم بنين"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["غينيا الاستوائية", "جمهورية غينيا الاستوائية", "غينيا الاستوائية 🇬🇶"],
+    "wrongAnswers": ["الغابون", "الكاميرون", "جمهورية الكونغو", "ساو تومي وبرينسيب"],
+    "image": "/assets/countries/gq.svg",
+    "imageAlt": "علم غينيا الاستوائية"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["إريتريا", "دولة إريتريا", "إريتريا 🇪🇷"],
+    "wrongAnswers": ["إثيوبيا", "جيبوتي", "السودان", "الصومال"],
+    "image": "/assets/countries/er.svg",
+    "imageAlt": "علم إريتريا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["جنوب السودان", "جمهورية جنوب السودان", "جنوب السودان 🇸🇸"],
+    "wrongAnswers": ["السودان", "أوغندا", "إثيوبيا", "كينيا"],
+    "image": "/assets/countries/ss.svg",
+    "imageAlt": "علم جنوب السودان"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["موريشيوس", "جمهورية موريشيوس", "موريشيوس 🇲🇺"],
+    "wrongAnswers": ["سيشل", "مدغشقر", "جزر القمر", "موزمبيق"],
+    "image": "/assets/countries/mu.svg",
+    "imageAlt": "علم موريشيوس"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["سيشل", "جمهورية سيشل", "سيشل 🇸🇨"],
+    "wrongAnswers": ["موريشيوس", "جزر القمر", "مدغشقر", "موزمبيق"],
+    "image": "/assets/countries/sc.svg",
+    "imageAlt": "علم سيشل"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["الرأس الأخضر", "كابو فيردي", "جمهورية الرأس الأخضر", "الرأس الأخضر 🇨🇻"],
+    "wrongAnswers": ["السنغال", "غامبيا", "غينيا بيساو", "سيراليون"],
+    "image": "/assets/countries/cv.svg",
+    "imageAlt": "علم الرأس الأخضر"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["ساو تومي وبرينسيب", "جمهورية ساو تومي وبرينسيب", "ساو تومي وبرينسيب 🇸🇹"],
+    "wrongAnswers": ["غينيا الاستوائية", "الغابون", "أنغولا", "جزر القمر"],
+    "image": "/assets/countries/st.svg",
+    "imageAlt": "علم ساو تومي وبرينسيب"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["إسواتيني", "مملكة إسواتيني", "سوازيلاند", "إسواتيني 🇸🇿"],
+    "wrongAnswers": ["ليسوتو", "جنوب أفريقيا", "بوتسوانا", "زيمبابوي"],
+    "image": "/assets/countries/sz.svg",
+    "imageAlt": "علم إسواتيني"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["ليسوتو", "مملكة ليسوتو", "ليسوتو 🇱🇸"],
+    "wrongAnswers": ["إسواتيني", "جنوب أفريقيا", "بوتسوانا", "ناميبيا"],
+    "image": "/assets/countries/ls.svg",
+    "imageAlt": "علم ليسوتو"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["غامبيا", "جمهورية غامبيا", "غامبيا 🇬🇲"],
+    "wrongAnswers": ["السنغال", "غينيا بيساو", "موريتانيا", "غينيا"],
+    "image": "/assets/countries/gm.svg",
+    "imageAlt": "علم غامبيا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["جمهورية أفريقيا الوسطى", "أفريقيا الوسطى", "جمهورية أفريقيا الوسطى 🇨🇫"],
+    "wrongAnswers": ["تشاد", "الكاميرون", "جنوب السودان", "جمهورية الكونغو الديمقراطية"],
+    "image": "/assets/countries/cf.svg",
+    "imageAlt": "علم جمهورية أفريقيا الوسطى"
+  },
+  {
+    "question": "خمن الكيان؟",
+    "correctAnswers": ["مايوت", "جزيرة مايوت", "مايوت 🇾🇹"],
+    "wrongAnswers": ["ريونيون", "جزر القمر", "موريشيوس", "مدغشقر"],
+    "image": "/assets/countries/yt.svg",
+    "imageAlt": "علم مايوت"
+  },
+  {
+    "question": "خمن الكيان؟",
+    "correctAnswers": ["ريونيون", "جزيرة ريونيون", "ريونيون 🇷🇪"],
+    "wrongAnswers": ["مايوت", "مدغشقر", "موريشيوس", "جزر القمر"],
+    "image": "/assets/countries/re.svg",
+    "imageAlt": "علم ريونيون"
+  },
+  {
+    "question": "خمن الكيان؟",
+    "correctAnswers": ["سانت هيلينا", "جزيرة سانت هيلينا", "سانت هيلينا 🇸🇭"],
+    "wrongAnswers": ["ريونيون", "مايوت", "موريشيوس", "سيشل"],
+    "image": "/assets/countries/sh.svg",
+    "imageAlt": "علم سانت هيلينا"
+  },
+  {
+    "question": "خمن الكيان؟",
+    "correctAnswers": ["الصحراء الغربية", "الصحراء المغربية", "الصحراء الغربية 🇪🇭"],
+    "wrongAnswers": ["موريتانيا", "المغرب", "الجزائر", "مالي"],
+    "image": "/assets/countries/eh.svg",
+    "imageAlt": "علم الصحراء الغربية"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["السعودية", "المملكة العربية السعودية", "السعودية 🇸🇦"],
+    "wrongAnswers": ["الإمارات العربية المتحدة", "الكويت", "قطر", "البحرين"],
+    "image": "/assets/countries/sa.svg",
+    "imageAlt": "علم المملكة العربية السعودية"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["الإمارات العربية المتحدة", "الإمارات", "الإمارات 🇦🇪"],
+    "wrongAnswers": ["السعودية", "قطر", "البحرين", "عُمان"],
+    "image": "/assets/countries/ae.svg",
+    "imageAlt": "علم الإمارات العربية المتحدة"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["قطر", "دولة قطر", "قطر 🇶🇦"],
+    "wrongAnswers": ["البحرين", "الإمارات", "الكويت", "عُمان"],
+    "image": "/assets/countries/qa.svg",
+    "imageAlt": "علم قطر"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["الكويت", "دولة الكويت", "الكويت 🇰🇼"],
+    "wrongAnswers": ["قطر", "البحرين", "العراق", "السعودية"],
+    "image": "/assets/countries/kw.svg",
+    "imageAlt": "علم الكويت"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["عُمان", "سلطنة عمان", "سلطنة عُمان", "عُمان 🇴🇲"],
+    "wrongAnswers": ["اليمن", "الإمارات", "السعودية", "قطر"],
+    "image": "/assets/countries/om.svg",
+    "imageAlt": "علم سلطنة عمان"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["البحرين", "مملكة البحرين", "البحرين 🇧🇭"],
+    "wrongAnswers": ["قطر", "الكويت", "الإمارات", "عُمان"],
+    "image": "/assets/countries/bh.svg",
+    "imageAlt": "علم البحرين"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["العراق", "جمهورية العراق", "العراق 🇮🇶"],
+    "wrongAnswers": ["إيران", "سوريا", "الكويت", "الأردن"],
+    "image": "/assets/countries/iq.svg",
+    "imageAlt": "علم العراق"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["الأردن", "المملكة الأردنية الهاشمية", "الأردن 🇯🇴"],
+    "wrongAnswers": ["فلسطين", "سوريا", "لبنان", "العراق"],
+    "image": "/assets/countries/jo.svg",
+    "imageAlt": "علم الأردن"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["سوريا", "الجمهورية العربية السورية", "سوريا 🇸🇾"],
+    "wrongAnswers": ["لبنان", "الأردن", "العراق", "تركيا"],
+    "image": "/assets/countries/sy.svg",
+    "imageAlt": "علم سوريا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["لبنان", "الجمهورية اللبنانية", "لبنان 🇱🇧"],
+    "wrongAnswers": ["سوريا", "الأردن", "فلسطين", "العراق"],
+    "image": "/assets/countries/lb.svg",
+    "imageAlt": "علم لبنان"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["فلسطين", "دولة فلسطين", "فلسطين 🇵🇸"],
+    "wrongAnswers": ["الأردن", "لبنان", "سوريا", "مصر"],
+    "image": "/assets/countries/ps.svg",
+    "imageAlt": "علم فلسطين"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["اليمن", "الجمهورية اليمنية", "اليمن 🇾🇪"],
+    "wrongAnswers": ["عُمان", "السعودية", "جيبوتي", "إريتريا"],
+    "image": "/assets/countries/ye.svg",
+    "imageAlt": "علم اليمن"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["الصين", "جمهورية الصين الشعبية", "الصين 🇨🇳"],
+    "wrongAnswers": ["اليابان", "كوريا الجنوبية", "منغوليا", "فيتنام"],
+    "image": "/assets/countries/cn.svg",
+    "imageAlt": "علم الصين"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["اليابان", "دولة اليابان", "اليابان 🇯🇵"],
+    "wrongAnswers": ["الصين", "كوريا الجنوبية", "تايوان", "الفلبين"],
+    "image": "/assets/countries/jp.svg",
+    "imageAlt": "علم اليابان"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["كوريا الجنوبية", "جمهورية كوريا", "كوريا الجنوبية 🇰🇷", "دولة كوريا الجنوبية"],
+    "wrongAnswers": ["كوريا الشمالية", "اليابان", "الصين", "تايوان"],
+    "image": "/assets/countries/kr.svg",
+    "imageAlt": "علم كوريا الجنوبية"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["كوريا الشمالية", "جمهورية كوريا الشعبية الديمقراطية", "كوريا الشمالية 🇰🇵"],
+    "wrongAnswers": ["كوريا الجنوبية", "الصين", "اليابان", "منغوليا"],
+    "image": "/assets/countries/kp.svg",
+    "imageAlt": "علم كوريا الشمالية"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["الهند", "جمهورية الهند", "الهند 🇮🇳"],
+    "wrongAnswers": ["باكستان", "بنغلاديش", "نيبال", "سريلانكا"],
+    "image": "/assets/countries/in.svg",
+    "imageAlt": "علم الهند"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["باكستان", "جمهورية باكستان الإسلامية", "باكستان 🇵🇰"],
+    "wrongAnswers": ["الهند", "أفغانستان", "بنغلاديش", "إيران"],
+    "image": "/assets/countries/pk.svg",
+    "imageAlt": "علم باكستان"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["إندونيسيا", "جمهورية إندونيسيا", "إندونيسيا 🇮🇩"],
+    "wrongAnswers": ["ماليزيا", "الفلبين", "سنغافورة", "تايلاند"],
+    "image": "/assets/countries/id.svg",
+    "imageAlt": "علم إندونيسيا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["ماليزيا", "اتحاد ماليزيا", "ماليزيا 🇲🇾"],
+    "wrongAnswers": ["إندونيسيا", "سنغافورة", "تايلاند", "بروناي"],
+    "image": "/assets/countries/my.svg",
+    "imageAlt": "علم ماليزيا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["الفلبين", "جمهورية الفلبين", "الفلبين 🇵🇭"],
+    "wrongAnswers": ["إندونيسيا", "ماليزيا", "فيتنام", "تايوان"],
+    "image": "/assets/countries/ph.svg",
+    "imageAlt": "علم الفلبين"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["تايلاند", "مملكة تايلاند", "تايلاند 🇹🇭"],
+    "wrongAnswers": ["فيتنام", "كمبوديا", "ماليزيا", "ميانمار"],
+    "image": "/assets/countries/th.svg",
+    "imageAlt": "علم تايلاند"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["فيتنام", "جمهورية فيتنام الاشتراكية", "فيتنام 🇻🇳"],
+    "wrongAnswers": ["تايلاند", "الصين", "كمبوديا", "الفلبين"],
+    "image": "/assets/countries/vn.svg",
+    "imageAlt": "علم فيتنام"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["سنغافورة", "جمهورية سنغافورة", "سنغافورة 🇸🇬"],
+    "wrongAnswers": ["ماليزيا", "إندونيسيا", "بروناي", "الفلبين"],
+    "image": "/assets/countries/sg.svg",
+    "imageAlt": "علم سنغافورة"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["بنغلاديش", "جمهورية بنغلاديش الشعبية", "بنغلاديش 🇧🇩"],
+    "wrongAnswers": ["الهند", "باكستان", "نيبال", "ميانمار"],
+    "image": "/assets/countries/bd.svg",
+    "imageAlt": "علم بنغلاديش"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["سريلانكا", "جمهورية سريلانكا الديمقراطية الاشتراكية", "سريلانكا 🇱🇰"],
+    "wrongAnswers": ["الهند", "المالديف", "بنغلاديش", "نيبال"],
+    "image": "/assets/countries/lk.svg",
+    "imageAlt": "علم سريلانكا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["إيران", "الجمهورية الإسلامية الإيرانية", "إيران 🇮🇷"],
+    "wrongAnswers": ["العراق", "تركيا", "أفغانستان", "باكستان"],
+    "image": "/assets/countries/ir.svg",
+    "imageAlt": "علم إيران"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["تركيا", "الجمهورية التركية", "تركيا 🇹🇷"],
+    "wrongAnswers": ["إيران", "اليونان", "العراق", "أذربيجان"],
+    "image": "/assets/countries/tr.svg",
+    "imageAlt": "علم تركيا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["أفغانستان", "جمهورية أفغانستان", "أفغانستان 🇦🇫"],
+    "wrongAnswers": ["باكستان", "إيران", "طاجيكستان", "أوزبكستان"],
+    "image": "/assets/countries/af.svg",
+    "imageAlt": "علم أفغانستان"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["أوزبكستان", "جمهورية أوزبكستان", "أوزبكستان 🇺🇿"],
+    "wrongAnswers": ["كازاخستان", "طاجيكستان", "تركمانستان", "قيرغيزستان"],
+    "image": "/assets/countries/uz.svg",
+    "imageAlt": "علم أوزبكستان"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["كازاخستان", "جمهورية كازاخستان", "كازاخستان 🇰🇿"],
+    "wrongAnswers": ["أوزبكستان", "قيرغيزستان", "تركمانستان", "روسيا"],
+    "image": "/assets/countries/kz.svg",
+    "imageAlt": "علم كازاخستان"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["تركمانستان", "جمهورية تركمانستان", "تركمانستان 🇹🇲"],
+    "wrongAnswers": ["أوزبكستان", "كازاخستان", "إيران", "أفغانستان"],
+    "image": "/assets/countries/tm.svg",
+    "imageAlt": "علم تركمانستان"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["قيرغيزستان", "الجمهورية القيرغيزية", "قيرغيزستان 🇰🇬"],
+    "wrongAnswers": ["كازاخستان", "طاجيكستان", "أوزبكستان", "تركمانستان"],
+    "image": "/assets/countries/kg.svg",
+    "imageAlt": "علم قيرغيزستان"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["طاجيكستان", "جمهورية طاجيكستان", "طاجيكستان 🇹🇯"],
+    "wrongAnswers": ["قيرغيزستان", "أوزبكستان", "أفغانستان", "كازاخستان"],
+    "image": "/assets/countries/tj.svg",
+    "imageAlt": "علم طاجيكستان"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["منغوليا", "دولة منغوليا", "منغوليا 🇲🇳"],
+    "wrongAnswers": ["الصين", "كازاخستان", "روسيا", "كوريا الشمالية"],
+    "image": "/assets/countries/mn.svg",
+    "imageAlt": "علم منغوليا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["ميانمار", "جمهورية اتحاد ميانمار", "ميانمار 🇲🇲", "بورما"],
+    "wrongAnswers": ["تايلاند", "بنغلاديش", "لاوس", "كمبوديا"],
+    "image": "/assets/countries/mm.svg",
+    "imageAlt": "علم ميانمار"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["كمبوديا", "مملكة كمبوديا", "كمبوديا 🇰🇭"],
+    "wrongAnswers": ["تايلاند", "فيتنام", "لاوس", "ميانمار"],
+    "image": "/assets/countries/kh.svg",
+    "imageAlt": "علم كمبوديا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["لاوس", "جمهورية لاوس الديمقراطية الشعبية", "لاوس 🇱🇦"],
+    "wrongAnswers": ["كمبوديا", "تايلاند", "فيتنام", "ميانمار"],
+    "image": "/assets/countries/la.svg",
+    "imageAlt": "علم لاوس"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["نيبال", "جمهورية نيبال الديمقراطية الاتحادية", "نيبال 🇳🇵"],
+    "wrongAnswers": ["بوتان", "الهند", "بنغلاديش", "الصين"],
+    "image": "/assets/countries/np.svg",
+    "imageAlt": "علم نيبال"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["بوتان", "مملكة بوتان", "بوتان 🇧🇹"],
+    "wrongAnswers": ["نيبال", "الهند", "بنغلاديش", "الصين"],
+    "image": "/assets/countries/bt.svg",
+    "imageAlt": "علم بوتان"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["جزر المالديف", "المالديف", "جمهورية المالديف", "جزر المالديف 🇲🇻"],
+    "wrongAnswers": ["سريلانكا", "الهند", "سيشل", "موريشيوس"],
+    "image": "/assets/countries/mv.svg",
+    "imageAlt": "علم جزر المالديف"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["بروناي", "بروناي دار السلام", "سلطنة بروناي", "بروناي 🇧🇳"],
+    "wrongAnswers": ["ماليزيا", "إندونيسيا", "سنغافورة", "الفلبين"],
+    "image": "/assets/countries/bn.svg",
+    "imageAlt": "علم بروناي"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["تيمور الشرقية", "جمهورية تيمور الشرقية الديمقراطية", "تيمور الشرقية 🇹🇱"],
+    "wrongAnswers": ["إندونيسيا", "الفلبين", "ماليزيا", "بابوا غينيا الجديدة"],
+    "image": "/assets/countries/tl.svg",
+    "imageAlt": "علم تيمور الشرقية"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["أرمينيا", "جمهورية أرمينيا", "أرمينيا 🇦🇲"],
+    "wrongAnswers": ["جورجيا", "أذربيجان", "تركيا", "إيران"],
+    "image": "/assets/countries/am.svg",
+    "imageAlt": "علم أرمينيا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["أذربيجان", "جمهورية أذربيجان", "أذربيجان 🇦🇿"],
+    "wrongAnswers": ["أرمينيا", "جورجيا", "تركيا", "إيران"],
+    "image": "/assets/countries/az.svg",
+    "imageAlt": "علم أذربيجان"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["جورجيا", "جمهورية جورجيا", "جورجيا 🇬🇪"],
+    "wrongAnswers": ["أرمينيا", "أذربيجان", "تركيا", "روسيا"],
+    "image": "/assets/countries/ge.svg",
+    "imageAlt": "علم جورجيا"
+  },
+  {
+    "question": "خمن الدولة؟",
+    "correctAnswers": ["قبرص", "جمهورية قبرص", "قبرص 🇨🇾"],
+    "wrongAnswers": ["اليونان", "تركيا", "مالطا", "إسرائيل"],
+    "image": "/assets/countries/cy.svg",
+    "imageAlt": "علم قبرص"
+  },
+  {
+    "question": "خمن الكيان؟",
+    "correctAnswers": ["تايوان", "جمهورية الصين", "تايوان 🇹🇼"],
+    "wrongAnswers": ["الصين", "اليابان", "كوريا الجنوبية", "الفلبين"],
+    "image": "/assets/countries/tw.svg",
+    "imageAlt": "علم تايوان"
+  },
+  {
+    "question": "خمن المنطقة؟",
+    "correctAnswers": ["هونغ كونغ", "منطقة هونغ كونغ الإدارية الخاصة", "هونغ كونغ 🇭🇰"],
+    "wrongAnswers": ["ماكاو", "تايوان", "الصين", "سنغافورة"],
+    "image": "/assets/countries/hk.svg",
+    "imageAlt": "علم هونغ كونغ"
+  },
+  {
+    "question": "خمن المنطقة؟",
+    "correctAnswers": ["ماكاو", "منطقة ماكاو الإدارية الخاصة", "ماكاو 🇲🇴"],
+    "wrongAnswers": ["هونغ كونغ", "تايوان", "الصين", "سنغافورة"],
+    "image": "/assets/countries/mo.svg",
+    "imageAlt": "علم ماكاو"
+  },
+  {
+    "question": "خمن الكيان؟",
+    "correctAnswers": ["قبرص الشمالية", "جمهورية شمال قبرص التركية", "شمال قبرص"],
+    "wrongAnswers": ["قبرص", "تركيا", "جورجيا", "مالطا"],
+    "image": "/assets/countries/xx.svg",
+    "imageAlt": "علم قبرص الشمالية"
+  },
+  {
+    "question": "خمن الإقليم؟",
+    "correctAnswers": ["إقليم المحيط الهندي البريطاني", "الإقليم البريطاني في المحيط الهندي", "BIOT", "المحيط الهندي البريطاني"],
+    "wrongAnswers": ["جزر المالديف", "سيشل", "موريشيوس", "مدغشقر"],
+    "image": "/assets/countries/io.svg",
+    "imageAlt": "علم إقليم المحيط الهندي البريطاني"
+  },
+  {
+    "question": "خمن الإقليم؟",
+    "correctAnswers": ["جزر توركس وكايكوس", "جزر تركس وكايكوس", "توركس وكايكوس 🇹🇨"],
+    "wrongAnswers": ["جزر كايمان", "برمودا", "أنغويلا", "جزر فيرجن البريطانية"],
+    "image": "/assets/countries/tc.svg",
+    "imageAlt": "علم جزر توركس وكايكوس"
+  },
+  {
+    "question": "خمن الإقليم؟",
+    "correctAnswers": ["أنغويلا", "جزيرة أنغويلا", "أنغويلا 🇦🇮"],
+    "wrongAnswers": ["مونتسرات", "جزر كايمان", "برمودا", "جزر فيرجن البريطانية"],
+    "image": "/assets/countries/ai.svg",
+    "imageAlt": "علم أنغويلا"
+  },
+  {
+    "question": "خمن الإقليم؟",
+    "correctAnswers": ["مونتسرات", "جزيرة مونتسرات", "مونتسرات 🇲🇸"],
+    "wrongAnswers": ["أنغويلا", "جزر كايمان", "برمودا", "جزر فيرجن البريطانية"],
+    "image": "/assets/countries/ms.svg",
+    "imageAlt": "علم مونتسرات"
+  },
+  {
+    "question": "خمن الإقليم؟",
+    "correctAnswers": ["جوادلوب", "غوادلوب", "جوادلوب 🇬🇵"],
+    "wrongAnswers": ["مارتينيك", "سان بارتليمي", "سانت بيير وميكلون", "ريونيون"],
+    "image": "/assets/countries/gp.svg",
+    "imageAlt": "علم جوادلوب"
+  },
+  {
+    "question": "خمن الإقليم؟",
+    "correctAnswers": ["مارتينيك", "جزيرة مارتينيك", "مارتينيك 🇲🇶"],
+    "wrongAnswers": ["جوادلوب", "سان بارتليمي", "ريونيون", "مايوت"],
+    "image": "/assets/countries/mq.svg",
+    "imageAlt": "علم مارتينيك"
+  },
+  {
+    "question": "خمن الإقليم؟",
+    "correctAnswers": ["سان بارتليمي", "سان بارتيليمي", "سان بارتليمي 🇧🇱"],
+    "wrongAnswers": ["مارتينيك", "جوادلوب", "سانت مارتن", "سانت بيير وميكلون"],
+    "image": "/assets/countries/bl.svg",
+    "imageAlt": "علم سان بارتليمي"
+  },
+  {
+    "question": "خمن الإقليم؟",
+    "correctAnswers": ["سانت بيير وميكلون", "سان بيير وميكلون", "سانت بيير وميكلون 🇵🇲"],
+    "wrongAnswers": ["جوادلوب", "مارتينيك", "سان بارتليمي", "جرينلاند"],
+    "image": "/assets/countries/pm.svg",
+    "imageAlt": "علم سانت بيير وميكلون"
+  },
+  {
+    "question": "خمن الإقليم؟",
+    "correctAnswers": ["بونير", "جزيرة بونير", "بونير 🇧🇶"],
+    "wrongAnswers": ["أروبا", "كوراساو", "سينت أوستاتيوس", "سابا"],
+    "image": "/assets/countries/bq.svg",
+    "imageAlt": "علم بونير"
+  },
+  {
+    "question": "خمن الإقليم؟",
+    "correctAnswers": ["سينت أوستاتيوس", "سانت أوستاتيوس", "سينت أوستاتيوس 🇧🇶"],
+    "wrongAnswers": ["بونير", "سابا", "أروبا", "كوراساو"],
+    "image": "/assets/countries/bq.svg",
+    "imageAlt": "جزيرة سينت أوستاتيوس"
+  },
+  {
+    "question": "خمن الإقليم؟",
+    "correctAnswers": ["سابا", "جزيرة سابا", "سابا 🇧🇶"],
+    "wrongAnswers": ["بونير", "سينت أوستاتيوس", "كوراساو", "أروبا"],
+    "image": "/assets/countries/bq.svg",
+    "imageAlt": "جزيرة سابا"
+  },
+  {
+    "question": "خمن الجزيرة؟",
+    "correctAnswers": ["جزيرة كليبرتون", "كليبرتون", "جزيرة كليبرتون 🇫🇷"],
+    "wrongAnswers": ["مارتينيك", "جوادلوب", "ريونيون", "سان بارتليمي"],
+    "image": "/assets/countries/fr.svg",
+    "imageAlt": "جزيرة كليبرتون"
+  },
+  {
+    "question": "خمن الإقليم؟",
+    "correctAnswers": ["جزر فيرجن البريطانية", "جزر العذراء البريطانية", "جزر فيرجن البريطانية 🇻🇬"],
+    "wrongAnswers": ["جزر فيرجن الأمريكية", "بورتوريكو", "برمودا", "جزر كايمان"],
+    "image": "/assets/countries/vg.svg",
+    "imageAlt": "علم جزر فيرجن البريطانية"
+  },
+  {
+    "question": "خمن الإقليم؟",
+    "correctAnswers": ["برمودا", "جزر برمودا", "برمودا 🇧🇲"],
+    "wrongAnswers": ["جزر كايمان", "جزر توركس وكايكوس", "جزر فيرجن البريطانية", "أنغويلا"],
+    "image": "/assets/countries/bm.svg",
+    "imageAlt": "علم برمودا"
+  },
+  {
+    "question": "خمن الإقليم؟",
+    "correctAnswers": ["جزر كايمان", "جزر كايمان 🇰🇾"],
+    "wrongAnswers": ["برمودا", "جزر توركس وكايكوس", "جزر فيرجن البريطانية", "أنغويلا"],
+    "image": "/assets/countries/ky.svg",
+    "imageAlt": "علم جزر كايمان"
+  },
+  {
+    "question": "خمن الإقليم؟",
+    "correctAnswers": ["أروبا", "أروبا 🇦🇼", "جزيرة أروبا"],
+    "wrongAnswers": ["كوراساو", "سينت مارتن", "بونير", "جامايكا"],
+    "image": "/assets/countries/aw.svg",
+    "imageAlt": "علم أروبا"
+  },
+  {
+    "question": "خمن الإقليم؟",
+    "correctAnswers": ["كوراساو", "كوراساو 🇨🇼", "جزيرة كوراساو"],
+    "wrongAnswers": ["أروبا", "سينت مارتن", "بونير", "جزر كايمان"],
+    "image": "/assets/countries/cw.svg",
+    "imageAlt": "علم كوراساو"
+  },
+  {
+    "question": "خمن الإقليم؟",
+    "correctAnswers": ["سينت مارتن", "سان مارتن الهولندية", "سينت مارتن 🇸🇽"],
+    "wrongAnswers": ["أروبا", "كوراساو", "سان بارتليمي", "بونير"],
+    "image": "/assets/countries/sx.svg",
+    "imageAlt": "علم سينت مارتن"
+  }
+]

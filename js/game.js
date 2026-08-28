@@ -273,6 +273,8 @@ function buildNewRound(room, number) {
     question: null,
     questionImage: null,
     questionImageAlt: null,
+    answerImage: null,
+    answerImageAlt: null,
     correctAnswer: null,
     acceptedAnswers: [],
     systemDecoys: [],
@@ -444,8 +446,6 @@ async function createFirstRound() {
         status: "playing",
         currentRoundId: round.id,
         currentRoundNumber: 1,
-        usedQuestionIds: [],
-        usedFactKeys: [],
         finalResults: null,
         gameError: null,
         finishedAt: null,
@@ -497,10 +497,10 @@ async function advanceFromCategorySelection(roomSnapshot = currentRoom) {
       return;
     }
 
-    // Only one small JSON shard for the selected category is downloaded here.
+    // The selected category is loaded as one small 30-question pool. Selection
+    // happens without replacement; the JSON question files remain untouched.
     const question = await selectQuestion(categoryId, {
       usedQuestionIds: roomSnapshot.usedQuestionIds,
-      usedFactKeys: roomSnapshot.usedFactKeys,
     });
     if (!question) {
       await updateDoc(getRoomRef(), {status: "finished", finalResults: rankingFromPlayers(playersMap(roomSnapshot)), gameError: "لا توجد أسئلة متاحة لهذه الفئة."});
@@ -529,6 +529,8 @@ async function advanceFromCategorySelection(roomSnapshot = currentRoom) {
         question: question.prompt,
         questionImage: question.image || null,
         questionImageAlt: question.imageAlt || null,
+        answerImage: question.answerImage || null,
+        answerImageAlt: question.answerImageAlt || null,
         correctAnswer: question.answer,
         acceptedAnswers: question.accepted,
         systemDecoys: Array.isArray(question.decoys) ? question.decoys.slice(0, 8) : [],
@@ -536,15 +538,51 @@ async function advanceFromCategorySelection(roomSnapshot = currentRoom) {
         phase: "bluffing",
         bluffDeadline: Timestamp.fromMillis(Date.now() + answerTime * 1000),
       });
+      const categoryQuestionIds = new Set(question.selectionMeta?.categoryQuestionIds || [question.id]);
+      if (!categoryQuestionIds.size) categoryQuestionIds.add(question.id);
+
+      const storedQuestionIds = [...new Set(
+        (Array.isArray(room.usedQuestionIds) ? room.usedQuestionIds : []).filter(Boolean),
+      )];
+      const usedInThisCategory = storedQuestionIds.filter((id) => categoryQuestionIds.has(id));
+      const categoryCycleComplete = usedInThisCategory.length >= categoryQuestionIds.size;
+
+      // A stale host must never reserve an ID that the current room cycle has
+      // already used. Once all IDs are present, only this category is reset.
+      if (!categoryCycleComplete && usedInThisCategory.includes(question.id)) {
+        throw new Error("QUESTION_ALREADY_USED");
+      }
+
+      const retainedQuestionIds = categoryCycleComplete
+        ? storedQuestionIds.filter((id) => !categoryQuestionIds.has(id))
+        : storedQuestionIds;
+      const nextUsedQuestionIds = retainedQuestionIds.includes(question.id)
+        ? retainedQuestionIds
+        : [...retainedQuestionIds, question.id];
+
+      const factKey = question.factKey || question.id;
+      const categoryFactPrefix = `${categoryId}:`;
+      const storedFactKeys = [...new Set(
+        (Array.isArray(room.usedFactKeys) ? room.usedFactKeys : []).filter(Boolean),
+      )];
+      const retainedFactKeys = categoryCycleComplete
+        ? storedFactKeys.filter((key) => !String(key).startsWith(categoryFactPrefix))
+        : storedFactKeys;
+      const nextUsedFactKeys = retainedFactKeys.includes(factKey)
+        ? retainedFactKeys
+        : [...retainedFactKeys, factKey];
+
       transaction.update(roomRef, {
-        usedQuestionIds: [...(Array.isArray(room.usedQuestionIds) ? room.usedQuestionIds : []), question.id],
-        usedFactKeys: [...(Array.isArray(room.usedFactKeys) ? room.usedFactKeys : []), question.factKey || question.id],
+        usedQuestionIds: nextUsedQuestionIds,
+        usedFactKeys: nextUsedFactKeys,
         lastActivityAt: serverTimestamp(),
       });
     });
   } catch (error) {
     console.error("advanceFromCategorySelection failed:", error);
-    showGameError("تعذر تحميل سؤال الفئة. تحقق من الاتصال وحاول مرة أخرى.");
+    if (error?.message !== "QUESTION_ALREADY_USED") {
+      showGameError("تعذر تحميل سؤال الفئة. تحقق من الاتصال وحاول مرة أخرى.");
+    }
   } finally {
     transitionInProgress = false;
   }
@@ -1033,7 +1071,14 @@ function renderReveal(room) {
   const myReady = round.revealReady?.[playerId] === true;
 
   if (question) question.textContent = round.question || "";
-  renderQuestionMedia("revealQuestionMedia", round);
+  const revealMediaRound = round.answerImage
+    ? {
+        ...round,
+        questionImage: round.answerImage,
+        questionImageAlt: round.answerImageAlt || "علم الدولة",
+      }
+    : round;
+  renderQuestionMedia("revealQuestionMedia", revealMediaRound);
   if (count) count.textContent = `${readyCount} / ${ids.length}`;
   if (button) {
     button.disabled = myReady;
@@ -1462,7 +1507,7 @@ async function startReplay() {
       playerEntries.forEach(({ref, snap}) => {
         if (snap.exists()) transaction.update(ref, {score: 0, correctGuesses: 0, fooledPlayers: 0, replayRequested: false, returnRequested: false});
       });
-      transaction.update(roomRef, {status: "starting", currentRoundId: null, currentRoundNumber: 0, usedQuestionIds: [], usedFactKeys: [], finalResults: null, gameError: null, finishedAt: null, gamePlayerCount: ids.length, lastActivityAt: serverTimestamp()});
+      transaction.update(roomRef, {status: "starting", currentRoundId: null, currentRoundNumber: 0, finalResults: null, gameError: null, finishedAt: null, gamePlayerCount: ids.length, lastActivityAt: serverTimestamp()});
     });
   } catch (error) {
     console.error("startReplay failed:", error);
@@ -1492,7 +1537,7 @@ async function resetToLobby() {
       playerEntries.forEach(({ref, snap}) => {
         if (snap.exists()) transaction.update(ref, {ready: ref.id === room.hostId, score: 0, correctGuesses: 0, fooledPlayers: 0, replayRequested: false, returnRequested: false});
       });
-      transaction.update(roomRef, {status: "waiting", currentRoundId: null, currentRoundNumber: 0, usedQuestionIds: [], usedFactKeys: [], finalResults: null, gameError: null, finishedAt: null, gamePlayerCount: 0, lastActivityAt: serverTimestamp(), expiresAt: Timestamp.fromMillis(Date.now() + (room.isPublic ? 5 * 60_000 : 24 * 60 * 60_000))});
+      transaction.update(roomRef, {status: "waiting", currentRoundId: null, currentRoundNumber: 0, finalResults: null, gameError: null, finishedAt: null, gamePlayerCount: 0, lastActivityAt: serverTimestamp(), expiresAt: Timestamp.fromMillis(Date.now() + (room.isPublic ? 5 * 60_000 : 24 * 60 * 60_000))});
     });
   } catch (error) {
     console.error("resetToLobby failed:", error);
@@ -1604,4 +1649,4 @@ document.getElementById("gameLeaveButton")?.addEventListener("click", () => {
   window.dispatchEvent(new CustomEvent("taleela:leave-room"));
 });
 
-console.log("Taleela Game Engine v8.9.0 Custom Avatars + Mobile Input loaded");
+console.log("Taleela Game Engine v8.10.0 Question Bank v1 + No-Repeat Cycles loaded");

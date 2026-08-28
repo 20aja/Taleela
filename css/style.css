@@ -3880,7 +3880,7 @@ img {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 10px;
-  max-height: min(46vh, 410px);
+  max-height: min(19vh, 410px);
   overflow-y: auto;
   padding: 4px;
 }
@@ -6302,7 +6302,7 @@ input:focus-visible {
 
 
 /* =====================================================
-   TALEELA v8.9.0 — gameplay layout and feedback refinements
+   TALEELA v8.10.0 — gameplay layout and feedback refinements
 ===================================================== */
 .game-toolbar {
   position: sticky;
@@ -6550,7 +6550,7 @@ input:focus-visible {
 
 
 /* =====================================================
-   TALEELA v8.9.0 — custom avatar + phone alignment pass
+   TALEELA v8.10.0 — custom avatar + phone alignment pass
 ===================================================== */
 .custom-avatar-picker {
   display: grid;

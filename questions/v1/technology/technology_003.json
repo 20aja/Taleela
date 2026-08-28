@@ -1,0 +1,1687 @@
+[
+  {
+    "question": "ما منفذ الشحن الحديث الشائع في الهواتف؟",
+    "correctAnswers": ["USB-C", "USB Type-C", "تايب سي"],
+    "wrongAnswers": ["Micro USB", "Lightning", "USB-A", "Mini USB"]
+  },
+  {
+    "question": "ما منفذ الشحن الذي اشتهرت به أجهزة iPhone سابقًا؟",
+    "correctAnswers": ["Lightning", "لايتنينغ", "Lightning Port"],
+    "wrongAnswers": ["USB-C", "Micro USB", "USB-A", "Mini USB"]
+  },
+  {
+    "question": "ما الإصدار الأحدث من USB المستخدم بكثرة حاليًا؟",
+    "correctAnswers": ["USB-C", "Type-C", "USB Type-C"],
+    "wrongAnswers": ["USB-A", "Micro USB", "Mini USB", "Lightning"]
+  },
+  {
+    "question": "ما التقنية التي تنقل البيانات عبر الضوء؟",
+    "correctAnswers": ["Fiber Optic", "الألياف الضوئية", "فايبر"],
+    "wrongAnswers": ["Ethernet", "Bluetooth", "Wi-Fi", "Coaxial"]
+  },
+  {
+    "question": "ما نوع الكابل الشائع للشبكات المحلية؟",
+    "correctAnswers": ["Ethernet", "إيثرنت", "كابل Ethernet"],
+    "wrongAnswers": ["HDMI", "USB", "VGA", "SATA"]
+  },
+  {
+    "question": "ما الكابل المستخدم غالبًا لنقل الصوت والصورة الرقمية؟",
+    "correctAnswers": ["HDMI", "كابل HDMI", "إتش دي إم آي"],
+    "wrongAnswers": ["VGA", "Ethernet", "SATA", "PS2"]
+  },
+  {
+    "question": "ما المنفذ القديم لنقل الصورة التناظرية؟",
+    "correctAnswers": ["VGA", "منفذ VGA", "في جي إيه"],
+    "wrongAnswers": ["HDMI", "USB-C", "DisplayPort", "Ethernet"]
+  },
+  {
+    "question": "ما المنفذ الرقمي المنافس لـ HDMI في الحواسيب؟",
+    "correctAnswers": ["DisplayPort", "DP", "ديسبلاي بورت"],
+    "wrongAnswers": ["VGA", "DVI", "USB", "Ethernet"]
+  },
+  {
+    "question": "ما التقنية التي تربط القرص الصلب باللوحة الأم؟",
+    "correctAnswers": ["SATA", "منفذ SATA", "ساتا"],
+    "wrongAnswers": ["HDMI", "PCIe", "USB", "Ethernet"]
+  },
+  {
+    "question": "ما الواجهة المستخدمة غالبًا لأقراص NVMe؟",
+    "correctAnswers": ["PCIe", "PCI Express", "بي سي آي إي"],
+    "wrongAnswers": ["SATA", "USB", "HDMI", "IDE"]
+  },
+  {
+    "question": "ما نوع التخزين الذي يستخدم بروتوكول NVMe غالبًا؟",
+    "correctAnswers": ["SSD", "قرص NVMe", "NVMe SSD"],
+    "wrongAnswers": ["HDD", "DVD", "Tape", "CD"]
+  },
+  {
+    "question": "ما التقنية التي تسمح بتوصيل أجهزة USB دون إعادة تشغيل؟",
+    "correctAnswers": ["Hot Plug", "التوصيل الساخن", "Hot Swapping"],
+    "wrongAnswers": ["Booting", "Caching", "Overclocking", "Pairing"]
+  },
+  {
+    "question": "ما البرنامج الثابت الذي يبدأ تشغيل الحاسوب؟",
+    "correctAnswers": ["BIOS", "بيوس", "BIOS Firmware"],
+    "wrongAnswers": ["Windows", "Kernel", "Driver", "Bootloader"]
+  },
+  {
+    "question": "ما البديل الحديث لـ BIOS؟",
+    "correctAnswers": ["UEFI", "يو إي إف آي", "UEFI Firmware"],
+    "wrongAnswers": ["BIOS", "EFI القديم", "DOS", "GRUB"]
+  },
+  {
+    "question": "ما البرنامج الذي يدير موارد نظام التشغيل؟",
+    "correctAnswers": ["Kernel", "النواة", "نواة النظام"],
+    "wrongAnswers": ["Driver", "Shell", "Browser", "Compiler"]
+  },
+  {
+    "question": "ما البرنامج الذي يسمح لنظام التشغيل بالتعامل مع قطعة hardware؟",
+    "correctAnswers": ["Driver", "برنامج التشغيل", "التعريف"],
+    "wrongAnswers": ["Kernel", "Compiler", "Browser", "Firmware"]
+  },
+  {
+    "question": "ما الواجهة النصية التي تستقبل أوامر المستخدم؟",
+    "correctAnswers": ["Shell", "واجهة Shell", "الصدفة"],
+    "wrongAnswers": ["Kernel", "Driver", "GUI", "BIOS"]
+  },
+  {
+    "question": "ما الواجهة الرسومية التي يتعامل معها المستخدم؟",
+    "correctAnswers": ["GUI", "واجهة رسومية", "Graphical UI"],
+    "wrongAnswers": ["CLI", "API", "Shell", "Kernel"]
+  },
+  {
+    "question": "ما الواجهة التي تعتمد على كتابة الأوامر؟",
+    "correctAnswers": ["CLI", "واجهة CLI", "سطر الأوامر"],
+    "wrongAnswers": ["GUI", "API", "GUI Shell", "Desktop"]
+  },
+  {
+    "question": "ما نظام الملفات الشائع في Windows؟",
+    "correctAnswers": ["NTFS", "نظام NTFS", "إن تي إف إس"],
+    "wrongAnswers": ["EXT4", "FAT32", "APFS", "HFS+"]
+  },
+  {
+    "question": "ما نظام الملفات الشائع في Linux؟",
+    "correctAnswers": ["EXT4", "نظام EXT4", "Ext4"],
+    "wrongAnswers": ["NTFS", "APFS", "FAT32", "HFS+"]
+  },
+  {
+    "question": "ما نظام الملفات المستخدم في أجهزة Apple الحديثة؟",
+    "correctAnswers": ["APFS", "نظام APFS", "Apple File System"],
+    "wrongAnswers": ["NTFS", "EXT4", "FAT32", "HFS+"]
+  },
+  {
+    "question": "ما التقنية التي تسمح بتشغيل عدة برامج في الوقت نفسه؟",
+    "correctAnswers": ["Multitasking", "تعدد المهام", "Multitasking"],
+    "wrongAnswers": ["Multithreading", "Multiprocessing", "Virtualization", "Caching"]
+  },
+  {
+    "question": "ما التقنية التي تسمح للبرنامج بتنفيذ عدة مسارات؟",
+    "correctAnswers": ["Multithreading", "تعدد الخيوط", "Multithreading"],
+    "wrongAnswers": ["Multitasking", "Multiprocessing", "Caching", "Virtualization"]
+  },
+  {
+    "question": "ما المصطلح الذي يصف تنفيذ عدة عمليات باستخدام أكثر من معالج؟",
+    "correctAnswers": ["Multiprocessing", "تعدد المعالجة", "Multi Processing"],
+    "wrongAnswers": ["Multithreading", "Multitasking", "Caching", "Virtualization"]
+  },
+  {
+    "question": "ما البنية التي تسمح للبرنامج باستدعاء نفسه؟",
+    "correctAnswers": ["Recursion", "الاستدعاء الذاتي", "Recursion"],
+    "wrongAnswers": ["Iteration", "Inheritance", "Encapsulation", "Compilation"]
+  },
+  {
+    "question": "ما تكرار تنفيذ مجموعة أوامر يسمى؟",
+    "correctAnswers": ["Loop", "حلقة", "تكرار"],
+    "wrongAnswers": ["Function", "Class", "Object", "Array"]
+  },
+  {
+    "question": "ما الجزء الذي ينفذ مجموعة أوامر قابلة لإعادة الاستخدام؟",
+    "correctAnswers": ["Function", "دالة", "وظيفة"],
+    "wrongAnswers": ["Loop", "Class", "Variable", "Object"]
+  },
+  {
+    "question": "ما المكان الذي يخزن قيمة يمكن تغييرها في البرنامج؟",
+    "correctAnswers": ["Variable", "متغير", "متغير برمجي"],
+    "wrongAnswers": ["Constant", "Function", "Class", "Object"]
+  },
+  {
+    "question": "ما القيمة التي لا يفترض أن تتغير أثناء تشغيل البرنامج؟",
+    "correctAnswers": ["Constant", "ثابت", "ثابت برمجي"],
+    "wrongAnswers": ["Variable", "Function", "Object", "Array"]
+  },
+  {
+    "question": "ما المفهوم الذي يجمع البيانات والدوال داخل كائن؟",
+    "correctAnswers": ["Encapsulation", "التغليف", "Encapsulation"],
+    "wrongAnswers": ["Inheritance", "Polymorphism", "Abstraction", "Recursion"]
+  },
+  {
+    "question": "ما المفهوم الذي يسمح لكلاس بوراثة خصائص كلاس آخر؟",
+    "correctAnswers": ["Inheritance", "الوراثة", "Inheritance"],
+    "wrongAnswers": ["Encapsulation", "Polymorphism", "Abstraction", "Composition"]
+  },
+  {
+    "question": "ما المفهوم الذي يسمح بظهور نفس الواجهة بأشكال مختلفة؟",
+    "correctAnswers": ["Polymorphism", "تعدد الأشكال", "Polymorphism"],
+    "wrongAnswers": ["Inheritance", "Encapsulation", "Abstraction", "Recursion"]
+  },
+  {
+    "question": "ما المفهوم الذي يخفي التفاصيل الداخلية ويظهر المهم فقط؟",
+    "correctAnswers": ["Abstraction", "التجريد", "Abstraction"],
+    "wrongAnswers": ["Encapsulation", "Inheritance", "Polymorphism", "Composition"]
+  },
+  {
+    "question": "ما الكلمة المستخدمة لإنشاء كائن جديد في JavaScript؟",
+    "correctAnswers": ["new", "الكلمة new", "New"],
+    "wrongAnswers": ["create", "object", "this", "class"]
+  },
+  {
+    "question": "ما الكلمة التي تشير إلى الكائن الحالي في JavaScript؟",
+    "correctAnswers": ["this", "الكلمة this", "This"],
+    "wrongAnswers": ["self", "current", "object", "that"]
+  },
+  {
+    "question": "ما الكلمة المستخدمة لتعريف صنف في JavaScript؟",
+    "correctAnswers": ["class", "الكلمة class", "Class"],
+    "wrongAnswers": ["object", "struct", "type", "prototype"]
+  },
+  {
+    "question": "ما الكلمة التي تمنع إعادة تعيين المتغير في JavaScript؟",
+    "correctAnswers": ["const", "الكلمة const", "Const"],
+    "wrongAnswers": ["let", "var", "static", "final"]
+  },
+  {
+    "question": "ما الكلمة المستخدمة لتعريف متغير قابل لإعادة التعيين؟",
+    "correctAnswers": ["let", "الكلمة let", "Let"],
+    "wrongAnswers": ["const", "var", "static", "define"]
+  },
+  {
+    "question": "ما الكلمة القديمة لتعريف المتغيرات في JavaScript؟",
+    "correctAnswers": ["var", "الكلمة var", "Var"],
+    "wrongAnswers": ["let", "const", "define", "variable"]
+  },
+  {
+    "question": "ما القيمة التي تعني عدم وجود قيمة مقصودة في JavaScript؟",
+    "correctAnswers": ["null", "القيمة null", "Null"],
+    "wrongAnswers": ["undefined", "false", "empty", "zero"]
+  },
+  {
+    "question": "ما القيمة التي تعني أن المتغير لم يُعطَ قيمة؟",
+    "correctAnswers": ["undefined", "القيمة undefined", "غير معرف"],
+    "wrongAnswers": ["null", "false", "empty", "NaN"]
+  },
+  {
+    "question": "ما القيمة التي تظهر عند نتيجة حساب غير رقمية؟",
+    "correctAnswers": ["NaN", "ليس رقمًا", "Not a Number"],
+    "wrongAnswers": ["null", "undefined", "Infinity", "false"]
+  },
+  {
+    "question": "ما الكلمة المستخدمة لمعالجة الأخطاء في JavaScript؟",
+    "correctAnswers": ["try catch", "Try Catch", "try/catch"],
+    "wrongAnswers": ["if else", "switch case", "throw only", "error handler"]
+  },
+  {
+    "question": "ما الكلمة المستخدمة لرمي خطأ برمجي؟",
+    "correctAnswers": ["throw", "الكلمة throw", "Throw"],
+    "wrongAnswers": ["catch", "try", "error", "raise"]
+  },
+  {
+    "question": "ما الكلمة التي تنتظر نتيجة Promise في JavaScript؟",
+    "correctAnswers": ["await", "الكلمة await", "Await"],
+    "wrongAnswers": ["async", "wait", "promise", "then"]
+  },
+  {
+    "question": "ما الكلمة التي تجعل الدالة غير متزامنة؟",
+    "correctAnswers": ["async", "الكلمة async", "Async"],
+    "wrongAnswers": ["await", "promise", "defer", "parallel"]
+  },
+  {
+    "question": "ما الكائن الذي يمثل نتيجة عملية غير متزامنة؟",
+    "correctAnswers": ["Promise", "وعد", "Promise Object"],
+    "wrongAnswers": ["Callback", "Async", "Future", "Event"]
+  },
+  {
+    "question": "ما الدالة التي تنفذ بعد انتهاء Promise؟",
+    "correctAnswers": ["then", "الدالة then", "Promise then"],
+    "wrongAnswers": ["catch", "await", "finally", "resolve"]
+  },
+  {
+    "question": "ما الدالة التي تتعامل مع رفض Promise؟",
+    "correctAnswers": ["catch", "الدالة catch", "Promise catch"],
+    "wrongAnswers": ["then", "await", "reject", "error"]
+  },
+  {
+    "question": "ما التقنية التي تسمح للكود بالعمل دون انتظار بعض العمليات؟",
+    "correctAnswers": ["Asynchronous", "غير متزامن", "Async"],
+    "wrongAnswers": ["Synchronous", "Parallel", "Sequential", "Static"]
+  },
+  {
+    "question": "ما المصطلح الذي يصف تنفيذ الأوامر بالترتيب والانتظار؟",
+    "correctAnswers": ["Synchronous", "متزامن", "Sync"],
+    "wrongAnswers": ["Asynchronous", "Parallel", "Concurrent", "Async"]
+  },
+  {
+    "question": "ما الذاكرة التي تحتفظ ببياناتها بعد إغلاق الجهاز؟",
+    "correctAnswers": ["Nonvolatile", "غير متطايرة", "Non-Volatile"],
+    "wrongAnswers": ["Volatile", "RAM", "Cache", "Temporary"]
+  },
+  {
+    "question": "ما الذاكرة التي تفقد بياناتها عند انقطاع الطاقة؟",
+    "correctAnswers": ["Volatile", "متطايرة", "Volatile Memory"],
+    "wrongAnswers": ["Nonvolatile", "ROM", "SSD", "Flash"]
+  },
+  {
+    "question": "ما التقنية التي تسمح للأجهزة بالاتصال دون نقطة وصول مركزية؟",
+    "correctAnswers": ["Ad Hoc", "شبكة Ad Hoc", "Ad Hoc Network"],
+    "wrongAnswers": ["Infrastructure", "Client Server", "VPN", "VLAN"]
+  },
+  {
+    "question": "ما النموذج الذي يتواصل فيه العميل مع خادم مركزي؟",
+    "correctAnswers": ["Client Server", "عميل وخادم", "Client-Server"],
+    "wrongAnswers": ["Peer to Peer", "Ad Hoc", "Mesh", "Broadcast"]
+  },
+  {
+    "question": "ما النموذج الذي تتواصل فيه الأجهزة مباشرة مع بعضها؟",
+    "correctAnswers": ["Peer to Peer", "ند لند", "P2P"],
+    "wrongAnswers": ["Client Server", "Cloud", "Proxy", "Serverless"]
+  },
+  {
+    "question": "ما الشبكة التي تعتمد على عدة نقاط مترابطة لتوفير الاتصال؟",
+    "correctAnswers": ["Mesh", "شبكة Mesh", "Mesh Network"],
+    "wrongAnswers": ["Star", "Bus", "Ring", "LAN"]
+  },
+  {
+    "question": "ما بنية الشبكة التي تتصل فيها الأجهزة بجهاز مركزي؟",
+    "correctAnswers": ["Star", "نجمية", "Star Topology"],
+    "wrongAnswers": ["Mesh", "Ring", "Bus", "Tree"]
+  },
+  {
+    "question": "ما بنية الشبكة التي تتصل فيها الأجهزة على شكل حلقة؟",
+    "correctAnswers": ["Ring", "حلقية", "Ring Topology"],
+    "wrongAnswers": ["Star", "Mesh", "Bus", "Tree"]
+  },
+  {
+    "question": "ما التقنية التي تضغط الملفات لتقليل حجمها؟",
+    "correctAnswers": ["Compression", "ضغط البيانات", "ضغط"],
+    "wrongAnswers": ["Encryption", "Hashing", "Encoding", "Caching"]
+  },
+  {
+    "question": "ما التقنية التي تحول البيانات إلى صيغة قابلة للنقل دون تشفير؟",
+    "correctAnswers": ["Encoding", "الترميز", "ترميز البيانات"],
+    "wrongAnswers": ["Encryption", "Hashing", "Compression", "Obfuscation"]
+  },
+  {
+    "question": "ما التقنية التي تجعل البيانات غير مفهومة دون مفتاح؟",
+    "correctAnswers": ["Encryption", "التشفير", "تشفير البيانات"],
+    "wrongAnswers": ["Encoding", "Hashing", "Compression", "Caching"]
+  },
+  {
+    "question": "ما المصطلح الذي يصف إخفاء الكود أو جعله أصعب للفهم؟",
+    "correctAnswers": ["Obfuscation", "التعتيم", "Code Obfuscation"],
+    "wrongAnswers": ["Encryption", "Encoding", "Compilation", "Minification"]
+  },
+  {
+    "question": "ما العملية التي تقلل حجم ملفات JavaScript وCSS بإزالة المسافات؟",
+    "correctAnswers": ["Minification", "تصغير الكود", "Minify"],
+    "wrongAnswers": ["Compression", "Encryption", "Obfuscation", "Compilation"]
+  },
+  {
+    "question": "ما التقنية التي تحفظ الملفات المؤقتة لتسريع الموقع؟",
+    "correctAnswers": ["Caching", "التخزين المؤقت", "Cache"],
+    "wrongAnswers": ["Indexing", "Hashing", "Encoding", "Routing"]
+  },
+  {
+    "question": "ما النظام الذي يدير أسماء النطاقات على الإنترنت؟",
+    "correctAnswers": ["DNS", "نظام DNS", "Domain Name System"],
+    "wrongAnswers": ["DHCP", "HTTP", "ARP", "FTP"]
+  },
+  {
+    "question": "ما الجزء الذي يأتي بعد النقطة الأخيرة في اسم النطاق؟",
+    "correctAnswers": ["TLD", "النطاق العلوي", "Top Level Domain"],
+    "wrongAnswers": ["URL", "Subdomain", "Protocol", "Hostname"]
+  },
+  {
+    "question": "ما الجزء الذي يسبق اسم النطاق الرئيسي مثل www؟",
+    "correctAnswers": ["Subdomain", "نطاق فرعي", "النطاق الفرعي"],
+    "wrongAnswers": ["TLD", "Protocol", "Hostname", "Path"]
+  },
+  {
+    "question": "ما الجزء من URL الذي يحدد البروتوكول؟",
+    "correctAnswers": ["Scheme", "المخطط", "Protocol"],
+    "wrongAnswers": ["Domain", "Path", "Query", "Fragment"]
+  },
+  {
+    "question": "ما الجزء من URL الذي يحدد المسار داخل الموقع؟",
+    "correctAnswers": ["Path", "المسار", "URL Path"],
+    "wrongAnswers": ["Query", "Domain", "Scheme", "Fragment"]
+  },
+  {
+    "question": "ما الجزء من URL الذي يحتوي عادةً على معاملات البحث؟",
+    "correctAnswers": ["Query", "الاستعلام", "Query String"],
+    "wrongAnswers": ["Path", "Fragment", "Domain", "Scheme"]
+  },
+  {
+    "question": "ما الجزء من URL الذي يبدأ غالبًا بالرمز #؟",
+    "correctAnswers": ["Fragment", "الجزء المجزأ", "Hash"],
+    "wrongAnswers": ["Query", "Path", "Scheme", "Domain"]
+  },
+  {
+    "question": "ما الخدمة التي تحول اسم النطاق إلى خادم مستضيف للموقع؟",
+    "correctAnswers": ["DNS", "خدمة DNS", "نظام أسماء النطاقات"],
+    "wrongAnswers": ["CDN", "VPN", "DHCP", "Proxy"]
+  },
+  {
+    "question": "ما نوع النطاق الذي ينتهي عادةً بـ .com؟",
+    "correctAnswers": ["تجاري", "Commercial", "نطاق تجاري"],
+    "wrongAnswers": ["حكومي", "تعليمي", "عسكري", "شبكي"]
+  },
+  {
+    "question": "ما نوع النطاق الذي ينتهي عادةً بـ .edu؟",
+    "correctAnswers": ["تعليمي", "Educational", "نطاق تعليمي"],
+    "wrongAnswers": ["تجاري", "حكومي", "عسكري", "منظمات"]
+  },
+  {
+    "question": "ما نوع النطاق الذي ينتهي عادةً بـ .gov؟",
+    "correctAnswers": ["حكومي", "Government", "نطاق حكومي"],
+    "wrongAnswers": ["تعليمي", "تجاري", "عسكري", "شبكي"]
+  },
+  {
+    "question": "ما المصطلح الذي يصف جهازًا متصلًا بالإنترنت؟",
+    "correctAnswers": ["Host", "مضيف", "جهاز مضيف"],
+    "wrongAnswers": ["Router", "Switch", "Client", "Gateway"]
+  },
+  {
+    "question": "ما الجهاز الذي يعمل كنقطة عبور بين شبكتين؟",
+    "correctAnswers": ["Gateway", "البوابة", "بوابة الشبكة"],
+    "wrongAnswers": ["Switch", "Router", "Modem", "Repeater"]
+  },
+  {
+    "question": "ما الجهاز الذي يقوي أو يعيد إرسال إشارة الشبكة؟",
+    "correctAnswers": ["Repeater", "مكرر", "مقوي الإشارة"],
+    "wrongAnswers": ["Router", "Switch", "Gateway", "Modem"]
+  },
+  {
+    "question": "ما الخدمة التي تستضيف مواقع الويب على خوادم؟",
+    "correctAnswers": ["Web Hosting", "استضافة الويب", "الاستضافة"],
+    "wrongAnswers": ["DNS", "CDN", "VPN", "Proxy"]
+  },
+  {
+    "question": "ما البرنامج الذي يقدم صفحات الويب للمتصفح؟",
+    "correctAnswers": ["Web Server", "خادم ويب", "Web Server"],
+    "wrongAnswers": ["Browser", "DNS Server", "Proxy", "Database"]
+  },
+  {
+    "question": "ما خادم الويب مفتوح المصدر الشهير؟",
+    "correctAnswers": ["Nginx", "إنجن إكس", "NGINX"],
+    "wrongAnswers": ["Apache", "IIS", "Node.js", "Tomcat"]
+  },
+  {
+    "question": "ما خادم الويب الشهير الذي تطوره Apache Foundation؟",
+    "correctAnswers": ["Apache", "أباتشي", "Apache HTTP Server"],
+    "wrongAnswers": ["Nginx", "IIS", "Node.js", "Caddy"]
+  },
+  {
+    "question": "ما الخادم الذي تطوره Microsoft؟",
+    "correctAnswers": ["IIS", "خادم IIS", "Internet Information Services"],
+    "wrongAnswers": ["Apache", "Nginx", "Caddy", "Tomcat"]
+  },
+  {
+    "question": "ما التقنية التي تسمح بتشغيل كود على جهاز المستخدم؟",
+    "correctAnswers": ["Client Side", "طرف العميل", "Client-Side"],
+    "wrongAnswers": ["Server Side", "Backend", "Database", "Cloud"]
+  },
+  {
+    "question": "ما التقنية التي تنفذ الكود على الخادم؟",
+    "correctAnswers": ["Server Side", "طرف الخادم", "Server-Side"],
+    "wrongAnswers": ["Client Side", "Frontend", "Browser", "Local"]
+  },
+  {
+    "question": "ما الجزء من التطبيق الذي يتعامل معه المستخدم مباشرة؟",
+    "correctAnswers": ["Frontend", "الواجهة الأمامية", "Front End"],
+    "wrongAnswers": ["Backend", "Database", "Server", "API"]
+  },
+  {
+    "question": "ما الجزء الذي يعالج منطق التطبيق على الخادم؟",
+    "correctAnswers": ["Backend", "الواجهة الخلفية", "Back End"],
+    "wrongAnswers": ["Frontend", "CSS", "Browser", "UI"]
+  },
+  {
+    "question": "ما المصطلح الذي يصف تصميم واجهة المستخدم وتجربة استخدامها؟",
+    "correctAnswers": ["UI UX", "واجهة وتجربة", "UI/UX"],
+    "wrongAnswers": ["API", "Backend", "SEO", "DNS"]
+  },
+  {
+    "question": "ما الاختصار الذي يعني تحسين ظهور الموقع في محركات البحث؟",
+    "correctAnswers": ["SEO", "تحسين البحث", "Search Engine Optimization"],
+    "wrongAnswers": ["SEM", "SMM", "API", "CDN"]
+  },
+  {
+    "question": "ما الاختصار الذي يعني واجهة المستخدم؟",
+    "correctAnswers": ["UI", "واجهة المستخدم", "User Interface"],
+    "wrongAnswers": ["UX", "API", "GUI", "CLI"]
+  },
+  {
+    "question": "ما الاختصار الذي يعني تجربة المستخدم؟",
+    "correctAnswers": ["UX", "تجربة المستخدم", "User Experience"],
+    "wrongAnswers": ["UI", "API", "GUI", "SEO"]
+  },
+  {
+    "question": "ما المجال الذي يدرس تفاعل الإنسان مع الحاسوب؟",
+    "correctAnswers": ["HCI", "تفاعل الإنسان والحاسوب", "Human Computer Interaction"],
+    "wrongAnswers": ["UI", "UX", "AI", "API"]
+  },
+  {
+    "question": "ما المجال الذي يهتم بجعل الأجهزة تفهم اللغة البشرية؟",
+    "correctAnswers": ["NLP", "معالجة اللغة", "معالجة اللغة الطبيعية"],
+    "wrongAnswers": ["Computer Vision", "Robotics", "Machine Learning", "Cybersecurity"]
+  },
+  {
+    "question": "ما المجال الذي يجعل الحاسوب يفهم الصور؟",
+    "correctAnswers": ["Computer Vision", "رؤية حاسوبية", "الرؤية الحاسوبية"],
+    "wrongAnswers": ["NLP", "Robotics", "Cloud Computing", "Data Mining"]
+  },
+  {
+    "question": "ما المجال الذي يركز على بناء الآلات الذكية؟",
+    "correctAnswers": ["Robotics", "الروبوتات", "علم الروبوتات"],
+    "wrongAnswers": ["NLP", "Web Development", "Cybersecurity", "Cloud"]
+  },
+  {
+    "question": "ما الاختصار الشائع للذكاء الاصطناعي؟",
+    "correctAnswers": ["AI", "ذكاء اصطناعي", "Artificial Intelligence"],
+    "wrongAnswers": ["AR", "VR", "ML", "IoT"]
+  },
+  {
+    "question": "ما الاختصار الشائع لإنترنت الأشياء؟",
+    "correctAnswers": ["IoT", "إنترنت الأشياء", "Internet of Things"],
+    "wrongAnswers": ["AI", "VR", "AR", "NFC"]
+  },
+  {
+    "question": "ما التقنية التي تضيف عناصر رقمية إلى العالم الحقيقي؟",
+    "correctAnswers": ["AR", "الواقع المعزز", "Augmented Reality"],
+    "wrongAnswers": ["VR", "MR", "AI", "IoT"]
+  },
+  {
+    "question": "ما التقنية التي تنشئ بيئة رقمية غامرة؟",
+    "correctAnswers": ["VR", "الواقع الافتراضي", "Virtual Reality"],
+    "wrongAnswers": ["AR", "MR", "AI", "XR"]
+  },
+  {
+    "question": "ما التقنية التي تمزج بين العالم الحقيقي والرقمي؟",
+    "correctAnswers": ["MR", "الواقع المختلط", "Mixed Reality"],
+    "wrongAnswers": ["VR", "AR", "AI", "IoT"]
+  },
+  {
+    "question": "ما المصطلح الذي يصف تدريب نموذج الذكاء الاصطناعي باستخدام بيانات؟",
+    "correctAnswers": ["Training", "التدريب", "Model Training"],
+    "wrongAnswers": ["Inference", "Testing", "Deployment", "Prediction"]
+  },
+  {
+    "question": "ما المصطلح الذي يصف استخدام النموذج بعد تدريبه؟",
+    "correctAnswers": ["Inference", "الاستدلال", "Inference"],
+    "wrongAnswers": ["Training", "Dataset", "Deployment", "Learning"]
+  },
+  {
+    "question": "ما المجموعة التي يستخدمها الذكاء الاصطناعي للتعلم؟",
+    "correctAnswers": ["Dataset", "مجموعة بيانات", "بيانات التدريب"],
+    "wrongAnswers": ["Algorithm", "Model", "Database", "Parameter"]
+  },
+  {
+    "question": "ما البرنامج الذي يمثل المعرفة المتعلمة من البيانات؟",
+    "correctAnswers": ["Model", "نموذج", "نموذج ذكاء اصطناعي"],
+    "wrongAnswers": ["Dataset", "Algorithm", "Database", "Compiler"]
+  },
+  {
+    "question": "ما التقنية التي تسمح بتوليد صور أو نصوص جديدة؟",
+    "correctAnswers": ["Generative AI", "ذكاء توليدي", "الذكاء التوليدي"],
+    "wrongAnswers": ["Narrow AI", "Computer Vision", "Robotics", "Expert System"]
+  },
+  {
+    "question": "ما النموذج الشهير الذي تعتمد عليه كثير من أنظمة الذكاء الاصطناعي الحديثة؟",
+    "correctAnswers": ["Transformer", "المحول", "Transformers"],
+    "wrongAnswers": ["CNN", "RNN", "GAN", "LSTM"]
+  },
+  {
+    "question": "ما الشبكة العصبية المناسبة لمعالجة الصور غالبًا؟",
+    "correctAnswers": ["CNN", "شبكة CNN", "Convolutional Network"],
+    "wrongAnswers": ["RNN", "LSTM", "Transformer", "GAN"]
+  },
+  {
+    "question": "ما الشبكة العصبية المناسبة للبيانات المتسلسلة تقليديًا؟",
+    "correctAnswers": ["RNN", "شبكة RNN", "Recurrent Network"],
+    "wrongAnswers": ["CNN", "GAN", "Transformer", "Autoencoder"]
+  },
+  {
+    "question": "ما النموذج المستخدم لتوليد بيانات جديدة تشبه بيانات التدريب؟",
+    "correctAnswers": ["GAN", "شبكة GAN", "Generative Adversarial"],
+    "wrongAnswers": ["CNN", "RNN", "SVM", "KNN"]
+  },
+  {
+    "question": "ما التقنية التي تسمح للمتصفح بتخزين بيانات محلية أكبر من Cookies؟",
+    "correctAnswers": ["LocalStorage", "التخزين المحلي", "Local Storage"],
+    "wrongAnswers": ["SessionStorage", "Cookies", "Cache", "IndexedDB"]
+  },
+  {
+    "question": "ما التخزين الذي يحفظ البيانات حتى بعد إغلاق المتصفح؟",
+    "correctAnswers": ["LocalStorage", "التخزين المحلي", "Local Storage"],
+    "wrongAnswers": ["SessionStorage", "Session", "Cache", "Memory"]
+  },
+  {
+    "question": "ما التخزين الذي ينتهي عادةً عند إغلاق تبويب المتصفح؟",
+    "correctAnswers": ["SessionStorage", "تخزين الجلسة", "Session Storage"],
+    "wrongAnswers": ["LocalStorage", "Cookies", "Cache", "IndexedDB"]
+  },
+  {
+    "question": "ما قاعدة البيانات المحلية المتقدمة داخل المتصفح؟",
+    "correctAnswers": ["IndexedDB", "قاعدة IndexedDB", "Indexed DB"],
+    "wrongAnswers": ["LocalStorage", "SessionStorage", "Cookies", "SQLite"]
+  },
+  {
+    "question": "ما الواجهة التي تسمح للموقع بالوصول إلى موقع المستخدم؟",
+    "correctAnswers": ["Geolocation API", "واجهة الموقع", "Geolocation"],
+    "wrongAnswers": ["Maps API", "GPS API", "Location DB", "NFC API"]
+  },
+  {
+    "question": "ما التقنية التي تسمح للموقع بإرسال إشعارات للمتصفح؟",
+    "correctAnswers": ["Push API", "إشعارات Push", "Web Push"],
+    "wrongAnswers": ["Fetch API", "Storage API", "Canvas API", "Media API"]
+  },
+  {
+    "question": "ما التقنية التي تسمح بتثبيت تطبيق ويب على الهاتف؟",
+    "correctAnswers": ["PWA", "Progressive Web App", "ويب تقدمي"],
+    "wrongAnswers": ["SPA", "APK", "SDK", "API"]
+  },
+  {
+    "question": "ما امتداد تطبيق Android القابل للتثبيت؟",
+    "correctAnswers": ["APK", "ملف APK", "Android Package"],
+    "wrongAnswers": ["IPA", "EXE", "APP", "AAB"]
+  },
+  {
+    "question": "ما امتداد حزمة تطبيقات iPhone؟",
+    "correctAnswers": ["IPA", "ملف IPA", "iOS Package"],
+    "wrongAnswers": ["APK", "EXE", "DMG", "AAB"]
+  },
+  {
+    "question": "ما الصيغة الحديثة لنشر تطبيقات Android على Google Play؟",
+    "correctAnswers": ["AAB", "Android App Bundle", "حزمة AAB"],
+    "wrongAnswers": ["APK", "IPA", "EXE", "DMG"]
+  },
+  {
+    "question": "ما مجموعة الأدوات المستخدمة لتطوير تطبيقات منصة معينة؟",
+    "correctAnswers": ["SDK", "حزمة SDK", "Software Development Kit"],
+    "wrongAnswers": ["API", "IDE", "CLI", "JDK"]
+  },
+  {
+    "question": "ما البرنامج المتكامل المستخدم لكتابة واختبار الكود؟",
+    "correctAnswers": ["IDE", "بيئة IDE", "بيئة التطوير"],
+    "wrongAnswers": ["SDK", "API", "CLI", "Compiler"]
+  },
+  {
+    "question": "ما بيئة التطوير الشهيرة من Microsoft؟",
+    "correctAnswers": ["Visual Studio", "فيجوال ستوديو", "VS"],
+    "wrongAnswers": ["IntelliJ", "Eclipse", "NetBeans", "Android Studio"]
+  },
+  {
+    "question": "ما المحرر الشهير من Microsoft والمبني على Electron؟",
+    "correctAnswers": ["VS Code", "Visual Studio Code", "فيجوال ستوديو كود"],
+    "wrongAnswers": ["Visual Studio", "Atom", "Notepad++", "Sublime"]
+  },
+  {
+    "question": "ما البيئة الرسمية لتطوير تطبيقات Android؟",
+    "correctAnswers": ["Android Studio", "أندرويد ستوديو", "Android IDE"],
+    "wrongAnswers": ["Xcode", "Visual Studio", "Eclipse", "IntelliJ IDEA"]
+  },
+  {
+    "question": "ما البيئة الرسمية لتطوير تطبيقات Apple؟",
+    "correctAnswers": ["Xcode", "إكس كود", "Apple Xcode"],
+    "wrongAnswers": ["Android Studio", "Visual Studio", "Eclipse", "NetBeans"]
+  },
+  {
+    "question": "ما نظام التحكم بالإصدارات الموزع الذي أنشأه Linus Torvalds؟",
+    "correctAnswers": ["Git", "جيت", "نظام Git"],
+    "wrongAnswers": ["SVN", "Mercurial", "GitHub", "Bitbucket"]
+  },
+  {
+    "question": "ما الأمر الذي يحفظ التغييرات في مستودع Git؟",
+    "correctAnswers": ["git commit", "Commit", "حفظ Commit"],
+    "wrongAnswers": ["git push", "git pull", "git clone", "git fetch"]
+  },
+  {
+    "question": "ما الأمر الذي يرسل التغييرات إلى المستودع البعيد؟",
+    "correctAnswers": ["git push", "Push", "إرسال Push"],
+    "wrongAnswers": ["git pull", "git commit", "git fetch", "git clone"]
+  },
+  {
+    "question": "ما الأمر الذي يجلب التغييرات ويدمجها من المستودع البعيد؟",
+    "correctAnswers": ["git pull", "Pull", "سحب Pull"],
+    "wrongAnswers": ["git push", "git fetch", "git clone", "git commit"]
+  },
+  {
+    "question": "ما الأمر الذي يجلب التحديثات دون دمجها؟",
+    "correctAnswers": ["git fetch", "Fetch", "جلب Fetch"],
+    "wrongAnswers": ["git pull", "git push", "git clone", "git merge"]
+  },
+  {
+    "question": "ما البروتوكول المستخدم لإرسال البريد الإلكتروني؟",
+    "correctAnswers": ["SMTP", "بروتوكول SMTP", "إس إم تي بي"],
+    "wrongAnswers": ["POP3", "IMAP", "HTTP", "FTP"]
+  },
+  {
+    "question": "ما البروتوكول المستخدم لاستقبال البريد مع إبقائه على الخادم؟",
+    "correctAnswers": ["IMAP", "بروتوكول IMAP", "إي ماب"],
+    "wrongAnswers": ["SMTP", "POP3", "HTTP", "FTP"]
+  },
+  {
+    "question": "ما البروتوكول الذي ينزل البريد إلى الجهاز غالبًا؟",
+    "correctAnswers": ["POP3", "بروتوكول POP3", "بي أو بي 3"],
+    "wrongAnswers": ["IMAP", "SMTP", "FTP", "HTTP"]
+  },
+  {
+    "question": "ما البروتوكول المستخدم لنقل الملفات؟",
+    "correctAnswers": ["FTP", "بروتوكول FTP", "إف تي بي"],
+    "wrongAnswers": ["HTTP", "SMTP", "SSH", "DNS"]
+  },
+  {
+    "question": "ما النسخة الآمنة من بروتوكول FTP؟",
+    "correctAnswers": ["SFTP", "بروتوكول SFTP", "إس إف تي بي"],
+    "wrongAnswers": ["FTP", "FTPS", "SSH", "HTTPS"]
+  },
+  {
+    "question": "ما البروتوكول الآمن لتصفح المواقع؟",
+    "correctAnswers": ["HTTPS", "بروتوكول HTTPS", "إتش تي تي بي إس"],
+    "wrongAnswers": ["HTTP", "FTP", "SSH", "TLS"]
+  },
+  {
+    "question": "ما البروتوكول الأساسي الذي تعمل عليه صفحات الويب؟",
+    "correctAnswers": ["HTTP", "بروتوكول HTTP", "إتش تي تي بي"],
+    "wrongAnswers": ["HTTPS", "FTP", "SMTP", "SSH"]
+  },
+  {
+    "question": "ما التقنية التي تؤمن اتصال HTTPS؟",
+    "correctAnswers": ["TLS", "بروتوكول TLS", "أمان TLS"],
+    "wrongAnswers": ["SSL", "SSH", "IPSec", "FTP"]
+  },
+  {
+    "question": "ما المصطلح الذي يصف شهادة الموقع الرقمية؟",
+    "correctAnswers": ["SSL Certificate", "شهادة SSL", "شهادة رقمية"],
+    "wrongAnswers": ["TLS Key", "DNS Record", "SSH Key", "API Key"]
+  },
+  {
+    "question": "ما الجهاز الذي يوجه البيانات بين الشبكات؟",
+    "correctAnswers": ["Router", "الموجه", "راوتر"],
+    "wrongAnswers": ["Switch", "Modem", "Repeater", "Bridge"]
+  },
+  {
+    "question": "ما الجهاز الذي يربط أجهزة الشبكة المحلية ببعضها؟",
+    "correctAnswers": ["Switch", "المبدل", "سويتش"],
+    "wrongAnswers": ["Router", "Modem", "Repeater", "Gateway"]
+  },
+  {
+    "question": "ما الجهاز الذي يحول إشارة الإنترنت القادمة من المزود؟",
+    "correctAnswers": ["Modem", "المودم", "مودم"],
+    "wrongAnswers": ["Router", "Switch", "Repeater", "Firewall"]
+  },
+  {
+    "question": "ما النظام الذي يمنع الاتصالات غير المصرح بها؟",
+    "correctAnswers": ["Firewall", "جدار ناري", "الجدار الناري"],
+    "wrongAnswers": ["Antivirus", "Proxy", "Router", "VPN"]
+  },
+  {
+    "question": "ما البرنامج الذي يحمي الجهاز من البرمجيات الخبيثة؟",
+    "correctAnswers": ["Antivirus", "مكافح الفيروسات", "مضاد الفيروسات"],
+    "wrongAnswers": ["Firewall", "VPN", "Proxy", "Browser"]
+  },
+  {
+    "question": "ما البرمجية الخبيثة التي تطلب فدية مقابل البيانات؟",
+    "correctAnswers": ["Ransomware", "برمجية الفدية", "فيروس الفدية"],
+    "wrongAnswers": ["Spyware", "Adware", "Worm", "Trojan"]
+  },
+  {
+    "question": "ما البرمجية التي تتجسس على نشاط المستخدم؟",
+    "correctAnswers": ["Spyware", "برمجية التجسس", "برنامج تجسس"],
+    "wrongAnswers": ["Ransomware", "Adware", "Worm", "Trojan"]
+  },
+  {
+    "question": "ما البرمجية التي تعرض إعلانات غير مرغوبة؟",
+    "correctAnswers": ["Adware", "برمجية إعلانية", "برنامج إعلانات"],
+    "wrongAnswers": ["Spyware", "Ransomware", "Worm", "Rootkit"]
+  },
+  {
+    "question": "ما البرمجية الخبيثة التي تنتشر ذاتيًا عبر الشبكات؟",
+    "correctAnswers": ["Worm", "دودة", "فيروس دودة"],
+    "wrongAnswers": ["Trojan", "Spyware", "Adware", "Ransomware"]
+  },
+  {
+    "question": "ما البرمجية التي تتخفى كبرنامج شرعي؟",
+    "correctAnswers": ["Trojan", "حصان طروادة", "Trojan Horse"],
+    "wrongAnswers": ["Worm", "Spyware", "Ransomware", "Rootkit"]
+  },
+  {
+    "question": "ما الهجوم الذي يخدع المستخدم برسالة مزيفة؟",
+    "correctAnswers": ["Phishing", "التصيد", "تصيد إلكتروني"],
+    "wrongAnswers": ["Spoofing", "DDoS", "Brute Force", "Sniffing"]
+  },
+  {
+    "question": "ما الهجوم الذي يغرق الخادم بطلبات كثيرة؟",
+    "correctAnswers": ["DDoS", "هجوم DDoS", "حجب الخدمة"],
+    "wrongAnswers": ["Phishing", "Brute Force", "Spoofing", "SQL Injection"]
+  },
+  {
+    "question": "ما الهجوم الذي يجرب كلمات مرور كثيرة؟",
+    "correctAnswers": ["Brute Force", "القوة الغاشمة", "تخمين كلمات المرور"],
+    "wrongAnswers": ["Phishing", "DDoS", "Spoofing", "Sniffing"]
+  },
+  {
+    "question": "ما الهجوم الذي يستهدف استعلامات قواعد البيانات؟",
+    "correctAnswers": ["SQL Injection", "حقن SQL", "SQLi"],
+    "wrongAnswers": ["XSS", "CSRF", "DDoS", "Phishing"]
+  },
+  {
+    "question": "ما الهجوم الذي يحقن كودًا داخل صفحات الويب؟",
+    "correctAnswers": ["XSS", "حقن XSS", "Cross Site Scripting"],
+    "wrongAnswers": ["SQL Injection", "CSRF", "DDoS", "Phishing"]
+  },
+  {
+    "question": "ما الهجوم الذي يستغل جلسة مستخدم مسجل الدخول؟",
+    "correctAnswers": ["CSRF", "هجوم CSRF", "طلب مزور"],
+    "wrongAnswers": ["XSS", "SQL Injection", "DDoS", "Phishing"]
+  },
+  {
+    "question": "ما التقنية التي تتحقق من هوية المستخدم؟",
+    "correctAnswers": ["Authentication", "المصادقة", "التحقق من الهوية"],
+    "wrongAnswers": ["Authorization", "Encryption", "Validation", "Encoding"]
+  },
+  {
+    "question": "ما التقنية التي تحدد صلاحيات المستخدم؟",
+    "correctAnswers": ["Authorization", "التفويض", "تحديد الصلاحيات"],
+    "wrongAnswers": ["Authentication", "Encryption", "Validation", "Hashing"]
+  },
+  {
+    "question": "ما المصطلح الذي يعني تسجيل الدخول بحساب؟",
+    "correctAnswers": ["Login", "تسجيل الدخول", "دخول"],
+    "wrongAnswers": ["Logout", "Register", "Signup", "Session"]
+  },
+  {
+    "question": "ما المصطلح الذي يعني إنشاء حساب جديد؟",
+    "correctAnswers": ["Signup", "التسجيل", "إنشاء حساب"],
+    "wrongAnswers": ["Login", "Logout", "Signin", "Session"]
+  },
+  {
+    "question": "ما التقنية التي تضيف طبقة حماية ثانية للحساب؟",
+    "correctAnswers": ["2FA", "التحقق بخطوتين", "Two Factor"],
+    "wrongAnswers": ["MFA", "SSO", "OAuth", "CAPTCHA"]
+  },
+  {
+    "question": "ما المصطلح الأوسع للتحقق باستخدام عدة عوامل؟",
+    "correctAnswers": ["MFA", "مصادقة متعددة", "Multi Factor"],
+    "wrongAnswers": ["2FA", "SSO", "OAuth", "SAML"]
+  },
+  {
+    "question": "ما النظام الذي يمنع الروبوتات من إرسال النماذج تلقائيًا؟",
+    "correctAnswers": ["CAPTCHA", "كابتشا", "اختبار CAPTCHA"],
+    "wrongAnswers": ["2FA", "MFA", "OAuth", "Firewall"]
+  },
+  {
+    "question": "ما البروتوكول الذي يسمح بتسجيل الدخول باستخدام حساب خدمة أخرى؟",
+    "correctAnswers": ["OAuth", "بروتوكول OAuth", "أوث"],
+    "wrongAnswers": ["SAML", "JWT", "SSH", "FTP"]
+  },
+  {
+    "question": "ما الرمز الذي يمثل بيانات اعتماد مستخدم بشكل مشفر؟",
+    "correctAnswers": ["JWT", "رمز JWT", "JSON Web Token"],
+    "wrongAnswers": ["OAuth", "API Key", "Session ID", "Cookie"]
+  },
+  {
+    "question": "ما الملف الصغير الذي يخزن معلومات الموقع في المتصفح؟",
+    "correctAnswers": ["Cookie", "ملف Cookie", "كوكي"],
+    "wrongAnswers": ["Cache", "Session", "Token", "Storage"]
+  },
+  {
+    "question": "ما الرقم أو الرمز الذي يميز جلسة المستخدم؟",
+    "correctAnswers": ["Session ID", "معرف الجلسة", "رقم الجلسة"],
+    "wrongAnswers": ["User ID", "Token ID", "Cookie ID", "API Key"]
+  },
+  {
+    "question": "ما المفتاح الذي يسمح للتطبيق باستخدام واجهة برمجية؟",
+    "correctAnswers": ["API Key", "مفتاح API", "مفتاح الواجهة"],
+    "wrongAnswers": ["JWT", "Session ID", "Password", "Access ID"]
+  },
+  {
+    "question": "ما واجهة البرمجة التي تعتمد على موارد وروابط HTTP؟",
+    "correctAnswers": ["REST API", "واجهة REST", "REST"],
+    "wrongAnswers": ["SOAP", "GraphQL", "RPC", "WebSocket"]
+  },
+  {
+    "question": "ما لغة الاستعلام التي طورتها Meta للـ APIs؟",
+    "correctAnswers": ["GraphQL", "لغة GraphQL", "جراف كيو إل"],
+    "wrongAnswers": ["REST", "SOAP", "SQL", "XML"]
+  },
+  {
+    "question": "ما الطريقة الشائعة لجلب البيانات عبر REST؟",
+    "correctAnswers": ["GET", "طلب GET", "HTTP GET"],
+    "wrongAnswers": ["POST", "PUT", "DELETE", "PATCH"]
+  },
+  {
+    "question": "ما الطريقة الشائعة لإنشاء بيانات جديدة عبر REST؟",
+    "correctAnswers": ["POST", "طلب POST", "HTTP POST"],
+    "wrongAnswers": ["GET", "PUT", "DELETE", "PATCH"]
+  },
+  {
+    "question": "ما الطريقة المستخدمة غالبًا لتحديث مورد كامل؟",
+    "correctAnswers": ["PUT", "طلب PUT", "HTTP PUT"],
+    "wrongAnswers": ["POST", "PATCH", "GET", "DELETE"]
+  },
+  {
+    "question": "ما الطريقة المستخدمة لتحديث جزء من مورد؟",
+    "correctAnswers": ["PATCH", "طلب PATCH", "HTTP PATCH"],
+    "wrongAnswers": ["PUT", "POST", "GET", "DELETE"]
+  },
+  {
+    "question": "ما الطريقة المستخدمة لحذف مورد عبر REST؟",
+    "correctAnswers": ["DELETE", "طلب DELETE", "HTTP DELETE"],
+    "wrongAnswers": ["GET", "POST", "PUT", "PATCH"]
+  },
+  {
+    "question": "ما رمز HTTP الذي يعني نجاح الطلب؟",
+    "correctAnswers": ["200", "200 OK", "نجاح 200"],
+    "wrongAnswers": ["201", "204", "400", "500"]
+  },
+  {
+    "question": "ما رمز HTTP الذي يعني إنشاء مورد بنجاح؟",
+    "correctAnswers": ["201", "201 Created", "إنشاء 201"],
+    "wrongAnswers": ["200", "202", "204", "301"]
+  },
+  {
+    "question": "ما رمز HTTP الذي يعني عدم وجود محتوى في الاستجابة؟",
+    "correctAnswers": ["204", "204 No Content", "بدون محتوى"],
+    "wrongAnswers": ["200", "201", "304", "404"]
+  },
+  {
+    "question": "ما رمز HTTP الذي يعني أن المورد غير موجود؟",
+    "correctAnswers": ["404", "404 Not Found", "غير موجود"],
+    "wrongAnswers": ["400", "401", "403", "500"]
+  },
+  {
+    "question": "ما رمز HTTP الذي يدل على خطأ في الخادم؟",
+    "correctAnswers": ["500", "500 Server Error", "خطأ الخادم"],
+    "wrongAnswers": ["400", "401", "404", "503"]
+  },
+  {
+    "question": "ما رمز HTTP الذي يعني أن الخدمة غير متاحة مؤقتًا؟",
+    "correctAnswers": ["503", "503 Service Unavailable", "الخدمة غير متاحة"],
+    "wrongAnswers": ["500", "502", "504", "404"]
+  },
+  {
+    "question": "ما رمز HTTP الذي يعني بوابة سيئة؟",
+    "correctAnswers": ["502", "502 Bad Gateway", "بوابة سيئة"],
+    "wrongAnswers": ["500", "503", "504", "404"]
+  },
+  {
+    "question": "ما رمز HTTP الذي يعني انتهاء مهلة البوابة؟",
+    "correctAnswers": ["504", "504 Gateway Timeout", "مهلة البوابة"],
+    "wrongAnswers": ["502", "503", "500", "408"]
+  },
+  {
+    "question": "ما لغة البرمجة التي طورها Guido van Rossum؟",
+    "correctAnswers": ["Python", "بايثون", "لغة Python"],
+    "wrongAnswers": ["Java", "Ruby", "C++", "Perl"]
+  },
+  {
+    "question": "ما لغة البرمجة التي طورتها شركة Sun Microsystems؟",
+    "correctAnswers": ["Java", "جافا", "لغة Java"],
+    "wrongAnswers": ["Python", "C#", "Ruby", "Kotlin"]
+  },
+  {
+    "question": "ما اللغة التي طورتها Microsoft لتطبيقات .NET؟",
+    "correctAnswers": ["C#", "سي شارب", "C Sharp"],
+    "wrongAnswers": ["Java", "C++", "F#", "VB"]
+  },
+  {
+    "question": "ما اللغة التي تستخدمها Apple بشكل أساسي لتطوير تطبيقاتها الحديثة؟",
+    "correctAnswers": ["Swift", "سويفت", "لغة Swift"],
+    "wrongAnswers": ["Kotlin", "Objective-C", "Dart", "Rust"]
+  },
+  {
+    "question": "ما اللغة التي تستخدمها Google بشكل واسع لتطبيقات Android الحديثة؟",
+    "correctAnswers": ["Kotlin", "كوتلن", "لغة Kotlin"],
+    "wrongAnswers": ["Swift", "Dart", "JavaScript", "Ruby"]
+  },
+  {
+    "question": "ما اللغة التي تستخدم في تطوير تطبيقات Flutter؟",
+    "correctAnswers": ["Dart", "دارت", "لغة Dart"],
+    "wrongAnswers": ["Kotlin", "Swift", "Java", "C#"]
+  },
+  {
+    "question": "ما اللغة التي تعد أساس بنية صفحات الويب؟",
+    "correctAnswers": ["HTML", "لغة HTML", "إتش تي إم إل"],
+    "wrongAnswers": ["CSS", "JavaScript", "PHP", "XML"]
+  },
+  {
+    "question": "ما اللغة التي تستخدم لتنسيق صفحات الويب؟",
+    "correctAnswers": ["CSS", "لغة CSS", "سي إس إس"],
+    "wrongAnswers": ["HTML", "JavaScript", "Sass", "XML"]
+  },
+  {
+    "question": "ما اللغة التي تضيف التفاعل إلى صفحات الويب؟",
+    "correctAnswers": ["JavaScript", "جافاسكربت", "JS"],
+    "wrongAnswers": ["Java", "TypeScript", "PHP", "Python"]
+  },
+  {
+    "question": "ما اللغة المبنية فوق JavaScript وتضيف الأنواع؟",
+    "correctAnswers": ["TypeScript", "تايب سكربت", "TS"],
+    "wrongAnswers": ["Java", "CoffeeScript", "Dart", "Flow"]
+  },
+  {
+    "question": "ما إطار JavaScript الشهير لبناء واجهات المستخدم من Meta؟",
+    "correctAnswers": ["React", "ريأكت", "React.js"],
+    "wrongAnswers": ["Angular", "Vue", "Svelte", "Next.js"]
+  },
+  {
+    "question": "ما إطار JavaScript الذي تطوره Google؟",
+    "correctAnswers": ["Angular", "أنغولار", "Angular.js"],
+    "wrongAnswers": ["React", "Vue", "Svelte", "Ember"]
+  },
+  {
+    "question": "ما إطار JavaScript التدريجي الشهير؟",
+    "correctAnswers": ["Vue", "فيو", "Vue.js"],
+    "wrongAnswers": ["React", "Angular", "Svelte", "Next.js"]
+  },
+  {
+    "question": "ما إطار React الشهير لبناء تطبيقات الويب؟",
+    "correctAnswers": ["Next.js", "نكست جي إس", "Next"],
+    "wrongAnswers": ["Nuxt", "Remix", "Vite", "Angular"]
+  },
+  {
+    "question": "ما إطار Vue الشهير لتطبيقات الويب؟",
+    "correctAnswers": ["Nuxt", "نوكت", "Nuxt.js"],
+    "wrongAnswers": ["Next.js", "NestJS", "Vite", "SvelteKit"]
+  },
+  {
+    "question": "ما إطار Node.js الشهير لبناء خوادم منظمة؟",
+    "correctAnswers": ["NestJS", "نيست جي إس", "Nest"],
+    "wrongAnswers": ["Next.js", "Express", "Nuxt", "Koa"]
+  },
+  {
+    "question": "ما إطار Node.js البسيط والشهير للخوادم؟",
+    "correctAnswers": ["Express", "إكسبريس", "Express.js"],
+    "wrongAnswers": ["NestJS", "Next.js", "Koa", "Fastify"]
+  },
+  {
+    "question": "ما بيئة تشغيل JavaScript خارج المتصفح؟",
+    "correctAnswers": ["Node.js", "نود جي إس", "Node"],
+    "wrongAnswers": ["Deno", "Bun", "React", "V8"]
+  },
+  {
+    "question": "ما محرك JavaScript الذي طورته Google؟",
+    "correctAnswers": ["V8", "محرك V8", "Google V8"],
+    "wrongAnswers": ["SpiderMonkey", "JavaScriptCore", "Chakra", "Bun"]
+  },
+  {
+    "question": "ما محرك JavaScript المستخدم في Firefox؟",
+    "correctAnswers": ["SpiderMonkey", "سبايدر مونكي", "Spider Monkey"],
+    "wrongAnswers": ["V8", "JavaScriptCore", "Chakra", "Hermes"]
+  },
+  {
+    "question": "ما محرك JavaScript المستخدم في Safari؟",
+    "correctAnswers": ["JavaScriptCore", "جافاسكربت كور", "JSC"],
+    "wrongAnswers": ["V8", "SpiderMonkey", "Chakra", "Hermes"]
+  },
+  {
+    "question": "ما المتصفح الذي تطوره Google؟",
+    "correctAnswers": ["Chrome", "جوجل كروم", "Google Chrome"],
+    "wrongAnswers": ["Firefox", "Safari", "Edge", "Opera"]
+  },
+  {
+    "question": "ما المتصفح الذي تطوره Mozilla؟",
+    "correctAnswers": ["Firefox", "فايرفوكس", "Mozilla Firefox"],
+    "wrongAnswers": ["Chrome", "Edge", "Safari", "Opera"]
+  },
+  {
+    "question": "ما المتصفح الذي تطوره Apple؟",
+    "correctAnswers": ["Safari", "سفاري", "Apple Safari"],
+    "wrongAnswers": ["Chrome", "Firefox", "Edge", "Opera"]
+  },
+  {
+    "question": "ما المتصفح الذي تطوره Microsoft حاليًا؟",
+    "correctAnswers": ["Edge", "مايكروسوفت إيدج", "Microsoft Edge"],
+    "wrongAnswers": ["Internet Explorer", "Chrome", "Firefox", "Opera"]
+  },
+  {
+    "question": "ما نظام التشغيل مفتوح المصدر المبني على نواة Linux؟",
+    "correctAnswers": ["Ubuntu", "أوبونتو", "نظام Ubuntu"],
+    "wrongAnswers": ["Windows", "macOS", "iOS", "DOS"]
+  },
+  {
+    "question": "ما الشركة التي تطور توزيعة Ubuntu؟",
+    "correctAnswers": ["Canonical", "كانونيكال", "شركة Canonical"],
+    "wrongAnswers": ["Red Hat", "Microsoft", "Debian", "IBM"]
+  },
+  {
+    "question": "ما التوزيعة التي تعد أساسًا لـ Ubuntu؟",
+    "correctAnswers": ["Debian", "ديبيان", "نظام Debian"],
+    "wrongAnswers": ["Fedora", "Arch", "Red Hat", "Mint"]
+  },
+  {
+    "question": "ما التوزيعة المرتبطة بشركة Red Hat؟",
+    "correctAnswers": ["Fedora", "فيدورا", "نظام Fedora"],
+    "wrongAnswers": ["Debian", "Ubuntu", "Arch", "Mint"]
+  },
+  {
+    "question": "ما النظام الذي يستخدم نواة Linux على خوادم كثيرة؟",
+    "correctAnswers": ["Linux", "لينكس", "نظام Linux"],
+    "wrongAnswers": ["Windows", "DOS", "macOS", "iOS"]
+  },
+  {
+    "question": "ما الأداة التي تستخدم الحاويات البرمجية؟",
+    "correctAnswers": ["Docker", "دوكر", "Docker"],
+    "wrongAnswers": ["Git", "Kubernetes", "Jenkins", "VirtualBox"]
+  },
+  {
+    "question": "ما المنصة التي تدير حاويات كثيرة في بيئة موزعة؟",
+    "correctAnswers": ["Kubernetes", "كوبيرنيتس", "K8s"],
+    "wrongAnswers": ["Docker", "Jenkins", "Terraform", "Ansible"]
+  },
+  {
+    "question": "ما الأداة الشهيرة لأتمتة بناء واختبار المشاريع؟",
+    "correctAnswers": ["Jenkins", "جينكنز", "Jenkins CI"],
+    "wrongAnswers": ["Docker", "Git", "Kubernetes", "Nginx"]
+  },
+  {
+    "question": "ما مفهوم دمج الكود واختباره تلقائيًا؟",
+    "correctAnswers": ["CI", "التكامل المستمر", "Continuous Integration"],
+    "wrongAnswers": ["CD", "CI/CD", "DevOps", "Deployment"]
+  },
+  {
+    "question": "ما مفهوم نشر التغييرات تلقائيًا بعد اجتياز الاختبارات؟",
+    "correctAnswers": ["CD", "التسليم المستمر", "Continuous Delivery"],
+    "wrongAnswers": ["CI", "DevOps", "Deployment", "Automation"]
+  },
+  {
+    "question": "ما المنهج الذي يجمع التطوير والعمليات؟",
+    "correctAnswers": ["DevOps", "ديف أوبس", "Dev Ops"],
+    "wrongAnswers": ["DevSecOps", "Agile", "Scrum", "CI/CD"]
+  },
+  {
+    "question": "ما المنهجية التي تعتمد على دورات تطوير قصيرة؟",
+    "correctAnswers": ["Agile", "أجايل", "المنهجية الرشيقة"],
+    "wrongAnswers": ["Waterfall", "DevOps", "Scrum", "Kanban"]
+  },
+  {
+    "question": "ما إطار Agile الذي يستخدم Sprint؟",
+    "correctAnswers": ["Scrum", "سكرم", "منهج Scrum"],
+    "wrongAnswers": ["Kanban", "Waterfall", "Lean", "XP"]
+  },
+  {
+    "question": "ما المنهجية التي تستخدم لوحة لتتبع سير المهام؟",
+    "correctAnswers": ["Kanban", "كانبان", "لوحة Kanban"],
+    "wrongAnswers": ["Scrum", "Waterfall", "XP", "Agile"]
+  },
+  {
+    "question": "ما المصطلح الذي يصف خطأً في البرنامج؟",
+    "correctAnswers": ["Bug", "خطأ برمجي", "خلل"],
+    "wrongAnswers": ["Feature", "Crash", "Warning", "Exception"]
+  },
+  {
+    "question": "ما العملية التي تبحث عن الأخطاء وتصلحها؟",
+    "correctAnswers": ["Debugging", "تصحيح الأخطاء", "التنقيح"],
+    "wrongAnswers": ["Testing", "Compiling", "Deploying", "Refactoring"]
+  },
+  {
+    "question": "ما العملية التي تحسن بنية الكود دون تغيير وظيفته؟",
+    "correctAnswers": ["Refactoring", "إعادة الهيكلة", "تنقيح الكود"],
+    "wrongAnswers": ["Debugging", "Compilation", "Testing", "Deployment"]
+  },
+  {
+    "question": "ما العملية التي تحول الكود إلى برنامج قابل للتنفيذ؟",
+    "correctAnswers": ["Compilation", "الترجمة", "Compile"],
+    "wrongAnswers": ["Interpretation", "Debugging", "Refactoring", "Execution"]
+  },
+  {
+    "question": "ما البرنامج الذي ينفذ الكود دون تحويله كاملًا مسبقًا؟",
+    "correctAnswers": ["Interpreter", "مفسر", "المترجم الفوري"],
+    "wrongAnswers": ["Compiler", "Debugger", "Linker", "Assembler"]
+  },
+  {
+    "question": "ما البرنامج الذي يحول الكود إلى لغة آلة؟",
+    "correctAnswers": ["Compiler", "مترجم", "Compiler"],
+    "wrongAnswers": ["Interpreter", "Debugger", "Editor", "Loader"]
+  },
+  {
+    "question": "ما اللغة التي يتكون منها الكود الذي يفهمه المعالج مباشرة؟",
+    "correctAnswers": ["Machine Code", "لغة الآلة", "كود الآلة"],
+    "wrongAnswers": ["Assembly", "Binary", "Bytecode", "Source Code"]
+  },
+  {
+    "question": "ما اللغة منخفضة المستوى القريبة من تعليمات المعالج؟",
+    "correctAnswers": ["Assembly", "لغة التجميع", "Assembly Language"],
+    "wrongAnswers": ["Machine Code", "C", "Binary", "Bytecode"]
+  },
+  {
+    "question": "ما النظام الذي يحول الكود المصدري إلى Bytecode في Java؟",
+    "correctAnswers": ["Javac", "مترجم Java", "Java Compiler"],
+    "wrongAnswers": ["JVM", "JRE", "JDK", "JavaScript"]
+  },
+  {
+    "question": "ما البيئة التي تشغل Bytecode الخاص بـ Java؟",
+    "correctAnswers": ["JVM", "آلة Java الافتراضية", "Java Virtual Machine"],
+    "wrongAnswers": ["JDK", "JRE", "Javac", "CLR"]
+  },
+  {
+    "question": "ما الحزمة التي تحتوي أدوات تطوير Java؟",
+    "correctAnswers": ["JDK", "حزمة JDK", "Java Development Kit"],
+    "wrongAnswers": ["JRE", "JVM", "SDK", "Javac"]
+  },
+  {
+    "question": "ما البيئة المطلوبة لتشغيل برامج Java؟",
+    "correctAnswers": ["JRE", "بيئة JRE", "Java Runtime"],
+    "wrongAnswers": ["JDK", "JVM", "Javac", "SDK"]
+  },
+  {
+    "question": "ما قاعدة البيانات التي طورتها Oracle وتستخدم SQL؟",
+    "correctAnswers": ["MySQL", "ماي إس كيو إل", "MySQL DB"],
+    "wrongAnswers": ["MongoDB", "Redis", "SQLite", "Cassandra"]
+  },
+  {
+    "question": "ما اللغة القياسية للتعامل مع قواعد البيانات العلائقية؟",
+    "correctAnswers": ["SQL", "لغة SQL", "إس كيو إل"],
+    "wrongAnswers": ["NoSQL", "HTML", "JSON", "XML"]
+  },
+  {
+    "question": "ما الأمر المستخدم لجلب بيانات من قاعدة SQL؟",
+    "correctAnswers": ["SELECT", "أمر SELECT", "Select"],
+    "wrongAnswers": ["INSERT", "UPDATE", "DELETE", "CREATE"]
+  },
+  {
+    "question": "ما الأمر المستخدم لإضافة بيانات جديدة؟",
+    "correctAnswers": ["INSERT", "أمر INSERT", "Insert"],
+    "wrongAnswers": ["SELECT", "UPDATE", "DELETE", "ALTER"]
+  },
+  {
+    "question": "ما الأمر المستخدم لتعديل بيانات موجودة؟",
+    "correctAnswers": ["UPDATE", "أمر UPDATE", "Update"],
+    "wrongAnswers": ["INSERT", "SELECT", "DELETE", "ALTER"]
+  },
+  {
+    "question": "ما الأمر المستخدم لحذف بيانات من جدول؟",
+    "correctAnswers": ["DELETE", "أمر DELETE", "Delete"],
+    "wrongAnswers": ["DROP", "REMOVE", "UPDATE", "TRUNCATE"]
+  },
+  {
+    "question": "ما المفتاح الذي يميز كل سجل بشكل فريد؟",
+    "correctAnswers": ["Primary Key", "المفتاح الأساسي", "المفتاح الرئيسي"],
+    "wrongAnswers": ["Foreign Key", "Unique Key", "Index", "Candidate Key"]
+  },
+  {
+    "question": "ما المفتاح الذي يربط جدولًا بجدول آخر؟",
+    "correctAnswers": ["Foreign Key", "المفتاح الأجنبي", "المفتاح الخارجي"],
+    "wrongAnswers": ["Primary Key", "Unique Key", "Index", "Composite Key"]
+  },
+  {
+    "question": "ما العملية التي تربط بيانات جدولين في SQL؟",
+    "correctAnswers": ["JOIN", "أمر JOIN", "SQL JOIN"],
+    "wrongAnswers": ["MERGE", "UNION", "LINK", "CONNECT"]
+  },
+  {
+    "question": "ما نوع JOIN الذي يعيد السجلات المتطابقة من جدولين؟",
+    "correctAnswers": ["INNER JOIN", "الربط الداخلي", "Inner"],
+    "wrongAnswers": ["LEFT JOIN", "RIGHT JOIN", "FULL JOIN", "CROSS JOIN"]
+  },
+  {
+    "question": "ما نوع JOIN الذي يحتفظ بكل سجلات الجدول الأيسر؟",
+    "correctAnswers": ["LEFT JOIN", "الربط الأيسر", "Left"],
+    "wrongAnswers": ["INNER JOIN", "RIGHT JOIN", "FULL JOIN", "CROSS JOIN"]
+  },
+  {
+    "question": "ما قاعدة البيانات التي تستخدم نموذج الأعمدة لتخزين البيانات؟",
+    "correctAnswers": ["Cassandra", "كاساندرا", "Apache Cassandra"],
+    "wrongAnswers": ["MongoDB", "Redis", "SQLite", "MySQL"]
+  },
+  {
+    "question": "ما قاعدة البيانات التي طورتها Google وتستخدم بنية موزعة؟",
+    "correctAnswers": ["Bigtable", "جوجل بيغ تيبل", "Google Bigtable"],
+    "wrongAnswers": ["Cassandra", "MongoDB", "Firestore", "DynamoDB"]
+  },
+  {
+    "question": "ما قاعدة بيانات NoSQL السحابية من Google؟",
+    "correctAnswers": ["Firestore", "فايرستور", "Cloud Firestore"],
+    "wrongAnswers": ["Realtime Database", "MongoDB", "DynamoDB", "Bigtable"]
+  },
+  {
+    "question": "ما قاعدة بيانات Firebase الفورية القديمة نسبيًا؟",
+    "correctAnswers": ["Realtime Database", "قاعدة الوقت الحقيقي", "Firebase Realtime"],
+    "wrongAnswers": ["Firestore", "MongoDB", "Bigtable", "DynamoDB"]
+  },
+  {
+    "question": "ما الخدمة التي توفر استضافة ملفات الويب الثابتة في Firebase؟",
+    "correctAnswers": ["Firebase Hosting", "استضافة Firebase", "Hosting"],
+    "wrongAnswers": ["Cloud Storage", "Firestore", "Functions", "Authentication"]
+  },
+  {
+    "question": "ما خدمة Firebase التي توفر تسجيل دخول المستخدمين؟",
+    "correctAnswers": ["Authentication", "مصادقة Firebase", "Firebase Auth"],
+    "wrongAnswers": ["Firestore", "Hosting", "Storage", "Functions"]
+  },
+  {
+    "question": "ما خدمة Firebase التي تشغل كودًا على الخادم؟",
+    "correctAnswers": ["Cloud Functions", "وظائف سحابية", "Firebase Functions"],
+    "wrongAnswers": ["Firestore", "Hosting", "Storage", "Auth"]
+  },
+  {
+    "question": "ما خدمة Firebase لتخزين الملفات؟",
+    "correctAnswers": ["Cloud Storage", "تخزين سحابي", "Firebase Storage"],
+    "wrongAnswers": ["Firestore", "Hosting", "Functions", "Authentication"]
+  },
+  {
+    "question": "ما الخدمة التي تخزن الإشعارات في تطبيقات الهاتف؟",
+    "correctAnswers": ["FCM", "Firebase Messaging", "Firebase Cloud Messaging"],
+    "wrongAnswers": ["Firestore", "Auth", "Storage", "Functions"]
+  },
+  {
+    "question": "ما التقنية التي تسمح بتحديث واجهة المستخدم تلقائيًا عند تغير البيانات؟",
+    "correctAnswers": ["Reactive", "تفاعلية", "Reactive Programming"],
+    "wrongAnswers": ["Static", "Polling", "Batching", "Caching"]
+  },
+  {
+    "question": "ما الأسلوب الذي يطلب البيانات بشكل دوري؟",
+    "correctAnswers": ["Polling", "الاستطلاع", "طلب دوري"],
+    "wrongAnswers": ["WebSocket", "Streaming", "Caching", "Broadcast"]
+  },
+  {
+    "question": "ما التقنية التي ترسل البيانات بشكل مستمر أثناء وصولها؟",
+    "correctAnswers": ["Streaming", "البث", "تدفق البيانات"],
+    "wrongAnswers": ["Polling", "Batching", "Caching", "Polling API"]
+  },
+  {
+    "question": "ما التقنية التي تجمع عدة عمليات في طلب واحد؟",
+    "correctAnswers": ["Batching", "التجميع", "Batch Processing"],
+    "wrongAnswers": ["Streaming", "Polling", "Caching", "Sharding"]
+  },
+  {
+    "question": "ما التقنية التي تخزن نسخة من البيانات لتقليل الطلبات؟",
+    "correctAnswers": ["Caching", "التخزين المؤقت", "Cache"],
+    "wrongAnswers": ["Polling", "Batching", "Replication", "Indexing"]
+  },
+  {
+    "question": "ما المصطلح الذي يصف قدرة النظام على التعامل مع زيادة المستخدمين؟",
+    "correctAnswers": ["Scalability", "قابلية التوسع", "التوسع"],
+    "wrongAnswers": ["Availability", "Reliability", "Latency", "Performance"]
+  },
+  {
+    "question": "ما المصطلح الذي يصف سرعة استجابة النظام للطلب؟",
+    "correctAnswers": ["Latency", "زمن الاستجابة", "التأخير"],
+    "wrongAnswers": ["Bandwidth", "Throughput", "Availability", "Scalability"]
+  },
+  {
+    "question": "ما المصطلح الذي يصف كمية البيانات التي يمكن نقلها؟",
+    "correctAnswers": ["Bandwidth", "عرض النطاق", "النطاق الترددي"],
+    "wrongAnswers": ["Latency", "Throughput", "Ping", "Speed"]
+  },
+  {
+    "question": "ما المصطلح الذي يصف عدد العمليات المنفذة خلال فترة معينة؟",
+    "correctAnswers": ["Throughput", "معدل المعالجة", "الإنتاجية"],
+    "wrongAnswers": ["Latency", "Bandwidth", "Availability", "Cache"]
+  },
+  {
+    "question": "ما المصطلح الذي يصف استمرار عمل الخدمة دون انقطاع؟",
+    "correctAnswers": ["Availability", "التوافر", "توفر الخدمة"],
+    "wrongAnswers": ["Latency", "Scalability", "Throughput", "Security"]
+  },
+  {
+    "question": "ما المصطلح الذي يصف قدرة النظام على العمل بشكل صحيح باستمرار؟",
+    "correctAnswers": ["Reliability", "الموثوقية", "اعتمادية"],
+    "wrongAnswers": ["Availability", "Scalability", "Latency", "Performance"]
+  },
+  {
+    "question": "ما الخدمة التي تقدم موارد حوسبة عبر الإنترنت؟",
+    "correctAnswers": ["Cloud Computing", "الحوسبة السحابية", "Cloud"],
+    "wrongAnswers": ["Edge Computing", "Local Computing", "Grid", "Hosting"]
+  },
+  {
+    "question": "ما الحوسبة التي تعالج البيانات قرب مصدرها؟",
+    "correctAnswers": ["Edge Computing", "الحوسبة الطرفية", "Edge"],
+    "wrongAnswers": ["Cloud Computing", "Fog Computing", "Grid", "Localhost"]
+  },
+  {
+    "question": "ما المصطلح الذي يعني تشغيل الخدمة على الجهاز المحلي فقط؟",
+    "correctAnswers": ["Localhost", "المضيف المحلي", "localhost"],
+    "wrongAnswers": ["Cloud", "Serverless", "Remotehost", "Gateway"]
+  },
+  {
+    "question": "ما عنوان IP الخاص بالمضيف المحلي؟",
+    "correctAnswers": ["127.0.0.1", "Localhost", "127.0.0.1 Localhost"],
+    "wrongAnswers": ["192.168.1.1", "0.0.0.0", "8.8.8.8", "10.0.0.1"]
+  },
+  {
+    "question": "ما عنوان IPv6 الخاص بالمضيف المحلي؟",
+    "correctAnswers": ["::1", "IPv6 localhost", "::1 Localhost"],
+    "wrongAnswers": ["::0", "2001::1", "fe80::1", "127.0.0.1"]
+  },
+  {
+    "question": "ما الخدمة التي توفر DNS عام من Google؟",
+    "correctAnswers": ["8.8.8.8", "Google DNS", "8.8.8.8 DNS"],
+    "wrongAnswers": ["1.1.1.1", "9.9.9.9", "8.8.4.4", "127.0.0.1"]
+  },
+  {
+    "question": "ما خدمة DNS العامة التابعة لـ Cloudflare؟",
+    "correctAnswers": ["1.1.1.1", "Cloudflare DNS", "1.1.1.1 DNS"],
+    "wrongAnswers": ["8.8.8.8", "9.9.9.9", "1.0.0.1", "127.0.0.1"]
+  },
+  {
+    "question": "ما الأمر المستخدم لاختبار الوصول إلى جهاز عبر الشبكة؟",
+    "correctAnswers": ["ping", "أمر ping", "Ping"],
+    "wrongAnswers": ["ipconfig", "tracert", "nslookup", "netstat"]
+  },
+  {
+    "question": "ما الأمر المستخدم لمعرفة معلومات DNS عن نطاق؟",
+    "correctAnswers": ["nslookup", "أمر nslookup", "NSLookup"],
+    "wrongAnswers": ["ping", "tracert", "ipconfig", "netstat"]
+  },
+  {
+    "question": "ما الأمر الذي يعرض إعدادات الشبكة في Windows؟",
+    "correctAnswers": ["ipconfig", "أمر ipconfig", "IP Config"],
+    "wrongAnswers": ["ifconfig", "ping", "nslookup", "netstat"]
+  },
+  {
+    "question": "ما الأمر الشائع لعرض مسار الحزم في Windows؟",
+    "correctAnswers": ["tracert", "أمر tracert", "Trace Route"],
+    "wrongAnswers": ["ping", "ipconfig", "nslookup", "netstat"]
+  },
+  {
+    "question": "ما الأمر الذي يعرض الاتصالات الشبكية الحالية؟",
+    "correctAnswers": ["netstat", "أمر netstat", "Netstat"],
+    "wrongAnswers": ["ping", "tracert", "ipconfig", "nslookup"]
+  },
+  {
+    "question": "ما التقنية التي تسمح بتقسيم عنوان IP إلى أجزاء شبكة ومضيف؟",
+    "correctAnswers": ["Subnetting", "تقسيم الشبكة", "Subnet"],
+    "wrongAnswers": ["Routing", "NAT", "VLAN", "Broadcasting"]
+  },
+  {
+    "question": "ما العنوان الذي يرسل البيانات لجميع الأجهزة في الشبكة؟",
+    "correctAnswers": ["Broadcast", "عنوان البث", "Broadcast Address"],
+    "wrongAnswers": ["Unicast", "Multicast", "Gateway", "Loopback"]
+  },
+  {
+    "question": "ما نوع الاتصال الذي يرسل البيانات إلى جهاز واحد؟",
+    "correctAnswers": ["Unicast", "بث أحادي", "Unicast"],
+    "wrongAnswers": ["Broadcast", "Multicast", "Anycast", "Broadcasting"]
+  },
+  {
+    "question": "ما نوع الاتصال الذي يرسل البيانات إلى مجموعة أجهزة؟",
+    "correctAnswers": ["Multicast", "بث متعدد", "Multicast"],
+    "wrongAnswers": ["Unicast", "Broadcast", "Anycast", "Point to Point"]
+  },
+  {
+    "question": "ما نوع الاتصال الذي يوجه المستخدم لأقرب خادم عادةً؟",
+    "correctAnswers": ["Anycast", "أي كاست", "Anycast"],
+    "wrongAnswers": ["Unicast", "Broadcast", "Multicast", "Geocast"]
+  },
+  {
+    "question": "ما التقنية التي تسمح بتوصيل عدة أجهزة بالإنترنت عبر عنوان واحد؟",
+    "correctAnswers": ["NAT", "ترجمة العناوين", "Network Address Translation"],
+    "wrongAnswers": ["PAT", "VPN", "VLAN", "DNS"]
+  },
+  {
+    "question": "ما النوع الشائع من NAT الذي يستخدم أرقام المنافذ؟",
+    "correctAnswers": ["PAT", "ترجمة المنافذ", "Port Address Translation"],
+    "wrongAnswers": ["NAT", "VLAN", "VPN", "ARP"]
+  },
+  {
+    "question": "ما المعيار الشائع لشبكات Wi-Fi الحديثة؟",
+    "correctAnswers": ["802.11", "IEEE 802.11", "Wi-Fi 802.11"],
+    "wrongAnswers": ["802.3", "802.15", "802.16", "802.1X"]
+  },
+  {
+    "question": "ما المعيار المستخدم لشبكات Ethernet؟",
+    "correctAnswers": ["802.3", "IEEE 802.3", "Ethernet 802.3"],
+    "wrongAnswers": ["802.11", "802.15", "802.16", "802.1X"]
+  },
+  {
+    "question": "ما التقنية اللاسلكية قصيرة المدى للأجهزة الشخصية؟",
+    "correctAnswers": ["Bluetooth", "بلوتوث", "Bluetooth"],
+    "wrongAnswers": ["Wi-Fi", "NFC", "Zigbee", "LTE"]
+  },
+  {
+    "question": "ما التقنية التي تعمل لمسافة قصيرة جدًا للدفع والاتصال؟",
+    "correctAnswers": ["NFC", "تقنية NFC", "الاتصال قريب المدى"],
+    "wrongAnswers": ["Bluetooth", "Wi-Fi", "RFID", "Zigbee"]
+  },
+  {
+    "question": "ما التقنية التي تستخدم موجات الراديو للتعرف على العناصر؟",
+    "correctAnswers": ["RFID", "تقنية RFID", "التعرف اللاسلكي"],
+    "wrongAnswers": ["NFC", "Bluetooth", "GPS", "Wi-Fi"]
+  },
+  {
+    "question": "ما النظام الذي يحدد موقع الجهاز باستخدام الأقمار الصناعية؟",
+    "correctAnswers": ["GPS", "نظام GPS", "الموقع العالمي"],
+    "wrongAnswers": ["NFC", "RFID", "Wi-Fi", "Bluetooth"]
+  },
+  {
+    "question": "ما التقنية التي تحدد الموقع باستخدام شبكات Wi-Fi؟",
+    "correctAnswers": ["Wi-Fi Positioning", "تحديد Wi-Fi", "Wi-Fi Location"],
+    "wrongAnswers": ["GPS", "NFC", "RFID", "Bluetooth"]
+  },
+  {
+    "question": "ما التقنية التي تربط الأجهزة المنزلية الذكية بالإنترنت؟",
+    "correctAnswers": ["IoT", "إنترنت الأشياء", "Internet of Things"],
+    "wrongAnswers": ["AI", "VPN", "NFC", "AR"]
+  },
+  {
+    "question": "ما الجهاز الذي يجمع بيانات من البيئة في نظام IoT؟",
+    "correctAnswers": ["Sensor", "مستشعر", "حساس"],
+    "wrongAnswers": ["Actuator", "Router", "Gateway", "Controller"]
+  },
+  {
+    "question": "ما الجهاز الذي ينفذ فعلًا بناءً على أمر في نظام IoT؟",
+    "correctAnswers": ["Actuator", "مشغل", "منفذ"],
+    "wrongAnswers": ["Sensor", "Gateway", "Router", "Controller"]
+  },
+  {
+    "question": "ما الجهاز الذي يربط أجهزة IoT بالشبكة؟",
+    "correctAnswers": ["Gateway", "بوابة", "IoT Gateway"],
+    "wrongAnswers": ["Sensor", "Actuator", "Switch", "Controller"]
+  },
+  {
+    "question": "ما المصطلح الذي يصف جهازًا قابلًا للارتداء ومتصلاً؟",
+    "correctAnswers": ["Wearable", "جهاز قابل للارتداء", "Wearable Device"],
+    "wrongAnswers": ["IoT Hub", "Sensor", "Smart Home", "Gateway"]
+  },
+  {
+    "question": "ما نوع المعالج الذي صممته Apple لأجهزة Mac الحديثة؟",
+    "correctAnswers": ["Apple Silicon", "سيليكون آبل", "Apple Silicon"],
+    "wrongAnswers": ["Intel Core", "Ryzen", "Snapdragon", "ARM Cortex"]
+  },
+  {
+    "question": "ما سلسلة الشرائح التي بدأت بها Apple انتقالها لمعالجاتها الخاصة في Mac؟",
+    "correctAnswers": ["M1", "Apple M1", "شريحة M1"],
+    "wrongAnswers": ["A14", "M2", "Intel M1", "Snapdragon"]
+  },
+  {
+    "question": "ما نوع المعالج الموجود عادةً في الهواتف؟",
+    "correctAnswers": ["ARM", "معالج ARM", "ARM Processor"],
+    "wrongAnswers": ["x86", "x64", "PowerPC", "Itanium"]
+  },
+  {
+    "question": "ما المعمارية الشائعة لمعالجات الحواسيب الشخصية؟",
+    "correctAnswers": ["x86", "معمارية x86", "x86 Architecture"],
+    "wrongAnswers": ["ARM", "RISC-V", "PowerPC", "MIPS"]
+  },
+  {
+    "question": "ما المعمارية المفتوحة التي تزداد في المعالجات الحديثة؟",
+    "correctAnswers": ["RISC-V", "معمارية RISC-V", "RISC V"],
+    "wrongAnswers": ["x86", "ARM", "MIPS", "PowerPC"]
+  },
+  {
+    "question": "ما التقنية التي تسمح بتشغيل البرامج داخل بيئة معزولة؟",
+    "correctAnswers": ["Sandboxing", "العزل", "Sandbox"],
+    "wrongAnswers": ["Virtualization", "Containerization", "Caching", "Emulation"]
+  },
+  {
+    "question": "ما التقنية التي تحاكي جهازًا أو نظامًا آخر؟",
+    "correctAnswers": ["Emulation", "المحاكاة", "Emulator"],
+    "wrongAnswers": ["Virtualization", "Sandboxing", "Compilation", "Containerization"]
+  },
+  {
+    "question": "ما التقنية التي تشغل نظامًا كاملًا داخل نظام آخر؟",
+    "correctAnswers": ["Virtual Machine", "آلة افتراضية", "VM"],
+    "wrongAnswers": ["Container", "Sandbox", "Emulator", "Process"]
+  },
+  {
+    "question": "ما التقنية التي تشغل التطبيقات داخل حاويات خفيفة؟",
+    "correctAnswers": ["Containerization", "الحاويات", "Container"],
+    "wrongAnswers": ["Virtual Machine", "Emulation", "Sandboxing", "Virtualization"]
+  },
+  {
+    "question": "ما المصطلح الذي يصف نسخة البرنامج التي تحتوي إصلاحات؟",
+    "correctAnswers": ["Patch", "تصحيح", "رقعة"],
+    "wrongAnswers": ["Update", "Upgrade", "Release", "Build"]
+  },
+  {
+    "question": "ما المصطلح الذي يصف إضافة خصائص جديدة للبرنامج؟",
+    "correctAnswers": ["Update", "تحديث", "تحديث البرنامج"],
+    "wrongAnswers": ["Patch", "Rollback", "Downgrade", "Backup"]
+  },
+  {
+    "question": "ما المصطلح الذي يصف الانتقال إلى إصدار رئيسي أحدث؟",
+    "correctAnswers": ["Upgrade", "ترقية", "Upgrade"],
+    "wrongAnswers": ["Update", "Patch", "Rollback", "Refresh"]
+  },
+  {
+    "question": "ما العملية التي تعيد البرنامج إلى إصدار سابق؟",
+    "correctAnswers": ["Rollback", "تراجع", "إرجاع الإصدار"],
+    "wrongAnswers": ["Upgrade", "Update", "Patch", "Restore"]
+  },
+  {
+    "question": "ما النسخة التي يستخدمها المطورون قبل الإصدار النهائي؟",
+    "correctAnswers": ["Beta", "نسخة تجريبية", "إصدار Beta"],
+    "wrongAnswers": ["Stable", "Final", "Alpha", "Release"]
+  },
+  {
+    "question": "ما المرحلة المبكرة جدًا من اختبار البرنامج؟",
+    "correctAnswers": ["Alpha", "نسخة Alpha", "إصدار ألفا"],
+    "wrongAnswers": ["Beta", "Stable", "Final", "Release"]
+  },
+  {
+    "question": "ما النسخة المستقرة الموجهة للمستخدمين؟",
+    "correctAnswers": ["Stable", "مستقرة", "Stable Release"],
+    "wrongAnswers": ["Alpha", "Beta", "Nightly", "Dev"]
+  },
+  {
+    "question": "ما النسخة التي تُبنى تلقائيًا كل ليلة في بعض المشاريع؟",
+    "correctAnswers": ["Nightly", "نسخة Nightly", "بناء ليلي"],
+    "wrongAnswers": ["Stable", "Beta", "Alpha", "Release"]
+  },
+  {
+    "question": "ما المصطلح الذي يصف نسخة من البرنامج يتم إنشاؤها للبناء؟",
+    "correctAnswers": ["Build", "بناء", "نسخة Build"],
+    "wrongAnswers": ["Patch", "Commit", "Release", "Branch"]
+  },
+  {
+    "question": "ما المصطلح الذي يصف إصدارًا رسميًا للمستخدمين؟",
+    "correctAnswers": ["Release", "إصدار", "Release Version"],
+    "wrongAnswers": ["Build", "Commit", "Patch", "Branch"]
+  },
+  {
+    "question": "ما الأداة التي تساعد في إدارة إصدارات Node.js؟",
+    "correctAnswers": ["NVM", "مدير Node", "Node Version Manager"],
+    "wrongAnswers": ["npm", "Node CLI", "Yarn", "Vite"]
+  },
+  {
+    "question": "ما مدير الحزم البديل لـ npm الشهير؟",
+    "correctAnswers": ["Yarn", "يارن", "Yarn Package Manager"],
+    "wrongAnswers": ["npm", "pnpm", "pip", "Cargo"]
+  },
+  {
+    "question": "ما مدير الحزم السريع البديل لـ npm؟",
+    "correctAnswers": ["pnpm", "بي إن بي إم", "PNPM"],
+    "wrongAnswers": ["npm", "Yarn", "pip", "Bun"]
+  },
+  {
+    "question": "ما الأداة التي تستضيف مستودعات Git الشهيرة؟",
+    "correctAnswers": ["GitHub", "جيت هب", "منصة GitHub"],
+    "wrongAnswers": ["Git", "GitLab", "Bitbucket", "npm"]
+  },
+  {
+    "question": "ما المنصة المنافسة لـ GitHub والمبنية حول Git؟",
+    "correctAnswers": ["GitLab", "جيت لاب", "منصة GitLab"],
+    "wrongAnswers": ["GitHub", "Bitbucket", "Git", "Jenkins"]
+  },
+  {
+    "question": "ما المنصة التابعة لـ Atlassian لاستضافة مستودعات Git؟",
+    "correctAnswers": ["Bitbucket", "بت بكت", "Atlassian Bitbucket"],
+    "wrongAnswers": ["GitHub", "GitLab", "Git", "SourceForge"]
+  },
+  {
+    "question": "ما الطلب الذي يستخدم لمراجعة تغييرات قبل دمجها في GitHub؟",
+    "correctAnswers": ["Pull Request", "طلب سحب", "PR"],
+    "wrongAnswers": ["Pull", "Merge", "Commit", "Issue"]
+  },
+  {
+    "question": "ما المكان الذي تُسجل فيه المشاكل والمهام في GitHub؟",
+    "correctAnswers": ["Issues", "المشكلات", "GitHub Issues"],
+    "wrongAnswers": ["Pull Requests", "Projects", "Commits", "Actions"]
+  },
+  {
+    "question": "ما خدمة GitHub التي تشغل مهام CI/CD؟",
+    "correctAnswers": ["GitHub Actions", "إجراءات GitHub", "Actions"],
+    "wrongAnswers": ["GitHub Issues", "GitHub Pages", "GitHub Codespaces", "GitHub Projects"]
+  },
+  {
+    "question": "ما خدمة GitHub لاستضافة المواقع الثابتة؟",
+    "correctAnswers": ["GitHub Pages", "صفحات GitHub", "Pages"],
+    "wrongAnswers": ["GitHub Actions", "GitHub Issues", "GitHub Codespaces", "GitHub Projects"]
+  },
+  {
+    "question": "ما البيئة السحابية لكتابة الكود عبر المتصفح من GitHub؟",
+    "correctAnswers": ["Codespaces", "GitHub Codespaces", "مساحات الأكواد"],
+    "wrongAnswers": ["GitHub Pages", "Actions", "Issues", "Projects"]
+  },
+  {
+    "question": "ما المصطلح الذي يصف بيانات تصف بيانات أخرى؟",
+    "correctAnswers": ["Metadata", "بيانات وصفية", "البيانات الوصفية"],
+    "wrongAnswers": ["Database", "Dataset", "Schema", "Index"]
+  },
+  {
+    "question": "ما البنية التي تحدد شكل بيانات قاعدة البيانات؟",
+    "correctAnswers": ["Schema", "مخطط", "مخطط قاعدة البيانات"],
+    "wrongAnswers": ["Index", "Table", "Query", "Record"]
+  },
+  {
+    "question": "ما الصف في قاعدة البيانات الذي يمثل عنصرًا واحدًا؟",
+    "correctAnswers": ["Record", "سجل", "صف"],
+    "wrongAnswers": ["Column", "Table", "Field", "Schema"]
+  },
+  {
+    "question": "ما العمود الذي يمثل نوعًا معينًا من البيانات؟",
+    "correctAnswers": ["Field", "حقل", "عمود"],
+    "wrongAnswers": ["Record", "Table", "Row", "Schema"]
+  },
+  {
+    "question": "ما مجموعة السجلات في قاعدة بيانات SQL؟",
+    "correctAnswers": ["Table", "جدول", "Table"],
+    "wrongAnswers": ["Field", "Record", "Schema", "Index"]
+  },
+  {
+    "question": "ما العملية التي تقلل تكرار البيانات في قواعد البيانات؟",
+    "correctAnswers": ["Normalization", "التطبيع", "تطبيع البيانات"],
+    "wrongAnswers": ["Replication", "Indexing", "Sharding", "Caching"]
+  },
+  {
+    "question": "ما العملية التي تجمع البيانات من عدة مصادر للتحليل؟",
+    "correctAnswers": ["ETL", "استخراج تحويل تحميل", "ETL Process"],
+    "wrongAnswers": ["API", "CRUD", "SQL", "OLTP"]
+  },
+  {
+    "question": "ما الحرف E في ETL؟",
+    "correctAnswers": ["Extract", "استخراج", "Extract Data"],
+    "wrongAnswers": ["Encode", "Execute", "Encrypt", "Export"]
+  },
+  {
+    "question": "ما الحرف T في ETL؟",
+    "correctAnswers": ["Transform", "تحويل", "Transform Data"],
+    "wrongAnswers": ["Transfer", "Translate", "Test", "Transmit"]
+  },
+  {
+    "question": "ما الحرف L في ETL؟",
+    "correctAnswers": ["Load", "تحميل", "Load Data"],
+    "wrongAnswers": ["Login", "Link", "Launch", "Listen"]
+  }
+]
