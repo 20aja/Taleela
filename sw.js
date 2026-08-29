@@ -1,4 +1,4 @@
-const VERSION = "v8.10.0-question-bank-v1-no-repeat";
+const VERSION = "v8.11.2-design-refinement-question-bank-v1-no-repeat";
 const STATIC_CACHE = `taleela-static-${VERSION}`;
 const PAGE_CACHE = `taleela-pages-${VERSION}`;
 
@@ -7,8 +7,8 @@ const PAGE_CACHE = `taleela-pages-${VERSION}`;
 const APP_SHELL = [
   "./",
   "./index.html",
-  "./css/style.css?v=8.10.0",
-  "./js/app.js?v=8.10.0",
+  "./css/style.css?v=8.11.2",
+  "./js/app.js?v=8.11.2",
   "./js/ui.js",
   "./js/firebase.js",
   "./js/categories.js",

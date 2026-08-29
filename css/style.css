@@ -6641,7 +6641,7 @@ input:focus-visible {
     white-space: nowrap;
   }
 
-  .game-timer-dock {
+  /* .game-timer-dock {
     width: 100%;
     min-height: 82px;
     display: flex;
@@ -6649,7 +6649,7 @@ input:focus-visible {
     justify-content: center;
     padding: 5px 0 1px;
     margin: 0 auto;
-  }
+  } */
   .game-timer-dock .timer-ring {
     position: relative;
     flex: 0 0 74px;
@@ -6756,4 +6756,884 @@ input:focus-visible {
   }
   .game-timer-dock .timer-ring::before { width: 52px !important; height: 52px !important; }
   .game-timer-dock .timer-ring span { font-size: 23px !important; }
+}
+
+/* =====================================================
+   TALEELA v8.11.0 — focused gameplay design refinement
+   10 visual upgrades: hierarchy, timer, answers, phases,
+   results, leaderboard, color system, lobby settings,
+   mobile ergonomics, and micro-interactions.
+===================================================== */
+:root {
+  --surface-0: #0d0f1c;
+  --surface-1: #15182b;
+  --surface-2: #1b1f35;
+  --surface-3: #232742;
+  --text-strong: #fbfbff;
+  --text-soft: #b3b7ca;
+  --accent-primary: #8b72ff;
+  --accent-info: #54d7dc;
+  --accent-success: #3bd58c;
+  --accent-danger: #ff657f;
+  --accent-warning: #f7c84b;
+  --phase-accent: var(--accent-primary);
+  --phase-accent-rgb: 139, 114, 255;
+  --tap-target: 48px;
+}
+
+body {
+  font-family: "Tajawal", Arial, "Tahoma", sans-serif;
+}
+
+button,
+[role="button"] {
+  touch-action: manipulation;
+}
+
+/* 1) Make the question the visual anchor of every gameplay phase. */
+.game-question,
+.guess-question,
+.reveal-question {
+  position: relative;
+  width: min(100%, 730px);
+  min-height: 118px;
+  display: grid;
+  place-items: center;
+  padding: clamp(22px, 4.2vw, 34px) clamp(18px, 4vw, 32px);
+  margin-bottom: 22px;
+  font-size: clamp(30px, 5.7vw, 45px);
+  font-weight: 900;
+  line-height: 1.52;
+  letter-spacing: -0.025em;
+  color: var(--text-strong);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(var(--phase-accent-rgb), 0.12), transparent 52%),
+    linear-gradient(150deg, rgba(255,255,255,0.052), transparent 42%),
+    rgba(21, 24, 43, 0.92);
+  border: 1px solid rgba(var(--phase-accent-rgb), 0.30);
+  box-shadow:
+    0 22px 54px rgba(2, 4, 15, 0.28),
+    0 0 0 1px rgba(255,255,255,0.025) inset,
+    0 0 42px rgba(var(--phase-accent-rgb), 0.06);
+  overflow: hidden;
+  isolation: isolate;
+  animation: taleelaQuestionIn 360ms var(--ease-pop) both;
+}
+
+.game-question::after,
+.guess-question::after,
+.reveal-question::after {
+  content: "";
+  position: absolute;
+  inset-inline: 12%;
+  bottom: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, var(--phase-accent), transparent);
+  opacity: 0.7;
+}
+
+.question-media {
+  width: min(100%, 730px);
+  margin: -8px auto 22px;
+  padding: 10px;
+  border-radius: 22px;
+  background: rgba(13, 15, 28, 0.72);
+  border: 1px solid rgba(var(--phase-accent-rgb), 0.20);
+  box-shadow: 0 15px 34px rgba(2,4,15,0.20);
+}
+
+.question-media-image {
+  max-height: min(33vh, 300px);
+  border-radius: 15px;
+}
+
+/* 2) Timer: stronger progress reading + explicit critical state. */
+.game-timer-dock {
+  gap: 5px;
+  transition: min-height 180ms ease, padding 180ms ease, opacity 180ms ease;
+}
+
+.game-timer-dock .timer-ring {
+  --timer-track: rgba(135, 141, 176, 0.15);
+  width: 88px;
+  height: 88px;
+  background: conic-gradient(var(--phase-accent) var(--progress), var(--timer-track) 0);
+  box-shadow:
+    0 0 0 1px rgba(var(--phase-accent-rgb), 0.28),
+    0 16px 38px rgba(4, 6, 20, 0.34),
+    0 0 40px rgba(var(--phase-accent-rgb), 0.13),
+    inset 0 0 26px rgba(var(--phase-accent-rgb), 0.08);
+  transition: box-shadow 180ms ease, transform 180ms ease, background 160ms linear;
+}
+
+.game-timer-dock .timer-ring::before {
+  width: 68px;
+  height: 68px;
+  background:
+    radial-gradient(circle at 50% 32%, rgba(255,255,255,0.035), transparent 44%),
+    #111426;
+}
+
+.game-timer-dock .timer-ring span {
+  font-size: 30px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.04em;
+}
+
+.timer-caption {
+  color: var(--text-soft);
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  letter-spacing: 0.01em;
+  transition: color 160ms ease;
+}
+
+.timer-ring.timer-danger {
+  background: conic-gradient(var(--accent-danger) var(--progress), rgba(255, 101, 127, 0.12) 0);
+}
+
+.timer-ring.timer-danger + .timer-caption {
+  color: #ff9cad;
+}
+
+.timer-ring.timer-critical {
+  animation: taleelaTimerCritical 680ms ease-in-out infinite;
+}
+
+/* 3) Answer cards: numbered, larger, explicit selection and reveal states. */
+.guess-options,
+.reveal-options {
+  width: min(100%, 730px);
+  gap: 13px;
+}
+
+.guess-option {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) 34px;
+  align-items: center;
+  gap: 12px;
+  min-height: 112px;
+  padding: 16px 17px;
+  text-align: right;
+  font-size: clamp(18px, 3.3vw, 23px);
+  line-height: 1.55;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.038), transparent 40%),
+    linear-gradient(145deg, #252944, #1b1f35);
+}
+
+.guess-option::before {
+  inset: 12px auto 12px 0;
+  border-radius: 999px;
+}
+
+.option-index {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  color: #cfc8ff;
+  background: rgba(139, 114, 255, 0.11);
+  border: 1px solid rgba(139, 114, 255, 0.23);
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.option-text {
+  min-width: 0;
+  font-weight: 900;
+}
+
+.option-state-icon {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: transparent;
+  background: rgba(255,255,255,0.035);
+  border: 1px solid rgba(255,255,255,0.07);
+  transform: scale(0.72);
+  opacity: 0;
+  transition: 180ms var(--ease-pop);
+}
+
+.guess-option.selected {
+  border-color: rgba(59, 213, 140, 0.66);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(59, 213, 140, 0.15), transparent 48%),
+    linear-gradient(145deg, #245846, #1c4237);
+  box-shadow:
+    0 0 0 2px rgba(59, 213, 140, 0.11),
+    0 18px 34px rgba(9, 67, 48, 0.22);
+}
+
+.guess-option.selected .option-index {
+  color: #d8ffea;
+  background: rgba(59, 213, 140, 0.15);
+  border-color: rgba(59, 213, 140, 0.38);
+}
+
+.guess-option.selected .option-state-icon {
+  color: #0d281d;
+  background: var(--accent-success);
+  border-color: transparent;
+  opacity: 1;
+  transform: scale(1);
+  animation: taleelaCheckPop 260ms var(--ease-pop) both;
+}
+
+.reveal-option {
+  min-height: 138px;
+  padding: 16px 17px;
+  text-align: center;
+}
+
+.reveal-option.incorrect-option {
+  border-color: rgba(255, 101, 127, 0.18);
+  background:
+    linear-gradient(145deg, rgba(255, 101, 127, 0.04), transparent),
+    linear-gradient(145deg, #24283f, #1b1f32);
+}
+
+.reveal-status {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 28px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.reveal-status.is-correct {
+  color: #caffdf;
+  background: rgba(59, 213, 140, 0.12);
+  border: 1px solid rgba(59, 213, 140, 0.25);
+}
+
+.reveal-status.is-bluff {
+  color: #ffc0cb;
+  background: rgba(255, 101, 127, 0.09);
+  border: 1px solid rgba(255, 101, 127, 0.17);
+}
+
+.reveal-option.correct-option {
+  border-color: rgba(59, 213, 140, 0.62);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(59, 213, 140, 0.17), transparent 48%),
+    linear-gradient(145deg, #245d49, #193f34);
+  box-shadow:
+    0 0 0 2px rgba(59, 213, 140, 0.10),
+    0 18px 38px rgba(8, 77, 53, 0.25);
+  animation: taleelaCorrectReveal 520ms var(--ease-pop) both;
+}
+
+.reveal-option-title {
+  font-size: clamp(20px, 3.8vw, 25px);
+}
+
+/* 4) Clear phase identity in the toolbar and throughout each stage. */
+.game-toolbar {
+  grid-template-columns: 52px minmax(0, 1fr) 52px;
+  direction: ltr;
+  min-height: 74px;
+  padding: 8px 10px;
+  border-color: rgba(var(--phase-accent-rgb), 0.20);
+  box-shadow:
+    0 13px 32px rgba(2,4,15,0.24),
+    0 0 24px rgba(var(--phase-accent-rgb), 0.035) inset;
+}
+
+.game-toolbar .game-exit-button {
+  grid-column: 1;
+  justify-self: start;
+}
+
+.game-phase-meta {
+  grid-column: 2;
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  direction: rtl;
+}
+
+.game-toolbar #gameRound {
+  grid-column: auto;
+  font-size: clamp(19px, 4vw, 26px);
+  line-height: 1;
+}
+
+.game-phase-badge {
+  max-width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 26px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  color: #ebe7ff;
+  background: rgba(var(--phase-accent-rgb), 0.10);
+  border: 1px solid rgba(var(--phase-accent-rgb), 0.21);
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.game-phase-badge i {
+  color: var(--phase-accent);
+}
+
+.game-toolbar-spacer {
+  grid-column: 3;
+  width: 52px;
+  height: 1px;
+}
+
+.game-screen[data-phase="category"] { --phase-accent: #8b72ff; --phase-accent-rgb: 139, 114, 255; }
+.game-screen[data-phase="bluff"] { --phase-accent: #f7c84b; --phase-accent-rgb: 247, 200, 75; }
+.game-screen[data-phase="guess"] { --phase-accent: #54d7dc; --phase-accent-rgb: 84, 215, 220; }
+.game-screen[data-phase="reveal"] { --phase-accent: #3bd58c; --phase-accent-rgb: 59, 213, 140; }
+.game-screen[data-phase="results"] { --phase-accent: #a58cff; --phase-accent-rgb: 165, 140, 255; }
+.game-screen[data-phase="final"] { --phase-accent: #f7c84b; --phase-accent-rgb: 247, 200, 75; }
+
+.game-category {
+  color: rgb(var(--phase-accent-rgb));
+  background: rgba(var(--phase-accent-rgb), 0.10);
+  border-color: rgba(var(--phase-accent-rgb), 0.23);
+  box-shadow: 0 8px 22px rgba(var(--phase-accent-rgb), 0.06);
+}
+
+/* 5) Round result summary: three quick facts before the ranking. */
+.round-result-heading {
+  margin-bottom: 16px;
+}
+
+.result-eyebrow {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 7px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  color: #cfc7ff;
+  background: rgba(139, 114, 255, 0.10);
+  border: 1px solid rgba(139, 114, 255, 0.19);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.round-summary-grid {
+  width: min(100%, 710px);
+  margin: 0 auto 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.round-summary-card {
+  min-width: 0;
+  min-height: 96px;
+  display: grid;
+  grid-template-rows: 25px auto auto;
+  justify-items: center;
+  align-content: center;
+  gap: 5px;
+  padding: 12px 9px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(32,36,61,0.93), rgba(22,25,44,0.96));
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 24px rgba(2,4,15,0.14);
+}
+
+.round-summary-card i {
+  font-size: 18px;
+}
+
+.round-summary-card span {
+  color: var(--text-soft);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.round-summary-card strong {
+  max-width: 100%;
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.round-summary-card.primary i { color: #f7c84b; }
+.round-summary-card.success i { color: var(--accent-success); }
+.round-summary-card.info i { color: var(--accent-info); }
+
+/* 6) Stronger leaderboard hierarchy, especially for the top three. */
+.leaderboard-row {
+  grid-template-columns: 52px 62px minmax(0, 1fr) minmax(66px, auto);
+  min-height: 98px;
+  border-radius: 21px;
+  transition: transform 180ms var(--ease-pop), border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.leaderboard-rank {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  margin: auto;
+  border-radius: 14px;
+  color: #d6d9e8;
+  background: rgba(255,255,255,0.045);
+  border: 1px solid rgba(255,255,255,0.075);
+  font-size: 18px;
+  font-variant-numeric: tabular-nums;
+}
+
+.leaderboard-row.rank-1 {
+  transform: translateY(-1px);
+  border-color: rgba(247, 200, 75, 0.52);
+  background:
+    radial-gradient(circle at 4% 50%, rgba(247,200,75,0.12), transparent 31%),
+    linear-gradient(145deg, #353044, #222338);
+}
+.leaderboard-row.rank-1 .leaderboard-rank {
+  color: #201705;
+  background: linear-gradient(145deg, #ffe08a, #eab641);
+  border-color: rgba(255,238,177,0.54);
+  box-shadow: 0 8px 20px rgba(167,114,17,0.20);
+}
+.leaderboard-row.rank-2 .leaderboard-rank {
+  color: #1d2230;
+  background: linear-gradient(145deg, #eef1f7, #aeb8c9);
+}
+.leaderboard-row.rank-3 .leaderboard-rank {
+  color: #26160c;
+  background: linear-gradient(145deg, #e0a372, #b46d3e);
+}
+
+.leaderboard-row.is-me::after {
+  content: "أنت";
+  position: absolute;
+  top: 8px;
+  inset-inline-start: 9px;
+  padding: 3px 7px;
+  border-radius: 999px;
+  color: #e8e2ff;
+  background: rgba(139,114,255,0.15);
+  border: 1px solid rgba(139,114,255,0.25);
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.leaderboard-info strong {
+  font-size: 16px;
+}
+
+.leaderboard-score strong {
+  font-variant-numeric: tabular-nums;
+}
+
+.round-gain {
+  display: inline-block;
+  animation: taleelaScorePop 520ms var(--ease-pop) both;
+}
+
+/* 7) Semantic color behavior: success, danger, warning, info stay consistent. */
+.answer-validation-hint { --feedback-color: var(--accent-warning); }
+.players-answer-status { --feedback-color: var(--accent-info); }
+.ready-button.ready-active { --feedback-color: var(--accent-success); }
+.game-error { --feedback-color: var(--accent-danger); }
+
+.players-answer-status i,
+#playersGuessed {
+  color: var(--accent-info);
+}
+
+/* 8) Lobby settings become scannable controls rather than three plain boxes. */
+.settings-section {
+  overflow: hidden;
+}
+
+.settings-grid {
+  gap: 11px;
+}
+
+.setting-card {
+  position: relative;
+  min-height: 158px;
+  display: grid;
+  grid-template-rows: 42px auto auto auto;
+  align-content: center;
+  justify-items: center;
+  gap: 7px;
+  padding: 14px 10px 12px;
+  overflow: hidden;
+}
+
+.setting-card::after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  top: -58px;
+  inset-inline-end: -38px;
+  border-radius: 50%;
+  background: rgba(139,114,255,0.08);
+  pointer-events: none;
+}
+
+.setting-card[data-setting="timer"]::after { background: rgba(84,215,220,0.08); }
+.setting-card[data-setting="players"]::after { background: rgba(59,213,140,0.08); }
+
+.setting-visual-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  color: #cfc7ff;
+  background: rgba(139,114,255,0.11);
+  border: 1px solid rgba(139,114,255,0.20);
+  font-size: 16px;
+}
+
+.setting-card[data-setting="timer"] .setting-visual-icon {
+  color: #aef5f6;
+  background: rgba(84,215,220,0.10);
+  border-color: rgba(84,215,220,0.20);
+}
+.setting-card[data-setting="players"] .setting-visual-icon {
+  color: #b9f8d6;
+  background: rgba(59,213,140,0.10);
+  border-color: rgba(59,213,140,0.20);
+}
+
+.setting-label {
+  margin: 0;
+  font-size: 13px;
+}
+
+.setting-card small {
+  margin-top: 1px;
+  font-size: 10px;
+}
+
+.stepper {
+  width: 100%;
+  max-width: 164px;
+}
+
+.stepper strong {
+  color: var(--text-strong);
+  background: rgba(255,255,255,0.035);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 9) Small-screen ergonomics: one-column choices, larger taps, less dead space. */
+@media (max-width: 700px) {
+  .game-container {
+    padding: 10px 12px max(88px, calc(74px + env(safe-area-inset-bottom)));
+  }
+
+  .game-toolbar {
+    top: max(5px, env(safe-area-inset-top));
+    grid-template-columns: 46px minmax(0, 1fr) 46px;
+    min-height: 66px;
+    border-radius: 19px;
+  }
+
+  .game-toolbar-spacer { width: 46px; }
+  .game-toolbar .game-exit-button {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .game-phase-meta { gap: 4px; }
+  .game-toolbar #gameRound { font-size: 18px; }
+  .game-phase-badge { min-height: 24px; font-size: 10px; padding-inline: 8px; }
+
+  .game-timer-dock {
+    min-height: 78px;
+    padding: 5px 0 0;
+    gap: 2px;
+  }
+
+  .game-timer-dock .timer-ring {
+    width: 70px !important;
+    height: 70px !important;
+    min-width: 70px;
+    min-height: 70px;
+  }
+  .game-timer-dock .timer-ring::before {
+    width: 54px !important;
+    height: 54px !important;
+  }
+  .game-timer-dock .timer-ring span { font-size: 24px !important; }
+  .timer-caption { font-size: 9.5px; }
+
+  .game-phase {
+    padding-top: 18px;
+    scroll-margin-top: 86px;
+  }
+
+  .game-question,
+  .guess-question,
+  .reveal-question {
+    min-height: 96px;
+    margin-bottom: 16px;
+    padding: 17px 14px;
+    border-radius: 19px;
+    font-size: clamp(25px, 7vw, 33px);
+    line-height: 1.48;
+  }
+
+  .question-media {
+    margin-top: -4px;
+    margin-bottom: 16px;
+    padding: 7px;
+    border-radius: 18px;
+  }
+
+  .guess-options,
+  .reveal-options {
+    grid-template-columns: 1fr !important;
+    gap: 10px;
+  }
+
+  .guess-option {
+    min-height: 84px;
+    grid-template-columns: 38px minmax(0, 1fr) 30px;
+    padding: 12px 13px;
+    border-radius: 16px;
+    font-size: 18px;
+  }
+
+  .option-index { width: 34px; height: 34px; border-radius: 11px; }
+  .option-state-icon { width: 28px; height: 28px; }
+
+  .reveal-option {
+    min-height: 112px;
+    padding: 13px;
+    border-radius: 17px;
+  }
+
+  .bluff-card {
+    padding: 13px;
+    gap: 10px;
+  }
+
+  .bluff-card input {
+    min-height: 60px;
+    font-size: 16px;
+  }
+
+  #confirmAnswer,
+  .reveal-ready-button {
+    min-height: 58px;
+    font-size: 17px;
+  }
+
+  .round-summary-grid {
+    gap: 7px;
+  }
+  .round-summary-card {
+    min-height: 86px;
+    padding: 9px 6px;
+    border-radius: 15px;
+  }
+  .round-summary-card strong { font-size: 12px; }
+
+  .leaderboard-row {
+    grid-template-columns: 40px 50px minmax(0, 1fr) minmax(56px, auto);
+    gap: 8px;
+    min-height: 82px;
+    padding: 9px 10px;
+    border-radius: 17px;
+  }
+  .leaderboard-rank { width: 34px; height: 34px; border-radius: 11px; font-size: 15px; }
+  .leaderboard-avatar { width: 48px; height: 48px; border-radius: 14px; }
+  .leaderboard-info strong { font-size: 14px; }
+  .leaderboard-info small { font-size: 10px; }
+  .leaderboard-score strong { font-size: 17px; }
+  .leaderboard-score small { font-size: 9px; }
+
+  .game-chat-button {
+    bottom: max(14px, env(safe-area-inset-bottom));
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 440px) {
+  .round-summary-grid {
+    grid-template-columns: 1fr;
+  }
+  .round-summary-card {
+    min-height: 60px;
+    grid-template-columns: 28px minmax(0, 1fr) auto;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: start;
+    text-align: right;
+    padding: 9px 11px;
+  }
+  .round-summary-card span { font-size: 10px; }
+  .round-summary-card strong { justify-self: end; max-width: 46%; }
+
+  .setting-card {
+    min-height: 86px;
+    grid-template-columns: 40px minmax(0, 1fr) minmax(138px, auto);
+    grid-template-rows: auto auto;
+    justify-items: start;
+    align-items: center;
+    column-gap: 9px;
+    row-gap: 2px;
+    padding: 10px;
+    text-align: right;
+  }
+  .setting-visual-icon { grid-row: 1 / 3; grid-column: 1; }
+  .setting-label { grid-column: 2; grid-row: 1; }
+  .setting-card small { grid-column: 2; grid-row: 2; }
+  .setting-card .stepper { grid-column: 3; grid-row: 1 / 3; max-width: 150px; }
+
+  .leaderboard-row {
+    grid-template-columns: 34px 44px minmax(0, 1fr) 50px;
+    gap: 6px;
+    padding-inline: 8px;
+  }
+  .leaderboard-rank { width: 30px; height: 30px; font-size: 13px; }
+  .leaderboard-avatar { width: 42px; height: 42px; border-radius: 12px; }
+  .score-progress { margin-top: 6px; }
+}
+
+@media (max-width: 360px) {
+  .game-toolbar { grid-template-columns: 42px minmax(0, 1fr) 42px; }
+  .game-toolbar-spacer { width: 42px; }
+  .game-toolbar .game-exit-button { width: 40px; height: 40px; min-width: 40px; min-height: 40px; }
+  .game-phase-badge span { max-width: 118px; overflow: hidden; text-overflow: ellipsis; }
+  .setting-card { grid-template-columns: 36px minmax(0, 1fr); min-height: 118px; }
+  .setting-card .stepper { grid-column: 1 / -1; grid-row: 3; justify-self: stretch; max-width: none; margin-top: 6px; }
+  .setting-visual-icon { width: 36px; height: 36px; }
+}
+
+/* 10) Micro-interactions: purposeful feedback, with reduced-motion support. */
+.guess-option,
+.reveal-option {
+  animation: taleelaOptionIn 300ms var(--ease-pop) both;
+}
+.guess-option:nth-child(2), .reveal-option:nth-child(2) { animation-delay: 35ms; }
+.guess-option:nth-child(3), .reveal-option:nth-child(3) { animation-delay: 70ms; }
+.guess-option:nth-child(4), .reveal-option:nth-child(4) { animation-delay: 105ms; }
+.guess-option:nth-child(5), .reveal-option:nth-child(5) { animation-delay: 140ms; }
+.guess-option:nth-child(6), .reveal-option:nth-child(6) { animation-delay: 175ms; }
+
+@keyframes taleelaQuestionIn {
+  from { opacity: 0; transform: translateY(12px) scale(0.985); filter: blur(2px); }
+  to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+}
+
+@keyframes taleelaOptionIn {
+  from { opacity: 0; transform: translateY(9px) scale(0.987); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes taleelaCheckPop {
+  0% { opacity: 0; transform: scale(0.5) rotate(-10deg); }
+  70% { opacity: 1; transform: scale(1.12) rotate(2deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0); }
+}
+
+@keyframes taleelaCorrectReveal {
+  0% { opacity: 0.35; transform: scale(0.97); box-shadow: 0 0 0 rgba(59,213,140,0); }
+  65% { opacity: 1; transform: scale(1.012); box-shadow: 0 0 36px rgba(59,213,140,0.18); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes taleelaScorePop {
+  0% { opacity: 0; transform: translateY(6px) scale(0.75); }
+  70% { opacity: 1; transform: translateY(-2px) scale(1.12); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes taleelaTimerCritical {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.055); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .game-question,
+  .guess-question,
+  .reveal-question,
+  .guess-option,
+  .reveal-option,
+  .round-gain,
+  .timer-ring.timer-critical,
+  .winner-card,
+  .leaderboard-row {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* =====================================================
+   TALEELA v8.11.2 — lobby compositor stability
+   Prevent transient Chromium/GPU repaint flashes when Firestore updates
+   dynamic lobby content or when a control is pressed.
+===================================================== */
+#roomScreen .players-panel,
+#roomScreen .settings-section,
+#roomScreen .categories-section {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.035), transparent 48%),
+    rgba(24, 27, 47, 0.985) !important;
+  contain: layout style;
+  isolation: isolate;
+}
+
+/* Do not promote every lobby tap to a transformed compositor layer. */
+#roomScreen button:active:not(:disabled),
+#roomScreen .category-card:active:not(:disabled),
+#roomScreen .stepper button:active:not(:disabled) {
+  transform: none !important;
+}
+
+/* Player insertion is intentionally immediate: animation on a newly inserted
+   child was visually interpreted as the whole list disappearing/reappearing. */
+#roomScreen .player-card {
+  animation: none !important;
+}
+
+/* Keep dynamic lobby blocks from participating in browser scroll anchoring
+   during independent Firestore snapshots. */
+#roomScreen .players-list,
+#roomScreen .settings-grid,
+#roomScreen .categories-grid {
+  overflow-anchor: none;
 }

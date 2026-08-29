@@ -77,7 +77,8 @@ let profileReservationRoom = null;
 let resumeInProgress = false;
 let bootstrapComplete = false;
 let lastRoomKeepAliveAt = 0;
-let lastLobbyRevision = null;
+let lastRoomRevision = null;
+let lastPlayersRevision = null;
 
 const homeScreen = document.getElementById("homeScreen");
 const roomScreen = document.getElementById("roomScreen");
@@ -405,23 +406,25 @@ function normalizeCode(value) {
     .slice(0, 6);
 }
 
+function activateScreen(target) {
+  if (!target) return;
+  const screens = [homeScreen, roomScreen, gameScreen].filter(Boolean);
+  const alreadyActive = !target.classList.contains("hidden") && screens.every((screen) => screen === target || screen.classList.contains("hidden"));
+  if (alreadyActive) return;
+  screens.forEach((screen) => screen.classList.toggle("hidden", screen !== target));
+}
+
 function showHomeScreen() {
-  homeScreen?.classList.remove("hidden");
-  roomScreen?.classList.add("hidden");
-  gameScreen?.classList.add("hidden");
+  activateScreen(homeScreen);
 }
 
 function showRoomScreen(code) {
-  homeScreen?.classList.add("hidden");
-  gameScreen?.classList.add("hidden");
-  roomScreen?.classList.remove("hidden");
-  if (roomCodeElement) roomCodeElement.textContent = code || "------";
+  activateScreen(roomScreen);
+  if (roomCodeElement && roomCodeElement.textContent !== (code || "------")) roomCodeElement.textContent = code || "------";
 }
 
 function showGameScreen() {
-  homeScreen?.classList.add("hidden");
-  roomScreen?.classList.add("hidden");
-  gameScreen?.classList.remove("hidden");
+  activateScreen(gameScreen);
 }
 
 function removeRoomError() {
@@ -455,20 +458,53 @@ function renderPlayers(room) {
   const players = playerList(room).sort((a, b) => valueToMillis(a.joinedAt) - valueToMillis(b.joinedAt) || String(a.id).localeCompare(String(b.id)));
   const maxPlayers = roomMaxPlayers(room);
 
-  playersList.innerHTML = "";
   if (playerCount) playerCount.textContent = `${players.length} / ${maxPlayers}`;
 
   if (!players.length) {
-    playersList.innerHTML = '<div class="empty-state"><i class="fa-solid fa-users"></i><p>لا يوجد لاعبون في الغرفة.</p></div>';
+    if (!playersList.querySelector(".empty-state")) {
+      playersList.replaceChildren();
+      const empty = document.createElement("div");
+      empty.className = "empty-state";
+      empty.innerHTML = '<i class="fa-solid fa-users"></i><p>لا يوجد لاعبون في الغرفة.</p>';
+      playersList.appendChild(empty);
+    }
     return;
   }
 
-  players.forEach((player) => {
-    const card = document.createElement("div");
-    card.className = `player-card ${player.id === currentPlayerId ? "is-me" : ""}`;
+  playersList.querySelector(".empty-state")?.remove();
+
+  const wantedIds = new Set(players.map((player) => player.id));
+  playersList.querySelectorAll("[data-player-id]").forEach((node) => {
+    if (!wantedIds.has(node.dataset.playerId)) node.remove();
+  });
+
+  players.forEach((player, index) => {
+    let card = playersList.querySelector(`[data-player-id="${CSS.escape(player.id)}"]`);
     const isHost = player.id === room.hostId;
     const ready = player.ready === true;
+    const canRemove = room.hostId === currentPlayerId && player.id !== currentPlayerId && room.status === "waiting";
+    const renderKey = JSON.stringify([
+      player.id,
+      player.name || "",
+      player.avatar || "",
+      player.avatarImage || "",
+      ready,
+      isHost,
+      player.id === currentPlayerId,
+      canRemove,
+    ]);
 
+    if (!card) {
+      card = document.createElement("div");
+      card.dataset.playerId = player.id;
+      playersList.insertBefore(card, playersList.children[index] || null);
+    } else if (playersList.children[index] !== card) {
+      playersList.insertBefore(card, playersList.children[index] || null);
+    }
+
+    if (card.dataset.renderKey === renderKey) return;
+    card.dataset.renderKey = renderKey;
+    card.className = `player-card ${player.id === currentPlayerId ? "is-me" : ""}`;
     card.innerHTML = `
       <div class="player-avatar">${avatarHTML(player.avatar, "player-avatar-img", `صورة ${player.name || "لاعب"}`, player.avatarImage)}</div>
       <div class="player-info">
@@ -479,7 +515,7 @@ function renderPlayers(room) {
         ${ready ? '<i class="fa-solid fa-check"></i> جاهز' : "في الانتظار"}
       </span>
       ${
-        room.hostId === currentPlayerId && player.id !== currentPlayerId && room.status === "waiting"
+        canRemove
           ? `
         <button class="remove-player-button" type="button" data-remove-player="${escapeHTML(player.id)}" title="إزالة ${escapeHTML(player.name || "اللاعب")}" aria-label="إزالة ${escapeHTML(player.name || "اللاعب")}">
           <i class="fa-solid fa-user-minus"></i>
@@ -490,7 +526,6 @@ function renderPlayers(room) {
     `;
     const removeButton = card.querySelector("[data-remove-player]");
     removeButton?.addEventListener("click", () => removePlayerFromRoom(player.id));
-    playersList.appendChild(card);
   });
 }
 
@@ -518,32 +553,42 @@ function renderSettings(room) {
 function renderCategories(room) {
   if (!categoriesGrid) return;
   const selected = Array.isArray(room?.categories) ? room.categories : [];
+  const selectedSet = new Set(selected);
   const canEdit = isCurrentPlayerHost(room) && room?.status === "waiting";
-  categoriesGrid.innerHTML = "";
+  const wantedIds = new Set(GAME_CATEGORIES.map((category) => category.id));
 
-  GAME_CATEGORIES.forEach((category) => {
-    const card = document.createElement("button");
-    card.type = "button";
-    const isSelected = selected.includes(category.id);
-    card.className = "category-card";
-    card.setAttribute("aria-pressed", String(isSelected));
-    if (isSelected) card.classList.add("selected");
-    if (!canEdit) card.classList.add("disabled");
-    if (!categoryHasQuestions(category.id)) card.classList.add("unavailable");
+  categoriesGrid.querySelectorAll("[data-category-id]").forEach((node) => {
+    if (!wantedIds.has(node.dataset.categoryId)) node.remove();
+  });
 
-    card.innerHTML = `
-      <div class="category-icon">
-        <img class="category-icon-image" src="${escapeHTML(category.image || "")}" alt="" loading="lazy" decoding="async" />
-      </div>
-      <div class="category-name">${escapeHTML(category.name)}</div>
-      <div class="category-check"><i class="fa-solid fa-check"></i></div>
-    `;
+  GAME_CATEGORIES.forEach((category, index) => {
+    let card = categoriesGrid.querySelector(`[data-category-id="${CSS.escape(category.id)}"]`);
+    const isSelected = selectedSet.has(category.id);
+    const available = categoryHasQuestions(category.id);
 
-    if (canEdit && categoryHasQuestions(category.id)) {
-      card.addEventListener("click", () => toggleCategory(category.id));
+    if (!card) {
+      card = document.createElement("button");
+      card.type = "button";
+      card.dataset.categoryId = category.id;
+      card.className = "category-card";
+      card.innerHTML = `
+        <div class="category-icon">
+          <img class="category-icon-image" src="${escapeHTML(category.image || "")}" alt="" loading="lazy" decoding="async" />
+        </div>
+        <div class="category-name">${escapeHTML(category.name)}</div>
+        <div class="category-check"><i class="fa-solid fa-check"></i></div>
+      `;
+      categoriesGrid.insertBefore(card, categoriesGrid.children[index] || null);
+    } else if (categoriesGrid.children[index] !== card) {
+      categoriesGrid.insertBefore(card, categoriesGrid.children[index] || null);
     }
 
-    categoriesGrid.appendChild(card);
+    card.setAttribute("aria-pressed", String(isSelected));
+    card.setAttribute("aria-disabled", String(!canEdit || !available));
+    card.classList.toggle("selected", isSelected);
+    card.classList.toggle("disabled", !canEdit);
+    card.classList.toggle("unavailable", !available);
+    card.onclick = canEdit && available ? () => toggleCategory(category.id) : null;
   });
 
   if (selectedCategoriesCount) {
@@ -576,7 +621,11 @@ function updateReadyButton(room) {
 
   readyButton.disabled = room.status !== "waiting";
   readyButton.classList.toggle("ready-active", player.ready === true);
-  readyButton.innerHTML = player.ready ? '<i class="fa-solid fa-circle-check"></i> جاهز ✓' : '<i class="fa-solid fa-check"></i> جاهز';
+  const readyState = player.ready === true ? "ready" : "waiting";
+  if (readyButton.dataset.renderState !== readyState) {
+    readyButton.dataset.renderState = readyState;
+    readyButton.innerHTML = player.ready ? '<i class="fa-solid fa-circle-check"></i> جاهز ✓' : '<i class="fa-solid fa-check"></i> جاهز';
+  }
 }
 
 function updateStartButton(room) {
@@ -595,16 +644,24 @@ function updateStartButton(room) {
   const canStart = canStartGame(room);
 
   startGameButton.disabled = !canStart;
+  let startState = "ready";
+  let startHtml = '<i class="fa-solid fa-play"></i> بدء اللعبة';
   if (room.status !== "waiting") {
-    startGameButton.innerHTML = '<i class="fa-solid fa-gamepad"></i> اللعبة جارية';
+    startState = "playing";
+    startHtml = '<i class="fa-solid fa-gamepad"></i> اللعبة جارية';
   } else if (!categoriesReady) {
-    startGameButton.innerHTML = `<i class="fa-solid fa-layer-group"></i> اختر فئة واحدة على الأقل (${selected.length}/1)`;
+    startState = `categories:${selected.length}`;
+    startHtml = `<i class="fa-solid fa-layer-group"></i> اختر فئة واحدة على الأقل (${selected.length}/1)`;
   } else if (!enoughPlayers) {
-    startGameButton.innerHTML = '<i class="fa-solid fa-users"></i> نحتاج لاعبين على الأقل';
+    startState = "players";
+    startHtml = '<i class="fa-solid fa-users"></i> نحتاج لاعبين على الأقل';
   } else if (!everyoneReady) {
-    startGameButton.innerHTML = '<i class="fa-solid fa-hourglass-half"></i> في انتظار الجاهزية';
-  } else {
-    startGameButton.innerHTML = '<i class="fa-solid fa-play"></i> بدء اللعبة';
+    startState = "waiting-ready";
+    startHtml = '<i class="fa-solid fa-hourglass-half"></i> في انتظار الجاهزية';
+  }
+  if (startGameButton.dataset.renderState !== startState) {
+    startGameButton.dataset.renderState = startState;
+    startGameButton.innerHTML = startHtml;
   }
 }
 
@@ -666,7 +723,8 @@ function clearSession() {
 function stopRoomListener() {
   if (unsubscribeRoom) unsubscribeRoom();
   unsubscribeRoom = null;
-  lastLobbyRevision = null;
+  lastRoomRevision = null;
+  lastPlayersRevision = null;
   stopRoomStore();
 }
 
@@ -800,26 +858,41 @@ function listenToRoom(id) {
     currentRoomCode = room.code || currentRoomCode;
     saveSession();
 
-    // Presence heartbeats update frequently. They are kept in currentRoom for
-    // takeover checks, but they must not rebuild the entire lobby/game DOM.
-    const needsLobbyRender = snapshot.lobbyRevision !== lastLobbyRevision;
-    if (needsLobbyRender) {
-      lastLobbyRevision = snapshot.lobbyRevision;
+    // Firestore emits the room document and the players collection independently.
+    // Keep those render paths independent as well: a player join must not refresh
+    // settings/categories/screen state, and a settings click must not refresh the
+    // players list. This removes the lobby-wide flash seen on some Chromium GPUs.
+    const roomChanged = snapshot.revisions.room !== lastRoomRevision;
+    const playersChanged = snapshot.revisions.players !== lastPlayersRevision;
+
+    if (roomChanged) lastRoomRevision = snapshot.revisions.room;
+    if (playersChanged) lastPlayersRevision = snapshot.revisions.players;
+
+    if (roomChanged) {
       removeRoomError();
       setRoomStatus(room);
-      renderPlayers(room);
       renderSettings(room);
       renderCategories(room);
+      updateReadyButton(room);
+      updateStartButton(room);
+      if (room.gameError) showRoomError(room.gameError);
+
+      // Only switch screens when the room status itself changes. activateScreen()
+      // is idempotent and avoids touching class lists on every snapshot.
+      if (["starting", "playing", "finished"].includes(room.status)) showGameScreen();
+      else showRoomScreen(currentRoomCode);
+    }
+
+    if (playersChanged || roomChanged) {
+      // roomChanged is included because host/status changes affect crown/remove UI;
+      // renderPlayers itself is keyed and changes only affected cards.
+      renderPlayers(room);
+      updateReadyButton(room);
+      updateStartButton(room);
       if (profileModal && !profileModal.classList.contains("hidden")) {
         profileReservationRoom = room;
         renderProfileAvatars(room);
       }
-      updateReadyButton(room);
-      updateStartButton(room);
-
-      if (room.gameError) showRoomError(room.gameError);
-      if (["starting", "playing", "finished"].includes(room.status)) showGameScreen();
-      else showRoomScreen(currentRoomCode);
     }
 
     if (room.hostId !== currentPlayerId && isHostStale(room)) attemptHostTakeover(room);
@@ -1590,4 +1663,4 @@ document.addEventListener(
   {capture: true},
 );
 
-console.log("Taleela App v8.10.0 Question Bank v1 + Persistent No-Repeat Cycles loaded");
+console.log("Taleela App v8.11.0 Design Refinement + Question Bank v1 + Persistent No-Repeat Cycles loaded");

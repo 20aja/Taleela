@@ -10,6 +10,13 @@
       "shards": ["general_001.json", "general_002.json", "general_003.json"]
     },
     {
+      "id": "quran",
+      "name": "القرآن الكريم",
+      "icon": "/assets/categories/quran.png",
+      "count": 1200,
+      "shards": ["quran_001.json", "quran_002.json", "quran_003.json"]
+    },
+    {
       "id": "science",
       "name": "العلوم",
       "icon": "/assets/categories/science.png",
@@ -52,6 +59,13 @@
       "shards": ["countries_001.json", "countries_002.json"]
     },
     {
+      "id": "babalhara",
+      "name": "باب الحارة",
+      "icon": "/assets/categories/babalhara.png",
+      "count": 900,
+      "shards": ["babalhara_001.json", "babalhara_002.json" ,"babalhara_003.json"]
+    },
+    {
       "id": "arabic-literature",
       "name": "اللغة العربية والأدب العربي",
       "icon": "/assets/categories/language.png",
@@ -71,6 +85,13 @@
       "icon": "/assets/categories/movies.png",
       "count": 900,
       "shards": ["movies-series_001.json", "movies-series_002.json", "movies-series_003.json"]
+    },
+    {
+      "id": "logic",
+      "name": "الفلسفة والمنطق",
+      "icon": "/assets/categories/logic.png",
+      "count": 900,
+      "shards": ["logic_001.json", "logic_002.json", "logic_003.json"]
     },
     {
       "id": "arts",

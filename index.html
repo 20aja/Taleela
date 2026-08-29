@@ -20,11 +20,11 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/all.min.css" />
-    <link rel="stylesheet" href="./css/style.css?v=8.10.0" />
+    <link rel="stylesheet" href="./css/style.css?v=8.11.2" />
   </head>
 
   <body>
-    <!-- Taleela v8.10.0 — Supplied Question Bank v1 + No-Repeat Cycles -->
+    <!-- Taleela v8.11.2 — Design Refinement + Supplied Question Bank v1 + No-Repeat Cycles -->
     <!-- =====================================================
          1) الصفحة الرئيسية: إنشاء / انضمام / غرف عامة
     ====================================================== -->
@@ -136,7 +136,8 @@
           </div>
 
           <div class="settings-grid">
-            <div class="setting-card">
+            <div class="setting-card" data-setting="rounds">
+              <span class="setting-visual-icon" aria-hidden="true"><i class="fa-solid fa-layer-group"></i></span>
               <span class="setting-label">عدد الجولات</span>
               <div class="stepper">
                 <button id="roundsMinus" type="button" aria-label="تقليل عدد الجولات">−</button>
@@ -146,7 +147,8 @@
               <small>جولة</small>
             </div>
 
-            <div class="setting-card">
+            <div class="setting-card" data-setting="timer">
+              <span class="setting-visual-icon" aria-hidden="true"><i class="fa-regular fa-clock"></i></span>
               <span class="setting-label">المؤقت</span>
               <div class="stepper">
                 <button id="timerMinus" type="button" aria-label="تقليل المؤقت">−</button>
@@ -156,7 +158,8 @@
               <small>ثانية</small>
             </div>
 
-            <div class="setting-card">
+            <div class="setting-card" data-setting="players">
+              <span class="setting-visual-icon" aria-hidden="true"><i class="fa-solid fa-user-group"></i></span>
               <span class="setting-label">عدد اللاعبين</span>
               <div class="stepper">
                 <button id="playersMinus" type="button" aria-label="تقليل الحد الأقصى للاعبين">−</button>
@@ -236,7 +239,7 @@
           <a class="social-link" href="https://t.me/Eng_Qader" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
           <a class="social-link" href="https://www.facebook.com/2a.j.aa" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
           <a class="social-link" href="https://www.instagram.com/2a.j.a" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a class="social-link" href="" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a class="social-link" href="https://github.com/20aja" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
         </div>
         <button id="closeHelpButton" class="help-understood-button" type="button">فهمت!</button>
       </div>
@@ -350,12 +353,20 @@
           <button id="gameLeaveButton" class="game-menu-button game-exit-button" type="button" title="مغادرة اللعبة" aria-label="مغادرة اللعبة">
             <i class="fa-solid fa-arrow-right-from-bracket"></i>
           </button>
-          <strong id="gameRound">جولة 1/6</strong>
+          <div class="game-phase-meta">
+            <strong id="gameRound">جولة 1/6</strong>
+            <div id="gamePhaseBadge" class="game-phase-badge" aria-live="polite">
+              <i class="fa-solid fa-circle-dot" aria-hidden="true"></i>
+              <span>الجولة</span>
+            </div>
+          </div>
+          <span class="game-toolbar-spacer" aria-hidden="true"></span>
         </header>
         <div id="gameTimerDock" class="game-timer-dock" aria-live="polite">
           <div id="timerRing" class="timer-ring" aria-label="الوقت المتبقي">
             <span id="gameTimer">0</span>
           </div>
+          <small id="timerCaption" class="timer-caption">الوقت المتبقي</small>
         </div>
 
         <!-- 3: اختيار الفئة -->
@@ -424,9 +435,11 @@
         <!-- 8: نتيجة الجولة -->
         <section id="roundResultsPhase" class="game-phase hidden">
           <div class="round-result-heading">
+            <span class="result-eyebrow">حصيلة الجولة</span>
             <h1>النتيجة</h1>
             <p id="roundResultLabel">جولة 1/6</p>
           </div>
+          <div id="roundResultSummary" class="round-summary-grid" aria-live="polite"></div>
           <div id="roundLeaderboard" class="round-leaderboard"></div>
         </section>
 
@@ -478,6 +491,6 @@
         });
       }
     </script>
-    <script type="module" src="./js/app.js?v=8.10.0"></script>
+    <script type="module" src="./js/app.js?v=8.11.2"></script>
   </body>
 </html>

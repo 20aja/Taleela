@@ -155,16 +155,42 @@ function phaseDuration(room, phase) {
   return 0;
 }
 
+const PHASE_VISUALS = {
+  categorySelectionPhase: {key: "category", label: "اختيار الفئة", icon: "fa-shapes"},
+  bluffPhase: {key: "bluff", label: "اكتب كذبتك", icon: "fa-pen-nib"},
+  guessPhase: {key: "guess", label: "اختر الإجابة", icon: "fa-list-check"},
+  revealPhase: {key: "reveal", label: "كشف الحقيقة", icon: "fa-eye"},
+  roundResultsPhase: {key: "results", label: "نتيجة الجولة", icon: "fa-chart-simple"},
+  finalResultsPhase: {key: "final", label: "النتائج النهائية", icon: "fa-trophy"},
+};
+
 function setPhaseVisibility(activeId) {
   ["categorySelectionPhase", "bluffPhase", "guessPhase", "revealPhase", "roundResultsPhase", "finalResultsPhase"].forEach((id) => {
     document.getElementById(id)?.classList.toggle("hidden", id !== activeId);
   });
+
+  const visual = PHASE_VISUALS[activeId] || null;
+  const gameScreen = document.getElementById("gameScreen");
+  const badge = document.getElementById("gamePhaseBadge");
+  if (gameScreen) {
+    if (visual) gameScreen.dataset.phase = visual.key;
+    else delete gameScreen.dataset.phase;
+  }
+  if (badge) {
+    badge.classList.toggle("hidden", !visual);
+    if (visual) badge.innerHTML = `<i class="fa-solid ${visual.icon}" aria-hidden="true"></i><span>${visual.label}</span>`;
+  }
 }
 
 function showGameScreen() {
-  document.getElementById("gameScreen")?.classList.remove("hidden");
-  document.getElementById("roomScreen")?.classList.add("hidden");
-  document.getElementById("homeScreen")?.classList.add("hidden");
+  const game = document.getElementById("gameScreen");
+  const room = document.getElementById("roomScreen");
+  const home = document.getElementById("homeScreen");
+  if (!game) return;
+  if (!game.classList.contains("hidden") && room?.classList.contains("hidden") && home?.classList.contains("hidden")) return;
+  game.classList.remove("hidden");
+  room?.classList.add("hidden");
+  home?.classList.add("hidden");
 }
 
 function showLoading(show, title = "جاري تجهيز الجولة...", text = "يتم مزامنة المرحلة مع جميع اللاعبين.") {
@@ -235,7 +261,9 @@ function startTimer(room, deadlineValue, phase) {
     if (ring) {
       const progress = Math.max(0, Math.min(1, remainingMs / (duration * 1000)));
       ring.style.setProperty("--progress", `${progress * 100}%`);
-      ring.classList.toggle("timer-danger", remaining <= Math.min(5, Math.ceil(duration / 3)));
+      const danger = remaining <= Math.min(5, Math.ceil(duration / 3));
+      ring.classList.toggle("timer-danger", danger);
+      ring.classList.toggle("timer-critical", remaining > 0 && remaining <= 3);
     }
 
     if (remainingMs <= 0) {
@@ -875,7 +903,13 @@ function renderCategorySelection(room) {
   const instruction = document.getElementById("categoryInstruction");
   const grid = document.getElementById("roundCategoryChoices");
 
-  if (avatar) avatar.innerHTML = avatarHTML(chooser?.avatar, "turn-avatar-img", `صورة ${chooser?.name || "اللاعب"}`, chooser?.avatarImage);
+  if (avatar) {
+    const avatarKey = `${chooser?.id || ""}|${chooser?.avatar || ""}|${chooser?.avatarImage || ""}`;
+    if (avatar.dataset.renderKey !== avatarKey) {
+      avatar.dataset.renderKey = avatarKey;
+      avatar.innerHTML = avatarHTML(chooser?.avatar, "turn-avatar-img", `صورة ${chooser?.name || "اللاعب"}`, chooser?.avatarImage);
+    }
+  }
   if (name) name.textContent = chooser?.name || "لاعب";
   if (label) label.textContent = isChooser ? "الدور على: (أنت)" : "الدور على:";
   if (instruction) {
@@ -883,22 +917,26 @@ function renderCategorySelection(room) {
   }
 
   if (grid) {
-    grid.innerHTML = (round.categoryOptions || [])
-      .map((categoryId) => {
-        const category = GAME_CATEGORIES.find((item) => item.id === categoryId);
-        const disabled = !isChooser || Boolean(choice);
-        return `
-        <button type="button" class="category-card round-category-choice" data-round-category="${escapeHTML(categoryId)}" ${disabled ? "disabled" : ""}>
-          <div class="category-icon"><img class="category-icon-image round-category-icon" src="${escapeHTML(category?.image || "")}" alt="" loading="lazy" decoding="async" /></div>
-          <div class="category-name">${escapeHTML(category?.name || categoryId)}</div>
-        </button>
-      `;
-      })
-      .join("");
+    const categoryRenderKey = JSON.stringify([round.categoryOptions || [], isChooser, Boolean(choice)]);
+    if (grid.dataset.renderKey !== categoryRenderKey) {
+      grid.dataset.renderKey = categoryRenderKey;
+      grid.innerHTML = (round.categoryOptions || [])
+        .map((categoryId) => {
+          const category = GAME_CATEGORIES.find((item) => item.id === categoryId);
+          const disabled = !isChooser || Boolean(choice);
+          return `
+          <button type="button" class="category-card round-category-choice" data-round-category="${escapeHTML(categoryId)}" ${disabled ? "disabled" : ""}>
+            <div class="category-icon"><img class="category-icon-image round-category-icon" src="${escapeHTML(category?.image || "")}" alt="" loading="lazy" decoding="async" /></div>
+            <div class="category-name">${escapeHTML(category?.name || categoryId)}</div>
+          </button>
+        `;
+        })
+        .join("");
 
-    grid.querySelectorAll("[data-round-category]").forEach((button) => {
-      button.addEventListener("click", () => selectCategory(button.dataset.roundCategory));
-    });
+      grid.querySelectorAll("[data-round-category]").forEach((button) => {
+        button.addEventListener("click", () => selectCategory(button.dataset.roundCategory));
+      });
+    }
   }
 
   startTimer(room, round.selectionDeadline, round.phase);
@@ -908,26 +946,40 @@ function renderQuestionMedia(containerId, round) {
   const container = document.getElementById(containerId);
   if (!container) return;
   const src = String(round?.questionImage || "").trim();
+  const alt = round?.questionImageAlt || "صورة السؤال";
+
   if (!src) {
-    container.replaceChildren();
+    if (container.dataset.renderKey !== "empty") {
+      container.replaceChildren();
+      container.dataset.renderKey = "empty";
+    }
     container.classList.add("hidden");
+    return;
+  }
+
+  const renderKey = `${src}|${alt}`;
+  if (container.dataset.renderKey === renderKey && container.querySelector("img")) {
+    container.classList.remove("hidden");
     return;
   }
 
   const image = document.createElement("img");
   image.className = "question-media-image";
   image.src = src;
-  image.alt = round?.questionImageAlt || "صورة السؤال";
+  image.alt = alt;
   image.loading = "eager";
   image.decoding = "async";
   image.addEventListener(
     "error",
     () => {
-      container.replaceChildren();
-      container.classList.add("hidden");
+      if (container.dataset.renderKey === renderKey) {
+        container.replaceChildren();
+        container.classList.add("hidden");
+      }
     },
     {once: true},
   );
+  container.dataset.renderKey = renderKey;
   container.replaceChildren(image);
   container.classList.remove("hidden");
 }
@@ -1035,18 +1087,24 @@ function renderGuessing(room) {
         const option = round.options?.[id];
         return option && !(option.type === "bluff" && optionAuthorIds(option).includes(playerId));
       });
-      optionsGrid.innerHTML = visibleIds
-        .map(
-          (id) => `
-        <button type="button" class="guess-option" data-option-id="${escapeHTML(id)}">
-          ${escapeHTML(round.options[id].text)}
-        </button>
-      `,
-        )
-        .join("");
-      optionsGrid.querySelectorAll("[data-option-id]").forEach((button) => {
-        button.addEventListener("click", () => submitGuess(button.dataset.optionId));
-      });
+      const optionsRenderKey = JSON.stringify(visibleIds.map((id) => [id, round.options?.[id]?.text || ""]));
+      if (optionsGrid.dataset.renderKey !== optionsRenderKey) {
+        optionsGrid.dataset.renderKey = optionsRenderKey;
+        optionsGrid.innerHTML = visibleIds
+          .map(
+            (id, index) => `
+          <button type="button" class="guess-option" data-option-id="${escapeHTML(id)}">
+            <span class="option-index" aria-hidden="true">${index + 1}</span>
+            <span class="option-text">${escapeHTML(round.options[id].text)}</span>
+            <span class="option-state-icon" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+          </button>
+        `,
+          )
+          .join("");
+        optionsGrid.querySelectorAll("[data-option-id]").forEach((button) => {
+          button.addEventListener("click", () => submitGuess(button.dataset.optionId));
+        });
+      }
     }
 
     if (ownBluffCard) {
@@ -1086,7 +1144,15 @@ function renderReveal(room) {
   }
 
   if (grid) {
-    grid.innerHTML = (round.optionOrder || [])
+    const revealRenderKey = JSON.stringify([
+      round.optionOrder || [],
+      Object.entries(round.options || {}).map(([id, option]) => [id, option?.type || "", option?.text || "", optionAuthorIds(option)]),
+      Object.entries(round.guesses || {}).map(([id, guess]) => [id, guess?.optionId || ""]),
+      ids.map((id) => [id, players[id]?.name || "", players[id]?.avatar || "", players[id]?.avatarImage || ""]),
+    ]);
+    if (grid.dataset.renderKey !== revealRenderKey) {
+      grid.dataset.renderKey = revealRenderKey;
+      grid.innerHTML = (round.optionOrder || [])
       .map((id) => {
         const option = round.options?.[id];
         if (!option) return "";
@@ -1099,7 +1165,11 @@ function renderReveal(room) {
         const ownerText = option.type === "correct" ? "الإجابة الصح!" : option.type === "bluff" ? `إجابة: ${ownerNames.join(" + ")}` : "إجابة إضافية";
 
         return `
-        <div class="reveal-option ${option.type === "correct" ? "correct-option" : ""}">
+        <div class="reveal-option ${option.type === "correct" ? "correct-option" : "incorrect-option"}">
+          <div class="reveal-status ${option.type === "correct" ? "is-correct" : "is-bluff"}">
+            <i class="fa-solid ${option.type === "correct" ? "fa-circle-check" : "fa-mask-face"}" aria-hidden="true"></i>
+            <span>${option.type === "correct" ? "الإجابة الصحيحة" : option.type === "bluff" ? "كذبة لاعب" : "إجابة إضافية"}</span>
+          </div>
           <div class="reveal-option-title">${escapeHTML(option.text)}</div>
           <div class="reveal-option-owner">${escapeHTML(ownerText)}</div>
           <div class="reveal-voters">
@@ -1118,6 +1188,7 @@ function renderReveal(room) {
       `;
       })
       .join("");
+    }
   }
 
   startTimer(room, round.revealDeadline, round.phase);
@@ -1166,6 +1237,21 @@ function renderRoundResults(room) {
   if (label) label.textContent = `جولة ${round.number}/${round.total}`;
 
   const ranking = rankingFromPlayers(playersMap(room));
+  const summary = document.getElementById("roundResultSummary");
+  if (summary) {
+    const leader = ranking[0] || null;
+    const resultEntries = Object.entries(round.results || {});
+    const bestGain = resultEntries.reduce((best, [id, result]) => {
+      const points = Number(result?.roundPoints) || 0;
+      return !best || points > best.points ? {id, points} : best;
+    }, null);
+    const correctCount = resultEntries.filter(([, result]) => result?.correct === true).length;
+    const bestGainPlayer = bestGain ? playersMap(room)[bestGain.id] : null;
+    summary.innerHTML = `
+      <div class="round-summary-card primary"><i class="fa-solid fa-crown"></i><span>المتصدر</span><strong>${escapeHTML(leader?.name || "—")}</strong></div>
+      <div class="round-summary-card success"><i class="fa-solid fa-arrow-trend-up"></i><span>أعلى مكسب</span><strong>${bestGain ? `+${bestGain.points} ${escapeHTML(bestGainPlayer?.name || "")}` : "—"}</strong></div>
+      <div class="round-summary-card info"><i class="fa-solid fa-bullseye"></i><span>أصابوا الصحيح</span><strong>${correctCount} / ${resultEntries.length || playerList(room).length}</strong></div>`;
+  }
   if (board) {
     const renderKey = JSON.stringify(ranking.map((entry) => {
       const player = playersMap(room)[entry.id];
@@ -1649,4 +1735,4 @@ document.getElementById("gameLeaveButton")?.addEventListener("click", () => {
   window.dispatchEvent(new CustomEvent("taleela:leave-room"));
 });
 
-console.log("Taleela Game Engine v8.10.0 Question Bank v1 + No-Repeat Cycles loaded");
+console.log("Taleela Game Engine v8.11.0 Design Refinement + Question Bank v1 + No-Repeat Cycles loaded");
