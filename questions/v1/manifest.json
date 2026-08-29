@@ -123,7 +123,7 @@
     },
     {
       "id": "puzzles",
-      "name": "الأرقام والحسابات",
+      "name": "الألغاز",
       "icon": "/assets/categories/puzzles.png",
       "count": 900,
       "shards": ["puzzles_001.json", "puzzles_002.json", "puzzles_003.json"]
